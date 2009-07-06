@@ -1,0 +1,66 @@
+\documentclass[
+%twoside,
+12pt,
+fleqn
+%,openright
+]
+{dmthesis}
+%%%%%%%%%%%%%%%%%%
+%\renewenvironment{onehalfspace}{}{} 
+\renewcommand{\tstamp}{}
+%%%%%%%%%%%%%%%%%%
+%\setlength{\oddsidemargin}{0cm}
+%\setlength{\evensidemargin}{0cm}
+\begin{document}
+
+% \input{title}
+
+\begin{onehalfspace}
+%%%%%%%%%%%%%%%%%
+\chapter*{Abstract}
+\section*{}
+% \input{abstract}
+
+\chapter*{Declaration}
+% \input{declaration}
+
+\chapter*{Acknowledgements}
+%\addcontentsline{toc}{chapter}{Acknowledgements}
+% \input{acknowledgements}
+
+%\end{onehalfspace}
+%\setcounter{tocdepth}{0}
+\tableofcontents
+\listoffigures
+%\listoftables
+%\begin{onehalfspace}
+%%%%%%%%%%%%%%%%
+\chapter{Background and Motivation}
+\label{MainIntro}
+% \input{mainintro}
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%
+\part{DBI inflation}
+\label{part:dbi}
+% \input{dbi/dbi}
+% 
+% \input{dbi/multibrane}
+%%%%%%%%%%%%%%%%
+\part{Numerical simulations of perturbations}
+\label{part:numerical}
+% \input{numerical/numerical}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\part*{}%Stuff at the end}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Concluding summary}
+
+% \input{theend}
+\end{onehalfspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \bibliography{references}
+% \bibliographystyle{dmmm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%abbrvnat}%
+%\chapter*{Index??}
+%\addcontentsline{toc}{chapter}{Index??}
+
+\end{document}
