@@ -874,7 +874,7 @@
 \newlength{\sing}\setlength{\sing}{2.5pt}
 \newlength{\strutsing}\setlength{\strutsing}{1.5pt}
 \newlength{\pic}\setlength{\pic}{0.3pt}
-\newcommand{\e}{\mathrm{e}}
+% \newcommand{\e}{\mathrm{e}}
 \newcommand{\rme}{\mathrm{e}}
 \newcommand{\rmi}{\mathrm{i}}
 \newcommand{\rmd}{\mathrm{d}}
