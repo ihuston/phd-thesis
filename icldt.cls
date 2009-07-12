@@ -98,7 +98,7 @@
 \newcommand*{\declaration}[1]{\gdef\@declaration{#1}}
 \LoadClass{scrreprt}
 \RequirePackage{setspace}
-\RequirePackage[left=3.8cm,right=2.0cm,top=2.97cm,bottom=5.94cm]%
+\RequirePackage[left=3.8cm,right=2.0cm,top=2.97cm,bottom=3.97cm]%
  {geometry}
 \setkomafont{sectioning}{\rmfamily\bfseries}
 \renewcommand*{\maketitle}{
