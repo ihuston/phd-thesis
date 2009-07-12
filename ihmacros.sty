@@ -1,6 +1,61 @@
 % % % % % % % % % % % % % % % % % 
 % ihmacros.sty - Ian Huston
-% $Id: ihmacros.sty,v 1.1 2009/07/12 16:47:40 ith Exp $
+% $Id: ihmacros.sty,v 1.2 2009/07/12 17:49:13 ith Exp $
 % % % % % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihmacros}
+
+% Macros and definitions
+\renewcommand{\H}{\ensuremath{\mathcal{H}}}
+% \newcommand\vp{\varphi_0}
+\newcommand{\pd}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+% 
+\newcommand{\dphi}{\ensuremath{\delta\varphi}}
+\newcommand{\dpone}{\ensuremath{\dphi_{1}}}
+\newcommand{\dptwo}{\ensuremath{\dphi_{2}}}
+% 
+\newcommand{\U}{\ensuremath{U_{0}}}
+\newcommand{\Uphi}{\ensuremath{U_{,\varphi}}}
+\newcommand{\Upp}{\ensuremath{U_{,\varphi\varphi}}}
+\newcommand{\Uppp}{\ensuremath{U_{,\varphi\varphi\varphi}}}
+% 
+\newcommand{\etal}{\emph{et al.\ }}
+\newcommand{\eg}{\emph{e.g.\ }}
+% 
+\newcommand{\Mpl}{\ensuremath{M_{\mathrm{PL}}}}
+\newcommand{\Mpc}{\ensuremath{M \mathrm{pc}}}
+% 
+\newcommand{\nend}{\ensuremath{n_{\mathrm{end}}}}
+\newcommand{\kmax}{\ensuremath{k_{\mathrm{max}}}}
+\newcommand{\kmin}{\ensuremath{k_{\mathrm{min}}}}
+\newcommand{\kfo}{\ensuremath{k_{\mathrm{fo}}}}
+\newcommand{\kwmap}{\ensuremath{k_\mathrm{WMAP}}}
+% 
+\newcommand{\fnl}{\ensuremath{f_{\mathrm{NL}}}}
+% 
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+%
+\newcommand{\lambdaphifour}{\frac{1}{4}\lambda\varphi^4}
+\newcommand{\msqphisq}{\frac{1}{2} m^2 \varphi^2}
+
+% Karims definitions
+\newcommand{\vp}{\ensuremath{\varphi}}
+\newcommand{\dvp}[1]{\ensuremath{\delta\varphi_{#1}}}
+\newcommand{\wt}{\widetilde}
+\newcommand{\kvi}{\ensuremath{k^i}}
+\newcommand{\qvi}{\ensuremath{q^i}}
+\newcommand{\pvi}{\ensuremath{p^i}}
+% % % % % % % % % % % % 
+% Equation referencing
+\newcommand{\eq}[1]{Eq.~(\ref{#1})}
+\newcommand{\eqs}[1]{Eqs.~(\ref{#1})}
+\newcommand{\Rref}[1]{Ref.~\cite{#1}}
+% 
+% % % % % % % % % % % % % % % % % % % 
+% Karims eqn environments
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+%
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+%
