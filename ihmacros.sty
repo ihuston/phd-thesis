@@ -1,12 +1,29 @@
 % % % % % % % % % % % % % % % % % 
 % ihmacros.sty - Ian Huston
-% $Id: ihmacros.sty,v 1.2 2009/07/12 17:49:13 ith Exp $
+% $Id: ihmacros.sty,v 1.3 2009/07/12 19:28:20 ith Exp $
 % % % % % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihmacros}
 
+% % % % % % % % % % % % % % % % % % % % % % % 
 % Macros and definitions
+% % % % % % % % % % % % % % % % % % % % % % % 
+% Typographical
+\newcommand{\etal}{\emph{et al.\ }}
+\newcommand{\eg}{\emph{e.g.\ }}
+\newcommand{\ie}{\emph{i.e.\ }}
+
+% Maths letters
 \renewcommand{\H}{\ensuremath{\mathcal{H}}}
+\newcommand{\Mfact}{\mathcal{M}}
+\newcommand{\Ffact}{\mathcal{F}}
+\newcommand{\Tfact}{\mathcal{T}}
+\newcommand{\Kfact}{\mathcal{K}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\d}{\mathrm{d}}
+
+% Maths commands
 % \newcommand\vp{\varphi_0}
 \newcommand{\pd}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
 % 
@@ -19,26 +36,62 @@
 \newcommand{\Upp}{\ensuremath{U_{,\varphi\varphi}}}
 \newcommand{\Uppp}{\ensuremath{U_{,\varphi\varphi\varphi}}}
 % 
-\newcommand{\etal}{\emph{et al.\ }}
-\newcommand{\eg}{\emph{e.g.\ }}
 % 
 \newcommand{\Mpl}{\ensuremath{M_{\mathrm{PL}}}}
 \newcommand{\Mpc}{\ensuremath{M \mathrm{pc}}}
 % 
 \newcommand{\nend}{\ensuremath{n_{\mathrm{end}}}}
+% 
+% ks
 \newcommand{\kmax}{\ensuremath{k_{\mathrm{max}}}}
 \newcommand{\kmin}{\ensuremath{k_{\mathrm{min}}}}
 \newcommand{\kfo}{\ensuremath{k_{\mathrm{fo}}}}
 \newcommand{\kwmap}{\ensuremath{k_\mathrm{WMAP}}}
+\newcommand{\ktot}{k_t}
 % 
+% non-gaussianity
 \newcommand{\fnl}{\ensuremath{f_{\mathrm{NL}}}}
+\newcommand{\tnl}{\tau_{\mathrm{NL}}}
 % 
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 %
 \newcommand{\lambdaphifour}{\frac{1}{4}\lambda\varphi^4}
 \newcommand{\msqphisq}{\frac{1}{2} m^2 \varphi^2}
+% 
+% 
+\newcommand{\cn}{\mathrm{\mathsf{c}}}
+\newcommand{\powerspectrum}{\mathcal{P}}
+\newcommand{\Z}[2]{\vect{Z}_{{#1}{#2}}}
+% 
 
+\newcommand{\tstart}{t_{\prim}}
+\newcommand{\tend}{t_{\com}}
+\newcommand{\prim}{\ast}
+\newcommand{\com}{\mathsf{c}}
+\newcommand{\vect}[1]{\bm{\mathrm{{#1}}}}
+\newcommand{\matr}[1]{\bm{{#1}}}
+\renewcommand{\e}[1]{\mathrm{e}^{{#1}}}
+\newcommand{\diracd}{\delta}
+\newcommand{\kronecker}{\bm{\mathrm{1}}}
+\newcommand{\imag}{\mathrm{i}}
+% Fields
+\newcommand{\reals}{\bm{\mathrm{R}}}
+\newcommand{\imaginaries}{\bm{\mathrm{I}}}
+\newcommand{\complexes}{\bm{\mathrm{C}}}
+% Derivative
+\newcommand{\grad}{\nabla}
+% Inequalities
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+% 
+\newcommand{\gsim}{\mbox{\raisebox{-1.ex}{$\stackrel{\textstyle>}{\textstyle\sim}$}}}
+\newcommand{\lsim}{\mbox{\raisebox{-1.ex}{$\stackrel{\textstyle<}{\textstyle\sim}$}}}
+% 
+\newcommand{\convolve}{\star}
+
+% % % % % % % % % % % % % % % % % % % % % % % 
 % Karims definitions
+% % % % % % % % % % % % % % % % % % % % % % % 
 \newcommand{\vp}{\ensuremath{\varphi}}
 \newcommand{\dvp}[1]{\ensuremath{\delta\varphi_{#1}}}
 \newcommand{\wt}{\widetilde}
@@ -59,3 +112,13 @@
 \newcommand{\bea}{\begin{eqnarray}}
 \newcommand{\eea}{\end{eqnarray}}
 %
+
+% % % % % % % % % % % % % % % % % % % 
+% From paper 1
+% % % % % % % % % % % % % % % % % % % 
+% typographical
+\newcommand{\header}[1]{{\textit{{#1}}}}
+
+% TODO: Replace with \Mpl
+\newcommand{\MP}{M_{\rm P}}
+% 
