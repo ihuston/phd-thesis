@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.6 2009/07/12 19:28:29 ith Exp $
+% $Id: thesis.tex,v 1.7 2009/07/14 13:49:16 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
 %twoside,
@@ -15,7 +15,7 @@ doublespacing
 % CVSoff is default
 \usepackage[CVSon]{ihformat}
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.6 2009/07/12 19:28:29 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.7 2009/07/14 13:49:16 ith Exp $}
 
 \includeonly{
 % abstract,
@@ -29,55 +29,68 @@ dbi/dbi,
 \input{title}
 
 \begin{doublespace}
-%%%%%%%%%%%%%%%%%
-% % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % 
 % Abstract
 \include{abstract}
-% % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % %
 
-% % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % 
 % Acknowledgements
 \include{acknowledgements}
-% % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
-% % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % 
 % Table of contents and figures
-% % % % % % % % % % % % % % % % % 
-%\end{onehalfspace}
+% % % % % % % % % % % % % % % % % % % % % % % % % 
 %\setcounter{tocdepth}{0}
 \tableofcontents
 \listoffigures
 %\listoftables
-%\begin{onehalfspace}
-%%%%%%%%%%%%%%%%
-\chapter{Background and Motivation}
-\label{MainIntro}
-% \input{mainintro}
-%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+% Main introduction
+\include{mainintro}
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+% Part I: DBI
 \part{DBI inflation}
 \label{part:dbi}
 % 
 \include{dbi/dbi}
 % 
 \include{dbi/multibrane}
-%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+% Part II: Numerical simulations
 \part{Numerical simulations of perturbations}
 \label{part:numerical}
 \input{numerical/numerical}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\part*{}%Stuff at the end}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Concluding summary}
+% % % % % % % % % % % % % % % % % % % % % % % % %
 
-% \input{theend}
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+% Conclusion and summary
+\part*{}%Stuff at the end}
+\include{theend}
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
 \end{doublespace}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+% Bibliography
 % \bibliography{references}
 % \bibliographystyle{dmmm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%abbrvnat}%
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % 
+% Index?
 %\chapter*{Index??}
 %\addcontentsline{toc}{chapter}{Index??}
+% % % % % % % % % % % % % % % % % % % % % % % % % 
 
 \end{document}
