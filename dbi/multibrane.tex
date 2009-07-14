@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.5 2009/07/14 17:09:47 ith Exp $
+% $Id: multibrane.tex,v 1.6 2009/07/14 17:18:15 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.5 2009/07/14 17:09:47 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.6 2009/07/14 17:18:15 ith Exp $}
 
 \chapter{Multi brane inflation}
 \label{ch:multibrane}
@@ -117,7 +117,7 @@ can in principle lead to a detectable
 gravitational wave background if 
 the number of coincident branes is sufficiently small. 
 
-Units are chosen such that $\hbar = c =1$ and $\MP \equiv (8\pi G)^{-1/2}
+Units are chosen such that $\hbar = c =1$ and $\Mpl \equiv (8\pi G)^{-1/2}
 = 2.4 \times 10^{-18} \, {\rm GeV}$ denotes the 
 reduced Planck mass. 
 
@@ -128,7 +128,7 @@ ${\rm D3}$-brane in a warped background is determined
 by an effective action of the form 
 \begin{equation}
 \label{DBIaction}
-S=\int  d^4x \sqrt{|g|} \left[ \frac{\MP^2}{2} R 
+S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\phi , X) \right] \,,
 \end{equation}
 where $R$ is the Ricci curvature scalar, 
@@ -168,7 +168,7 @@ generated during inflation are given by \cite{gm}
  \Ps = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,,
 \\
 \label{eqn:Pt2}
-\Pt = \frac{2}{\pi^2} \frac{H^2}{\MP^2} \,,
+\Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
 \end{eqnarray}
 respectively, and the ratio of these amplitudes 
 is defined as \cite{gm} 
@@ -211,7 +211,7 @@ that the variation of the inflaton field during inflation
 is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
 \begin{equation}
 \label{genlythbound}
-\frac{1}{\MP^2}
+\frac{1}{\Mpl^2}
 \left( \frac{d \phi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}} \,,
 \end{equation}
 where ${\cal{N}} \equiv \int dt \, H$ denotes the number of e-foldings.
@@ -227,7 +227,7 @@ The total variation in the inflaton field between the epoch of observable
 inflation and the end of inflation is then given by
 \begin{equation}
 \label{totalfield}
-\frac{\Delta \phi_{\rm inf}}{\MP} = 
+\frac{\Delta \phi_{\rm inf}}{\Mpl} = 
 \left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} {\cal{N}}_{\rm eff} \,,
 \end{equation}
 where
@@ -243,7 +243,7 @@ the corresponding change in the value of the inflaton
 field is given approximately by \cite{lyth,bmpaper}
 \begin{equation}
 \label{approxlyth}
-\left( \frac{\Delta \phi}{\MP} \right)_*^2 \simeq 
+\left( \frac{\Delta \phi}{\Mpl} \right)_*^2 \simeq 
 \frac{(\Delta {\cal{N}}_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
 \end{equation}
 
@@ -279,20 +279,20 @@ m_s^4/[(2\pi)^3g_s]$ is the brane tension.
 
 The four-dimensional Planck mass is related to the volume 
 of the compactified Calabi-Yau three-fold, $V_6$, such that
-$\MP^2 =V_6 \kappa_{10}^{-2}$, where $\kappa_{10}^2 \equiv \frac{1}{2}
+$\Mpl^2 =V_6 \kappa_{10}^{-2}$, where $\kappa_{10}^2 \equiv \frac{1}{2}
 (2 \pi )^7 g_s^2/ m_s^{8} = \pi /T_3^{2}$ for a 
 ${\rm D3}$-brane \footnote{We parameterise the Planck scale 
 in terms of the ${\rm D3}$-brane tension out of convenience, 
 and note that there is no physical relationship between the two.}. 
 Hence the Planck mass is bounded from 
 below by the volume of a throat region, 
-$\MP^2 >V_{6,{\rm th}} \kappa_{10}^{-2}$, 
+$\Mpl^2 >V_{6,{\rm th}} \kappa_{10}^{-2}$, 
 where $V_{6,{\rm th}} \lsim V_6$ denotes the throat volume. 
 For an $AdS_5 \times X_5$ throat, Baumann \& McAllister (BM)
 exploited this inequality to derive an upper limit on the 
 maximum variation of the inflaton field in the throat, 
-$\Delta \phi_{\rm max} < 2\MP/\sqrt{N}$, which leads to the 
-corresponding limit $|\Delta \phi |_* < 2\MP /\sqrt{N}$ \cite{bmpaper}.  
+$\Delta \phi_{\rm max} < 2\Mpl/\sqrt{N}$, which leads to the 
+corresponding limit $|\Delta \phi |_* < 2\Mpl /\sqrt{N}$ \cite{bmpaper}.  
 Combining this with the constraint (\ref{approxlyth}) therefore 
 yields an upper limit on the tensor-scalar ratio: 
 \begin{equation}
@@ -312,7 +312,7 @@ and, since $| \Delta V_{6,*} |<
 V_{6,{\rm th}}$, it follows that 
 \begin{equation}
 \label{firstbound}
-\left(\frac{\Delta \phi}{\MP}\right)^2_* < \frac{T_3 \kappa_{10}^2
+\left(\frac{\Delta \phi}{\Mpl}\right)^2_* < \frac{T_3 \kappa_{10}^2
 (\Delta \rho_*)^2}{| \Delta V_{6*}|} \,.
 \end{equation}
 It was then assumed that the fractional change in the value of the 
@@ -334,15 +334,15 @@ $\phi_*$ could be very small. Combining the limit
 and substituting this constraint into the bound (\ref{firstbound}) yields 
 the condition 
 \begin{equation}
-\left( \frac{\Delta \phi}{\MP} \right)_*^6 < \frac{\pi T_3}{\Vol} 
-\left( \frac{h_*}{\MP} \right)^4 \,.
+\left( \frac{\Delta \phi}{\Mpl} \right)_*^6 < \frac{\pi T_3}{\Vol} 
+\left( \frac{h_*}{\Mpl} \right)^4 \,.
 \end{equation}
 Finally substituting the constraint (\ref{approxlyth}) 
 yields the upper limit \cite{lidseyhuston}
 \begin{equation}
 \label{LHbound}
 r_* < \frac{10}{(\Delta {\cal{N}})_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
-\left( \frac{h_*}{\MP} \right)^{4/3} \left( c_s P_{,X} \right)_* \,.
+\left( \frac{h_*}{\Mpl} \right)^{4/3} \left( c_s P_{,X} \right)_* \,.
 \end{equation}
 
 Comparison of the limits (\ref{BMbound}) and (\ref{LHbound})
@@ -350,11 +350,11 @@ implies that the LH bound is the stronger of the two when
 \begin{equation}
 \label{LHstronger}
 h_*^{4/3}N < 20 \left( \Vol g_s \right)^{1/3}  
-\left( \frac{m_s}{\MP} \right)^{-4/3} 
+\left( \frac{m_s}{\Mpl} \right)^{-4/3} 
 \frac{( \Delta {\cal{N}} )_*^2}{{\cal{N}}^2_{\rm eff}} \,.
 \end{equation}
 For typical field-theoretic values $\Vol \simeq \mathcal{O}(\pi^3)$, $m_s \sim
-0.1 \MP$ 
+0.1 \Mpl$ 
 and  $g_s \sim 10^{-2}$, this implies 
 \begin{equation}
 \label{LHstronger1}
@@ -485,7 +485,7 @@ and
 \begin{equation}
 \label{weakLHbound}
 r_* < \frac{10}{(\Delta {\cal{N}})_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
-\left( \frac{h_*}{\MP} \right)^{4/3}
+\left( \frac{h_*}{\Mpl} \right)^{4/3}
 \frac{(-m) f_1 f_2}{\sqrt{2(1-m)}}
 \left( -\frac{\fnl}{\beta} \right)^{(1-2m)/2}
 \end{equation}
@@ -806,7 +806,7 @@ Eq. (\ref{usefulPs}) then results in a constraint on the magnitude of
 the warp factor during observable inflation: 
 \begin{equation}
 \label{warpfactor}
-\frac{h^4_*}{\MP^4} \simeq \frac{-1}{2 T_3 \sqrt{1+(n-1)^2Y}} 
+\frac{h^4_*}{\Mpl^4} \simeq \frac{-1}{2 T_3 \sqrt{1+(n-1)^2Y}} 
 \frac{r^2 \Ps}{\fnl} \,.
 \end{equation}
 Eqs. (\ref{csPX}) and (\ref{warpfactor}) may now be substituted into 
