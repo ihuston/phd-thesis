@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.10 2009/07/14 16:58:24 ith Exp $
+% $Id: thesis.tex,v 1.11 2009/07/14 17:16:43 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
 %twoside,
@@ -16,15 +16,15 @@ doublespacing
 % CVSoff is default
 \usepackage[CVSon, labels]{ihformat}
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.10 2009/07/14 16:58:24 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.11 2009/07/14 17:16:43 ith Exp $}
 % \usepackage[inline]{showlabels}
 \includeonly{
 % abstract,
 % acknowledgements,
 % mainintro,
 % dbi/dbi-intro,
-dbi/dbi,
-% dbi/multi,
+% dbi/dbi,
+dbi/multibrane
 % numerical/numerical
 % theend
 }
@@ -33,7 +33,7 @@ dbi/dbi,
 % Title page
 \input{title}
 
-\begin{doublespace}
+% \begin{doublespace}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Abstract
 \include{abstract}
@@ -76,7 +76,7 @@ dbi/dbi,
 % Part II: Numerical simulations
 \part{Numerical simulations of perturbations}
 \label{part:numerical}
-\input{numerical/numerical}
+\include{numerical/numerical}
 % % % % % % % % % % % % % % % % % % % % % % % % %
 
 % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -86,7 +86,7 @@ dbi/dbi,
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
-\end{doublespace}
+% \end{doublespace}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Bibliography
