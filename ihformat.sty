@@ -1,11 +1,13 @@
 % % % % % % % % % % % % % 
 %  Ian Huston - ihformat.sty
 %  formatting and macros
-%  $Id: ihformat.sty,v 1.6 2009/07/14 14:04:55 ith Exp $
+%  $Id: ihformat.sty,v 1.7 2009/07/14 15:20:59 ith Exp $
 % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihformat}
 
+% Get ifthen package for later on
+\RequirePackage{ifthen}
 
 % CVS Revision command, Renew \CVSRevision in each file to get current data.
 % \newcommand{\version}{}
@@ -17,10 +19,14 @@
 \def\version$#1,v #2 #3${} }%
 % \renewcommand{\version}[$#1,v #2 #3 #4$]{#2, #3}}%
 % Use the following line in each file to specify revision, date
-% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.6 2009/07/14 14:04:55 ith Exp $}
+% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.7 2009/07/14 15:20:59 ith Exp $}
 
+% Should we use showlabels? Set with labels option, default is off.
+\newboolean{@showlabels}
+\setboolean{@showlabels}{false}
 \DeclareOption{labels}{%
-\RequirePackage{showlabels} }%
+\setboolean{@showlabels}{true} }%
+% End of options
 
 \ExecuteOptions{CVSoff}
 \ProcessOptions
@@ -44,6 +50,9 @@
 \RequirePackage{amssymb}
 % \RequirePackage{mathrsfs}
 \RequirePackage{makeidx}
+
+% Should we use showlabels?
+\ifthenelse{\boolean{@showlabels}}{\RequirePackage[inline]{showlabels}}{}
 
 % My macros package
 \RequirePackage{ihmacros}
