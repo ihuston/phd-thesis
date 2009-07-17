@@ -1,7 +1,7 @@
 % % % % % % % % % % % % % 
 %  Ian Huston - ihformat.sty
 %  formatting and macros
-%  $Id: ihformat.sty,v 1.10 2009/07/17 11:13:38 ith Exp $
+%  $Id: ihformat.sty,v 1.11 2009/07/17 16:13:36 ith Exp $
 % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihformat}
@@ -19,7 +19,7 @@
 \def\version$#1,v #2 #3${} }%
 % \renewcommand{\version}[$#1,v #2 #3 #4$]{#2, #3}}%
 % Use the following line in each file to specify revision, date
-% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.10 2009/07/17 11:13:38 ith Exp $}
+% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.11 2009/07/17 16:13:36 ith Exp $}
 
 % Should we use showlabels? Set with labels option, default is off.
 \newboolean{@showlabels}
@@ -48,6 +48,7 @@
 \RequirePackage{fancyhdr}
 % % 
 
+\RequirePackage{subfigure}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 % \RequirePackage{mathrsfs}
