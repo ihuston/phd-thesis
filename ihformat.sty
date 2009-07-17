@@ -1,7 +1,7 @@
 % % % % % % % % % % % % % 
 %  Ian Huston - ihformat.sty
 %  formatting and macros
-%  $Id: ihformat.sty,v 1.9 2009/07/14 17:16:07 ith Exp $
+%  $Id: ihformat.sty,v 1.10 2009/07/17 11:13:38 ith Exp $
 % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihformat}
@@ -19,7 +19,7 @@
 \def\version$#1,v #2 #3${} }%
 % \renewcommand{\version}[$#1,v #2 #3 #4$]{#2, #3}}%
 % Use the following line in each file to specify revision, date
-% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.9 2009/07/14 17:16:07 ith Exp $}
+% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.10 2009/07/17 11:13:38 ith Exp $}
 
 % Should we use showlabels? Set with labels option, default is off.
 \newboolean{@showlabels}
@@ -33,6 +33,7 @@
 % % % % % % % % % % % % % % % 
 % Packages
 % % % % % % % % % % % % % % %
+
 \RequirePackage{graphicx}
 \RequirePackage{color}
 % % 
@@ -46,16 +47,24 @@
 \pagestyle{headings}
 \RequirePackage{fancyhdr}
 % % 
+
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 % \RequirePackage{mathrsfs}
 \RequirePackage{makeidx}
+
+
+% Natbib package
+\RequirePackage{natbib}
 
 % Should we use showlabels?
 \ifthenelse{\boolean{@showlabels}}{\RequirePackage[inline]{showlabels}}{}
 
 % My macros package
 \RequirePackage{ihmacros}
+
+% Hyperlinking without footnotes.
+\RequirePackage[pdftex, colorlinks, hyperfootnotes=false]{hyperref}
 
 % % % % % % % % % % 
 % fancyhdr settings
