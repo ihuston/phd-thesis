@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.7 2009/07/14 17:23:04 ith Exp $
+% $Id: multibrane.tex,v 1.8 2009/07/17 15:56:32 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.7 2009/07/14 17:23:04 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.8 2009/07/17 15:56:32 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -148,7 +148,7 @@ The low-energy, world-volume dynamics of a
 ${\rm D3}$-brane in a warped background is determined 
 by an effective action of the form 
 \begin{equation}
-\label{DBIaction}
+\label{DBIaction-multi}
 S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\phi , X) \right] \,,
 \end{equation}
@@ -282,14 +282,14 @@ field is given approximately by \cite{lyth,bmpaper}
 The ten-dimensional metric of the warped deformed conifold inside a  
 throat region has the form 
 \begin{equation}
-\label{conemetric}
+\label{conemetric-multi}
 ds_{10}^2= h^2 ( \rho) ds_4^2 + h^{-2} (\rho ) 
 \left( d\rho^2 +\rho^2 ds_{X_5}^2 \right) \,,
 \end{equation} 
 where the `warp factor' $h(\rho )$ is a function of the radial 
 coordinate $\rho$ along the throat and $X_5$ denotes a five-dimensional, 
 Sasaki-Einstein manifold. In many scenarios, the ten-dimensional 
-manifold (\ref{conemetric}) can be approximated by the product 
+manifold (\ref{conemetric-multi}) can be approximated by the product 
 $AdS_5 \times X_5$, where $AdS_5$ represents five-dimensional, 
 anti-de Sitter space. In this case, the warp factor is given by  
 \begin{equation}
@@ -325,7 +325,7 @@ corresponding limit $|\Delta \phi |_* < 2\Mpl /\sqrt{N}$ \cite{bmpaper}.
 Combining this with the constraint (\ref{approxlyth}) therefore 
 yields an upper limit on the tensor-scalar ratio: 
 \begin{equation}
-\label{BMbound}
+\label{BMbound-multi}
 r_* < \frac{32}{N {\cal{N}}_{\rm eff}^2} \left( 
 c_s P_{,X} \right)_* \,.
 \end{equation}
@@ -374,7 +374,7 @@ r_* < \frac{10}{(\Delta {\cal{N}})_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3}
 \left( \frac{h_*}{\Mpl} \right)^{4/3} \left( c_s P_{,X} \right)_* \,.
 \end{equation}
 
-Comparison of the limits (\ref{BMbound}) and (\ref{LHbound})
+Comparison of the limits (\ref{BMbound-multi}) and (\ref{LHbound})
 implies that the LH bound is the stronger of the two when
 \begin{equation}
 \label{LHstronger}
@@ -405,7 +405,7 @@ these bounds could be relaxed.
 % 
 
 In the standard DBI scenario, the kinetic function defined in 
-Eq. (\ref{DBIaction})  takes the form 
+Eq. (\ref{DBIaction-multi})  takes the form 
 \begin{equation}
 \label{DBIkinetic}
 P (\phi , X) = -T(\phi ) \sqrt{1-2T^{-1}(\phi ) X} + T(\phi ) - V(\phi ) \,,
@@ -432,7 +432,7 @@ c_s P_{,X} = 1 , \qquad  \Lambda = \frac{1}{2} \left(
 \frac{1}{c_s^2} -1 \right) \,.
 \end{equation}
 It follows that the 
-bounds (\ref{BMbound}) and (\ref{LHbound}) 
+bounds (\ref{BMbound-multi}) and (\ref{LHbound}) 
 on the tensor-scalar ratio could in principle be 
 significantly relaxed in models where $(c_sP_{,X})_* \gg 1$. 
 In view of the second relation in Eq. (\ref{special}), it is of interest 
@@ -512,9 +512,9 @@ we find from Eq. (\ref{deffnl}) that
 \frac{5}{972} \left( \frac{59-55m}{1-m} \right) \,.
 \end{eqnarray}
 Hence substituting Eqs. (\ref{consequence1}) and (\ref{consequence3}) 
-into the BM bound (\ref{BMbound}) and the LH bound (\ref{LHbound}) implies that 
+into the BM bound (\ref{BMbound-multi}) and the LH bound (\ref{LHbound}) implies that 
 \begin{equation}
-\label{weakBMbound}
+\label{weakBMbound-multi}
 r_*< \frac{32}{N {\cal{N}}_{\rm eff}^2} \frac{(-m) f_1 f_2}{\sqrt{2(1-m)}}
 \left( -\frac{\fnl}{\beta} \right)^{(1-2m)/2}
 \end{equation}
@@ -907,7 +907,7 @@ The  maximal known value of the Euler number for such four-folds arises from
 hypersurfaces in weighted projective spaces and is given by 
 $\chi = 1, 820,448$ \cite{klemm}. This implies the upper limit of 
 \begin{equation}
-\label{Nlimit} 
+\label{Nlimit-multi} 
 N < 75852
 \end{equation}
 for known solutions, although in principle higher values are possible. 
@@ -931,10 +931,10 @@ a detectable gravitational wave background could in principle
 be generated in this class of multi-brane inflationary 
 models. We find from (\ref{adsupperbound}) that this would require 
 \begin{equation}
-\label{nlimit}
+\label{nlimit-multi}
 n < 1 -5.3 \times 10^{-5} \sqrt{N} \fnl < 1-0.014 \fnl \,,
 \end{equation}
-where the theoretic limit ({\ref{Nlimit}) for 
+where the theoretic limit ({\ref{Nlimit-multi}) for 
 known compactifications has been imposed in the 
 second inequality. We may deduce, therefore, that  
 since we require $n \ge 2$ for consistency, a detectable tensor 
@@ -948,7 +948,7 @@ limit of  $\fnl >-151$ implies that $n \le 3$ is required
 for the tensors to be observable. 
 Consequently, if tensor perturbations are detected, this would rule 
 out all models with $n \ge  4$ or, alternatively, would require presently 
-unknown configurations with $N$ exceeding bound (\ref{Nlimit}). 
+unknown configurations with $N$ exceeding bound (\ref{Nlimit-multi}). 
 
 In the above analysis we assumed that the string coupling 
 took the value $g_s \simeq 10^{-2}$. For the $AdS_5 \times X_5$ throat, 
@@ -962,7 +962,7 @@ volume of the Einstein manifold $X_5$ will also weaken the upper limit.
 
 Let us re-iterate that this limit on $n$ is well within the 
 regime of validity for the theory, which we have argued is 
-self-consistent for $n<10$. Moreover since the constraint (\ref{nlimit})
+self-consistent for $n<10$. Moreover since the constraint (\ref{nlimit-multi})
 arises using the absolute maximal bound on the known 
 Euler characteristics, it suggests that in realistic scenarios $n$ will 
 always be much smaller than this. Indeed, one could argue that 
@@ -973,14 +973,14 @@ We must also ensure that our approximation $(n-1)^2Y \gg 1$
 is valid for consistency.  
 For the parameter values we have chosen this requires that 
 $g_s N \gg  (n-1)^2$ 
-and this is satisfied if the condition (\ref{nlimit}) 
+and this is satisfied if the condition (\ref{nlimit-multi}) 
 holds. Note also that we require $N \gg n$ for the supergravity 
 approximation to be under control and for backreaction effects to 
-be negligible. This is also satisfied when (\ref{nlimit})  
+be negligible. This is also satisfied when (\ref{nlimit-multi})  
 holds. 
 
 For completeness we should also consider the 
-BM bound (\ref{BMbound}) for this class of models. This is given by 
+BM bound (\ref{BMbound-multi}) for this class of models. This is given by 
 \begin{equation}
 \label{BMads}
 r_* < -\frac{42}{N {\cal{N}}^2_{\rm eff}}\sqrt{1 +(n-1)^2Y}\fnl 
@@ -1022,7 +1022,7 @@ the volume of the throat is much smaller
 than the volume of the compactified Calabi-Yau 
 three-fold. It is likely, therefore, 
 that the actual constraint on $r$ would be much stronger. Consequently, 
-although the bound (\ref{nlimit})  
+although the bound (\ref{nlimit-multi})  
 does marginally allow for detectable tensors if $n$ is sufficiently 
 small, in practice this constraint would be further tightened by a more 
 complete calculation. Nonetheless, our analysis does not necessarily 
