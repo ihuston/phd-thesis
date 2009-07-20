@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.3 2009/07/20 13:29:13 ith Exp $
+% $Id: dbi-intro.tex,v 1.4 2009/07/20 14:03:41 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.3 2009/07/20 13:29:13 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.4 2009/07/20 14:03:41 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -350,3 +350,138 @@ The brane dynamics are determined by the DBI action in such a
 way that the inflaton's kinetic energy is bounded from above by the warped 
 brane tension. The regime where this bound is nearly saturated is 
 known as the `relativistic' limit.
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Non-Canonical Inflation} 
+\label{sec:noncanoninfl}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+The low-energy, world-volume dynamics of a 
+${\rm D3}$-brane in a warped background is determined 
+by an effective action of the form 
+\begin{equation}
+\label{DBIaction-multi}
+S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
++ P (\phi , X) \right] \,,
+\end{equation}
+where $R$ is the Ricci curvature scalar, 
+$X \equiv -\frac{1}{2}g^{\mu \nu}\nabla_\mu \phi \nabla_\nu \phi$
+denotes the kinetic energy of the inflaton field $\phi$, and the function  
+$P (\phi , X)$ is referred to as the `kinetic function'.  
+
+We assume that the four-dimensional universe is   
+spatially flat and isotropic and sourced by an  
+homogeneous inflaton field, $\phi =\phi (t)$, with energy 
+density $E = 2X\PX - P$, where a subscripted comma denotes partial
+differentiation. 
+We further assume that the inflaton dynamics  
+generates a quasi-exponential expansion of the universe, 
+where $\epsilon \equiv -\dot{H}/H^2 \ll1$. 
+ 
+It proves convenient to define two parameters in terms of the 
+kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
+\begin{eqnarray}
+\label{defcs}
+ c_s^2 \equiv \frac{\PX}{\PX + 2X P_{,XX}} \,,
+\\
+\label{deflambda}
+\Lambda \equiv  \frac{X^2 P_{,XX} +
+\frac{2}{3}X^3 P_{,XXX}}{X P_{,X} +
+2X^2 P_{,XX}}\,.
+\end{eqnarray}
+The first parameter, $c_s$, determines the sound speed of fluctuations 
+in the inflaton field. This can be significantly less than unity, 
+in contrast to slow-roll inflation driven by a canonical 
+field such that $P_{,X} =1$.
+
+The amplitudes of the scalar and tensor perturbations 
+generated during inflation are given by \cite{gm}
+\begin{eqnarray} 
+\label{eqn:Ps2}
+ \Ps = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,,
+\\
+\label{eqn:Pt2}
+\Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
+\end{eqnarray}
+respectively, and the ratio of these amplitudes 
+is defined as \cite{gm} 
+\begin{equation}
+\label{defr}
+r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon \,.
+\end{equation}  
+The WMAP3 normalization of the CMB power spectrum 
+implies that $\Ps= 2.5\times10^{-9}$ and 
+the experimental upper bound on the tensor-scalar 
+ratio is $r <0.55$ \cite{spergel}.
+
+Deviations from Gaussian statistics in the curvature perturbation, ${\cal{R}}$,
+are parametrized in terms of the non-linearity parameter, 
+$\fnl$, which is defined by ${\cal{R}} = {\cal{R}}_G + \frac{3}{5} \fnl  (
+{\cal{R}}_G^2 -\langle {\cal{R}}_G^2 \rangle )$, where the 
+quadratic component represents a convolution and 
+${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}. In the limit  
+where the three momenta have equal magnitude (corresponding to the equilateral  
+triangle limit), the leading-order contribution to the non-linearity 
+parameter is given by \cite{chenetal,lidser3}
+\begin{equation} 
+\label{deffnl}
+ \fnl = -\frac{35}{108}\left(\frac{1}{c_s^2} -1 \right) +
+\frac{5}{81}\left( \frac{1}{c_s^2} -1 -2\Lambda \right) \,.
+ \end{equation} 
+One should note that the sign convention is that employed
+by the WMAP data set.
+Data from WMAP3 imposes the bound $|\fnl| < 300$ on this parameter
+\cite{spergel}. The corresponding bounds for other triangle configurations 
+may be much tighter than this and this may be particularly relevant if 
+non-Gaussian signatures have indeed been detected in the 
+CMB \cite{Yadav:2007yy,crim}. The more recent WMAP5 data set
+\cite{Komatsu:2008hk} improves on this bound somewhat, and
+also indicates that it is distinctly asymmetric. At the $95 \%$ confidence level, the bound on the 
+equilateral triangle becomes $-151 < \fnl < 253$.
+
+Eqs. (\ref{eqn:Ps2}) and (\ref{eqn:Pt2}) imply 
+that the variation of the inflaton field during inflation  
+is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
+\begin{equation}
+\label{genlythbound}
+\frac{1}{\Mpl^2}
+\left( \frac{d \phi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}} \,,
+\end{equation}
+where ${\cal{N}} \equiv \int dt \, H$ denotes the number of e-foldings.
+We will refer to the epoch of inflation that can be directly 
+constrained by cosmological observations as 
+`observable inflation' and will assume that this phase 
+occurred when the brane was located within a 
+throat region\footnote{We denote the values of all parameters 
+evaluated during observable inflation by a subscript 
+`$*$'.}. Observable inflation corresponds to no more than about 4 e-foldings  
+of inflationary expansion, $\Delta {\cal{N}}_* \simeq 4$. 
+The total variation in the inflaton field between the epoch of observable 
+inflation and the end of inflation is then given by
+\begin{equation}
+\label{totalfield}
+\frac{\Delta \phi_{\rm inf}}{\Mpl} = 
+\left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} {\cal{N}}_{\rm eff} \,,
+\end{equation}
+where
+\begin{equation}
+\label{Neff}
+{\cal{N}}_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
+\int_0^{{\cal{N}}_{\rm end}}  
+\left( \frac{r}{c_sP_{,X}} \right)^{1/2} d {\cal{N}} \,.
+\end{equation}
+If $r/(c_s P_{,X})$ varies 
+sufficiently slowly during observable inflation, 
+the corresponding change in the value of the inflaton  
+field is given approximately by \cite{lyth,bmpaper}
+\begin{equation}
+\label{approxlyth}
+\left( \frac{\Delta \phi}{\Mpl} \right)_*^2 \simeq 
+\frac{(\Delta {\cal{N}}_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
+\end{equation}
