@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.9 2009/07/20 13:29:31 ith Exp $
+% $Id: multibrane.tex,v 1.10 2009/07/20 14:03:31 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.9 2009/07/20 13:29:31 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.10 2009/07/20 14:03:31 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -24,7 +24,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
-
 Recently relativistic DBI inflation has come under considerable 
 pressure when confronted with cosmological observations.  
 Baumann \& McAllister (BM) and Lidsey \& Huston (LH) 
@@ -41,6 +40,7 @@ The two bounds on $r$ are incompatible
 if $n_s \sim 0.95$, as currently favoured by Cosmic Microwave Background 
 (CMB) observations \cite{spergel,Komatsu:2008hk}. 
 
+% TODO: Move to extensions and alternatives chapter?
 The purpose of the present paper is to investigate whether the 
 upper bounds on $r$ can be relaxed in more general DBI 
 inflationary scenarios. 
@@ -68,6 +68,7 @@ out as a predictive model. Thus wrapped brane configurations are preferable to s
 However
 the difficulty in these models is that the backreaction is no longer under control.
 
+% TODO: Any new papers?
 Alternative ways to relax these bounds have been proposed, including
 theories based upon multi-field models \cite{Huang:2007hh}, the addition of
 angular momentum as another degree of freedom \cite{spinflation} and using
@@ -77,6 +78,7 @@ bounds are relaxed only by a small fraction, and therefore these models should s
 regarded as being unsatisfactory since they require an extreme amount of fine tuning in order
 to work.
 
+% TODO: Keep in multibrane intro
 Another alternative possibility is to consider 
 multiple brane configurations\footnote{In certain limits this approach 
 is actually dual to considering wrapped branes \cite{Ward:2007gs}.}. 
@@ -113,143 +115,11 @@ can in principle lead to a detectable
 gravitational wave background if 
 the number of coincident branes is sufficiently small. 
 
+% TODO: Put into main intro or earlier
 Units are chosen such that $\hbar = c =1$ and $\Mpl \equiv (8\pi G)^{-1/2}
 = 2.4 \times 10^{-18} \, {\rm GeV}$ denotes the 
 reduced Planck mass. 
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Non-Canonical Inflation} 
-\label{sec:noncanoninfl}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-
-The low-energy, world-volume dynamics of a 
-${\rm D3}$-brane in a warped background is determined 
-by an effective action of the form 
-\begin{equation}
-\label{DBIaction-multi}
-S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
-+ P (\phi , X) \right] \,,
-\end{equation}
-where $R$ is the Ricci curvature scalar, 
-$X \equiv -\frac{1}{2}g^{\mu \nu}\nabla_\mu \phi \nabla_\nu \phi$
-denotes the kinetic energy of the inflaton field $\phi$, and the function  
-$P (\phi , X)$ is referred to as the `kinetic function'.  
-
-We assume that the four-dimensional universe is   
-spatially flat and isotropic and sourced by an  
-homogeneous inflaton field, $\phi =\phi (t)$, with energy 
-density $E = 2X\PX - P$, where a subscripted comma denotes partial
-differentiation. 
-We further assume that the inflaton dynamics  
-generates a quasi-exponential expansion of the universe, 
-where $\epsilon \equiv -\dot{H}/H^2 \ll1$. 
- 
-It proves convenient to define two parameters in terms of the 
-kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
-\begin{eqnarray}
-\label{defcs}
- c_s^2 \equiv \frac{\PX}{\PX + 2X P_{,XX}} \,,
-\\
-\label{deflambda}
-\Lambda \equiv  \frac{X^2 P_{,XX} +
-\frac{2}{3}X^3 P_{,XXX}}{X P_{,X} +
-2X^2 P_{,XX}}\,.
-\end{eqnarray}
-The first parameter, $c_s$, determines the sound speed of fluctuations 
-in the inflaton field. This can be significantly less than unity, 
-in contrast to slow-roll inflation driven by a canonical 
-field such that $P_{,X} =1$.
-
-The amplitudes of the scalar and tensor perturbations 
-generated during inflation are given by \cite{gm}
-\begin{eqnarray} 
-\label{eqn:Ps2}
- \Ps = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,,
-\\
-\label{eqn:Pt2}
-\Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
-\end{eqnarray}
-respectively, and the ratio of these amplitudes 
-is defined as \cite{gm} 
-\begin{equation}
-\label{defr}
-r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon \,.
-\end{equation}  
-The WMAP3 normalization of the CMB power spectrum 
-implies that $\Ps= 2.5\times10^{-9}$ and 
-the experimental upper bound on the tensor-scalar 
-ratio is $r <0.55$ \cite{spergel}.
-
-Deviations from Gaussian statistics in the curvature perturbation, ${\cal{R}}$,
-are parametrized in terms of the non-linearity parameter, 
-$\fnl$, which is defined by ${\cal{R}} = {\cal{R}}_G + \frac{3}{5} \fnl  (
-{\cal{R}}_G^2 -\langle {\cal{R}}_G^2 \rangle )$, where the 
-quadratic component represents a convolution and 
-${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}. In the limit  
-where the three momenta have equal magnitude (corresponding to the equilateral  
-triangle limit), the leading-order contribution to the non-linearity 
-parameter is given by \cite{chenetal,lidser3}
-\begin{equation} 
-\label{deffnl}
- \fnl = -\frac{35}{108}\left(\frac{1}{c_s^2} -1 \right) +
-\frac{5}{81}\left( \frac{1}{c_s^2} -1 -2\Lambda \right) \,.
- \end{equation} 
-One should note that the sign convention is that employed
-by the WMAP data set.
-Data from WMAP3 imposes the bound $|\fnl| < 300$ on this parameter
-\cite{spergel}. The corresponding bounds for other triangle configurations 
-may be much tighter than this and this may be particularly relevant if 
-non-Gaussian signatures have indeed been detected in the 
-CMB \cite{Yadav:2007yy,crim}. The more recent WMAP5 data set
-\cite{Komatsu:2008hk} improves on this bound somewhat, and
-also indicates that it is distinctly asymmetric. At the $95 \%$ confidence level, the bound on the 
-equilateral triangle becomes $-151 < \fnl < 253$.
-
-Eqs. (\ref{eqn:Ps2}) and (\ref{eqn:Pt2}) imply 
-that the variation of the inflaton field during inflation  
-is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
-\begin{equation}
-\label{genlythbound}
-\frac{1}{\Mpl^2}
-\left( \frac{d \phi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}} \,,
-\end{equation}
-where ${\cal{N}} \equiv \int dt \, H$ denotes the number of e-foldings.
-We will refer to the epoch of inflation that can be directly 
-constrained by cosmological observations as 
-`observable inflation' and will assume that this phase 
-occurred when the brane was located within a 
-throat region\footnote{We denote the values of all parameters 
-evaluated during observable inflation by a subscript 
-`$*$'.}. Observable inflation corresponds to no more than about 4 e-foldings  
-of inflationary expansion, $\Delta {\cal{N}}_* \simeq 4$. 
-The total variation in the inflaton field between the epoch of observable 
-inflation and the end of inflation is then given by
-\begin{equation}
-\label{totalfield}
-\frac{\Delta \phi_{\rm inf}}{\Mpl} = 
-\left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} {\cal{N}}_{\rm eff} \,,
-\end{equation}
-where
-\begin{equation}
-\label{Neff}
-{\cal{N}}_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
-\int_0^{{\cal{N}}_{\rm end}}  
-\left( \frac{r}{c_sP_{,X}} \right)^{1/2} d {\cal{N}} \,.
-\end{equation}
-If $r/(c_s P_{,X})$ varies 
-sufficiently slowly during observable inflation, 
-the corresponding change in the value of the inflaton  
-field is given approximately by \cite{lyth,bmpaper}
-\begin{equation}
-\label{approxlyth}
-\left( \frac{\Delta \phi}{\Mpl} \right)_*^2 \simeq 
-\frac{(\Delta {\cal{N}}_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
-\end{equation}
 
 % 
 % 
@@ -257,6 +127,7 @@ field is given approximately by \cite{lyth,bmpaper}
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Theoretic Upper Bounds on the Tensor-Scalar Ratio}
+% TODO: Rewrite as reference to previous chapter keeping labels intact
 \label{sec:theobound}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -313,6 +184,7 @@ r_* < \frac{32}{N {\cal{N}}_{\rm eff}^2} \left(
 c_s P_{,X} \right)_* \,.
 \end{equation}
 
+% Change to reference chapter not paper.
 Two of the authors (Lidsey \& Huston, LH) derived a complementary bound on the 
 tensor-scalar ratio by noting that during observable inflation
 the brane spans a fraction of the throat volume \cite{lidseyhuston}
@@ -431,6 +303,7 @@ typically generated in models where the sound speed of fluctuations
 is small, we will begin by considering 
 scenarios where the kinetic function satisfies the 
 inequalities: 
+% TODO: Show working
 \begin{equation}
 \label{Plimits}
 X^2 P_{,XXX} \gg XP_{,XX} \gg P_{,X} \,.
@@ -466,6 +339,7 @@ field and
 \begin{equation}
 m \equiv \frac{2(\alpha -3 )}{\alpha -6} \, . 
 \end{equation}
+% TODO: Show working
 It can be verified that the inequalities (\ref{Plimits}) 
 are satisfied in the `relativistic' limit, where $X \simeq 1/f_2$.
 We consider the inflationary dynamics in this limit in what follows. 
@@ -1096,21 +970,13 @@ with current cosmological observations. It would also be interesting to
 investigate whether the effective action (\ref{gensol}) with values of 
 $m \ne - 1/2$ arises in other string-inspired settings. 
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section*{Acknowledgements}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-We would like to thank Adam Ritz for useful comments on the manuscript.
-IH is supported jointly by a Queen Mary studentship and the Science and
-Technology Facilities Council (STFC).
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section*{Appendix: Exact Solution}
+% TODO: Move into main text
 \label{sec:multi-appendix}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
