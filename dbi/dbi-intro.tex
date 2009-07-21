@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.6 2009/07/20 16:46:09 ith Exp $
+% $Id: dbi-intro.tex,v 1.7 2009/07/21 15:10:59 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.6 2009/07/20 16:46:09 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.7 2009/07/21 15:10:59 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -23,6 +23,7 @@
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
+
 The inflationary scenario provides the 
 theoretical framework for the early history 
 of the universe. It has now been successfully tested by observations, 
@@ -34,6 +35,7 @@ including gravity and it is natural and important to
 develop inflationary models within string theory and to confront them with 
 cosmological observations. 
  
+
 One class of string-theoretic models that has received 
 considerable attention is D-brane inflation
 \cite{brane1,brane2,brane3,brane4,brane5,
@@ -52,6 +54,7 @@ field is identified with the radial position of the brane
 along the throat. Since this is an open string mode, the field 
 equation for the inflaton is determined by a Dirac-Born-Infeld (DBI) action. 
 
+
 The purpose of the present work is to 
 explore the observational consequences of DBI inflation. 
 In general, primordial gravitational wave fluctuations
@@ -61,6 +64,7 @@ The nature of the DBI action is such that the sound
 speed of fluctuations in the inflaton can be much less than the speed of 
 light. This induces a large and potentially detectable non-Gaussian 
 signal in the density perturbations \cite{brane6,brane11,lidser3,chenetal}. 
+
 
 The gravitational wave background generated in DBI 
 inflation was recently investigated by Baumann and McAllister (BM) 
@@ -72,6 +76,7 @@ perturbations to be detectable.
 Moreover, the special case of 
 DBI inflation driven by a quadratic potential is incompatible with the WMAP3 
 data when this constraint is imposed \cite{bean}.  
+
 
 Our aim is to derive observational constraints on DBI inflation that are 
 insensitive to the details of the throat geometry and the inflaton potential. 
@@ -101,6 +106,7 @@ This is incompatible with the upper bound
 on $r$ when $1-n_s \simeq 0.05$, as inferred
 by the observations. 
 
+
 Hence, a reconciliation between theory and observation 
 requires either a relaxation of the upper limit on $r$ or a blue 
 spectral index $(n_s >1)$. The DBI scenario would need 
@@ -111,6 +117,7 @@ generalized action must satisfy for the Baumann-McAllister
 We then show that such conditions can be realized in a recently 
 proposed IR version of DBI inflation driven
 by multiple coincident branes \cite{thomasward}. 
+
 
 % TODO: Change to chapter structure.
 The paper is organized as follows. We briefly review DBI inflation 
@@ -142,21 +149,25 @@ Flux compactification of type IIB string theory to four dimensions
 results in a warped geometry, where the six-dimensional CY  
 manifold contains one or more throats (see \cite{grana,douglas} for reviews). 
 The metric inside a throat has the generic form
+% 
 \begin{equation}
-\label{conemetric}
+\label{eq:conemetric-dbiintro}
 ds_{10}^2= h^2 ( \rho) ds_4^2 + h^{-2} (\rho ) 
 \left( d\rho^2 +\rho^2 ds_{X_5}^2 \right) \,,
-\end{equation} 
+\end{equation}
+%  
 where the warp factor $h (\rho)$ is a function of the 
 radial coordinate $\rho$ along the throat and $X_5$
 is a Sasaki-Einstein five-manifold. 
-In many cases, the ten-dimensional metric (\ref{conemetric}) can be 
+In many cases, the ten-dimensional metric (\ref{eq:conemetric-dbiintro}) can be 
 approximated locally by the geometry $AdS_5 \times X_5$, where the 
 warp factor is given by $h=\rho /L$ and 
-the radius of curvature of the $AdS_5$ space is defined by 
+the radius of curvature of the $AdS_5$ space is defined by
+%  
 \begin{equation}
 L^4 \equiv \frac{4\pi^4 g_s N}{{\rm Vol} (X_5) m_s^4} \,,
 \end{equation}
+% 
 such that $\mathrm{Vol}(X_5)$ is the dimensionless volume of 
 $X_5$ with unit radius, $N$ is the ${\rm D3}$  charge of the throat, 
 $g_s$ is the string coupling and $m_s$ is the string mass scale.
@@ -173,6 +184,7 @@ $S^3$ `cap' due to the wrapping of the fluxes along the cycles of the conifold
 \cite{ks,kt} and the warp factor asymptotes to 
 a constant value in this region.   
  
+
 In general, the low-energy world-volume dynamics
 of a probe ${\rm D3}$-brane in a warped throat is determined 
 by an effective, four-dimensional DBI action. 
@@ -180,14 +192,16 @@ The inflaton field is related to the radial
 position of the brane by 
 $\phi \equiv \sqrt{T_3} \rho$, where $T_3 =m_s^4/[(2\pi )^3 g_s ]$ 
 is the brane tension. The action is then given by 
+% 
 \begin{eqnarray}
-\label{DBIaction}
+\label{eq:DBIaction-dbiintro}
 S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\phi , X) \right] \\
 \label{defP}
 P( \phi ,X) = - T (\phi)  \sqrt{1 - 2T^{-1} (\phi ) X}
 +T (\phi)  -V(\phi)  \,,
 \end{eqnarray}
+% 
 where $R$ is the Ricci curvature scalar,
 $X \equiv - \frac{1}{2} g^{\mu\nu} \nabla_{\mu} \phi \nabla_{\nu} \phi$
 is the kinetic energy of the inflaton, $V(\phi )$ denotes 
@@ -196,27 +210,33 @@ potential and $T(\phi ) = T_3 h^4 (\phi )$
 defines the warped brane tension. We refer to $P(\phi , X)$ as the 
 `kinetic function' for the inflaton. 
  
+
 We consider a spatially flat and isotropic cosmology 
 sourced by a homogeneous scalar field. 
 In this case, the Friedmann equations for a monotonically 
 varying inflaton can be expressed in the form \cite{brane6} 
+% 
 \begin{eqnarray}
-\label{Friedmann}
+\label{eq:Friedmann-dbiintro}
 3 \Mpl^2 H^2(\phi ) = V(\phi ) -T(\phi ) 
 \left[ 1- \sqrt{1+4\Mpl^4T^{-1} H'^2} \right] \\
 \label{useful}
 \dot{\phi} = - \frac{2\Mpl^2H'}{\sqrt{1+4\Mpl^4 T^{-1} H'^2}} \, ,
 \end{eqnarray}
+% 
 where $H=H(\phi )$ represents the Hubble parameter
 as a function of the field and a prime denotes $d/d\phi$. 
+
 
 An important consequence of the non-trivial kinetic structure 
 of the DBI action is that the sound speed of fluctuations in the inflaton 
 differs from unity:   
+% 
 \begin{equation}
-\label{speedofsound}
+\label{eq:csdefn-dbiintro}
 c_s = \frac{1}{P_{,X}} = \sqrt{1 -2T^{-1}X}  \,,
 \end{equation}
+% 
 where a subscripted comma denotes partial differentiation. 
 Furthermore, the condition that the sound speed be real 
 imposes an upper bound on the kinetic energy 
@@ -225,6 +245,7 @@ is independent of the steepness of the potential.
 The motion of the brane is said to be `relativistic' when this bound is 
 close to saturation.
  
+
 We now define the epoch that is directly 
 accessible to cosmological observations as `observable inflation'. 
 Depending on the reheating 
@@ -232,8 +253,9 @@ temperature, this occurred some 30 to 60 e-foldings before the end of
 inflation. The inflationary dynamics during this phase can  
 be quantified in terms of three parameters: 
 % TODO: Link to slow roll introduction
+% 
 \begin{eqnarray}
-\label{defepsilon}
+\label{eq:epsdefn-dbiintro}
 \epsilon \equiv -\frac{\dot{H}}{H^2}
 = \frac{XP_{,X}}{\Mpl^2H^2} 
 = \frac{2\Mpl^2}{\gamma} \left( \frac{H'}{H} \right)^2 \\
@@ -243,13 +265,15 @@ be quantified in terms of three parameters:
 s \equiv \frac{\dot{c_s}}{c_sH} 
 = \frac{2\Mpl^2}{\gamma} \frac{H'}{H}\frac{\gamma'}{\gamma}  \,,
 \end{eqnarray}
+% 
 where $\gamma \equiv 1/c_s$. 
 We will assume that the `slow-roll' conditions 
 $\{ \epsilon, |\eta | , |s | \}  \ll 1$ applied during observable inflation. 
 In this regime, the amplitudes and spectral indices of the two-point functions 
 for the scalar and tensor perturbations are given by \cite{gm}
+% 
 \begin{eqnarray}
-\label{amplitudes}
+\label{eq:spectra-dbiintro}
 P_S^2= \frac{1}{8 \pi^2 \Mpl^2} \frac{H^2}{c_s \epsilon}
 = \frac{H^4}{4\pi^2\dot{\phi}^2}
 \\
@@ -260,16 +284,19 @@ P_T^2 = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2}
 \\
  n_t = -2\epsilon  
 \end{eqnarray}
+% 
 respectively, where the quantities on the right-hand sides are evaluated 
 when the scale with comoving wavenumber $k=aH\gamma$ crossed 
 the Hubble radius during inflation.  
 % TODO: Talk about difference with standard k=aH
 The tensor-scalar ratio, $r \equiv P_T^2/P_S^2$, is directly related to 
 the tensor spectral index by \cite{gm}
+% 
 \begin{equation}
-\label{consistency}
+\label{eq:consistency-dbiintro}
 r= -8c_sn_t = 16c_s \epsilon\,.
 \end{equation}
+% 
 Hence, a sound speed different to unity leads to a violation of the 
 standard inflationary consistency equation, which might be 
 detectable in the foreseeable future \cite{lidser1,lidser2}. 
@@ -279,6 +306,7 @@ The best-fit value for a constant spectral index is
 $n_s = 0.987^{+0.019}_{-0.037}$ if $r\ne 0$ is assumed as a prior. 
 This is strengthened to 
 $n_s = 0.948^{+0.015}_{-0.018}$ for a prior of $r = 0$ \cite{spergel}. 
+
 
 A further important consequence of a small sound speed is that departures  
 from purely Gaussian statistics may be large 
@@ -296,24 +324,30 @@ In general, this parameter is a function of the three momenta which
 form a triangle in Fourier space. However, in the limit where 
 these momenta have equal magnitude, the non-linearity parameter 
 is given to leading-order by \cite{chenetal,lidser2}  
+% 
 \begin{equation}
-\label{fnlcs}
+\label{eq:fnlcs-dbiintro}
 f_{NL} = \frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
 \end{equation}
+% 
 % TODO: Change to WMAP5 numbers
 Currently, WMAP3 constrains this parameter  
 to be ${| f_{NL} |} \, {\lsim} \, {300}$ \cite{spergel,crim}.  
 
-Finally, Eqs. (\ref{speedofsound}), (\ref{amplitudes}) and (\ref{fnlcs}) 
+
+Finally, Eqs. (\ref{eq:csdefn-dbiintro}), (\ref{eq:spectra-dbiintro}) and (\ref{eq:fnlcs-dbiintro}) 
 may be combined to constrain the warped brane tension 
 during observable inflation: 
+% 
 \begin{equation}
-\label{observewarp}
+\label{eq:obswarp-dbiintro}
 \frac{T (\phi_*)}{\Mpl^4}  = 
 \frac{\pi^2}{16} r^2P_S^2 \left( 1+\frac{1}{3f_{NL}} \right) \,,
 \end{equation}
+% 
 where a subscript `$*$' denotes that the quantity is to be evaluated 
 at that epoch. 
+
 
 % TODO: Change to chapter references
 In the following, we first consider the UV version of DBI inflation,
@@ -367,15 +401,18 @@ known as the `relativistic' limit.
 The low-energy, world-volume dynamics of a 
 ${\rm D3}$-brane in a warped background is determined 
 by an effective action of the form 
+% 
 \begin{equation}
-\label{DBIaction-multi}
+\label{eq:DBIaction-dbiintro2}
 S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\phi , X) \right] \,,
 \end{equation}
+% 
 where $R$ is the Ricci curvature scalar, 
 $X \equiv -\frac{1}{2}g^{\mu \nu}\nabla_\mu \phi \nabla_\nu \phi$
 denotes the kinetic energy of the inflaton field $\phi$, and the function  
 $P (\phi , X)$ is referred to as the `kinetic function'.  
+
 
 We assume that the four-dimensional universe is   
 spatially flat and isotropic and sourced by an  
@@ -385,42 +422,51 @@ differentiation.
 We further assume that the inflaton dynamics  
 generates a quasi-exponential expansion of the universe, 
 where $\epsilon \equiv -\dot{H}/H^2 \ll1$. 
+
  
 It proves convenient to define two parameters in terms of the 
 kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
+% 
 \begin{eqnarray}
-\label{defcs}
+\label{eq:defcs-dbiintro}
  c_s^2 \equiv \frac{\PX}{\PX + 2X P_{,XX}} \,,
 \\
-\label{deflambda}
+\label{eq:deflambda-dbiintro}
 \Lambda \equiv  \frac{X^2 P_{,XX} +
 \frac{2}{3}X^3 P_{,XXX}}{X P_{,X} +
 2X^2 P_{,XX}}\,.
 \end{eqnarray}
+% 
 The first parameter, $c_s$, determines the sound speed of fluctuations 
 in the inflaton field. This can be significantly less than unity, 
 in contrast to slow-roll inflation driven by a canonical 
 field such that $P_{,X} =1$.
 
+
 The amplitudes of the scalar and tensor perturbations 
 generated during inflation are given by \cite{gm}
+% 
 \begin{eqnarray} 
-\label{eqn:Ps2}
+\label{eq:Ps-dbiintro}
  \Ps = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,,
 \\
-\label{eqn:Pt2}
+\label{eq:Pt-dbiintro}
 \Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
 \end{eqnarray}
+% 
 respectively, and the ratio of these amplitudes 
 is defined as \cite{gm} 
+% 
 \begin{equation}
-\label{defr}
+\label{eq:rdefn-dbiintro}
 r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon \,.
-\end{equation}  
+\end{equation}
+%   
 The WMAP3 normalization of the CMB power spectrum 
 implies that $\Ps= 2.5\times10^{-9}$ and 
 the experimental upper bound on the tensor-scalar 
 ratio is $r <0.55$ \cite{spergel}.
+
 
 Deviations from Gaussian statistics in the curvature perturbation, ${\cal{R}}$,
 are parametrized in terms of the non-linearity parameter, 
@@ -431,11 +477,13 @@ ${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}. In the limit
 where the three momenta have equal magnitude (corresponding to the equilateral  
 triangle limit), the leading-order contribution to the non-linearity 
 parameter is given by \cite{chenetal,lidser3}
+% 
 \begin{equation} 
-\label{deffnl}
+\label{eq:fnldefn-dbiintro}
  \fnl = -\frac{35}{108}\left(\frac{1}{c_s^2} -1 \right) +
 \frac{5}{81}\left( \frac{1}{c_s^2} -1 -2\Lambda \right) \,.
- \end{equation} 
+\end{equation}
+%  
 One should note that the sign convention is that employed
 by the WMAP data set.
 Data from WMAP3 imposes the bound $|\fnl| < 300$ on this parameter
@@ -447,14 +495,17 @@ CMB \cite{Yadav:2007yy,crim}. The more recent WMAP5 data set
 also indicates that it is distinctly asymmetric. At the $95 \%$ confidence level, the bound on the 
 equilateral triangle becomes $-151 < \fnl < 253$.
 
-Eqs. (\ref{eqn:Ps2}) and (\ref{eqn:Pt2}) imply 
+
+Eqs. (\ref{eq:Ps-dbiintro}) and (\ref{eq:Pt-dbiintro}) imply 
 that the variation of the inflaton field during inflation  
 is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
+% 
 \begin{equation}
-\label{genlythbound}
+\label{eq:genlyth-dbiintro}
 \frac{1}{\Mpl^2}
 \left( \frac{d \phi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}} \,,
 \end{equation}
+% 
 where ${\cal{N}} \equiv \int dt \, H$ denotes the number of e-foldings.
 We will refer to the epoch of inflation that can be directly 
 constrained by cosmological observations as 
@@ -466,24 +517,31 @@ evaluated during observable inflation by a subscript
 of inflationary expansion, $\Delta {\cal{N}}_* \simeq 4$. 
 The total variation in the inflaton field between the epoch of observable 
 inflation and the end of inflation is then given by
+% 
 \begin{equation}
-\label{totalfield}
+\label{eq:totalfield-dbiintro}
 \frac{\Delta \phi_{\rm inf}}{\Mpl} = 
 \left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} {\cal{N}}_{\rm eff} \,,
 \end{equation}
+% 
 where
+% 
 \begin{equation}
-\label{Neff}
+\label{eq:Neff-dbiintro}
 {\cal{N}}_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
 \int_0^{{\cal{N}}_{\rm end}}  
 \left( \frac{r}{c_sP_{,X}} \right)^{1/2} d {\cal{N}} \,.
 \end{equation}
+% 
 If $r/(c_s P_{,X})$ varies 
 sufficiently slowly during observable inflation, 
 the corresponding change in the value of the inflaton  
 field is given approximately by \cite{lyth,bmpaper}
+% 
 \begin{equation}
-\label{approxlyth}
+\label{eq:approxlyth-dbiintro}
 \left( \frac{\Delta \phi}{\Mpl} \right)_*^2 \simeq 
 \frac{(\Delta {\cal{N}}_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
 \end{equation}
+% 
+
