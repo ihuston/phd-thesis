@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.10 2009/07/28 11:45:30 ith Exp $
+% $Id: dbi-intro.tex,v 1.11 2009/07/28 16:28:37 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.10 2009/07/28 11:45:30 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.11 2009/07/28 16:28:37 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -251,11 +251,11 @@ be quantified in terms of three parameters:
 % 
 \begin{eqnarray}
 \label{eq:epsdefn-dbiintro}
-\epsilon \equiv -\frac{\dot{H}}{H^2}
+\epsilon_H \equiv -\frac{\dot{H}}{H^2}
 = \frac{XP_{,X}}{\Mpl^2H^2} 
 = \frac{2\Mpl^2}{\gamma} \left( \frac{H'}{H} \right)^2 \\
 \label{defeta}
-\eta \equiv  \frac{2\Mpl^2}{\gamma}\frac{H''}{H} \\
+\eta_H \equiv  \frac{2\Mpl^2}{\gamma}\frac{H''}{H} \\
 \label{defs}
 s \equiv \frac{\dot{c_s}}{c_sH} 
 = \frac{2\Mpl^2}{\gamma} \frac{H'}{H}\frac{\gamma'}{\gamma}  \,,
@@ -263,21 +263,21 @@ s \equiv \frac{\dot{c_s}}{c_sH}
 % 
 where $\gamma \equiv 1/c_s$. 
 We will assume that the `slow-roll' conditions 
-$\{ \epsilon, |\eta | , |s | \}  \ll 1$ applied during observable inflation. 
+$\{ \epsilon_H, |\eta_H | , |s | \}  \ll 1$ applied during observable inflation. 
 In this regime, the amplitudes and spectral indices of the two-point functions 
 for the scalar and tensor perturbations are given by \cite{gm}
 % 
 \begin{eqnarray}
 \label{eq:spectra-dbiintro}
-P_S^2= \frac{1}{8 \pi^2 \Mpl^2} \frac{H^2}{c_s \epsilon}
+P_S^2= \frac{1}{8 \pi^2 \Mpl^2} \frac{H^2}{c_s \epsilon_H}
 = \frac{H^4}{4\pi^2\dot{\varphi}^2}
 \\
 P_T^2 = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} 
 \\
 \label{indices}
-1-n_s = 4 \epsilon -2\eta  +2s 
+1-n_s = 4 \epsilon_H -2\eta_H  +2s 
 \\
- n_t = -2\epsilon  
+ n_t = -2\epsilon_H  
 \end{eqnarray}
 % 
 respectively, where the quantities on the right-hand sides are evaluated 
@@ -289,7 +289,7 @@ the tensor spectral index by \cite{gm}
 % 
 \begin{equation}
 \label{eq:consistency-dbiintro}
-r= -8c_sn_t = 16c_s \epsilon\,.
+r= -8c_sn_t = 16c_s \epsilon_H\,.
 \end{equation}
 % 
 Hence, a sound speed different to unity leads to a violation of the 
@@ -416,7 +416,7 @@ density $E = 2X\PX - P$, where a subscripted comma denotes partial
 differentiation. 
 We further assume that the inflaton dynamics  
 generates a quasi-exponential expansion of the universe, 
-where $\epsilon \equiv -\dot{H}/H^2 \ll1$. 
+where $\epsilon_H \equiv -\dot{H}/H^2 \ll1$. 
 
  
 It proves convenient to define two parameters in terms of the 
@@ -454,7 +454,7 @@ is defined as \cite{gm}
 % 
 \begin{equation}
 \label{eq:rdefn-dbiintro}
-r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon \,.
+r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon_H \,.
 \end{equation}
 %   
 The WMAP3 normalization of the CMB power spectrum 
