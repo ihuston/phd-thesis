@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.10 2009/07/28 09:23:48 ith Exp $
+% $Id: dbi.tex,v 1.11 2009/07/28 09:51:26 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.10 2009/07/28 09:23:48 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.11 2009/07/28 09:51:26 ith Exp $}
 % \input{paper1}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -65,7 +65,7 @@ the throat region:
 % 
 \begin{equation}
 \label{eq:BMbound-dbi}
-\frac{\phi_{UV}}{\Mpl}   < \frac{2}{\sqrt{N}} \,.
+\frac{\varphi_{UV}}{\Mpl}   < \frac{2}{\sqrt{N}} \,.
 \end{equation}
 % 
 
@@ -73,19 +73,19 @@ the throat region:
 Condition (\ref{eq:BMbound-dbi}) may be converted into a 
 corresponding limit on the tensor-scalar ratio by noting from 
 the definition (\ref{eq:epsdefn-dbiintro})
-that $\dot{\phi}^2 /\Mpl^2 = 2\epsilon H^2/P_{,X}$.
+that $\dot{\varphi}^2 /\Mpl^2 = 2\epsilon H^2/P_{,X}$.
 This implies that the variation of the inflaton field 
 is given by the Lyth bound 
 \cite{lyth,bmpaper}
 % 
 \begin{equation}
 \label{eq:rtheory}
-\frac{1}{\Mpl^2} \left( \frac{d\phi}{d {\cal{N}}} \right)^2 =
+\frac{1}{\Mpl^2} \left( \frac{d\varphi}{d {\cal{N}}} \right)^2 =
 \frac{r}{8} \,,
 \end{equation}
 % 
 where ${\cal{N}} \equiv \int dt H$. 
-Since $\phi_* < \phi_{UV}$, this 
+Since $\varphi_* < \varphi_{UV}$, this 
 results in an upper bound on the observable tensor-scalar ratio
 \cite{bmpaper}: 
 % 
@@ -119,7 +119,7 @@ can be expressed in terms of observable parameters.
 
 To proceed, we denote the change in the value of the inflaton field over 
 observable scales by 
-$\Delta  \phi _{*} = \sqrt{T_3} \Delta \rho_{*}$. 
+$\Delta  \varphi _{*} = \sqrt{T_3} \Delta \rho_{*}$. 
 % TODO: Add figure
 Since the brane moves towards the tip of the throat in 
 UV DBI inflation, it follows that $\rho_{*} > \rho_{end} >0$, which 
@@ -135,11 +135,11 @@ to a fraction of the throat volume,
 $| \Delta V _{6,*}|  < {V_{6,\mathrm{throat}}} \, \lsim \, {V_6} $,
 where equality in the second limit arises if
 the bulk volume is negligible. Hence, 
-$| \Delta \phi_* |$ is bounded such that  
+$| \Delta \varphi_* |$ is bounded such that  
 % 
 \begin{equation}
 \label{eq:halfwayconstraint}
-\left( \frac{\Delta \phi}{\Mpl} \right)^2_{*} < 
+\left( \frac{\Delta \varphi}{\Mpl} \right)^2_{*} < 
 \frac{T_3 \kappa_{10}^2 (\Delta \rho_{*})^2}{|\Delta V_{6,*}|} \,.
 \end{equation}
 %  
@@ -178,12 +178,12 @@ yields the upper limit
 % 
 \begin{equation}
 \label{eq:boundpower6}
-\left( \frac{\Delta \phi}{\Mpl} \right)^6_{*} 
+\left( \frac{\Delta \varphi}{\Mpl} \right)^6_{*} 
 < \frac{\pi^3}{16\mathrm{Vol}(X_5)} r^2 P_S^2 
 \left( 1+ \frac{1}{3f_{NL}} \right)  \,.
 \end{equation}
 % 
-Hence, employing the Lyth bound in the form $(\Delta \phi_* / \Mpl )^2 \simeq 
+Hence, employing the Lyth bound in the form $(\Delta \varphi_* / \Mpl )^2 \simeq 
 r (\Delta {\cal{N}}_*)^2 /8$  
 results in a very general upper limit on the tensor-scalar ratio: 
 % TODO: Show working
@@ -457,12 +457,12 @@ follows as a consequence of assuming
 the constraint (\ref{eq:importantbound}). This  
 could be violated in IR versions of the scenario, where
 observable scales crossed the Hubble radius when the 
-brane was near the tip of the throat and $\phi \ll \Mpl$
+brane was near the tip of the throat and $\varphi \ll \Mpl$
 \cite{brane12,brane14}. 
 Nonetheless, we emphasize that the upper bound (\ref{eq:upperbound})
 on the tensor modes 
 will also apply to any IR DBI model for which 
-$|\Delta \phi_* | < \phi_*$.  
+$|\Delta \varphi_* | < \varphi_*$.  
 In view of the above discussion, therefore, 
 we will proceed in the following Section
 to discuss a framework for generalizing the DBI scenario so 
@@ -486,10 +486,10 @@ approach and consider a general kinetic function of the form:
 % 
 \begin{equation}
 \label{eq:genaction-dbi}
-P= -f_1 (\phi ) \sqrt{1-f_2 (\phi ) X} -f_3 (\phi) \,,
+P= -f_1 (\varphi ) \sqrt{1-f_2 (\varphi ) X} -f_3 (\varphi) \,,
 \end{equation}
 % 
-where $f_i (\phi )$ are unspecified functions of the inflaton 
+where $f_i (\varphi )$ are unspecified functions of the inflaton 
 field\footnote{It is assumed 
 implicitly that the functions have a suitable form for 
 generating a successful phase of inflation.}.
@@ -510,7 +510,7 @@ Eq. (\ref{defP}) through the field redefinition
 % 
 \begin{equation}
 \label{eq:defvarphi}
-\tilde{\varphi} \equiv \int d \phi \sqrt{\frac{f_1f_2}{2}}  \,.
+\tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_1f_2}{2}}  \,.
 \end{equation}
 % 
 This implies that the sound speed of fluctuations in 
@@ -526,7 +526,7 @@ and the scalar perturbation amplitude by
 % 
 \begin{equation}
 \label{eq:spectrum-dbi}
-P_S^2 = \frac{1}{2\pi^2}\frac{H^4}{f_1f_2\dot{\phi}^2}  \,.
+P_S^2 = \frac{1}{2\pi^2}\frac{H^4}{f_1f_2\dot{\varphi}^2}  \,.
 \end{equation}
 % 
 However, the consistency equation (\ref{eq:consistency-dbiintro}) and 
@@ -535,7 +535,7 @@ for this more general class
 of models \cite{lidser2}. It 
 follows, therefore, 
 that the CMB normalization condition (\ref{eq:obswarp-dbiintro}) 
-generalizes to a constraint on the value of $f_1 (\phi_*)$:
+generalizes to a constraint on the value of $f_1 (\varphi_*)$:
 %   
 \begin{equation}
 \label{eq:observef1}
@@ -566,7 +566,7 @@ the variation of the inflaton field during inflation is
 % 
 \begin{equation}
 \label{eq:newphivar}
-\int_0^{\phi_{*}} \frac{d\phi}{\Mpl} \, \sqrt{\frac{f_1f_2}{2}} 
+\int_0^{\varphi_{*}} \frac{d\varphi}{\Mpl} \, \sqrt{\frac{f_1f_2}{2}} 
 = \sqrt{\frac{r_*}{8}}  {\cal{N}}_{\mathrm{eff}} \,.
 \end{equation}
 % 
@@ -576,18 +576,18 @@ of $f_1f_2$ is negligible during that epoch, we find that
 % 
 \begin{equation}
 \label{eq:genphivary1}
-\left( \frac{\Delta \phi}{\Mpl} \right)^2_{*} \simeq 
+\left( \frac{\Delta \varphi}{\Mpl} \right)^2_{*} \simeq 
 \frac{(\Delta {\cal{N}}_{*} )^2}{4 f_1f_2} r_*  \,.
 \end{equation}
 % 
 On the other hand, the BM bound restricts the maximal 
-variation of the scalar field $\phi$ in the throat region. 
+variation of the scalar field $\varphi$ in the throat region. 
 This will be determined by expression (\ref{eq:BMbound-dbi}) 
 for generic warped geometries that are asymptotically 
 $AdS_5 \times X_5$ away from the tip of the throat. Moreover, 
 if observable scales leave the horizon 
 while the brane is inside the throat, the change in the field value 
-must satisfy $| \Delta \phi_*|<\phi_{UV}$. Hence, it follows from   
+must satisfy $| \Delta \varphi_*|<\varphi_{UV}$. Hence, it follows from   
 Eq. (\ref{eq:genphivary1}) that\footnote{We are 
 being conservative by restricting our discussion to the 
 observable phase of inflation. More generally, if 
@@ -610,22 +610,22 @@ We will refer to condition
 (\ref{eq:genBMbound}) as the 
 generalized BM bound. 
 Combining expressions (\ref{eq:observef1}) and (\ref{eq:genBMbound}) then
-results in a necessary condition on the value of $f_2(\phi_*)$ 
+results in a necessary condition on the value of $f_2(\varphi_*)$ 
 for the generalized BM bound to be satisfied:
 %  
 \begin{equation}
 \label{eq:f2bound}
-\frac{f_2 (\phi_*)\Mpl^4}{N} > \frac{(\Delta {\cal{N}}_*)^2}{\pi^2} 
+\frac{f_2 (\varphi_*)\Mpl^4}{N} > \frac{(\Delta {\cal{N}}_*)^2}{\pi^2} 
 \frac{1}{rP_S^2} \,.
 \end{equation}
 % 
 This condition can also be interpreted as a lower limit on $r$ 
-for a given value of $f_2 (\phi_*)$.  
+for a given value of $f_2 (\varphi_*)$.  
 
 
 In UV models, identical arguments that led to 
 the lower limit (\ref{eq:lowerbound}) on the tensor-scalar ratio
-will also apply in this more general context if, as expected, $f_1 (\phi) $ 
+will also apply in this more general context if, as expected, $f_1 (\varphi) $ 
 is a monotonically increasing function. A necessary condition for
 the lower and upper limits
 (\ref{eq:lowerbound}) and (\ref{eq:genBMbound}) to be compatible, therefore, is  
@@ -649,7 +649,7 @@ r_* < \frac{4(1-n_s)}{\sqrt{3f_{NL}}}  \,.
 \end{equation}
 % 
 Combining conditions (\ref{eq:f2bound}) and (\ref{eq:IRupper}) 
-therefore leads to a constraint on $f_2 (\phi_*) $
+therefore leads to a constraint on $f_2 (\varphi_*) $
 for the generalized BM bound to be satisfied in IR inflation: 
 % 
 \begin{equation}
@@ -694,16 +694,16 @@ the kinetic structure of the action is given in the large $n$ limit by
 \cite{thomasward}
 % 
 \begin{equation}
-P=-nT_3 \left[ h^4(\phi ) W(\phi ) 
-\sqrt{1-2 T_3^{-1} h^{-4}(\phi) X}
--h^4(\phi ) + V (\phi ) \right] \,,
+P=-nT_3 \left[ h^4(\varphi ) W(\varphi ) 
+\sqrt{1-2 T_3^{-1} h^{-4}(\varphi) X}
+-h^4(\varphi ) + V (\varphi ) \right] \,,
 \end{equation}
 % 
 where
 %    
 \begin{equation} 
 \label{eq:defW}
-W (\phi ) \equiv \sqrt{1+ C^{-1}h^{-4}(\phi ) \phi^4}
+W (\varphi ) \equiv \sqrt{1+ C^{-1}h^{-4}(\varphi ) \varphi^4}
 \end{equation}
 % 
 defines the so-called `fuzzy' potential, 
@@ -714,7 +714,7 @@ ${\rm SU}(2)$.
 Comparison with Eq. (\ref{eq:genaction-dbi}) 
 implies that $f_1f_2 =2nW$ and $f_2=2/(T_3h^4)$. Hence, 
 the new features of this model relative to the standard single-brane 
-scenario are parametrized in terms of the fuzzy potential $W (\phi )$. 
+scenario are parametrized in terms of the fuzzy potential $W (\varphi )$. 
 This configuration is conjectured to be dual to 
 a ${\rm D5}$-brane which is wrapped around a two-cycle 
 of the throat \cite{dual1,dual2,dual3}. 
@@ -726,7 +726,7 @@ the case $n \gg 1$ and
 $W \sim 1$ will not significantly relax the BM bound, 
 since we require $n \ll N$ for backreaction effects to be negligible.}. 
 The generalized BM bound (\ref{eq:f2bound}) may now be expressed as 
-a limit on the value of the warp factor $h(\phi_*)$ on CMB scales: 
+a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales: 
 % 
 \begin{equation}
 \label{eq:warptorelax}
@@ -739,24 +739,24 @@ a limit on the value of the warp factor $h(\phi_*)$ on CMB scales:
 We now consider whether this limit can be satisfied for reasonable choices 
 of parameters when the warped compactification corresponds to 
 an $AdS_5$ or KS throat, respectively. Recall that the warp 
-factor for the $AdS_5$ throat is given by $h=\phi/(\sqrt{T_3}L)$.  
+factor for the $AdS_5$ throat is given by $h=\varphi/(\sqrt{T_3}L)$.  
 Condition (\ref{eq:warptorelax}) therefore reduces to a constraint on the 
 value of the inflation during observable inflation: 
 % TODO: Show working
 % 
 \begin{equation}
 \label{eq:phivalue-dbi}
-\frac{\phi_*^4}{\Mpl^4} < 
+\frac{\varphi_*^4}{\Mpl^4} < 
 \frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{3f_{NL}} ( \Delta {\cal{N}}_*)^2} 
 \frac{\lambda}{N} \,,
 \end{equation}
 %  
 where $\lambda \equiv \pi N/[2 \mathrm{Vol}(X_5)]$. 
 However, non-perturbative string effects are expected to become 
-important below a cutoff scale, $\phi_{\rm cut} = 
+important below a cutoff scale, $\varphi_{\rm cut} = 
 h_{\rm cut} \lambda^{1/4} m_s$, where $h_{\rm cut}$ is the value of the 
 warp factor at that scale. For consistency, therefore, one requires 
-$\phi_*>\phi_{\rm cut}$, which implies an upper limit on the 
+$\varphi_*>\varphi_{\rm cut}$, which implies an upper limit on the 
 ${\rm D3}$-brane charge: 
 % TODO: Show working
 % 
@@ -978,7 +978,7 @@ energy of the inflaton field. Deriving a corresponding bound for
 the generalized model (\ref{eq:genaction-dbi}) would be more involved, 
 since the CMB normalization (\ref{eq:observef1}) only 
 directly constrains the function 
-$f_1 (\phi )$ and this may not necessarily depend on the warp factor. 
+$f_1 (\varphi )$ and this may not necessarily depend on the warp factor. 
 Nonetheless, the constraints (\ref{eq:halfwayconstraint}) and
 (\ref{eq:trapeziumlimit}) can be 
 combined with Eq. (\ref{eq:genphivary1}) to derive a limit 
@@ -993,7 +993,7 @@ r_* < \frac{2}{\pi^{2/3} ( \Delta \mathcal{N}_*)^2}
 \end{equation}
 % 
 For a specific model where the warp factor and 
-the functions $f_i (\phi )$ are determined by particle 
+the functions $f_i (\varphi )$ are determined by particle 
 physics considerations,   
 condition (\ref{eq:genconclusion-dbi}) 
 may be interpreted as a bound that relates 
