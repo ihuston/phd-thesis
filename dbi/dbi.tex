@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.14 2009/07/28 20:26:19 ith Exp $
+% $Id: dbi.tex,v 1.15 2009/07/29 10:33:54 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.14 2009/07/28 20:26:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.15 2009/07/29 10:33:54 ith Exp $}
 % \input{paper1}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -47,7 +47,7 @@ we find in general that the tensor-scalar ratio must satisfy
 $r \, \lsim \, 10^{-7}$. This 
 is below the projected sensitivity of future Cosmic Microwave Background (CMB) polarization 
 experiments \cite{clover,vpj}. 
-\addtodo{ Change to WMAP5}
+\addtodo{Change Clover reference and change next para to WMAP5}
 On the other hand, the WMAP3 data 
 favours a red perturbation spectrum with 
 $n_s<1$ when the tensor modes are negligible and 
@@ -58,6 +58,18 @@ tensor modes such that $r \, \gsim \, 0.1 (1-n_s)$.
 This is incompatible with the upper bound 
 on $r$ when $1-n_s \simeq 0.05$, as inferred
 by the observations. 
+
+\addtodo{Add section references}
+Hence, a reconciliation between theory and observation 
+requires either a relaxation of the upper limit on $r$ or a blue 
+spectral index $(n_s >1)$. The DBI scenario would need 
+to be generalized in a suitable way for the upper bound on $r$
+to be weakened. We identify necessary conditions that a 
+generalized action must satisfy for the Baumann-McAllister
+ constraint to be relaxed. 
+We then show that such conditions can be realized in a recently 
+proposed IR version of DBI inflation driven
+by multiple coincident branes \cite{thomasward}. 
 
 % 
 % 
@@ -72,7 +84,7 @@ by the observations.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
 
-\addtodo{ Add explanantion}
+\addtodo{Add fuller explanantion}
 Recently, Baumann and McAllister (BM) \cite{bmpaper} 
 derived a field-theoretic upper bound on the tensor-scalar ratio 
 by noting that the four-dimensional Planck mass is related 
@@ -93,7 +105,7 @@ V_{6,\mathrm{throat}} = \mathrm{Vol}(X_5)
 and $\rho_{UV}$ denotes the radial coordinate at 
 the edge of the throat (defined as the region 
 where $h (\rho_{UV})$ is of order unity). 
-\addtodo{ Add figure with throat geometry}
+\missingfigure{ Add figure with throat geometry}
 If one assumes that the bulk volume is 
 non-negligible relative to 
 \addtodo{ add citation}
@@ -139,14 +151,14 @@ where ${\cal{N}}_{\mathrm{eff}} \equiv
 is a model-dependent parameter that quantifies 
 how $r$ varies during the final stages of inflation.  
 
-
+\addtodo{Explain following para including example and citation for backreaction
+comment.}
 Typically, one expects $30 \, \lsim \, {{\cal{N}}_{\mathrm{eff}}} 
 \, \lsim \, 60$, 
-\addtodo{ Why?}
 although smaller values may be possible if the slow-roll conditions are 
-violated after observable scales have crossed the horizon. \addtodo{ Example}
+violated after observable scales have crossed the horizon. 
 Furthermore, $N \gg 1$ is necessary 
-for backreaction effects to be negligible. \addtodo{ Citation}
+for backreaction effects to be negligible. 
  Hence, the constraint (\ref{eq:BMboundr}) 
 imposes a strong restriction on DBI inflationary models. 
 On the other hand, the numerical value 
@@ -157,10 +169,10 @@ This will result in a constraint on the tensor modes that
 can be expressed in terms of observable parameters.  
 
 
+\missingfigure{Add figure of brane moving in throat}
 To proceed, we denote the change in the value of the inflaton field over 
 observable scales by 
 $\Delta  \varphi _{*} = \sqrt{T_3} \Delta \rho_{*}$. 
-\addtodo{ Add figure}
 Since the brane moves towards the tip of the throat in 
 UV DBI inflation, it follows that $\rho_{*} > \rho_{end} >0$, which 
 implies that  
@@ -262,9 +274,11 @@ upper bound on the tensor-scalar ratio for standard UV DBI inflation:
 r_* < 10^{-7} \,.
 \end{equation}
 % 
+\addtodo{Add comment:``This is main result of this section''. Update refs below asclover now longer
+funded.}
 This is significantly below the sensitivity 
 of future CMB polarization experiments, which will measure 
-${r} \, {\gsim} \, 10^{-4}$ \cite{clover,vpj}. \addtodo{ Update refs (clover now longer funded)}
+${r} \, {\gsim} \, 10^{-4}$ \cite{clover,vpj}. 
 If CMB  
 observations are able to span the full range of e-foldings such that
 $\Delta {\cal{N}}_* \simeq 4$, this constraint is strengthened to 
@@ -521,6 +535,7 @@ that the constraints on the tensor modes can be satisfied.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
+\addtodo{Change section title?}
 In this Section, we take a phenomenological 
 approach and consider a general kinetic function of the form:
 % 
@@ -553,6 +568,7 @@ Eq. (\ref{defP}) through the field redefinition
 \tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_1f_2}{2}}  \,.
 \end{equation}
 % 
+\addtodo{Link $c_s$ to general defn in dbi-intro} 
 This implies that the sound speed of fluctuations in 
 the inflaton is given by
 %  
@@ -919,7 +935,7 @@ constraint is given by \cite{gkp}
 where $\chi$ is the Euler characteristic of the four-fold.  
 Hence, $N = MK < \chi /24$ and together with condition 
 (\ref{eq:Nconstraint-dbi}), this implies that
-\addtodo{ Still true?}
+\addtodo{ Still true? Check Lidsey\&Alabidi for recent calc}
 % 
 \begin{equation}
 \label{eq:chilimit}
