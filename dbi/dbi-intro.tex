@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.15 2009/07/29 13:33:23 ith Exp $
+% $Id: dbi-intro.tex,v 1.16 2009/07/29 14:01:17 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.15 2009/07/29 13:33:23 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.16 2009/07/29 14:01:17 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -138,10 +138,11 @@ homogeneous inflaton field, $\varphi =\varphi (t)$, with energy
 density $E = 2X\PX - P$, where a subscripted comma denotes partial
 differentiation. 
 We further assume that the inflaton dynamics  
-generates a quasi-exponential expansion of the universe, 
-where $\epsilon_H \equiv -\dot{H}/H^2 \ll1$. 
+generates a quasi-exponential expansion of the universe 
+where $\epsilon_H \equiv -\dot{H}/H^2 \ll1$,
+as described in Section~\ref{sec:frw-intro}. 
 
- 
+
 It proves convenient to define two parameters in terms of the 
 kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
 % 
@@ -159,10 +160,8 @@ The first parameter, $c_s$, determines the sound speed of fluctuations
 in the inflaton field. This can be significantly less than unity, 
 in contrast to slow-roll inflation driven by a canonical 
 field such that $P_{,X} =1$.
-
-
 The amplitudes of the scalar and tensor perturbations 
-generated during inflation are given by \cite{gm}
+generated during inflation change in this case and are given by \cite{gm}
 % 
 \begin{eqnarray} 
 \label{eq:Ps-dbiintro}
@@ -180,16 +179,18 @@ is defined as \cite{gm}
 r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon_H \,.
 \end{equation}
 %   
-The WMAP3 normalization of the CMB power spectrum 
+The WMAP5 normalization of the CMB power spectrum 
 implies that $\Ps= 2.5\times10^{-9}$ and 
 the experimental upper bound on the tensor-scalar 
 ratio is $r <0.55$ \cite{spergel}.
-
+\addtodo{Change to r<0.20 for no-running or r<0.54 for running (WMAP5+BAO+SN).
+Does this change any later calculations?}
 
 Deviations from Gaussian statistics in the curvature perturbation, ${\cal{R}}$,
 are parametrized in terms of the non-linearity parameter, 
-$\fnl$, which is defined by ${\cal{R}} = {\cal{R}}_G + \frac{3}{5} \fnl  (
-{\cal{R}}_G^2 -\langle {\cal{R}}_G^2 \rangle )$, where the 
+$\fnl$, as defined in Section~\ref{sec:fnl-intro} by 
+${\cal{R}} = {\cal{R}}_G + \frac{3}{5} \fnl  (
+{\cal{R}}_G^2 -\langle {\cal{R}}_G^2 \rangle )$. Here the 
 quadratic component represents a convolution and 
 ${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}. In the limit  
 where the three momenta have equal magnitude (corresponding to the equilateral  
