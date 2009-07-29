@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.15 2009/07/29 10:33:54 ith Exp $
+% $Id: dbi.tex,v 1.16 2009/07/29 20:12:28 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.15 2009/07/29 10:33:54 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.16 2009/07/29 20:12:28 ith Exp $}
 % \input{paper1}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -232,7 +232,7 @@ yields the upper limit
 \label{eq:boundpower6}
 \left( \frac{\Delta \varphi}{\Mpl} \right)^6_{*} 
 < \frac{\pi^3}{16\mathrm{Vol}(X_5)} r^2 P_S^2 
-\left( 1+ \frac{1}{3f_{NL}} \right)  \,.
+\left( 1- \frac{1}{3\fnl} \right)  \,.
 \end{equation}
 % 
 Hence, employing the Lyth bound in the form $(\Delta \varphi_* / \Mpl )^2 \simeq 
@@ -243,14 +243,14 @@ results in a very general upper limit on the tensor-scalar ratio:
 \begin{equation}
 \label{eq:generalbound}
 r_{*} < \frac{32 \pi^3}{(\Delta {\cal{N}}_*)^6 \mathrm{Vol}(X_5)} 
-P_S^2 \left( 1+ \frac{1}{3f_{NL}} \right) \,.
+P_S^2 \left( 1- \frac{1}{3\fnl} \right) \,.
 \end{equation}
 % 
 
 
 Condition (\ref{eq:generalbound}) is 
 only weakly dependent on the level of non-Gaussianity 
-when $f_{NL} > 5$ and we may therefore neglect the 
+when $\fnl < -5$ and we may therefore neglect the 
 factor involving this parameter. 
 \addtodo{ Change to WMAP5 numbers}
 Substituting the WMAP3 normalization 
@@ -372,15 +372,15 @@ a brane moving down (up) the warped throat.
 The second term in Eq. (\ref{eq:nsconstraint}) 
 can be converted into observable parameters
 by defining the `tilt' of the non-linearity parameter, 
-$n_{NL} \equiv d \ln f_{NL}/d\ln k$ \cite{brane14}. 
-This implies that $s= - 3 f_{NL} n_{NL} /[2(1+3f_{NL})]$ and     
+$n_{NL} \equiv d \ln |\fnl|/d\ln k$ \cite{brane14}. 
+This implies that $s=  3 \fnl \nnl /[2(1-3\fnl)]$ and     
 substitution of Eqs. (\ref{indices})--(\ref{eq:fnlcs-dbiintro}) 
 into Eq. (\ref{eq:nsconstraint}) then yields
 \addtodo{ Show working  }
 % 
 \begin{equation}
 \label{eq:obscon1}
-1-n_s = \frac{r}{4} \sqrt{1+3f_{NL}} + \frac{n_{NL}}{1+3f_{NL}}
+1-n_s = \frac{r}{4} \sqrt{1-3\fnl} + \frac{\nnl}{1-3\fnl}
 \mp \sqrt{\frac{r}{8}} \left( \frac{T'}{T} \Mpl \right)_*  \,.
 \end{equation}
 % 
@@ -389,13 +389,13 @@ into Eq. (\ref{eq:nsconstraint}) then yields
 In \cite{lidser2}, brane inflation near the tip of a KS-type 
 throat was considered, where the warped brane tension asymptotes to a 
 constant value. In this regime, Eq. (\ref{eq:obscon1}) reduces to 
-the condition $r \simeq 2.3 (1-n_s)/\sqrt{f_{NL}}$ when $f_{NL}$ is 
+the condition $r \simeq 2.3 (1-n_s)/\sqrt{-\fnl}$ when $|\fnl|$ is 
 sufficiently large to be detectable by Planck, 
-i.e., $|f_{NL}| > 5$. 
+\ie $|\fnl| > 5$. 
 \addtodo{ Change to WMAP5 numbers}
 It then follows from the  
 WMAP3 best-fit value $n_s \simeq 0.987$ and upper limit 
-$|f_{NL}| < 300$ \cite{crim} that the gravitational wave amplitude 
+$|\fnl| < 300$ \cite{crim} that the gravitational wave amplitude 
 is bounded both from above and below such that $0.001 \, \lsim \, r 
 \, \lsim \, 0.01$. These bounds follow from 
 current WMAP3 limits on the spectral index and the 
@@ -416,7 +416,7 @@ which implies that
 % 
 \begin{equation}
 \label{eq:halfbound}
-\frac{r}{4} \sqrt{1+3f_{NL}} + \frac{n_{NL}}{1+3f_{NL}} 
+\frac{r}{4} \sqrt{1-3\fnl} + \frac{\nnl}{1-3\fnl} 
 > 1-n_s \,.
 \end{equation}
 % 
@@ -432,33 +432,33 @@ compatible with condition (\ref{eq:halfbound}) if
 % 
 \begin{equation}
 \label{eq:nnlbound}
-n_{NL} \simeq -2s > 3 (1-n_s ) f_{NL} > 0.1 f_{NL} \,.
+\nnl \simeq -2s > -3 (1-n_s ) \fnl > -0.1 \fnl \,.
 \end{equation}
 % 
-However, when $f_{NL} \gg 1$, this would violate the slow-roll conditions
+However, when $\fnl \ll -1$, this would violate the slow-roll conditions
 that must be satisfied for a consistent 
 derivation of the perturbation spectra 
 (\ref{eq:spectra-dbiintro}). For example, the conservative 
 bound $|s| < 0.1$ with $1-n_s \simeq 0.05$ is violated if  
-$f_{NL} > {\cal{O}} (5)$. 
+$\fnl < {\cal{O}} (-5)$. 
 
 In view of this, let us consider the case where the tensor 
 perturbations are non-negligible. 
 The magnitude of the second term in condition (\ref{eq:halfbound}) 
-is suppressed by a factor of $f_{NL}^{3/2} \gg 1$ 
+is suppressed by a factor of $(-\fnl)^{3/2} \gg 1$ 
 relative to the first. This is expected to 
 be a significant effect in DBI inflation. 
 \addtodo{ Change to WMAP5 numbers}
 Consequently, 
-by saturating the WMAP3 limit $|f_{NL}| < 300$ \cite{crim}, we arrive at 
+by saturating the WMAP3 limit $|\fnl| < 300$ \cite{crim}, we arrive at 
 a lower bound on the tensor-scalar ratio which applies   
-to any model for which the ratio $(n_{NL}/f_{NL})$ is 
+to any model for which the ratio $|\nnl/\fnl|$ is 
 negligible:
 \addtodo{ Add working}
 % 
 \begin{equation}
 \label{eq:lowerbound}
-r_* >  \frac{4(1-n_s)}{\sqrt{3f_{NL}}} > \frac{1-n_s}{8} \,.
+r_* >  \frac{4(1-n_s)}{\sqrt{-3\fnl}} > \frac{1-n_s}{8} \,.
 \end{equation}
 % 
 \addtodo{ Change to WMAP5 numbers}
@@ -596,7 +596,7 @@ generalizes to a constraint on the value of $f_1 (\varphi_*)$:
 \begin{equation}
 \label{eq:observef1}
 \left( \frac{f_1}{\Mpl^4} \right)_{*} \simeq \frac{\pi^2}{16} r^2P_S^2
-\left( 1+ \frac{1}{3f_{NL}} \right)  \,.
+\left( 1- \frac{1}{3\fnl} \right)  \,.
 \end{equation}
 % 
 Finally, the expression for the scalar spectral index
@@ -606,8 +606,8 @@ is straightforward to show that
 %  
 \begin{equation}
 \label{eq:nsconstraintW}
-1-n_s = \frac{r}{4} \sqrt{1+3f_{NL}}
- +\frac{n_{NL}}{1+3f_{NL} } \mp \sqrt{\frac{r}{4f_1f_2}} \left( 
+1-n_s = \frac{r}{4} \sqrt{1-3\fnl}
+ +\frac{\nnl}{1-3\fnl} \mp \sqrt{\frac{r}{4f_1f_2}} \left( 
 \frac{f_1'}{f_1} \Mpl \right)_*  \,.
 \end{equation}
 % 
@@ -689,7 +689,7 @@ that
 % 
 \begin{equation}
 \label{eq:evade}
-f_1f_2 > \frac{N (\Delta {\cal{N}}_*)^2 (1-n_s)}{4\sqrt{3f_{NL}}} \,.
+f_1f_2 > \frac{N (\Delta {\cal{N}}_*)^2 (1-n_s)}{4\sqrt{-3\fnl}} \,.
 \end{equation}
 % 
 
@@ -697,11 +697,11 @@ f_1f_2 > \frac{N (\Delta {\cal{N}}_*)^2 (1-n_s)}{4\sqrt{3f_{NL}}} \,.
 In IR scenarios, however, the positive sign will apply in the 
 last term of the right-hand side of Eq. (\ref{eq:nsconstraintW}).
 Hence, assuming $f'_1 >0$ and neglecting the term proportional to 
-$n_{NL}/f_{NL}$ yields an {\em upper} limit on the tensor-scalar ratio:
+$\nnl/\fnl$ yields an {\em upper} limit on the tensor-scalar ratio:
 % 
 \begin{equation}
 \label{eq:IRupper}
-r_* < \frac{4(1-n_s)}{\sqrt{3f_{NL}}}  \,.
+r_* < \frac{4(1-n_s)}{\sqrt{-3\fnl}}  \,.
 \end{equation}
 % 
 Combining conditions (\ref{eq:f2bound}) and (\ref{eq:IRupper}) 
@@ -711,7 +711,7 @@ for the generalized BM bound to be satisfied in IR inflation:
 \begin{equation}
 \label{eq:f2IRlower}
 \frac{f_2\Mpl^4}{N} > \frac{\sqrt{3} (\Delta {\cal{N}}_*)^2}{4\pi^2}
-\frac{\sqrt{f_{NL}}}{(1-n_s)P_S^2}  \,.
+\frac{\sqrt{-\fnl}}{(1-n_s)P_S^2}  \,.
 \end{equation}
 % 
 
@@ -787,7 +787,7 @@ a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales:
 \begin{equation}
 \label{eq:warptorelax}
 \frac{NT_3h^4_*}{\Mpl^4} < 
-\frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{3f_{NL}}(\Delta {\cal{N}}_*)^2} \,.
+\frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{-3\fnl}(\Delta {\cal{N}}_*)^2} \,.
 \end{equation}
 % 
 
@@ -803,7 +803,7 @@ value of the inflation during observable inflation:
 \begin{equation}
 \label{eq:phivalue-dbi}
 \frac{\varphi_*^4}{\Mpl^4} < 
-\frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{3f_{NL}} ( \Delta {\cal{N}}_*)^2} 
+\frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2} 
 \frac{\lambda}{N} \,,
 \end{equation}
 %  
@@ -818,15 +818,15 @@ ${\rm D3}$-brane charge:
 % 
 \begin{equation}
 \label{eq:Nlimit-dbi}
-N< \frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{3f_{NL}} ( \Delta {\cal{N}}_*)^2}
+N< \frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}
 \left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,.
 \end{equation}
 % 
 Assuming the typical values $m_s \sim 10^{-2}\Mpl$, 
 $\Delta {\cal{N}}_* \simeq 4$ and 
 $h_{\rm cut} \sim 10^{-2}$ implies  
-$N < 7 \times 10^7 (1-n_s)f_{NL}^{-1/2} < 2\times 10^6$, where 
-the latter inequality follows for $1-n_s <0.05$ and $f_{NL} >5$. 
+$N < 7 \times 10^7 (1-n_s)(-\fnl)^{-1/2} < 2\times 10^6$, where 
+the latter inequality follows for $1-n_s <0.05$ and $\fnl <-5$. 
 
 
 For an $AdS_5$ throat, the fuzzy potential 
@@ -843,14 +843,14 @@ Hence, combining inequalities
 \begin{equation}
 \label{eq:nlimit-dbi}
 \hat{C} \ll 
-\frac{32 \pi^4 (1-n_s)P_S^2}{\sqrt{3f_{NL}} ( \Delta {\cal{N}}_*)^2}
+\frac{32 \pi^4 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}
 \frac{g_s}{\mathrm{Vol} (X_5) }
 \left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,,
 \end{equation}
 % 
 and specifying $g_s \sim 10^{-2}$ and 
 $\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
-$\hat{C} \ll 10^{6} (1-n_s)f_{NL}^{-1/2} < 2 \times 10^4$, or equivalently,  
+$\hat{C} \ll 10^{6} (1-n_s)(-\fnl)^{-1/2} < 2 \times 10^4$, or equivalently,  
 $n \ll 150$. Furthermore, since $f_1f_2 \simeq {\rm constant}$, 
 the inequality (\ref{eq:genBMbound}) may be strengthened by a 
 factor of $(   {\cal{N}}_{\mathrm{eff}} /\Delta {\cal{N}}_*)^2$ by 
@@ -879,7 +879,7 @@ In this case, the generalized BM bound (\ref{eq:warptorelax}) becomes
 \label{eq:loglimit-dbi}
 \frac{8\pi K}{3Mg_s} -\ln N > 4 \ln \left( \frac{m_s}{g_s^{1/4}\Mpl} \right)
 -\ln \left( 
-\frac{64\pi^5 (1-n_s)P_S^2}{\sqrt{3f_{NL}} ( \Delta {\cal{N}}_*)^2}
+\frac{64\pi^5 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}
 \right) \,.
 \end{equation}
 % 
@@ -895,7 +895,7 @@ generalized BM bound to be satisfied:
 \begin{equation}
 \label{eq:Nlowerlimit-dbi}
 \frac{1}{N} \exp \left( \frac{8\pi g_s N}{3}  \right)
-> \frac{\sqrt{3f_{NL}} ( \Delta {\cal{N}}_*)^2}{64\pi^5 
+> \frac{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}{64\pi^5 
 (1-n_s)P_S^2} \frac{1}{g_s} \left( \frac{m_s}{\Mpl} \right)^4 \,.
 \end{equation}
 % 
@@ -911,10 +911,10 @@ deduce the lower limit
 % 
 \begin{equation}
 \label{eq:Nconstraint-dbi}
-N- 12 \ln N > -6.8 +12 \ln \left( \frac{\sqrt{f_{NL}}}{1-n_s} \right) \,,
+N- 12 \ln N > -6.8 +12 \ln \left( \frac{\sqrt{-\fnl}}{1-n_s} \right) \,,
 \end{equation}
 % 
-which becomes $N \, \gsim \, 10^2$ for $1-n_s \simeq 0.05$ and $f_{NL}>5$.
+which becomes $N \, \gsim \, 10^2$ for $1-n_s \simeq 0.05$ and $\fnl<-5$.
 
 
 In general, however, the $K$ and $M$ units of flux are not independent. 
