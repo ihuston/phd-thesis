@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.5 2009/07/17 16:13:24 ith Exp $
+% $Id: numerical.tex,v 1.6 2009/07/29 10:34:05 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.5 2009/07/17 16:13:24 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.6 2009/07/29 10:34:05 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -113,7 +113,7 @@ order equation, but solves the full non-slow roll equations for the
 background and first order.
 
 
-In Section \ref{sec:perts} we will give a brief outline of
+In Section \ref{sec:perts-num} we will give a brief outline of
 perturbation theory and describe the second order perturbation
 equations that will be numerically calculated. Section
 \ref{sec:numerics} describes the numerical implementation of the
@@ -122,7 +122,7 @@ computational requirements. We present the results of this calculation
 in Section \ref{sec:results} including a comparison of the second
 order perturbation calculated for the $\msqphisq$ and
 $\lambdaphifour$ potentials. We will discuss these results
-and the next stages of this work in Section \ref{sec:disc}. 
+and the next stages of this work in Section \ref{sec:disc-num}. 
 
 
 Throughout this paper we set $\hbar=c=1$ and use the reduced
@@ -140,7 +140,7 @@ Friedmann-Robertson-Walker (FRW) background.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Perturbations}
-\label{sec:perts}
+\label{sec:perts-num}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -157,7 +157,7 @@ Ref.~\cite{Malik:2006ir} below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{First and Second Order}
-\label{sec:foandsoperts}
+\label{sec:fosoperts-num}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -167,7 +167,7 @@ goal is to describe scalar perturbations up to second order and the
 first step to achieve this is to examine the metric tensor:
 %
 \begin{eqnarray}
-\label{metric1}
+\label{eq:metric1-num}
 %
 g_{00}&=&-a^2\left(1+2\phi_1+\phi_2\right) \,, \\
 %
@@ -182,30 +182,38 @@ $\delta_{ij}$ is the flat background metric, $\phi_1$ and $\phi_2$ the
 lapse functions, and $\psi_1$ and $\psi_2$ the curvature perturbations
 at first and second order; $B_1$ and $B_2$ and $E_1$ and $E_2$ are
 scalar perturbations describing the shear.
-Spatial 3-hypersurfaces are flat in our chosen gauge and so 
+Spatial 3-hypersurfaces are flat in our chosen gauge and so
+%  
 \begin{equation}
- \label{defgauge}
+ \label{eq:gauge-num}
 \wt\psi_1=\wt\psi_2=\wt E_1=\wt E_2=0 \,,
 \end{equation}
+% 
 where the tilde denotes quantities in flat gauge.
+
 
 The Sasaki-Mukhanov variable, i.e.\ the field perturbation on uniform curvature
 hypersurfaces \cite{Sasaki:1986hm,Mukhanov:1988jd}, evaluated at first order is
-given by 
+given by
+%  
 \begin{equation}
-\label{defQ1I}
+\label{eq:Q1I-num}
 \wt{\dvp1}=\dvp1+\frac{\vp_{0}'}{\H}\psi_1\,, 
 \end{equation}
+% 
 where $\vp_0$ is the background value of the field and the perturbations of
-$\varphi$ are defined as 
+$\varphi$ are defined as
+%  
 \begin{equation}
  \varphi(x^\mu) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
 \,.
 \end{equation}
+% 
 At second order the Sasaki-Mukhanov variable becomes more complicated
 \cite{Malik:2005cy,Malik:2003mv}:
+% 
 \begin{equation}
-\label{defQ2I}
+\label{eq:Q2I-num}
 \wt{\dvp2}=\dvp2+\frac{\vp_{0}'}{\H}\psi_2
 +\left(\frac{\psi_1}{\H}\right)^2\left[
 2\H\vp_{0}'+\vp_{0}''-\frac{\H'}{\H}\vp_{0}'\right]
@@ -213,21 +221,24 @@ At second order the Sasaki-Mukhanov variable becomes more complicated
 -2\delta\vp_{1,k}E_{1,}^{~k}
 +{\cal{X}}\left(\psi,E\right)\,,
 \end{equation}
+% 
 where ${\cal{X}}\left(\psi,E\right)$ contains terms quadratic in
 gradients of the metric perturbations $\psi_1$ and $E_1$. From now on we will
 drop the tildes and talk only about variables in the flat gauge.
 The potential of the scalar field is also split
+% 
 \begin{equation}
  U(\varphi) = \U + \delta U_{1} + \frac{1}{2}\delta U _{2}\,,\quad
  \delta U_{1} = \Uphi \dvp1 \,,\quad
  \delta U_{2} = \Upp \dvp1^2 + \Uphi\dvp2 \,,
 \end{equation}
+% 
 where $\Uphi = \pd{U}{\varphi}$.
 The Klein-Gordon equation describes the evolution of the scalar field. For the
 background field we have
 %
 \begin{equation}
-\label{KGback}
+\label{eq:KGback-num}
 \vp_{0}''+2\H\vp_{0}'+a^2 \Uphi = 0\,,   
 \end{equation}
 %
@@ -236,7 +247,7 @@ where $\H\equiv\frac{a'}{a}$ is related to the Hubble parameter $H$ by $\H=aH$.
 The first order equation is
 %
 \begin{equation}
-\label{KG1flatsingle}
+\label{eq:KGflatsingle-num}
 \dvp1''+2\H\dvp1'+2a^2 \Uphi \phi_1
 -\nabla^2\dvp1-\vp_{0}'\nabla^2 B_1
 -\vp_{0}'\phi'_1 + a^2 \Upp \dvp1
@@ -246,7 +257,7 @@ The first order equation is
 and the second order
 %
 \begin{eqnarray}
-\label{KG2flatsingle}
+\label{eq:KG2flatsingle-num}
 \dvp2''&+&2\H\dvp2'-\nabla^2\dvp2+a^2 \Upp \dvp2
 +a^2 \Uppp (\dvp1)^2 +2a^2 \Uphi \phi_2
 -\vp_{0}'\left(\nabla^2 B_2+\phi_2'\right)\nonumber\\
@@ -259,6 +270,7 @@ and the second order
 &-&2\dvp1'\left(\nabla^2 B_1+\phi_1'\right)-4{\dvp1'}_{,k}B_{1,}^{~k}
 =0\,,
 \end{eqnarray}
+% 
 where as mentioned before all the variables are now in the flat gauge.
 
 
@@ -275,10 +287,12 @@ the second order equation of the form $\left(\dvp1(x)\right)^2$ require the use
 of the convolution theorem (see for example \Rref{Vretblad:2005}).
 Following Refs.~\cite{Malik:2006ir} and \cite{book:liddle} we will write $\dvp{}(k^i)$
 for the Fourier component of $\dvp{}(x)$ such that
+% 
 \begin{equation}
  \dvp{}(\eta, x^i) = \frac{1}{(2 \pi)^3} \int d^3k \dvp{}(\kvi) \exp (i k_i x^i)
 \,,
 \end{equation}
+% 
 where $\kvi$ is the comoving wavenumber.
 
 
@@ -304,9 +318,10 @@ g(q^i) \,.
 For convenience we will group the terms with gradients of $\dvp1(x)$
 together and denote them by $F$. 
 The full closed form second order Klein-Gordon
-equation in Fourier Space is 
+equation in Fourier Space is
+%  
 \begin{eqnarray}
-\label{eq:SOKG_real}
+\label{eq:SOKG-real-num}
  &&\dvp2''(\kvi) + 2\H \dvp2'(\kvi) + k^2 \dvp2(\kvi)
 %
 + a^2\left[\Upp + \frac{8\pi G}{\H}\left(2\vp_{0}'\Uphi
@@ -337,7 +352,7 @@ the convolution integrals include additional factors of $k$ and
 $q$. It is given by
 %
 \begin{eqnarray}
- \label{Fdvk1_fourier}
+ \label{eq:Fdvk1-fourier-num}
 &&%\hspace{-5mm}
 F\left(\dvp1(\kvi),\dvp1'(\kvi)\right)
 = \frac{1}{(2\pi)^3}\int d^3pd^3q\delta^3(\kvi-\pvi-\qvi) 
@@ -421,11 +436,11 @@ parameter $\epsilon_H$ is given by \cite{book:liddle}
  \varepsilon_H = \frac{8\pi G}{2} \frac{\left(\vp_{0}'\right)^2}{\H}\,.
 \end{equation}
 %
-With this approximation the second order equation (\ref{eq:SOKG_real})
+With this approximation the second order equation (\ref{eq:SOKG-real-num})
 simplifies dramatically, and with the $F$ term included is
 %
 \begin{eqnarray}
- \label{KG2_fourier_sr}
+ \label{eq:KG2-fourier-sr-num}
 &&\dvp2''(\kvi)+2\H\dvp2'(\kvi)+k^2\dvp2(\kvi)
 +\left(a^2
 \Upp-{24 \pi G}(\vp_{0}')^2\right)
@@ -457,9 +472,9 @@ a^2\left(\Uppp
 \end{eqnarray}
 %
 The numerical simulation in this paper will solve the slow roll
-version of the second order above, \eq{KG2_fourier_sr}, the first
+version of the second order above, \eq{eq:KG2-fourier-sr-num}, the first
 order equation (\ref{eq:fokg}) and the background equation
-(\ref{KGback}). In the next section we set up the correct form of
+(\ref{eq:KGback-num}). In the next section we set up the correct form of
 these equations for the numerical simulation and discuss the
 implementation and some tests of the accuracy of the method.
 
@@ -492,7 +507,7 @@ At the other end we need to specify the largest scale or smallest $k$ that we
 will consider. Analytically this is often taken to be the size of the universe,
 with $k=0$ being the equivalent mode. One immediate problem with this is that
 the Bunch-Davies vacuum initial conditions outlined in Section
-\ref{sec:initconds} blow up. The standard workaround is to implement a cutoff
+\ref{sec:initconds-num} blow up. The standard workaround is to implement a cutoff
 at large scales beyond which the amplitude of perturbations is zero. This is a
 pragmatic approach but recently there has been some evidence that a sharp
 cutoff similar to this could be responsible for the lack of power at large
@@ -504,7 +519,8 @@ to date in the CMB. The WMAP team rely for their main results,
  on $\ell$ multipoles in the range $\ell \in [3, 1000]$
 which corresponds approximately\footnotemark  to $k\in \left[0.92 \e{-60}, 3.1 \times
 10^{-58}\right]\Mpl = \left[3.5\e{-4}, 0.12\right] \Mpc^{-1}$.
-\footnotetext{The approximate conversion for $\ell$ is $\ell\simeq \frac{2k}{H_0}$ and a Megaparsec
+\footnotetext{The approximate conversion for $\ell$ is $\ell\simeq \frac{2k}{H_0}$ and a
+Megaparsec
 is given in Planck units as $1\Mpc^{-1} \simeq 2.6247\e{-57} \Mpl$.}
 We will consider a similar range of $k$ modes in this paper, taking three
 different ranges outlined in Section \ref{sec:results}. The
@@ -525,15 +541,17 @@ The equations in Section \ref{sec:slowroll} are not set up for a
 numerical calculation and in this section we rearrange them into a more
 suitable form. This involves a change of time coordinate and grouping of terms
 into smaller units for calculation.
-The second order slow roll equation (\ref{KG2_fourier_sr}) can be further
+The second order slow roll equation (\ref{eq:KG2-fourier-sr-num}) can be further
 simplified by performing the $p$
 integral and changing to spherical polar coordinates $q, \theta, \omega$ where
 $q=|\textbf{q}|$. The $d^3q$ integral becomes
+% 
 \begin{equation}
  \int d^3q \longrightarrow \int_{0}^{\infty} q^2 dq \int_{0}^{\pi}\sin \theta
 d\theta 
    \int_{0}^{2\pi}d\omega \,.
 \end{equation}
+% 
 For each $k$ mode equation we take the $\theta=0, \omega=0$ axis in the
 direction of $\kvi$, so that the angle between $\kvi$ and $\qvi$ is
 $\theta$ and the scalar product $q_i k^i = q k \cos\theta$. 
@@ -547,7 +565,7 @@ In the slow roll case there are only four different $\theta$ dependent terms,
 here labelled A--D:
 %
 \begin{eqnarray}
-\label{AtoD}
+\label{eq:AtoD-num}
  A(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) d\theta \,,
 \nonumber\\
  B(\kvi,\qvi) &=& \int_0^\pi \cos(\theta)\sin(\theta) \dvp1(\kvi-\qvi)
@@ -558,18 +576,18 @@ d\theta \,,\nonumber\\
 d\theta \,.
 \end{eqnarray}
 %
-Written using the terms in \eqs{AtoD} the slow roll equation
-(\ref{KG2_fourier_sr}) becomes:
+Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
+(\ref{eq:KG2-fourier-sr-num}) becomes:
 %
 \begin{eqnarray}
-\label{KG2_fourier_sr_aterms}
+\label{eq:KG2-fourier-sr-aterms}
 &&\dvp2''(\kvi)+2\H\dvp2'(\kvi)+k^2\dvp2(\kvi)
 +\left(a^2
 \Upp-{24 \pi G}(\vp_{0}')^2\right)
 \dvp2(\kvi)
 + S(\kvi) = 0 \,,\\
 %
-\label{KG2_src_sr_aterms}
+\label{eq:KG2-src-sr-aterms}
 &&S(\kvi) = \frac{1}{(2\pi)^2}\int dq\ \Bigg\{
 a^2\Uppp q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
 && \qquad\qquad\qquad\qquad\qquad + \frac{8\pi G}{\H}\vp_{0}' \Bigg[ 
@@ -585,18 +603,20 @@ a^2\Uppp q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
 %
 where $S(\kvi)$ is the source term which will be determined before the
 second order system is run. The full set of equations which must be evolved are
-then \eq{KGback} for the background, \eq{eq:fokg} for the first
-order perturbations and \eqs{KG2_fourier_sr_aterms} and
-(\ref{KG2_src_sr_aterms}) for the second order and source terms.
+then \eq{eq:KGback-num} for the background, \eq{eq:fokg} for the first
+order perturbations and \eqs{eq:KG2-fourier-sr-aterms} and
+(\ref{eq:KG2-src-sr-aterms}) for the second order and source terms.
 
 
 A more appropriate time variable for the numerical simulation is the
 number of e-foldings, and hence we use 
 %
+
 \begin{equation}
-\label{def_silly_n}
-n=\log(a/a_{\mathrm{init}})\,,
+\label{eq:def-ntime}
+n = \log ( a / a_{\mathrm{init}} )\,,
 \end{equation}
+
 %
 as our time variable instead of conformal time. Here,
 $a_{\mathrm{init}}$ is the value of $a$ at the beginning of the
@@ -634,16 +654,19 @@ variable $n$ are
 2\dot{\vp_{0}}\Uphi + \left(\frac{8\pi G}{H}\right)^2
 \left(\dot{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,. \label{eq:fontime}
 \end{eqnarray}
+% 
 The second order equation in terms of $n$ is
+% 
 \begin{equation}
- \label{KG2_fourier_sr_ntime}
+ \label{eq:KG2-fourier-sr-ntime}
 \ddot{\dvp2}(\kvi)+\left(3 + \frac{\dot{H}}{H}\right)
 \dot{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi)
 +\left(\frac{\Upp}{H^2}-{24 \pi G}(\dot{\vp_{0}})^2\right)
 \dvp2(\kvi) +S(\kvi) = 0 \,,
 \end{equation}
+% 
 \begin{eqnarray}
-\label{KG2_source_ntime}
+\label{eq:KG2-source-ntime}
 S(\kvi) &=& \frac{1}{(2\pi)^2}\int dq\ \Bigg\{
 \frac{\Uppp}{H^2} q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
 &&+\, \frac{8\pi G}{(aH)^2}\dot{\vp_{0}} \Bigg[ 
@@ -680,7 +703,8 @@ N_\theta = 2^l + 1
 \end{equation}
 % 
 points in the range
-$[0,\pi]$ (for some $l\in \mathbb{N}$ to allow Romberg integration) and the magnitude of $\kvi-\qvi$
+$[0,\pi]$ (for some $l\in \mathbb{N}$ to allow Romberg integration) and the magnitude of
+$\kvi-\qvi$
 is
 found using
 % 
@@ -726,7 +750,7 @@ $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Initial Conditions} 
-\label{sec:initconds}
+\label{sec:initconds-num}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The background system requires initial conditions for $\vp_{0},
@@ -746,7 +770,8 @@ before horizon crossing. This follows the example of Salopek
 \cite{Salopek:1988qh} and is justified on the basis that the mode is
 sufficiently inside the
 horizon for the Minkowski limit to be taken. This initial time,
-$n_{\mathrm{init}}(k)$, is calculated to be when 
+$n_{\mathrm{init}}(k)$, is calculated to be when
+%  
 \begin{equation}
  \frac{k}{aH|_{\mathrm{init}}} = 50 \,.
 \end{equation}
@@ -768,7 +793,7 @@ where the conformal time $\eta$ can be calculated from $\eta=\int dn/aH \simeq
 -(aH(1-\epsilon_H))^{-1}$, when $\epsilon_H$ changes slowly. For example $\kwmap$ is initialised
 about $65$ e-foldings before the end of inflation and crosses the horizon about $5$ e-foldings
 later.
-We also use these formulae in the calculation of the source term in \eq{KG2_source_ntime} to
+We also use these formulae in the calculation of the source term in \eq{eq:KG2-source-ntime} to
 determine the value of $\dvp1$ for a $k$ mode before its evolution starts.
 
 
@@ -832,7 +857,7 @@ Once the first order system has been solved
 the source term for the second order system must be calculated. As the
 real space equation for the source involves terms quadratic in the
 first order perturbation it is necessary to perform a convolution in
-Fourier space, as shown in \eq{KG2_fourier_sr_aterms}.  Transforming
+Fourier space, as shown in \eq{eq:KG2-fourier-sr-aterms}.  Transforming
 back into real space was not considered due to the presence of both
 gradient operators and their inverses. Here the slow roll version of
 the source term integrand has been used, but the method can equally be
@@ -847,11 +872,11 @@ term integration, this does not significantly lower the possible
 resolution in $k$-space, which is still limited by the source term
 computation time.  Once the integrand is determined it is fed into a
 Romberg integration scheme. As for $\theta$  which was
-discretised by $N_\theta$ points in \eq{AtoD}, this requires that the
+discretised by $N_\theta$ points in \eq{eq:AtoD-num}, this requires that the
 number of $k$ modes is
 %
 \begin{equation}
-\label{nk_constraint}
+\label{eq:nk-constraint-num}
 N_k=2^l + 1\,,
 \end{equation}
 %
@@ -889,7 +914,7 @@ efficiently with large
 files and is very portable, allowing data analysis independent of the
 Python/Numpy programming environment.
 We intend to release the program under a suitable license once the code has
-matured and some of the improvements discussed in Section \ref{sec:disc} have
+matured and some of the improvements discussed in Section \ref{sec:disc-num} have
 been implemented.
 
 
@@ -916,7 +941,8 @@ of the code\footnotemark:
 %
 \begin{eqnarray}
 \label{eq:Krangedefns}
-K_1 &=& \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,,\quad \Delta k = 3.8\e{-5}\Mpc^{-1} \,,\nonumber\\
+K_1 &=& \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,,\quad \Delta k = 3.8\e{-5}\Mpc^{-1}
+\,,\nonumber\\
 K_2 &=& \left[5.71\e{-5}, 0.12\right]\Mpc^{-1}\,, \quad \Delta k = 1.2\e{-4}\Mpc^{-1}\,,
 \nonumber\\ 
 K_3 &=& \left[0.52\e{-5}, 0.39\right]\Mpc^{-1}\,, \quad \Delta k = 3.8\e{-4}\Mpc^{-1} \,.
@@ -943,10 +969,11 @@ covers a greater range than the others, extending to much smaller scales than WM
  keeping the other
 parameters fixed and using the $K_3$ range. The upper blue line ($N_\theta=129$)
 and middle green line
- ($N_\theta=257$) have relative errors at least an order of magnitude larger than the lower red line
+ ($N_\theta=257$) have relative errors at least an order of magnitude larger than the lower red
+line
 ($N_\theta=513$).]{
  \includegraphics[scale=0.8]{graphs/err-nthetas-small.pdf}
- \label{fig:err_nthetas}
+ \label{fig:err-nthetas}
 }
 % 
 \subfigure[The relative error for the 3 different $k$ ranges $K1$, $K2$,
@@ -962,7 +989,8 @@ is set equal to $1\e{-61}\Mpl, 3\e{-61}\Mpl, 1\e{-60}\Mpl$ respectively.]{
 
 The main new addition in the code is the calculation of the
 convolution of the perturbations for the source term
-\eq{KG2_source_ntime}. In particular the first of the $\theta$ dependent terms in \eq{AtoD}, $A$,
+\eq{eq:KG2-source-ntime}. In particular the first of the $\theta$ dependent terms in
+\eq{eq:AtoD-num}, $A$,
 can be convolved analytically for certain smooth $\dvp1(k)$s. 
  We take $\dvp1(k)$ to be similar in form to the initial conditions
 (\ref{eq:foics}), for example $\dvp1(k)\propto 1/\sqrt{k}$ with proportionality constant
@@ -983,7 +1011,7 @@ then putting in $\dvp1(k) = \alpha/\sqrt{k}$ gives
 This has the analytic solution
 % 
 \begin{eqnarray}
-\label{eq:err_analytic}
+\label{eq:err-analytic-num}
  A(k) &=& \frac{\pi}{18}\frac{\alpha^2}{k} \left\{ 
 3k^3\left[\log\left(2\sqrt{k}\right) - \frac{\pi}{2}  + 
 \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) 
@@ -1022,7 +1050,7 @@ least an order of magnitude larger than the lower red line ($\Delta k=1\e{-60}\M
 
 
 We first tested the effect of changing $N_\theta$, the number of
-samples of the $\theta$ range $[0,\pi]$.  Figure~\ref{fig:err_nthetas}
+samples of the $\theta$ range $[0,\pi]$.  Figure~\ref{fig:err-nthetas}
 plots these results for the $k$ range $K_3$ with $\Delta k =
 1\e{-60}\Mpl$. Only three values of $N_\theta$ are shown for clarity. It
 can be seen that increasing $N_\theta$ decreases the relative error (for the convolution
@@ -1033,7 +1061,7 @@ might expect.
 As mentioned above the choice of $k$ range is especially important as
 the convolution of the terms depends heavily on the minimum and
 maximum values of this range. Indeed this is clear from the analytic
-solution in \eq{eq:err_analytic}. Figure~\ref{fig:err-kranges}
+solution in \eq{eq:err-analytic-num}. Figure~\ref{fig:err-kranges}
 shows the difference in relative error for the three different $k$
 ranges described above with 
 % Mpc values 
@@ -1045,7 +1073,7 @@ respectively. The accuracy is similar in all three cases.
 
 Another important check is whether the resolution of the $k$ range is
 fine enough. Varying $\Delta k$ can not be done in isolation of
-course, if the constraint for $N_k$, \eq{nk_constraint},
+course, if the constraint for $N_k$, \eq{eq:nk-constraint-num},
 is to
 be met. For this test the end of the $k$ range changed with $\Delta k$
 but the other parameters were kept fixed as $\kmin=1\e{-60}\Mpl=3.8\e{-4}\Mpc^{-1},
@@ -1070,11 +1098,12 @@ each.}
 
 
 It should be noted that these tests show the relative errors in the
-computation of the $A$ convolution term, the most straightforward term in \eq{AtoD}, only and do not
+computation of the $A$ convolution term, the most straightforward term in \eq{eq:AtoD-num}, only and
+do not
 represent
 errors for the full calculation. However, they show that at least for
 the pure convolution term the accuracy is good compared with the
-analytic results. Equation (\ref{eq:err_analytic}) gives some indication of
+analytic results. Equation (\ref{eq:err-analytic-num}) gives some indication of
 the difficulty involved in finding an analytic solution for the other
 terms, although this is a goal for future work. Having described the
 implementation and accuracy of the numerical system we will outline
@@ -1095,7 +1124,7 @@ our results in the next section.
 
 The main result of this paper is the demonstration of a numerical solution to
 the closed Klein-Gordon equation of motion for second order scalar field
-perturbations as described in \eq{KG2_fourier_sr}. This includes the slow
+perturbations as described in \eq{eq:KG2-fourier-sr-num}. This includes the slow
 roll approximation of the source term for second order perturbations, but we have not used a slow
 roll version of the evolution equations for the background or first order
 perturbations. 
@@ -1124,7 +1153,8 @@ almost scale invariant power spectrum with no running, it is no surprise that
 the results from the three different $k$ ranges are very similar. The second
 order source term is somewhat dependent on the lower bound of $k$ (upper bound
 on size). This is expected and in the scale invariant case a log divergence can
-be shown to exist \cite{Lyth:2007jh}. We have implemented an arbitrary sharp cutoff at $\kmin$ below
+be shown to exist \cite{Lyth:2007jh}. We have implemented an arbitrary sharp cutoff at $\kmin$
+below
 which 
 $\dvp1$ is taken to be zero. As mentioned above there is some evidence to suggest that a 
 similar cutoff is supported by the WMAP data \cite{Sinha:2005mn,Kim:2009pf}. 
@@ -1180,8 +1210,8 @@ of horizon exit (red dot-dashed line).}
 The source term $S(\kvi)$ is calculated at each time step using the
 results of the first order and background runs. This term drives the
 production of second order perturbations as shown in
-\eqs{KG2_fourier_sr} and
-(\ref{KG2_fourier_sr_ntime}). Figure~\ref{fig:src-full} shows the
+\eqs{eq:KG2-fourier-sr-num} and
+(\ref{eq:KG2-fourier-sr-ntime}). Figure~\ref{fig:src-full} shows the
 absolute magnitude of the source term for a single $k$ mode, $\kwmap$,
 for all time steps calculated.
 % 
@@ -1191,7 +1221,8 @@ for all time steps calculated.
 \label{fig:src-full}
 }
 % 
-\subfigure[Power spectrum of scalar perturbations $\mathcal{P}_{\delta\varphi} = \frac{k^3}{2\pi^2}
+\subfigure[Power spectrum of scalar perturbations $\mathcal{P}_{\delta\varphi} =
+\frac{k^3}{2\pi^2}
 |\delta\varphi|^2$.]{
  \includegraphics[scale=0.8]{graphs/Pphi-kwmap-nohoriz-small}
 \label{fig:Pphi-kwmap}
@@ -1234,7 +1265,7 @@ Figure~\ref{fig:Pphi-kwmap}.
 %
 It is useful to compare the magnitude of the source term with the
 other terms in the second order evolution equation
-(\ref{KG2_fourier_sr_ntime}). If we let $T$ denote the other terms,
+(\ref{eq:KG2-fourier-sr-ntime}). If we let $T$ denote the other terms,
 %
 \begin{equation}
 \label{eq:Tdefn}
@@ -1309,7 +1340,7 @@ $\lambdaphifour$ models.}
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-In Figure~\ref{fig:src_kinit} the value of $|S|$ at the start of the evolution of $\dvp2$ for
+In Figure~\ref{fig:src-kinit} the value of $|S|$ at the start of the evolution of $\dvp2$ for
 each $k$ mode is shown. The magnitude of the source term is much smaller for larger $k$s (smaller
 scales). 
 Because the smaller $k$s begin their evolution earlier the relative difference in $|S|$ is not as
@@ -1322,12 +1353,12 @@ where $T$ is defined above in \eq{eq:Tdefn}.
  \caption{The absolute magnitude of the source term at the initial start time for each $k$ when
 $k = aH \times 50$ deep inside the horizon. The results are for the range $K_1=\left[ 1.9\e{-5},
 0.039 \right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
-\label{fig:src_kinit}
+\label{fig:src-kinit}
 \end{figure}
 % 
 
 The source term for all $k$s can also be compared for different timesteps. In
-Figure~\ref{fig:src_3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings before the end of
+Figure~\ref{fig:src-3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings before the end of
 inflation when $\dvp2$ has been initialised for only the very smallest $k$ modes. The middle green
 line shows $|S|$ when all $\dvp2$ modes have been started. Finally the lower red line plots $|S|$
 after all modes have exited the horizon, around 52 e-foldings before the end of inflation.
@@ -1338,7 +1369,7 @@ timesteps: the upper blue line when only the largest modes have been initialised
 line when all modes have been initialised; and the lower red dashed line when all modes have
 exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039 \right] \Mpc^{-1}= 
  \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
-\label{fig:src_3ns}
+\label{fig:src-3ns}
 \end{figure}
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -1350,20 +1381,20 @@ exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039 \ri
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Discussion and conclusion}
-\label{sec:disc}
+\label{sec:disc-num}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 In this paper we have described the numerical solution of the
 evolution equations for second order scalar perturbations, using the
-closed form of the Klein-Gordon equation, \eq{KG2_fourier_sr}. We
+closed form of the Klein-Gordon equation, \eq{eq:KG2-fourier-sr-num}. We
 demonstrate that direct calculation of field perturbations beyond
 first order using perturbation theory is readily achievable, though
 not trivial.
 
 For this first demonstration we have limited ourselves to considering
-the slow roll source term in \eq{KG2_fourier_sr} but without imposing
+the slow roll source term in \eq{eq:KG2-fourier-sr-num} but without imposing
 slow roll on the evolution terms of the ODEs. We have investigated two
 standard potentials, $\frac{1}{2}m^2\phi^2$ and
 $\frac{1}{4}\lambda\phi^4$, to demonstrate the capabilities of the
@@ -1394,10 +1425,10 @@ readily calculated.
 
 There are many possible next steps to improve the program outlined in
 Section \ref{sec:numerics}. Chief amongst these is to implement the
-full source term equation (\ref{KG2_source_ntime}). Although clearly
-more complicated than the slow roll case in \eq{KG2_fourier_sr_ntime}
+full source term equation (\ref{eq:KG2-source-ntime}). Although clearly
+more complicated than the slow roll case in \eq{eq:KG2-fourier-sr-ntime}
 only two more $\theta$ dependent terms need to be added to $A$--$D$ in
-\eq{AtoD}.  For the two test models we have used in this paper, which
+\eq{eq:AtoD-num}.  For the two test models we have used in this paper, which
 are both slowly rolling during inflation, it is not expected that
 using the full source equation would result in an appreciably
 different outcome until the end of the inflationary phase. Though once
@@ -1431,7 +1462,7 @@ discussed above (with $\fnl\simeq0$), when used to investigate models
 with predictions of large non-linearity parameter $\fnl$ this technique
 could yield greater insight into the formation and development of the
 non-gaussian contributions by studying the contribution of the different
-terms in the source term \eq{KG2_source_ntime}.
+terms in the source term \eq{eq:KG2-source-ntime}.
 %
 It was shown recently that in order to calculate $\fnl$ instead of
 using the standard method based on the Lagrangian formalism
