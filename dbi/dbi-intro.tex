@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.17 2009/07/29 15:05:12 ith Exp $
+% $Id: dbi-intro.tex,v 1.18 2009/07/29 19:58:26 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.17 2009/07/29 15:05:12 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.18 2009/07/29 19:58:26 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -192,7 +192,10 @@ $\fnl$, as defined in Section~\ref{sec:fnl-intro} by
 ${\cal{R}} = {\cal{R}}_G + \frac{3}{5} \fnl  (
 {\cal{R}}_G^2 -\langle {\cal{R}}_G^2 \rangle )$. Here the 
 quadratic component represents a convolution and 
-${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}. In the limit  
+${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}\footnotemark.
+\footnotetext{We use the WMAP sign convention for $\fnl$ throughout. 
+This is the opposite of the Maldacena convention: $\fnl^\mathrm{WMAP}=-\fnl^\mathrm{Maldacena}$.}
+ In the limit  
 where the three momenta have equal magnitude (corresponding to the equilateral  
 triangle limit), the leading-order contribution to the non-linearity 
 parameter is given by \cite{chenetal,lidser3}
@@ -399,15 +402,15 @@ $n_s = 0.948^{+0.015}_{-0.018}$ for a prior of $r = 0$ \cite{spergel}.
 A further important consequence of a small sound speed is that departures  
 from purely Gaussian statistics may be large 
 \cite{brane6,brane11,lidser3,chenetal}. 
-\addtodo{Link to intro section on $\fnl$. Add note about using equilateral in
+\addtodo{Link to intro section on $\fnl$. Remove duplicate information. Add note about using equilateral in
 next two chapters.}
 It is conventional 
 to quantify such deviations by expressing the non-Gaussian curvature 
 perturbation ${\cal{R}}$ in the form 
-${\cal{R}} ={\cal{R}}_G+f_{NL}
+${\cal{R}} ={\cal{R}}_G + \frac{3}{5}\fnl
 ({\cal{R}}^2_G -\langle {\cal{R}}^2_G \rangle)$, where 
 ${\cal{R}}_G$ represents the Gaussian contribution, 
-the quadratic piece is a convolution and $f_{NL}$ defines 
+the quadratic piece is a convolution and $\fnl$ defines 
 the `non-linearity' parameter \cite{maldacena}. 
 In general, this parameter is a function of the three momenta which 
 form a triangle in Fourier space. However, in the limit where 
@@ -416,12 +419,12 @@ is given to leading-order by \cite{chenetal,lidser2}
 % 
 \begin{equation}
 \label{eq:fnlcs-dbiintro}
-f_{NL} = \frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
+\fnl = -\frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
 \end{equation}
 % 
 \addtodo{ Change to WMAP5 numbers}
 Currently, WMAP3 constrains this parameter  
-to be ${| f_{NL} |} \, {\lsim} \, {300}$ \cite{spergel,crim}.  
+to be ${| \fnl |} \, {\lsim} \, {300}$ \cite{spergel,crim}.  
 
 
 Finally, Eqs. (\ref{eq:csdefn-dbiintro}), (\ref{eq:spectra-dbiintro}) and (\ref{eq:fnlcs-dbiintro}) 
@@ -431,7 +434,7 @@ during observable inflation:
 \begin{equation}
 \label{eq:obswarp-dbiintro}
 \frac{T (\varphi_*)}{\Mpl^4}  = 
-\frac{\pi^2}{16} r^2P_S^2 \left( 1+\frac{1}{3f_{NL}} \right) \,,
+\frac{\pi^2}{16} r^2P_S^2 \left( 1-\frac{1}{3\fnl} \right) \,,
 \end{equation}
 % 
 where a subscript `$*$' denotes that the quantity is to be evaluated 
@@ -442,8 +445,8 @@ at that epoch.
 In the following, we first consider the UV version of DBI inflation,
 where the brane moves relativistically 
 towards the tip of the throat. We will assume implicitly 
-that the sound speed is sufficiently small to generate a non-Gaussianity in 
-excess of $f_{NL} \, {\gsim} \, 5$, since this is the projected 
+that the sound speed is sufficiently small to generate a non-Gaussianity with magnitude in 
+excess of $|\fnl| \, {\gsim} \, 5$, since this is the projected 
 sensitivity of the Planck satellite \cite{planck}. Furthermore, we consider   
 an arbitrary warp factor and inflaton potential, 
 subject only to the condition that a sufficiently long phase of 
