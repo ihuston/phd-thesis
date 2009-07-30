@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.6 2009/07/29 10:34:05 ith Exp $
+% $Id: numerical.tex,v 1.7 2009/07/30 13:15:38 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.6 2009/07/29 10:34:05 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.7 2009/07/30 13:15:38 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -831,7 +831,7 @@ system are then set as outlined above.
 %
 \begin{figure}
 \centering
- \includegraphics[scale=0.8]{graphs/bgepsilon}
+ \includegraphics[scale=0.8]{./numerical/graphs/bgepsilon}
  \caption{The end of inflation is determined by calculating when
    $\varepsilon_H=-\dot{H}/H=1$ (red dashed line). Along the $x$-axis,
    $n$ is the number of e-foldings from the start of the
@@ -972,14 +972,14 @@ and middle green line
  ($N_\theta=257$) have relative errors at least an order of magnitude larger than the lower red
 line
 ($N_\theta=513$).]{
- \includegraphics[scale=0.8]{graphs/err-nthetas-small.pdf}
+ \includegraphics[scale=0.8]{numerical/graphs/err-nthetas-small.pdf}
  \label{fig:err-nthetas}
 }
 % 
 \subfigure[The relative error for the 3 different $k$ ranges $K1$, $K2$,
 $K3$ (starting from the left). The parameter $\Delta k$
 is set equal to $1\e{-61}\Mpl, 3\e{-61}\Mpl, 1\e{-60}\Mpl$ respectively.]{
- \includegraphics[scale=0.8]{graphs/err-kranges-small.pdf}
+ \includegraphics[scale=0.8]{numerical/graphs/err-kranges-small.pdf}
  \label{fig:err-kranges}
 }
 % 
@@ -1038,7 +1038,7 @@ we will keep it constant throughout.
 
 \begin{figure}
  \centering
- \includegraphics[scale=0.8]{graphs/err-deltak4.pdf}
+ \includegraphics[scale=0.8]{numerical/graphs/err-deltak4.pdf}
  \caption{The relative error in convolution term $A$ for different values of $\Delta k$.
 The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and $N_\theta=513$. The
 upper 
@@ -1088,7 +1088,7 @@ very similar for higher values (not shown in the figure).
 
 \begin{figure}
  \centering
- \includegraphics[scale=0.8]{graphs/err-deltak-kmin.pdf}
+ \includegraphics[scale=0.8]{numerical/graphs/err-deltak-kmin.pdf}
  % err-deltak-kmin.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=
  \caption{The relative error of the convolution term for three different values of $\Delta k$. In
 contrast to Figure~\ref{fig:err-deltaks} $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1} \le \Delta k$ for
@@ -1174,7 +1174,7 @@ internally used time variable $n$.
 % 
 \begin{figure}
  \centering
- \includegraphics[scale=0.8]{graphs/dp1_kwmap}
+ \includegraphics[scale=0.8]{numerical/graphs/dp1_kwmap}
  \caption{The first order perturbation $\dvp1$ rescaled by
 $k^{3/2}/(\sqrt{2}\pi)$ from the beginning of the simulation until around
 horizon crossing (red dot-dashed line). The real (blue) and imaginary (green
@@ -1196,7 +1196,7 @@ magnitude of the resulting power spectra.
 % 
 \begin{figure}
  \centering
- \includegraphics[scale=0.8]{graphs/dp2_kwmap}
+ \includegraphics[scale=0.8]{numerical/graphs/dp2_kwmap}
  \caption{The real (blue line) and imaginary (green dashed) components of the second order
 perturbation $\dvp2(\kwmap)$ from the beginning of the simulation until around the time
 of horizon exit (red dot-dashed line).}
@@ -1217,14 +1217,14 @@ for all time steps calculated.
 % 
 \begin{figure}
 \subfigure[Absolute magnitude of the source term.]{
- \includegraphics[scale=0.8]{graphs/src-kwmap-small}
+ \includegraphics[scale=0.8]{numerical/graphs/src-kwmap-small}
 \label{fig:src-full}
 }
 % 
 \subfigure[Power spectrum of scalar perturbations $\mathcal{P}_{\delta\varphi} =
 \frac{k^3}{2\pi^2}
 |\delta\varphi|^2$.]{
- \includegraphics[scale=0.8]{graphs/Pphi-kwmap-nohoriz-small}
+ \includegraphics[scale=0.8]{numerical/graphs/Pphi-kwmap-nohoriz-small}
 \label{fig:Pphi-kwmap}
 }
 \caption{Source term and power spectrum for the WMAP pivot scale $\kwmap$.}
@@ -1242,13 +1242,13 @@ a minimum.
  \subfigure[Comparison of the source term for $\kwmap$ over three
 different
 ranges with different $\Delta k$s as specified in \eq{eq:Krangedefns}.]{
- \includegraphics[scale=0.8]{graphs/src-kwmap-3ranges-small}
+ \includegraphics[scale=0.8]{numerical/graphs/src-kwmap-3ranges-small}
  \label{fig:src-kwmap-3ranges}
 }
 % 
 \subfigure[The source term for three different $k$ values including the WMAP pivot scale. As $k$
 gets larger (scale gets smaller) the source term becomes smaller.]{
- \includegraphics[scale=0.8]{graphs/src-3ks-small}
+ \includegraphics[scale=0.8]{numerical/graphs/src-3ks-small}
 \label{fig:src-3ks}
 }
 \caption{Two different comparisons of the source term $S$.}
@@ -1291,14 +1291,14 @@ important.
 \subfigure[The source term (lower blue line) is compared with the $T$ term (upper green
 line) as defined in the text for $\kwmap$. The source term is of comparable magnitude at the
 beginning of the simulation. ]{
- \includegraphics[scale=0.8]{graphs/src-vs-t-kwmap-small.pdf}
+ \includegraphics[scale=0.8]{numerical/graphs/src-vs-t-kwmap-small.pdf}
  \label{fig:src-vs-others}
 }
 % 
  \subfigure[The quotient of $S$ and $T$ terms for three different $k$ values including
 the WMAP pivot scale. Depending on $k$ the source term only dominates at early stages or is
 important throughout the evolution.]{
- \includegraphics[scale=0.8]{graphs/s-over-t-3ks-small}
+ \includegraphics[scale=0.8]{numerical/graphs/s-over-t-3ks-small}
  \label{fig:s-over-t-3ks}
 }
 % 
@@ -1324,13 +1324,13 @@ related.
 becomes
 smaller than the $\msqphisq$ model as evolution continues. After horizon crossing
 the $\lambdaphifour$ term is slightly larger.]{
- \includegraphics[scale=0.8]{graphs/src-mvl-small}
+ \includegraphics[scale=0.8]{numerical/graphs/src-mvl-small}
  \label{fig:src-mvl}
 }
 % 
 \subfigure[The crossover between the models at the early stages of the simulation, before horizon 
 crossing.]{
-\includegraphics[scale=0.8]{graphs/src-mvl-zoom-small}
+\includegraphics[scale=0.8]{numerical/graphs/src-mvl-zoom-small}
 \label{fig:src-mvl-zoom}
 }
 \caption{A comparison of the source term for the $\msqphisq$ and
@@ -1349,7 +1349,7 @@ It should also be remembered that the magnitude of other terms in the second ord
 small for larger $k$s as shown by the ratio $|S|/|T|$ in Figure~\ref{fig:src-3ks-and-over-t}
 where $T$ is defined above in \eq{eq:Tdefn}.
 \begin{figure}
-\includegraphics[scale=0.8]{graphs/src_kinit_log}
+\includegraphics[scale=0.8]{numerical/graphs/src_kinit_log}
  \caption{The absolute magnitude of the source term at the initial start time for each $k$ when
 $k = aH \times 50$ deep inside the horizon. The results are for the range $K_1=\left[ 1.9\e{-5},
 0.039 \right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
@@ -1363,7 +1363,7 @@ inflation when $\dvp2$ has been initialised for only the very smallest $k$ modes
 line shows $|S|$ when all $\dvp2$ modes have been started. Finally the lower red line plots $|S|$
 after all modes have exited the horizon, around 52 e-foldings before the end of inflation.
 \begin{figure}
-\includegraphics[scale=0.8]{graphs/src_3ns}
+\includegraphics[scale=0.8]{numerical/graphs/src_3ns}
 \caption{The absolute magnitude of the source term for all $ks$ in the range at three different
 timesteps: the upper blue line when only the largest modes have been initialised; the middle green
 line when all modes have been initialised; and the lower red dashed line when all modes have
