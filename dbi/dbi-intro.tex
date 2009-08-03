@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.23 2009/08/03 16:24:09 ith Exp $
+% $Id: dbi-intro.tex,v 1.24 2009/08/03 19:48:32 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.23 2009/08/03 16:24:09 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.24 2009/08/03 19:48:32 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -116,11 +116,16 @@ theoretical physics for more than 100 years. This effort culminated in the
 Standard Model (SM) of particle physics which unifies three of the four
 fundamental forces in a robust theoretical framework. Since the realization of
 the SM a clear goal of theoretical physics has been the unification of the
-final force, gravity, into this framework.
+final force, gravity, into this framework. In this section we will introduce
+some of the concepts that will be required later to understand DBI inflation.
+\addtodo{Include citations}
+Many review articles and text books have been about string theory and its
+application to cosmology, a short list of recent works includes ***.
 
 
-String theory is one of the most successful attempts to achieve this
-unification. According to this theory, the fundamental building blocks of the
+String theory is one of the most successful current attempts to achieve the
+unification of physics. According to this theory, the fundamental
+building blocks of the
 universe are vibrating bundles of energy. These ``strings'', and their analogues
 in other dimensions, constitute all matter and force particles in existence.
 The physics of their interactions dictates the physics of the SM which has been
@@ -133,7 +138,7 @@ string theories have been discovered. This might appear to be a significant
 set-back in the attempt to find a single unifying theory. 
 
 However, these different theories are linked in pairs by a process called
-``duality''. Physical descriptions in one theory can be translated into the
+duality. Physical descriptions in one theory can be translated into the
 dual description in the other. The dual version often exhibits properties that
 are useful for solving problems in the original setting.
 These dualities have demonstrated the existence of an underlying theory of
@@ -168,40 +173,41 @@ existence of inflaton fields. In this way inflation and string theory are
 ideal partners and it is natural to consider them together when investigating
 the early universe.
 
-
+\addtodo{Add paras on constraining string theory with cosmology, genericity
+argument, unexpected signals. Tie to introduction chapter and fnl as a
+discriminator.}
 
 \subsection{Extra dimensions}
 One of the basics results of string theory is that the 3 spacial dimensions that we see
 around us are not the full extent of the space-time manifold. Instead
 we live in a ten or
-eleven dimensional spacetime and physical theories in 3+1 dimensions must compensate for the
+eleven dimensional space-time and physical theories in 3+1 dimensions must
+compensate for the
 other 6 or 7 dimensions that are hidden from us. One of the challenges of string theory is how 
 to hide these extra dimensions in such a way as to recover standard physical
 results in the usual
 ones. 
 
-The early work of Kaluza and Klein in dealing with higher dimensional 
-theories has played
-a large role in the formation of consistent theories of extra dimensions in
+The early work of Kaluza and Klein in formulating higher dimensional 
+theories laid the groundwork for the current treatment of extra dimensions in
 string theory \cite{Kaluza1921, Klein1926}. They found that by
-``compactifying'' an extra dimension onto a circle of finite radius an infinite
+compactifying an extra dimension onto a circle of finite radius an infinite
 tower of extra fields would be introduced into the lower dimensional theory. The
 mass of these fields is inversely proportional to the size of the extra
 dimension. By taking the radius to be extremely small the appearance of these
 unobserved massive fields is avoided. This leaves a
 massless degree of freedom which must be accounted for in the four-dimensional
 effective action. 
-The extra dimensions are
-compactified into a Ricci flat Calabi-Yau (CY) manifold which can be described
-by three complex coordinates \cite{Yau1977}.
+
 
 A similar procedure is undertaken when compactifying string theory from a
 10 or 11 dimensional description down to four dimensions (for reviews see
 \cite{douglas,grana}).
-The extra dimensions are
+In ten dimensional type IIB theory the six extra dimensions are
 compactified into a Ricci flat Calabi-Yau (CY) manifold which can be described
-by three complex coordinates \cite{Yau1977}. Now any Ricci flat metric can be
-rescaled into another Ricci flat metric so there is no unique solution for the
+by three complex coordinates \cite{Yau1977}. 
+Because any Ricci flat metric can be
+rescaled into another Ricci flat metric, there is no unique solution for the
 metric on the CY manifold. Instead a family of solutions exists with many free
 parameters. These remain after the compactification, in
 analogy to the size of the extra dimension in KK compactification, and can vary
@@ -210,12 +216,14 @@ in the four-dimensional theory and are known as moduli.
 These fields are not subject to any symmetry and so their individual values
 at different spacetime points can affect the physics at those points.
 
-These moduli fields must
-be ``stabilized'', given an effective mass so that they do not interfere as
-massless fields, 
- Flux
-compactification is used, which entails the switching on of ``fluxes'' during
-the compactification . 
+
+\addtodo{Move to flux compactification section?}
+The moduli fields must
+be stabilized, that is given an effective mass so that they do not interfere as
+massless fields. This can be achieved by switching on background fluxes and is
+equivalent to turning on a magnetic field in the compact space. Instead of the
+manifold having zero total charge due to Gauss' theorem the integrated charge
+will now be a non-zero integer.
 
 
 % Suppose we wish to reduce a theory in $(D+1)$ dimensions to one in
@@ -241,9 +249,50 @@ the compactification .
 
 
 
-\subsection{Dirichlet-branes}
-\subsection{Warped throats and Compactifications}
-\subsection{Four dimensional effective theory}
+\subsection{D-branes}
+Open string + T-duality = Dirichlet boundary conditions
+
+Mixed Dirichlet and von Neumann boundary conditions.
+
+D-p branes, open strings end on p+1 ? dimensional manifold.
+
+For Type IIB we have D-1,3,5,7 branes
+
+See Johnson p80 for D-brane action.
+
+Brane inflation was first considered without moduli stabilization (pg21 Douglas
+and Kachru for refs). This gave a potential similar to hybrid inflation with
+waterfall field. KKLMMT argued that the corrections from including moduli
+stabilization were too big to ignore.
+
+
+
+
+\subsection{Warped throats}
+In presence of fluxes a general form of metric with a warp factor is possible
+\begin{equation}
+ ds^2 = e^{2A(y)}\eta_{\mu\nu} dx^\mu dx^\nu + e^{-2A(y)} g_{mn}dy^m dy^n\,,
+\end{equation}
+where $A(y)$ vaires across the compact dimensions $y^m$.
+Compactifications in which $A$ varies significantly with $y$ are called warped
+compactifications.
+
+Warped compactifications are similar to the Randall-Sundrum picture.
+
+Simplest realisation in string theory uses warped deformed conifolds (Klebanov
+and Strassler). 
+If fluxes are turned on and
+\begin{equation}
+ \int_A F_3 = M \,, \int_B H_3 = -K\,,
+\end{equation}
+then $e^A \simeq e^{-2\pi K/3g_s M}$ giving an exponential warping in the
+throat.
+
+In the bulk of the Calabi-Yau space $e^A \simeq 1$ so there is no warping. The
+SM brane could live here and not feel any effects of the warping.
+
+
+
 % 
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
