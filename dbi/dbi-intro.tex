@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.22 2009/08/01 22:13:18 ith Exp $
+% $Id: dbi-intro.tex,v 1.23 2009/08/03 16:24:09 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.22 2009/08/01 22:13:18 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.23 2009/08/03 16:24:09 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -140,13 +140,14 @@ These dualities have demonstrated the existence of an underlying theory of
 which the individual string theories are only facets. 
 We will work in Type II B string theory which has proven to be the most
 fruitful for models of cosmological inflation.
-
-The most striking prediction of string theory is the existence of other
-dimensions beyond the four space-time dimensions that we
-experience. Recovering the physics of our familiar $3+1$ dimensional universe
-clearly requires that these extra dimensions be hidden in some way. How this is
-achieved is one of the signature features of any complete string theoretical
-description of the universe.
+% 
+% The most striking prediction of string theory is the existence of other
+% dimensions beyond the four space-time dimensions that we
+% experience. Recovering the physics of our familiar $3+1$ dimensional universe
+% clearly requires that these extra dimensions be hidden in some way. How this
+% is
+% achieved is one of the signature features of any complete string theoretical
+% description of the universe.
 
 \subsection{Cosmology and String Theory}
 Temperatures in the early univerese were far in excess of those attainable by
@@ -171,26 +172,71 @@ the early universe.
 
 \subsection{Extra dimensions}
 One of the basics results of string theory is that the 3 spacial dimensions that we see
-around us are not the full extent of the manifold we live in. Instead we live in a ten or
+around us are not the full extent of the space-time manifold. Instead
+we live in a ten or
 eleven dimensional spacetime and physical theories in 3+1 dimensions must compensate for the
 other 6 or 7 dimensions that are hidden from us. One of the challenges of string theory is how 
-to hide these extra dimensions in such a way as to recover standard physical results in the lower
-ones. The early work of Kaluza and Klein in dealing with higher dimensional theories [cite] has played
-a large role in the formation of consistent theories of extra dimensions in string theory.
+to hide these extra dimensions in such a way as to recover standard physical
+results in the usual
+ones. 
+
+The early work of Kaluza and Klein in dealing with higher dimensional 
+theories has played
+a large role in the formation of consistent theories of extra dimensions in
+string theory \cite{Kaluza1921, Klein1926}. They found that by
+``compactifying'' an extra dimension onto a circle of finite radius an infinite
+tower of extra fields would be introduced into the lower dimensional theory. The
+mass of these fields is inversely proportional to the size of the extra
+dimension. By taking the radius to be extremely small the appearance of these
+unobserved massive fields is avoided. This leaves a
+massless degree of freedom which must be accounted for in the four-dimensional
+effective action. 
+The extra dimensions are
+compactified into a Ricci flat Calabi-Yau (CY) manifold which can be described
+by three complex coordinates \cite{Yau1977}.
+
+A similar procedure is undertaken when compactifying string theory from a
+10 or 11 dimensional description down to four dimensions (for reviews see
+\cite{douglas,grana}).
+The extra dimensions are
+compactified into a Ricci flat Calabi-Yau (CY) manifold which can be described
+by three complex coordinates \cite{Yau1977}. Now any Ricci flat metric can be
+rescaled into another Ricci flat metric so there is no unique solution for the
+metric on the CY manifold. Instead a family of solutions exists with many free
+parameters. These remain after the compactification, in
+analogy to the size of the extra dimension in KK compactification, and can vary
+dependent on position in the four-dimensional space-time. They appear as fields
+in the four-dimensional theory and are known as moduli. 
+These fields are not subject to any symmetry and so their individual values
+at different spacetime points can affect the physics at those points.
+
+These moduli fields must
+be ``stabilized'', given an effective mass so that they do not interfere as
+massless fields, 
+ Flux
+compactification is used, which entails the switching on of ``fluxes'' during
+the compactification . 
 
 
-Suppose we wish to reduce a theory in $(D+1)$ dimensions to one in $D$ dimensions. 
-We will ``compactify'' the 
-(here single) extra dimension on a circle of finite radius $L$ and denote the coordinate on the circle as $z$. 
-Assume that in $(D+1)$ 
-dimensions we have a metric tensor $\hat{g}_{MN}(x,z)$ where $M$ and $N$ run over all $(D+1)$ dimensions and 
-x signifies the $D$ coordinates of the lower-dimensional spacetime. Hats denote quantities in the $(D+1)$ space-time.
-A Fourier decomposition of $\hat{g}_{MN}$ gives an infinite number of fields in $D$ dimensions:
-\begin{equation}
- \hat{g}_{MN}(x,z) = \sum_n g_{MN}^{(n)}(x) e^{i\frac{nz}{L}}\,.
-\end{equation}
-The mode number $n$ is related to the mass of the resulting fields; modes with $n=0$ will be massless and those with
-$n \ne 0$ massive. This can be seen by considering the Klein-Gordon equation for a $(D+1)$ dimensional field $\hat{\varphi}$:
+% Suppose we wish to reduce a theory in $(D+1)$ dimensions to one in
+% $D$ dimensions. 
+% We will ``compactify'' the 
+% (here single) extra dimension on a circle of finite radius $L$ and
+% denote the coordinate on the circle as $z$. 
+% Assume that in $(D+1)$ 
+% dimensions we have a metric tensor $\hat{g}_{MN}(x,z)$ where $M$ and
+% $N$ run over all $(D+1)$ dimensions and 
+% x signifies the $D$ coordinates of the lower-dimensional spacetime.
+% Hats  denote quantities in the $(D+1)$ space-time.
+% A Fourier decomposition of $\hat{g}_{MN}$ gives an infinite number
+% of fields in $D$ dimensions:
+% \begin{equation}
+%  \hat{g}_{MN}(x,z) = \sum_n g_{MN}^{(n)}(x) e^{i\frac{nz}{L}}\,.
+% \end{equation}
+% The mode number $n$ is related to the mass of the resulting fields;
+% modes with $n=0$ will be massless and those with
+% $n \ne 0$ massive. This can be seen by considering the Klein-Gordon
+% equation for a $(D+1)$ dimensional field $\hat{\varphi}$:
 
 
 
