@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.25 2009/08/04 11:22:10 ith Exp $
+% $Id: dbi-intro.tex,v 1.26 2009/08/04 22:18:56 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.25 2009/08/04 11:22:10 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.26 2009/08/04 22:18:56 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -50,7 +50,7 @@ Bean:2007eh,bean}).
 The Dirac-Born-Infeld (DBI) scenario 
 of the compactified type IIB theory is a well-motivated model \cite{brane6,brane11}, 
 in which inflation is driven by one or more ${\rm D}$-branes 
-propagating in a warped `throat' background 
+propagating in a warped `throat' background. 
 % 
 In the simplest version of the scenario, 
 the inflaton parametrizes the radial 
@@ -118,9 +118,10 @@ fundamental forces in a robust theoretical framework. Since the realization of
 the SM a clear goal of theoretical physics has been the unification of the
 final force, gravity, into this framework. In this section we will introduce
 some of the concepts that will be required later to understand DBI inflation.
-\addtodo{Include citations}
+\addtodo{Include more citations}
 Many review articles and text books have been about string theory and its
-application to cosmology, a short list of recent works includes ***.
+application to cosmology, a short list of recent works includes
+\cite{Polchinski1996,cline,Johnson2000}.
 
 
 String theory is one of the most successful current attempts to achieve the
@@ -128,23 +129,31 @@ unification of physics. According to this theory, the fundamental
 building blocks of the
 universe are vibrating bundles of energy. These ``strings'', and their analogues
 in other dimensions, constitute all matter and force particles in existence.
-The physics of their interactions dictates the physics of the SM which has been
-so successfully tested.
+There are two main
+types of strings, closed and open, distinguished by the fact that closed
+strings form a continuous loop while open strings have two unconnected ends. 
+% The physics of their interactions dictates the physics of the SM which has
+% been
+% so successfully tested.
+% 
+% This at least is the goal of the string theory project but the complex nature
+% of the mathematical and physical structures involved means that no single
+% well-defined theory can claim to have achieved this goal. Indeed many
+% different
+% string theories have been discovered. This might appear to be a significant
+% set-back in the attempt to find a single unifying theory. 
 
-This at least is the goal of the string theory project but the complex nature
-of the mathematical and physical structures involved means that no single
-well-defined theory can claim to have achieved this goal. Indeed many different
-string theories have been discovered. This might appear to be a significant
-set-back in the attempt to find a single unifying theory. 
 
-However, these different theories are linked in pairs by a process called
-duality. Physical descriptions in one theory can be translated into the
+There are several different string theories linked in pairs by a process
+called
+duality. Physical descriptions in one theory can be translated into a
 dual description in the other. The dual version often exhibits properties that
 are useful for solving problems in the original setting.
-These dualities have demonstrated the existence of an underlying theory of
-which the individual string theories are only facets. 
-We will work in Type II B string theory which has proven to be the most
-fruitful for models of cosmological inflation.
+% These dualities have demonstrated the existence of an underlying theory of
+% which the individual string theories are only facets. 
+We will work in the string theory which has proven
+to be the most
+fruitful for models of cosmological inflation, Type IIB. 
 % 
 % The most striking prediction of string theory is the existence of other
 % dimensions beyond the four space-time dimensions that we
@@ -217,13 +226,7 @@ These fields are not subject to any symmetry and so their individual values
 at different spacetime points can affect the physics at those points.
 
 
-\addtodo{Move to flux compactification section?}
-The moduli fields must
-be stabilized, that is given an effective mass so that they do not interfere as
-massless fields. This can be achieved by switching on background fluxes and is
-equivalent to turning on a magnetic field in the compact space. Instead of the
-manifold having zero total charge due to Gauss' theorem the integrated charge
-will now be a non-zero integer.
+
 
 
 % Suppose we wish to reduce a theory in $(D+1)$ dimensions to one in
@@ -247,9 +250,47 @@ will now be a non-zero integer.
 % equation for a $(D+1)$ dimensional field $\hat{\varphi}$:
 
 
+\subsection{T-duality}
+\label{sec:tduality-dbiintro}
+% T-Duality
+Suppose we have a string theory compactified on a circle of radius $R$. Instead
+of being a continuum, the momentum of a closed string takes discrete values
+$n/R$ for $n \in \mathbb{Z}$. This is a KK tower of massive states. As we
+complete a circuit around the compact dimension, the value of the coordinate
+function embedding the string in the background will also increase by $2\pi w
+R$ for $w \in \mathbb{Z}$. This $w$, called the winding number of the string,
+can only be non-zero for closed strings which can be wrapped around the periodic
+dimension.
 
+The total mass of the string contains terms with both the KK tower of states
+and the new tower of winding states:
+\begin{equation}
+\label{eq:closedmass-dbiintro}
+ M^2 = \frac{n^2}{R^2} + \frac{w^2 R^2}{\alpha'^2} + \cdots\,.
+\end{equation}
+If $R$ is taken to infinity the $w\ne 0$ states become infinitely massive and
+only the $w=0$ state is left with a continuum of momentum values. Thus the
+uncompactified result is recovered. However if $R\rightarrow0$ the $n\ne 0$
+states are now infinitely massive as in the standard KK picture. Unlike that
+scenario, there is now a continuum of winding states $w\ne 0$, again giving an
+uncompactified dimension. This major departure from the standard
+compactification result is a purely stringy effect. 
 
+The formula for the mass spectrum, \eq{eq:closedmass-dbiintro}, is invariant
+when $n$ and $w$ are exchanged given the transformation
+\begin{equation}
+ R \rightarrow R' = \frac{\alpha'}{R}\,.
+\end{equation}
+The new theory which is compactified on a circle of radius $R'$ is known as the
+T-dual theory and the transformation is called T-duality
+\cite{Sakai1986,Kikkawa1984b}. The two
+theories,
+original and T-dual, are physically identical; T-duality is an exact symmetry
+of string theory for closed strings.
+
+% 
 \subsection{D-branes}
+\label{sec:dbranes-dbiintro}
 % Open string + T-duality = Dirichlet boundary conditions
 % 
 % Mixed Dirichlet and von Neumann boundary conditions.
@@ -272,47 +313,83 @@ theories are linked by T-duality. Fundamental parameters are translated by the
 duality including the size of the extra-dimensions, the string coupling and the
 coordinate solutions of the strings.
 
-% T-Duality
-Suppose we have a string theory compactified on a circle of radius $R$. Instead
-of being a continuum, the momentuum of a closed string takes discrete values
-$n/R$ for $n \in \mathbb{Z}$. This is a KK tower of massive states. As we
-complete a circuit around the compact dimension, the value of the coordinate
-function embedding the string in the background will also increase by $2\pi w
-R$ for $w \in \mathbb{Z}$. Here $w$ is called the winding number of the string.
 
-The total mass of the string contains terms with both the KK tower of states
-and the new tower of winding states:
+In Section \ref{sec:tduality-dbiintro} we introduced T-duality by explaining
+its effects on closed strings. But what happens when open strings are
+T-dualised? Open strings, as their name suggests, have two open ends and
+consequently cannot have a conserved winding number like $w$. Again suppose one
+of the $D$ dimensions is compactified. As $R\rightarrow0$ the non-zero momentum
+states get infinitely massive but in contrast to the closed case there is now
+no continuum of winding states. Thus the theory now lives in one less
+dimension similar to standard KK compactification.
+
+There are still closed strings in this theory however, and these continue to
+move in the full $D$ dimensions. The endpoints of the open strings now observe
+Dirichlet boundary conditions, taking fixed values in the compactified
+direction. This follows through if more than one coordinate is made periodic.
+If $D-p-1$ spatial dimensions are compactified then the ends of the open
+strings ca still move freely in the other $p$ stpatial dimensions on a $p+1$
+dimensional hypersurface called a Dirichlet or D$p$-brane. 
+% 
+In Type IIB theory with supersymmetric string an extra condition means that
+only D$p$-branes with $p=1,3,5,7,9$ are allowed \footnotemark.
+\footnotetext{There is also a $p=-1$ D-instanton in which the time direction
+along with all spatial directions is subject to Dirichlet boundary conditions
+\cite{Green1992,Green1988,Green1977}.}
+% 
+
+D$p$-branes can be considered as dynamical objects in their own right with a
+tension\footnote{$T_p$ here is $\tau_p$ in \cite{Johnson2000}.}
+% 
 \begin{equation}
-\label{eq:closedmass-dbiintro}
- M^2 = \frac{n^2}{R^2} + \frac{w^2 R^2}{\alpha'^2} + \cdots\,.
+\label{eq:branetensiondefn-dbiintro}
+ T_p = \frac{m_s^{p+1}}{(2\pi)^p g_s}\,,
 \end{equation}
-If $R$ is taken to infinity the $w\ne 0$ states become infinitely massive and
-only the $w=0$ state is left with a continuum of momentum values. Thus the
-uncompactified result is recovered. However if $R\rightarrow0$ the $n\ne 0$
-states are now infinitely massive as in the standard KK picture. Unlike that
-scenario, there is now a continuum of winding states $w\ne 0$, again giving an
-uncompactified dimension. This major departure from the standard
-compactification result is a purely stringy effect. 
-
-The formula for the mass spectrum, \eq{eq:closedmass-dbiintro}, is invariant
-when $n$ and $w$ are exchanged given the transformation
+% 
+and an action given by
+% 
 \begin{equation}
- R \rightarrow R' = \frac{\alpha'}{R}\,.
+\label{eq:gendbiaction-dbiintro}
+ S = -T_p \int d^{p+1}\xi \sqrt{-\hat{g}}\,,
 \end{equation}
-The new trhory which is compactified on a circle of radius $R'$ is known as the
-T-dual theory and the transformation is called T-duality. THe two theories,
-original and T-dual, are physically identical; T-duality is an exact symmetry
-of string theory for closed strings.
+where $\hat{g}_{ab}$ is the induced metric on the brane with internal
+coordinates $\xi^a$ for $a=0,\ldots,p$. This is the general form of the DBI
+action which will be used later.
 
+\subsection{D-brane inflation}
+At its most basic slow-roll inflation requires only a single scalar field with a
+sufficiently flat potential to satisfy the slow roll conditions outlined in
+Section \ref{sec:slowroll-intro}. D-branes are charged (with Ramond-Ramond
+charge) and we can consider a system of a D-brane and an anti-D-brane
+($\overline{\mathrm{D}}$). As the two branes attract each other the distance
+between them can be used as a decreasing scalar degree of freedom, the
+inflaton \cite{brane1,brane2,brane3,brane7}. 
+When the branes collide they will annihilate and produce energy which would
+reheat the universe. 
 
-
+As described in Section \ref{sec:extradims} compacitifying dimensions
+introduces scalar fields known as moduli. These massless fields must be
+accounted for in the dynamics unless some way is found to ``stabilize'' them by
+fixing their mass to be large enough that they do not interfere.
+Initial efforts to induce inflation using D-branes ignored the issue of moduli
+stabilization. Instead they
+assumed that whatever stabilization technique was used would have no discernable
+effect on the inflationary physics [cite kklt***]. Kac
 
 \subsection{Warped throats}
-In presence of fluxes a general form of metric with a warp factor is possible
+As mentioned above, moduli fields must
+be stabilized, that is given an effective mass so that they do not interfere as
+massless fields. This can be achieved by switching on background fluxes and is
+equivalent to turning on a magnetic field in the compact space. Instead of the
+manifold having zero total charge due to Gauss' theorem the integrated charge
+will now be a non-zero integer.
+In the presence of fluxes a general form of metric with a warp factor is
+possible
 \begin{equation}
+\label{eq:warpedmetric-dbiintro}
  ds^2 = e^{2A(y)}\eta_{\mu\nu} dx^\mu dx^\nu + e^{-2A(y)} g_{mn}dy^m dy^n\,,
 \end{equation}
-where $A(y)$ vaires across the compact dimensions $y^m$.
+where $A(y)$ varies across the compact dimensions $y^m$.
 Compactifications in which $A$ varies significantly with $y$ are called warped
 compactifications.
 
