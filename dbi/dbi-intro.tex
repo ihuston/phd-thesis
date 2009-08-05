@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.27 2009/08/05 10:33:03 ith Exp $
+% $Id: dbi-intro.tex,v 1.28 2009/08/05 13:25:33 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.27 2009/08/05 10:33:03 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.28 2009/08/05 13:25:33 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -346,7 +346,8 @@ tension\footnote{$T_p$ here is $\tau_p$ in \cite{Johnson2000}.}
  T_p = \frac{m_s^{p+1}}{(2\pi)^p g_s}\,,
 \end{equation}
 % 
-and an action given by
+where $g_s$ is the string coupling and $m_s$ is the string mass scale.
+Their dynamics is governed by the action 
 % 
 \begin{equation}
 \label{eq:gendbiaction-dbiintro}
@@ -376,7 +377,10 @@ stabilization. Instead they
 assumed that whatever stabilization technique was used would have no discernable
 effect on the inflationary physics [cite kklt***]. Kac
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \subsection{Warped throats}
+\label{sec:warpedthroats-dbiintro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 As mentioned above, moduli fields must
 be stabilized, that is given an effective mass so that they do not interfere as
 massless fields. This can be achieved by switching on background fluxes and is
@@ -384,21 +388,21 @@ equivalent to turning on a magnetic field in the compact space. Instead of the
 manifold having zero total charge due to Gauss' theorem the integrated charge
 will now be a non-zero integer.
 In the presence of fluxes a general form of metric with a warp factor is
-possible
+possible:
 \begin{equation}
 \label{eq:warpedmetric-dbiintro}
  ds^2 = e^{2A(y)}\eta_{\mu\nu} dx^\mu dx^\nu + e^{-2A(y)} g_{mn}dy^m dy^n\,,
 \end{equation}
 where $A(y)$ varies across the compact dimensions $y^m$.
 Compactifications in which $A$ varies significantly with $y$ are called warped
-compactifications.
-
-Warped compactifications are similar to the Randall-Sundrum picture.
+compactifications. These warped compactifications are qualitatively similar to
+the Randall-Sundrum picture.
 
 Simplest realisation in string theory uses warped deformed conifolds (Klebanov
 and Strassler). 
 If fluxes are turned on and
 \begin{equation}
+\label{eq:fluxdefn-dbiintro}
  \int_A F_3 = M \,, \int_B H_3 = -K\,,
 \end{equation}
 then $e^A \simeq e^{-2\pi K/3g_s M}$ giving an exponential warping in the
@@ -407,6 +411,51 @@ throat.
 In the bulk of the Calabi-Yau space $e^A \simeq 1$ so there is no warping. The
 SM brane could live here and not feel any effects of the warping.
 
+Flux compactification of type IIB string theory to four dimensions 
+results in a warped geometry, where the six-dimensional CY  
+manifold contains one or more throats. 
+The metric inside a throat takes the same form as in
+\eq{eq:warpedmetric-dbiintro}:
+% 
+\begin{equation}
+\label{eq:conemetric-dbiintro}
+ds_{10}^2= h^2 ( \rho) ds_4^2 + h^{-2} (\rho ) 
+\left( d\rho^2 +\rho^2 ds_{X_5}^2 \right) \,,
+\end{equation}
+%  
+where the warp factor $h (\rho)$ is a function of the 
+radial coordinate $\rho$ along the throat and $X_5$
+is a Sasaki-Einstein five-manifold. 
+
+
+In many cases, the ten-dimensional metric (\ref{eq:conemetric-dbiintro}) can be 
+approximated locally by the geometry $AdS_5 \times X_5$, where the 
+warp factor is given by $h=\rho /L$ and 
+the radius of curvature of the $AdS_5$ space is defined by
+%  
+\begin{equation}
+L^4 \equiv \frac{4\pi^4 g_s N}{{\rm Vol} (X_5) m_s^4} \,,
+\end{equation}
+% 
+such that $\mathrm{Vol}(X_5)$ is the dimensionless volume of 
+$X_5$ with unit radius and $N$ is the ${\rm D3}$  charge of the throat.
+In terms of the fluxes defined in \eq{eq:fluxdefn-dbiintro} $N=MK$.
+
+
+In the Klebanov-Strassler (KS) background \cite{ks}, the throat 
+is a warped deformed conifold and 
+corresponds to a cone over the manifold 
+$X_5 = T^{1,1}= {\rm SU(2)} \otimes {\rm SU(2)}/{\rm U(1)}$
+in the UV limit ($\rho \rightarrow \infty$). This has   
+a volume $\mathrm{Vol} (T^{1,1}) = 16\pi^3/27$ and  topology
+$S^2\times S^3$, where the $S^2$ is fibred over the $S^3$.
+The conical singularity at the tip of the throat 
+is smoothed out by an 
+$S^3$ `cap' due to the wrapping of the fluxes along the cycles of the conifold
+\cite{ks,kt} and the warp factor asymptotes to 
+a constant value in this region.
+
+\missingfigure{Add figure of warped deformed conifold}   
 
 
 % 
@@ -421,7 +470,7 @@ SM brane could live here and not feel any effects of the warping.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \addtodo{ More introduction of type IIB theory}
-We will now concentrate on one particular non-canonical action. 
+% We will now concentrate on one particular non-canonical action. 
 The DBI scenario is based on the compactification of type IIB string theory on a 
 Calabi-Yau (CY) three-fold, where the form-field fluxes generate locally
 warped regions known as `throats'.  The propagation of a 
@@ -430,48 +479,10 @@ field is identified with the radial position of the brane
 along the throat. Since this is an open string mode, the field 
 equation for the inflaton is determined by a DBI action.
 
-Flux compactification of type IIB string theory to four dimensions 
-results in a warped geometry, where the six-dimensional CY  
-manifold contains one or more throats (see \cite{grana,douglas} for reviews). 
-The metric inside a throat has the generic form
-% 
-\begin{equation}
-\label{eq:conemetric-dbiintro}
-ds_{10}^2= h^2 ( \rho) ds_4^2 + h^{-2} (\rho ) 
-\left( d\rho^2 +\rho^2 ds_{X_5}^2 \right) \,,
-\end{equation}
-%  
-where the warp factor $h (\rho)$ is a function of the 
-radial coordinate $\rho$ along the throat and $X_5$
-is a Sasaki-Einstein five-manifold. 
-In many cases, the ten-dimensional metric (\ref{eq:conemetric-dbiintro}) can be 
-approximated locally by the geometry $AdS_5 \times X_5$, where the 
-warp factor is given by $h=\rho /L$ and 
-the radius of curvature of the $AdS_5$ space is defined by
-%  
-\begin{equation}
-L^4 \equiv \frac{4\pi^4 g_s N}{{\rm Vol} (X_5) m_s^4} \,,
-\end{equation}
-% 
-such that $\mathrm{Vol}(X_5)$ is the dimensionless volume of 
-$X_5$ with unit radius, $N$ is the ${\rm D3}$  charge of the throat, 
-$g_s$ is the string coupling and $m_s$ is the string mass scale.
-In the Klebanov-Strassler (KS) background \cite{ks}, the throat 
-is a warped deformed conifold and 
-corresponds to a cone over the manifold 
-$X_5 = T^{1,1}= {\rm SU(2)} \otimes {\rm SU(2)}/{\rm U(1)}$
-in the UV limit ($\rho \rightarrow \infty$). This has   
-a volume $\mathrm{Vol} (T^{1,1}) = 16\pi^3/27$ and  topology
-$S^2\times S^3$, where the $S^2$ is fibred over the $S^3$.
-The conical singularity at the tip of the throat 
-is smoothed out by an 
-$S^3$ `cap' due to the wrapping of the fluxes along the cycles of the conifold
-\cite{ks,kt} and the warp factor asymptotes to 
-a constant value in this region.   
- 
 
 In general, the low-energy world-volume dynamics
-of a probe ${\rm D3}$-brane in a warped throat is determined 
+of a probe ${\rm D3}$-brane in a warped throat, as described in Section
+\ref{sec:warpedthroats-dbiintro}, is determined 
 by an effective, four-dimensional DBI action. 
 The inflaton field is related to the radial 
 position of the brane by 
@@ -494,7 +505,6 @@ the field's interaction
 potential and $T(\varphi ) = T_3 h^4 (\varphi )$
 defines the warped brane tension. We refer to $P(\varphi , X)$ as the 
 `kinetic function' for the inflaton. 
-
 
 We consider a spatially flat and isotropic cosmology 
 sourced by a homogeneous scalar field. 
