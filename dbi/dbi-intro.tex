@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.28 2009/08/05 13:25:33 ith Exp $
+% $Id: dbi-intro.tex,v 1.29 2009/08/05 16:12:35 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.28 2009/08/05 13:25:33 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.29 2009/08/05 16:12:35 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -381,12 +381,12 @@ effect on the inflationary physics [cite kklt***]. Kac
 \subsection{Warped throats}
 \label{sec:warpedthroats-dbiintro}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-As mentioned above, moduli fields must
-be stabilized, that is given an effective mass so that they do not interfere as
-massless fields. This can be achieved by switching on background fluxes and is
-equivalent to turning on a magnetic field in the compact space. Instead of the
-manifold having zero total charge due to Gauss' theorem the integrated charge
-will now be a non-zero integer.
+The moduli must
+be stabilized so that they do not appear in the effective action as
+massless fields. This can be achieved by switching on background fluxes in the
+compactified space. These fluxes are the equivalents of magnetic
+fields in the higher dimensional space. By Gauss' theorem  the compact space
+will now have a quantized non-zero total charge.
 In the presence of fluxes a general form of metric with a warp factor is
 possible:
 \begin{equation}
@@ -396,24 +396,12 @@ possible:
 where $A(y)$ varies across the compact dimensions $y^m$.
 Compactifications in which $A$ varies significantly with $y$ are called warped
 compactifications. These warped compactifications are qualitatively similar to
-the Randall-Sundrum picture.
+the Randall-Sundrum picture \cite{Randall1999,Brummer2006}.
 
-Simplest realisation in string theory uses warped deformed conifolds (Klebanov
-and Strassler). 
-If fluxes are turned on and
-\begin{equation}
-\label{eq:fluxdefn-dbiintro}
- \int_A F_3 = M \,, \int_B H_3 = -K\,,
-\end{equation}
-then $e^A \simeq e^{-2\pi K/3g_s M}$ giving an exponential warping in the
-throat.
-
-In the bulk of the Calabi-Yau space $e^A \simeq 1$ so there is no warping. The
-SM brane could live here and not feel any effects of the warping.
 
 Flux compactification of type IIB string theory to four dimensions 
-results in a warped geometry, where the six-dimensional CY  
-manifold contains one or more throats. 
+results in such a warped geometry, where the six-dimensional CY  
+manifold contains one or more throats \cite{douglas,gkp,grana}. 
 The metric inside a throat takes the same form as in
 \eq{eq:warpedmetric-dbiintro}:
 % 
@@ -439,8 +427,10 @@ L^4 \equiv \frac{4\pi^4 g_s N}{{\rm Vol} (X_5) m_s^4} \,,
 % 
 such that $\mathrm{Vol}(X_5)$ is the dimensionless volume of 
 $X_5$ with unit radius and $N$ is the ${\rm D3}$  charge of the throat.
-In terms of the fluxes defined in \eq{eq:fluxdefn-dbiintro} $N=MK$.
 
+
+% In the bulk of the Calabi-Yau space $e^A \simeq 1$ so there is no warping. The
+% SM brane could live here and not feel any effects of the warping.
 
 In the Klebanov-Strassler (KS) background \cite{ks}, the throat 
 is a warped deformed conifold and 
@@ -449,14 +439,37 @@ $X_5 = T^{1,1}= {\rm SU(2)} \otimes {\rm SU(2)}/{\rm U(1)}$
 in the UV limit ($\rho \rightarrow \infty$). This has   
 a volume $\mathrm{Vol} (T^{1,1}) = 16\pi^3/27$ and  topology
 $S^2\times S^3$, where the $S^2$ is fibred over the $S^3$.
-The conical singularity at the tip of the throat 
-is smoothed out by an 
-$S^3$ `cap' due to the wrapping of the fluxes along the cycles of the conifold
-\cite{ks,kt} and the warp factor asymptotes to 
-a constant value in this region.
 
 \missingfigure{Add figure of warped deformed conifold}   
 
+There are two 3-cycles in the warped throat. The first is the $S^3$ subspace and
+is known as the A-cycle. The second, called the B-cycle, is the $S^2$ times a
+circle extended in the direction of the throat radius. The three-form fluxes
+$F_3$ and $H_3$, aligned with these cycles, are turned on to make the warped
+throat a solution of the Einstein equations. The cycles are threaded with
+quantized units of flux $M$ and $K$ given by: 
+\begin{eqnarray}
+\label{eq:fluxdefn-dbiintro}
+ \frac{1}{2\pi\alpha'}\int_A F_3 &=& M \,, \\
+ \frac{1}{2\pi\alpha'}\int_B H_3 &=& -K\,, 
+\end{eqnarray}
+where $M,K\in \mathbb{Z}$.
+The D$3$ charge of the throat, $N$, is related to the quantized fluxes by
+$N=MK$.
+The wrapping of the fluxes along the cycles of the conifold smooths out the
+conical singularity at the tip of the throat with an $S^3$ ``cap'' 
+\cite{ks,kt} and the warp factor asymptotes to 
+a constant value in this region.
+
+
+In this section we have provided an overview of the concepts that will be
+required to discuss DBI inflation. The compactified warped throat described
+here will provide the setting for this string theory implementation of
+inflation. In Section \ref{sec:stringcos-dbiintro} we outlined how cosmological
+observations can constrain the parameter space of string theories. In the next
+section we connect the geometry and physics of the string compactification with
+inflationary cosmology and establish the observational parameters which will be
+used to formulate these constraints. 
 
 % 
 % 
@@ -473,21 +486,23 @@ a constant value in this region.
 % We will now concentrate on one particular non-canonical action. 
 The DBI scenario is based on the compactification of type IIB string theory on a 
 Calabi-Yau (CY) three-fold, where the form-field fluxes generate locally
-warped regions known as `throats'.  The propagation of a 
+warped regions known as `throats' described above.  The propagation of a 
 ${\rm D3}$-brane in such a region can drive inflation, where the inflaton 
 field is identified with the radial position of the brane 
 along the throat. Since this is an open string mode, the field 
 equation for the inflaton is determined by a DBI action.
 
+\missingfigure{Figure highlighting radial direction in throat}
 
 In general, the low-energy world-volume dynamics
-of a probe ${\rm D3}$-brane in a warped throat, as described in Section
-\ref{sec:warpedthroats-dbiintro}, is determined 
-by an effective, four-dimensional DBI action. 
+of a probe ${\rm D3}$-brane in a warped throat is determined 
+by an effective, four-dimensional DBI action, as described in Section
+\ref{sec:warpedthroats-dbiintro}.
 The inflaton field is related to the radial 
 position of the brane by 
-$\varphi \equiv \sqrt{T_3} \rho$, where $T_3 =m_s^4/[(2\pi )^3 g_s ]$ 
-is the brane tension. The action is then given by 
+$\varphi \equiv \sqrt{T_3} \rho$, where $T_3$ 
+is the brane tension defined in \eq{eq:branetensiondefn-dbiintro}. The action is
+then given by 
 % 
 \begin{eqnarray}
 \label{eq:DBIaction-dbiintro}
@@ -503,8 +518,8 @@ $X \equiv - \frac{1}{2} g^{\mu\nu} \nabla_{\mu} \varphi \nabla_{\nu} \varphi$
 is the kinetic energy of the inflaton, $V(\varphi )$ denotes 
 the field's interaction 
 potential and $T(\varphi ) = T_3 h^4 (\varphi )$
-defines the warped brane tension. We refer to $P(\varphi , X)$ as the 
-`kinetic function' for the inflaton. 
+defines the warped brane tension. As in Section \ref{sec:noncanoninfl} we refer
+to $P(\varphi , X)$ as the ``kinetic function'' for the inflaton. 
 
 We consider a spatially flat and isotropic cosmology 
 sourced by a homogeneous scalar field. 
@@ -522,7 +537,7 @@ varying inflaton can be expressed in the form \cite{brane6}
 where $H=H(\varphi )$ represents the Hubble parameter
 as a function of the field and a prime denotes $d/d\varphi$. 
 
-
+\addtodo{Remove duplicate information, is it already in Non-canonical section?}
 An important consequence of the non-trivial kinetic structure 
 of the DBI action is that the sound speed of fluctuations in the inflaton 
 differs from unity:   
@@ -652,7 +667,7 @@ at that epoch.
 
 
 \addtodo{ Change to chapter references}
-In the following, we first consider the UV version of DBI inflation,
+In the next chapter, we will first consider the UV version of DBI inflation,
 where the brane moves relativistically 
 towards the tip of the throat. We will assume implicitly 
 that the sound speed is sufficiently small to generate a non-Gaussianity with magnitude in 
@@ -666,63 +681,4 @@ the hot big bang model.
 %
 
 
-
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{The Lyth bound}
-\label{sec:lyth-dbiintro}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-Eqs. (\ref{eq:Ps-dbiintro}) and (\ref{eq:Pt-dbiintro}) imply 
-that the variation of the inflaton field during inflation  
-is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
-% 
-\begin{equation}
-\label{eq:genlyth-dbiintro}
-\frac{1}{\Mpl^2}
-\left( \frac{d \varphi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}} \,,
-\end{equation}
-% 
-where ${\cal{N}} \equiv \int dt \, H$ denotes the number of e-foldings.
-We will refer to the epoch of inflation that can be directly 
-constrained by cosmological observations as 
-`observable inflation' and will assume that this phase 
-occurred when the brane was located within a 
-throat region\footnote{We denote the values of all parameters 
-evaluated during observable inflation by a subscript 
-`$*$'.}. Observable inflation corresponds to no more than about 4 e-foldings  
-of inflationary expansion, $\Delta {\cal{N}}_* \simeq 4$. 
-The total variation in the inflaton field between the epoch of observable 
-inflation and the end of inflation is then given by
-% 
-\begin{equation}
-\label{eq:totalfield-dbiintro}
-\frac{\Delta \varphi_{\rm inf}}{\Mpl} = 
-\left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} {\cal{N}}_{\rm eff} \,,
-\end{equation}
-% 
-where
-% 
-\begin{equation}
-\label{eq:Neff-dbiintro}
-{\cal{N}}_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
-\int_0^{{\cal{N}}_{\rm end}}  
-\left( \frac{r}{c_sP_{,X}} \right)^{1/2} d {\cal{N}} \,.
-\end{equation}
-% 
-If $r/(c_s P_{,X})$ varies 
-sufficiently slowly during observable inflation, 
-the corresponding change in the value of the inflaton  
-field is given approximately by \cite{lyth,bmpaper}
-% 
-\begin{equation}
-\label{eq:approxlyth-dbiintro}
-\left( \frac{\Delta \varphi}{\Mpl} \right)_*^2 \simeq 
-\frac{(\Delta {\cal{N}}_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
-\end{equation}
-% 
 
