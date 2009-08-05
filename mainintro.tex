@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.7 2009/08/01 15:51:19 ith Exp $
+% $Id: mainintro.tex,v 1.8 2009/08/05 10:33:05 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.7 2009/08/01 15:51:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.8 2009/08/05 10:33:05 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -51,6 +51,123 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+% 
+% 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Non-Canonical Inflation} 
+\label{sec:noncanoninfl}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+The low-energy, world-volume dynamics of a 
+${\rm D3}$-brane in a warped background is determined 
+by an effective action of the form 
+% 
+\begin{equation}
+\label{eq:DBIaction-dbiintro2}
+S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
++ P (\varphi , X) \right] \,,
+\end{equation}
+% 
+where $R$ is the Ricci curvature scalar, 
+$X \equiv -\frac{1}{2}g^{\mu \nu}\nabla_\mu \varphi \nabla_\nu \varphi$
+denotes the kinetic energy of the inflaton field $\varphi$, and the function  
+$P (\varphi , X)$ is referred to as the `kinetic function'.  
+
+
+We assume that the four-dimensional universe is   
+spatially flat and isotropic and sourced by an  
+homogeneous inflaton field, $\varphi =\varphi (t)$, with energy 
+density $E = 2X\PX - P$, where a subscripted comma denotes partial
+differentiation. 
+We further assume that the inflaton dynamics  
+generates a quasi-exponential expansion of the universe 
+where $\epsilon_H \equiv -\dot{H}/H^2 \ll1$,
+as described in Section~\ref{sec:frw-intro}. 
+
+
+It proves convenient to define two parameters in terms of the 
+kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
+% 
+\begin{eqnarray}
+\label{eq:defcs-dbiintro}
+ c_s^2 \equiv \frac{\PX}{\PX + 2X P_{,XX}} \,,
+\\
+\label{eq:deflambda-dbiintro}
+\Lambda \equiv  \frac{X^2 P_{,XX} +
+\frac{2}{3}X^3 P_{,XXX}}{X P_{,X} +
+2X^2 P_{,XX}}\,.
+\end{eqnarray}
+% 
+The first parameter, $c_s$, determines the sound speed of fluctuations 
+in the inflaton field. This can be significantly less than unity, 
+in contrast to slow-roll inflation driven by a canonical 
+field such that $P_{,X} =1$.
+The amplitudes of the scalar and tensor perturbations 
+generated during inflation change in this case and are given by \cite{gm}
+% 
+\begin{eqnarray} 
+\label{eq:Ps-dbiintro}
+ \Ps = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,,
+\\
+\label{eq:Pt-dbiintro}
+\Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
+\end{eqnarray}
+% 
+respectively, and the ratio of these amplitudes 
+is defined as \cite{gm} 
+% 
+\begin{equation}
+\label{eq:rdefn-dbiintro}
+r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon_H \,.
+\end{equation}
+%   
+The WMAP5 normalization of the CMB power spectrum 
+implies that $\Ps= 2.5\times10^{-9}$ and 
+the experimental upper bound on the tensor-scalar 
+ratio is $r <0.55$ \cite{Komatsu:2008hk}.
+\addtodo{Change to r<0.20 for no-running or r<0.54 for running (WMAP5+BAO+SN).
+Does this change any later calculations?}
+
+Deviations from Gaussian statistics in the curvature perturbation, ${\cal{R}}$,
+are parametrized in terms of the non-linearity parameter, 
+$\fnl$, as defined in Section~\ref{sec:fnl-intro} by 
+${\cal{R}} = {\cal{R}}_G + \frac{3}{5} \fnl  (
+{\cal{R}}_G^2 -\langle {\cal{R}}_G^2 \rangle )$. Here the 
+quadratic component represents a convolution and 
+${\cal{R}}_G$ denotes the Gaussian contribution \cite{maldacena}\footnotemark.
+\footnotetext{We use the WMAP sign convention for $\fnl$ throughout. 
+This is the opposite of the Maldacena convention:
+$\fnl^\mathrm{WMAP}=-\fnl^\mathrm{Maldacena}$.}
+ In the limit  
+where the three momenta have equal magnitude (corresponding to the equilateral  
+triangle limit), the leading-order contribution to the non-linearity 
+parameter is given by \cite{chenetal,lidser3}
+% 
+\begin{equation} 
+\label{eq:fnldefn-dbiintro}
+ \fnl = -\frac{35}{108}\left(\frac{1}{c_s^2} -1 \right) +
+\frac{5}{81}\left( \frac{1}{c_s^2} -1 -2\Lambda \right) \,.
+\end{equation}
+%  
+One should note that the sign convention is that employed
+by the WMAP data set.
+Data from WMAP3 imposes the bound $|\fnl| < 300$ on this parameter
+\cite{spergel}. The corresponding bounds for other triangle configurations 
+may be much tighter than this and this may be particularly relevant if 
+non-Gaussian signatures have indeed been detected in the 
+CMB \cite{Yadav:2007yy,crim}. The more recent WMAP5 data set
+\cite{Komatsu:2008hk} improves on this bound somewhat, and
+also indicates that it is distinctly asymmetric. At the $95 \%$ confidence
+level, the bound on the 
+equilateral triangle becomes $-151 < \fnl < 253$.
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
