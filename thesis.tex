@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.23 2009/08/03 19:48:41 ith Exp $
+% $Id: thesis.tex,v 1.24 2009/08/05 22:25:47 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
 % twoside,
@@ -8,7 +8,8 @@
 bibtotoc, % Include bibliography in contents
 liststotoc, % Include lists of figures and tables in contents
 idxtotoc, % Include index in contents
-onehalfspacing % onehalfspacing or doublespacing
+% onehalfspacing % onehalfspacing or doublespacing
+doublespacing
 %,openright
 ]
 {icldt}
@@ -25,7 +26,7 @@ onehalfspacing % onehalfspacing or doublespacing
             ]{ihformat}
 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.23 2009/08/03 19:48:41 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.24 2009/08/05 22:25:47 ith Exp $}
 % \usepackage[inline]{showlabels}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -72,6 +73,7 @@ theend
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Main introduction
 \include{mainintro}
+
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -95,7 +97,10 @@ theend
 
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Conclusion and summary
-\part*{}%Stuff at the end}
+\part{End}
+% \setcounter{part}{0}
+% \phantomsection
+% The part:\thepart
 \include{theend}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
