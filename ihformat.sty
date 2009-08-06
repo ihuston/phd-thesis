@@ -1,7 +1,7 @@
 % % % % % % % % % % % % % 
 %  Ian Huston - ihformat.sty
 %  formatting and macros
-%  $Id: ihformat.sty,v 1.18 2009/08/05 22:25:41 ith Exp $
+%  $Id: ihformat.sty,v 1.19 2009/08/06 11:23:29 ith Exp $
 % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihformat}
@@ -19,7 +19,7 @@
 \def\version$#1,v #2 #3${} }%
 % \renewcommand{\version}[$#1,v #2 #3 #4$]{#2, #3}}%
 % Use the following line in each file to specify revision, date
-% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.18 2009/08/05 22:25:41 ith Exp $}
+% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.19 2009/08/06 11:23:29 ith Exp $}
 
 % Should we use showlabels? Set with labels option, default is off.
 \newboolean{@showlabels}
@@ -78,6 +78,7 @@
 % Todo notes package
 \ifthenelse{\boolean{@showtodos}}{\RequirePackage[textsize=small, backgroundcolor=white]{todonotes}}{\RequirePackage[disable]{todonotes}}
 \newcommand{\addtodo}[1]{\todo[inline]{TODO: #1}}
+
 % Hyperlinking without footnotes.
 \ifthenelse{\boolean{@usehyperref}}%
 {\RequirePackage[pdftex,colorlinks,hyperfootnotes=false]{hyperref}}%
