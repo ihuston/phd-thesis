@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.18 2009/07/29 10:33:54 ith Exp $
+% $Id: multibrane.tex,v 1.19 2009/08/06 15:35:55 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.18 2009/07/29 10:33:54 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.19 2009/08/06 15:35:55 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -126,6 +126,232 @@ Units are chosen such that $\hbar = c =1$ and $\Mpl \equiv (8\pi G)^{-1/2}
 reduced Planck mass. 
 
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{IR Inflation and Multiple Branes}
+\addtodo{ Move to later chapter?}
+\label{sec:twlargen-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+Recently, an interesting version of IR DBI inflation 
+was proposed by Thomas and Ward \cite{thomasward}. In this model, the flux annihilation process 
+generates $n$ coincident branes that are initially located at the 
+bottom of a throat region. The dynamics of this configuration
+is determined by the non-Abelian world-volume theory \cite{myers1,myers2}. 
+This theory exhibits extra stringy degrees of freedom which arise due to the 
+fuzzy nature of the geometry. For the case where a fuzzy two-sphere is 
+embedded in a three-cycle in the $X_5$ manifold, 
+the kinetic structure of the action is given in the large $n$ limit by 
+\cite{thomasward}
+% 
+\begin{equation}
+P=-nT_3 \left[ h^4(\varphi ) W(\varphi ) 
+\sqrt{1-2 T_3^{-1} h^{-4}(\varphi) X}
+-h^4(\varphi ) + V (\varphi ) \right] \,,
+\end{equation}
+% 
+where
+%    
+\begin{equation} 
+\label{eq:defW}
+W (\varphi ) \equiv \sqrt{1+ C^{-1}h^{-4}(\varphi ) \varphi^4}
+\end{equation}
+% 
+defines the so-called `fuzzy' potential, 
+$C = \pi^2 \hat{C}T_3^2/m_s^4$ is a model-dependent constant and 
+$\hat{C} \simeq n^2$ 
+is the quadratic Casimir of the $n$-dimensional representation of 
+${\rm SU}(2)$. 
+Comparison with Eq. (\ref{eq:genaction-dbi}) 
+implies that $f_1f_2 =2nW$ and $f_2=2/(T_3h^4)$. Hence, 
+the new features of this model relative to the standard single-brane 
+scenario are parametrized in terms of the fuzzy potential $W (\varphi )$. 
+This configuration is conjectured to be dual to 
+a ${\rm D5}$-brane which is wrapped around a two-cycle 
+of the throat \cite{dual1,dual2,dual3}. 
+
+
+The regime $W \gg 1$ is of interest for 
+relaxing the gravitational wave constraints\footnote{Note that 
+the case $n \gg 1$ and
+$W \sim 1$ will not significantly relax the BM bound, 
+since we require $n \ll N$ for backreaction effects to be negligible.}. 
+The generalized BM bound (\ref{eq:f2bound}) may now be expressed as 
+a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales: 
+% 
+\begin{equation}
+\label{eq:warptorelax}
+\frac{NT_3h^4_*}{\Mpl^4} < 
+\frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{-3\fnl}(\Delta {\cal{N}}_*)^2} \,.
+\end{equation}
+% 
+
+
+We now consider whether this limit can be satisfied for reasonable choices 
+of parameters when the warped compactification corresponds to 
+an $AdS_5$ or KS throat, respectively. Recall that the warp 
+factor for the $AdS_5$ throat is given by $h=\varphi/(\sqrt{T_3}L)$.  
+Condition (\ref{eq:warptorelax}) therefore reduces to a constraint on the 
+value of the inflation during observable inflation: 
+\addtodo{ Show working}
+% 
+\begin{equation}
+\label{eq:phivalue-dbi}
+\frac{\varphi_*^4}{\Mpl^4} < 
+\frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2} 
+\frac{\lambda}{N} \,,
+\end{equation}
+%  
+where $\lambda \equiv \pi N/[2 \mathrm{Vol}(X_5)]$. 
+However, non-perturbative string effects are expected to become 
+important below a cutoff scale, $\varphi_{\rm cut} = 
+h_{\rm cut} \lambda^{1/4} m_s$, where $h_{\rm cut}$ is the value of the 
+warp factor at that scale. For consistency, therefore, one requires 
+$\varphi_*>\varphi_{\rm cut}$, which implies an upper limit on the 
+${\rm D3}$-brane charge: 
+\addtodo{ Show working}
+% 
+\begin{equation}
+\label{eq:Nlimit-dbi}
+N< \frac{8\pi^2 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}
+\left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,.
+\end{equation}
+% 
+Assuming the typical values $m_s \sim 10^{-2}\Mpl$, 
+$\Delta {\cal{N}}_* \simeq 4$ and 
+$h_{\rm cut} \sim 10^{-2}$ implies  
+$N < 7 \times 10^7 (1-n_s)(-\fnl)^{-1/2} < 2\times 10^6$, where 
+the latter inequality follows for $1-n_s <0.05$ and $\fnl <-5$. 
+
+
+For an $AdS_5$ throat, the fuzzy potential 
+is a constant and the condition that $W \gg 1$ becomes 
+% 
+\begin{equation}
+\label{eq:Chatlimit}
+\hat{C} \ll \frac{4\pi^2g_sN}{\mathrm{Vol}(X_5)} \,.
+\end{equation}
+% 
+Hence, combining inequalities 
+(\ref{eq:Nlimit-dbi}) and (\ref{eq:Chatlimit}) implies that
+%  
+\begin{equation}
+\label{eq:nlimit-dbi}
+\hat{C} \ll 
+\frac{32 \pi^4 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}
+\frac{g_s}{\mathrm{Vol} (X_5) }
+\left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,,
+\end{equation}
+% 
+and specifying $g_s \sim 10^{-2}$ and 
+$\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
+$\hat{C} \ll 10^{6} (1-n_s)(-\fnl)^{-1/2} < 2 \times 10^4$, or equivalently,  
+$n \ll 150$. Furthermore, since $f_1f_2 \simeq {\rm constant}$, 
+the inequality (\ref{eq:genBMbound}) may be strengthened by a 
+factor of $(   {\cal{N}}_{\mathrm{eff}} /\Delta {\cal{N}}_*)^2$ by 
+substituting 
+$\Delta {\cal{N}}_* \rightarrow {\cal{N}}_{\mathrm{eff}}$. This ratio 
+could be as 
+high as $(60/4)^2 \simeq 200 $, which would rule out this particular
+model. 
+
+
+Since the branes are initially located at the tip of the 
+throat, another case of interest is the IR limit of the KS geometry, where 
+the warp factor asymptotes to a constant value 
+\cite{gkp}:
+% 
+\begin{equation}
+\label{eq:KStip-dbi}
+h_{\rm tip} = \exp \left( - \frac{2\pi K}{3Mg_s} \right) \,,
+\end{equation}
+% 
+and $K,M \in {\rm \bf Z^+}$ are the units of flux associated 
+with the NS-NS and R-R three-forms, respectively, such that $N=MK$.
+In this case, the generalized BM bound (\ref{eq:warptorelax}) becomes
+%  
+\begin{equation}
+\label{eq:loglimit-dbi}
+\frac{8\pi K}{3Mg_s} -\ln N > 4 \ln \left( \frac{m_s}{g_s^{1/4}\Mpl} \right)
+-\ln \left( 
+\frac{64\pi^5 (1-n_s)P_S^2}{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}
+\right) \,.
+\end{equation}
+% 
+The radius of the three-sphere at the tip of the KS 
+throat is of the order $(g_sM)^{1/2}$ in string units 
+and this must be large (and at the very least should exceed
+unity) for the supergravity approximation to be reliable. 
+Substituting this requirement into expression (\ref{eq:loglimit-dbi}) 
+results in a necessary (but not sufficient) condition 
+on the ${\rm D3}$-brane charge for the 
+generalized BM bound to be satisfied:
+%  
+\begin{equation}
+\label{eq:Nlowerlimit-dbi}
+\frac{1}{N} \exp \left( \frac{8\pi g_s N}{3}  \right)
+> \frac{\sqrt{-3\fnl} ( \Delta {\cal{N}}_*)^2}{64\pi^5 
+(1-n_s)P_S^2} \frac{1}{g_s} \left( \frac{m_s}{\Mpl} \right)^4 \,.
+\end{equation}
+% 
+
+
+Recalling that a necessary condition for the backreaction 
+of the branes to be negligible is 
+$N \gg n \gg 1$ implies that the 
+exponential term in (\ref{eq:Nlowerlimit-dbi}) will dominate unless 
+the string coupling constant is extremely small. Hence, for 
+the parameter estimations quoted above, we 
+deduce the lower limit 
+% 
+\begin{equation}
+\label{eq:Nconstraint-dbi}
+N- 12 \ln N > -6.8 +12 \ln \left( \frac{\sqrt{-\fnl}}{1-n_s} \right) \,,
+\end{equation}
+% 
+which becomes $N \, \gsim \, 10^2$ for $1-n_s \simeq 0.05$ and $\fnl<-5$.
+
+
+In general, however, the $K$ and $M$ units of flux are not independent. 
+F-theory compactification on Calabi-Yau four-folds
+provides a geometric way of parameterizing  
+type IIB string compactifications
+\cite{witten1,witten2,witten3,sethi,gkp,klemm}. 
+Global tadpole cancellation constrains the topology of the four-fold
+and this restricts the brane and flux configurations.  
+When the KS system is embedded into F-theory, the  
+constraint is given by \cite{gkp}
+% 
+\begin{equation}
+\label{eq:Ftheory}
+\frac{\chi}{24} = n + MK \,,
+\end{equation}
+% 
+where $\chi$ is the Euler characteristic of the four-fold.  
+Hence, $N = MK < \chi /24$ and together with condition 
+(\ref{eq:Nconstraint-dbi}), this implies that
+\addtodo{ Still true? Check Lidsey\&Alabidi for recent calc}
+% 
+\begin{equation}
+\label{eq:chilimit}
+\chi > 2400 \,,
+\end{equation}
+% 
+for $N > 10^2$.
+It is known that the Euler number for four-folds 
+corresponding to hypersurfaces in weighted projective spaces
+can be as high as $\chi \le 1,820,448$ \cite{klemm},
+so there are many compactifications that could 
+in principle satisfy the generalized BM bound.
+On the other hand, the above limit on the Euler characteristic 
+does allow us to gain some insight into the 
+topology of the extra dimensions, since compactifications 
+which result in a small Euler characteristic would be  
+incompatible with the generalized BM bound. 
 % 
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
