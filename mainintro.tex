@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.16 2009/08/18 16:08:43 ith Exp $
+% $Id: mainintro.tex,v 1.17 2009/08/18 18:08:32 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.16 2009/08/18 16:08:43 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.17 2009/08/18 18:08:32 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -120,7 +120,7 @@ The trace of $T$ is given by
 % 
 \begin{equation}
  \label{eq:Ttrace-intro}
-  T^\mu_\nu = -E + 3P\,.
+  T^\mu_\mu = -E + 3P\,.
 \end{equation}
 % 
 
@@ -205,8 +205,47 @@ For a perfect fluid as described in Section~\ref{sec:frw-intro} this requires
 % 
 which violates the Strong Energy Condition [cite*****].
 
-Most straightforward way to achieve this is fill universe with a scalar field
-$\varphi$. 
+Most straightforward way to achieve this is fill universe with a single scalar
+field $\varphi$. The canonical action for this field is
+\begin{equation}
+ \mathcal{L}_\mathrm{M} \equiv P(\varphi, X) = X -V(\varphi) \,,
+\end{equation}
+where $-\frac{1}{2}g_{\mu\nu}\partial^\mu\varphi \partial^\nu\varphi$ denotes
+the kinetic energy of $\varphi$ and $P(\varphi, X)$ is called the ``kinetic
+function''. In Section~\ref{sec:noncanoninfl} we will consider other
+choices for $P$. 
+
+With the canonical choice of $P=X$ and for a homogeneous field
+$\varphi=\varphi(t)$ we have the following relations for the matter
+energy-density and isotropic pressure:
+\begin{eqnarray}
+ E &=& \frac{1}{2}\dot{\varphi}^2 + V(\varphi) \,,\\
+ P &=& \frac{1}{2}\dot{\varphi}^2 - V(\varphi) \,.
+\end{eqnarray}
+Under these conditions the kinetic function $P(\varphi, X)$ can be identified as
+the isotropic pressure.
+
+The dynamics of the field are governed by the potential $V(\varphi)$. 
+
+To solve the horizon problem the universe must expand by a factor of
+approximately $e^{60}$ during inflation. 
+
+Define efoldings
+
+Bg eqns of motion for $\varphi$
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Perturbations}
+\label{sec:perts-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+Split
+
+
 
 
 
