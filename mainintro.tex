@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.14 2009/08/18 11:41:28 ith Exp $
+% $Id: mainintro.tex,v 1.15 2009/08/18 13:32:37 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.14 2009/08/18 11:41:28 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.15 2009/08/18 13:32:37 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -65,50 +65,69 @@ contraction):
  \label{eq:Hdefn-intro}
   H = \frac{\dot{a}}{a} \,.
 \end{equation}
-
-
+% 
+Instead of using coordinate time we can bring the scale factor $a$ outside the
+whole metric and instead use conformal time $\eta$ defined by
 % Conformal time
 \begin{equation}
 \label{eq:etatime-intro}
- \eta = \int\frac{\d t}{a}\,,
+ \eta = \int\frac{\d t}{a}\,.
 \end{equation}
-a prime ($'$) signifies differentiation with respect to $\eta$.
+A prime ($'$) signifies differentiation with respect to $\eta$.
 
-% Einstein Eqns
-$S=S_\mathrm{EH} + S_\mathrm{M}$
+The Einstein equations can be derived by the variational principle from the
+action $S\equiv S_\mathrm{EH} + S_\mathrm{M}$. This is a combination of the
+Einstein-Hilbert and matter actions which are defined as 
+% 
 \begin{eqnarray}
 \label{eq:EHeqn-intro}
  S_\mathrm{EH} &=& \frac{1}{16\pi G}\int \d^4 x \sqrt{-g} \left(R +
 2\Lambda\right) \,,\\
 \label{eq:matteraction-intro}
  S_\mathrm{M} &=& \int \d^4 x \sqrt{-g}
-\mathcal{L}_\mathrm{M} \,,
+\mathcal{L}_\mathrm{M} \,.
 \end{eqnarray}
-where $\mathcal{L}_\mathrm{M}$ is the sum of the Lagrangian densities for all
-the matter fields.
+% 
+Here $\mathcal{L}_\mathrm{M}$ is the sum of the Lagrangian densities
+for all the matter fields. 
 
+
+We can now write down the Einstein equations for a general matter Lagrangian:
+% 
 \begin{equation}
 \label{eq:einstein-intro}
- R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} = 8\pi G T_{\mu\nu} + \Lambda g_{\mu\nu}
+ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} = 8\pi G T_{\mu\nu} + \Lambda
+g_{\mu\nu}\,,
 \end{equation}
+% 
 where $T_{\mu\nu}$ is the stress energy tensor obtained by the variation of the
-matter Lagrangian.
-
-Suppose $u^\mu$ is the 4-velocity of a perfect fluid with $u^\mu u_\mu=-1$ then
-the stress-energy tensor of the perfect fluid is
+matter Lagrangian. 
+In the definition above we have included a
+cosmological constant term, $\Lambda$, for completeness. From now on we will
+disregard the negligible contribution of such a term in the early universe.
+We concentrate now on the case of a universe filled with a perfect
+fluid. Suppose $u^\mu$ is the 4-velocity of this fluid with $u^\mu
+u_\mu=-1$. The stress-energy tensor of the fluid is
+% 
 \begin{equation}
  \label{eq:fluidstress-intro}
   T^\mu_\nu = (E + P)u^\mu u_\nu + P\delta^\mu_\nu \,,
 \end{equation}
-where $E$ is the matter energy density and $P$ is the isotropic pressure
-such that the trace of $T$ is 
+% 
+where $E$ is the matter energy density and $P$ is the isotropic pressure.
+The trace of $T$ is given by
+% 
 \begin{equation}
  \label{eq:Ttrace-intro}
   T^\mu_\nu = -E + 3P\,.
 \end{equation}
+% 
 
+We now use the Einstein equations and the stress-energy tensor of the
+perfect fluid to derive the equations of motion of the fluid.
 From the metric in \eq{eq:frwmetric-intro} the $00$ and $ij$ components of the
 Ricci tensor can be found:
+% 
 \begin{eqnarray}
 \label{eq:Ricci00-intro}
  R_{00} &=& -3 \frac{\ddot{a}}{a} \,,\\
@@ -116,22 +135,28 @@ Ricci tensor can be found:
  R_{ij} &=& \delta_{ij} \left[ 2\dot{a}^2 +
   a \ddot{a} \right] \,.
 \end{eqnarray}
-
+% 
 The Friedmann equations can then be determined from the Einstein equations
-\eqref{eq:einstein-intro}:
+\eqref{eq:einstein-intro}.
+The $00$ equation gives
+% 
 \begin{equation}
  \label{eq:Friedmann1-intro}
- H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} E
+ H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} E \,,
 \end{equation}
+% 
+while the trace of the Einstein equations gives
+% 
 \begin{equation}
  \label{eq:Friedmann2-intro}
- \frac{\ddot{a}}{a}  = -\frac{1}{2} \frac{8\pi G}{3}(E + 3P)
+ \frac{\ddot{a}}{a}  = -\frac{1}{2} \frac{8\pi G}{3}(E + 3P)\,.
 \end{equation}
-
-Continuity equation:
+% 
+By combining these two equations we can determine a continuity equation for the
+energy density:
 \begin{equation}
  \label{eq:continuity-intro}
- \frac{\d E}{\d t} + 3H(E+P) = 0
+ \frac{\d E}{\d t} + 3H(E+P) = 0 \,.
 \end{equation}
 
 
