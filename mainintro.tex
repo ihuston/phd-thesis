@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.15 2009/08/18 13:32:37 ith Exp $
+% $Id: mainintro.tex,v 1.16 2009/08/18 16:08:43 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.15 2009/08/18 13:32:37 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.16 2009/08/18 16:08:43 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -31,7 +31,7 @@
 The central idea of Friedmann-Robertson-Walker (FRW) Universe is the
 cosmological principle. According to this postulate there is no privileged
 place in the universe and no privileged direction in which one can look. This
-is formalised by assuming that the universe is homogenous and isotropic, at
+is formalised by assuming that the universe is homogeneous and isotropic, at
 least on large scales. 
 \addtodo{Cite SDSS, 2dF, etc and then Bianchi models, voids etc.}
 Surveys of the observable universe indicate that this is
@@ -81,14 +81,15 @@ Einstein-Hilbert and matter actions which are defined as
 % 
 \begin{eqnarray}
 \label{eq:EHeqn-intro}
- S_\mathrm{EH} &=& \frac{1}{16\pi G}\int \d^4 x \sqrt{-g} \left(R +
+ S_\mathrm{EH} &=& \frac{1}{16\pi G}\int \d^4 x \sqrt{|g|} \left(R +
 2\Lambda\right) \,,\\
 \label{eq:matteraction-intro}
- S_\mathrm{M} &=& \int \d^4 x \sqrt{-g}
+ S_\mathrm{M} &=& \int \d^4 x \sqrt{|g|}
 \mathcal{L}_\mathrm{M} \,.
 \end{eqnarray}
 % 
-Here $\mathcal{L}_\mathrm{M}$ is the sum of the Lagrangian densities
+Here $g$ is the determinant of the metric $g_{\mu\nu}$
+and $\mathcal{L}_\mathrm{M}$ is the sum of the Lagrangian densities
 for all the matter fields. 
 
 
@@ -179,19 +180,48 @@ time $t$ and a prime ($'$) for differentiation with respect to conformal time
 $\eta$. A subscripted comma denotes partial differentiation by the symbol it
 precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Inflation}
+\label{sec:inflation-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\begin{itemize}
+ \item Problems with standard big band
+ \item Period of exponential expansion
+\end{itemize}
+\begin{equation}
+ \label{eq:addot-intro}
+ \ddot{a} > 0
+\end{equation}
+
+For a perfect fluid as described in Section~\ref{sec:frw-intro} this requires
+% 
+\begin{equation}
+ E + 3P <0\,,
+\end{equation}
+% 
+which violates the Strong Energy Condition [cite*****].
+
+Most straightforward way to achieve this is fill universe with a scalar field
+$\varphi$. 
+
+
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Canonical Slow roll inflation}
+\subsection{Canonical Slow roll inflation}
 \label{sec:slowroll-intro}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \begin{itemize}
  \item Canonical action
- \item Scalard fields $\rho$ and $P$
+ \item Scalar fields $\rho$ and $P$
  \item Friedmann eqns for $\varphi$
  \item Slow roll params
  \item Perturbation theory, general and first order
@@ -204,7 +234,7 @@ precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Non-Canonical Inflation} 
+\subsection{Non-Canonical Inflation} 
 \label{sec:noncanoninfl}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
