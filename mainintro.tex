@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.18 2009/08/19 12:10:15 ith Exp $
+% $Id: mainintro.tex,v 1.19 2009/08/19 17:22:42 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.18 2009/08/19 12:10:15 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.19 2009/08/19 17:22:42 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -72,8 +72,7 @@ line element of the FRW universe is obtained:
 \end{equation}
 % 
 where $K=+1, 0$ or $-1$ depending on whether the universe is closed, flat
-or open respectively. In this work we will consider only the flat universe and
-take $K=0$ from now on. The time-like coordinate in the metric is $t$, known as
+or open respectively. The time-like coordinate in the metric is $t$, known as
 coordinate time, and differentiation with respect to $t$ is denoted by an
 overdot $(\dot{})$. 
 
@@ -153,7 +152,7 @@ Ricci tensor can be found:
  R_{00} &=& -3 \frac{\ddot{a}}{a} \,,\\
 \label{eq:Ricciij-intro}
  R_{ij} &=& \delta_{ij} \left[ 2\dot{a}^2 +
-  a \ddot{a} \right] \,.
+  a \ddot{a} + 2\frac{K}{a^2} \right] \,.
 \end{eqnarray}
 % 
 The Friedmann equations are then determined from the Einstein equations
@@ -162,7 +161,7 @@ The $00$ equation gives
 % 
 \begin{equation}
  \label{eq:Friedmann1-intro}
- H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} E \,,
+ H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} E - \frac{K}{a^2}\,,
 \end{equation}
 % 
 while the trace of the Einstein equations gives
@@ -219,16 +218,27 @@ will remain fixed.
 
 One particularly important distance is the maximum distance light could have
 propagated from some earlier time $t_i$ to a later time $t$. From
-\eq{eq:comovingdefn-intro} this is simply
-% 
-\begin{equation}
- \label{eq:particlehorizon-intro}
- \chi = \int_{t_i}^t \frac{\d t}{a(t)}\,.
-\end{equation}
-This is known as the particle horizon. If the initial time is restricted to
+\eq{eq:comovingdefn-intro} this is simply the conformal time integrated from
+$t_i$ and is called the comoving or particle horizon.
+If the initial time is restricted to
 being at some finite time in the past, as in the Big Bang scenario, then the
 particle horizon will be finite. Two points which are further apart than
-this finite distance could never have been in causal contact in the past. 
+this finite distance could never have been in causal contact. This
+is the origin of one of the major problems with the standard Big Bang scenario
+which will be discussed in the next section.
+The comoving horizon can be rewritten as
+% 
+\begin{equation}
+ \eta = \int_{a_i}^a \frac{\d a'}{a'} \frac{1}{a' H(a')} \,,
+\end{equation}
+which shows that it is also the logarithmic integral of the comoving Hubble
+radius $1/aH$. This distance is how far particles can travel in one
+``e-folding'', the time for $a$ to expand by one exponential factor. Particles
+that are separated by more than the Hubble radius cannot be in causal
+contact now. Particles separated by more than the
+comoving horizon, however, could never have been in causal contact.
+
+
 
 
 
@@ -241,7 +251,8 @@ this finite distance could never have been in causal contact in the past.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-Units are chosen such that $\Mpl \equiv (8\pi G )^{-1/2}= 2 
+Throughout this work units are chosen such that $\Mpl \equiv (8\pi G )^{-1/2}=
+2 
 .4 \times 10^{18}\, {\rm GeV}$ 
 defines the reduced Planck mass and $c=\hbar =1$. 
 
@@ -258,7 +269,67 @@ precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+In this section we introduce the inflationary scenario and briefly describe how
+it solves three major problems with the standard Big Bang picture. 
 
+\subsection{Problems with the Big Bang scenario}
+\label{sec:problems-intro}
+Although remarkably successful in describing the evolution of the universe from
+very early in its history, the standard Big Bang scenario suffers from a number
+of serious problems. 
+
+\subsubsection{Flatness Problem} 
+\label{sec:flatprob}
+The Friedmann equation
+\eq{eq:Friedmann1-intro} can be re-written as
+% 
+\begin{equation}
+\Omega(t) - 1 = \frac{K}{(aH)^2} \,,
+\end{equation}
+% 
+where $\Omega(t)=E(t)/E_\mathrm{crit}$ and the critical density
+$E_\mathrm{crit}= 3H^2/8\pi G$. 
+If $K=0$ then $\Omega=1$ and the density remains constant. However if
+$K\neq0$ the density will change with time. The flat universe is an
+unstable fixed point in the parameter space.
+Current observations confirm $\Omega=1$ within about 2\% \cite{Komatsu:2008hk}.
+During the radiation and matter dominated eras $aH$ is decreasing with time,
+meaning that $\Omega$ diverges away from 1. If it is measured now as being very
+close to 1 then in the past it must have been even closer. The requirement of
+extreme proximity to $\Omega=1$ as an initial condition is known as the
+flatness problem. 
+
+
+\subsubsection{Horizon Problem} \label{sec:horizprob}
+As defined in \eq{eq:particlehorizon-intro} the particle horizon, also known
+as the comoving horizon, defines the maximum separation between two points that
+have been in causual contact sometime in the past. During the radiation and
+matter eras this comoving horizon increases monotonically and so length-scales
+which are now entering the horizon would have been far outside the horizon in
+the past. 
+The CMB as observed by the WMAP satellites is extremely smooth on scales that
+would have been far outside the horizon at the time of last scattering
+\cite{Komatsu:2008hk}. These regions of space have very similar energies and
+yet they could not have been in causal contact since the Big Bang. 
+
+
+\subsubsection{Cosmological Defects} \label{sec:cosdefects}
+\addtodo{Citations}
+The hot Big Bang achieved temperatures at which a Grand Unified Theory
+(GUT) would predict a higher order symmetry gauge group. During cooling,
+spontaneous symmetry breaking could leave relics that might survive to
+the current day. Magnetic monopoles, cosmic strings and domain walls are some of
+the unwanted features predicted by models. However none of these have been
+observed and some mechanism is needed to explain their absence.
+
+\subsection{Introduction to Inflation}
+\label{sec:inflintro-intro}
+
+Inflation offers solutions for these problems and also provides an explanation
+for the fluctuations in energy density required to seed galaxy and star
+formation. In essence inflation is a period of accelerated growth of the
+universe or correspondingly an era when the comoving horizon decreases.  The
+acceleration 
 \begin{equation}
  \label{eq:addot-intro}
  \ddot{a} > 0
