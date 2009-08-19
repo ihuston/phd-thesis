@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.17 2009/08/18 18:08:32 ith Exp $
+% $Id: mainintro.tex,v 1.18 2009/08/19 12:10:15 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.17 2009/08/18 18:08:32 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.18 2009/08/19 12:10:15 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -20,6 +20,10 @@
  \item Outline of intro chapter
 \end{itemize}
 
+% Hot big bang
+Evidence for the expansion of the universe, $H>0$, has been in place for many
+years and forms the basis of the Hot Big Bang scenario [cite reviews]. 
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -28,20 +32,37 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-The central idea of Friedmann-Robertson-Walker (FRW) Universe is the
-cosmological principle. According to this postulate there is no privileged
-place in the universe and no privileged direction in which one can look. This
-is formalised by assuming that the universe is homogeneous and isotropic, at
-least on large scales. 
+The central idea of the Friedmann-Robertson-Walker (FRW) Universe is the
+cosmological principle\footnotemark. 
+\footnotetext{Lema\^{i}tre is sometimes also included in this group to give
+FLRW.}
+According to this postulate there is no privileged
+place in the universe and no privileged direction in which one can look. These
+assertions
+are formalised by assuming that the universe is homogeneous and isotropic at
+every point. This clearly conflicts with our experience of the small part of
+the universe around us but is regarded to hold as larger and larger scales are
+considered.
 \addtodo{Cite SDSS, 2dF, etc and then Bianchi models, voids etc.}
 Surveys of the observable universe indicate that this is
-indeed the case at the largest scales accessible. Historically homogeneity and
-isotropy were assumed for simplicity and there are many
-other cosmologies that do not take this approach.
+indeed the case up to the largest scales accessible. 
+Historically homogeneity and isotropy were assumed primarily for simplicity and
+there are many other approaches can be taken. Violating these assumptions can
+be done for example by specifying a preferred direction or supposing that the
+universe is formed by a series of voids connected by filaments. Although many
+of these approaches have been disregarded some are still
+allowed by the observational evidence [cite].
+
+In this section we will outline the dynamics of the standard Big Bang scenario.
+By assuming homogeneity and isotropy as discussed the equations of motion of a
+fluid-filled universe can be derived. What follows in this chapter is a
+standard exposition of well-known physics and has been the subject of
+numerous reviews including [cites].
 
 
-By imposing both conditions on a generic metric, the line element of the
-FRW universe is obtained:
+By imposing both homogeneity and isotropy on a general 4-dimensional metric, the
+line element of the FRW universe is obtained:
+% 
 \begin{equation}
  \label{eq:frwmetric-intro}
 \d s^2 = -\d t^2 + a^2(t)
@@ -49,9 +70,12 @@ FRW universe is obtained:
     \frac{\d r^2}{1-Kr^2} + r^2\left(\d\theta^2 + \sin^2(\theta) \d\phi^2\right)
   \right)\,,
 \end{equation}
+% 
 where $K=+1, 0$ or $-1$ depending on whether the universe is closed, flat
-or open respectively. We will consider only the flat universe and take $K=0$
-from now on. 
+or open respectively. In this work we will consider only the flat universe and
+take $K=0$ from now on. The time-like coordinate in the metric is $t$, known as
+coordinate time, and differentiation with respect to $t$ is denoted by an
+overdot $(\dot{})$. 
 
 
 The spatial part of the FRW metric is multiplied by the term $a(t)$ known as the
@@ -65,15 +89,8 @@ contraction):
  \label{eq:Hdefn-intro}
   H = \frac{\dot{a}}{a} \,.
 \end{equation}
-% 
-Instead of using coordinate time we can bring the scale factor $a$ outside the
-whole metric and instead use conformal time $\eta$ defined by
-% Conformal time
-\begin{equation}
-\label{eq:etatime-intro}
- \eta = \int\frac{\d t}{a}\,.
-\end{equation}
-A prime ($'$) signifies differentiation with respect to $\eta$.
+%
+
 
 The Einstein equations can be derived by the variational principle from the
 action $S\equiv S_\mathrm{EH} + S_\mathrm{M}$. This is a combination of the
@@ -90,9 +107,10 @@ Einstein-Hilbert and matter actions which are defined as
 % 
 Here $g$ is the determinant of the metric $g_{\mu\nu}$
 and $\mathcal{L}_\mathrm{M}$ is the sum of the Lagrangian densities
-for all the matter fields. 
-
-
+for all the matter fields.
+Changing either the matter or gravity part of the action will affect the
+resultant physics. In this work we focus our attention only on the matter
+Lagrangian and will use the standard Einstein-Hilbert action throughout.
 We can now write down the Einstein equations for a general matter Lagrangian:
 % 
 \begin{equation}
@@ -103,9 +121,11 @@ g_{\mu\nu}\,,
 % 
 where $T_{\mu\nu}$ is the stress energy tensor obtained by the variation of the
 matter Lagrangian. 
-In the definition above we have included a
+In the definitions above we have included a
 cosmological constant term, $\Lambda$, for completeness. From now on we will
 disregard the negligible contribution of such a term in the early universe.
+
+
 We concentrate now on the case of a universe filled with a perfect
 fluid. Suppose $u^\mu$ is the 4-velocity of this fluid with $u^\mu
 u_\mu=-1$. The stress-energy tensor of the fluid is
@@ -123,9 +143,8 @@ The trace of $T$ is given by
   T^\mu_\mu = -E + 3P\,.
 \end{equation}
 % 
-
-We now use the Einstein equations and the stress-energy tensor of the
-perfect fluid to derive the equations of motion of the fluid.
+The Einstein equations and the stress-energy tensor of the
+perfect fluid can now be used to derive the equations of motion of the fluid.
 From the metric in \eq{eq:frwmetric-intro} the $00$ and $ij$ components of the
 Ricci tensor can be found:
 % 
@@ -137,7 +156,7 @@ Ricci tensor can be found:
   a \ddot{a} \right] \,.
 \end{eqnarray}
 % 
-The Friedmann equations can then be determined from the Einstein equations
+The Friedmann equations are then determined from the Einstein equations
 \eqref{eq:einstein-intro}.
 The $00$ equation gives
 % 
@@ -159,6 +178,57 @@ energy density:
  \label{eq:continuity-intro}
  \frac{\d E}{\d t} + 3H(E+P) = 0 \,.
 \end{equation}
+
+
+These three equations \eqref{eq:Friedmann1-intro}, \eqref{eq:Friedmann2-intro}
+and \eqref{eq:continuity-intro} will determine the evolution of the
+universe-filling perfect fluid. Two important solutions are the radiation and
+matter filled universes. In the standard big bang scenario the universe is
+filled with radiation (to a good approximation) until matter becomes dominant
+at later times. The different dominant components affect the rate of expansion
+of the universe straightforwardly. Relativistic radiation has $P=E/3$ and
+integrating the continuity equation \eqref{eq:continuity-intro} gives
+$E_r\propto a^{-4}$. Matter conversely is taken to be dust-like with zero
+pressure and so $E_m\propto a^{-3}$. The dependence of $a$ on $t$ can then be
+found from \eq{eq:Friedmann1-intro}, giving $a\propto t^{1/2}$ and $a\propto
+t^{2/3}$ for the radiation and matter eras respectively.
+
+
+% Horizons
+Instead of using coordinate time as above we could instead bring
+the scale factor $a$ outside the
+whole metric and instead use conformal time $\eta$ defined by
+% Conformal time
+\begin{equation}
+\label{eq:etatime-intro}
+ \eta = \int\frac{\d t}{a}\,.
+\end{equation}
+A prime ($'$) signifies differentiation with respect to $\eta$. 
+Because all the coordinates in the line element are now scaled by $a(t)$ we
+have defined a coordinate grid which does not change as the universe expands.
+These ``comoving'' coordinates allow distances to be compared at different
+eras with ease. A comoving distance $x$ can be translated into a physical
+distance $d$ by
+% 
+\begin{equation}
+ \label{eq:comovingdefn-intro}
+ d = ax \,.
+\end{equation}
+The physical distance changes as the universe expands but the comoving distance
+will remain fixed.
+
+One particularly important distance is the maximum distance light could have
+propagated from some earlier time $t_i$ to a later time $t$. From
+\eq{eq:comovingdefn-intro} this is simply
+% 
+\begin{equation}
+ \label{eq:particlehorizon-intro}
+ \chi = \int_{t_i}^t \frac{\d t}{a(t)}\,.
+\end{equation}
+This is known as the particle horizon. If the initial time is restricted to
+being at some finite time in the past, as in the Big Bang scenario, then the
+particle horizon will be finite. Two points which are further apart than
+this finite distance could never have been in causal contact in the past. 
 
 
 
@@ -188,10 +258,7 @@ precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\begin{itemize}
- \item Problems with standard big band
- \item Period of exponential expansion
-\end{itemize}
+
 \begin{equation}
  \label{eq:addot-intro}
  \ddot{a} > 0
