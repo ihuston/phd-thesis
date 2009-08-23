@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.19 2009/08/19 17:22:42 ith Exp $
+% $Id: mainintro.tex,v 1.20 2009/08/23 20:02:25 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.19 2009/08/19 17:22:42 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.20 2009/08/23 20:02:25 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -284,6 +284,7 @@ The Friedmann equation
 \eq{eq:Friedmann1-intro} can be re-written as
 % 
 \begin{equation}
+\label{eq:omegadefn-intro}
 \Omega(t) - 1 = \frac{K}{(aH)^2} \,,
 \end{equation}
 % 
@@ -325,23 +326,58 @@ observed and some mechanism is needed to explain their absence.
 \subsection{Introduction to Inflation}
 \label{sec:inflintro-intro}
 
-Inflation offers solutions for these problems and also provides an explanation
-for the fluctuations in energy density required to seed galaxy and star
-formation. In essence inflation is a period of accelerated growth of the
-universe or correspondingly an era when the comoving horizon decreases.  The
-acceleration 
+Inflation is a period of accelerated expansion in the size of the universe
+which takes place before the start of the standard Big Bang. During this
+expansion the comoving Hubble radius $(aH)^{-1}$ decreases and the isotropic
+pressure of the universe is negative:
 \begin{equation}
- \label{eq:addot-intro}
- \ddot{a} > 0
+\label{eq:infldefn-intro}
+ \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
+  \Rightarrow E + 3P < 0 \,.
 \end{equation}
+The decrease in the Hubble radius immediately solves the horizon problem.
+Comoving scales that entered the horizon recently, such as those we observe in
+the CMB, would previously have been within the horizon.
+We require that inflation lasted long enough that all the scales we
+measure were previously inside the horizon. 
+Figure~\ref{fig:comovingscales-intro} shows how comoving scales could
+previously have been inside the horizon if the period of inflation was
+sufficently long.
+% 
+\begin{figure}
+ \missingfigure{Add figure of comoving scales and changing Hubble radius.}
+ \caption{Comoving scales that have recently entered the horizon would
+previously have been inside the horizon if inflation lasted long enough.}
+ \label{fig:comovingscales-intro}
+\end{figure}
+% 
+Now consider the time derivative of $|\Omega -1|$ as defined in
+\eq{eq:omegadefn-intro}:
+% 
+\begin{equation}
+ \label{eq:omegaderiv-intro}
+ \frac{\d}{\d t}\left(|\Omega -1 |\right) = 2\frac{\d}{\d t}
+\left(\frac{1}{aH}\right)\,.
+\end{equation}
+% 
+If the universe is not flat to begin with a period of inflation will push it
+towards $\Omega=1$, solving the flatness problem. 
+% Keep?
+To achieve the level of
+flatness required to meet current observations takes less inflation than the
+solution of the horizon problem requires.
+% 
 
-For a perfect fluid as described in Section~\ref{sec:frw-intro} this requires
-% 
-\begin{equation}
- E + 3P <0\,,
-\end{equation}
-% 
-which violates the Strong Energy Condition [cite*****].
+To solve the horizon and flatness problems the period of inflation must be
+sufficiently long. Typically 50-70 e-foldings is considered standard. Inflation
+can last longer than this but only the last 50-70 e-foldings will be important
+for our observable universe. With the scale factor of the universe expanding
+approximately $e^{60}\simeq 10^{26}$ times the observable universe would
+originate in a Planck length sized initial patch [cite?].
+Due to the volume increasing by a factor of $e^{180}$ the number density
+of monopoles or other relics that existed before inflation would be
+diluted so much that observing the relics would be increasingly unlikely.
+
 
 Most straightforward way to achieve this is fill universe with a single scalar
 field $\varphi$. The canonical action for this field is
