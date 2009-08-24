@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.21 2009/08/24 11:04:03 ith Exp $
+% $Id: mainintro.tex,v 1.22 2009/08/24 16:32:48 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.21 2009/08/24 11:04:03 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.22 2009/08/24 16:32:48 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -323,8 +323,14 @@ the current day. Magnetic monopoles, cosmic strings and domain walls are some of
 the unwanted features predicted by models. However none of these have been
 observed and some mechanism is needed to explain their absence.
 
-\subsection{Introduction to Inflation}
-\label{sec:inflintro-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Inflation and Canonical Slow-roll}
+\label{sec:slowroll-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 Inflation is a period of accelerated expansion in the size of the universe
 which takes place before the start of the standard Big Bang. During this
@@ -335,6 +341,15 @@ pressure of the universe is negative:
  \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
   \Rightarrow E + 3P < 0 \,.
 \end{equation}
+We can also define a new parameter $\epsilon_H = -\dot{H}/H$ and then rewrite
+the Raychaudhuri equation \eqref{eq:Friedmann2-intro} as
+% 
+\begin{equation}
+ \label{eq:Friedeps-intro}
+ \frac{\ddot{a}}{a} = H^2 (1-\epsilon_H)\,.
+\end{equation}
+% 
+This parameterisation means that inflation only occurs when $\epsilon_H<1$.
 In this subsection we describe briefly how inflation solves the problems
 outlined above and outline the inflationary dynamics of single scalar field
 models. 
@@ -431,31 +446,41 @@ $V(\varphi)$. Inflation requires $P<-E/3$ so from \eq{eq:EandP-intro} inflation
 can also be thought of as a period when the potential energy $V$ dominates over
 the kinetic energy. 
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{Canonical Slow roll inflation}
-\label{sec:slowroll-intro}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\begin{itemize}
- \item Canonical action
- \item Scalar fields $\rho$ and $P$
- \item Friedmann eqns for $\varphi$
- \item Slow roll params
- \item Perturbation theory, general and first order
- \item $\delta\rho/\rho$ connection to $\delta \varphi$
- \item Initial conditions, Bunch-Davies vacuum
- \item  Power spectra, spectral index
-\end{itemize}
-We have seen how observations place a lower limit on the
-duration of inflation. One of the main constraints in formulating models of
-inflation is finding potentials that generate such a long duration. 
 
-Define efoldings
+We need inflation to last long enough to solve the problems described above. In
+practice it is difficult to chance upon a potential $V$ that will satisfy this
+requirement generically. One approach is to apply some approximations under
+which the inflationary period is necessarily long. 
 
-Bg eqns of motion for $\varphi$
+We have seen that for
+inflation to occur the potential needs to dominate over kinetic energy. From
+\eq{eq:EandP-intro} this occurs in the limit $P\rightarrow -E$ or equivalently
+$\epsilon_H \ll 1$. However for this to remain the case for a sufficiently long
+period the second derivative of $\vp$ must be small enough. If we define
+another parameter 
+% 
+\begin{equation}
+ \label{eq:etaHdefn-intro}
+ \eta_H \equiv -\frac{\d \ln \dot{\vp}}{\d \ln a} =
+-\frac{\ddot{\vp}}{H\dot{\vp}}
+ =\epsilon_H -\frac{\dot{\epsilon_H}}{2H\epsilon_H}\,,
+\end{equation}
+% 
+then taking $|\eta_H|\ll 1$ will ensure that $\dot{\vp}$ and $\epsilon_H$
+change slowly, allowing inflation to last longer.
+
+The approximations $\epsilon_H\ll 1$ and $|\eta|\ll 1$ are known as the
+slow-roll conditions because they force the inflaton field $\vp$ to roll down
+the potential $V$ slowly. Setting $\ddot{\vp}$ to be small is equivalent to
+making the friction $H\dot{\vp}$ in \eq{eq:phieom1-intro} dominant. The
+equations of motion for a slowly rolling field are 
+% 
+\begin{eqnarray}
+ \dot{\vp} &\simeq& - \frac{V_{,\vp}}{3H}\,, \\
+ H^2 &\simeq& \frac{8\pi G}{3}V(\vp)\,.
+\end{eqnarray}
+
+
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
