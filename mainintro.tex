@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.20 2009/08/23 20:02:25 ith Exp $
+% $Id: mainintro.tex,v 1.21 2009/08/24 11:04:03 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.20 2009/08/23 20:02:25 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.21 2009/08/24 11:04:03 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -335,14 +335,21 @@ pressure of the universe is negative:
  \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
   \Rightarrow E + 3P < 0 \,.
 \end{equation}
+In this subsection we describe briefly how inflation solves the problems
+outlined above and outline the inflationary dynamics of single scalar field
+models. 
+
+Both the horizon and flatness problems described above are statements about our
+reluctance to impose fine-tuned initial conditions. Inflation removes the need
+to fix these conditions at the start of the Big Bang.
 The decrease in the Hubble radius immediately solves the horizon problem.
 Comoving scales that entered the horizon recently, such as those we observe in
-the CMB, would previously have been within the horizon.
-We require that inflation lasted long enough that all the scales we
-measure were previously inside the horizon. 
-Figure~\ref{fig:comovingscales-intro} shows how comoving scales could
-previously have been inside the horizon if the period of inflation was
-sufficently long.
+the CMB, would have been within the horizon previously during the inflationary
+scenario. Figure~\ref{fig:comovingscales-intro} shows how by extending
+the era of inflation far enough into the past any comoving length could
+previously have been inside the horizon.
+Observations require that inflation lasted at leasst long enough that all the
+scales we measure today were previously inside the horizon. 
 % 
 \begin{figure}
  \missingfigure{Add figure of comoving scales and changing Hubble radius.}
@@ -351,6 +358,7 @@ previously have been inside the horizon if inflation lasted long enough.}
  \label{fig:comovingscales-intro}
 \end{figure}
 % 
+
 Now consider the time derivative of $|\Omega -1|$ as defined in
 \eq{eq:omegadefn-intro}:
 % 
@@ -361,27 +369,35 @@ Now consider the time derivative of $|\Omega -1|$ as defined in
 \end{equation}
 % 
 If the universe is not flat to begin with a period of inflation will push it
-towards $\Omega=1$, solving the flatness problem. 
-% Keep?
-To achieve the level of
-flatness required to meet current observations takes less inflation than the
-solution of the horizon problem requires.
+towards $\Omega=1$, solving the flatness problem. Instead of an unstable point
+in the parameter space, $\Omega=1$ is an attractor during the inflationary
+phase. 
 % 
 
-To solve the horizon and flatness problems the period of inflation must be
-sufficiently long. Typically 50-70 e-foldings is considered standard. Inflation
+To solve the horizon and flatness problems the duration of the inflationary era
+must be
+sufficiently long. Approxmiately $50$--$70$ e-foldings is considered standard
+\cite{book:liddle}. Inflation
 can last longer than this but only the last 50-70 e-foldings will be important
-for our observable universe. With the scale factor of the universe expanding
-approximately $e^{60}\simeq 10^{26}$ times the observable universe would
-originate in a Planck length sized initial patch [cite?].
+for our observable universe. As the scale factor of the universe expands
+in the region of $e^{60}\simeq 10^{26}$ times, the observable universe
+today would
+have originated in a volume with side of the order of the Planck length [cite?].
 Due to the volume increasing by a factor of $e^{180}$ the number density
 of monopoles or other relics that existed before inflation would be
-diluted so much that observing the relics would be increasingly unlikely.
+diluted so much that observing the relics would be increasingly unlikely. This
+does not rule out their existence in our Hubble radius today but removes the
+contradiction that they have not yet been observed despite predictions that
+they should be abundant.
 
 
-Most straightforward way to achieve this is fill universe with a single scalar
-field $\varphi$. The canonical action for this field is
+As mentioned above during inflation the universe is filled with material that
+violates the Strong Energy Condition and has negative isotropic pressure.
+Clearly whatever drives inflation cannot be matter or radiation in their usual
+forms. The simplest proposal is to fill the universe with a single scalar field
+$\varphi$. The canonical action for this field is
 \begin{equation}
+\label{eq:phiaction-intro}
  \mathcal{L}_\mathrm{M} \equiv P(\varphi, X) = X -V(\varphi) \,,
 \end{equation}
 where $-\frac{1}{2}g_{\mu\nu}\partial^\mu\varphi \partial^\nu\varphi$ denotes
@@ -389,40 +405,31 @@ the kinetic energy of $\varphi$ and $P(\varphi, X)$ is called the ``kinetic
 function''. In Section~\ref{sec:noncanoninfl} we will consider other
 choices for $P$. 
 
-With the canonical choice of $P=X$ and for a homogeneous field
-$\varphi=\varphi(t)$ we have the following relations for the matter
+The equation of motion for $\varphi$ for the canonical $P=X-V$ is
+% 
+\begin{equation}
+ \label{eq:phieom1-intro}
+ \ddot{\vp} + 3H\dot{\vp} -\nabla^2 \vp + \frac{\delta V}{\delta \vp} = 0\,.
+\end{equation}
+% 
+If we now restrict ourselves to considering the homogeneous part of the field,
+$\vp=\vp(t)$, the $\nabla^2\vp$ term disappears and the functional derivative
+of $V$ becomes a standard derivative $V_{,\vp}$. A subscripted comma will
+denote partial differentiation, $V_{,\vp}=\partial V/\partial\vp$.
+With these choices we have the following relations for the matter
 energy-density and isotropic pressure:
+% 
 \begin{eqnarray}
+\label{eq:EandP-intro}
  E &=& \frac{1}{2}\dot{\varphi}^2 + V(\varphi) \,,\\
  P &=& \frac{1}{2}\dot{\varphi}^2 - V(\varphi) \,.
 \end{eqnarray}
+% 
 Under these conditions the kinetic function $P(\varphi, X)$ can be identified as
-the isotropic pressure.
-
-The dynamics of the field are governed by the potential $V(\varphi)$. 
-
-To solve the horizon problem the universe must expand by a factor of
-approximately $e^{60}$ during inflation. 
-
-Define efoldings
-
-Bg eqns of motion for $\varphi$
-
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{Perturbations}
-\label{sec:perts-intro}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-Split
-
-
-
-
-
+the isotropic pressure. The dynamics of the field are governed by the potential
+$V(\varphi)$. Inflation requires $P<-E/3$ so from \eq{eq:EandP-intro} inflation
+can also be thought of as a period when the potential energy $V$ dominates over
+the kinetic energy. 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -442,6 +449,65 @@ Split
  \item Initial conditions, Bunch-Davies vacuum
  \item  Power spectra, spectral index
 \end{itemize}
+We have seen how observations place a lower limit on the
+duration of inflation. One of the main constraints in formulating models of
+inflation is finding potentials that generate such a long duration. 
+
+Define efoldings
+
+Bg eqns of motion for $\varphi$
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Perturbations}
+\label{sec:perts-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+We considered a homogeneous scalar field above. Such a field, however, will
+lead only to a homogeneous universe later on. How does the myriad structure
+that we see around us form? From stars to galaxies to clusers, the
+gravitational force has concentrated energy density over the history of the
+universe but some initial fluctuation must have been present to begin this
+process.
+
+One of the main achievements of inflation is to provide a physical origin for
+such initial fluctuations. Suppose that a full inhomogeneous scalar field
+$\varphi$ is split into a homogeneous background field $\vp_0$as we described
+above and an inhomogeneous perturbation $\dvp{}(x,t)$. For the following
+analysis to be valid the perturbation must be much smaller than the background
+field value.
+
+If $\epsilon$ is a small quantity then this can be written as 
+% 
+\begin{equation}
+\label{eq:pertsplit-intro}
+\vp(x, t) = \vp_0(t) + \epsilon\dvp{}(x,t) \,.
+\end{equation}
+% 
+ The perturbation $\dvp{}(x, t)$ can be further expanded in
+powers of $\epsilon$.  We will follow the
+custom of not explicitly writing $\epsilon$, instead relying on the order of
+the perturbation denoted by a subscript to keep track.
+If we expand in a Taylor series then up to second order (\ie including terms
+up to $\epsilon^2$) we have:
+% 
+\begin{equation}
+ \vp(x,t) = \vp_0(t) + \dvp1(x,t) + \frac{1}{2}\dvp2(x,t) \,.
+\end{equation}
+% 
+There is some freedom in how the split of the perturbations into different
+orders is made. We will suppose that the first order perturbation $\dvp1$
+contains only linear contributions and the higher order terms contain non-linear
+terms. 
+
+
+
+
+
+
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
