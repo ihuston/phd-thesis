@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.22 2009/08/24 16:32:48 ith Exp $
+% $Id: mainintro.tex,v 1.23 2009/08/25 20:05:10 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.22 2009/08/24 16:32:48 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.23 2009/08/25 20:05:10 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -164,7 +164,7 @@ The $00$ equation gives
  H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} E - \frac{K}{a^2}\,,
 \end{equation}
 % 
-while the trace of the Einstein equations gives
+while the trace of the Einstein equations gives the Raychaudhuri equation
 % 
 \begin{equation}
  \label{eq:Friedmann2-intro}
@@ -195,7 +195,7 @@ t^{2/3}$ for the radiation and matter eras respectively.
 
 % Horizons
 Instead of using coordinate time as above we could instead bring
-the scale factor $a$ outside the
+the scale factor outside the
 whole metric and instead use conformal time $\eta$ defined by
 % Conformal time
 \begin{equation}
@@ -496,28 +496,35 @@ lead only to a homogeneous universe later on. How does the myriad structure
 that we see around us form? From stars to galaxies to clusers, the
 gravitational force has concentrated energy density over the history of the
 universe but some initial fluctuation must have been present to begin this
-process.
+process. One of the main achievements of inflation is to provide a physical
+origin for
+such initial fluctuations. In Chapter~\ref{ch:perts} we will formally introduce
+cosmological perturbation theory up to second order. In this section we 
+review first order perturbation theory and introduce the observable quantities
+important for inflation.
 
-One of the main achievements of inflation is to provide a physical origin for
-such initial fluctuations. Suppose that a full inhomogeneous scalar field
+
+Suppose that a full inhomogeneous scalar field
 $\varphi$ is split into a homogeneous background field $\vp_0$as we described
 above and an inhomogeneous perturbation $\dvp{}(x,t)$. For the following
 analysis to be valid the perturbation must be much smaller than the background
-field value.
+field value. From the amplitude of perturbations in the CMB this approximation
+can be seen to be valid \cite{Komatsu:2008hk}. 
 
-If $\epsilon$ is a small quantity then this can be written as 
+If we suppose $\varepsilon$ is a small quantity then the split in $\vp$
+can be written as \cite{Malik:2008im}
 % 
 \begin{equation}
 \label{eq:pertsplit-intro}
-\vp(x, t) = \vp_0(t) + \epsilon\dvp{}(x,t) \,.
+\vp(x, t) = \vp_0(t) + \varepsilon\dvp{}(x,t) \,.
 \end{equation}
 % 
  The perturbation $\dvp{}(x, t)$ can be further expanded in
 powers of $\epsilon$.  We will follow the
-custom of not explicitly writing $\epsilon$, instead relying on the order of
-the perturbation denoted by a subscript to keep track.
+custom of not explicitly writing $\varepsilon$, instead relying on the order of
+the perturbation, denoted by a subscript, to keep track.
 If we expand in a Taylor series then up to second order (\ie including terms
-up to $\epsilon^2$) we have:
+up to $\varepsilon^2$) we have:
 % 
 \begin{equation}
  \vp(x,t) = \vp_0(t) + \dvp1(x,t) + \frac{1}{2}\dvp2(x,t) \,.
@@ -527,6 +534,63 @@ There is some freedom in how the split of the perturbations into different
 orders is made. We will suppose that the first order perturbation $\dvp1$
 contains only linear contributions and the higher order terms contain non-linear
 terms. 
+
+
+We must also consider perturbation in the metric tensor $g_{\mu\nu}$. If the
+background metric is the FRW one described in Section~\ref{sec:frw-intro} then
+the metric can be written with perturbations, up to first order, as follows:
+% 
+\begin{eqnarray}
+ \label{eq:pertmetric-intro}
+ g_{00} &=& -a^2 (1 + 2\phi) \,,\\
+ g_{0i} &=& a^2 (B_{,i} - S_i) \,,\\
+ g_{ij} &=& a^2\left[ (1 - 2\psi)\delta_{ij} + 2E_{,ij} + 2F_{(i,j)} + h_{ij}
+\right] \,.
+\end{eqnarray}
+% 
+The vectors $S_i$ and $F_i$ are divergence free and the tensor part $h_{ij}$
+is divergence free and traceless:
+% 
+\begin{equation}
+ S^k_{~,k} = 0\,, \quad F^k_{~,k}=0\,; \qquad h^{ik}_{~~,k} = 0\,,
+  \quad h^k_{~k}= 0\,.
+\end{equation}
+% 
+In the previous equation $\phi$ is the lapse function, $\psi$ is the curvature
+perturbation, $B$ and $E$ are the scalar part of the shear, $S_i$, and $F_i$
+are the vector parts of the shear, and $h_{ij}$ is the tensor perturbation
+describing gravitational waves.
+Scalar field inflation does not produce vector perturbations so we will not
+consider them here \cite{book:liddle}.
+
+
+Splitting an inhomogeneous spacetime into background and perturbation is not a
+covariant operation. This leads to an ambiguity in the choice of coordinates
+which must be rectified by choosing a gauge. Gauge transformations relate
+physical results in one gauge to those in another. To choose a gauge one must
+specify how spacetime is foliated, i.e. a slicing, and how coordinates in one
+spatial hypersurface are related to those in another, i.e. a threading. We will
+employ the uniform curvature gauge in which spatial hypersurfaces are flat. It
+is also known as the flat gauge.
+
+% % 
+% % One way to alleviate the problem of gauge choice is to consider gauge
+% invariant % variables which are the same in all gauges.  In order to construct
+% gauge % invariant quantities, the gauge transformation must be considered in
+% depth % which will shall do in Chapter~\ref{ch:perts}. 
+
+
+The equations of motion of the first order scalar field perturbation $\dvp1$ is
+% 
+\begin{equation}
+ \label{eq:dp1eom-intro}
+\dvp1''+2\H\dvp1'+2a^2 \Uphi \phi
+-\nabla^2\dvp1-\vp_{0}'\nabla^2 B
+-\vp_{0}'\phi' + a^2 \Upp \dvp1
+=0\,,
+\end{equation}
+
+
 
 
 
