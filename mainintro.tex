@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.24 2009/08/26 11:19:41 ith Exp $
+% $Id: mainintro.tex,v 1.25 2009/08/26 17:42:11 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.24 2009/08/26 11:19:41 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.25 2009/08/26 17:42:11 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -500,6 +500,7 @@ equations of motion for a slowly rolling field are
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
 We considered a homogeneous scalar field above. Such a field, however, will
 lead only to a homogeneous universe later on. How does the myriad structure
 that we see around us form? From stars to galaxies to clusers, the
@@ -543,6 +544,20 @@ There is some freedom in how the split of the perturbations into different
 orders is made. We will suppose that the first order perturbation $\dvp1$
 contains only linear contributions and the higher order terms contain non-linear
 terms. 
+
+
+Instead of working in coordinate space we can also consider
+the perturbation in Fourier space using the definition
+% 
+\begin{equation}
+\label{eq:fourierdefn-intro}
+ \dvp{}(\eta, x^i) = \frac{1}{(2 \pi)^3} \int d^3k \dvp{}(\kvi) \exp (i k_i x^i)
+\,,
+\end{equation}
+where $k^i\equiv \kb$ is the comoving wavenumber vector. The amplitude of this
+vector $k=|\kvi|$ identifies whether a particular mode is inside or outside
+the comoving horizon. Wavemodes inside the comoving horizon are identified by
+$k>aH$ while $k<aH$ for those outside the horizon. 
 
 
 We must also consider perturbation in the metric tensor $g_{\mu\nu}$. If the
@@ -638,34 +653,141 @@ are not perturbed by scalar or vector perturbations, so $\wt{\psi_1} = \wt{E_1}
 The inflaton perturbation in the flat gauge is
 % 
 \begin{equation}
+\label{eq:flatdvp1-intro}
  \wt{\dvp1} \equiv \dvp1 + \vp_0'\frac{\psi_1}{\H}\,,
 \end{equation}
 % 
 which is the definition of the Sasaki-Mukhanov variable
 (often called $Q$) \cite{Mukhanov:1988jd,Sasaki:1986hm}. We will work in flat
 gauge from now on and so will drop the tildes on quantities in that gauge.
+
+The action \eqref{eq:phiaction-intro},
+including perturbations of $\vp$ and $g_{\mu\nu}$ up to first order, is
+varied to get the equation of motion of $\dvp1$. 
+In the flat gauge the equation can be rewritten in terms of the inflaton field
+values only by eliminating the metric perturbations using
+\eq{eq:flatdvp1-intro}. 
+% 
+In Fourier space and in terms of the conformal time $\eta$, the closed form of
+the first order perturbation equation of motion is
+% 
+\begin{equation}
+\label{eq:fokg-intro}
+ \dvp1(\kvi)'' + 2\H \dvp1(\kvi)' + k^2\dvp1(\kvi) + a^2 \left[\Upp +
+\frac{8\pi G}{\H}\left(2\vp_{0}' \Uphi + (\vp_{0}')^2\frac{8\pi G
+}{\H}\U\right)\right]\dvp1(\kvi) = 0 \,,
+\end{equation}
+% 
+where $\U$ is the background value of the potential $V(\vp)$.
+
+
+
 Another very important gauge invariant quantity is the comoving curvature
 perturbation $\R$. At first order in the flat gauge $\R$ is related to the
 inflaton perturbation by
 % 
 \begin{equation}
+\label{eq:flatRdefn-intro}
  \R = \frac{\H}{\vp_0'}\dvp1\,.
 \end{equation}
 % 
-
-
-
-
-
-The equations of motion of the first order scalar field perturbation $\dvp1$ is
+We are interested in the power spectrum of the curvature perturbation as this
+is directly related to the temperature fluctutations that we can observe in the
+CMB. 
+% Quantum perts
+% Redefine perts in terms of quantum modes. 
+\addtodo{Finish quantum perturbation section}
+So far we have considered classical perturbations. The generation of
+fluctuations is a quantum effect however and we should instead consider the
+perturbations as quantum operators in some vacuum. The Fourier modes of
+the inflaton perturbation can be written in terms of quantum operators as
 % 
 \begin{equation}
- \label{eq:dp1eom-intro}
-\dvp1''+2\H\dvp1'+2a^2 \Uphi \phi
--\nabla^2\dvp1-\vp_{0}'\nabla^2 B
--\vp_{0}'\phi' + a^2 \Upp \dvp1
-=0\,,
+ \dvp{}(\kb)\rightarrow\hat{\dvp{}}(\kb) = 
+  w(\kb) \hat{a}(\kb) + w^\star(-\kb)\hat{a}^\dagger(-\kb) \,.
 \end{equation}
+%
+The creation and annihilation operators, $\hat{a}^\dagger$ and $\hat{a}$ obey
+the commutation relations
+% 
+\begin{equation}
+ [\hat{a}(\kb), \hat{a}^\dagger(\kb')] = (2\pi)^3 \delta(\kb -\kb') \\
+\end{equation}
+and
+\begin{equation}
+[\hat{a}(\kb), \hat{a}(\kb')] = 0\,.
+\end{equation}
+
+
+
+
+Discuss vacuum selection and bunch davies vacuum.
+
+Discuss free field perturbation equation and initial conditions.
+
+
+
+
+\addtodo{Change to defn in terms of post quantum modes.}
+The power spectrum of the
+Fourier modes of the comoving curvature perturbation $\R(\kvi)$ is defined as
+% 
+\begin{equation}
+ \label{eq:Prdefn-intro}
+ \langle \R_{\textbf{k}} \R_{\textbf{k}'} \rangle 
+   = (2\pi)^3 \delta(\textbf{k} + \textbf{k}') P_\R^2 (k)\,,
+\end{equation}
+% 
+where $\langle \ldots \rangle$ denotes the ensemble average.
+
+\addtodo{Add section on separate universe approach?}
+
+
+The power spectrum $P_\R^2$ depends only on the magnitude of the wavenumber
+vector
+$k=|\kvi|$ but has dimensions of $k^{-3}$. A dimensionless power spectrum can be
+defined as
+\begin{equation}
+ \label{eq:curlPrdefn-intro}
+ \Pr= \Delta^2_\R \equiv \frac{k^3}{2\pi^2} P_\R^2(k)\,.
+\end{equation}
+ 
+\addtodo{Tensor perturbation derivation}
+
+% Post spectra derivations
+A curvature perturbation power spectrum $\Pr(k)$ which is independent of
+wavenumber $k$ is said to be scale invariant. The spectral index $n_s$ is a
+measure of the deviation from scale invariance:
+% 
+\begin{equation}
+\label{eq:nsdefn-intro}
+ n_s -1 = \frac{\d \ln (\Pr(k))}{\d \ln k}\,,
+\end{equation}
+% 
+where $n_s=1$ denotes scale invariant. The spectral index of
+the tensor power spectrum can be similarly defined:
+% 
+\begin{equation}
+\label{eq:ntdefn-intro}
+ n_T = \frac{\d \ln(\Pt(k))}{\d \ln k}\,,
+\end{equation}
+although this definition means that the spectrum is scale invariant if
+$n_T=0$.
+The spectral indices and indeed the spectra themselves are usually calculated
+at an arbitrary pivot scale. The WMAP results for $\Pr$ and $\Pt$ outlined in
+Section~\ref{sec:obs-intro} are quoted at the scale $k=0.002\Mpc^{-1}$.
+
+
+If there is a non-trivial dependence of $\Pr$ or $\Pt$ on $k$ then higher order
+derivatives can be taken to give the ``running'' of the quantities. The runnings
+of the spectral indices are
+% 
+\begin{equation}
+\label{eq:runningsdefn-intro}
+ \alpha_s = \frac{\d \ln n_s}{\d \ln k}\,, \quad 
+  \alpha_T = \frac{\d \ln n_T}{\d \ln k}\,.
+\end{equation}
+
 
 
 
