@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.25 2009/08/26 17:42:11 ith Exp $
+% $Id: mainintro.tex,v 1.26 2009/08/26 18:15:22 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.25 2009/08/26 17:42:11 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.26 2009/08/26 18:15:22 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -681,7 +681,6 @@ the first order perturbation equation of motion is
 where $\U$ is the background value of the potential $V(\vp)$.
 
 
-
 Another very important gauge invariant quantity is the comoving curvature
 perturbation $\R$. At first order in the flat gauge $\R$ is related to the
 inflaton perturbation by
@@ -694,6 +693,8 @@ inflaton perturbation by
 We are interested in the power spectrum of the curvature perturbation as this
 is directly related to the temperature fluctutations that we can observe in the
 CMB. 
+
+
 % Quantum perts
 % Redefine perts in terms of quantum modes. 
 \addtodo{Finish quantum perturbation section}
@@ -788,12 +789,6 @@ of the spectral indices are
   \alpha_T = \frac{\d \ln n_T}{\d \ln k}\,.
 \end{equation}
 
-
-
-
-
-
-
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -803,10 +798,17 @@ of the spectral indices are
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
+In the previous section we considered the dynamics of a scalar field with a
+canonical action $P(\vp, X) = X - V(\vp)$ where $X \equiv -\frac{1}{2}g^{\mu
+\nu}\nabla_\mu \varphi \nabla_\nu \varphi$ is the kinetic function. 
+In this
+section we will generalize
+that analysis to include non-canonical actions. Non-canonical scalar
+field actions appear frequently in string theory derived inflationary models.
+In Chapters~\ref{ch:dbi-intro}, \ref{ch:dbi} and \ref{ch:multibrane}
+we will see explicit examples of non-canonical $P(\vp,X)$.
 
-The low-energy, world-volume dynamics of a 
-${\rm D3}$-brane in a warped background is determined 
-by an effective action of the form 
+The full action 
 % 
 \begin{equation}
 \label{eq:DBIaction-dbiintro2}
@@ -814,10 +816,6 @@ S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R
 + P (\varphi , X) \right] \,,
 \end{equation}
 % 
-where $R$ is the Ricci curvature scalar, 
-$X \equiv -\frac{1}{2}g^{\mu \nu}\nabla_\mu \varphi \nabla_\nu \varphi$
-denotes the kinetic energy of the inflaton field $\varphi$, and the function  
-$P (\varphi , X)$ is referred to as the `kinetic function'.  
 
 
 We assume that the four-dimensional universe is   
@@ -825,12 +823,14 @@ spatially flat and isotropic and sourced by an
 homogeneous inflaton field, $\varphi =\varphi (t)$, with energy 
 density $E = 2X\PX - P$, where a subscripted comma denotes partial
 differentiation. 
+
+
 We further assume that the inflaton dynamics  
 generates a quasi-exponential expansion of the universe 
 where $\epsilon_H \equiv -\dot{H}/H^2 \ll1$,
 as described in Section~\ref{sec:frw-intro}. 
 
-
+\addtodo{Add discussion of cph vs cs}
 It proves convenient to define two parameters in terms of the 
 kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
 % 
@@ -874,6 +874,24 @@ ratio is $r <0.55$ \cite{Komatsu:2008hk}.
 \addtodo{Change to r<0.20 for no-running or r<0.54 for running (WMAP5+BAO+SN).
 Does this change any later calculations?}
 
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Non-gaussianity}
+\label{sec:fnl-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\begin{itemize}
+ \item Deviation from uncoupled standard case
+ \item Defn of $\fnl$, higher order terms
+\end{itemize}
+
+
+\subsection{Non-gaussianity in non-canonical inflation}
 Deviations from Gaussian statistics in the curvature perturbation, ${\cal{R}}$,
 are parametrized in terms of the non-linearity parameter, 
 $\fnl$, as defined in Section~\ref{sec:fnl-intro} by 
@@ -908,18 +926,7 @@ level, the bound on the
 equilateral triangle becomes $-151 < \fnl < 253$.
 
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Non-gaussianity}
-\label{sec:fnl-intro}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\begin{itemize}
- \item Deviation from uncoupled standard case
- \item Defn of $\fnl$, higher order terms
-\end{itemize}
+
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
