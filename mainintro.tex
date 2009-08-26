@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.23 2009/08/25 20:05:10 ith Exp $
+% $Id: mainintro.tex,v 1.24 2009/08/26 11:19:41 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.23 2009/08/25 20:05:10 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.24 2009/08/26 11:19:41 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -214,7 +214,7 @@ distance $d$ by
  d = ax \,.
 \end{equation}
 The physical distance changes as the universe expands but the comoving distance
-will remain fixed.
+will remain fixed. 
 
 One particularly important distance is the maximum distance light could have
 propagated from some earlier time $t_i$ to a later time $t$. From
@@ -236,7 +236,10 @@ radius $1/aH$. This distance is how far particles can travel in one
 ``e-folding'', the time for $a$ to expand by one exponential factor. Particles
 that are separated by more than the Hubble radius cannot be in causal
 contact now. Particles separated by more than the
-comoving horizon, however, could never have been in causal contact.
+comoving horizon, however, could never have been in causal contact. In addition
+to the Hubble parameter $H$, it will be useful
+to define the parameter $\H = aH = a'/a$. The comoving Hubble radius is then
+$1/\H$.
 
 
 
@@ -260,6 +263,9 @@ An overdot ($\dot{}$) is used for differentiation with respect to coordinate
 time $t$ and a prime ($'$) for differentiation with respect to conformal time
 $\eta$. A subscripted comma denotes partial differentiation by the symbol it
 precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
+
+
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -322,6 +328,9 @@ spontaneous symmetry breaking could leave relics that might survive to
 the current day. Magnetic monopoles, cosmic strings and domain walls are some of
 the unwanted features predicted by models. However none of these have been
 observed and some mechanism is needed to explain their absence.
+
+
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -542,26 +551,28 @@ the metric can be written with perturbations, up to first order, as follows:
 % 
 \begin{eqnarray}
  \label{eq:pertmetric-intro}
- g_{00} &=& -a^2 (1 + 2\phi) \,,\\
- g_{0i} &=& a^2 (B_{,i} - S_i) \,,\\
- g_{ij} &=& a^2\left[ (1 - 2\psi)\delta_{ij} + 2E_{,ij} + 2F_{(i,j)} + h_{ij}
+ g_{00} &=& -a^2 (1 + 2\phi_1) \,,\\
+ g_{0i} &=& a^2 (B_{1,i} - S_{1i}) \,,\\
+ g_{ij} &=& a^2\left[ (1 - 2\psi_1)\delta_{ij} + 2E_{1,ij} + 2F_{1(i,j)} +
+h_{1ij}
 \right] \,.
 \end{eqnarray}
 % 
-The vectors $S_i$ and $F_i$ are divergence free and the tensor part $h_{ij}$
+The vectors $S_{1i}$ and $F_{1i}$ are divergence free and the tensor part
+$h_{1ij}$
 is divergence free and traceless:
 % 
 \begin{equation}
- S^k_{~,k} = 0\,, \quad F^k_{~,k}=0\,; \qquad h^{ik}_{~~,k} = 0\,,
-  \quad h^k_{~k}= 0\,.
+ S^k_{1~,k} = 0\,, \quad F^k_{1~,k}=0\,; \qquad h^{ik}_{1~~,k} = 0\,,
+  \quad h^k_{1~k}= 0\,.
 \end{equation}
 % 
 In the previous equation $\phi$ is the lapse function, $\psi$ is the curvature
 perturbation, $B$ and $E$ are the scalar part of the shear, $S_i$, and $F_i$
 are the vector parts of the shear, and $h_{ij}$ is the tensor perturbation
 describing gravitational waves.
-Scalar field inflation does not produce vector perturbations so we will not
-consider them here \cite{book:liddle}.
+% Scalar field inflation does not produce vector perturbations so we will not
+% consider them  \cite{book:liddle}.
 
 
 Splitting an inhomogeneous spacetime into background and perturbation is not a
@@ -569,15 +580,81 @@ covariant operation. This leads to an ambiguity in the choice of coordinates
 which must be rectified by choosing a gauge. Gauge transformations relate
 physical results in one gauge to those in another. To choose a gauge one must
 specify how spacetime is foliated, i.e. a slicing, and how coordinates in one
-spatial hypersurface are related to those in another, i.e. a threading. We will
+spatial hypersurface are related to those in another, i.e. a threading
+\cite{Malik:2008im}. We will
 employ the uniform curvature gauge in which spatial hypersurfaces are flat. It
-is also known as the flat gauge.
+is also known as the flat gauge .
 
-% % 
-% % One way to alleviate the problem of gauge choice is to consider gauge
-% invariant % variables which are the same in all gauges.  In order to construct
-% gauge % invariant quantities, the gauge transformation must be considered in
-% depth % which will shall do in Chapter~\ref{ch:perts}. 
+The transformation vector at first order  $\xi_1^\mu$ can be split into scalar
+and vector parts
+% 
+\begin{equation}
+\label{eq:xidefn-intro}
+ \xi_1^\mu = (\alpha_1, \beta_{1,}^{~i} + \gamma_1^i)\,,
+\end{equation}
+% 
+where the vector part obeys $\gamma_{1~,k}^{~k}=0$. A scalar quantity such as
+the inflaton perturbation will transform as \cite{Malik:2008im, Malik:2008yp}
+% 
+\begin{equation}
+ \label{eq:dphitransform-intro}
+ \wt{\dvp1} = \dvp1 + \vp_0' \alpha_1\,,
+\end{equation}
+where a tilde denotes a transformed quantity. For the metric perturbations the
+transformations for the scalars are
+\begin{eqnarray}
+ \label{transphi1}
+\widetilde {\phi_1} &=& \phi_1 +\H\alpha_1+\alpha_1'\,,\\
+%
+\label{transpsi1}
+\widetilde \psi_1 &=& \psi_1-\H\alpha_1 \,,\\
+%
+\label{transB1}
+\widetilde B_1 &=& B_1-\alpha_1+\beta_1'\,,\\
+%
+\label{transE1}
+\widetilde E_1 &=& E_1+\beta_1\,,
+\end{eqnarray}
+and for the vectors
+\begin{eqnarray}
+ \label{transS1}
+\widetilde {S_{1}^{~i}} &=& S_{1}^{~i}-\gamma_1'\,, \\
+%
+\label{transF1}
+\widetilde {F_{1}^{~i}} &=& F_{1}^{~i}+\gamma_1\,. 
+\end{eqnarray}
+% 
+The tensor perturbation $h_{1ij}$ does not change under transformation at first
+order, but does at subsequent orders.
+The flat gauge, which we will use, is the one in which spatial hypersurfaces
+are not perturbed by scalar or vector perturbations, so $\wt{\psi_1} = \wt{E_1}
+=0$ and $\wt{F_{1i}} = \textbf{0}$.  This is equivalent to the transformation
+% 
+\begin{equation}
+ \alpha_1 = \frac{\psi_1}{\H}\,,\quad \beta_1=E_1 \,, \quad \gamma^i_1 =
+-F^i_1\,.
+\end{equation}
+
+The inflaton perturbation in the flat gauge is
+% 
+\begin{equation}
+ \wt{\dvp1} \equiv \dvp1 + \vp_0'\frac{\psi_1}{\H}\,,
+\end{equation}
+% 
+which is the definition of the Sasaki-Mukhanov variable
+(often called $Q$) \cite{Mukhanov:1988jd,Sasaki:1986hm}. We will work in flat
+gauge from now on and so will drop the tildes on quantities in that gauge.
+Another very important gauge invariant quantity is the comoving curvature
+perturbation $\R$. At first order in the flat gauge $\R$ is related to the
+inflaton perturbation by
+% 
+\begin{equation}
+ \R = \frac{\H}{\vp_0'}\dvp1\,.
+\end{equation}
+% 
+
+
+
 
 
 The equations of motion of the first order scalar field perturbation $\dvp1$ is
@@ -589,10 +666,6 @@ The equations of motion of the first order scalar field perturbation $\dvp1$ is
 -\vp_{0}'\phi' + a^2 \Upp \dvp1
 =0\,,
 \end{equation}
-
-
-
-
 
 
 
