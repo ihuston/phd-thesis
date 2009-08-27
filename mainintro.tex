@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.27 2009/08/27 10:35:22 ith Exp $
+% $Id: mainintro.tex,v 1.28 2009/08/27 18:00:33 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.27 2009/08/27 10:35:22 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.28 2009/08/27 18:00:33 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -661,26 +661,6 @@ which is the definition of the Sasaki-Mukhanov variable
 (often called $Q$) \cite{Mukhanov:1988jd,Sasaki:1986hm}. We will work in flat
 gauge from now on and so will drop the tildes on quantities in that gauge.
 
-The action \eqref{eq:phiaction-intro},
-including perturbations of $\vp$ and $g_{\mu\nu}$ up to first order, is
-varied to get the equation of motion of $\dvp1$. 
-In the flat gauge the equation can be rewritten in terms of the inflaton field
-values only by eliminating the metric perturbations using
-\eq{eq:flatdvp1-intro}. 
-% 
-In Fourier space and in terms of the conformal time $\eta$, the closed form of
-the first order perturbation equation of motion is
-% 
-\begin{equation}
-\label{eq:fokg-intro}
- \dvp1(\kvi)'' + 2\H \dvp1(\kvi)' + k^2\dvp1(\kvi) + a^2 \left[\Upp +
-\frac{8\pi G}{\H}\left(2\vp_{0}' \Uphi + (\vp_{0}')^2\frac{8\pi G
-}{\H}\U\right)\right]\dvp1(\kvi) = 0 \,,
-\end{equation}
-% 
-where $\U$ is the background value of the potential $V(\vp)$.
-
-
 Another very important gauge invariant quantity is the comoving curvature
 perturbation $\R$. At first order in the flat gauge $\R$ is related to the
 inflaton perturbation by
@@ -694,22 +674,77 @@ We are interested in the power spectrum of the curvature perturbation as this
 is directly related to the temperature fluctutations that we can observe in the
 CMB. 
 
+The action \eqref{eq:phiaction-intro},
+including perturbations of $\vp$ and $g_{\mu\nu}$ up to first order, is
+varied to get the equation of motion of $\dvp1$. 
+In the flat gauge the equation can be rewritten in terms of the inflaton field
+values only by eliminating the metric perturbations using
+\eq{eq:flatdvp1-intro}. 
+% 
+In Fourier space and in terms of the conformal time $\eta$, the closed form of
+the first order perturbation equation of motion is
+% 
+\begin{equation}
+\label{eq:fokg-intro}
+ \dvp1''(\kvi) + 2\H \dvp1'(\kvi) + k^2\dvp1(\kvi) + a^2 \left[\Upp +
+\frac{8\pi G}{\H}\left(2\vp_{0}' \Uphi + (\vp_{0}')^2\frac{8\pi G
+}{\H}\U\right)\right]\dvp1(\kvi) = 0 \,,
+\end{equation}
+% 
+where $\U$ is the background value of the potential $V(\vp)$.
+%
+\addtodo{Check that the Mukhanov eqn is equivalent} 
+% If we know assume that $\epsilon_H \ll1 $ and $|\eta_H|\ll1$ then we get the
+% slow-roll form of this equation:
+% % 
+% \begin{equation}
+%  \label{eq:fokg-sr-intro}
+%  \dvp1''(\kvi) + 2\H \dvp1'(\kvi) + \left( k^2 + a^2\Upp\right) \dvp1(\kvi) =
+% 0 \,.
+% \end{equation}
+
+
+Substituting $u=a\dvp1$ gives
+% 
+\begin{equation}
+ \label{eq:ueq-intro}
+ u''(\kvi) + \left[ k^2 -\frac{z''}{z}\right]u(\kvi) = 0\,,
+\end{equation}
+% 
+where $z= a\vp_0'/\H$.
+
 
 % Quantum perts
 % Redefine perts in terms of quantum modes. 
 \addtodo{Finish quantum perturbation section}
 So far we have considered classical perturbations. The generation of
 fluctuations is a quantum effect however and we should instead consider the
-perturbations as quantum operators in some vacuum. The Fourier modes of
-the inflaton perturbation can be written in terms of quantum operators as
+perturbations as quantum operators in some vacuum. 
+
+In Minkowski space the quantisation of $u(\kvi)$ is straightforward.
+The perturbation modes can be written in terms of quantum operators as
 % 
 \begin{equation}
- \dvp{}(\kb)\rightarrow\hat{\dvp{}}(\kb) = 
-  w(\kb) \hat{a}(\kb) + w^\star(-\kb)\hat{a}^\dagger(-\kb) \,.
+ u(\kvi)\rightarrow\hat{u}(\kvi) = 
+  w(\kvi) \hat{a}(\kvi) + w^\star(-\kvi)\hat{a}^\dagger(-\kvi) \,.
 \end{equation}
 %
-The creation and annihilation operators, $\hat{a}^\dagger$ and $\hat{a}$ obey
-the commutation relations
+The mode function $w(\kvi)$ obeys the same equation of motion as $u(\kvi)$:
+% 
+\begin{equation}
+\label{eq:weqn-intro}
+ w''(\kvi) + \left[ k^2 -\frac{z''}{a}\right]w(\kvi) = 0\,.
+\end{equation}
+% 
+The operators $\hat{a}^\dagger$ and $\hat{a}$ are the usual creation and
+annihilation operators. They act on quantum states by adding or
+removing particles. The zero particle vacuum state is such that
+% 
+\begin{equation}
+ \hat{a}\dagger|0> = |0>\,,\quad \hat{a}|0> = 0\,.
+\end{equation}
+% 
+In Minkowski space these operators have the usual commutation relations
 % 
 \begin{equation}
  [\hat{a}(\kb), \hat{a}^\dagger(\kb')] = (2\pi)^3 \delta(\kb -\kb') \\
@@ -719,48 +754,169 @@ and
 [\hat{a}(\kb), \hat{a}(\kb')] = 0\,.
 \end{equation}
 % 
-These operators act on quantum states by adding or removing particles. They
-act on the zero particle vacuum as
+The $w$ modes are normalised by the condition \cite{Mukhanov:2005sc}
 % 
 \begin{equation}
- \hat{a}\dagger|0> = |0>\,,\quad \hat{a}|0> = 0\,.
+\label{eq:quantcondition-intro}
+ i(w^\star(\kvi)w'(\kvi) - {w^{\star}}'(\kvi)w(\kvi)) = 1\,.
 \end{equation}
 
-The choice of vacuum state is not straightforward in the FRW background. 
+
+In the expanding FRW background the choice of vacuum is not straightforward.
+Suppose one observer selects a zero particle state as the vacuum. Another
+observer accelerating with respect to the first will see particles being
+created in this ``vacuum'' state due to the Unruh effect
+\cite{Unruh1976a}. In selecting the vacuum we must choose one of the many
+equivalent options.
+To do this we consider the far past where $\eta\rightarrow -\inf$ and all modes
+are insider the horizon, $k\gg aH$. In this limit the FRW background spacetime
+asymptotes to Minkowski space. This suggests the Minkowski vacuum as the
+most natural vacuum state to select. This choice of the Minkowski vacuum at
+early times is known as the Bunch-Davies vacuum.
+% 
+In the limit $\eta\rightarrow -\inf, k/aH\rightarrow \inf$ the mode equation
+\eq{eq:weqn-intro} becomes
+% 
+\begin{equation}
+  w''(\kvi) + k^2 w(\kvi) = 0\,,
+\end{equation}
+% 
+which has the plane wave solution
+% 
+\begin{equation}
+\label{eq:subhsoln-intro}
+ w(\kvi) = \frac{1}{\sqrt{2k}} e^{-ik\eta}\,.
+\end{equation}
+% 
+This is the initial condition for modes which are well inside the horizon.
+
+Now consider the de Sitter limit in which $\epsilon_H\rightarrow 0$ and $H$
+is constant. We have $z''/z = a''/a = 2/\eta^2$ so the mode equation is
+% 
+\begin{equation}
+  w''(\kvi) + \left[ k^2 -\frac{2}{\eta^2} \right]w(\kvi) = 0\,.
+\end{equation}
+% 
+A full general solution for $w$ is
+% 
+\begin{equation}
+ w(\kvi) = A\frac{e^{-ik\eta}}{\sqrt{2k}}\left(1 -\frac{i}{k\eta}\right)
+	  +B\frac{e^{+ik\eta}}{\sqrt{2k}}\left(1 +\frac{i}{k\eta}\right)\,.
+\end{equation}
+% 
+Taking the condition \eqref{eq:quantcondition-intro} along with the solution
+for subhorizon modes in \eq{eq:subhsoln-intro} we find that $A=1$ and $B=0$.
+Thus the full solution in de Sitter space is \cite{book:liddle}
+% 
+\begin{equation}
+\label{eq:wfinal-intro}
+ w(\kvi) = \frac{e^{-ik\eta}}{\sqrt{2k}}\left(1 -\frac{i}{k\eta}\right)\,.
+\end{equation}
+% 
+Inflation in spacetimes that are close to de Sitter will contain perturbations
+with a spectrum defined by \eq{eq:wfinal-intro}. The slow-roll approximation is
+enough to ensure that inflation occurs in a quasi-de Sitter spacetime.
+However, the initial conditions for Fourier modes in \eq{eq:subhsoln-intro}
+apply to non slow-roll models so long as they are applied well inside the
+horizon.
 
 
-Discuss vacuum selection and bunch davies vacuum.
+\subsubsection{Power spectra and spectral indices}
+The power spectrum of the inflaton perturbation $\dvp1 = u/a$ can now be
+defined as
+% 
+\begin{equation}
+  \langle \dvp1(\textbf{k}) \dvp1(\textbf{k}') \rangle 
+   \equiv (2\pi)^3 \delta(\textbf{k} + \textbf{k}') P_{\dvp{}}^2 (k)
+   = (2\pi)^3 \delta(\textbf{k} + \textbf{k}') \frac{|w(\kb)|^2}{a^2}\,,
+\end{equation}
+% 
+where $\langle \ldots \rangle$ denotes the ensemble average. The power spectrum
+$P_{\dvp{}}^2$ depends only on the magnitude of the wavenumber
+vector $k=|\kvi|$ but has dimensions of $k^{-3}$. A dimensionless power spectrum
+can be defined as
+% 
+\begin{equation}
+ \label{eq:curlPrdefn-intro}
+ \mathcal{P}_{\dvp{}}^2= \Delta^2_{\dvp{}} \equiv \frac{k^3}{2\pi^2}
+P_{\dvp{}}^2(k)\,.
+\end{equation}
+% 
 
-Discuss free field perturbation equation and initial conditions.
-
-
-
-
-\addtodo{Change to defn in terms of post quantum modes.}
-The power spectrum of the
-Fourier modes of the comoving curvature perturbation $\R(\kvi)$ is defined as
+In a similar way we can define the power spectrum of the comoving curvature
+perturbation $\R = H\dvp1/\dot{\vp_0}$:
 % 
 \begin{equation}
  \label{eq:Prdefn-intro}
- \langle \R_{\textbf{k}} \R_{\textbf{k}'} \rangle 
+ \langle \R(\textbf{k}) \R(\textbf{k}') \rangle 
    = (2\pi)^3 \delta(\textbf{k} + \textbf{k}') P_\R^2 (k)\,,
 \end{equation}
+%
+and the dimensionless power spectrum
 % 
-where $\langle \ldots \rangle$ denotes the ensemble average.
-
-\addtodo{Add section on separate universe approach?}
-
-
-The power spectrum $P_\R^2$ depends only on the magnitude of the wavenumber
-vector
-$k=|\kvi|$ but has dimensions of $k^{-3}$. A dimensionless power spectrum can be
-defined as
 \begin{equation}
- \label{eq:curlPrdefn-intro}
- \Pr= \Delta^2_\R \equiv \frac{k^3}{2\pi^2} P_\R^2(k)\,.
+ \Pr= \Delta^2_{\dvp{}} \equiv \frac{k^3}{2\pi^2}
+P_{\R}^2(k)\,.
 \end{equation}
- 
-\addtodo{Tensor perturbation derivation}
+
+A slow-roll inflation model in a quasi-de Sitter spacetime will have the
+Fourier mode solution given in \eq{eq:wfinal-intro}. When $k\gg aH$ well after
+horizon crossing this gives $|w|^2 = 1/(2k^3 \eta^2)$ so 
+% 
+\begin{equation}
+\label{eq:pphi-intro}
+ \mathcal{P}_{\dvp{}}^2(k) = \left(\frac{H}{2\pi}\right)^2 \,,
+\end{equation}
+% 
+for the scalar perturbation spectrum and
+% 
+\begin{equation}
+ \Pr(k) = \left(\frac{H}{\dot{\vp_0}}\right)^2 \left(\frac{H}{2\pi}\right)^2\,,
+\end{equation}
+% 
+for the comoving curvature perturbation spectrum. Models that are not
+slowly rolling mostly require their more complicated mode equations to be
+numerically solved. 
+
+We have discussed in depth the scalar perturbations but there are also
+tensor perturbations which can be produced. The tensor perturbation $h_{ij}$
+has two polarisations, $h_s$ for $s=+, \times$. The amplitude of
+each can be thought of as a separate scalar field. The analysis for each field
+is similar to that above with the substitution $h_s= 2\dvp1/\Mpl$ After horizon
+crossing in a quasi-de Sitter space the spectrum for each polarisation is
+% 
+\begin{equation}
+ \mathcal{P}_h^2(k) = \frac{4}{\Mpl^2} \left(\frac{H}{2\pi}\right)^2\,,
+\end{equation}
+% 
+and the overall tensor perturbation spectrum is
+% 
+\begin{equation}
+ \label{eq:Ptdefn-intro}
+\Pt(k) = \frac{2}{\Mpl^2} \frac{H^2}{\pi^2}\,.
+\end{equation}
+The ratio of the tensor to curvature perturbations (tensor-scalar ratio) $r$ is
+defined as 
+% 
+\begin{equation}
+ r = \frac{\Pt}{\Pr}\,,
+\end{equation}
+% 
+where $r$ is usually quoted at a particular $k$ but could in principle depend
+on $k$. For the single field models we have been discussing in this section
+there is a consistency relation relating $r$ and $\epsilon_H$:
+% 
+\begin{equation}
+\label{eq:consistency-intro}
+ r = 16 \epsilon_H\,.
+\end{equation}
+As $\epsilon_H\ll1$ for slow-roll models of inflation the amplitude of tensor
+perturbations that these models produce is much smaller than the amplitude of
+curvature perturbations. This consistency relation is extremely important for
+testing models of inflation. The detection of a significant tensor mode signal
+would rule out slow roll models in which $\epsilon_H$ is much smaller than 1.
+
+
 
 % Post spectra derivations
 A curvature perturbation power spectrum $\Pr(k)$ which is independent of
@@ -784,6 +940,7 @@ $n_T=0$.
 The spectral indices and indeed the spectra themselves are usually calculated
 at an arbitrary pivot scale. The WMAP results for $\Pr$ and $\Pt$ outlined in
 Section~\ref{sec:obs-intro} are quoted at the scale $k=0.002\Mpc^{-1}$.
+
 
 
 If there is a non-trivial dependence of $\Pr$ or $\Pt$ on $k$ then higher order
@@ -815,7 +972,7 @@ field actions appear frequently in string theory derived inflationary models.
 In Chapters~\ref{ch:dbi-intro}, \ref{ch:dbi} and \ref{ch:multibrane}
 we will see explicit examples of non-canonical $P(\vp,X)$.
 
-The full action 
+We will consider the same action as before
 % 
 \begin{equation}
 \label{eq:DBIaction-dbiintro2}
@@ -823,27 +980,26 @@ S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R
 + P (\varphi , X) \right] \,,
 \end{equation}
 % 
+with minimal coupling to the gravitational sector. Varying this action with a
+homogeneous field $\vp=\vp(t)$ naturally gives the stress-energy tensor as in
+\eq{eq:fluidstress-intro} where $u_\mu = \partial_\mu\vp/\sqrt{2X}$. 
+% Insert energy momentum tensor.
+The energy density $E$ is defined as
+\begin{equation}
+ E = 2X\PX - P\,,
+\end{equation}
+% 
+and for a homogeneous field $\vp=\vp(t)$ the kinetic term $P(\vp, X)$ is the
+isotropic pressure. 
 
-
-We assume that the four-dimensional universe is   
-spatially flat and isotropic and sourced by an  
-homogeneous inflaton field, $\varphi =\varphi (t)$, with energy 
-density $E = 2X\PX - P$, where a subscripted comma denotes partial
-differentiation. 
-
-
-We further assume that the inflaton dynamics  
-generates a quasi-exponential expansion of the universe 
-where $\epsilon_H \equiv -\dot{H}/H^2 \ll1$,
-as described in Section~\ref{sec:frw-intro}. 
 
 \addtodo{Add discussion of cph vs cs}
 It proves convenient to define two parameters in terms of the 
-kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}: 
+kinetic function $P$ and its derivatives \cite{lidser1,lidser3}: 
 % 
 \begin{eqnarray}
 \label{eq:defcs-dbiintro}
- c_s^2 \equiv \frac{\PX}{\PX + 2X P_{,XX}} \,,
+ c_s^2 \equiv \frac{\PX}{E_{,X}} =  \frac{\PX}{\PX + 2X P_{,XX}} \,,
 \\
 \label{eq:deflambda-dbiintro}
 \Lambda \equiv  \frac{X^2 P_{,XX} +
@@ -851,35 +1007,65 @@ kinetic  function $P$ and its derivatives \cite{lidser1,lidser3}:
 2X^2 P_{,XX}}\,.
 \end{eqnarray}
 % 
-The first parameter, $c_s$, determines the sound speed of fluctuations 
+The first parameter, $c_s$, is called the ``sound speed'' of the fluctuations
 in the inflaton field. This can be significantly less than unity, 
 in contrast to slow-roll inflation driven by a canonical 
 field such that $P_{,X} =1$.
-The amplitudes of the scalar and tensor perturbations 
-generated during inflation change in this case and are given by \cite{gm}
 % 
-\begin{eqnarray} 
+Christopherson and Malik \cite{Christopherson:2008ry} showed that in fact $c_s$
+is the phase speed of the fluctuations and not the sound speed
+which is defined as $\dot{P}/\dot{E}$. In common with the rest of the literature
+we will continue to use $c_s$ as defined in \eq{eq:defcs-dbiintro}. 
+
+The generation of quantum perturbations in the non-canonical case is similar to
+the canonical one. Again letting $u=a\dvp1$, the Mukhanov equation for the
+Fourier modes, \eq{eq:ueq-intro}, now contains contributions from $c_s$
+\cite{gm}:
+% 
+\begin{equation}
+ u''(\kvi) + \left[c_s^2 k^2 - \frac{z''}{z}\right] u(\kvi) = 0\,,
+\end{equation}
+% 
+where $z$ has been redefined as
+% 
+\begin{equation}
+ z = \frac{a\sqrt{E+P}}{c_s H} = \frac{a\sqrt{2X\PX}}{c_s H} \,.
+\end{equation}
+% 
+We quantize the $u$ modes using the Bunch-Davies vacuum as above and now
+consider the amplitude $w(\kvi)$. Instead of considering whether modes are
+inside the comoving horizon, it is now important to distinguish between modes
+inside and outside the ``sound horizon'' $kc_s = aH$. Far inside the sound
+horizon with $kc_s \gg aH$ the mode solution takes a similar asymptotic form to
+\eq{eq:subhsoln-intro}:
+% 
+\begin{equation}
+ w(\kvi) = \frac{1}{\sqrt{2kc_s}} e^{-ikc_s \eta}\,.
+\end{equation}
+
+
+Following the same analysis above we find that the amplitudes of the curvature 
+perturbations 
+generated during inflation change in this case and is given by \cite{gm}
+% 
+\begin{equation} 
 \label{eq:Ps-dbiintro}
- \Ps = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,,
-\\
-\label{eq:Pt-dbiintro}
-\Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
-\end{eqnarray}
+ \Pr = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,.
+\end{equation}
 % 
-respectively, and the ratio of these amplitudes 
-is defined as \cite{gm} 
+This expression is only valid after exit from the sound horizon. In contrast
+the tensor perturbations are not effected by the change in the action. The
+expression for the power spectrum $\Pt$ in \eq{eq:Ptdefn-intro} is still valid.
+This should be evaluated after the modes have exited the normal horizon $k\ll
+aH$. 
+The consistency relation \eqref{eq:consistency-intro} is now defined as
+\cite{gm} 
 % 
 \begin{equation}
 \label{eq:rdefn-dbiintro}
-r\equiv \frac{\Pt}{\Ps} = 16c_s \epsilon_H \,.
+  r = 16c_s \epsilon_H \,.
 \end{equation}
-%   
-The WMAP5 normalization of the CMB power spectrum 
-implies that $\Ps= 2.5\times10^{-9}$ and 
-the experimental upper bound on the tensor-scalar 
-ratio is $r <0.55$ \cite{Komatsu:2008hk}.
-\addtodo{Change to r<0.20 for no-running or r<0.54 for running (WMAP5+BAO+SN).
-Does this change any later calculations?}
+
 
 
 
@@ -949,6 +1135,13 @@ equilateral triangle becomes $-151 < \fnl < 253$.
  \item Other ground based observations
  \item Current status of inflation in general and specific inflationary models
 \end{itemize}
+
+The WMAP5 normalization of the CMB power spectrum 
+implies that $\Ps= 2.5\times10^{-9}$ and 
+the experimental upper bound on the tensor-scalar 
+ratio is $r <0.55$ \cite{Komatsu:2008hk}.
+\addtodo{Change to r<0.20 for no-running or r<0.54 for running (WMAP5+BAO+SN).
+Does this change any later calculations?}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
