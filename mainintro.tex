@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.33 2009/08/30 15:20:08 ith Exp $
+% $Id: mainintro.tex,v 1.34 2009/08/30 16:45:57 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.33 2009/08/30 15:20:08 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.34 2009/08/30 16:45:57 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -72,57 +72,59 @@ are described in Section~\ref{sec:goals-intro}.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-The central idea of the Friedmann-Robertson-Walker (FRW) Universe is the
-cosmological principle\footnotemark. 
+The cosmological principle is central to the Friedmann-Robertson-Walker
+(FRW\footnotemark) Universe. 
 \footnotetext{Lema\^{i}tre is sometimes also included in this group to give
 FLRW.}
 According to this postulate there is no privileged
-place in the universe and no privileged direction in which one can look. These
-assertions
+place in the universe and no privileged direction in which to make observations.
+These assertions
 are formalised by assuming that the universe is homogeneous and isotropic at
 every point. This clearly conflicts with our experience of the small part of
-the universe around us but is regarded to hold as larger and larger scales are
+the universe around us but is assumed to hold as larger and larger scales are
 considered.
 \addtodo{Cite SDSS, 2dF, etc and then Bianchi models, voids etc.}
-Surveys of the observable universe indicate that this is
-indeed the case up to the largest scales accessible. 
-Historically homogeneity and isotropy were assumed primarily for simplicity and
-there are many other approaches can be taken. Violating these assumptions can
+Surveys of the observable universe indicate that this holds up to the largest
+scales observed. 
+Historically homogeneity and isotropy were assumed primarily for simplicity.
+Many alternative approaches can be taken. Violating these assumptions can
 be done for example by specifying a preferred direction or supposing that the
 universe is formed by a series of voids connected by filaments. Although many
-of these approaches have been disregarded some are still
-allowed by the observational evidence [cite].
+of these approaches have been disregarded due to lack of evidence some are still
+allowed by the observations [cite].
 
-In this section we will outline the dynamics of the standard Big Bang scenario.
-By assuming homogeneity and isotropy as discussed the equations of motion of a
-fluid-filled universe can be derived. What follows in this chapter is a
+This section outlines the dynamics of the standard Big Bang scenario.
+By assuming homogeneity and isotropy the equations of motion of a
+fluid-filled universe can be derived. What follows here is a
 standard exposition of well-known physics and has been the subject of
-numerous reviews including [cites].
+numerous reviews including Refs~\cite{book:kolbturner, book:kip, book:liddle}.
 
 
 By imposing both homogeneity and isotropy on a general 4-dimensional metric, the
-line element of the FRW universe is obtained:
+line element $\d s^2$ of the FRW universe with coordinates $(t,r,\theta,\omega)$
+is obtained:
 % 
 \begin{equation}
  \label{eq:frwmetric-intro}
 \d s^2 = -\d t^2 + a^2(t)
   \left( 
-    \frac{\d r^2}{1-Kr^2} + r^2\left(\d\theta^2 + \sin^2(\theta) \d\phi^2\right)
+    \frac{\d r^2}{1-Kr^2} + r^2\left(\d\theta^2 + \sin^2(\theta)
+\d\omega^2\right)
   \right)\,,
 \end{equation}
 % 
 where $K=+1, 0$ or $-1$ depending on whether the universe is closed, flat
 or open respectively. The time-like coordinate in the metric is $t$, known as
 coordinate time, and differentiation with respect to $t$ is denoted by an
-overdot $(\dot{})$. 
+overdot $(\dot{~})$. 
 
 
 The spatial part of the FRW metric is multiplied by the term $a(t)$ known as the
 scale factor. This characterises the size of space-like hypersurfaces at
-different coordinate times. In an expanding universe $a$ grows with $t$ and
+different coordinate times. In an expanding universe $a$ grows with
+increasing $t$ and
 $\dot{a}>0$ where an overdot represents differentiation with respect to $t$.
-The definition of the Hubble parameter $H$ captures this expansion (or
-contraction):
+The definition of the Hubble parameter $H$ captures this expansion:
 % Definition of Hubble parameter
 \begin{equation}
  \label{eq:Hdefn-intro}
@@ -132,36 +134,40 @@ contraction):
 
 
 The Einstein equations can be derived by the variational principle from the
-action $S\equiv S_\mathrm{EH} + S_\mathrm{M}$. This is a combination of the
-Einstein-Hilbert and matter actions which are defined as 
+action $S$ where $S\equiv S_\mathrm{EH} + S_\mathrm{M}$. This is the sum
+of the
+Einstein-Hilbert ($S_\mathrm{EH}$) and matter ($S_\mathrm{M}$) actions which are
+defined as 
 % 
 \begin{eqnarray}
 \label{eq:EHeqn-intro}
  S_\mathrm{EH} &=& \frac{1}{16\pi G}\int \d^4 x \sqrt{|g|} \left(R +
-2\Lambda\right) \,,\\
+2\Lambda_c\right) \,,\\
 \label{eq:matteraction-intro}
  S_\mathrm{M} &=& \int \d^4 x \sqrt{|g|}
 \mathcal{L}_\mathrm{M} \,.
 \end{eqnarray}
-% 
-Here $g$ is the determinant of the metric $g_{\mu\nu}$
+%
+Here $g$ is the determinant of the metric $g_{\mu\nu}$, $R$ is the Ricci
+scalar, $G$ is Newton's gravitational constant, $\Lambda_c$ is a cosmological
+constant term 
 and $\mathcal{L}_\mathrm{M}$ is the sum of the Lagrangian densities
 for all the matter fields.
-Changing either the matter or gravity part of the action will affect the
+Changing either the matter or gravity actions will affect the
 resultant physics. In this work we focus our attention only on the matter
 Lagrangian and will use the standard Einstein-Hilbert action throughout.
 We can now write down the Einstein equations for a general matter Lagrangian:
 % 
 \begin{equation}
 \label{eq:einstein-intro}
- R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} = 8\pi G T_{\mu\nu} + \Lambda
+ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} = 8\pi G T_{\mu\nu} + \Lambda_c
 g_{\mu\nu}\,,
 \end{equation}
 % 
 where $T_{\mu\nu}$ is the stress energy tensor obtained by the variation of the
 matter Lagrangian. 
 In the definitions above we have included a
-cosmological constant term, $\Lambda$, for completeness. From now on we will
+cosmological constant term, $\Lambda_c$, for completeness. From now on we will
 disregard the negligible contribution of such a term in the early universe.
 
 
@@ -204,7 +210,8 @@ The $00$ equation gives
  H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} E - \frac{K}{a^2}\,,
 \end{equation}
 % 
-while the trace of the Einstein equations gives the Raychaudhuri equation
+while the trace of the Einstein equations gives the Raychaudhuri or
+acceleration equation
 % 
 \begin{equation}
  \label{eq:Friedmann2-intro}
@@ -219,16 +226,20 @@ energy density:
 \end{equation}
 
 
-These three equations \eqref{eq:Friedmann1-intro}, \eqref{eq:Friedmann2-intro}
+The last three equations \eqref{eq:Friedmann1-intro},
+\eqref{eq:Friedmann2-intro}
 and \eqref{eq:continuity-intro} will determine the evolution of the
-universe-filling perfect fluid. Two important solutions are the radiation and
-matter filled universes. In the standard big bang scenario the universe is
-filled with radiation (to a good approximation) until matter becomes dominant
-at later times. The different dominant components affect the rate of expansion
-of the universe straightforwardly. Relativistic radiation has $P=E/3$ and
-integrating the continuity equation \eqref{eq:continuity-intro} gives
-$E_r\propto a^{-4}$. Matter conversely is taken to be dust-like with zero
-pressure and so $E_m\propto a^{-3}$. The dependence of $a$ on $t$ can then be
+universe-filling perfect fluid. Two important solutions of these equations are
+the radiation and
+matter filled universes. In the standard Big Bang scenario the universe is
+filled with radiation to a good approximation until matter becomes dominant
+at later times. These different dominant components change the rate of expansion
+of the universe. For relativistic radiation $P_\mathrm{rad}=E_\mathrm{rad}/3$
+and integrating the continuity equation \eqref{eq:continuity-intro} gives
+$E_\mathrm{rad}\propto a^{-4}$. Matter conversely is taken to be dust-like with
+zero
+pressure and so $E_\mathrm{matter}\propto a^{-3}$. The dependence of $a$ on $t$
+can then be
 found from \eq{eq:Friedmann1-intro}, giving $a\propto t^{1/2}$ and $a\propto
 t^{2/3}$ for the radiation and matter eras respectively.
 
@@ -257,21 +268,21 @@ The physical distance changes as the universe expands but the comoving distance
 will remain fixed. 
 
 One particularly important distance is the maximum distance light could have
-propagated from some earlier time $t_i$ to a later time $t$. From
+propagated from some initial time $t_i$ to a later time $t$. From
 \eq{eq:comovingdefn-intro} this is simply the conformal time integrated from
-$t_i$ and is called the comoving or particle horizon.
+the initial time and is called the comoving or particle horizon.
 If the initial time is restricted to
 being at some finite time in the past, as in the Big Bang scenario, then the
 particle horizon will be finite. Two points which are further apart than
 this finite distance could never have been in causal contact. This
 is the origin of one of the major problems with the standard Big Bang scenario
-which will be discussed in the next section.
-The comoving horizon can be rewritten as
+and will be discussed in the next section.
+Rewriting the comoving horizon as
 % 
 \begin{equation}
  \eta = \int_{a_i}^a \frac{\d a'}{a'} \frac{1}{a' H(a')} \,,
 \end{equation}
-which shows that it is also the logarithmic integral of the comoving Hubble
+shows that it is also the logarithmic integral of the comoving Hubble
 radius $1/aH$. This distance is how far particles can travel in one
 ``e-folding'', the time for $a$ to expand by one exponential factor. Particles
 that are separated by more than the Hubble radius cannot be in causal
@@ -299,7 +310,7 @@ Throughout this work units are chosen such that $\Mpl \equiv (8\pi G )^{-1/2}=
 .4 \times 10^{18}\, {\rm GeV}$ 
 defines the reduced Planck mass and $c=\hbar =1$. 
 
-An overdot ($\dot{}$) is used for differentiation with respect to coordinate
+An overdot ($\dot{~}$) is used for differentiation with respect to coordinate
 time $t$ and a prime ($'$) for differentiation with respect to conformal time
 $\eta$. A subscripted comma denotes partial differentiation by the symbol it
 precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
@@ -315,9 +326,17 @@ precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+In this section we introduce the inflationary scenario. First we briefly
+describe how it solves three major problems with the standard Big Bang
+picture: the flatness problem, the horizon problem and the cosmological defects
+problem. We go on to describe canonical slow-roll inflation, the generation of
+perturbations from quantum fluctuations and inflation from non-canonical
+actions.
+
+\subsection{Problems with the Big Bang scenario}
 Although remarkably successful in describing the evolution of the universe from
 very early in its history, the standard Big Bang scenario suffers from a number
-of serious problems. 
+of serious problems. Three of the main problems are described in this section.
 
 \subsubsection{Flatness Problem} 
 \label{sec:flatprob}
@@ -334,7 +353,8 @@ $E_\mathrm{crit}= 3H^2/8\pi G$.
 If $K=0$ then $\Omega=1$ and the density remains constant. However if
 $K\neq0$ the density will change with time. The flat universe is an
 unstable fixed point in the parameter space.
-Current observations confirm $\Omega=1$ within about 2\% \cite{Komatsu:2008hk}.
+Current observations confirm $\Omega=1$ within about 2\% at a 95\% confidence
+level \cite{Komatsu:2008hk}.
 During the radiation and matter dominated eras $aH$ is decreasing with time,
 meaning that $\Omega$ diverges away from 1. If it is measured now as being very
 close to 1 then in the past it must have been even closer. The requirement of
@@ -357,12 +377,12 @@ yet they could not have been in causal contact since the Big Bang.
 
 \subsubsection{Cosmological Defects} \label{sec:cosdefects}
 \addtodo{Citations}
-The hot Big Bang achieved temperatures at which a Grand Unified Theory
+The Big Bang achieved temperatures at which a Grand Unified Theory
 (GUT) would predict a higher order symmetry gauge group. During cooling,
 spontaneous symmetry breaking could leave relics that might survive to
 the current day. Magnetic monopoles, cosmic strings and domain walls are some of
-the unwanted features predicted by models. However none of these have been
-observed and some mechanism is needed to explain their absence.
+the unwanted features predicted by GUT models. However, none of these features
+have been observed and some mechanism is needed to explain their absence.
 
 
 
@@ -377,7 +397,7 @@ observed and some mechanism is needed to explain their absence.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 Inflation is a period of accelerated expansion in the size of the universe
-which takes place before the start of the standard Big Bang. During this
+which takes place before the start of the Big Bang. During this
 expansion the comoving Hubble radius $(aH)^{-1}$ decreases and the isotropic
 pressure of the universe is negative:
 \begin{equation}
@@ -407,13 +427,14 @@ the CMB, would have been within the horizon previously during the inflationary
 scenario. Figure~\ref{fig:comovingscales-intro} shows how by extending
 the era of inflation far enough into the past any comoving length could
 previously have been inside the horizon.
-Observations require that inflation lasted at leasst long enough that all the
+Observations require that inflation lasted at least long enough that all the
 scales we measure today were previously inside the horizon. 
 % 
 \begin{figure}
  \missingfigure{Add figure of comoving scales and changing Hubble radius.}
  \caption{Comoving scales that have recently entered the horizon would
-previously have been inside the horizon if inflation lasted long enough.}
+previously have been inside the horizon if the inflationary period extended far
+enough into the past.}
  \label{fig:comovingscales-intro}
 \end{figure}
 % 
@@ -435,10 +456,11 @@ phase.
 
 To solve the horizon and flatness problems the duration of the inflationary era
 must be
-sufficiently long. Approxmiately $50$--$70$ e-foldings is considered standard
+sufficiently long. Approximately $50$--$70$ e-foldings is considered standard
 \cite{book:liddle}. Inflation
-can last longer than this but only the last 50-70 e-foldings will be important
-for our observable universe. As the scale factor of the universe expands
+can last longer than this but only the last 50--70 e-foldings will be important
+for the length scales of our observable universe. As the scale factor of the
+universe expands
 in the region of $e^{60}\simeq 10^{26}$ times, the observable universe
 today would
 have originated in a volume with side of the order of the Planck length [cite?].
@@ -459,9 +481,10 @@ $\varphi$. The canonical action for this field is
 \label{eq:phiaction-intro}
  \mathcal{L}_\mathrm{M} \equiv P(\varphi, X) = X -V(\varphi) \,,
 \end{equation}
-where $-\frac{1}{2}g_{\mu\nu}\partial^\mu\varphi \partial^\nu\varphi$ denotes
-the kinetic energy of $\varphi$ and $P(\varphi, X)$ is called the ``kinetic
-function''. In Section~\ref{sec:noncanoninfl} we will consider other
+where $X=-\frac{1}{2}g_{\mu\nu}\partial^\mu\varphi \partial^\nu\varphi$ denotes
+the kinetic energy of $\varphi$, $V(\vp)$ is the potential and $P(\varphi, X)$
+is called the kinetic
+function. In Section~\ref{sec:noncanoninfl} we will consider other
 choices for $P$. 
 
 The equation of motion for $\varphi$ for the canonical $P=X-V$ is
@@ -473,8 +496,9 @@ The equation of motion for $\varphi$ for the canonical $P=X-V$ is
 % 
 If we now restrict ourselves to considering the homogeneous part of the field,
 $\vp=\vp(t)$, the $\nabla^2\vp$ term disappears and the functional derivative
-of $V$ becomes a standard derivative $V_{,\vp}$. A subscripted comma will
-denote partial differentiation, $V_{,\vp}=\partial V/\partial\vp$.
+of $V$ becomes a standard derivative $V_{,\vp}$. 
+% A subscripted comma will
+% denote partial differentiation, $V_{,\vp}=\partial V/\partial\vp$.
 With these choices we have the following relations for the matter
 energy-density and isotropic pressure:
 % 
@@ -491,7 +515,7 @@ can also be thought of as a period when the potential energy $V$ dominates over
 the kinetic energy. 
 
 
-We need inflation to last long enough to solve the problems described above. In
+Inflation needs to last long enough to solve the problems described above. In
 practice it is difficult to chance upon a potential $V$ that will satisfy this
 requirement generically. One approach is to apply some approximations under
 which the inflationary period is necessarily long. 
@@ -515,9 +539,11 @@ change slowly, allowing inflation to last longer.
 
 The approximations $\epsilon_H\ll 1$ and $|\eta|\ll 1$ are known as the
 slow-roll conditions because they force the inflaton field $\vp$ to roll down
-the potential $V$ slowly. Setting $\ddot{\vp}$ to be small is equivalent to
-making the friction $H\dot{\vp}$ in \eq{eq:phieom1-intro} dominant. The
-equations of motion for a slowly rolling field are 
+the potential $V$ slowly. The parameters $\epsilon_H$ and $\eta_H$ are known as
+slow-roll parameters. Setting $\ddot{\vp}$ to be small is equivalent to
+making the friction $H\dot{\vp}$ in \eq{eq:phieom1-intro} dominant. With
+these approximations the
+equations of motion for a slowly rolling field become
 % 
 \begin{eqnarray}
  \dot{\vp} &\simeq& - \frac{V_{,\vp}}{3H}\,, \\
@@ -537,7 +563,7 @@ equations of motion for a slowly rolling field are
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 We considered a homogeneous scalar field above. Such a field, however, will
-lead only to a homogeneous universe later on. How does the myriad structure
+lead only to a homogeneous universe later. How does the myriad structure
 that we see around us form? From stars to galaxies to clusers, the
 gravitational force has concentrated energy density over the history of the
 universe but some initial fluctuation must have been present to begin this
@@ -550,7 +576,7 @@ important for inflation.
 
 
 Suppose that a full inhomogeneous scalar field
-$\varphi$ is split into a homogeneous background field $\vp_0$as we described
+$\varphi$ is split into a homogeneous background field $\vp_0$ as we described
 above and an inhomogeneous perturbation $\dvp{}(x,t)$. For the following
 analysis to be valid the perturbation must be much smaller than the background
 field value. From the amplitude of perturbations in the CMB this approximation
@@ -595,7 +621,7 @@ the comoving horizon. Wavemodes inside the comoving horizon are identified by
 $k>aH$ while $k<aH$ for those outside the horizon. 
 
 
-We must also consider perturbation in the metric tensor $g_{\mu\nu}$. If the
+We must also consider perturbations in the metric tensor $g_{\mu\nu}$. If the
 background metric is the FRW one described in Section~\ref{sec:frw-intro} then
 the metric can be written with perturbations, up to first order, as follows:
 % 
@@ -650,7 +676,8 @@ the inflaton perturbation will transform as \cite{Malik:2008im, Malik:2008yp}
  \label{eq:dphitransform-intro}
  \wt{\dvp1} = \dvp1 + \vp_0' \alpha_1\,,
 \end{equation}
-where a tilde denotes a transformed quantity. For the metric perturbations the
+where a tilde ($\wt{~}$) denotes a transformed quantity. For the metric
+perturbations the
 transformations for the scalars are
 \begin{eqnarray}
  \label{transphi1}
@@ -692,8 +719,8 @@ The inflaton perturbation in the flat gauge is
  \wt{\dvp1} \equiv \dvp1 + \vp_0'\frac{\psi_1}{\H}\,,
 \end{equation}
 % 
-which is the definition of the Sasaki-Mukhanov variable
-(often called $Q$) \cite{Mukhanov:1988jd,Sasaki:1986hm}. We will work in flat
+which is the definition of the Sasaki-Mukhanov variable,
+often called $Q$ \cite{Mukhanov:1988jd,Sasaki:1986hm}. We will work in flat
 gauge from now on and so will drop the tildes on quantities in that gauge.
 
 Another very important gauge invariant quantity is the comoving curvature
@@ -719,16 +746,17 @@ values only by eliminating the metric perturbations using
 In Fourier space and in terms of the conformal time $\eta$, the closed form of
 the first order perturbation equation of motion is
 % 
-\begin{equation}
+\begin{eqnarray}
 \label{eq:fokg-intro}
- \dvp1''(\kvi) + 2\H \dvp1'(\kvi) + k^2\dvp1(\kvi) + a^2 \left[\Upp +
+&& \dvp1''(\kvi) + 2\H \dvp1'(\kvi) + k^2\dvp1(\kvi) \nonumber\\
+&&+ a^2 \left[\Upp +
 \frac{8\pi G}{\H}\left(2\vp_{0}' \Uphi + (\vp_{0}')^2\frac{8\pi G
 }{\H}\U\right)\right]\dvp1(\kvi) = 0 \,,
-\end{equation}
+\end{eqnarray}
 % 
 where $\U$ is the background value of the potential $V(\vp)$.
 %
-\addtodo{Check that the Mukhanov eqn is equivalent} 
+% \addtodo{Check that the Mukhanov eqn is equivalent} 
 % If we know assume that $\epsilon_H \ll1 $ and $|\eta_H|\ll1$ then we get the
 % slow-roll form of this equation:
 % % 
@@ -749,11 +777,8 @@ Substituting $u=a\dvp1$ gives
 where $z= a\vp_0'/\H$.
 
 
-% Quantum perts
-% Redefine perts in terms of quantum modes. 
-\addtodo{Finish quantum perturbation section}
 So far we have considered classical perturbations. The generation of
-fluctuations is a quantum effect however and we should instead consider the
+fluctuations is a quantum effect however and we need to consider the
 perturbations as quantum operators in some vacuum. 
 
 In Minkowski space the quantisation of $u(\kvi)$ is straightforward.
@@ -776,7 +801,7 @@ annihilation operators. They act on quantum states by adding or
 removing particles. The zero particle vacuum state is such that
 % 
 \begin{equation}
- \hat{a}\dagger|0> = |0>\,,\quad \hat{a}|0> = 0\,.
+ \hat{a}^\dagger|0> = |0>\,,\quad \hat{a}|0> = 0\,.
 \end{equation}
 % 
 In Minkowski space these operators have the usual commutation relations
@@ -803,13 +828,14 @@ observer accelerating with respect to the first will see particles being
 created in this ``vacuum'' state due to the Unruh effect
 \cite{Unruh1976a}. In selecting the vacuum we must choose one of the many
 equivalent options.
-To do this we consider the far past where $\eta\rightarrow -\inf$ and all modes
+To do this we consider the far past where $\eta\rightarrow -\infty$ and all
+modes
 are insider the horizon, $k\gg aH$. In this limit the FRW background spacetime
 asymptotes to Minkowski space. This suggests the Minkowski vacuum as the
 most natural vacuum state to select. This choice of the Minkowski vacuum at
 early times is known as the Bunch-Davies vacuum.
 % 
-In the limit $\eta\rightarrow -\inf, k/aH\rightarrow \inf$ the mode equation
+In the limit $\eta\rightarrow -\infty, k/aH\rightarrow \infty$ the mode equation
 \eq{eq:weqn-intro} becomes
 % 
 \begin{equation}
@@ -852,8 +878,8 @@ Inflation in spacetimes that are close to de Sitter will contain perturbations
 with a spectrum defined by \eq{eq:wfinal-intro}. The slow-roll approximation is
 enough to ensure that inflation occurs in a quasi-de Sitter spacetime.
 However, the initial conditions for Fourier modes in \eq{eq:subhsoln-intro}
-apply to non slow-roll models so long as they are applied well inside the
-horizon.
+apply to non slow-roll models so long as they are applied well before horizon
+crossing.
 
 
 \subsubsection{Power spectra and spectral indices}
@@ -910,7 +936,7 @@ for the scalar perturbation spectrum and
 \end{equation}
 % 
 for the comoving curvature perturbation spectrum. Models that are not
-slowly rolling mostly require their more complicated mode equations to be
+slowly rolling usually require their more complicated mode equations to be
 numerically solved. 
 
 We have discussed in depth the scalar perturbations but there are also
@@ -1005,7 +1031,7 @@ section we will generalize
 that analysis to include non-canonical actions. Non-canonical scalar
 field actions appear frequently in string theory derived inflationary models.
 In Chapters~\ref{ch:dbi-intro}, \ref{ch:dbi} and \ref{ch:multibrane}
-we will see explicit examples of non-canonical $P(\vp,X)$.
+there are explicit examples of non-canonical $P(\vp,X)$.
 
 We will consider the same action as before
 % 
@@ -1026,9 +1052,6 @@ The energy density $E$ is defined as
 % 
 and for a homogeneous field $\vp=\vp(t)$ the kinetic term $P(\vp, X)$ is the
 isotropic pressure. 
-
-
-\addtodo{Add discussion of cph vs cs}
 It proves convenient to define two parameters in terms of the 
 kinetic function $P$ and its derivatives \cite{lidser1,lidser3}: 
 % 
@@ -1053,8 +1076,9 @@ which is defined as $\dot{P}/\dot{E}$. In common with the rest of the literature
 we will continue to use $c_s$ as defined in \eq{eq:defcs-dbiintro}. 
 
 The generation of quantum perturbations in the non-canonical case is similar to
-the canonical one. Again letting $u=a\dvp1$, the Mukhanov equation for the
-Fourier modes, \eq{eq:ueq-intro}, now contains contributions from $c_s$
+the canonical one but now includes contributions from $c_s$. Again letting
+$u=a\dvp1$, the Mukhanov equation for the
+Fourier modes, \eq{eq:ueq-intro}, becomes
 \cite{gm}:
 % 
 \begin{equation}
@@ -1070,7 +1094,7 @@ where $z$ has been redefined as
 We quantize the $u$ modes using the Bunch-Davies vacuum as above and now
 consider the amplitude $w(\kvi)$. Instead of considering whether modes are
 inside the comoving horizon, it is now important to distinguish between modes
-inside and outside the ``sound horizon'' $kc_s = aH$. Far inside the sound
+inside and outside the sound horizon, where $kc_s = aH$. Far inside the sound
 horizon with $kc_s \gg aH$ the mode solution takes a similar asymptotic form to
 \eq{eq:subhsoln-intro}:
 % 
@@ -1091,8 +1115,8 @@ generated during inflation change in this case and is given by \cite{gm}
 This expression is only valid after exit from the sound horizon. In contrast
 the tensor perturbations are not effected by the change in the action. The
 expression for the power spectrum $\Pt$ in \eq{eq:Ptdefn-intro} is still valid.
-This should be evaluated after the modes have exited the normal horizon $k\ll
-aH$. 
+This should be evaluated after the modes have exited the normal horizon
+when $k\ll aH$. 
 The consistency relation \eqref{eq:consistency-intro} is now defined as
 \cite{gm} 
 % 
@@ -1127,11 +1151,13 @@ transform of the three point function in terms of the bispectrum $B$
 k_3)\,,
 \end{equation}
 % 
-where translation invariance imposes the conservation of the $\kb_i$ and the bispectrum
+where translation invariance imposes the conservation of the $\kb_{1,2,3}$ and
+the bispectrum
 depends only on the magnitude of each wavenumber. Any deviation from gaussianity will result in a
 non-zero bispectrum value. 
 Because of the delta-function, the wavevectors form triangles in Fourier
-space and $B$ is only a function of two variables. The bispectrum generated by inflationary models
+space and $B$ is a function of only two variables. The bispectrum generated by
+inflationary models
 takes two main triangular shapes, squeezed and equilateral \cite{Babich:2004gb}.
  
 The first parameterization of non-gaussianity was defined in
@@ -1224,20 +1250,22 @@ sources in the last twenty years. From the launch of the COBE satellite in
 1989 \cite{Bennett1994, Bennett1996c}, through the currently
 ongoing WMAP mission \cite{spergel, Komatsu:2008hk}, to the recent launch of the
 Planck satellite \cite{planck}, space based observations have been at the
-forefront of this increase. Ground and balloon based missions including CBI
+forefront of the effort to collect data. Complementing these have been ground
+and balloon based missions including CBI
 \cite{Mason2003b, Sievers2003, Sievers2007}, VSA \cite{Dickinson2004}, ACBAR
 \cite{Kuo2004, Kuo2007} and BOOMERANG \cite{Ruhl2003, Montroy2006,
-Piacentini2006} have complemented these.
+Piacentini2006}.
 
 Major recent data releases have provided significant confirmation of the FRW
 model of the universe. The Hubble parameter today has been measured as $H_0 =
 72\pm8\,\mathrm{km}/\mathrm{s}/\Mpc$ by the Hubble Key Project
-\cite{Freedman2001}. In combination with this and data from Baryon
+\cite{Freedman2001}. The WMAP 5-Year data release (WMAP5) combined with
+data from Baryon
 Acoustic Oscillations in galaxy distributions (BAO) \cite{Percival2007}
 and supernova surveys (SN) by the Hubble Space Telescope \cite{Riess2004,
 Riess2007}, the SuperNova Legacy Survey \cite{Astier2006}, and ESSENCE
-\cite{Wood-Vasey2007}, the WMAP 5-Year data release (WMAP5) constrains the
-universe to be within two percent of the flat $\Omega =1, K=0$ case outlined in
+\cite{Wood-Vasey2007},  constrains the
+universe to within two percent of the flat $\Omega =1, K=0$ case outlined in
 Section~\ref{sec:frw-intro}. 
 
 The amplitude of the scalar curvature perturbations $\Pr$ was first measured
@@ -1282,8 +1310,6 @@ and the bound on the equilateral form is
 both at the 95\% confidence limit. 
 % Other groups have re-examined the WMAP data
 % and included previously absent parameter regions. 
-
-
 
 
 
