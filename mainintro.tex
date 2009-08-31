@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.34 2009/08/30 16:45:57 ith Exp $
+% $Id: mainintro.tex,v 1.35 2009/08/31 11:48:58 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.34 2009/08/30 16:45:57 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.35 2009/08/31 11:48:58 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -83,15 +83,15 @@ are formalised by assuming that the universe is homogeneous and isotropic at
 every point. This clearly conflicts with our experience of the small part of
 the universe around us but is assumed to hold as larger and larger scales are
 considered.
-\addtodo{Cite SDSS, 2dF, etc and then Bianchi models, voids etc.}
 Surveys of the observable universe indicate that this holds up to the largest
-scales observed. 
+scales observed \cite{Colless:2001gk, York:2000gk}. 
 Historically homogeneity and isotropy were assumed primarily for simplicity.
 Many alternative approaches can be taken. Violating these assumptions can
 be done for example by specifying a preferred direction or supposing that the
 universe is formed by a series of voids connected by filaments. Although many
 of these approaches have been disregarded due to lack of evidence some are still
-allowed by the observations [cite].
+allowed by the observations
+\cite{GarciaBellido:2008nz,Alexander:2007xx,Alnes:2005rw,Hunt:2008wp}.
 
 This section outlines the dynamics of the standard Big Bang scenario.
 By assuming homogeneity and isotropy the equations of motion of a
@@ -119,11 +119,11 @@ coordinate time, and differentiation with respect to $t$ is denoted by an
 overdot $(\dot{~})$. 
 
 
-The spatial part of the FRW metric is multiplied by the term $a(t)$ known as the
-scale factor. This characterises the size of space-like hypersurfaces at
+The spatial part of the FRW metric is multiplied by the scale factor $a(t)$.
+This characterises the size of space-like hypersurfaces at
 different coordinate times. In an expanding universe $a$ grows with
 increasing $t$ and
-$\dot{a}>0$ where an overdot represents differentiation with respect to $t$.
+$\dot{a}>0$.
 The definition of the Hubble parameter $H$ captures this expansion:
 % Definition of Hubble parameter
 \begin{equation}
@@ -167,8 +167,10 @@ g_{\mu\nu}\,,
 where $T_{\mu\nu}$ is the stress energy tensor obtained by the variation of the
 matter Lagrangian. 
 In the definitions above we have included a
-cosmological constant term, $\Lambda_c$, for completeness. From now on we will
-disregard the negligible contribution of such a term in the early universe.
+cosmological constant term, $\Lambda_c$, for completeness. In the early
+universe this term is subdominant and will be negligible until much later
+\cite{book:liddle}. From now on we will
+disregard the contribution of such a term in the early universe.
 
 
 We concentrate now on the case of a universe filled with a perfect
@@ -177,7 +179,7 @@ u_\mu=-1$. The stress-energy tensor of the fluid is
 % 
 \begin{equation}
  \label{eq:fluidstress-intro}
-  T^\mu_\nu = (E + P)u^\mu u_\nu + P\delta^\mu_\nu \,,
+  T^\mu_{~\nu} = (E + P)u^\mu u_\nu + P\delta^\mu_\nu \,,
 \end{equation}
 % 
 where $E$ is the matter energy density and $P$ is the isotropic pressure.
@@ -185,7 +187,7 @@ The trace of $T$ is given by
 % 
 \begin{equation}
  \label{eq:Ttrace-intro}
-  T^\mu_\mu = -E + 3P\,.
+  T^\mu_{~\mu} = -E + 3P\,.
 \end{equation}
 % 
 The Einstein equations and the stress-energy tensor of the
@@ -233,7 +235,8 @@ universe-filling perfect fluid. Two important solutions of these equations are
 the radiation and
 matter filled universes. In the standard Big Bang scenario the universe is
 filled with radiation to a good approximation until matter becomes dominant
-at later times. These different dominant components change the rate of expansion
+at later times \cite{book:kolbturner}. These different dominant components
+change the rate of expansion
 of the universe. For relativistic radiation $P_\mathrm{rad}=E_\mathrm{rad}/3$
 and integrating the continuity equation \eqref{eq:continuity-intro} gives
 $E_\mathrm{rad}\propto a^{-4}$. Matter conversely is taken to be dust-like with
@@ -329,7 +332,8 @@ precedes, \eg $f_{,\varphi} = \dfrac{\d f}{\d \varphi}$.
 In this section we introduce the inflationary scenario. First we briefly
 describe how it solves three major problems with the standard Big Bang
 picture: the flatness problem, the horizon problem and the cosmological defects
-problem. We go on to describe canonical slow-roll inflation, the generation of
+problem \cite{book:liddle}. We go on to describe canonical slow-roll
+inflation, the generation of
 perturbations from quantum fluctuations and inflation from non-canonical
 actions.
 
@@ -351,7 +355,8 @@ The Friedmann equation
 where $\Omega(t)=E(t)/E_\mathrm{crit}$ and the critical density
 $E_\mathrm{crit}= 3H^2/8\pi G$. 
 If $K=0$ then $\Omega=1$ and the density remains constant. However if
-$K\neq0$ the density will change with time. The flat universe is an
+$K\neq0$ the density will change with time becoming less flat. The flat universe
+is an
 unstable fixed point in the parameter space.
 Current observations confirm $\Omega=1$ within about 2\% at a 95\% confidence
 level \cite{Komatsu:2008hk}.
@@ -378,7 +383,8 @@ yet they could not have been in causal contact since the Big Bang.
 \subsubsection{Cosmological Defects} \label{sec:cosdefects}
 \addtodo{Citations}
 The Big Bang achieved temperatures at which a Grand Unified Theory
-(GUT) would predict a higher order symmetry gauge group. During cooling,
+(GUT) would predict a higher order symmetry gauge group \cite{book:kolbturner}.
+During cooling,
 spontaneous symmetry breaking could leave relics that might survive to
 the current day. Magnetic monopoles, cosmic strings and domain walls are some of
 the unwanted features predicted by GUT models. However, none of these features
@@ -397,9 +403,11 @@ have been observed and some mechanism is needed to explain their absence.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 Inflation is a period of accelerated expansion in the size of the universe
-which takes place before the start of the Big Bang. During this
+which takes place before the start of the Big Bang
+\cite{Starobinsky:1980te,Guth:1981,Albrecht:1982wi,Linde:1981mu,
+Starobinsky:1982ee}. During this
 expansion the comoving Hubble radius $(aH)^{-1}$ decreases and the isotropic
-pressure of the universe is negative:
+pressure of the universe is negative \cite{book:liddle, Baumann2009}:
 \begin{equation}
 \label{eq:infldefn-intro}
  \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
@@ -463,7 +471,8 @@ for the length scales of our observable universe. As the scale factor of the
 universe expands
 in the region of $e^{60}\simeq 10^{26}$ times, the observable universe
 today would
-have originated in a volume with side of the order of the Planck length [cite?].
+have originated in a volume with side of the order of the Planck length
+\cite{book:dodelson}.
 Due to the volume increasing by a factor of $e^{180}$ the number density
 of monopoles or other relics that existed before inflation would be
 diluted so much that observing the relics would be increasingly unlikely. This
@@ -473,7 +482,7 @@ they should be abundant.
 
 
 As mentioned above during inflation the universe is filled with material that
-violates the Strong Energy Condition and has negative isotropic pressure.
+has negative isotropic pressure.
 Clearly whatever drives inflation cannot be matter or radiation in their usual
 forms. The simplest proposal is to fill the universe with a single scalar field
 $\varphi$. The canonical action for this field is
@@ -505,12 +514,14 @@ energy-density and isotropic pressure:
 \begin{eqnarray}
 \label{eq:EandP-intro}
  E &=& \frac{1}{2}\dot{\varphi}^2 + V(\varphi) \,,\\
+\label{eq:Pdefn-intro}
  P &=& \frac{1}{2}\dot{\varphi}^2 - V(\varphi) \,.
 \end{eqnarray}
 % 
 Under these conditions the kinetic function $P(\varphi, X)$ can be identified as
 the isotropic pressure. The dynamics of the field are governed by the potential
-$V(\varphi)$. Inflation requires $P<-E/3$ so from \eq{eq:EandP-intro} inflation
+$V(\varphi)$. Inflation requires $P<-E/3$ so from Eqs \eqref{eq:EandP-intro} and
+\eqref{eq:Pdefn-intro} inflation
 can also be thought of as a period when the potential energy $V$ dominates over
 the kinetic energy. 
 
@@ -577,20 +588,20 @@ important for inflation.
 
 Suppose that a full inhomogeneous scalar field
 $\varphi$ is split into a homogeneous background field $\vp_0$ as we described
-above and an inhomogeneous perturbation $\dvp{}(x,t)$. For the following
+above and an inhomogeneous perturbation $\dvp{}(\eta,x^i)$. For the following
 analysis to be valid the perturbation must be much smaller than the background
 field value. From the amplitude of perturbations in the CMB this approximation
 can be seen to be valid \cite{Komatsu:2008hk}. 
 
-If we suppose $\varepsilon$ is a small quantity then the split in $\vp$
+If we suppose that $\varepsilon$ is a small quantity then the split in $\vp$
 can be written as \cite{Malik:2008im}
 % 
 \begin{equation}
 \label{eq:pertsplit-intro}
-\vp(x, t) = \vp_0(t) + \varepsilon\dvp{}(x,t) \,.
+\vp(\eta, x^i) = \vp_0(\eta) + \varepsilon\dvp{}(\eta, x^i) \,.
 \end{equation}
 % 
- The perturbation $\dvp{}(x, t)$ can be further expanded in
+ The perturbation $\dvp{}(\eta, x^i)$ can be further expanded in
 powers of $\epsilon$.  We will follow the
 custom of not explicitly writing $\varepsilon$, instead relying on the order of
 the perturbation, denoted by a subscript, to keep track.
@@ -598,7 +609,8 @@ If we expand in a Taylor series then up to second order (\ie including terms
 up to $\varepsilon^2$) we have:
 % 
 \begin{equation}
- \vp(x,t) = \vp_0(t) + \dvp1(x,t) + \frac{1}{2}\dvp2(x,t) \,.
+ \vp(\eta, x^i) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
+\,.
 \end{equation}
 % 
 There is some freedom in how the split of the perturbations into different
@@ -659,9 +671,10 @@ specify how spacetime is foliated, i.e. a slicing, and how coordinates in one
 spatial hypersurface are related to those in another, i.e. a threading
 \cite{Malik:2008im}. We will
 employ the uniform curvature gauge in which spatial hypersurfaces are flat. It
-is also known as the flat gauge .
+is also known as the flat gauge.
 
-The transformation vector at first order  $\xi_1^\mu$ can be split into scalar
+The gauge transformation vector at first order  $\xi_1^\mu$ can be split into
+scalar
 and vector parts
 % 
 \begin{equation}
@@ -712,20 +725,21 @@ are not perturbed by scalar or vector perturbations, so $\wt{\psi_1} = \wt{E_1}
 -F^i_1\,.
 \end{equation}
 
-The inflaton perturbation in the flat gauge is
+A gauge invariant inflaton perturbation variable is the Sasaki-Mukhanov
+variable, often called Q \cite{Mukhanov:1990me, Mukhanov:1988jd,
+Sasaki:1986hm}.
 % 
 \begin{equation}
 \label{eq:flatdvp1-intro}
  \wt{\dvp1} \equiv \dvp1 + \vp_0'\frac{\psi_1}{\H}\,,
 \end{equation}
 % 
-which is the definition of the Sasaki-Mukhanov variable,
-often called $Q$ \cite{Mukhanov:1988jd,Sasaki:1986hm}. We will work in flat
+In the flat gauge this is just $\dvp1$. We will work in flat
 gauge from now on and so will drop the tildes on quantities in that gauge.
 
 Another very important gauge invariant quantity is the comoving curvature
 perturbation $\R$. At first order in the flat gauge $\R$ is related to the
-inflaton perturbation by
+inflaton perturbation by \cite{Malik:2008im}
 % 
 \begin{equation}
 \label{eq:flatRdefn-intro}
@@ -744,7 +758,7 @@ values only by eliminating the metric perturbations using
 \eq{eq:flatdvp1-intro}. 
 % 
 In Fourier space and in terms of the conformal time $\eta$, the closed form of
-the first order perturbation equation of motion is
+the first order perturbation equation of motion is \cite{Malik:2008im}
 % 
 \begin{eqnarray}
 \label{eq:fokg-intro}
@@ -767,7 +781,7 @@ where $\U$ is the background value of the potential $V(\vp)$.
 % \end{equation}
 
 
-Substituting $u=a\dvp1$ gives
+Substituting $u=a\dvp1$ gives the Mukhanov equation \cite{Mukhanov:1990me}
 % 
 \begin{equation}
  \label{eq:ueq-intro}
@@ -776,7 +790,7 @@ Substituting $u=a\dvp1$ gives
 % 
 where $z= a\vp_0'/\H$.
 
-
+\subsubsection{Quantum perturbations}
 So far we have considered classical perturbations. The generation of
 fluctuations is a quantum effect however and we need to consider the
 perturbations as quantum operators in some vacuum. 
@@ -826,7 +840,8 @@ In the expanding FRW background the choice of vacuum is not straightforward.
 Suppose one observer selects a zero particle state as the vacuum. Another
 observer accelerating with respect to the first will see particles being
 created in this ``vacuum'' state due to the Unruh effect
-\cite{Unruh1976a}. In selecting the vacuum we must choose one of the many
+\cite{Kinney2009, Unruh1976a}. In selecting the vacuum we must choose one of the
+many
 equivalent options.
 To do this we consider the far past where $\eta\rightarrow -\infty$ and all
 modes
@@ -892,7 +907,10 @@ defined as
    = (2\pi)^3 \delta(\textbf{k} + \textbf{k}') \frac{|w(\kb)|^2}{a^2}\,,
 \end{equation}
 % 
-where $\langle \ldots \rangle$ denotes the ensemble average. The power spectrum
+where $\langle \ldots \rangle$ denotes the ensemble average. 
+If taken over a large enough volume the ensemble average and spatial average
+are equivalent \cite{book:lyth}.
+The power spectrum
 $P_{\dvp{}}^2$ depends only on the magnitude of the wavenumber
 vector $k=|\kvi|$ but has dimensions of $k^{-3}$. A dimensionless power spectrum
 can be defined as
@@ -939,8 +957,8 @@ for the comoving curvature perturbation spectrum. Models that are not
 slowly rolling usually require their more complicated mode equations to be
 numerically solved. 
 
-We have discussed in depth the scalar perturbations but there are also
-tensor perturbations which can be produced. The tensor perturbation $h_{ij}$
+We have discussed in depth the scalar perturbations but tensor perturbations
+can also be produced. The tensor perturbation $h_{ij}$
 has two polarisations, $h_s$ for $s=+, \times$. The amplitude of
 each can be thought of as a separate scalar field. The analysis for each field
 is similar to that above with the substitution $h_s= 2\dvp1/\Mpl$ After horizon
