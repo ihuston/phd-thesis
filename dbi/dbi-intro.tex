@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.33 2009/08/31 14:21:47 ith Exp $
+% $Id: dbi-intro.tex,v 1.34 2009/08/31 16:04:30 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.33 2009/08/31 14:21:47 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.34 2009/08/31 16:04:30 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -406,7 +406,7 @@ compactified space. These fluxes are equivalent to magnetic
 fields in the higher dimensional space. By Gauss' theorem  the compact space
 will now have a quantized non-zero total charge.
 In the presence of fluxes a general form of metric with a warp factor is
-possible:
+possible \cite{Baumann:2009ni}:
 \begin{equation}
 \label{eq:warpedmetric-dbiintro}
  ds^2 = e^{2A(y)}\eta_{\mu\nu} dx^\mu dx^\nu + e^{-2A(y)} g_{mn}dy^m dy^n\,,
@@ -458,7 +458,11 @@ in the UV limit ($\rho \rightarrow \infty$). This has
 a volume $\mathrm{Vol} (T^{1,1}) = 16\pi^3/27$ and  topology
 $S^2\times S^3$, where the $S^2$ is fibred over the $S^3$.
 
+\begin{figure}
 \missingfigure{Add figure of warped deformed conifold}   
+\caption{A conifold can be deformed to remove the singularity at the tip.}
+\label{fig:conifold-dbiintro}
+\end{figure}
 
 There are two 3-cycles in the warped throat. The first is the $S^3$ subspace and
 is known as the A-cycle. The second, called the B-cycle, is the $S^2$ times a
@@ -475,7 +479,7 @@ where $M,K\in \mathbb{Z}$.
 The D$3$ charge of the throat, $N$, is related to the quantized fluxes by
 $N=MK$.
 The wrapping of the fluxes along the cycles of the conifold smooths out the
-conical singularity at the tip of the throat with an $S^3$ ``cap'' 
+conical singularity at the tip of the throat with an $S^3$ cap 
 \cite{ks,kt} and the warp factor asymptotes to 
 a constant value in this region.
 
@@ -503,7 +507,7 @@ used to formulate these constraints.
 % We will now concentrate on one particular non-canonical action. 
 The DBI scenario is based on the compactification of type IIB string theory on a 
 Calabi-Yau (CY) three-fold, where the form-field fluxes generate locally
-warped regions known as `throats' described above.  The propagation of a 
+warped regions known as `throats' as described above.  The propagation of a 
 ${\rm D3}$-brane in such a region can drive inflation, where the inflaton 
 field is identified with the radial position of the brane 
 along the throat. Since this is an open string mode, the field 
@@ -514,8 +518,8 @@ equation for the inflaton is determined by a DBI action.
  \centering
  \includegraphics[width=0.8\textwidth]{dbi/graphs/braneworld4.jpg}
  % braneworld4.pdf: 612x792 pixel, 72dpi, 21.59x27.94 cm, bb=0 0 612 792
- \caption{***Change to better quality*** A representation of the 6 compactified dimensions.
-D3-branes appear as dots.}
+ \caption{A representation of the 6 compactified dimensions.
+D3-branes appear as dots. ***Change to better quality***}
  \label{fig:braneworld}
 \end{figure}
 % 
@@ -534,18 +538,18 @@ then given by
 \label{eq:DBIaction-dbiintro}
 S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\varphi , X) \right] \\
-\label{defP}
+\label{eq:Pdefn-dbiintro}
 P( \varphi ,X) = - T (\varphi)  \sqrt{1 - 2T^{-1} (\varphi ) X}
 +T (\varphi)  -V(\varphi)  \,,
 \end{eqnarray}
 % 
-where $R$ is the Ricci curvature scalar,
-$X \equiv - \frac{1}{2} g^{\mu\nu} \nabla_{\mu} \varphi \nabla_{\nu} \varphi$
-is the kinetic energy of the inflaton, $V(\varphi )$ denotes 
-the field's interaction 
-potential and $T(\varphi ) = T_3 h^4 (\varphi )$
+where $R$ is the Ricci curvature scalar and $T(\varphi ) = T_3 h^4 (\varphi )$
 defines the warped brane tension. As in Section \ref{sec:noncanoninfl} we refer
-to $P(\varphi , X)$ as the ``kinetic function'' for the inflaton. 
+to $P(\varphi , X)$ as the kinetic function for the inflaton, 
+$X \equiv - \frac{1}{2} g^{\mu\nu} \nabla_{\mu} \varphi \nabla_{\nu} \varphi$
+is the kinetic energy of the inflaton and $V(\varphi )$ denotes 
+the field's interaction 
+potential. 
 
 We consider a spatially flat and isotropic cosmology 
 sourced by a homogeneous scalar field. 
@@ -557,24 +561,20 @@ varying inflaton can be expressed in the form \cite{brane6}
 3 \Mpl^2 H^2(\varphi ) &=& V(\varphi ) -T(\varphi ) 
 \left[ 1- \sqrt{1+4\Mpl^4T^{-1} H'^2} \right] \,,\\
 \label{useful}
-\dot{\varphi} &=& - \frac{2\Mpl^2H'}{\sqrt{1+4\Mpl^4 T^{-1} H'^2}} \, ,
+\dot{\varphi} &=& - \frac{2\Mpl^2H'}{\sqrt{1+4\Mpl^4 T^{-1} H'^2}} \,.
 \end{eqnarray}
 % 
-where $H=H(\varphi )$ represents the Hubble parameter
-as a function of the field and a prime denotes $d/d\varphi$. 
 
-\addtodo{Remove duplicate information, is it already in Non-canonical section?}
-An important consequence of the non-trivial kinetic structure 
-of the DBI action is that the sound speed of fluctuations in the inflaton 
-differs from unity:   
+In Section~\ref{sec:noncanoninfl} we introduced $c_s$ as the speed of sound of
+inflaton fluctuations. For $P$ in \eq{eq:Pdefn-dbiintro} we find from
+\eq{eq:defcs-dbiintro} that
 % 
 \begin{equation}
 \label{eq:csdefn-dbiintro}
-c_s = \frac{1}{P_{,X}} = \sqrt{1 -2T^{-1}X}  \,,
+c_s = \frac{1}{P_{,X}} = \sqrt{1 -2T^{-1}X}  \,.
 \end{equation}
 % 
-where a subscripted comma denotes partial differentiation. 
-Furthermore, the condition that the sound speed be real 
+The condition that the sound speed be real 
 imposes an upper bound on the kinetic energy 
 of the inflaton, $\dot{\varphi}^2 < T(\varphi)$, which 
 is independent of the steepness of the potential.
@@ -614,97 +614,69 @@ for the scalar and tensor perturbations are given by \cite{gm}
 % 
 \begin{eqnarray}
 \label{eq:spectra-dbiintro}
-P_S^2= \frac{1}{8 \pi^2 \Mpl^2} \frac{H^2}{c_s \epsilon_H}
-= \frac{H^4}{4\pi^2\dot{\varphi}^2}
+\Pr= \frac{H^4}{4\pi^2\dot{\varphi}^2} =\frac{1}{8 \pi^2 \Mpl^2}
+\frac{H^2}{c_s \epsilon_H}\,,
 \\
-P_T^2 = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} 
+\Pt = \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
 \\
 \label{indices}
-1-n_s = 4 \epsilon_H -2\eta_H  +2s 
+1-n_s = 4 \epsilon_H -2\eta_H  +2s \,,
 \\
- n_t = -2\epsilon_H  
+ n_t = -2\epsilon_H  \,,
 \end{eqnarray}
 % 
 respectively, where the quantities on the right-hand sides are evaluated 
-when the scale with comoving wavenumber $k=aH\gamma$ crossed 
-the Hubble radius during inflation.  
-\addtodo{ Talk about difference with standard k=aH and compare consistency relation with 
-standard one.}
-The tensor-scalar ratio, $r \equiv P_T^2/P_S^2$, is directly related to 
-the tensor spectral index by \cite{gm}
-% 
-\begin{equation}
-\label{eq:consistency-dbiintro}
-r= -8c_sn_t = 16c_s \epsilon_H\,.
-\end{equation}
-%
-Hence, a sound speed different to unity leads to a violation of the 
-standard inflationary consistency equation, which might be 
-detectable in the foreseeable future \cite{lidser1,lidser2}. 
-\addtodo{WMAP5}
-Recent observations of the CMB 
-indicate that $P^2_S=2.5 \times 10^{-9}$ and $r < 0.55$ \cite{spergel}. 
-The best-fit value for a constant spectral index is 
-$n_s = 0.987^{+0.019}_{-0.037}$ if $r\ne 0$ is assumed as a prior. 
-This is strengthened to 
-$n_s = 0.948^{+0.015}_{-0.018}$ for a prior of $r = 0$ \cite{spergel}. 
+after the scale with comoving wavenumber $k$ crosses 
+the sound horizon $k c_s = aH$.  
+
+% \addtodo{WMAP5}
+% Recent observations of the CMB 
+% indicate that $P^2_S=2.5 \times 10^{-9}$ and $r < 0.55$ \cite{spergel}. 
+% The best-fit value for a constant spectral index is 
+% $n_s = 0.987^{+0.019}_{-0.037}$ if $r\ne 0$ is assumed as a prior. 
+% This is strengthened to 
+% $n_s = 0.948^{+0.015}_{-0.018}$ for a prior of $r = 0$ \cite{spergel}. 
 
 
 A further important consequence of a small sound speed is that departures  
 from purely Gaussian statistics may be large 
 \cite{brane6,brane11,lidser3,chenetal}. 
-\addtodo{Link to intro section on $\fnl$. Remove duplicate information. Add note about using equilateral in
-next two chapters.}
-It is conventional 
-to quantify such deviations by expressing the non-Gaussian curvature 
-perturbation ${\cal{R}}$ in the form 
-${\cal{R}} ={\cal{R}}_G + \frac{3}{5}\fnl
-({\cal{R}}^2_G -\langle {\cal{R}}^2_G \rangle)$, where 
-${\cal{R}}_G$ represents the Gaussian contribution, 
-the quadratic piece is a convolution and $\fnl$ defines 
-the `non-linearity' parameter \cite{maldacena}. 
-In general, this parameter is a function of the three momenta which 
-form a triangle in Fourier space. However, in the limit where 
-these momenta have equal magnitude, the non-linearity parameter 
-is given to leading-order by \cite{chenetal,lidser2}  
+DBI inflation produces non-gaussianity maximised in the equilateral
+configuration and the leading contribution is in the form of
+\eq{fnldefn-dbiintro}. When $c_s\PX=1$ the term $\Lambda$ defined in
+\eq{eq:deflambda-dbiintro} is identically zero and $\fnleq$ becomes
+\cite{chenetal,lidser2}
 % 
 \begin{equation}
 \label{eq:fnlcs-dbiintro}
-\fnl = -\frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
+\fnleq = -\frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
 \end{equation}
 % 
-\addtodo{ Change to WMAP5 numbers}
-Currently, WMAP3 constrains this parameter  
-to be ${| \fnl |} \, {\lsim} \, {300}$ \cite{spergel,crim}.  
+When $c_s\ll1$ large amounts of non-gaussianity are produced.
 
-
-Finally, Eqs. (\ref{eq:csdefn-dbiintro}), (\ref{eq:spectra-dbiintro}) and (\ref{eq:fnlcs-dbiintro}) 
-may be combined to constrain the warped brane tension 
-during observable inflation: 
+For a homogeneous field $2X = \dot{vp}^2$ so from \eq{eq:csdefn-dbiintro} we get
+\begin{equation}
+\label{eq:phiT-dbiintro}
+ \dot{vp}^2 = T(\vp)(1-c_s^2)\,.
+\end{equation}
+Eqs. \eqref{eq:spectra-dbiintro},
+\eqref{eq:fnlcs-dbiintro} and \eqref{eq:phiT-dbiintro}
+may be combined to provide a relation for the warped brane tension: 
 % 
 \begin{equation}
 \label{eq:obswarp-dbiintro}
-\frac{T (\varphi_*)}{\Mpl^4}  = 
-\frac{\pi^2}{16} r^2P_S^2 \left( 1-\frac{1}{3\fnl} \right) \,,
+\frac{T (\varphi)}{\Mpl^4}  = 
+\frac{\pi^2}{16} r^2P_S^2 \left( 1-\frac{1}{3\fnl} \right) \,.
 \end{equation}
 % 
-where a subscript `$*$' denotes that the quantity is to be evaluated 
-at that epoch. 
 
-
-\addtodo{ Change to chapter references}
-In the next chapter, we will first consider the UV version of DBI inflation,
-where the brane moves relativistically 
-towards the tip of the throat. We will assume implicitly 
-that the sound speed is sufficiently small to generate a non-Gaussianity with magnitude in 
-excess of $|\fnl| \, {\gsim} \, 5$, since this is the projected 
-sensitivity of the Planck satellite \cite{planck}. Furthermore, we consider   
-an arbitrary warp factor and inflaton potential, 
-subject only to the condition that a sufficiently long phase of 
-quasi-exponential expansion can be maintained to solve the horizon problem of
-the hot big bang model. 
-% 
-%
+In this section we have introduced the standard DBI inflationary scenario. This
+is a particular example of the non-canonical inflationary models described in
+Section~\ref{sec:noncanoninfl}. In the case of DBI the speed of sound parameter
+takes the simple form $c_s = 1/\PX$. The previously derived
+results for $\Pr$ and $n_s$ can then be written in terms of $c_s$ and the
+redefined slow-roll parameters in Eqs \eq{eq:epsdefn-dbiintro},
+\eq{eq:defeta-dbiintro}, \eq{eq:defs-dbiintro}. 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -715,41 +687,43 @@ the hot big bang model.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-Eqs. (\ref{eq:Ps-dbiintro}) and (\ref{eq:Pt-dbiintro}) imply 
+Eqs. (\ref{eq:Ps-dbiintro}) and (\ref{eq:Ptdefn-intro}) imply 
 that the variation of the inflaton field during inflation  
 is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
 % 
 \begin{equation}
 \label{eq:genlyth-dbiintro}
 \frac{1}{\Mpl^2}
-\left( \frac{d \varphi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}} \,,
+\left( \frac{d \varphi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}}
+\,,
 \end{equation}
 % 
-where ${\cal{N}} \equiv \int dt \, H$ denotes the number of e-foldings.
+where $n$ denotes the number of e-foldings as defined in
+\eq{eq:nefolddefn-intro}.
 We will refer to the epoch of inflation that can be directly 
 constrained by cosmological observations as 
-`observable inflation' and will assume that this phase 
+observable inflation and will assume that this phase 
 occurred when the brane was located within a 
-throat region\footnote{We denote the values of all parameters 
-evaluated during observable inflation by a subscript 
-`$*$'.}. Observable inflation corresponds to no more than about 4 e-foldings  
-of inflationary expansion, $\Delta {\cal{N}}_* \simeq 4$. 
+throat region. We denote the values of all parameters 
+evaluated during observable inflation by a subscript star
+$(~_*)$. Observable inflation corresponds to no more than about 4 e-foldings  
+of inflationary expansion, $\Delta n_* \simeq 4$. 
 The total variation in the inflaton field between the epoch of observable 
 inflation and the end of inflation is then given by
 % 
 \begin{equation}
 \label{eq:totalfield-dbiintro}
 \frac{\Delta \varphi_{\rm inf}}{\Mpl} = 
-\left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} {\cal{N}}_{\rm eff} \,,
+\left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} n_{\rm eff} \,,
 \end{equation}
 % 
 where
 % 
 \begin{equation}
 \label{eq:Neff-dbiintro}
-{\cal{N}}_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
-\int_0^{{\cal{N}}_{\rm end}}  
-\left( \frac{r}{c_sP_{,X}} \right)^{1/2} d {\cal{N}} \,.
+n_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
+\int_0^{n_{\rm end}}  
+\left( \frac{r}{c_sP_{,X}} \right)^{1/2} d n \,.
 \end{equation}
 % 
 If $r/(c_s P_{,X})$ varies 
@@ -760,8 +734,43 @@ field is given approximately by \cite{lyth,bmpaper}
 \begin{equation}
 \label{eq:approxlyth-dbiintro}
 \left( \frac{\Delta \varphi}{\Mpl} \right)_*^2 \simeq 
-\frac{(\Delta {\cal{N}}_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
+\frac{(\Delta n_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
 \end{equation}
 % 
+This equality links the total variation of $\vp$ during observable inflation
+with the tensor-scalar ratio, \ie the amplitude of gravitational waves produced
+during that period. In Chapter~\ref{ch:dbi} we will see how the dynamics of the
+DBI scenario allow an upper limit to be put on $r$ using this relation.
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Summary}
+\label{sec:summary-dbiintro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+In this chapter we have introduced the Dirac-Born-Infeld inflationary scenario.
+Many attempts have been made to provide an inflationary expansion phase in the
+early universe using string theory. In compactifying from 10 dimensions to 4,
+complicated geometries and additional fluxes must be used to stabilize the
+remaining moduli fields. 
+The DBI scenario is an example of a non-canonical infaltionary model. With a
+small sound speed significant amounts of non-gaussianity can be produced. This
+non-gaussianity can be related to the brane tension and tensor-scalar ratio
+through \eq{eq:approxlyth-dbiintro}. In the next chapter we will derive two
+competing bounds on $r$ which will tightly constrain the parameter space for
+DBI models.
 
+% We will first consider the UV version of DBI inflation,
+% where the brane moves relativistically 
+% towards the tip of the throat. We will assume implicitly 
+% that the sound speed is sufficiently small to generate a non-Gaussianity with
+% magnitude in 
+% excess of $|\fnl| \, {\gsim} \, 5$, since this is the projected 
+% sensitivity of the Planck satellite \cite{planck}. Furthermore, we consider   
+% an arbitrary warp factor and inflaton potential, 
+% subject only to the condition that a sufficiently long phase of 
+% quasi-exponential expansion can be maintained to solve the horizon problem of
+% the hot big bang model. 
+% % 
