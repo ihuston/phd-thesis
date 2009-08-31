@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.36 2009/08/31 14:21:38 ith Exp $
+% $Id: mainintro.tex,v 1.37 2009/08/31 16:05:31 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.36 2009/08/31 14:21:38 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.37 2009/08/31 16:05:31 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -287,7 +287,15 @@ Rewriting the comoving horizon as
 \end{equation}
 shows that it is also the logarithmic integral of the comoving Hubble
 radius $1/aH$. This distance is how far particles can travel in one
-``e-folding'', the time for $a$ to expand by one exponential factor. Particles
+``e-folding'', the time for $a$ to expand by one exponential factor. 
+The number of e-foldings between two measurements of the scale factor, $a_i$
+and $a_f$ is given by
+\begin{equation}
+\label{eq:nefolddefn-intro}
+ n = \ln \frac{a_f}{a_i}\,.
+\end{equation}
+
+Particles
 that are separated by more than the Hubble radius cannot be in causal
 contact now. Particles separated by more than the
 comoving horizon, however, could never have been in causal contact. In addition
@@ -1139,10 +1147,13 @@ The consistency relation \eqref{eq:consistency-intro} is now defined as
 \cite{gm} 
 % 
 \begin{equation}
-\label{`eq:rdefn-dbiintro}
-  r = 16c_s \epsilon_H \,.
+\label{eq:rdefn-dbiintro}
+  r = 16c_s \epsilon_H = -8c_s n_t \,.
 \end{equation}
-
+% 
+Hence, a sound speed different to unity leads to a violation of the 
+standard inflationary consistency equation, which might be 
+detectable in the foreseeable future \cite{lidser1,lidser2}. 
 
 
 
