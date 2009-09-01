@@ -1,15 +1,15 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.28 2009/08/28 16:30:18 ith Exp $
+% $Id: thesis.tex,v 1.29 2009/09/01 13:13:50 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
- twoside,
+%  twoside,
 12pt,
 bibtotoc, % Include bibliography in contents
 liststotoc, % Include lists of figures and tables in contents
 idxtotoc, % Include index in contents
-% onehalfspacing % onehalfspacing or doublespacing
-doublespacing
+onehalfspacing % onehalfspacing or doublespacing
+% doublespacing
 %,openright
 ]
 {icldt}
@@ -19,14 +19,14 @@ doublespacing
 % My formatting package
 % CVSon for cvs revision number in footers
 % CVSoff is default-
-\usepackage[CVSon, % CVS version in footers
-            labels, % show labels
+\usepackage[%CVSon, % CVS version in footers
+%             labels, % show labels
 	    todos, % show todos
-            hyperref % Use hyperref for links
+            %hyperref % Use hyperref for links
             ]{ihformat}
 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.28 2009/08/28 16:30:18 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.29 2009/09/01 13:13:50 ith Exp $}
 % \usepackage[inline]{showlabels}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -34,14 +34,14 @@ doublespacing
 % Include list
 \includeonly{
 abstract,
-acknowledgements,
+% acknowledgements,
 mainintro,
 dbi/dbi-intro,
-dbi/dbi,
-dbi/multibrane,
-numerical/perts,
-numerical/numerical,
-theend
+% dbi/dbi,
+% dbi/multibrane,
+% numerical/perts,
+% numerical/numerical,
+% theend
 }
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \begin{document}
