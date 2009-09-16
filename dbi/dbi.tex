@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.20 2009/09/14 16:19:01 ith Exp $
+% $Id: dbi.tex,v 1.21 2009/09/16 12:53:50 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.20 2009/09/14 16:19:01 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.21 2009/09/16 12:53:50 ith Exp $}
 % \input{paper1}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -46,8 +46,8 @@ observable scales cross the Hubble radius, and
 we find in general that the tensor-scalar ratio must satisfy 
 $r \, \lsim \, 10^{-7}$. This 
 is below the projected sensitivity of future Cosmic Microwave Background (CMB) polarization 
-experiments \cite{clover,vpj}. 
-\addtodo{Change Clover reference and change next para to WMAP5}
+experiments \cite{vpj}. 
+\addtodo{Add CMBPol reference}
 On the other hand, the WMAP5 data 
 favours a red perturbation spectrum with 
 $n_s<1$ when the tensor modes are negligible and 
@@ -56,7 +56,7 @@ For models which generate such a spectrum,
 we identify a corresponding lower limit on the 
 tensor modes such that $r \, \gsim \, 0.1 (1-n_s)$. 
 This is incompatible with the upper bound 
-on $r$ when $1-n_s \simeq 0.05$, as inferred
+on $r$ when $1-n_s \simeq 0.03$, as inferred
 by the observations. 
 
 \addtodo{Add section references}
@@ -390,13 +390,12 @@ constant value. In this regime, Eq. (\ref{eq:obscon1}) reduces to
 the condition $r \simeq 2.3 (1-n_s)/\sqrt{-\fnl}$ when $|\fnl|$ is 
 sufficiently large to be detectable by Planck, 
 \ie $|\fnl| > 5$. 
-\addtodo{ Change to WMAP5 numbers}
 It then follows from the  
-WMAP3 best-fit value $n_s \simeq 0.987$ and upper limit 
-$|\fnl| < 300$ \cite{crim} that the gravitational wave amplitude 
+WMAP5 best-fit value $n_s \simeq 0.968$ and lower limit 
+$\fnleq > -151$ \cite{Komatsu:2008hk} that the gravitational wave amplitude 
 is bounded both from above and below such that $0.001 \, \lsim \, r 
 \, \lsim \, 0.01$. These bounds follow from 
-current WMAP3 limits on the spectral index and the 
+current WMAP5 limits on the spectral index and the 
 non-linearity parameter, but do not take into account the 
 field-theoretic upper bound that must be imposed 
 on the variation of the inflaton field during inflation. 
@@ -424,13 +423,12 @@ inflation in terms of observable parameters and it
 may be combined with the upper bound 
 (\ref{eq:generalbound}) to confront the scenario with observations.
 Firstly, let us assume that the tensor-scalar ratio is negligible. 
-\addtodo{ Change to WMAP5 numbers}
-The WMAP3 data implies that $1-n_s > 0.037$, and this is only 
+The WMAP5 data implies that $1-n_s > 0.026$ at $1\sigma$, and this is only 
 compatible with condition (\ref{eq:halfbound}) if 
 % 
 \begin{equation}
 \label{eq:nnlbound}
-\nnl \simeq -2s > -3 (1-n_s ) \fnl > -0.1 \fnl \,.
+\nnl \simeq -2s > -3 (1-n_s ) \fnl > -0.078 \fnl \,.
 \end{equation}
 % 
 However, when $\fnl \ll -1$, this would violate the slow-roll conditions
@@ -446,9 +444,8 @@ The magnitude of the second term in condition (\ref{eq:halfbound})
 is suppressed by a factor of $(-\fnl)^{3/2} \gg 1$ 
 relative to the first. This is expected to 
 be a significant effect in DBI inflation. 
-\addtodo{ Change to WMAP5 numbers}
 Consequently, 
-by saturating the WMAP3 limit $|\fnl| < 300$ \cite{crim}, we arrive at 
+by saturating the WMAP5 limit $\fnleq > -151$, we arrive at 
 a lower bound on the tensor-scalar ratio which applies   
 to any model for which the ratio $|\nnl/\fnl|$ is 
 negligible:
@@ -456,24 +453,23 @@ negligible:
 % 
 \begin{equation}
 \label{eq:lowerbound}
-r_* >  \frac{4(1-n_s)}{\sqrt{-3\fnl}} > \frac{1-n_s}{8} \,.
+r_* >  \frac{4(1-n_s)}{\sqrt{-3\fnl}} > \frac{1-n_s}{6} \,.
 \end{equation}
 % 
-\addtodo{ Change to WMAP5 numbers}
-This requires $r > 0.002$ for the WMAP3 best-fit value 
-$1-n_s \simeq 0.013$, which is incompatible with the upper limit 
+This requires $r > 0.005$ for the WMAP5 best-fit value 
+$1-n_s \simeq 0.032$, which is incompatible with the upper limit 
 (\ref{eq:standardbound}). 
 
 
 In general, therefore, it is difficult to simultaneously satisfy 
-the bounds on $r$ with the WMAP3 data
+the bounds on $r$ with the WMAP5 data
 in standard UV DBI inflation. There is a 
 small observational window where a blue spectrum is consistent 
 with the data, in which case the lower limit 
 (\ref{eq:lowerbound}) does not apply. 
 However, if the tensor modes are negligible,
 as implied by the inequality (\ref{eq:standardbound}), the 
-data strongly favours a red spectral index with $n_s < 0.963$,
+data strongly favours a red spectral index with $n_s < 0.974$,
 and this violates the condition (\ref{eq:lowerbound}). A significant 
 detection of a red spectral index requires either a 
 violation of the slow-roll conditions or a sufficiently 
@@ -762,8 +758,7 @@ We find that the standard UV
 scenario predicts tensor perturbations that are undetectably small, 
 at a level ${r_*} \, {\lsim} \, {10^{-7}}$. 
 
-\addtodo{ Change to WMAP5}
-The current WMAP3 data 
+The current WMAP5 data 
 favours models that generate a red spectral index $n_s<1$
 when both the gravitational waves and running in the scalar 
 spectral index are negligible. For UV versions of the scenario, 
@@ -773,7 +768,7 @@ parameter space, $r_* \, \gsim \, 0.1 (1-n_s)$. It is clear that
 the standard model 
 can not satisfy both the upper and lower bounds 
 on the tensor modes for the observationally favoured value 
-$1-n_s \simeq 0.05$.
+$1-n_s \simeq 0.03$.
 
 
 The generality of our 
@@ -784,8 +779,7 @@ theory with observation. In general,
 either the upper or lower limit on $r$ needs to be relaxed. 
 Weakening the latter would require a violation of the slow-roll 
 conditions or a blue spectral index. 
-\addtodo{ Change to WMAP5}
-A value of $n_s >1$ is compatible with WMAP3 if the running of the 
+A value of $n_s >1$ is compatible with WMAP5 if the running of the 
 spectral index 
 is sufficiently negative, but is only marginally
 consistent if just the tensor modes are non-negligible.  The 
