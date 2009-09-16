@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.24 2009/09/16 14:43:05 ith Exp $
+% $Id: dbi.tex,v 1.25 2009/09/16 15:32:59 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.24 2009/09/16 14:43:05 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.25 2009/09/16 15:32:59 ith Exp $}
 % \input{paper1}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -353,9 +353,8 @@ to be preferred by the current data.
 
 In general, the spectral index may be related to the tensor-scalar ratio. 
 After differentiating Eq. (\ref{eq:csdefn-dbiintro}) 
-with respect to cosmic time, and employing Eqs. (\ref{useful}) 
-and (\ref{indices}), we find that 
-\addtodo{ Show working}
+with respect to coordinate time, and employing Eqs. (\ref{eq:phidot-useful}) 
+and (\ref{indices}), we find that\footnotemark
 % 
 \begin{equation}
 \label{eq:nsconstraint}
@@ -364,11 +363,24 @@ and (\ref{indices}), we find that
 \end{equation}
 % 
 where the minus (plus) sign corresponds to 
-a brane moving down (up) the warped throat. 
+a brane moving down (up) the warped throat.
+%  
+\footnotetext{The relationship between $\dot{\vp}$ and $H_{,\vp}$ is defined in
+\eq{eq:phidot-useful}. When $\dot{\vp}<0$ and the brane moves down the throat
+(UV case) $H_{,\vp}>0$. Alternatively in the IR case when $\dot{\vp}>0$ we have
+$H_{,\vp}<0$. In order to remove the ambiguity we rewrite \eq{eq:phidot-useful}
+using $-H_{,\vp} = \mp |H_{,\vp}|$ where the minus (plus) sign corresponds to
+the UV (IR) case.}
+% 
 The second term in Eq. (\ref{eq:nsconstraint}) 
 can be converted into observable parameters
-by defining the `tilt' of the non-linearity parameter, 
-$n_{NL} \equiv d \ln |\fnl|/d\ln k$ \cite{brane14}. 
+by defining the `tilt' of the non-linearity parameter  \cite{brane14}: 
+% 
+\begin{equation}
+\label{eq:nnl-defn-dbi}
+\nnl \equiv \frac{\d \ln |\fnl|}{\d\ln k}\,. 
+\end{equation}
+% 
 This implies that $s=  3 \fnl \nnl /[2(1-3\fnl)]$ and     
 substitution of Eqs. (\ref{indices})--(\ref{eq:fnlcs-dbiintro}) 
 into Eq. (\ref{eq:nsconstraint}) then yields
