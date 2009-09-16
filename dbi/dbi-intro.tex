@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.37 2009/09/16 13:30:19 ith Exp $
+% $Id: dbi-intro.tex,v 1.38 2009/09/16 14:43:06 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.37 2009/09/16 13:30:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.38 2009/09/16 14:43:06 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -313,11 +313,12 @@ compactification result is a purely stringy effect.
 The formula for the mass spectrum, \eq{eq:closedmass-dbiintro}, is invariant
 when $j$ and $w$ are exchanged given the transformation
 \begin{equation}
- L \rightarrow L' = \frac{\alpha'}{L}\,.
+ L \rightarrow \wt{L} = \frac{\alpha'}{L}\,.
 \end{equation}
-Writing the equations of motion in terms of $L'$, having swapped $j$ and $w$,
+Writing the equations of motion in terms of $\wt{L}$, having swapped $j$ and
+$w$,
 gives a new theory
-which is compactified on a circle of radius $L'$. This is known as the
+which is compactified on a circle of radius $\wt{L}$. This is known as the
 T-dual theory and the transformation is called T-duality
 \cite{Sakai1986,Kikkawa1984b}. The two
 theories,
@@ -566,9 +567,10 @@ varying inflaton can be expressed in the form \cite{brane6}
 \begin{eqnarray}
 \label{eq:Friedmann-dbiintro}
 3 \Mpl^2 H^2(\varphi ) &=& V(\varphi ) -T(\varphi ) 
-\left[ 1- \sqrt{1+4\Mpl^4T^{-1} H'^2} \right] \,,\\
+\left[ 1- \sqrt{1+4\Mpl^4T^{-1} H_{,\vp}^2} \right] \,,\\
 \label{useful}
-\dot{\varphi} &=& - \frac{2\Mpl^2H'}{\sqrt{1+4\Mpl^4 T^{-1} H'^2}} \,.
+\dot{\varphi} &=& - \frac{2\Mpl^2H_{,\vp}}{\sqrt{1+4\Mpl^4 T^{-1} H_{,\vp}^2}}
+\,.
 \end{eqnarray}
 % 
 
@@ -610,12 +612,12 @@ be quantified in terms of these three parameters:
 \label{eq:epsdefn-dbiintro}
 \epsilon_H \equiv -\frac{\dot{H}}{H^2}
 = \frac{XP_{,X}}{\Mpl^2H^2} 
-= \frac{2\Mpl^2}{\gamma} \left( \frac{H'}{H} \right)^2 \\
+= \frac{2\Mpl^2}{\gamma} \left( \frac{H_{,\vp}}{H} \right)^2 \\
 \label{eq:defeta-dbiintro}
-\eta_H \equiv  \frac{2\Mpl^2}{\gamma}\frac{H''}{H} \\
+\eta_H \equiv  \frac{2\Mpl^2}{\gamma}\frac{H_{,\vp\vp}}{H} \\
 \label{eq:defs-dbiintro}
 s \equiv \frac{\dot{c_s}}{c_sH} 
-= \frac{2\Mpl^2}{\gamma} \frac{H'}{H}\frac{\gamma'}{\gamma}  \,,
+= \frac{2\Mpl^2}{\gamma} \frac{H_{,\vp}}{H}\frac{\gamma_{,\vp}}{\gamma}  \,,
 \end{eqnarray}
 % 
 where $\gamma \equiv 1/c_s$. 
