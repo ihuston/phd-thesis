@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.25 2009/09/16 15:32:59 ith Exp $
+% $Id: dbi.tex,v 1.26 2009/09/16 15:47:02 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.25 2009/09/16 15:32:59 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.26 2009/09/16 15:47:02 ith Exp $}
 % \input{paper1}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -213,7 +213,7 @@ observation can be estimated to be
 \frac{|\Delta \rho_*| \rho^5_{*}}{h^{4}_{*}} \,.
 \end{equation}
 % 
-Combining the inequality (\ref{eq:importantbound}) with Eq. (\ref{eq:trapezium}) 
+Combining the inequality (\ref{eq:importantbound}) with \eq{eq:trapezium} 
 then implies that 
 % 
 \begin{equation}
@@ -284,7 +284,7 @@ ${r_*} \, {\lsim} \, {2 \times 10^{-11}}$.
 
 Before concluding this section, we should remark that 
 the estimate (\ref{eq:trapezium}) was derived under the assumption  
-that the integrand in Eq. (\ref{eq:throatvolume})  
+that the integrand in \eq{eq:throatvolume}  
 is constant. This inevitably introduces errors into the bound
 (\ref{eq:generalbound}). However, the two limiting cases of interest 
 in KS-type geometries arise 
@@ -304,7 +304,7 @@ Taylor series, we find that
 \frac{(\Delta \rho_*)}{\rho_{*}} \right]  \,.
 \end{equation}
 % 
-This implies that the error in Eq. (\ref{eq:trapezium}) 
+This implies that the error in \eq{eq:trapezium} 
 is no greater than 
 about $3 (\Delta \rho_* / \rho_*)$ if  
 $0 \le \alpha \le 1$. More generally, it follows that a similar
@@ -312,7 +312,7 @@ error will arise for {\em any} warp factor
 $h \propto \rho^{\alpha (\rho )}$, where the function 
 $\alpha (\rho)$ satisfies $0 \le \alpha (\rho ) \le 1$ 
 over observable scales. 
-We conclude, therefore, that Eq. (\ref{eq:trapezium}) 
+We conclude, therefore, that \eq{eq:trapezium} 
 provides a sufficiently good estimate of the volume element  
 for a generic warp factor
 \footnote{As we shall see in the following Section, 
@@ -339,7 +339,7 @@ small. Hence, $r=0$ can be assumed as a prior when discussing the WMAP5 data.
 However, in this case the data 
 disfavours a scale-invariant density spectrum at close to the $3 \sigma$ level
 ($2.78\sigma$)
-when the running in the spectral index, $\alpha_s \equiv dn_s/d\ln k$, 
+when the running in the spectral index, $\alpha_s \equiv \d n_s/\d\ln k$, 
 is negligible \cite{Komatsu:2008hk}.  
 Furthermore, a blue spectral index 
 is only marginally consistent with the data when $r\ne 0$ and $\alpha_s=0$. 
@@ -352,7 +352,7 @@ to be preferred by the current data.
 
 
 In general, the spectral index may be related to the tensor-scalar ratio. 
-After differentiating Eq. (\ref{eq:csdefn-dbiintro}) 
+After differentiating \eq{eq:csdefn-dbiintro} 
 with respect to coordinate time, and employing Eqs. (\ref{eq:phidot-useful}) 
 and (\ref{indices}), we find that\footnotemark
 % 
@@ -372,7 +372,7 @@ $H_{,\vp}<0$. In order to remove the ambiguity we rewrite \eq{eq:phidot-useful}
 using $-H_{,\vp} = \mp |H_{,\vp}|$ where the minus (plus) sign corresponds to
 the UV (IR) case.}
 % 
-The second term in Eq. (\ref{eq:nsconstraint}) 
+The second term in \eq{eq:nsconstraint}
 can be converted into observable parameters
 by defining the `tilt' of the non-linearity parameter  \cite{brane14}: 
 % 
@@ -382,9 +382,8 @@ by defining the `tilt' of the non-linearity parameter  \cite{brane14}:
 \end{equation}
 % 
 This implies that $s=  3 \fnl \nnl /[2(1-3\fnl)]$ and     
-substitution of Eqs. (\ref{indices})--(\ref{eq:fnlcs-dbiintro}) 
-into Eq. (\ref{eq:nsconstraint}) then yields
-\addtodo{ Show working  }
+substitution of Eqs.~(\ref{indices})--(\ref{eq:fnlcs-dbiintro}) 
+into \eq{eq:nsconstraint} then yields
 % 
 \begin{equation}
 \label{eq:obscon1}
@@ -394,7 +393,7 @@ into Eq. (\ref{eq:nsconstraint}) then yields
 % 
 
 
-In \cite{lidser2}, brane inflation near the tip of a KS-type 
+In \Rref{lidser2}, brane inflation near the tip of a KS-type 
 throat was considered, where the warped brane tension asymptotes to a 
 constant value. In this regime, Eq. (\ref{eq:obscon1}) reduces to 
 the condition $r \simeq 2.3 (1-n_s)/\sqrt{-\fnl}$ when $|\fnl|$ is 
@@ -552,10 +551,10 @@ where $f_i (\varphi )$ are unspecified functions of the inflaton
 field\footnote{It is assumed 
 implicitly that the functions have a suitable form for 
 generating a successful phase of inflation.}.
-A direct comparison with Eq. (\ref{eq:Pdefn-dbiintro}) 
+A direct comparison with \eq{eq:Pdefn-dbiintro} 
 indicates that the standard DBI action exhibits two important properties. 
 The first is the condition that $f_1 f_2 =2$. This implies that 
-$c_sP_{,X} =1$ and greatly simplifies the form of Eq. (\ref{eq:rtheory}). 
+$c_sP_{,X} =1$ and greatly simplifies the form of \eq{eq:rtheory}. 
 The second property is that the warp factor uniquely determines 
 the kinetic structure of the action, i.e., $h^4 \propto f_1 \propto f_2^{-1}$.  
 In view of this, it is interesting to consider whether
@@ -563,9 +562,9 @@ the gravitational wave constraints could be weakened by relaxing one
 or both of these conditions. 
 
 
-Eq. (\ref{eq:genaction-dbi}) 
+\eq{eq:genaction-dbi} 
 can be transformed into a similar form to that of 
-Eq. (\ref{eq:Pdefn-dbiintro}) through the field redefinition 
+\eq{eq:Pdefn-dbiintro} through the field redefinition 
 % 
 \begin{equation}
 \label{eq:defvarphi}
@@ -617,7 +616,7 @@ is straightforward to show that
 % 
 
 
-Eq. (\ref{eq:defvarphi}) also allows us to deduce 
+\eq{eq:defvarphi} also allows us to deduce 
 that the infinitesimal variation of the effective 
 field $\tilde{\varphi}$ is given by the Lyth bound, 
 $(\Delta \tilde{\varphi} /\Mpl )^2 \simeq 
@@ -699,7 +698,7 @@ f_1f_2 > \frac{N (\Delta \N_*)^2 (1-n_s)}{4\sqrt{-3\fnl}} \,.
 
 
 In IR scenarios, however, the positive sign will apply in the 
-last term of the right-hand side of Eq. (\ref{eq:nsconstraintW}).
+last term of the right-hand side of \eq{eq:nsconstraintW}.
 Hence, assuming $f_{1,\vp} >0$ and neglecting the term proportional to 
 $\nnl/\fnl$ yields an {\em upper} limit on the tensor-scalar ratio:
 % 
