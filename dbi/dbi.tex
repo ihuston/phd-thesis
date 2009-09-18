@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.32 2009/09/18 17:07:09 ith Exp $
+% $Id: dbi.tex,v 1.33 2009/09/18 17:08:37 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.32 2009/09/18 17:07:09 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.33 2009/09/18 17:08:37 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -401,16 +401,16 @@ by defining the `tilt' of the non-linearity parameter  \cite{brane14}:
 % 
 \begin{equation}
 \label{eq:nnl-defn-dbi}
-\nnl \equiv \frac{\d \ln |\fnleq|}{\d\ln k}\,. 
+\nnleq \equiv \frac{\d \ln |\fnleq|}{\d\ln k}\,. 
 \end{equation}
 % 
-This implies that $s=  3 \fnleq \nnl /[2(1-3\fnleq)]$ and     
+This implies that $s=  3 \fnleq \nnleq /[2(1-3\fnleq)]$ and     
 substitution of Eqs.~(\ref{indices})--(\ref{eq:fnlcs-dbiintro}) 
 into \eq{eq:nsconstraint} then yields
 % 
 \begin{equation}
 \label{eq:obscon1}
-1-n_s = \frac{r}{4} \sqrt{1-3\fnleq} + \frac{\nnl}{1-3\fnleq}
+1-n_s = \frac{r}{4} \sqrt{1-3\fnleq} + \frac{\nnleq}{1-3\fnleq}
 \mp \sqrt{\frac{r}{8}} \left( \frac{T_{,\vp}}{T} \Mpl \right)_*  \,.
 \end{equation}
 % 
@@ -445,7 +445,7 @@ which implies that
 % 
 \begin{equation}
 \label{eq:halfbound}
-\frac{r}{4} \sqrt{1-3\fnleq} + \frac{\nnl}{1-3\fnleq} 
+\frac{r}{4} \sqrt{1-3\fnleq} + \frac{\nnleq}{1-3\fnleq} 
 > 1-n_s \,.
 \end{equation}
 % 
@@ -460,7 +460,7 @@ compatible with condition (\ref{eq:halfbound}) if
 % 
 \begin{equation}
 \label{eq:nnlbound}
-\nnl \simeq -2s > -3 (1-n_s ) \fnleq > -0.078 \fnleq \,.
+\nnleq \simeq -2s > -3 (1-n_s ) \fnleq > -0.078 \fnleq \,.
 \end{equation}
 % 
 However, when $\fnleq \ll -1$, this would violate the slow-roll conditions
@@ -479,7 +479,7 @@ be a significant effect in DBI inflation.
 Consequently, 
 by saturating the WMAP5 limit $\fnleqeq > -151$, we arrive at 
 a lower bound on the tensor-scalar ratio which applies   
-to any model for which the ratio $|\nnl/\fnleq|$ is 
+to any model for which the ratio $|\nnleq/\fnleq|$ is 
 negligible:
 \addtodo{ Add working}
 % 
@@ -629,7 +629,7 @@ is straightforward to show that
 \begin{equation}
 \label{eq:nsconstraintW}
 1-n_s = \frac{r}{4} \sqrt{1-3\fnleq}
- +\frac{\nnl}{1-3\fnleq} \mp \sqrt{\frac{r}{4f_1f_2}} \left( 
+ +\frac{\nnleq}{1-3\fnleq} \mp \sqrt{\frac{r}{4f_1f_2}} \left( 
 \frac{f_{1,\vp}}{f_1} \Mpl \right)_*  \,.
 \end{equation}
 % 
@@ -719,7 +719,7 @@ f_1f_2 > \frac{N (\Delta \N_*)^2 (1-n_s)}{4\sqrt{-3\fnleq}} \,.
 In IR scenarios, however, the positive sign will apply in the 
 last term of the right-hand side of \eq{eq:nsconstraintW}.
 Hence, assuming $f_{1,\vp} >0$ and neglecting the term proportional to 
-$\nnl/\fnleq$ yields an {\em upper} limit on the tensor-scalar ratio:
+$\nnleq/\fnleq$ yields an {\em upper} limit on the tensor-scalar ratio:
 % 
 \begin{equation}
 \label{eq:IRupper}
