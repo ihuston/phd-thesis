@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.41 2009/09/18 15:24:01 ith Exp $
+% $Id: dbi-intro.tex,v 1.42 2009/09/18 16:57:53 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.41 2009/09/18 15:24:01 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.42 2009/09/18 16:57:53 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -597,7 +597,7 @@ occurred when the brane was located within a
 throat region. We denote the values of all parameters 
 evaluated during observable inflation by a subscript star
 $(~_*)$. Observable inflation corresponds to no more than about 4 e-foldings  
-of inflationary expansion, $\Delta n_* \simeq 4$. 
+of inflationary expansion, $\Delta \N_* \simeq 4$. 
 This occurred somewhere between 30 to 60 e-foldings before the
 end of inflation. 
 
@@ -659,13 +659,13 @@ DBI inflation produces non-gaussianity maximised in the equilateral
 configuration and the leading contribution is in the form of
 \eq{eq:fnldefn-dbiintro}. 
 \addtodo{Change as 2lambda in fact equals 1/cs2 -1}
-When $c_s\PX=1$ the term $\Lambda$ defined in
-\eq{eq:deflambda-dbiintro} is identically zero and $\fnleq$ becomes
+When $c_s\PX=1$ the second term in 
+\eq{eq:fnldefn-dbiintro} is identically zero and $\fnleq$ becomes
 \cite{chenetal,lidser2}
 % 
 \begin{equation}
 \label{eq:fnlcs-dbiintro}
-\fnleq = -\frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
+\fnleq \simeq -\frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
 \end{equation}
 % 
 When $c_s\ll1$ large amounts of non-gaussianity are produced.
@@ -711,11 +711,11 @@ is related to the tensor-scalar amplitude by \cite{lyth,bmpaper}
 \begin{equation}
 \label{eq:genlyth-dbiintro}
 \frac{1}{\Mpl^2}
-\left( \frac{d \varphi}{d \cal{N}} \right)^2 = \frac{r}{8 c_s P_{,X}}
+\left( \frac{\d \varphi}{\d \N} \right)^2 = \frac{r}{8 c_s P_{,X}}
 \,,
 \end{equation}
 % 
-where $n$ denotes the number of e-foldings as defined in
+where $\N$ denotes the number of e-foldings as defined in
 \eq{eq:nefolddefn-intro}.
 The total variation in the inflaton field between the epoch of observable 
 inflation and the end of inflation is then given by
@@ -723,16 +723,16 @@ inflation and the end of inflation is then given by
 \begin{equation}
 \label{eq:totalfield-dbiintro}
 \frac{\Delta \varphi_{\rm inf}}{\Mpl} = 
-\left( \frac{r}{8c_sP_{,X}} \right)_*^{1/2} n_{\rm eff} \,,
+\left( \frac{r}{8 c_s P_{,X}} \right)_*^{1/2} \Neff \,,
 \end{equation}
 % 
 where
 % 
 \begin{equation}
 \label{eq:Neff-dbiintro}
-n_{\rm eff} \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
-\int_0^{n_{\rm end}}  
-\left( \frac{r}{c_sP_{,X}} \right)^{1/2} d n \,.
+\Neff \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
+\int_0^{\N_{\rm end}}  
+\left( \frac{r}{c_sP_{,X}} \right)^{1/2} \d \N \,.
 \end{equation}
 % 
 If $r/(c_s P_{,X})$ varies 
@@ -743,7 +743,7 @@ field is given approximately by \cite{lyth,bmpaper}
 \begin{equation}
 \label{eq:approxlyth-dbiintro}
 \left( \frac{\Delta \varphi}{\Mpl} \right)_*^2 \simeq 
-\frac{(\Delta n_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
+\frac{(\Delta \N_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
 \end{equation}
 % 
 This equality links the total variation of $\vp$ during observable inflation
