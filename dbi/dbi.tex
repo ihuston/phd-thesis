@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.30 2009/09/18 15:38:39 ith Exp $
+% $Id: dbi.tex,v 1.31 2009/09/18 16:29:46 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.30 2009/09/18 15:38:39 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.31 2009/09/18 16:29:46 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -16,8 +16,18 @@
 % 
 % 
 % 
-\addtodo{Expand chapter introduction}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Introduction}
+\label{sec:intro-dbi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
+In this chapter two bounds will be derived which constrain the standard DBI
+inflationary scenario. 
+% 
 The gravitational wave background generated in DBI 
 inflation was recently investigated by Baumann and McAllister (BM) 
 \cite{bmpaper}. By exploiting a relationship due originally 
@@ -30,7 +40,8 @@ DBI inflation driven by a quadratic potential is incompatible with the WMAP3
 data when this constraint is imposed \cite{bean}.  
 
 
-Our aim is to derive observational constraints on DBI inflation that are 
+Our aim in this chapter is to derive observational constraints on DBI inflation
+that are 
 insensitive to the details of the throat geometry and the inflaton potential. 
 In general, there are two realizations of the scenario, 
 which are referred to as the ultra-violet (UV) and infra-red (IR) 
@@ -45,8 +56,8 @@ observable scales cross the Hubble radius, and
 we find in general that the tensor-scalar ratio must satisfy 
 $r \, \lsim \, 10^{-7}$. This 
 is below the projected sensitivity of future Cosmic Microwave Background (CMB) polarization 
-experiments \cite{vpj}. 
-\addtodo{Add CMBPol reference}
+experiments \cite{Baumann:2008aq,vpj}. 
+
 On the other hand, the WMAP5 data 
 favours a red perturbation spectrum with 
 $n_s<1$ when the tensor modes are negligible and 
@@ -58,7 +69,6 @@ This is incompatible with the upper bound
 on $r$ when $1-n_s \simeq 0.03$, as inferred
 by the observations. 
 
-\addtodo{Add section references}
 Hence, a reconciliation between theory and observation 
 requires either a relaxation of the upper limit on $r$ or a blue 
 spectral index $(n_s >1)$. The DBI scenario would need 
@@ -66,8 +76,8 @@ to be generalized in a suitable way for the upper bound on $r$
 to be weakened. We identify necessary conditions that a 
 generalized action must satisfy for the Baumann-McAllister
  constraint to be relaxed. 
-We then show that such conditions can be realized in a recently 
-proposed IR version of DBI inflation driven
+In Chapter~\ref{ch:multibrane} we show that such conditions can be realized
+in a recently proposed IR version of DBI inflation driven
 by multiple coincident branes \cite{thomasward}. 
 
 % 
@@ -83,7 +93,7 @@ by multiple coincident branes \cite{thomasward}.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
 
-\addtodo{Add fuller explanantion}
+% \addtodo{Add fuller explanantion}
 Recently, Baumann and McAllister (BM) \cite{bmpaper} 
 derived a field-theoretic upper bound on the tensor-scalar ratio 
 by noting that the four-dimensional Planck mass is related 
@@ -103,7 +113,8 @@ V_{6,\mathrm{throat}} = \mathrm{Vol}(X_5)
 % 
 and $\rho_{UV}$ denotes the radial coordinate at 
 the edge of the throat (defined as the region 
-where $h (\rho_{UV})$ is of order unity). 
+where $h (\rho_{UV})$ is of order unity). The geometry of the throat is shown
+in Figure~\ref{fig:throat-geom}.
 
 % 
 \begin{figure}
@@ -120,7 +131,6 @@ manifold.}
 
 If one assumes that the bulk volume is 
 non-negligible relative to 
-\addtodo{ add citation}
 that of the throat (i.e. $V_{6,\mathrm{throat}} < V_{6}$), 
 it follows that $\Mpl^2> V_{6,\mathrm{throat}}\kappa_{10}^{-2}$. 
 For a warped $AdS_5 \times X_5$ geometry, this leads to an 
@@ -148,9 +158,9 @@ is given by the Lyth bound
 \frac{r}{8} \,,
 \end{equation}
 % 
-where $\N \equiv \int dt H$. 
-Since $\varphi_* < \varphi_{UV}$, this 
-results in an upper bound on the observable tensor-scalar ratio
+where $\N$ is the number of e-foldings as defined in \eq{eq:nefolddefn-intro}. 
+Since the field value during observable inflation $\varphi_* < \varphi_{UV}$,
+this results in an upper bound on the observable tensor-scalar ratio
 \cite{bmpaper}: 
 % 
 \begin{equation}
@@ -158,20 +168,20 @@ results in an upper bound on the observable tensor-scalar ratio
 r_*  < \frac{32}{N (\Neff)^2} \,,
 \end{equation}
 % 
-where $\Neff \equiv 
-\int^{{\cal{N}}_{\mathrm{end}}}_0 d \N (r/r_*)^{1/2}$ 
+where the effective number of e-foldings $\Neff \equiv 
+\int^{\N_{\mathrm{end}}}_0 d \N (r/r_*)^{1/2}$ 
 is a model-dependent parameter that quantifies 
-how $r$ varies during the final stages of inflation.  
+how $r$ varies during the final stages of inflation. If $r$ is constant during
+inflation then $\Neff = \N_\mathrm{end}$.
 
-\addtodo{Explain following para including example and citation for backreaction
-comment.}
+
 Typically, one expects $30 \, \lsim \, {\Neff} 
 \, \lsim \, 60$, 
 although smaller values may be possible if the slow-roll conditions are 
 violated after observable scales have crossed the horizon. 
 Furthermore, $N \gg 1$ is necessary 
-for backreaction effects to be negligible. 
- Hence, the constraint (\ref{eq:BMboundr}) 
+for backreaction effects to be negligible \cite{bmpaper}. 
+Hence, the constraint (\ref{eq:BMboundr}) 
 imposes a strong restriction on DBI inflationary models. 
 On the other hand, the numerical value 
 of $\Neff$ is uncertain.  
@@ -180,8 +190,7 @@ inflaton field during the observable stages of inflation.
 This will result in a constraint on the tensor modes that 
 can be expressed in terms of observable parameters.  
 
-% 
-% \missingfigure{Add figure of brane moving in throat}
+
 To proceed, we denote the change in the value of the inflaton field over 
 observable scales by 
 $\Delta  \varphi _{*} = \sqrt{T_3} \Delta \rho_{*}$. 
@@ -283,11 +292,10 @@ upper bound on the tensor-scalar ratio for standard UV DBI inflation:
 r_* < 10^{-7} \,.
 \end{equation}
 % 
-\addtodo{Add comment:``This is main result of this section''. Update refs below asclover now longer
-funded.}
-This is significantly below the sensitivity 
+The bound \eqref{eq:standardbound} is the main result of this section.
+This value of $r$ is significantly below the sensitivity 
 of future CMB polarization experiments, which will measure 
-${r} \, {\gsim} \, 10^{-4}$ \cite{clover,vpj}. 
+${r} \, {\gsim} \, 10^{-4}$ \cite{Baumann:2008aq,vpj}. 
 If CMB  
 observations are able to span the full range of e-foldings such that
 $\Delta \N_* \simeq 4$, this constraint is strengthened to 
@@ -344,7 +352,7 @@ difference to our final conclusions.}.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-The analysis of the previous Section 
+The analysis of the previous section 
 indicates that standard versions of UV DBI inflation generate a 
 tensor spectrum that is unobservably 
 small. Hence, $r=0$ can be assumed as a prior when discussing the WMAP5 data.
@@ -477,7 +485,7 @@ negligible:
 r_* >  \frac{4(1-n_s)}{\sqrt{-3\fnl}} > \frac{1-n_s}{6} \,.
 \end{equation}
 % 
-This requires $r > 0.005$ for the WMAP5 best-fit value 
+This second bound requires $r > 0.005$ for the WMAP5 best-fit value 
 $1-n_s \simeq 0.032$, which is incompatible with the upper limit 
 (\ref{eq:standardbound}). 
 
@@ -507,12 +515,11 @@ In particular, combining the limits
 and we find that $\mathrm{Vol}(X_5) \, \lsim \, 10^{-7}$ 
 for typical values $1-n_s \simeq 0.05$ and 
 $\Delta \N_* \simeq 4$. 
-\addtodo{ Any updates on this?}
 This 
 is comparable to the limit on the volume derived for the special case of a 
 quadratic inflaton potential \cite{bmpaper}.  
-As noted in \cite{bmpaper,bean}, condition 
-(\ref{eq:upperboundvol}) may be achieved 
+As noted in Refs.~\cite{bmpaper} and \cite{bean}, condition 
+\eqref{eq:upperboundvol} may be achieved 
 if $X_5$ corresponds to a $Y^{p,q}$ space, 
 which has arbitrarily small volume in the limit  
 $q =1$ and $p \rightarrow \infty$ \cite{gauntlett}. 
@@ -521,7 +528,7 @@ by orbifolding the $S^2$ symmetry of a KS-type throat.
 
 
 On the other hand, 
-our upper limit (\ref{eq:upperbound}) on the gravitational waves 
+the upper limit (\ref{eq:upperbound}) on the gravitational waves 
 follows as a consequence of assuming 
 the constraint (\ref{eq:importantbound}). This  
 could be violated in IR versions of the scenario, where
@@ -533,7 +540,7 @@ on the tensor modes
 will also apply to any IR DBI model for which 
 $|\Delta \varphi_* | < \varphi_*$.  
 In view of the above discussion, therefore, 
-we will proceed in the following Section
+we will proceed in the following section
 to discuss a framework for generalizing the DBI scenario so 
 that the constraints on the tensor modes can be satisfied. 
 % 
@@ -550,8 +557,7 @@ that the constraints on the tensor modes can be satisfied.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
-\addtodo{Change section title?}
-In this Section, we take a phenomenological 
+In this section, we take a phenomenological 
 approach and consider a general kinetic function of the form:
 % 
 \begin{equation}
@@ -583,17 +589,15 @@ can be transformed into a similar form to that of
 \tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_1f_2}{2}}  \,.
 \end{equation}
 % 
-\addtodo{Link $c_s$ to general defn in dbi-intro} 
 This implies that the sound speed of fluctuations in 
-the inflaton is given by
+the inflaton, defined in \eq{eq:defcs-dbiintro} is given by
 %  
 \begin{equation}
 \label{eq:cs-dbi}
 c_s = \sqrt{1-f_2 X} = \frac{f_1f_2}{2} \frac{1}{P_{,X}}  \,,
 \end{equation}
 % 
-and the scalar perturbation amplitude by
-\addtodo{ Change to standard spectrum definition }
+and the scalar perturbation amplitude \eqref{eq:Ps-dbiintro} by
 % 
 \begin{equation}
 \label{eq:spectrum-dbi}
@@ -731,13 +735,13 @@ for the generalized BM bound to be satisfied in IR inflation:
 % 
 
 
-To summarize this Section, 
+To summarize this section, 
 expression (\ref{eq:genBMbound}) implies that the 
 BM bound (\ref{eq:BMboundr}) 
 could be relaxed if $f_1f_2 \gg 1$ on observable scales. 
 It is therefore important to develop string-inspired models 
-where this condition arises naturally. This will be the focus of the 
-next Section.
+where this condition arises naturally. We will explore this possibility in the
+next chapter.
 % 
 % 
 % 
@@ -845,7 +849,7 @@ chapter can be applied.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-In this paper, we have derived an upper limit to
+In this chapter we have derived an upper limit to
 the amplitude of the primordial gravitational wave spectrum
 generated during UV DBI inflation. We considered   
 the maximal inflaton field variation   
@@ -868,7 +872,7 @@ we have identified a corresponding
 lower limit on $r$ which applies in this region of 
 parameter space, $r_* \, \gsim \, 0.1 (1-n_s)$. It is clear that 
 the standard model 
-can not satisfy both the upper and lower bounds 
+cannot satisfy both the upper and lower bounds 
 on the tensor modes for the observationally favoured value 
 $1-n_s \simeq 0.03$.
 
@@ -890,20 +894,19 @@ the volume of $X_5$ or
 by generalizing the DBI action. Furthermore, it need not necessarily 
 apply in IR versions of the scenario, although the BM bound will still hold
 in such cases. 
-
-
 We considered a generalized version of the 
 DBI action and identified a necessary condition on the form of such  
 an action for the BM bound to be relaxed.
-As a concrete example, 
-we investigated a version of IR inflation that is driven by 
-multiple coincident branes and found that  
-the bounds on the tensor-scalar ratio can indeed 
-be made compatible if the brane charges satisfy appropriate 
-conditions.   
+
+% As a concrete example, 
+% we investigated a version of IR inflation that is driven by 
+% multiple coincident branes and found that  
+% the bounds on the tensor-scalar ratio can indeed 
+% be made compatible if the brane charges satisfy appropriate 
+% conditions.   
 
 
-The upper bound on $r$ that we derived in section 3 arises 
+The upper bound on $r$ that we derived in Section~\ref{sec:upper-dbi} arises 
 because the warp factor in standard DBI models 
 completely specifies the kinetic 
 energy of the inflaton field. Deriving a corresponding bound for 
@@ -935,10 +938,10 @@ check that any given model must satisfy
 irrespective of the form of the inflaton potential. 
 
 
-\addtodo{ Rewrite in terms of thesis}
-In conclusion, therefore, primordial gravitational wave constraints 
+In this chapter we have shown that primordial gravitational wave constraints 
 combined with cosmological observations of the density perturbation
 spectrum act as a powerful discriminant of DBI inflationary models. 
-They also serve as an important 
-observational guide for identifying viable 
-generalizations of the scenario. 
+They also serve as an important observational guide for identifying viable 
+generalizations of the scenario. In Chapter~\ref{ch:multibrane} we will explore
+one particular generalisation, the multiple co-incident brane scenario
+introduced in \Rref{thomasward}.
