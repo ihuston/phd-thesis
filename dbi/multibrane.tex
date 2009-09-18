@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.24 2009/09/18 15:38:39 ith Exp $
+% $Id: multibrane.tex,v 1.25 2009/09/18 17:12:23 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.24 2009/09/18 15:38:39 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.25 2009/09/18 17:12:23 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -159,7 +159,7 @@ a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales:
 \begin{equation}
 \label{eq:warptorelax}
 \frac{NT_3h^4_*}{\Mpl^4} < 
-\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnl}(\Delta \N_*)^2} \,.
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq}(\Delta \N_*)^2} \,.
 \end{equation}
 % 
 
@@ -175,7 +175,7 @@ value of the inflation during observable inflation:
 \begin{equation}
 \label{eq:phivalue-dbi}
 \frac{\varphi_*^4}{\Mpl^4} < 
-\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnl} ( \Delta \N_*)^2} 
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} 
 \frac{\lambda}{N} \,,
 \end{equation}
 %  
@@ -190,15 +190,15 @@ ${\rm D3}$-brane charge:
 % 
 \begin{equation}
 \label{eq:Nlimit-dbi}
-N< \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnl} ( \Delta \N_*)^2}
+N< \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
 \left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,.
 \end{equation}
 % 
 Assuming the typical values $m_s \sim 10^{-2}\Mpl$, 
 $\Delta \N_* \simeq 4$ and 
 $h_{\rm cut} \sim 10^{-2}$ implies  
-$N < 7 \times 10^7 (1-n_s)(-\fnl)^{-1/2} < 2\times 10^6$, where 
-the latter inequality follows for $1-n_s <0.05$ and $\fnl <-5$. 
+$N < 7 \times 10^7 (1-n_s)(-\fnleq)^{-1/2} < 2\times 10^6$, where 
+the latter inequality follows for $1-n_s <0.05$ and $\fnleq <-5$. 
 
 
 For an $AdS_5$ throat, the fuzzy potential 
@@ -215,14 +215,14 @@ Hence, combining inequalities
 \begin{equation}
 \label{eq:nlimit-dbi}
 \hat{C} \ll 
-\frac{32 \pi^4 (1-n_s)\Pr}{\sqrt{-3\fnl} ( \Delta \N_*)^2}
+\frac{32 \pi^4 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
 \frac{g_s}{\mathrm{Vol} (X_5) }
 \left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,,
 \end{equation}
 % 
 and specifying $g_s \sim 10^{-2}$ and 
 $\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
-$\hat{C} \ll 10^{6} (1-n_s)(-\fnl)^{-1/2} < 2 \times 10^4$, or equivalently,  
+$\hat{C} \ll 10^{6} (1-n_s)(-\fnleq)^{-1/2} < 2 \times 10^4$, or equivalently,  
 $n \ll 150$. Furthermore, since $f_1f_2 \simeq {\rm constant}$, 
 the inequality (\ref{eq:genBMbound}) may be strengthened by a 
 factor of $(   \Neff /\Delta \N_*)^2$ by 
@@ -251,7 +251,7 @@ In this case, the generalized BM bound (\ref{eq:warptorelax}) becomes
 \label{eq:loglimit-dbi}
 \frac{8\pi K}{3Mg_s} -\ln N > 4 \ln \left( \frac{m_s}{g_s^{1/4}\Mpl} \right)
 -\ln \left( 
-\frac{64\pi^5 (1-n_s)\Pr}{\sqrt{-3\fnl} ( \Delta \N_*)^2}
+\frac{64\pi^5 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
 \right) \,.
 \end{equation}
 % 
@@ -267,7 +267,7 @@ generalized BM bound to be satisfied:
 \begin{equation}
 \label{eq:Nlowerlimit-dbi}
 \frac{1}{N} \exp \left( \frac{8\pi g_s N}{3}  \right)
-> \frac{\sqrt{-3\fnl} ( \Delta \N_*)^2}{64\pi^5 
+> \frac{\sqrt{-3\fnleq} ( \Delta \N_*)^2}{64\pi^5 
 (1-n_s)\Pr} \frac{1}{g_s} \left( \frac{m_s}{\Mpl} \right)^4 \,.
 \end{equation}
 % 
@@ -283,10 +283,10 @@ deduce the lower limit
 % 
 \begin{equation}
 \label{eq:Nconstraint-dbi}
-N- 12 \ln N > -6.8 +12 \ln \left( \frac{\sqrt{-\fnl}}{1-n_s} \right) \,,
+N- 12 \ln N > -6.8 +12 \ln \left( \frac{\sqrt{-\fnleq}}{1-n_s} \right) \,,
 \end{equation}
 % 
-which becomes $N \, \gsim \, 10^2$ for $1-n_s \simeq 0.05$ and $\fnl<-5$.
+which becomes $N \, \gsim \, 10^2$ for $1-n_s \simeq 0.05$ and $\fnleq<-5$.
 
 
 In general, however, the $K$ and $M$ units of flux are not independent. 
@@ -614,11 +614,11 @@ we find from \eq{eq:fnldefn-dbiintro} that
 %  
 \begin{eqnarray}
 \label{eq:consequence3-multi}
-\fnl \simeq \frac{-\beta}{1-f_2X} , \qquad \beta \equiv \frac{5(59-55m)}{486}
+\fnleq \simeq \frac{-\beta}{1-f_2X} , \qquad \beta \equiv \frac{5(59-55m)}{486}
 \,,
 \\
 \label{eq:consequence4-multi}
-\fnl \simeq -\frac{\sigma}{c_s^2}, \qquad \sigma \equiv 
+\fnleq \simeq -\frac{\sigma}{c_s^2}, \qquad \sigma \equiv 
 \frac{5}{972} \left( \frac{59-55m}{1-m} \right) \,.
 \end{eqnarray}
 % 
@@ -628,7 +628,7 @@ into the BM bound (\ref{eq:BMbound-multi}) and the LH bound (\ref{eq:LHbound}) i
 \begin{equation}
 \label{eq:weakBM-multi}
 r_*< \frac{32}{N \Neff^2} \frac{(-m) f_1 f_2}{\sqrt{2(1-m)}}
-\left( -\frac{\fnl}{\beta} \right)^{(1-2m)/2}
+\left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
 \end{equation}
 % 
 and
@@ -638,7 +638,7 @@ and
 r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
 \left( \frac{h_*}{\Mpl} \right)^{4/3}
 \frac{(-m) f_1 f_2}{\sqrt{2(1-m)}}
-\left( -\frac{\fnl}{\beta} \right)^{(1-2m)/2}
+\left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
 \end{equation}
 % 
 respectively. 
@@ -647,7 +647,7 @@ respectively.
 We conclude, therefore, that 
 the upper limit on the tensor-scalar ratio could be significantly 
 relaxed if $m <1/2$, since the non-linearity parameter is at present only 
-weakly constrained at $\fnl >-151$. Although it is possible 
+weakly constrained at $\fnleq >-151$. Although it is possible 
 to phenomenologically construct a model which has a value of $m$ in this 
 range, it is clearly preferable to identify  UV complete models
 that satisfy this requirement within a string theory context. 
@@ -1011,13 +1011,14 @@ f_1 (\varphi) = 2T_3 h^4 \sqrt{1+(n-1)^2Y} , \qquad
 f_2 (\varphi) = \frac{2}{T_3 h^4} \,.
 \end{equation}
 % 
-We may therefore immediately conclude from \eq{eq:consequence4-multi} that $\fnl
+We may therefore immediately conclude from \eq{eq:consequence4-multi} that
+$\fnleq
 \simeq -0.3/c_s^2$. Moreover, since $\beta \simeq 0.9$ in this scenario, 
 Eqs. (\ref{eq:consequence-multi}) and (\ref{eq:consequence3-multi}) reduce to  
 % 
 \begin{equation}
 \label{eq:csPXlimit}
-c_sP_{,X} \simeq -1.3 \sqrt{1+(n-1)^2Y} \fnl \,.
+c_sP_{,X} \simeq -1.3 \sqrt{1+(n-1)^2Y} \fnleq \,.
 \end{equation}
 % 
 
@@ -1031,7 +1032,7 @@ that
 \begin{equation}
 \label{eq:usefulPs-multi}
 \Ps \simeq -\frac{1}{50} \frac{H^4}{T_3 h^4\sqrt{1+(n-1)^2Y}}
-\frac{1}{\fnl}\,.
+\frac{1}{\fnleq}\,.
 \end{equation}
 % 
 Substituting the tensor-scalar ratio (\ref{eq:rdefn-dbiintro}) into  
@@ -1041,7 +1042,7 @@ the warp factor during observable inflation:
 \begin{equation}
 \label{eq:warpfactor-multi}
 \frac{h^4_*}{\Mpl^4} \simeq \frac{-1}{2 T_3 \sqrt{1+(n-1)^2Y}} 
-\frac{r^2 \Ps}{\fnl} \,.
+\frac{r^2 \Ps}{\fnleq} \,.
 \end{equation}
 % 
 Eqs. (\ref{eq:csPXlimit}) and (\ref{eq:warpfactor-multi}) may now be substituted into 
@@ -1050,7 +1051,7 @@ the LH bound (\ref{eq:LHbound}) to yield
 \begin{equation}
 \label{eq:actualLH-multi}
 r_* < \frac{1100}{(\Delta \N )_*^6} 
-\frac{[1+(n-1)^2Y]}{\Vol} \Ps \fnl^2 \,.
+\frac{[1+(n-1)^2Y]}{\Vol} \Ps \fnleq^2 \,.
 \end{equation}
 % 
 
@@ -1079,7 +1080,7 @@ the bound (\ref{eq:actualLH-multi}) simplifies to
 %  
 \begin{equation}
 \label{eq:AdSupper-multi}
-r_* < 2.8 \times 10^{-13} \frac{N}{(n-1)^2} \fnl^2 \,.
+r_* < 2.8 \times 10^{-13} \frac{N}{(n-1)^2} \fnleq^2 \,.
 \end{equation}
 % 
 
@@ -1099,7 +1100,7 @@ N < 75852
 \end{equation}
 % 
 for known solutions, although in principle higher values are possible. 
-Imposing the WMAP5 bound $\fnl>-151$ in (\ref{eq:AdSupper-multi})
+Imposing the WMAP5 bound $\fnleq>-151$ in (\ref{eq:AdSupper-multi})
 and noting that $n \ge 2$ for consistency then implies an absolute
 upper limit 
 on the tensor-scalar ratio:
@@ -1124,20 +1125,20 @@ models. We find from (\ref{eq:AdSupper-multi}) that this would require
 % 
 \begin{equation}
 \label{eq:nlimit-multi}
-n < 1 -5.3 \times 10^{-5} \sqrt{N} \fnl < 1-0.014 \fnl \,,
+n < 1 -5.3 \times 10^{-5} \sqrt{N} \fnleq < 1-0.014 \fnleq \,,
 \end{equation}
 % 
 where the theoretic limit ({\ref{eq:Nlimit-multi}) for 
 known compactifications has been imposed in the 
 second inequality. We may deduce, therefore, that  
 since we require $n \ge 2$ for consistency, a detectable tensor 
-signal will require $\fnl < -70$, which implies that an observation of 
+signal will require $\fnleq < -70$, which implies that an observation of 
 the tensors should also be 
 accompanied by a sufficiently large -- and detectable -- non-Gaussianity. 
 In other words, this class of models could  
 be ruled out if tensors are observed in the absence of any
 non-Gaussianity. On the other hand, the current 
-limit of  $\fnl >-151$ implies that $n \le 3$ is required 
+limit of  $\fnleq >-151$ implies that $n \le 3$ is required 
 for the tensors to be observable. 
 Consequently, if tensor perturbations are detected, this would rule 
 out all models with $n \ge  4$ or, alternatively, would require presently 
@@ -1181,7 +1182,7 @@ BM bound (\ref{eq:BMbound-multi}) for this class of models. This is given by
 % 
 \begin{equation}
 \label{eq:BMAdS-multi}
-r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnl 
+r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnleq 
 \end{equation}
 %  
 and, in the case of an $AdS_5 \times X_5$ throat, simplifies to
@@ -1189,7 +1190,7 @@ and, in the case of an $AdS_5 \times X_5$ throat, simplifies to
 \begin{equation}
 \label{eq:bmadsbound}
 r_* < -\frac{5}{\Neff^2} 
-\frac{\fnl}{(n-1)\sqrt{N}} \,.
+\frac{\fnleq}{(n-1)\sqrt{N}} \,.
 \end{equation}
 %  
 Comparing the limits (\ref{eq:AdSupper-multi}) and (\ref{eq:bmadsbound}) 
@@ -1197,19 +1198,19 @@ implies that the LH bound is stronger than the corresponding BM bound if
 % 
 \begin{equation}
 \label{eq:LHstrongerads}
-n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnl 
+n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq 
 \end{equation}
 % 
 and this condition is always satisfied if 
 % 
 \begin{equation}
 \label{eq:allNbound-multi}
--5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnl  <1  \, .
+-5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq  <1  \, .
 \end{equation}
 % 
 Moreover, the bound (\ref{eq:allNbound-multi}) will itself be satisfied for 
-all values of $\fnl$ and $N$ if it is satisfied when the limits 
-$\fnl =-151$ and $N=75852$ are imposed. Hence, we conclude that the LH bound 
+all values of $\fnleq$ and $N$ if it is satisfied when the limits 
+$\fnleq =-151$ and $N=75852$ are imposed. Hence, we conclude that the LH bound 
 is stronger for $\Neff < 75$. 
 In general, it is difficult to quantify 
 the magnitude of $\Neff$ without 
@@ -1299,7 +1300,7 @@ for typical string-theoretic parameter values
 if the number of coincident branes, $n$, is either $2$ or $3$. 
 This is consistent with known F-theory configurations and 
 current WMAP3 limits on the non-Gaussianity. Furthermore, 
-we found that the level of non-Gaussianity must exceed $\fnl 
+we found that the level of non-Gaussianity must exceed $\fnleq 
 \lsim -70$ if such configurations are to generate a detectable tensor 
 signal. This is well within the projected sensitivity 
 of the Planck satellite.   
@@ -1339,7 +1340,7 @@ $m \ne - 1/2$ arises in other string-inspired settings.
 generality without imposing the limits (\ref{eq:Plimits}) on the 
 derivatives of the kinetic function. This allows us to determine the 
 most general class of models where the non-linearity parameter 
-satisfies the condition $\fnl \propto 1/c_s^2$ at leading order. 
+satisfies the condition $\fnleq \propto 1/c_s^2$ at leading order. 
 
 In general \eq{eq:defalpha} takes the form 
 % 
