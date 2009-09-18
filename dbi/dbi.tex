@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.34 2009/09/18 17:13:46 ith Exp $
+% $Id: dbi.tex,v 1.35 2009/09/18 17:45:56 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.34 2009/09/18 17:13:46 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.35 2009/09/18 17:45:56 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -25,11 +25,17 @@
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-In this chapter two bounds will be derived which constrain the standard DBI
-inflationary scenario. 
+In this chapter two bounds will be derived which severely challenge the standard
+DBI inflationary scenario. By considering the field range of observable
+inflation inside a warped throat, the tensor-scalar ratio $r$ will be
+constrained to be less than $10^{-7}$. In contrast a lower bound of $r\gsim
+0.005$ will be derived when the power spectrum of scalar perturbations has a red
+spectral index. These clearly incompatible bounds can be avoided by using a more
+general form of the DBI action.
+
 % 
 The gravitational wave background generated in DBI 
-inflation was recently investigated by Baumann and McAllister (BM) 
+inflation was initially investigated by Baumann and McAllister (BM) 
 \cite{bmpaper}. By exploiting a relationship due originally 
 to Lyth \cite{lyth}, these authors derived a field-theoretic upper limit 
 to the tensor amplitude and concluded that 
@@ -76,8 +82,8 @@ to be generalized in a suitable way for the upper bound on $r$
 to be weakened. We identify necessary conditions that a 
 generalized action must satisfy for the Baumann-McAllister
  constraint to be relaxed. 
-In Chapter~\ref{ch:multibrane} we show that such conditions can be realized
-in a recently proposed IR version of DBI inflation driven
+Such conditions are shown in Chapter~\ref{ch:multibrane} to be
+realized in a recently proposed IR version of DBI inflation driven
 by multiple coincident branes \cite{thomasward}. 
 
 % 
@@ -94,15 +100,15 @@ by multiple coincident branes \cite{thomasward}.
 %
 
 % \addtodo{Add fuller explanantion}
-Recently, Baumann and McAllister (BM) \cite{bmpaper} 
-derived a field-theoretic upper bound on the tensor-scalar ratio 
-by noting that the four-dimensional Planck mass is related 
+In \Rref{bmpaper} Baumann and McAllister (BM)  
+derived a field-theoretic upper bound on the tensor-scalar ratio. They achieved
+this by noting that the four-dimensional Planck mass is related 
 to the volume of the compactified CY manifold, $V_6$, such that 
 $\Mpl^2=V_6 \kappa_{10}^{-2}$, where $\kappa_{10}^2 \equiv 
 \frac{1}{2} (2\pi )^7 g_s^2 m_s^{-8}$.
 In general, the compactified volume 
 is comprised of bulk and throat contributions, 
-$V_6 = V_{6,{\rm bulk}}+V_{6,{\rm throat}}$, where the latter is 
+$V_6 = V_{6,{\rm bulk}}+V_{6,{\rm throat}}$. The latter is 
 given by
 % 
 \begin{equation}
@@ -111,7 +117,7 @@ V_{6,\mathrm{throat}} = \mathrm{Vol}(X_5)
 \int_0^{\rho_{UV}} d\rho \frac{\rho^5}{h^4(\rho )} \,,
 \end{equation}
 % 
-and $\rho_{UV}$ denotes the radial coordinate at 
+where $\rho_{UV}$ denotes the radial coordinate at 
 the edge of the throat (defined as the region 
 where $h (\rho_{UV})$ is of order unity). The geometry of the throat is shown
 in Figure~\ref{fig:throat-geom}.
@@ -166,16 +172,16 @@ this results in an upper bound on the observable tensor-scalar ratio
 % 
 \begin{equation}
 \label{eq:BMboundr}
-r_*  < \frac{32}{N (\Neff)^2} \,,
+r_*  < \frac{32}{N (\Neff)^2} \,.
 \end{equation}
 % 
-where the effective number of e-foldings $\Neff$ defined in
-\eq{eq:Neff-dbiintro} 
+The effective number of e-foldings $\Neff$, defined in
+\eq{eq:Neff-dbiintro}, 
 is a model-dependent parameter that quantifies 
 how $r$ varies during the final stages of inflation. As $c_s\PX = 1$ in the
 standard DBI model, if $r$ is constant during
-inflation then $\Neff = \N_\mathrm{end}$, the total number of e-foldings of
-inflation.
+inflation then $\Neff = \N_\mathrm{end}$ which is the total number of e-foldings
+of inflation.
 
 
 Typically, one expects $30 \, \lsim \, {\Neff} 
@@ -184,7 +190,7 @@ although smaller values may be possible if the slow-roll conditions are
 violated after observable scales have crossed the horizon. 
 Furthermore, $N \gg 1$ is necessary 
 for backreaction effects to be negligible \cite{bmpaper}. 
-Hence, the constraint (\ref{eq:BMboundr}) 
+Hence, the constraint \eqref{eq:BMboundr} 
 imposes a strong restriction on DBI inflationary models. 
 On the other hand, the numerical value 
 of $\Neff$ is uncertain.  
