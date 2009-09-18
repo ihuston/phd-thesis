@@ -1,10 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.28 2009/09/17 17:02:07 ith Exp $
+% $Id: dbi.tex,v 1.29 2009/09/18 15:24:08 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.28 2009/09/17 17:02:07 ith Exp $}
-% \input{paper1}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.29 2009/09/18 15:24:08 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -105,7 +104,20 @@ V_{6,\mathrm{throat}} = \mathrm{Vol}(X_5)
 and $\rho_{UV}$ denotes the radial coordinate at 
 the edge of the throat (defined as the region 
 where $h (\rho_{UV})$ is of order unity). 
-\missingfigure{ Add figure with throat geometry}
+
+% 
+\begin{figure}
+ \centering
+ \includegraphics{./dbi/graphs/throat-geom.pdf}
+ % throat-geom.pdf: 432x288 pixel, 72dpi, 15.24x10.16 cm, bb=0 0 432 288
+ \caption{Geometry of the warped throat. The radial coordinate $\rho$ is
+measured from the tip of the throat to $\rho_{UV}$ at the join with the bulk
+manifold.}
+ \label{fig:throat-geom}
+\end{figure}
+
+% 
+
 If one assumes that the bulk volume is 
 non-negligible relative to 
 \addtodo{ add citation}
@@ -168,8 +180,8 @@ inflaton field during the observable stages of inflation.
 This will result in a constraint on the tensor modes that 
 can be expressed in terms of observable parameters.  
 
-
-\missingfigure{Add figure of brane moving in throat}
+% 
+% \missingfigure{Add figure of brane moving in throat}
 To proceed, we denote the change in the value of the inflaton field over 
 observable scales by 
 $\Delta  \varphi _{*} = \sqrt{T_3} \Delta \rho_{*}$. 
