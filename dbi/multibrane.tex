@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.28 2009/09/21 17:08:31 ith Exp $
+% $Id: multibrane.tex,v 1.29 2009/09/21 17:12:34 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.28 2009/09/21 17:08:31 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.29 2009/09/21 17:12:34 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -572,7 +572,7 @@ weakening of the gravitational wave constraints.}
 % 
 \begin{equation}
 \label{eq:gensoln-multi}
-P (\varphi , X) = f_1 (\varphi ) \left[ 1-f_2 (\varphi ) X 
+P (\varphi , X) = -f_1 (\varphi ) \left[ 1-f_2 (\varphi ) X 
 \right]^m -f_3(\varphi ) \,,
 \end{equation}
 % 
@@ -597,7 +597,7 @@ More generally however, \eq{eq:gensoln-multi} implies that
 % 
 \begin{eqnarray}
 \label{eq:consequence-multi}
-c_sP_{,X} \simeq -\frac{m f_1 f_2}{\sqrt{2(1-m)}} \left( 
+c_sP_{,X} \simeq \frac{m f_1 f_2}{\sqrt{2(1-m)}} \left( 
 1- f_2X \right)^{(2m-1)/2} \,,
 \\
 c_s^2 \simeq \frac{1-f_2X}{2(1-m)} \,,
@@ -622,7 +622,7 @@ into the BM bound (\ref{eq:BMbound-multi}) and the LH bound (\ref{eq:LHbound}) i
 %  
 \begin{equation}
 \label{eq:weakBM-multi}
-r_*< \frac{32}{N \Neff^2} \frac{(-m) f_1 f_2}{\sqrt{2(1-m)}}
+r_*< \frac{32}{N \Neff^2} \frac{m f_1 f_2}{\sqrt{2(1-m)}}
 \left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
 \end{equation}
 % 
@@ -632,7 +632,7 @@ and
 \label{eq:weakLH-multi}
 r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
 \left( \frac{h_*}{\Mpl} \right)^{4/3}
-\frac{(-m) f_1 f_2}{\sqrt{2(1-m)}}
+\frac{m f_1 f_2}{\sqrt{2(1-m)}}
 \left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
 \end{equation}
 % 
@@ -1002,7 +1002,7 @@ general solution (\ref{eq:gensoln-multi}), where $m=-1/2$ and
 % 
 \begin{equation}
 \label{eq:fdefns-multi}
-f_1 (\varphi) = 2T_3 h^4 \sqrt{1+(n-1)^2Y} , \qquad 
+f_1 (\varphi) = -2T_3 h^4 \sqrt{1+(n-1)^2Y} , \qquad 
 f_2 (\varphi) = \frac{2}{T_3 h^4} \,.
 \end{equation}
 % 
@@ -1374,7 +1374,7 @@ Integrating a second time implies that
 % 
 \begin{equation}
 \label{eq:secondint-multi}
-P_{,X} = f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
+P_{,X} = -f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
 \end{equation}
 % 
 where $s \equiv (\alpha -6 )/(2 \alpha)$ and we have redefined 
@@ -1384,7 +1384,7 @@ in terms of a hypergeometric function
 %  
 \begin{equation}
  \label{eq:thirdint-multi}
- P= f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
+ P= -f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
 \right)  \, ,
 \end{equation}
 %  
@@ -1402,7 +1402,7 @@ further redefinition of the functions $f_i (\varphi ))$ that
 % 
 \begin{equation}
 \label{eq:DBIsoln-multi}
-P = f_1 \sqrt{1-f_2 X} -f_3
+P = -f_1 \sqrt{1-f_2 X} -f_3
 \end{equation}
 % 
 and this corresponds to the standard DBI action (\ref{eq:DBIkinetic}) 
@@ -1413,7 +1413,7 @@ The case $\alpha =18/5$ $(s=-1/3)$ can also be expressed in terms
 of elementary functions, again after redefinition of the $f_i (\varphi)$: 
 % 
 \begin{equation}
-P = \frac{f_1\left[8 - 4f_2X^{1/3}
+P = \frac{-f_1\left[8 - 4f_2X^{1/3}
 -\left(f_2X^{1/3}\right)^2\right]}{\sqrt{1-f_2X^{1/3}}} -f_3 \, .
 \end{equation}
 % 
