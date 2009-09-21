@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.40 2009/09/16 13:01:57 ith Exp $
+% $Id: mainintro.tex,v 1.41 2009/09/21 14:45:45 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.40 2009/09/16 13:01:57 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.41 2009/09/21 14:45:45 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -632,7 +632,8 @@ the perturbation in Fourier space using the definition
 % 
 \begin{equation}
 \label{eq:fourierdefn-intro}
- \dvp{}(\eta, x^i) = \frac{1}{(2 \pi)^3} \int d^3k \dvp{}(\kvi) \exp (i k_i x^i)
+ \dvp{}(\eta, x^i) = \frac{1}{(2 \pi)^3} \int \d^3k \dvp{}(\kvi) \exp (i k_i
+x^i)
 \,,
 \end{equation}
 where $k^i\equiv \kb$ is the comoving wavenumber vector. The amplitude of this
@@ -1063,7 +1064,7 @@ We will consider the same action as before
 % 
 \begin{equation}
 \label{eq:DBIaction-dbiintro2}
-S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
+S=\int  \d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\varphi , X) \right] \,,
 \end{equation}
 % 

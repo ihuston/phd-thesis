@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.1 2009/08/16 11:37:12 ith Exp $
+% $Id: perts.tex,v 1.2 2009/09/21 14:45:45 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.1 2009/08/16 11:37:12 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.2 2009/09/21 14:45:45 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -289,7 +289,8 @@ $\dvp{}(k^i)$
 for the Fourier component of $\dvp{}(x)$ such that
 % 
 \begin{equation}
- \dvp{}(\eta, x^i) = \frac{1}{(2 \pi)^3} \int d^3k \dvp{}(\kvi) \exp (i k_i x^i)
+ \dvp{}(\eta, x^i) = \frac{1}{(2 \pi)^3} \int \d^3k \dvp{}(\kvi) \exp (i k_i
+x^i)
 \,,
 \end{equation}
 % 
@@ -311,7 +312,7 @@ consideration with terms quadratic in the first order perturbation, which
  require convolutions of the form
 %
 \begin{equation}
- f(x)g(x) \longrightarrow \frac{1}{(2 \pi)^3} \int d^3q d^3p\, \delta^3(\kvi
+ f(x)g(x) \longrightarrow \frac{1}{(2 \pi)^3} \int \d^3q \d^3p\, \delta^3(\kvi
 -\pvi -\qvi) f(\pvi)
 g(q^i) \,.
 \end{equation}
@@ -328,7 +329,7 @@ equation in Fourier Space is
 + a^2\left[\Upp + \frac{8\pi G}{\H}\left(2\vp_{0}'\Uphi
 + (\vp_0')^2\frac{8\pi G}{\H}\U \right) \right]\dvp2(\kvi) \nonumber \\
 % 
- && + \frac{1}{(2\pi)^3}\int d^3q d^3p\, \delta^3(\kvi -\pvi -\qvi) \left\{
+ && + \frac{1}{(2\pi)^3}\int \d^3q \d^3p\, \delta^3(\kvi -\pvi -\qvi) \left\{
 \frac{16\pi G}{\H}
 \left[ X
 \dvp1'(\pvi) \dvp1(\qvi) + \vp_{0}' a^2\Upp \dvp1(\pvi)\dvp1(\qvi)
@@ -358,7 +359,7 @@ $q$. It is given by
  \label{eq:Fdvk1-fourier-num}
 &&%\hspace{-5mm}
 F\left(\dvp1(\kvi),\dvp1'(\kvi)\right)
-= \frac{1}{(2\pi)^3}\int d^3pd^3q\delta^3(\kvi-\pvi-\qvi) 
+= \frac{1}{(2\pi)^3}\int \d^3p \d^3q\delta^3(\kvi-\pvi-\qvi) 
 \Bigg\{ 
 2\left(\frac{8\pi G}{\H}\right)\frac{p_kq^k}{q^2}
 \delta\vp_{1}'(\pvi)\left(
@@ -449,7 +450,7 @@ simplifies dramatically, and with the $F$ term included is
 \Upp-{24 \pi G}(\vp_{0}')^2\right)
 \dvp2(\kvi) \\
 %
-&&+\int d^3p\ d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{
+&&+\int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{
 a^2\left(\Uppp
 + \frac{8\pi G}{\H}\vp_{0}' \Upp\right)
  \dvp1(\pvi)\dvp1(\qvi)
@@ -458,7 +459,7 @@ a^2\left(\Uppp
 \nonumber \\
 %
 &&+ \frac{8\pi G}{\H}
-\int d^3p\ d^3q\ \delta^3(\kvi-\pvi-\qvi)  \Bigg\{
+\int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi)  \Bigg\{
 %
 \frac{8\pi G}{\H}\frac{p_l q^l}{q^2}\vp_{0}'\dvp1'(\pvi)
 \dvp1'(\qvi)

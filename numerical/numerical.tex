@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.9 2009/08/16 11:40:47 ith Exp $
+% $Id: numerical.tex,v 1.10 2009/09/21 14:45:45 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.9 2009/08/16 11:40:47 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.10 2009/09/21 14:45:45 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -82,12 +82,12 @@ into smaller units for calculation.
 The second order slow roll equation (\ref{eq:KG2-fourier-sr-num}) can be further
 simplified by performing the $p$
 integral and changing to spherical polar coordinates $q, \theta, \omega$ where
-$q=|\textbf{q}|$. The $d^3q$ integral becomes
+$q=|\textbf{q}|$. The $\d^3q$ integral becomes
 % 
 \begin{equation}
- \int d^3q \longrightarrow \int_{0}^{\infty} q^2 dq \int_{0}^{\pi}\sin \theta
-d\theta 
-   \int_{0}^{2\pi}d\omega \,.
+ \int \d^3q \longrightarrow \int_{0}^{\infty} q^2 \d q \int_{0}^{\pi}\sin \theta
+\d\theta 
+   \int_{0}^{2\pi}\d\omega \,.
 \end{equation}
 % 
 For each $k$ mode equation we take the $\theta=0, \omega=0$ axis in the
@@ -104,14 +104,14 @@ here labelled A--D:
 %
 \begin{eqnarray}
 \label{eq:AtoD-num}
- A(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) d\theta \,,
+ A(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) \d\theta \,,
 \nonumber\\
  B(\kvi,\qvi) &=& \int_0^\pi \cos(\theta)\sin(\theta) \dvp1(\kvi-\qvi)
-d\theta \,,\nonumber\\
- C(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1'(\kvi-\qvi) d\theta \,,
+\d\theta \,,\nonumber\\
+ C(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1'(\kvi-\qvi) \d\theta \,,
 \nonumber\\
  D(\kvi,\qvi) &=& \int_0^\pi \cos(\theta) \sin(\theta) \dvp1'(\kvi-\qvi)
-d\theta \,.
+\d\theta \,.
 \end{eqnarray}
 %
 Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
@@ -126,7 +126,7 @@ Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
 + S(\kvi) = 0 \,,\\
 %
 \label{eq:KG2-src-sr-aterms}
-&&S(\kvi) = \frac{1}{(2\pi)^2}\int dq\ \Bigg\{
+&&S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
 a^2\Uppp q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
 && \qquad\qquad\qquad\qquad\qquad + \frac{8\pi G}{\H}\vp_{0}' \Bigg[ 
 \left( 3a^2\Upp + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi)
@@ -168,12 +168,12 @@ differentiation with respect to $n$.
 The changes in derivatives required are as follows:
 %
 \begin{eqnarray}
- \pd{ }{\eta} &=& \frac{d n}{d \eta}\pd{}{n} = \H \pd{}{n} \,,\\
- \pd{ }{t} &=& \frac{d \eta}{d t} \frac{d n}{d \eta}\pd{}{n} = H \pd{}{n}\,,
+ \pd{ }{\eta} &=& \frac{\d n}{\d \eta}\pd{}{n} = \H \pd{}{n} \,,\\
+ \pd{ }{t} &=& \frac{\d \eta}{\d t} \frac{\d n}{\d \eta}\pd{}{n} = H \pd{}{n}\,,
 \end{eqnarray}
 %
 where $\eta$ and $t$ are conformal and coordinate time respectively with $H =
-\frac{da}{dt}/a$ and $\H = aH$.
+\frac{\d a}{\d t}/a$ and $\H = aH$.
 As mentioned above the value
 of $a$ at the end of inflation is calculated using the connection equation (see for example
 Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}) assuming that instantaneous
@@ -205,7 +205,7 @@ The second order equation in terms of $n$ is
 % 
 \begin{eqnarray}
 \label{eq:KG2-source-ntime}
-S(\kvi) &=& \frac{1}{(2\pi)^2}\int dq\ \Bigg\{
+S(\kvi) &=& \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
 \frac{\Uppp}{H^2} q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
 &&+\, \frac{8\pi G}{(aH)^2}\dot{\vp_{0}} \Bigg[ 
 \left( 3a^2\Upp q^2 + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi) %\nonumber\\
@@ -223,10 +223,10 @@ where
 %
 \begin{eqnarray}
  \tilde{C}(\kvi,\qvi) &=& \frac{1}{aH} C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
-\dot{\dvp1}(\kvi-\qvi) d\theta \,,\nonumber \\
+\dot{\dvp1}(\kvi-\qvi) \d\theta \,,\nonumber \\
  \tilde{D}(\kvi,\qvi) &=& \frac{1}{aH} D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
 \sin(\theta) \dot{\dvp1}(\kvi-\qvi)
-d\theta \,.
+\d\theta \,.
 \end{eqnarray}
 
 
@@ -360,7 +360,7 @@ proceeds in four stages. The background equation (\ref{eq:bgntime}),
 rewritten as two first order (in the time derivative) equations, is
 evolved from the specified initial state until some end time required
 to be after the end of the inflationary regime.  The end of inflation
-occurs when $d^2a/dt^2$ is no longer positive and the parameter
+occurs when $\d^2a/\d t^2$ is no longer positive and the parameter
 $\varepsilon_H = -\dot{H}/H$ first becomes greater than or equal to $1$
 (see Figure~\ref{fig:eps}). Here, this specifies a new end time for the 1st
 order run, although the simulation can run beyond the strict end of
@@ -536,14 +536,14 @@ $\alpha$.
 If $I_A$ denotes the convolution of the $A$ term:
 % 
 \begin{equation}
- I_A (k) = 2\pi \int_{\kmin}^{\kmax} q^2 \dvp1(q) A(k, q) dq \,,
+ I_A (k) = 2\pi \int_{\kmin}^{\kmax} q^2 \dvp1(q) A(k, q) \d q \,,
 \end{equation}
 % 
 then putting in $\dvp1(k) = \alpha/\sqrt{k}$ gives
 % 
 \begin{equation}
- I_A(k) = 2\pi \alpha^2 \int_{\kmin}^{\kmax} dq\, q^{\frac{3}{2}}
-\int_{0}^{\pi} d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-4} \sin{\theta}\,. 
+ I_A(k) = 2\pi \alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
+\int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-4} \sin{\theta}\,. 
 \end{equation}
 % 
 This has the analytic solution

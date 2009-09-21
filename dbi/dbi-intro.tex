@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % dbi-intro.tex - Ian Huston
-% $Id: dbi-intro.tex,v 1.42 2009/09/18 16:57:53 ith Exp $
+% $Id: dbi-intro.tex,v 1.43 2009/09/21 14:45:45 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.42 2009/09/18 16:57:53 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi-intro.tex,v 1.43 2009/09/21 14:45:45 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -376,7 +376,7 @@ Their dynamics is governed by the action
 % 
 \begin{equation}
 \label{eq:gendbiaction-dbiintro}
- S_\mathrm{DBI} = -T_p \int d^{p+1}\xi \sqrt{-\hat{g}}\,,
+ S_\mathrm{DBI} = -T_p \int \d^{p+1}\xi \sqrt{-\hat{g}}\,,
 \end{equation}
 where $\hat{g}_{ab}$ is the induced metric on the brane with internal
 coordinates $\xi^a$ for $a=0,\ldots,p$. This is the general form of the DBI
@@ -417,7 +417,8 @@ In the presence of fluxes a general form of metric with a warp factor is
 possible \cite{Baumann:2009ni}:
 \begin{equation}
 \label{eq:warpedmetric-dbiintro}
- ds^2 = e^{2A(y)}\eta_{\mu\nu} dx^\mu dx^\nu + e^{-2A(y)} g_{mn}dy^m dy^n\,,
+ \d s^2 = e^{2A(y)}\eta_{\mu\nu} \d x^\mu \d x^\nu + e^{-2A(y)} g_{mn}\d y^m
+\d y^n\,,
 \end{equation}
 where $A(y)$ varies across the compact dimensions $y^m$.
 Compactifications in which $A$ varies significantly with $y$ are called warped
@@ -433,8 +434,8 @@ The metric inside a throat takes the same form as in
 % 
 \begin{equation}
 \label{eq:conemetric-dbiintro}
-ds_{10}^2= h^2 ( \rho) ds_4^2 + h^{-2} (\rho ) 
-\left( d\rho^2 +\rho^2 ds_{X_5}^2 \right) \,,
+\d s_{10}^2= h^2 ( \rho) \d s_4^2 + h^{-2} (\rho ) 
+\left( \d\rho^2 +\rho^2 \d s_{X_5}^2 \right) \,,
 \end{equation}
 %  
 where the warp factor $h (\rho)$ is a function of the 
@@ -544,7 +545,7 @@ then given by
 % 
 \begin{eqnarray}
 \label{eq:DBIaction-dbiintro}
-S=\int  d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
+S=\int  \d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R 
 + P (\varphi , X) \right] \\
 \label{eq:Pdefn-dbiintro}
 P( \varphi ,X) = - T (\varphi)  \sqrt{1 - 2T^{-1} (\varphi ) X}
