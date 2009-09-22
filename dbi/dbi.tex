@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.38 2009/09/22 09:14:35 ith Exp $
+% $Id: dbi.tex,v 1.39 2009/09/22 10:09:54 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.38 2009/09/22 09:14:35 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.39 2009/09/22 10:09:54 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -644,27 +644,30 @@ is straightforward to show that
 % 
 
 
-\eq{eq:defvarphi} also allows us to deduce 
-that the infinitesimal variation of the effective 
-field $\tilde{\varphi}$ is given by the Lyth bound, 
-$(\Delta \tilde{\varphi} /\Mpl )^2 \simeq 
-r (\Delta \N)^2/8$. This implies that 
-the variation of the inflaton field during inflation is 
-% 
-\begin{equation}
-\label{eq:newphivar}
-\int_0^{\varphi_{*}} \frac{d\varphi}{\Mpl} \, \sqrt{\frac{f_1f_2}{2}} 
-= \sqrt{\frac{r_*}{8}}  \Neff \,.
-\end{equation}
-% 
-If we now restrict our attention to 
+% \eq{eq:defvarphi} also allows us to deduce 
+% that the infinitesimal variation of the effective 
+% field $\tilde{\varphi}$ is given by the Lyth bound, 
+% $(\Delta \tilde{\varphi} /\Mpl )^2 \simeq 
+% r (\Delta \N)^2/8$. This implies that 
+% the variation of the inflaton field during inflation is 
+% % 
+% \begin{equation}
+% \label{eq:newphivar}
+% \int_0^{\varphi_{*}} \frac{d\varphi}{\Mpl} \, \sqrt{\frac{f_1f_2}{2}} 
+% = \sqrt{\frac{r_*}{8}}  \Neff \,.
+% \end{equation}
+% % 
+In Section~\ref{sec:lyth-dbiintro} the Lyth bound was defined for general
+non-canonical actions. 
+If we restrict our attention to 
 the observable stage of inflation, and further assume that the variation
-of $f_1f_2$ is negligible during that epoch, we find that 
+of $f_1f_2 = 2 c_s\PX$ is negligible during that epoch, we can use
+\eq{eq:approxlyth-dbiintro}: 
 % 
 \begin{equation}
 \label{eq:genphivary1}
 \left( \frac{\Delta \varphi}{\Mpl} \right)^2_{*} \simeq 
-\frac{(\Delta \N_{*} )^2}{4 f_1f_2} r_*  \,.
+\frac{(\Delta \N_{*} )^2}{8} \left(\frac{r}{c_s\PX}\right)_*  \,.
 \end{equation}
 % 
 On the other hand, the BM bound restricts the maximal 
@@ -675,7 +678,7 @@ $AdS_5 \times X_5$ away from the tip of the throat. Moreover,
 if observable scales leave the horizon 
 while the brane is inside the throat, the change in the field value 
 must satisfy $| \Delta \varphi_*|<\varphi_{UV}$. Hence, it follows from   
-\eq{eq:genphivary1} that\footnote{We are 
+\eq{eq:approxlyth-dbiintro} that\footnote{We are 
 being conservative by restricting our discussion to the 
 observable phase of inflation. More generally, if 
 $f_1f_2$ remains nearly constant over the last $\N$ 
@@ -688,7 +691,8 @@ may be as large as 60. Thus, the generalized bound
 % 
 \begin{equation}
 \label{eq:genBMbound}
-r_*< \frac{16}{N (\Delta \N_{*})^2} f_1f_2  \,.
+r_*< \frac{32}{N (\Delta \N_{*})^2} (c_s\PX)_* = \frac{16}{N (\Delta \N_{*})^2}
+(f_1f_2)_* \,.
 \end{equation}
 % 
 
@@ -797,31 +801,31 @@ next chapter.
 % m_s^4/[(2\pi)^3g_s]$ is the brane tension. 
 
 
-The four-dimensional Planck mass is related to the volume 
-of the compactified Calabi-Yau three-fold, $V_6$, such that
-$\Mpl^2 =V_6 \kappa_{10}^{-2}$, where $\kappa_{10}^2 \equiv \frac{1}{2}
-(2 \pi )^7 g_s^2/ m_s^{8} = \pi /T_3^{2}$ for a 
-${\rm D3}$-brane \footnote{We parameterise the Planck scale 
-in terms of the ${\rm D3}$-brane tension out of convenience, 
-and note that there is no physical relationship between the two.}. 
-Hence the Planck mass is bounded from 
-below by the volume of a throat region, 
-$\Mpl^2 >V_{6,{\rm th}} \kappa_{10}^{-2}$, 
-where $V_{6,{\rm th}} \lsim V_6$ denotes the throat volume. 
-For an $AdS_5 \times X_5$ throat, Baumann \& McAllister (BM)
-exploited this inequality to derive an upper limit on the 
-maximum variation of the inflaton field in the throat, 
-$\Delta \varphi_{\rm max} < 2\Mpl/\sqrt{N}$, which leads to the 
-corresponding limit $|\Delta \varphi |_* < 2\Mpl /\sqrt{N}$ \cite{bmpaper}.  
-Combining this with the constraint (\ref{eq:approxlyth-dbiintro}) therefore 
-yields an upper limit on the tensor-scalar ratio: 
-% 
-\begin{equation}
-\label{eq:BMbound-multi}
-r_* < \frac{32}{N \Neff^2} \left( 
-c_s P_{,X} \right)_* \,.
-\end{equation}
-% 
+% The four-dimensional Planck mass is related to the volume 
+% of the compactified Calabi-Yau three-fold, $V_6$, such that
+% $\Mpl^2 =V_6 \kappa_{10}^{-2}$, where $\kappa_{10}^2 \equiv \frac{1}{2}
+% (2 \pi )^7 g_s^2/ m_s^{8} = \pi /T_3^{2}$ for a 
+% ${\rm D3}$-brane \footnote{We parameterise the Planck scale 
+% in terms of the ${\rm D3}$-brane tension out of convenience, 
+% and note that there is no physical relationship between the two.}. 
+% Hence the Planck mass is bounded from 
+% below by the volume of a throat region, 
+% $\Mpl^2 >V_{6,{\rm th}} \kappa_{10}^{-2}$, 
+% where $V_{6,{\rm th}} \lsim V_6$ denotes the throat volume. 
+% For an $AdS_5 \times X_5$ throat, Baumann \& McAllister (BM)
+% exploited this inequality to derive an upper limit on the 
+% maximum variation of the inflaton field in the throat, 
+% $\Delta \varphi_{\rm max} < 2\Mpl/\sqrt{N}$, which leads to the 
+% corresponding limit $|\Delta \varphi |_* < 2\Mpl /\sqrt{N}$ \cite{bmpaper}.  
+% Combining this with the constraint (\ref{eq:approxlyth-dbiintro}) therefore 
+% yields an upper limit on the tensor-scalar ratio: 
+% % 
+% \begin{equation}
+% \label{eq:BMbound-multi}
+% r_* < \frac{32}{N \Neff^2} \left( 
+% c_s P_{,X} \right)_* \,.
+% \end{equation}
+% % 
 
 
 \addtodo{ Change to reference chapter not paper. Change bound name?}
@@ -885,7 +889,7 @@ r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3}
 % 
 
 
-Comparison of the limits (\ref{eq:BMbound-multi}) and (\ref{eq:LHbound})
+Comparison of the limits (\ref{eq:genBMbound}) and (\ref{eq:LHbound})
 implies that the LH bound is the stronger of the two when
 % 
 \begin{equation}
@@ -1082,10 +1086,11 @@ directly constrains the function
 $f_1 (\varphi )$ and this may not necessarily depend on the warp factor. 
 Nonetheless, the constraints (\ref{eq:halfwayconstraint}) and
 (\ref{eq:trapeziumlimit}) can be 
-combined with \eq{eq:genphivary1} to derive a limit 
+combined with \eq{eq:approxlyth-dbiintro} to derive a limit 
 on the tensor-scalar ratio in terms of the warp factor and the 
 kinetic function (\ref{eq:genaction-dbi}) and we find that  
 % 
+\addtodo{Remove or change to version in paper2}
 \begin{equation}
 \label{eq:genconclusion-dbi}
 r_* < \frac{2}{\pi^{2/3} ( \Delta \mathcal{N}_*)^2}
