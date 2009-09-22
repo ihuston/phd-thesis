@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.39 2009/09/22 10:09:54 ith Exp $
+% $Id: dbi.tex,v 1.40 2009/09/22 10:46:26 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.39 2009/09/22 10:09:54 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.40 2009/09/22 10:46:26 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -252,12 +252,18 @@ then implies that
 \begin{equation}
 \label{eq:trapeziumlimit}
 |\Delta V _{6,*}| > \mathrm{Vol}(X_5) 
-\frac{(\Delta \rho_* )^6}{h^{4}_*}  \,,
+\frac{(\Delta \rho_* )^6}{h^{4}_*}  \,.
 \end{equation}
 % 
-and substituting the CMB normalization (\ref{eq:obswarp-dbiintro}) and 
-condition (\ref{eq:trapeziumlimit}) into the bound (\ref{eq:halfwayconstraint}) 
-yields the upper limit   
+Substituting the condition \eqref{eq:trapeziumlimit} into the bound
+\eqref{eq:halfwayconstraint} gives
+\begin{equation}
+\label{eq:hbound6}
+\left( \frac{\Delta \varphi}{\Mpl} \right)_*^6 < \frac{\pi T_3}{\Vol} 
+\left( \frac{h_*}{\Mpl} \right)^4 \,,
+\end{equation}   
+and using $T(\vp) = T_3 h^4$ and the CMB normalization
+\eqref{eq:obswarp-dbiintro} yields the upper limit
 % 
 \begin{equation}
 \label{eq:boundpower6}
@@ -750,6 +756,57 @@ for the generalized BM bound to be satisfied in IR inflation:
 \end{equation}
 % 
 
+The upper bound on $r$ that we derived in Section~\ref{sec:upper-dbi} arises 
+because the warp factor in standard DBI models 
+completely specifies the kinetic 
+energy of the inflaton field. Deriving a corresponding bound for 
+the generalized model (\ref{eq:genaction-dbi}) would be more involved, 
+since the CMB normalization (\ref{eq:observef1}) only 
+directly constrains the function 
+$f_1 (\varphi )$ and this may not necessarily depend on the warp factor. 
+Nonetheless, the constraints (\ref{eq:halfwayconstraint}) and
+(\ref{eq:trapeziumlimit}) can be 
+combined with \eq{eq:approxlyth-dbiintro} to derive a limit 
+on the tensor-scalar ratio in terms of the warp factor and the 
+kinetic function (\ref{eq:genaction-dbi}) and we find that  
+% 
+\begin{equation}
+\label{eq:LHbound}
+r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
+\left( \frac{h_*}{\Mpl} \right)^{4/3} \left( c_s P_{,X} \right)_* \,.
+\end{equation}
+% 
+For a specific model where the warp factor and 
+the functions $f_i (\varphi )$ are determined by particle 
+physics considerations,   
+condition \eqref{eq:LHbound} 
+may be interpreted as a bound that relates 
+the tensor modes directly to the value of the inflaton field during observable 
+inflation. This constraint provides a consistency 
+check that any given model must satisfy 
+irrespective of the form of the inflaton potential. 
+% 
+
+
+Comparison of the limits \eqref{eq:genBMbound} and \eqref{eq:LHbound}
+implies that the LH bound is the stronger of the two when
+% 
+\begin{equation}
+\label{eq:LHstronger}
+h_*^{4/3}N < 20 \left( \Vol g_s \right)^{1/3}  
+\left( \frac{m_s}{\Mpl} \right)^{-4/3} 
+\frac{( \Delta \N )_*^2}{\Neff^2} \,.
+\end{equation}
+% 
+For typical field-theoretic values $\Vol \simeq \mathcal{O}(\pi^3)$, $m_s \sim
+0.1 \Mpl$ 
+and  $g_s \sim 10^{-2}$, this implies
+%  
+\begin{equation}
+\label{eq:LHstronger1}
+h_*^{4/3} N < 300 \frac{(\Delta \N)^2_*}{\Neff^2} \,.
+\end{equation}
+% 
 
 To summarize this section, 
 expression (\ref{eq:genBMbound}) implies that the 
@@ -827,87 +884,60 @@ next chapter.
 % \end{equation}
 % % 
 
+% 
+% \addtodo{ Change to reference chapter not paper. Change bound name?}
+% Two of the authors (Lidsey \& Huston, LH) derived a complementary bound on
+% the 
+% tensor-scalar ratio by noting that during observable inflation
+% the brane spans a fraction of the throat volume \cite{lidseyhuston}
+% % 
+% \begin{equation}
+% \label{eq:approxvol}
+% | \Delta V_{6,*} | \simeq \Vol \frac{| \Delta \rho_*| \rho_*^5}{h_*^4}
+% \end{equation}
+% % 
+% and, since $| \Delta V_{6,*} |< 
+% V_{6,{\rm th}}$, it follows that
+% %  
+% \begin{equation}
+% \label{eq:firstbound-multi}
+% \left(\frac{\Delta \varphi}{\Mpl}\right)^2_* < \frac{T_3 \kappa_{10}^2
+% (\Delta \rho_*)^2}{| \Delta V_{6*}|} \,.
+% \end{equation}
+% % 
+% It was then assumed that the fractional change in the value of the 
+% inflaton field during observable inflation was less than unity:
+% % 
+% \begin{equation}
+% \label{eq:delta1constraint}
+% |\Delta \varphi_* | <  \varphi_* \,.
+% \end{equation}
+% %  
+% This condition is necessarily satisfied in UV
+% versions of the scenario, 
+% where the brane is moving towards the tip of the throat, but must be 
+% assumed as a further constraint in IR versions 
+% where the brane moves out of the throat, since in these latter cases
+% $\varphi_*$ could be very small. Combining the limit 
+% (\ref{eq:delta1constraint}) with \eq{eq:approxvol} then implies that
+% %  
+% \begin{equation}
+% | \Delta V_{6,*} | > \Vol \frac{( \Delta \rho_* )^6}{h_*^4}
+% \end{equation}
+% % 
+% and substituting this constraint into the bound (\ref{eq:firstbound-multi})
+% yields 
+% the condition
+%  
+% \begin{equation}
+% \left( \frac{\Delta \varphi}{\Mpl} \right)_*^6 < \frac{\pi T_3}{\Vol} 
+% \left( \frac{h_*}{\Mpl} \right)^4 \,.
+% \end{equation}
 
-\addtodo{ Change to reference chapter not paper. Change bound name?}
-Two of the authors (Lidsey \& Huston, LH) derived a complementary bound on the 
-tensor-scalar ratio by noting that during observable inflation
-the brane spans a fraction of the throat volume \cite{lidseyhuston}
-% 
-\begin{equation}
-\label{eq:approxvol}
-| \Delta V_{6,*} | \simeq \Vol \frac{| \Delta \rho_*| \rho_*^5}{h_*^4}
-\end{equation}
-% 
-and, since $| \Delta V_{6,*} |< 
-V_{6,{\rm th}}$, it follows that
-%  
-\begin{equation}
-\label{eq:firstbound-multi}
-\left(\frac{\Delta \varphi}{\Mpl}\right)^2_* < \frac{T_3 \kappa_{10}^2
-(\Delta \rho_*)^2}{| \Delta V_{6*}|} \,.
-\end{equation}
-% 
-It was then assumed that the fractional change in the value of the 
-inflaton field during observable inflation was less than unity:
-% 
-\begin{equation}
-\label{eq:delta1constraint}
-|\Delta \varphi_* | <  \varphi_* \,.
-\end{equation}
-%  
-This condition is necessarily satisfied in UV
-versions of the scenario, 
-where the brane is moving towards the tip of the throat, but must be 
-assumed as a further constraint in IR versions 
-where the brane moves out of the throat, since in these latter cases
-$\varphi_*$ could be very small. Combining the limit 
-(\ref{eq:delta1constraint}) with \eq{eq:approxvol} then implies that
-%  
-\begin{equation}
-| \Delta V_{6,*} | > \Vol \frac{( \Delta \rho_* )^6}{h_*^4}
-\end{equation}
-% 
-and substituting this constraint into the bound (\ref{eq:firstbound-multi})
-yields 
-the condition
-%  
-\begin{equation}
-\left( \frac{\Delta \varphi}{\Mpl} \right)_*^6 < \frac{\pi T_3}{\Vol} 
-\left( \frac{h_*}{\Mpl} \right)^4 \,.
-\end{equation}
-% 
-\addtodo{Should the above be removed if duplicate? Change to cite chapter not
-paper.}
 Finally substituting the constraint (\ref{eq:approxlyth-dbiintro}) 
 yields the upper limit \cite{lidseyhuston}
 % 
-\begin{equation}
-\label{eq:LHbound}
-r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
-\left( \frac{h_*}{\Mpl} \right)^{4/3} \left( c_s P_{,X} \right)_* \,.
-\end{equation}
-% 
 
-
-Comparison of the limits (\ref{eq:genBMbound}) and (\ref{eq:LHbound})
-implies that the LH bound is the stronger of the two when
-% 
-\begin{equation}
-\label{eq:LHstronger}
-h_*^{4/3}N < 20 \left( \Vol g_s \right)^{1/3}  
-\left( \frac{m_s}{\Mpl} \right)^{-4/3} 
-\frac{( \Delta \N )_*^2}{\Neff^2} \,.
-\end{equation}
-% 
-For typical field-theoretic values $\Vol \simeq \mathcal{O}(\pi^3)$, $m_s \sim
-0.1 \Mpl$ 
-and  $g_s \sim 10^{-2}$, this implies
-%  
-\begin{equation}
-\label{eq:LHstronger1}
-h_*^{4/3} N < 300 \frac{(\Delta \N)^2_*}{\Neff^2} \,.
-\end{equation}
-% 
 
 
 In the following Section, we identify a class of models in which  
@@ -1013,8 +1043,7 @@ chapter can be applied.
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
-\section{Conclusion} 
-\addtodo{ Expand and rewrite}
+\section{Conclusion}
 \label{sec:conclusion-dbi}
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -1076,37 +1105,7 @@ an action for the BM bound to be relaxed.
 % conditions.   
 
 
-The upper bound on $r$ that we derived in Section~\ref{sec:upper-dbi} arises 
-because the warp factor in standard DBI models 
-completely specifies the kinetic 
-energy of the inflaton field. Deriving a corresponding bound for 
-the generalized model (\ref{eq:genaction-dbi}) would be more involved, 
-since the CMB normalization (\ref{eq:observef1}) only 
-directly constrains the function 
-$f_1 (\varphi )$ and this may not necessarily depend on the warp factor. 
-Nonetheless, the constraints (\ref{eq:halfwayconstraint}) and
-(\ref{eq:trapeziumlimit}) can be 
-combined with \eq{eq:approxlyth-dbiintro} to derive a limit 
-on the tensor-scalar ratio in terms of the warp factor and the 
-kinetic function (\ref{eq:genaction-dbi}) and we find that  
-% 
-\addtodo{Remove or change to version in paper2}
-\begin{equation}
-\label{eq:genconclusion-dbi}
-r_* < \frac{2}{\pi^{2/3} ( \Delta \mathcal{N}_*)^2}
-\left( \frac{m_s}{\Mpl} \right)^{4/3} 
-\frac{h_*^{4/3} (f_1f_2)_*}{g_s\mathrm{Vol}(X_5)}  \,.
-\end{equation}
-% 
-For a specific model where the warp factor and 
-the functions $f_i (\varphi )$ are determined by particle 
-physics considerations,   
-condition (\ref{eq:genconclusion-dbi}) 
-may be interpreted as a bound that relates 
-the tensor modes directly to the value of the inflaton field during observable 
-inflation. This constraint provides a consistency 
-check that any given model must satisfy 
-irrespective of the form of the inflaton potential. 
+
 
 
 In this chapter we have shown that primordial gravitational wave constraints 
