@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.32 2009/09/22 10:09:54 ith Exp $
+% $Id: multibrane.tex,v 1.33 2009/09/24 15:16:29 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.32 2009/09/22 10:09:54 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.33 2009/09/24 15:16:29 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -95,10 +95,397 @@ the number of coincident branes is sufficiently small.
 
 
 
+
+
+% 
+% 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{IR Inflation and Multiple Branes}
+\section{Relaxing the Upper Bounds on the Tensor-Scalar Ratio}
+\label{sec:relaxing-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% 
+\addtodo{Refer to dbi-intro}
+In Chapter~\ref{ch:dbi-intro} we described the standard DBI scenario, in
+which the kinetic function $P$ takes the form in \eq{eq:Pdefn-dbiintro}:
+%  
+\begin{equation}
+\label{eq:DBIkinetic}
+P (\varphi , X) = -T(\varphi ) \sqrt{1-2T^{-1}(\varphi ) X} + T(\varphi ) - V(\varphi ) \,,
+\end{equation}
+% 
+where $T(\varphi ) = T_3 h^4 (\varphi )$ 
+is the warped brane tension and  $V(\varphi )$ is the 
+inflaton potential. The standard DBI scenario (\ref{eq:DBIkinetic}) is
+algebraically special, 
+in the sense that the kinetic function satisfies the constraints 
+% 
+\begin{equation}
+\label{eq:cspx1}
+c_s P_{,X} = 1 , \qquad  \Lambda = \frac{1}{2} \left( 
+\frac{1}{c_s^2} -1 \right) \,.
+\end{equation}
+% 
+We saw in Section~\ref{sec:relaxing-dbi} that the 
+bounds \eqref{eq:genBMbound} and \eqref{eq:LHbound} 
+on the tensor-scalar ratio could in principle be 
+significantly relaxed in models where $(c_sP_{,X})_* \gg 1$. 
+In view of the second relation in \eq{eq:cspx1}, it is of interest 
+to take a phenomenological approach and consider the more  
+general class of models where
+%  
+\begin{equation}
+\label{eq:defalpha}
+\frac{1}{c_s^2} -1 = \alpha \Lambda \,,
+\end{equation}
+% 
+for some positive constant $\alpha$. 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Approximate Solution}
+\label{sec:approx-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+A large non-Gaussian signature in the curvature perturbation is 
+typically generated in models where the sound speed of fluctuations 
+is small. We will begin by considering 
+scenarios in which this is the case and therefore the kinetic function satisfies
+the inequalities: 
+\addtodo{ Show working}
+% 
+\begin{equation}
+\label{eq:Plimits}
+X^2 P_{,XXX} \gg XP_{,XX} \gg P_{,X} \,.
+\end{equation}
+% 
+
+
+In these limits the constraint (\ref{eq:defalpha}) reduces to the 
+third-order, non-linear, partial differential equation
+% 
+\begin{equation}
+\label{eq:pde-multi}
+P^2_{,XX} = \frac{\alpha}{6} P_{,X} P_{,XXX} \,.
+\end{equation}
+% 
+Changing the dependent variable to $Q \equiv P_{,XX}/P_{,X}$ 
+reduces \eq{eq:pde-multi} to
+%  
+\begin{equation}
+\label{eq:Qdefn-multi}
+\alpha Q_{,X} = (6-\alpha )Q^2 \,,
+\end{equation}
+% 
+and it is straightforward to integrate \eq{eq:Qdefn-multi} 
+exactly. The remaining integrations can also be performed analytically 
+and the general solution to \eq{eq:pde-multi} for $\alpha \ne
+6$ is given by\footnote{The special case $\alpha =6$ results in an 
+exponential dependence of the kinetic function on $X$, and is 
+therefore an example of a higher-derivative theory. However we 
+do not consider this model further, since it does not lead to a 
+weakening of the gravitational wave constraints.}
+% 
+\begin{equation}
+\label{eq:gensoln-multi}
+P (\varphi , X) = -f_1 (\varphi ) \left[ 1-f_2 (\varphi ) X 
+\right]^l -f_3(\varphi ) \,,
+\end{equation}
+% 
+where $f_i (\varphi )$ are arbitrary functions of the scalar 
+field and
+%  
+\begin{equation}
+l \equiv \frac{2(\alpha -3 )}{\alpha -6} \, . 
+\end{equation}
+% 
+\addtodo{ Show working}
+It can be verified that the inequalities (\ref{eq:Plimits}) 
+are satisfied in the `relativistic' limit, where $X \simeq 1/f_2$.
+We consider the inflationary dynamics in this limit in what follows. 
+For completeness, we note that \eq{eq:defalpha} can be solved 
+analytically in 
+full generality and the solution is presented in the Appendix. 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Exact Solution}
+\label{sec:apx-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\eq{eq:defalpha} can be analytically solved in full 
+generality without imposing the limits (\ref{eq:Plimits}) on the 
+derivatives of the kinetic function. This allows us to determine the 
+most general class of models where the non-linearity parameter 
+satisfies the condition $\fnleq \propto 1/c_s^2$ at leading order. 
+
+In general \eq{eq:defalpha} takes the form 
+% 
+\begin{equation}
+\label{eq:genPXeqn-multi}
+(2-\alpha ) P_{,X}P_{,XX} + 4XP^2_{,XX} = \frac{2\alpha }{3}
+X P_{,X}P_{,XXX}
+\end{equation}
+% 
+and this reduces to 
+% 
+\begin{equation}
+\label{eq:genreduce-multi}
+\alpha Q_{,X} = (6-\alpha ) Q^2 + \frac{3(2-\alpha )}{2} \frac{Q}{X} \, ,
+\end{equation}
+% 
+where $Q \equiv P_{,XX}/P_{,X}$. 
+\eq{eq:genreduce-multi} can be transformed into the 
+linear equation
+% 
+\begin{equation}
+\label{eq:lineargen-multi}
+U_{,X}+ \frac{3(2-\alpha )}{2\alpha} \frac{U}{X} = \frac{\alpha -6}{\alpha}
+\end{equation}
+% 
+after the change of variables $U \equiv 1/Q$
+and the general solution to \eq{eq:lineargen-multi} is given by
+%  
+\begin{equation}
+\label{eq:gensolnlinear-multi}
+\frac{P_{,XX}}{P_{,X}} = \frac{1}{X\left[ f_2(\varphi) X^{(\alpha -6)/2\alpha}
+-2 \right] } \, .
+\end{equation}
+% 
+Integrating a second time implies that
+% 
+\begin{equation}
+\label{eq:secondint-multi}
+P_{,X} = -f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
+\end{equation}
+% 
+where $s \equiv (\alpha -6 )/(2 \alpha)$ and we have redefined 
+the arbitrary integration functions $f_i(\varphi )$.  
+Finally \eq{eq:secondint-multi} can be formally integrated 
+in terms of a hypergeometric function
+%  
+\begin{equation}
+ \label{eq:thirdint-multi}
+ P= -f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
+\right)  \, ,
+\end{equation}
+%  
+which represents the most general solution for this class of models. 
+Note that we have set the
+remaining constant of integration to zero to ensure 
+that the kinetic function vanishes in the limit of
+zero velocity. In fact this expression admits many 
+different classes of solution, arising as limits
+of the expansion of the hypergeometric function.
+
+
+The special case of $\alpha =2$ $(s=-1)$ implies (after a 
+further redefinition of the functions $f_i (\varphi ))$ that 
+% 
+\begin{equation}
+\label{eq:DBIsoln-multi}
+P = -f_1 \sqrt{1-f_2 X} -f_3
+\end{equation}
+% 
+and this corresponds to the standard DBI action (\ref{eq:DBIkinetic}) 
+\cite{chenetal,lidser2}.          
+
+
+The case $\alpha =18/5$ $(s=-1/3)$ can also be expressed in terms 
+of elementary functions, again after redefinition of the $f_i (\varphi)$: 
+% 
+\begin{equation}
+P = \frac{-f_1\left[8 - 4f_2X^{1/3}
+-\left(f_2X^{1/3}\right)^2\right]}{\sqrt{1-f_2X^{1/3}}} -f_3 \, .
+\end{equation}
+% 
+Note that this expression appears in a slightly different 
+form to that in (\ref{eq:unifiedgenP-multi}). 
+However in deriving (\ref{eq:unifiedgenP-multi}) we assumed the
+relativistic limit, which in turn imposes a non-trivial 
+relation between $X$ and $\varphi$. Using this, and with a 
+suitable redefinition of the functions, we can
+easily transform the above expression into the required form.
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Consequences}
+\label{sec:consequences-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+The standard DBI scenario is recovered for $l=1/2$. 
+More generally however, \eq{eq:gensoln-multi} implies that  
+% 
+\begin{eqnarray}
+\label{eq:consequence-multi}
+c_sP_{,X} \simeq \frac{l f_1 f_2}{\sqrt{2(1-l)}} \left( 
+1- f_2X \right)^{(2m-1)/2} \,,
+\\
+c_s^2 \simeq \frac{1-f_2X}{2(1-l)} \,,
+\end{eqnarray}
+% 
+when $X \simeq 1/f_2$. Self-consistency therefore
+requires $l<1$. Moreover
+we find from \eq{eq:fnldefn-dbiintro} that
+%  
+\begin{eqnarray}
+\label{eq:consequence3-multi}
+\fnleq \simeq \frac{-\beta}{1-f_2X} , \qquad \beta \equiv \frac{5(59-55l)}{486}
+\,,
+\\
+\label{eq:consequence4-multi}
+\fnleq \simeq -\frac{\sigma}{c_s^2}, \qquad \sigma \equiv 
+\frac{5}{972} \left( \frac{59-55l}{1-l} \right) \,.
+\end{eqnarray}
+% 
+Hence substituting Eqs. (\ref{eq:consequence-multi}) and (\ref{eq:consequence3-multi}) 
+into the BM bound (\ref{eq:genBMbound}) and the LH bound (\ref{eq:LHbound})
+implies that
+%  
+\begin{equation}
+\label{eq:weakBM-multi}
+r_*< \frac{32}{N \Neff^2} \frac{l f_1 f_2}{\sqrt{2(1-l)}}
+\left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
+\end{equation}
+% 
+and
+%  
+\begin{equation}
+\label{eq:weakLH-multi}
+r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
+\left( \frac{h_*}{\Mpl} \right)^{4/3}
+\frac{l f_1 f_2}{\sqrt{2(1-l)}}
+\left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
+\end{equation}
+% 
+respectively. 
+
+
+We conclude, therefore, that 
+the upper limit on the tensor-scalar ratio could be significantly 
+relaxed if $l <1/2$, since the non-linearity parameter is at present only 
+weakly constrained at $\fnleq >-151$. Although it is possible 
+to phenomenologically construct a model which has a value of $l$ in this 
+range, it is clearly preferable to identify  UV complete models
+that satisfy this requirement within a string theory context. 
+Unfortunately this is quite difficult to achieve since the inflaton 
+will either be associated with an open or closed string mode. 
+The open strings are governed by relativistic actions of the 
+DBI form, whilst closed strings arise from compactification of Einstein gravity
+and are typically put into canonical form.
+However there do exist classes of open string
+models which satisfy the above requirement, 
+namely those associated with multiple coincident branes.
+
+
+More specifically, if the branes are
+spatially separated, the effective action is algebraically equivalent 
+to that of a single brane. It will therefore not satisfy the 
+bound on $l$ \footnote{In this discussion, we are ignoring 
+the non-trivial backreaction of these branes on the background, and therefore 
+one should be careful about the range of validity of the effective action.}. 
+Similarly it was shown in \cite{thomasward}
+that $n$ coincident branes, in the large $n$ limit, will also fall into 
+this class of models. On the other hand, if it is assumed that 
+$n$ is finite, the special properties associated with the 
+matrix degrees of freedom become important and this 
+results in a kinetic function satisfying $l \le 1/2$.
+We will discuss this in more detail in the following Section.
+
+
+% 
+% 
+% 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Action for Multiple Coincident Branes} 
+\label{sec:multibranes-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+We have seen how the form of the kinetic function
+$P$ can significantly change the
+strength of the LH bound on the tensor-scalar ratio, depending on its explicit
+form. One model in which a suitable form for 
+$P$ is realised is the multiple coincident
+brane model as outlined by Thomas \& Ward \cite{thomasward}.
+
+
+The world-volume theory for coincident branes is not fully known, although
+a number of proposals have been made. We will restrict our analysis to Myers' 
+prescription, since this has been extensively discussed in the 
+literature\footnote{There is also a proposal by Tseytlin \cite{Tseytlin}
+for the non-Abelian theory of coincident D-branes.} \cite{myers1, myers2}. 
+In general the open string degrees of freedom for $n$ coincident branes 
+combine to fill out representations of $U(n)$ (as opposed to $U(1)^n$ 
+in the case of separated branes). This introduces a non-Abelian 
+structure into the theory. In the single brane case, the fluctuations of the 
+brane are characterised by induced scalar fields on the world-volume. 
+However for multiple branes
+these scalars must be promoted to matrix representations of some gauge group. 
+
+
+Typically the transverse space of any given compactification will always admit
+an $SO(3)$ isometry. We can therefore choose our scalars to 
+transform under representations of the algebra of $SO(3) \sim SU(2)$ by making 
+the identifications
+% 
+\begin{equation}
+\varphi^i = R \alpha^i \hspace{1cm} i =1,  \ldots 3 \,,
+\end{equation}
+% 
+where $R$ is some scale with canonical mass dimension, and the $\alpha^i$ are
+specified to be the irreducible generators satisfying the commutator
+% 
+\begin{equation}
+[\alpha^i, \alpha^j] = 2i \epsilon_{ijk} \alpha^k \,,
+\end{equation}
+% 
+and the conditions
+% 
+\begin{equation}
+\frac{1}{n} Tr(\alpha^i \alpha^j) = \hat{C} \delta^{ij} = (n^2-1) \delta^{ij}
+\,,
+\end{equation}
+% 
+where $\hat{C}$ is the quadratic Casimir of the gauge group.
+The irreducibility condition corresponds to the configuration being in the
+lowest energy state. It is therefore an additional fine-tuning
+of the initial conditions. 
+
+
+The Myers prescription requires a symmetrised trace (denoted $STr$) to 
+be made over the gauge group. This implies that 
+the symmetric averaging must be taken over all the group dependence 
+before taking the trace. For $n \gg 1$, the symmetric trace can be approximated with a trace, 
+which results in the usual DBI action multiplied by a potential term (as
+described in \cite{thomasward, Kachru:2002gs}). 
+However for finite $n$, the symmetrisation clearly becomes more important and it is essential that
+we
+have some means of performing this operation. Recently
+a prescription for the symmetric trace at finite $n$ was proposed \cite{Ramgoolam:2004gw,
+McNamara:2005ry}, 
+using highest weight methods and chord diagrams. 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Multi-brane inflation with a large number of branes}
 \label{sec:twlargen-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -106,7 +493,8 @@ the number of coincident branes is sufficiently small.
 
 
 Recently, an interesting version of IR DBI inflation 
-was proposed by Thomas and Ward \cite{thomasward}. In this model, the flux annihilation process 
+was proposed by Thomas and Ward \cite{thomasward}. In this model, the flux
+annihilation process 
 generates $n$ coincident branes that are initially located at the 
 bottom of a throat region. The dynamics of this configuration
 is determined by the non-Abelian world-volume theory \cite{myers1,myers2}. 
@@ -322,282 +710,14 @@ which result in a small Euler characteristic would be
 incompatible with the generalized BM bound. 
 % 
 % 
-
-% 
-% 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Relaxing the Upper Bounds on the Tensor-Scalar Ratio}
-\label{sec:relaxing-multi}
+\section{Multi-brane inflation with a small number of branes}
+\label{sec:finiten-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% 
-\addtodo{Refer to dbi-intro}
-In the standard DBI scenario, the kinetic function defined in 
-\eq{eq:DBIaction-dbiintro2}  takes the form
-%  
-\begin{equation}
-\label{eq:DBIkinetic}
-P (\varphi , X) = -T(\varphi ) \sqrt{1-2T^{-1}(\varphi ) X} + T(\varphi ) - V(\varphi ) \,,
-\end{equation}
-% 
-where $T(\varphi ) = T_3 h^4 (\varphi )$ 
-is the warped brane tension and  $V(\varphi )$ is the 
-inflaton potential. 
-Typically in warped compactifications of 
-IIB supergravity, this potential is determined by the 
-relevant fluxes and brane interaction terms. 
-We will ignore the precise origin
-and form of this potential, but simply
-note that it is highly sensitive to the string theoretic construction. For the
-purpose of this note we will simply treat it 
-as an arbitrary function of the inflaton field.
-(See, for example, Ref. \cite{brane5} for a discussion 
-on the precise form that the inflaton potential may take.)
-
-
-The standard DBI scenario (\ref{eq:DBIkinetic}) is algebraically special, 
-in the sense that the kinetic function satisfies the constraints 
-% 
-\begin{equation}
-\label{eq:cspx1}
-c_s P_{,X} = 1 , \qquad  \Lambda = \frac{1}{2} \left( 
-\frac{1}{c_s^2} -1 \right) \,.
-\end{equation}
-% 
-It follows that the 
-bounds (\ref{eq:genBMbound}) and (\ref{eq:LHbound}) 
-on the tensor-scalar ratio could in principle be 
-significantly relaxed in models where $(c_sP_{,X})_* \gg 1$. 
-In view of the second relation in \eq{eq:cspx1}, it is of interest 
-to take a phenomenological approach and consider the more  
-general class of models where
-%  
-\begin{equation}
-\label{eq:defalpha}
-\frac{1}{c_s^2} -1 = \alpha \Lambda \,,
-\end{equation}
-% 
-for some positive constant $\alpha$. Moreover since 
-a large non-Gaussian signature in the curvature perturbation is 
-typically generated in models where the sound speed of fluctuations 
-is small, we will begin by considering 
-scenarios where the kinetic function satisfies the 
-inequalities: 
-\addtodo{ Show working}
-% 
-\begin{equation}
-\label{eq:Plimits}
-X^2 P_{,XXX} \gg XP_{,XX} \gg P_{,X} \,.
-\end{equation}
-% 
-
-
-In these limits the constraint (\ref{eq:defalpha}) reduces to the 
-third-order, non-linear, partial differential equation
-% 
-\begin{equation}
-\label{eq:pde-multi}
-P^2_{,XX} = \frac{\alpha}{6} P_{,X} P_{,XXX} \,.
-\end{equation}
-% 
-Changing the dependent variable to $Q \equiv P_{,XX}/P_{,X}$ 
-reduces \eq{eq:pde-multi} to
-%  
-\begin{equation}
-\label{eq:Qdefn-multi}
-\alpha Q_{,X} = (6-\alpha )Q^2 \,,
-\end{equation}
-% 
-and it is straightforward to integrate \eq{eq:Qdefn-multi} 
-exactly. The remaining integrations can also be performed analytically 
-and the general solution to \eq{eq:pde-multi} for $\alpha \ne
-6$ is given by\footnote{The special case $\alpha =6$ results in an 
-exponential dependence of the kinetic function on $X$, and is 
-therefore an example of a higher-derivative theory. However we 
-do not consider this model further, since it does not lead to a 
-weakening of the gravitational wave constraints.}
-% 
-\begin{equation}
-\label{eq:gensoln-multi}
-P (\varphi , X) = -f_1 (\varphi ) \left[ 1-f_2 (\varphi ) X 
-\right]^m -f_3(\varphi ) \,,
-\end{equation}
-% 
-where $f_i (\varphi )$ are arbitrary functions of the scalar 
-field and
-%  
-\begin{equation}
-m \equiv \frac{2(\alpha -3 )}{\alpha -6} \, . 
-\end{equation}
-% 
-\addtodo{ Show working}
-It can be verified that the inequalities (\ref{eq:Plimits}) 
-are satisfied in the `relativistic' limit, where $X \simeq 1/f_2$.
-We consider the inflationary dynamics in this limit in what follows. 
-For completeness, we note that \eq{eq:defalpha} can be solved 
-analytically in 
-full generality and the solution is presented in the Appendix. 
-
-
-The standard DBI scenario is recovered for $m=1/2$. 
-More generally however, \eq{eq:gensoln-multi} implies that  
-% 
-\begin{eqnarray}
-\label{eq:consequence-multi}
-c_sP_{,X} \simeq \frac{m f_1 f_2}{\sqrt{2(1-m)}} \left( 
-1- f_2X \right)^{(2m-1)/2} \,,
-\\
-c_s^2 \simeq \frac{1-f_2X}{2(1-m)} \,,
-\end{eqnarray}
-% 
-when $X \simeq 1/f_2$. Self-consistency therefore
-requires $m<1$. Moreover
-we find from \eq{eq:fnldefn-dbiintro} that
-%  
-\begin{eqnarray}
-\label{eq:consequence3-multi}
-\fnleq \simeq \frac{-\beta}{1-f_2X} , \qquad \beta \equiv \frac{5(59-55m)}{486}
-\,,
-\\
-\label{eq:consequence4-multi}
-\fnleq \simeq -\frac{\sigma}{c_s^2}, \qquad \sigma \equiv 
-\frac{5}{972} \left( \frac{59-55m}{1-m} \right) \,.
-\end{eqnarray}
-% 
-Hence substituting Eqs. (\ref{eq:consequence-multi}) and (\ref{eq:consequence3-multi}) 
-into the BM bound (\ref{eq:genBMbound}) and the LH bound (\ref{eq:LHbound})
-implies that
-%  
-\begin{equation}
-\label{eq:weakBM-multi}
-r_*< \frac{32}{N \Neff^2} \frac{m f_1 f_2}{\sqrt{2(1-m)}}
-\left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
-\end{equation}
-% 
-and
-%  
-\begin{equation}
-\label{eq:weakLH-multi}
-r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
-\left( \frac{h_*}{\Mpl} \right)^{4/3}
-\frac{m f_1 f_2}{\sqrt{2(1-m)}}
-\left( -\frac{\fnleq}{\beta} \right)^{(1-2m)/2}
-\end{equation}
-% 
-respectively. 
-
-
-We conclude, therefore, that 
-the upper limit on the tensor-scalar ratio could be significantly 
-relaxed if $m <1/2$, since the non-linearity parameter is at present only 
-weakly constrained at $\fnleq >-151$. Although it is possible 
-to phenomenologically construct a model which has a value of $m$ in this 
-range, it is clearly preferable to identify  UV complete models
-that satisfy this requirement within a string theory context. 
-Unfortunately this is quite difficult to achieve since the inflaton 
-will either be associated with an open or closed string mode. 
-The open strings are governed by relativistic actions of the 
-DBI form, whilst closed strings arise from compactification of Einstein gravity
-and are typically put into canonical form.
-However there do exist classes of open string
-models which satisfy the above requirement, 
-namely those associated with multiple coincident branes.
-
-
-More specifically, if the branes are
-spatially separated, the effective action is algebraically equivalent 
-to that of a single brane. It will therefore not satisfy the 
-bound on $m$ \footnote{In this discussion, we are ignoring 
-the non-trivial backreaction of these branes on the background, and therefore 
-one should be careful about the range of validity of the effective action.}. 
-Similarly it was shown in \cite{thomasward}
-that $n$ coincident branes, in the large $n$ limit, will also fall into 
-this class of models. On the other hand, if it is assumed that 
-$n$ is finite, the special properties associated with the 
-matrix degrees of freedom become important and this 
-results in a kinetic function satisfying $m \le 1/2$.
-We will discuss this in more detail in the following Section.
-
-
-% 
-% 
-% 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Action for Multiple Coincident Branes} 
-\label{sec:multibranes-multi}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-
-We have seen how the form of the kinetic function
-$P$ can significantly change the
-strength of the LH bound on the tensor-scalar ratio, depending on its explicit
-form. One model in which a suitable form for 
-$P$ is realised is the multiple coincident
-brane model as outlined by Thomas \& Ward \cite{thomasward}.
-
-
-The world-volume theory for coincident branes is not fully known, although
-a number of proposals have been made. We will restrict our analysis to Myers' 
-prescription, since this has been extensively discussed in the 
-literature\footnote{There is also a proposal by Tseytlin \cite{Tseytlin}
-for the non-Abelian theory of coincident D-branes.} \cite{myers1, myers2}. 
-In general the open string degrees of freedom for $n$ coincident branes 
-combine to fill out representations of $U(n)$ (as opposed to $U(1)^n$ 
-in the case of separated branes). This introduces a non-Abelian 
-structure into the theory. In the single brane case, the fluctuations of the 
-brane are characterised by induced scalar fields on the world-volume. 
-However for multiple branes
-these scalars must be promoted to matrix representations of some gauge group. 
-
-
-Typically the transverse space of any given compactification will always admit
-an $SO(3)$ isometry. We can therefore choose our scalars to 
-transform under representations of the algebra of $SO(3) \sim SU(2)$ by making 
-the identifications
-% 
-\begin{equation}
-\varphi^i = R \alpha^i \hspace{1cm} i =1,  \ldots 3 \,,
-\end{equation}
-% 
-where $R$ is some scale with canonical mass dimension, and the $\alpha^i$ are
-specified to be the irreducible generators satisfying the commutator
-% 
-\begin{equation}
-[\alpha^i, \alpha^j] = 2i \epsilon_{ijk} \alpha^k \,,
-\end{equation}
-% 
-and the conditions
-% 
-\begin{equation}
-\frac{1}{n} Tr(\alpha^i \alpha^j) = \hat{C} \delta^{ij} = (n^2-1) \delta^{ij}
-\,,
-\end{equation}
-% 
-where $\hat{C}$ is the quadratic Casimir of the gauge group.
-The irreducibility condition corresponds to the configuration being in the
-lowest energy state. It is therefore an additional fine-tuning
-of the initial conditions. 
-
-
-The Myers prescription requires a symmetrised trace (denoted $STr$) to 
-be made over the gauge group. This implies that 
-the symmetric averaging must be taken over all the group dependence 
-before taking the trace. For $n \gg 1$, the symmetric trace can be approximated with a trace, 
-which results in the usual DBI action multiplied by a potential term (as
-described in \cite{thomasward, Kachru:2002gs}). 
-However for finite $n$, the symmetrisation clearly becomes more important and it is essential that
-we
-have some means of performing this operation. Recently
-a prescription for the symmetric trace at finite $n$ was proposed \cite{Ramgoolam:2004gw,
-McNamara:2005ry}, 
-using highest weight methods and chord diagrams. 
 
 
 The result is that the $STr$ acts on different spin representations of $SU(2)$ 
@@ -756,7 +876,7 @@ detail.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Bounds on the Tensor-Scalar Ratio for Multi-Brane 
+\section{Bounds on the Tensor-Scalar Ratio for finite Multi-Brane 
 Inflation} 
 \label{sec:multibounds-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -830,7 +950,7 @@ the corresponding function defined in the large $n$
 limit in \cite{thomasward}. This is not the same function as that for
 $n$ separated branes, as the matrix degrees of freedom 
 lead to an additional potential term for the scalars. However it does belong
-to the same class of models with $m=1/2$. We have 
+to the same class of models with $l=1/2$. We have 
 verified this convergence numerically since the algebraic sums are
 unfortunately not tractable. The key point is that there must exist some 
 value of $n$, beyond which the function appears to look
@@ -849,7 +969,7 @@ is still of the required form.
 
 
 \eq{eq:unifiedP-multi} is precisely of the form given by the 
-general solution (\ref{eq:gensoln-multi}), where $m=-1/2$ and 
+general solution (\ref{eq:gensoln-multi}), where $l=-1/2$ and 
 % 
 \begin{equation}
 \label{eq:fdefns-multi}
@@ -1168,111 +1288,7 @@ to employ the techniques developed in
 to identify the ranges of parameter space that are consistent 
 with current cosmological observations. It would also be interesting to 
 investigate whether the effective action (\ref{eq:gensoln-multi}) with values of 
-$m \ne - 1/2$ arises in other string-inspired settings. 
+$l \ne - 1/2$ arises in other string-inspired settings. 
 
 
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section*{Appendix: Exact Solution}
-\addtodo{ Move into main text}
-\label{sec:apx-multi}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-\eq{eq:defalpha} can be analytically solved in full 
-generality without imposing the limits (\ref{eq:Plimits}) on the 
-derivatives of the kinetic function. This allows us to determine the 
-most general class of models where the non-linearity parameter 
-satisfies the condition $\fnleq \propto 1/c_s^2$ at leading order. 
-
-In general \eq{eq:defalpha} takes the form 
-% 
-\begin{equation}
-\label{eq:genPXeqn-multi}
-(2-\alpha ) P_{,X}P_{,XX} + 4XP^2_{,XX} = \frac{2\alpha }{3}
-X P_{,X}P_{,XXX}
-\end{equation}
-% 
-and this reduces to 
-% 
-\begin{equation}
-\label{eq:genreduce-multi}
-\alpha Q_{,X} = (6-\alpha ) Q^2 + \frac{3(2-\alpha )}{2} \frac{Q}{X} \, ,
-\end{equation}
-% 
-where $Q \equiv P_{,XX}/P_{,X}$. 
-\eq{eq:genreduce-multi} can be transformed into the 
-linear equation
-% 
-\begin{equation}
-\label{eq:lineargen-multi}
-U_{,X}+ \frac{3(2-\alpha )}{2\alpha} \frac{U}{X} = \frac{\alpha -6}{\alpha}
-\end{equation}
-% 
-after the change of variables $U \equiv 1/Q$
-and the general solution to \eq{eq:lineargen-multi} is given by
-%  
-\begin{equation}
-\label{eq:gensolnlinear-multi}
-\frac{P_{,XX}}{P_{,X}} = \frac{1}{X\left[ f_2(\varphi) X^{(\alpha -6)/2\alpha}
--2 \right] } \, .
-\end{equation}
-% 
-Integrating a second time implies that
-% 
-\begin{equation}
-\label{eq:secondint-multi}
-P_{,X} = -f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
-\end{equation}
-% 
-where $s \equiv (\alpha -6 )/(2 \alpha)$ and we have redefined 
-the arbitrary integration functions $f_i(\varphi )$.  
-Finally \eq{eq:secondint-multi} can be formally integrated 
-in terms of a hypergeometric function
-%  
-\begin{equation}
- \label{eq:thirdint-multi}
- P= -f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
-\right)  \, ,
-\end{equation}
-%  
-which represents the most general solution for this class of models. 
-Note that we have set the
-remaining constant of integration to zero to ensure 
-that the kinetic function vanishes in the limit of
-zero velocity. In fact this expression admits many 
-different classes of solution, arising as limits
-of the expansion of the hypergeometric function.
-
-
-The special case of $\alpha =2$ $(s=-1)$ implies (after a 
-further redefinition of the functions $f_i (\varphi ))$ that 
-% 
-\begin{equation}
-\label{eq:DBIsoln-multi}
-P = -f_1 \sqrt{1-f_2 X} -f_3
-\end{equation}
-% 
-and this corresponds to the standard DBI action (\ref{eq:DBIkinetic}) 
-\cite{chenetal,lidser2}.          
-
-
-The case $\alpha =18/5$ $(s=-1/3)$ can also be expressed in terms 
-of elementary functions, again after redefinition of the $f_i (\varphi)$: 
-% 
-\begin{equation}
-P = \frac{-f_1\left[8 - 4f_2X^{1/3}
--\left(f_2X^{1/3}\right)^2\right]}{\sqrt{1-f_2X^{1/3}}} -f_3 \, .
-\end{equation}
-% 
-Note that this expression appears in a slightly different 
-form to that in (\ref{eq:unifiedgenP-multi}). 
-However in deriving (\ref{eq:unifiedgenP-multi}) we assumed the
-relativistic limit, which in turn imposes a non-trivial 
-relation between $X$ and $\varphi$. Using this, and with a 
-suitable redefinition of the functions, we can
-easily transform the above expression into the required form.
 
