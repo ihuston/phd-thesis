@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.36 2009/09/27 11:02:04 ith Exp $
+% $Id: multibrane.tex,v 1.37 2009/09/27 12:21:52 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.36 2009/09/27 11:02:04 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.37 2009/09/27 12:21:52 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -395,7 +395,7 @@ We will discuss this in more detail in the following Section.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Action for Multiple Coincident Branes} 
+\section{The Multiple Coincident Branes model} 
 \label{sec:multibranes-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -408,19 +408,18 @@ strength of the LH bound on the tensor-scalar ratio, depending on its explicit
 form. One model in which a suitable form for 
 $P$ is realised is the multiple coincident
 brane model as outlined by Thomas \& Ward \cite{thomasward}.
-In this model, the flux
-annihilation process 
+In this model, the flux annihilation process 
 generates $n$ coincident branes that are initially located at the 
 bottom of a throat region. The dynamics of this configuration
 is determined by the non-Abelian world-volume theory \cite{myers1,myers2}. 
 This theory exhibits extra stringy degrees of freedom which arise due to the 
 fuzzy nature of the geometry.
 
-The world-volume theory for coincident branes is not fully known, although
-a number of proposals have been made. We will restrict our analysis to Myers' 
-prescription, since this has been extensively discussed in the 
-literature\footnote{There is also a proposal by Tseytlin \cite{Tseytlin}
-for the non-Abelian theory of coincident D-branes.} \cite{myers1, myers2}. 
+% The world-volume theory for coincident branes is not fully known, although
+% a number of proposals have been made. We will restrict our analysis to Myers' 
+% prescription, since this has been extensively discussed in the 
+% literature\footnote{There is also a proposal by Tseytlin \cite{Tseytlin}
+% for the non-Abelian theory of coincident D-branes.} \cite{myers1, myers2}. 
 In general the open string degrees of freedom for $n$ coincident branes 
 combine to fill out representations of $U(n)$ (as opposed to $U(1)^n$ 
 in the case of separated branes). This introduces a non-Abelian 
@@ -431,15 +430,15 @@ these scalars must be promoted to matrix representations of some gauge group.
 
 
 Typically the transverse space of any given compactification will always admit
-an $SO(3)$ isometry. We can therefore choose our scalars to 
+an $SO(3)$ isometry. Scalars can therefore be chosen to 
 transform under representations of the algebra of $SO(3) \sim SU(2)$ by making 
 the identifications
 % 
 \begin{equation}
-\varphi^i = R \alpha^i \hspace{1cm} i =1,  \ldots 3 \,,
+\varphi^i = R_m \alpha^i \hspace{1cm} i =1,  \ldots 3 \,,
 \end{equation}
 % 
-where $R$ is some scale with canonical mass dimension, and the $\alpha^i$ are
+where $R_m$ is some scale with canonical mass dimension, and the $\alpha^i$ are
 specified to be the irreducible generators satisfying the commutator
 % 
 \begin{equation}
@@ -462,16 +461,24 @@ of the initial conditions.
 The Myers prescription requires a symmetrised trace (denoted $STr$) to 
 be made over the gauge group. This implies that 
 the symmetric averaging must be taken over all the group dependence 
-before taking the trace. For $n \gg 1$, the symmetric trace can be approximated with a trace, 
+before taking the trace:
+% 
+\begin{equation}
+ \label{eq:str-defn-multi}
+ STr (A_1 \ldots A_s) = \frac{1}{s!} Tr(A_1 \ldots A_s + \text{all
+permutations})\,.
+\end{equation}
+% 
+For a large number of branes, $n \gg 1$, the symmetric trace can be
+approximated with a trace, 
 which results in the usual DBI action multiplied by a potential term (as
 described in \cite{thomasward, Kachru:2002gs}). 
-However for finite $n$, the symmetrisation clearly becomes more important and it is essential that
-we
-have some means of performing this operation. Recently
-a prescription for the symmetric trace at finite $n$ was proposed \cite{Ramgoolam:2004gw,
-McNamara:2005ry}, 
+However for finite $n$, the symmetrisation clearly becomes more important and it
+is essential to have some means of performing this operation. A prescription for
+treating the symmetric trace at finite $n$ was proposed
+in Refs.~\cite{Ramgoolam:2004gw} and \cite{McNamara:2005ry}, 
 using highest weight methods and chord diagrams. 
-
+% 
 The result is that the $STr$ acts on different spin representations of $SU(2)$ 
 in the following manner:
 % 
@@ -490,7 +497,8 @@ it is also necessary to modify the definition of the radius of the
 $SU(2)$ sphere. In the large $n$ limit, this is given by
 % 
 \begin{equation}
-\rho^2 = \lambda^2 R^2 \frac{1}{n} Tr(\alpha^i \alpha^i) = \lambda^2 R^2
+\label{eq:largen-rho-multi}
+\rho^2 = \lambda^2 R_m^2 \frac{1}{n} Tr(\alpha^i \alpha^i) = \lambda^2 R_m^2
 \hat{C} \,,
 \end{equation}
 % 
@@ -498,14 +506,18 @@ where $\lambda \equiv 2\pi l_s^2 = 2\pi m_s^{-2}$,
 whereas for finite $n$, it becomes
 % 
 \begin{equation}
-\rho^2 = \lambda^2 R^2 \mathrm{Lim}_{q \to \infty} \left(\frac{STr (\alpha^i
+\label{eq:finiten-rho-multi}
+\rho^2 = \lambda^2 R_m^2 \mathrm{Lim}_{q \to \infty} \left(\frac{STr (\alpha^i
 \alpha^i)^{q+1}}{STr(\alpha^i \alpha^i)^q} \right) 
-= \lambda^2 R^2 (n-1)^2 \,.
+= \lambda^2 R_m^2 (n-1)^2 \,.
 \end{equation}
 % 
 This converges to the large $n$ result in the appropriate limit.
 This point is important, since the warp factor 
 of the four-dimensional theory is typically of the form $h= h(\rho)$.
+
+The next two sections will examine this coincident brane model in both the
+large and finite $n$ limits. 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -515,7 +527,9 @@ of the four-dimensional theory is typically of the form $h= h(\rho)$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
+Taking the limit of a large number of coincident branes significantly
+simplifies the non-Abelian action. As mentioned above the symmetrised trace can
+now be replaced with a normal trace operator and the relationship between 
 
  For the case where a fuzzy two-sphere is 
 embedded in a three-cycle in the $X_5$ manifold, 
@@ -754,7 +768,7 @@ h^4(\rho) \right) \,,
 where 
 % 
 \begin{equation}
-Z \equiv \lambda^2 h^{-4}(\rho), \hspace{0.5cm} Y \equiv 4\lambda^2 R^4
+Z \equiv \lambda^2 h^{-4}(\rho), \hspace{0.5cm} Y \equiv 4\lambda^2 R_m^4
 h^{-4}(\rho),
 \hspace{0.5cm} {1/2 \choose q}
 \equiv \frac{\Gamma(3/2)}{\Gamma(3/2-q)\Gamma(1+q)} \,.
@@ -831,7 +845,7 @@ P = -2T_3\left(\frac{h^4
 {\sqrt{1+9Y}\sqrt{1-9\XR}}\right) 
  -4T_3(V-h^4) \,, \nonumber \\
 E =  2T_3 \left(\frac{h^4(1+2Y-Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}} +
-\frac{h^4(1+18Y-81\XR)}{\sqrt{1+9Y}(1-9X\dot{R}^2)^{3/2}} \right)
+\frac{h^4(1+18Y-81\XR)}{\sqrt{1+9Y}(1-9X\dot{R_m}^2)^{3/2}} \right)
 +4T_3(V-h^4) \, .
 \end{eqnarray}
 % 
