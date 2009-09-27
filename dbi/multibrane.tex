@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.40 2009/09/27 16:26:51 ith Exp $
+% $Id: multibrane.tex,v 1.41 2009/09/27 17:37:19 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.40 2009/09/27 16:26:51 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.41 2009/09/27 17:37:19 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -22,41 +22,38 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-\addtodo{Change!}
-Recently relativistic DBI inflation has come under considerable 
-pressure when confronted with cosmological observations.  
-Baumann \& McAllister (BM) and Lidsey \& Huston (LH) 
-have shown that the ratio of the amplitudes of the 
-tensor and scalar perturbations generated during 
-inflation is bounded from above by $r \lsim 10^{-7}$
-\cite{bmpaper,lidseyhuston}. 
-However in ultra-violet (UV) versions of the scenario, where 
-the ${\rm D}$-brane is moving towards the tip of the throat, the tensor-scalar 
-ratio is also bounded from below, $r \gsim 0.1 (1-n_s)$, 
-where $n_s$ denotes the spectral index 
-of the scalar perturbation spectrum \cite{lidseyhuston}. 
-The two bounds on $r$ are incompatible 
-if $n_s \sim 0.95$, as currently favoured by Cosmic Microwave Background 
-(CMB) observations \cite{spergel,Komatsu:2008hk}. 
+We have seen in Chapter~\ref{ch:dbi} that the standard DBI inflationary model
+is severely constrained by current observational data. The amplitude of tensor
+perturbations is bounded from above by $r\le 10^7$. When the brane is moving
+towards the tip of the throat in the UV scenario a complementary lower bound
+on $r$ can be derived such that the two bounds are incompatible for the
+current values of the observational parameters. In this chapter we will explore
+how to evade, reconcile and weaken these bounds by considering a more general
+class of models that exhibit properties similar to the standard DBI case.
 
 
+In Section \ref{sec:relaxing-multi} we consider the special algebraic
+properties of the DBI action
+and identify a general class of non-canonical inflationary models
+where the leading-order contribution to the non-Gaussianity of the 
+curvature perturbation is determined 
+entirely by the speed of sound of the inflaton fluctuations. 
+In these models, the bounds on $r$ can be relaxed 
+if significant non-Gaussianities are generated.
 
 
-
-\addtodo{ Any new papers?}
-Alternative ways to relax these bounds have been proposed, including
-theories based upon multi-field models \cite{Huang:2007hh}, the addition of
-angular momentum as another degree of freedom \cite{spinflation} and using
-different throat geometries \cite{Gmeiner:2007uw}. However it must be noted that
-the extra degrees of freedom introduced in these models do not solve the problem. The 
+As reviewed in Section~\ref{sec:others-dbi} many alternative ways to relax these
+bounds have been proposed, including
+theories based upon multi-field models, the addition of
+angular momentum as another degree of freedom and using
+different throat geometries. However in most cases
+the extra degrees of freedom introduced in these models do not solve the problem
+\cite{Alabidi:2008ej}. The 
 bounds are relaxed only by a small fraction, and therefore these models should still be 
 regarded as being unsatisfactory since they require an extreme amount of fine tuning in order
 to work.
 
-
-\addtodo{ Keep in multibrane intro}
-Another alternative possibility is to consider 
+One alternative possibility is to consider 
 multiple brane configurations\footnote{In certain limits this approach 
 is actually dual to considering wrapped branes \cite{Ward:2007gs}.}. 
 In the case where  
@@ -70,25 +67,16 @@ the branes should be separated over a range of scales,
 with a subset being coincident and the remainder being widely separated. 
 
 
-Our approach in this paper is two-fold. We 
-begin in Sections \ref{sec:noncanoninfl} and \ref{sec:theobound-multi} 
-by noting that the upper bounds on the tensor-scalar ratio arise due to the
-special algebraic properties of the DBI action. We 
-then adopt a phenomenological approach in Section \ref{sec:relaxing-multi}
-and identify a general class of non-canonical inflationary models, 
-where the leading-order contribution to the non-Gaussianity of the 
-curvature perturbation is determined 
-entirely by the speed of sound of the inflaton fluctuations. 
-In these models, the bounds on $r$ can be relaxed 
-if significant non-Gaussianities are generated.  
-This class of models includes the relativistic limit  
-of the action for $n$ coincident ${\rm D3}$-branes, 
-which originates from a UV complete theory. This motivates us 
-to develop the theory of multiple coincident branes further in Section
-\ref{sec:multibranes-multi}. We find that for a finite number of branes, 
-the effective action for $n$ coincident branes can be derived and the backreaction
-kept firmly under control.
-In Section \ref{sec:multibounds-multi} we find that such models 
+In Section~\ref{sec:multibranes-multi} we introduce the multi-brane
+model with $n$ coincident branes described in \Rref{thomasward}. We will
+consider two limiting cases of this model. The large $n$ case is similar in
+form to the original DBI model and we will show in
+Section~\ref{sec:twlargen-multi} that it can be constrained using the
+formalism derived in Chapter~\ref{ch:dbi}. In contrast, for a finite number of
+branes the effective action in the relativistic limit is shown to be in the
+class of actions for which the bounds on $r$ can be relaxed.
+In Section~\ref{sec:finiten-multi} we find that
+such models 
 can in principle lead to a detectable 
 gravitational wave background if 
 the number of coincident branes is sufficiently small. 
@@ -756,8 +744,17 @@ incompatible with the generalized BM bound.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Multi-brane inflation with a small number of branes}
+\section{Multi-brane inflation with a finite number of branes}
 \label{sec:finiten-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{The finite $n$ model}
+\label{sec:finitensub-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -906,7 +903,7 @@ difficult to let $N\gg n$ and still constrain this model.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Bounds on the Tensor-Scalar Ratio for finite $n$} 
+\subsection{Bounds on the Tensor-Scalar Ratio for finite $n$} 
 \label{sec:multibounds-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
