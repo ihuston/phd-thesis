@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.37 2009/09/27 12:21:52 ith Exp $
+% $Id: multibrane.tex,v 1.38 2009/09/27 16:16:30 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.37 2009/09/27 12:21:52 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.38 2009/09/27 16:16:30 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -380,13 +380,14 @@ to that of a single brane. It will therefore not satisfy the
 bound on $l$ \footnote{In this discussion, we are ignoring 
 the non-trivial backreaction of these branes on the background, and therefore 
 one should be careful about the range of validity of the effective action.}. 
-Similarly it was shown in \cite{thomasward}
-that $n$ coincident branes, in the large $n$ limit, will also fall into 
-this class of models. On the other hand, if it is assumed that 
+In the remainder of this chapter we will examine the case of $n$ coincident
+branes as described in \Rref{thomasward}. The large $n$ limit will also
+fall into the class of models with $l=1/2$ which are equivalent to the single
+brane case. On the other hand, if it is assumed that 
 $n$ is finite, the special properties associated with the 
 matrix degrees of freedom become important and this 
 results in a kinetic function satisfying $l \le 1/2$.
-We will discuss this in more detail in the following Section.
+
 
 
 % 
@@ -407,7 +408,7 @@ $P$ can significantly change the
 strength of the LH bound on the tensor-scalar ratio, depending on its explicit
 form. One model in which a suitable form for 
 $P$ is realised is the multiple coincident
-brane model as outlined by Thomas \& Ward \cite{thomasward}.
+brane model as outlined by Thomas and Ward \cite{thomasward}.
 In this model, the flux annihilation process 
 generates $n$ coincident branes that are initially located at the 
 bottom of a throat region. The dynamics of this configuration
@@ -427,8 +428,7 @@ structure into the theory. In the single brane case, the fluctuations of the
 brane are characterised by induced scalar fields on the world-volume. 
 However for multiple branes
 these scalars must be promoted to matrix representations of some gauge group. 
-
-
+% 
 Typically the transverse space of any given compactification will always admit
 an $SO(3)$ isometry. Scalars can therefore be chosen to 
 transform under representations of the algebra of $SO(3) \sim SU(2)$ by making 
@@ -483,9 +483,11 @@ The result is that the $STr$ acts on different spin representations of $SU(2)$
 in the following manner:
 % 
 \begin{eqnarray}
+\label{eq:str-even-multi}
 STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{n/2}(2i-1)^{2q} , 
 \qquad n\; \mathrm{ even}\,, 
 \\
+\label{eq:str-odd-multi}
 STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{(n-1)/2} (2i)^{2q} , 
 \qquad n\; \mathrm{ odd}\,.
 \end{eqnarray}
@@ -529,14 +531,16 @@ large and finite $n$ limits.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 Taking the limit of a large number of coincident branes significantly
 simplifies the non-Abelian action. As mentioned above the symmetrised trace can
-now be replaced with a normal trace operator and the relationship between 
-
+now be replaced with a normal trace operator and the expression for $\rho$
+takes the form in \eq{eq:largen-rho-multi}. 
+% 
  For the case where a fuzzy two-sphere is 
 embedded in a three-cycle in the $X_5$ manifold, 
 the kinetic structure of the action is given in the large $n$ limit by 
 \cite{thomasward}
 % 
 \begin{equation}
+\label{eq:largeP-multi}
 P=-nT_3 \left[ h^4(\varphi ) W(\varphi ) 
 \sqrt{1-2 T_3^{-1} h^{-4}(\varphi) X}
 -h^4(\varphi ) + V (\varphi ) \right] \,,
@@ -554,6 +558,12 @@ $C = \pi^2 \hat{C}T_3^2/m_s^4$ is a model-dependent constant and
 $\hat{C} \simeq n^2$ 
 is the quadratic Casimir of the $n$-dimensional representation of 
 ${\rm SU}(2)$. 
+
+The kinetic term \eqref{eq:largeP-multi} is clearly of the same form as the
+standard DBI term with $l=1/2$ in the scheme outlined in
+Section~\ref{sec:relaxing-multi}. We can therefore apply the analysis of
+Section~\ref{sec:relaxing-dbi} to see if the bounds described in
+Chapter~\ref{ch:dbi} can be relaxed.
 Comparison with \eq{eq:genaction-dbi} 
 implies that $f_1f_2 =2nW$ and $f_2=2/(T_3h^4)$. Hence, 
 the new features of this model relative to the standard single-brane 
@@ -722,7 +732,6 @@ constraint is given by \cite{gkp}
 where $\chi$ is the Euler characteristic of the four-fold.  
 Hence, $N = MK < \chi /24$ and together with condition 
 (\ref{eq:Nconstraint-dbi}), this implies that
-\addtodo{ Still true? Check Lidsey\&Alabidi for recent calc}
 % 
 \begin{equation}
 \label{eq:chilimit}
@@ -740,6 +749,7 @@ does allow us to gain some insight into the
 topology of the extra dimensions, since compactifications 
 which result in a small Euler characteristic would be  
 incompatible with the generalized BM bound. 
+
 % 
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -750,19 +760,20 @@ incompatible with the generalized BM bound.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-
-
-
+The coincident brane model outlined in Section~\ref{sec:multibranes-multi}
+takes a significantly different form if instead of assuming a large number of
+coincident branes there are now only a small finite number. The presciption for
+the symmetrised trace given in Eqs.~\eqref{eq:str-even-multi} and
+\eqref{eq:str-odd-multi} must be used and $\rho$ is determined from
+\eq{eq:finiten-rho-multi}. 
+% 
 The resulting kinetic function for $n$ coincident branes in 
 the finite $n$ limit is therefore given by
 % 
 \begin{equation}
 \label{eq:genP-multi}
 P = -T_3 STr \left(h^4(\rho) \sum_{k,p=0}^{\infty}(-\XR)^k Y^p (\alpha^i
-\alpha^i)^{k+p}{1/2 \choose k} {1/2 \choose p} + V(\rho)
--
-h^4(\rho) \right) \,,
+\alpha^i)^{k+p}{1/2 \choose k} {1/2 \choose p} + V(\rho)-h^4(\rho) \right) \,,
 \end{equation}
 % 
 where 
@@ -781,10 +792,19 @@ discussed further
 in \cite{thomasward, Ward:2007gs}.
 
 
-The simplest case to consider is that of two coincident branes. However
-the form of the $STr$ prescription implies that all other solutions for 
-$n>2$ can be deduced entirely from the $n=2$ solution by a recursion relation. 
-In order to see this, let us define 
+It was shown in \Rref{hltw} that $P$ and $E$ of all the solutions with $n>2$
+can be derived recursively from the $n=2$ solution. We will use the notation
+$P_n$ and $E_n$ for the first part of the kinetic and energy density terms for
+the $n$ branes solution. The full pressure and energy densities are then 
+given by $P = P_n - nT_3(V-h^4)$ and $E = E_n + nT_3 (V-h^4)$. Using
+\eq{eq:str-even-multi} and the expressions
+% 
+\begin{eqnarray}
+ \sum_{k=0}^\infty A^k {1/2 \choose k} &=& \sqrt{1+A}\,,\\
+ \sum_{k=0}^\infty A^k {1/2 \choose k} 4k &=& \frac{2A}{\sqrt{1+A}}\,,
+\end{eqnarray}
+% 
+the terms $P_2$ and $E_2$ can be derived:
 % 
 \begin{eqnarray}
 \label{eq:2brane}
@@ -794,14 +814,13 @@ E_2(Z,Y) &=& 2 T_3 h^4 \left(\frac{(1+2Y -
 Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}}\right) \,.
 \end{eqnarray}
 % 
-These quantities correspond to the pressure and energy density functions 
-when $n=2$ which arise solely from the DBI sector of the action.
-The full pressure and energy densities are then 
-given by $P = P_2 - 2T_3(V-h^4)$ and
-$E = E_2 + 2T_3 (V-h^4)$, respectively.
-Since the symmetrised trace acts differently on the differing spin
-representations of $SU(2)$, we should expect this structure to follow
-through in the recursion relation. Indeed, we find that for odd $n$
+% These quantities correspond to the pressure and energy density functions 
+% when $n=2$ which arise solely from the DBI sector of the action.
+% Since the symmetrised trace acts differently on the differing spin
+% representations of $SU(2)$, we should expect this structure to follow
+% through in the recursion relation. Indeed, we find that for odd $n$
+% 
+The recursion relation described in \Rref{hltw} can then be written for odd $n$:
 % 
 \begin{eqnarray}
 \label{eq:oddbrane}
@@ -811,7 +830,7 @@ E_n^{(O)} &=& \left(\sum_{k=1}^{(n-1)/2} E_2[(2k)^2Z, (2k)^2Y] \right)+
 nT_3(V-h^4) \,,
 \end{eqnarray}
 % 
-whilst for even $n$ we find that
+and for even $n$:
 %  
 \begin{eqnarray}
 \label{eq:evenbrane}
@@ -823,50 +842,62 @@ nT_3(V-h^4) \,.
 % 
 
 
-For example, we can employ these recursion relations to obtain the 
-solutions for $n=3$:  
-% 
-\begin{eqnarray}
-P &=& - 2T_3 \left(\frac{h^4
-(1+8Y-8\XR(1+6Y))}{\sqrt{1-4\XR}\sqrt{1+4Y}}\right)
- -3T_3(V-h^4) \,, \nonumber \\
-E &=&  2T_3 \left(\frac{h^4
-(1+8Y(1-2\XR))}{(1-4\XR)^{3/2}\sqrt{1+4Y}}\right) +3T_3(V-h^4) \,,
-\end{eqnarray}
-% 
-which agrees precisely with the result computed by direct 
-expansion of the $STr$ prescription. Furthermore the $n=4$ case is given by 
-% 
-\begin{eqnarray}
-P = -2T_3\left(\frac{h^4
-(1+2Y-\XR(2+3Y))}{\sqrt{1+Y}\sqrt{1-\XR}} \right. 
-\nonumber \\
-\left. +\frac{h^4(1+18Y-9\XR(2+27Y))}
-{\sqrt{1+9Y}\sqrt{1-9\XR}}\right) 
- -4T_3(V-h^4) \,, \nonumber \\
-E =  2T_3 \left(\frac{h^4(1+2Y-Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}} +
-\frac{h^4(1+18Y-81\XR)}{\sqrt{1+9Y}(1-9X\dot{R_m}^2)^{3/2}} \right)
-+4T_3(V-h^4) \, .
-\end{eqnarray}
-% 
-It it clear that the relevant functions increase in complexity as 
-$n$ increases, since there are progressively more
-terms to include in the $STr$ expansion. However Eqs. (\ref{eq:oddbrane}) and (\ref{eq:evenbrane})
-represent the most general
-solutions. 
+% For example, we can employ these recursion relations to obtain the 
+% solutions for $n=3$:  
+% % 
+% \begin{eqnarray}
+% P &=& - 2T_3 \left(\frac{h^4
+% (1+8Y-8\XR(1+6Y))}{\sqrt{1-4\XR}\sqrt{1+4Y}}\right)
+%  -3T_3(V-h^4) \,, \nonumber \\
+% E &=&  2T_3 \left(\frac{h^4
+% (1+8Y(1-2\XR))}{(1-4\XR)^{3/2}\sqrt{1+4Y}}\right) +3T_3(V-h^4) \,,
+% \end{eqnarray}
+% % 
+% which agrees precisely with the result computed by direct 
+% expansion of the $STr$ prescription. Furthermore the $n=4$ case is given by 
+% % 
+% \begin{eqnarray}
+% P = -2T_3\left(\frac{h^4
+% (1+2Y-\XR(2+3Y))}{\sqrt{1+Y}\sqrt{1-\XR}} \right. 
+% \nonumber \\
+% \left. +\frac{h^4(1+18Y-9\XR(2+27Y))}
+% {\sqrt{1+9Y}\sqrt{1-9\XR}}\right) 
+%  -4T_3(V-h^4) \,, \nonumber \\
+% E =  2T_3 \left(\frac{h^4(1+2Y-Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}} +
+% \frac{h^4(1+18Y-81\XR)}{\sqrt{1+9Y}(1-9X\dot{R_m}^2)^{3/2}} \right)
+% +4T_3(V-h^4) \, .
+% \end{eqnarray}
+% % 
+% It it clear that the relevant functions increase in complexity as 
+% $n$ increases, since there are progressively more
+% terms to include in the $STr$ expansion. However Eqs. (\ref{eq:oddbrane}) and
+% (\ref{eq:evenbrane})
+% represent the most general
+% solutions. 
 
 
-One should also be aware that the backreaction of multiple branes will
-typically introduce corrections of the form $n/N$, therefore it is important
-for this ratio to be small in order for us to trust the supergravity analysis.
-Typically we can argue that wrapped branes are dual to multi-brane configurations when
-we are in the limit that $n>>1$. However since we also wish to keep $N>>1$ we must tune
-the solution so that $n/N<<1$ is satisfied. Therefore the origin of the backreaction effects
-is much clearer from this perspective. One can compute the $1/N$ corrections to the multi-brane
-action in the large $n$ limit \cite{Ward:2007gs} which, in the dual picture, correspond to
-backreactive corrections
-to the wrapped brane models. It would certainly be more useful to develop both these models in more
-detail.
+% One should also be aware that the backreaction of multiple branes will
+% typically introduce corrections of the form $n/N$, therefore it is important
+% for this ratio to be small in order for us to trust the supergravity analysis.
+% Typically we can argue that wrapped branes are dual to multi-brane
+% configurations when
+% we are in the limit that $n>>1$. However since we also wish to keep $N>>1$ we
+% must tune
+% the solution so that $n/N<<1$ is satisfied. Therefore the origin of the
+% backreaction effects
+% is much clearer from this perspective. One can compute the $1/N$ corrections
+% to the multi-brane
+% action in the large $n$ limit \cite{Ward:2007gs} which, in the dual picture,
+% correspond to
+% backreactive corrections
+% to the wrapped brane models. It would certainly be more useful to develop both
+% these models in more
+% detail.
+
+The backreaction of the multiple branes introduces corrections of the form $n/N$
+\cite{hltw}. Ensuring that this ratio is small allows the continued use of the
+supergravity analysis. As we will see in the next section it will not be
+difficult to let $N\gg n$ and still constrain this model.
 
 
 % 
@@ -874,13 +905,16 @@ detail.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Bounds on the Tensor-Scalar Ratio for finite Multi-Brane 
-Inflation} 
+\section{Bounds on the Tensor-Scalar Ratio for finite $n$} 
 \label{sec:multibounds-multi}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
+In the last section we introduced the multi coincident brane model in the limit
+of a finite number of branes. In this section we will consider this model in
+the context of the class of actions derived in Section~\ref{sec:relaxing-multi}
+and show that current observational data can strongly constrain the ability of
+this model to produce an observable tensor signal.
 
 The last terms appearing in the summations of Eqs. (\ref{eq:oddbrane}) 
 and (\ref{eq:evenbrane}) correspond  to the $k=(n-1)/2$ 
