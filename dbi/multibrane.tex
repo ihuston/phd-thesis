@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.35 2009/09/25 10:32:42 ith Exp $
+% $Id: multibrane.tex,v 1.36 2009/09/27 11:02:04 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.35 2009/09/25 10:32:42 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.36 2009/09/27 11:02:04 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -408,7 +408,13 @@ strength of the LH bound on the tensor-scalar ratio, depending on its explicit
 form. One model in which a suitable form for 
 $P$ is realised is the multiple coincident
 brane model as outlined by Thomas \& Ward \cite{thomasward}.
-
+In this model, the flux
+annihilation process 
+generates $n$ coincident branes that are initially located at the 
+bottom of a throat region. The dynamics of this configuration
+is determined by the non-Abelian world-volume theory \cite{myers1,myers2}. 
+This theory exhibits extra stringy degrees of freedom which arise due to the 
+fuzzy nature of the geometry.
 
 The world-volume theory for coincident branes is not fully known, although
 a number of proposals have been made. We will restrict our analysis to Myers' 
@@ -466,6 +472,41 @@ a prescription for the symmetric trace at finite $n$ was proposed \cite{Ramgoola
 McNamara:2005ry}, 
 using highest weight methods and chord diagrams. 
 
+The result is that the $STr$ acts on different spin representations of $SU(2)$ 
+in the following manner:
+% 
+\begin{eqnarray}
+STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{n/2}(2i-1)^{2q} , 
+\qquad n\; \mathrm{ even}\,, 
+\\
+STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{(n-1)/2} (2i)^{2q} , 
+\qquad n\; \mathrm{ odd}\,.
+\end{eqnarray}
+% 
+
+
+In order for the solution to converge in this prescription, 
+it is also necessary to modify the definition of the radius of the 
+$SU(2)$ sphere. In the large $n$ limit, this is given by
+% 
+\begin{equation}
+\rho^2 = \lambda^2 R^2 \frac{1}{n} Tr(\alpha^i \alpha^i) = \lambda^2 R^2
+\hat{C} \,,
+\end{equation}
+% 
+where $\lambda \equiv 2\pi l_s^2 = 2\pi m_s^{-2}$, 
+whereas for finite $n$, it becomes
+% 
+\begin{equation}
+\rho^2 = \lambda^2 R^2 \mathrm{Lim}_{q \to \infty} \left(\frac{STr (\alpha^i
+\alpha^i)^{q+1}}{STr(\alpha^i \alpha^i)^q} \right) 
+= \lambda^2 R^2 (n-1)^2 \,.
+\end{equation}
+% 
+This converges to the large $n$ result in the appropriate limit.
+This point is important, since the warp factor 
+of the four-dimensional theory is typically of the form $h= h(\rho)$.
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -476,14 +517,7 @@ using highest weight methods and chord diagrams.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
-Recently, an interesting version of IR DBI inflation 
-was proposed by Thomas and Ward \cite{thomasward}. In this model, the flux
-annihilation process 
-generates $n$ coincident branes that are initially located at the 
-bottom of a throat region. The dynamics of this configuration
-is determined by the non-Abelian world-volume theory \cite{myers1,myers2}. 
-This theory exhibits extra stringy degrees of freedom which arise due to the 
-fuzzy nature of the geometry. For the case where a fuzzy two-sphere is 
+ For the case where a fuzzy two-sphere is 
 embedded in a three-cycle in the $X_5$ manifold, 
 the kinetic structure of the action is given in the large $n$ limit by 
 \cite{thomasward}
@@ -704,40 +738,6 @@ incompatible with the generalized BM bound.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 
-The result is that the $STr$ acts on different spin representations of $SU(2)$ 
-in the following manner:
-% 
-\begin{eqnarray}
-STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{n/2}(2i-1)^{2q} , 
-\qquad n\; \mathrm{ even}\,, 
-\\
-STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{(n-1)/2} (2i)^{2q} , 
-\qquad n\; \mathrm{ odd}\,.
-\end{eqnarray}
-% 
-
-
-In order for the solution to converge in this prescription, 
-it is also necessary to modify the definition of the radius of the 
-$SU(2)$ sphere. In the large $n$ limit, this is given by
-% 
-\begin{equation}
-\rho^2 = \lambda^2 R^2 \frac{1}{n} Tr(\alpha^i \alpha^i) = \lambda^2 R^2
-\hat{C} \,,
-\end{equation}
-% 
-where $\lambda \equiv 2\pi l_s^2 = 2\pi m_s^{-2}$, 
-whereas for finite $n$, it becomes
-% 
-\begin{equation}
-\rho^2 = \lambda^2 R^2 \mathrm{Lim}_{q \to \infty} \left(\frac{STr (\alpha^i
-\alpha^i)^{q+1}}{STr(\alpha^i \alpha^i)^q} \right) 
-= \lambda^2 R^2 (n-1)^2 \,.
-\end{equation}
-% 
-This converges to the large $n$ result in the appropriate limit.
-This point is important, since the warp factor 
-of the four-dimensional theory is typically of the form $h= h(\rho)$.
 
 
 The resulting kinetic function for $n$ coincident branes in 
