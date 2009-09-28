@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.45 2009/09/28 15:12:06 ith Exp $
+% $Id: multibrane.tex,v 1.46 2009/09/28 15:52:41 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.45 2009/09/28 15:12:06 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.46 2009/09/28 15:52:41 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -25,16 +25,16 @@
 We have seen in Chapter~\ref{ch:dbi} that the standard DBI inflationary model
 is severely constrained by current observational data. The amplitude of tensor
 perturbations is bounded from above by $r\le 10^7$. When the brane is moving
-towards the tip of the throat in the UV scenario a complementary lower bound
-on $r$ can be derived such that the two bounds are incompatible for the
-current values of the observational parameters. In this chapter we will explore
+towards the tip of the throat, a complementary lower bound
+on $r$ can be derived such that the two bounds are incompatible using
+current observational data. In this chapter we will explore
 how to evade, reconcile and weaken these bounds by considering a more general
 class of models that exhibit properties similar to the standard DBI case.
 
 
 In Section \ref{sec:relaxing-multi} we consider the special algebraic
-properties of the DBI action
-and identify a general class of non-canonical inflationary models
+properties of the DBI action.
+We identify a general class of non-canonical inflationary models
 where the leading-order contribution to the non-Gaussianity of the 
 curvature perturbation is determined 
 entirely by the speed of sound of the inflaton fluctuations. 
@@ -61,7 +61,7 @@ $n$ branes are localised initially at equal distances $l > l_s$ and
 subsequently follow the same trajectory, 
 the effective theory is equivalent to that of $n$ copies of the
 action for a single brane. A more general initial condition, particularly
-for branes created in the infra-red (IR) region of the throat
+for branes created in the IR region of the throat
 \cite{brane13, DeWolfe:2004qx, Kachru:2002gs}, is that
 the branes should be separated over a range of scales, 
 with a subset being coincident and the remainder being widely separated. 
@@ -96,7 +96,6 @@ the number of coincident branes is sufficiently small.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
-\addtodo{Refer to dbi-intro}
 In Chapter~\ref{ch:dbi-intro} we described the standard DBI scenario, in
 which the kinetic function $P$ takes the form in \eq{eq:Pdefn-dbiintro}:
 %  
@@ -145,7 +144,6 @@ typically generated in models where the sound speed of fluctuations
 is small. We will begin by considering 
 scenarios in which this is the case and therefore the kinetic function satisfies
 the inequalities: 
-\addtodo{ Show working}
 % 
 \begin{equation}
 \label{eq:Plimits}
@@ -322,8 +320,9 @@ we find from \eq{eq:fnldefn-dbiintro} that
 \frac{5}{972} \left( \frac{59-55l}{1-l} \right) \,.
 \end{eqnarray}
 % 
-Hence substituting Eqs. (\ref{eq:consequence-multi}) and (\ref{eq:consequence3-multi}) 
-into the BM bound (\ref{eq:genBMbound}) and the bound (\ref{eq:LHbound})
+Hence substituting Eqs.~\eqref{eq:consequence-multi} and
+\eqref{eq:consequence3-multi} 
+into the BM bound \eqref{eq:genBMbound} and the bound \eqref{eq:LHbound}
 implies that
 %  
 \begin{equation}
@@ -397,7 +396,7 @@ strength of the bound in \eq{eq:LHbound} on the tensor-scalar ratio, depending
 on its explicit
 form. One model in which a suitable form for 
 $P$ is realised is the multiple coincident
-brane model as outlined by Thomas and Ward \cite{thomasward}.
+brane model as outlined by Thomas and Ward in \Rref{thomasward}.
 In this model, the flux annihilation process 
 generates $n$ coincident branes that are initially located at the 
 bottom of a throat region. The dynamics of this configuration
@@ -424,7 +423,7 @@ transform under representations of the algebra of $SO(3) \sim SU(2)$ by making
 the identifications
 % 
 \begin{equation}
-\varphi^i = R_m \alpha^i \hspace{1cm} i =1,  \ldots 3 \,,
+\varphi^i = R_m \alpha^i \hspace{1cm} i =1, 2, 3 \,,
 \end{equation}
 % 
 where $R_m$ is some scale with canonical mass dimension, and the $\alpha^i$ are
@@ -462,7 +461,7 @@ For a large number of branes, $n \gg 1$, the symmetric trace can be
 approximated with a trace, 
 which results in the usual DBI action multiplied by a potential term (as
 described in \cite{thomasward, Kachru:2002gs}). 
-However for finite $n$, the symmetrisation clearly becomes more important and it
+However for finite $n$, the symmetrisation becomes more important and it
 is essential to have some means of performing this operation. A prescription for
 treating the symmetric trace at finite $n$ was proposed
 in Refs.~\cite{Ramgoolam:2004gw} and \cite{McNamara:2005ry}, 
@@ -473,11 +472,11 @@ in the following manner:
 % 
 \begin{eqnarray}
 \label{eq:str-even-multi}
-STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{n/2}(2i-1)^{2q} , 
+STr (\alpha^i \alpha^i)^q &=& 2(2q+1)\sum_{i=1}^{n/2}(2i-1)^{2q} , 
 \qquad n\; \mathrm{ even}\,, 
 \\
 \label{eq:str-odd-multi}
-STr (\alpha^i \alpha^i)^q = 2(2q+1)\sum_{i=1}^{(n-1)/2} (2i)^{2q} , 
+STr (\alpha^i \alpha^i)^q &=& 2(2q+1)\sum_{i=1}^{(n-1)/2} (2i)^{2q} , 
 \qquad n\; \mathrm{ odd}\,.
 \end{eqnarray}
 % 
@@ -506,7 +505,7 @@ whereas for finite $n$, it becomes
 This converges to the large $n$ result in the appropriate limit.
 This point is important, since the warp factor 
 of the four-dimensional theory is typically of the form $h= h(\rho)$.
-
+% 
 The next two sections will examine this coincident brane model in both the
 large and finite $n$ limits. 
 
@@ -519,7 +518,7 @@ large and finite $n$ limits.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 Taking the limit of a large number of coincident branes significantly
-simplifies the non-Abelian action. As mentioned above the symmetrised trace can
+simplifies the non-Abelian action. The symmetrised trace can
 now be replaced with a normal trace operator and the expression for $\rho$
 takes the form in \eq{eq:largen-rho-multi}. 
 % 
@@ -544,12 +543,10 @@ W (\varphi ) \equiv \sqrt{1+ C^{-1}h^{-4}(\varphi ) \varphi^4}
 % 
 defines the so-called `fuzzy' potential, 
 $C = \pi^2 \hat{C}T_3^2/m_s^4$ is a model-dependent constant and 
-$\hat{C} \simeq n^2$ 
-is the quadratic Casimir of the $n$-dimensional representation of 
-${\rm SU}(2)$. 
+$\hat{C} \simeq n^2$ in the large $n$ limit. 
 
 The kinetic term \eqref{eq:largeP-multi} is clearly of the same form as the
-standard DBI term with $l=1/2$ in the scheme outlined in
+single-brane DBI term, with $l=1/2$ in the scheme outlined in
 Section~\ref{sec:relaxing-multi}. We can therefore apply the analysis of
 Section~\ref{sec:relaxing-dbi} to see if the bounds described in
 Chapter~\ref{ch:dbi} can be relaxed.
@@ -584,7 +581,6 @@ an $AdS_5$ or KS throat, respectively. Recall that the warp
 factor for the $AdS_5$ throat is given by $h=\varphi/(\sqrt{T_3}L)$.  
 Condition (\ref{eq:warptorelax}) therefore reduces to a constraint on the 
 value of the inflation during observable inflation: 
-\addtodo{ Show working}
 % 
 \begin{equation}
 \label{eq:phivalue-dbi}
@@ -593,14 +589,13 @@ value of the inflation during observable inflation:
 \frac{\lambda}{N} \,,
 \end{equation}
 %  
-where $\lambda \equiv \pi N/[2 \mathrm{Vol}(X_5)]$. 
+where $\lambda \equiv \pi N/(2 \mathrm{Vol}(X_5))$. 
 However, non-perturbative string effects are expected to become 
 important below a cutoff scale, $\varphi_{\rm cut} = 
 h_{\rm cut} \lambda^{1/4} m_s$, where $h_{\rm cut}$ is the value of the 
 warp factor at that scale. For consistency, therefore, one requires 
 $\varphi_*>\varphi_{\rm cut}$, which implies an upper limit on the 
 ${\rm D3}$-brane charge: 
-\addtodo{ Show working}
 % 
 \begin{equation}
 \label{eq:Nlimit-dbi}
@@ -654,11 +649,11 @@ the warp factor asymptotes to a constant value
 % 
 \begin{equation}
 \label{eq:KStip-dbi}
-h_{\rm tip} = \exp \left( - \frac{2\pi K}{3Mg_s} \right) \,,
+h_{\rm tip} = \exp \left( - \frac{2\pi K}{3Mg_s} \right) \,.
 \end{equation}
 % 
-and $K,M \in {\rm \bf Z^+}$ are the units of flux associated 
-with the NS-NS and R-R three-forms, respectively, such that $N=MK$.
+% and $K,M \in {\rm \bf Z^+}$ are the units of flux associated 
+% with the NS-NS and R-R three-forms, respectively, such that $N=MK$.
 In this case, the generalized BM bound (\ref{eq:warptorelax}) becomes
 %  
 \begin{equation}
@@ -787,7 +782,7 @@ Note that the second and third terms in \eq{eq:genP-multi}
 are singlets under the $STr$ and therefore contribute terms proportional 
 to $n$. The physics of these branes away from the large $n$ limit is particularly interesting as
 discussed further
-in \cite{thomasward, Ward:2007gs}.
+in Refs.~\cite{thomasward} and \cite{Ward:2007gs}.
 
 
 It was shown in \Rref{hltw} that $P$ and $E$ of all the solutions with $n>2$
@@ -806,9 +801,9 @@ the terms $P_2$ and $E_2$ can be derived:
 % 
 \begin{eqnarray}
 \label{eq:2brane}
-P_2(Z,Y) &=& - 2 T_3 h^4 \left(\frac{(1+2Y -
+P_2 \left[Z,Y\right] &=& - 2 T_3 h^4 \left(\frac{(1+2Y -
 (2+3Y)\XR)}{\sqrt{1+Y}\sqrt{1-\XR}}\right) \,, \nonumber \\
-E_2(Z,Y) &=& 2 T_3 h^4 \left(\frac{(1+2Y -
+E_2 \left[Z,Y\right] &=& 2 T_3 h^4 \left(\frac{(1+2Y -
 Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}}\right) \,.
 \end{eqnarray}
 % 
@@ -822,9 +817,10 @@ The recursion relation described in \Rref{hltw} can then be written for odd $n$:
 % 
 \begin{eqnarray}
 \label{eq:oddbrane}
-P_n^{(O)} &=& \left(\sum_{k=1}^{(n-1)/2} P_2[(2k)^2Z, (2k)^2Y]
+P_n^{(O)} &=& \left(\sum_{k=1}^{(n-1)/2} P_2 \left[(2k)^2Z, (2k)^2Y\right]
 \right)-nT_3(V-h^4) \,, \nonumber \\
-E_n^{(O)} &=& \left(\sum_{k=1}^{(n-1)/2} E_2[(2k)^2Z, (2k)^2Y] \right)+
+E_n^{(O)} &=& \left(\sum_{k=1}^{(n-1)/2} E_2 \left[(2k)^2Z, (2k)^2Y \right]
+\right)+
 nT_3(V-h^4) \,,
 \end{eqnarray}
 % 
@@ -832,9 +828,10 @@ and for even $n$:
 %  
 \begin{eqnarray}
 \label{eq:evenbrane}
-P_n^{(E)} &=& \left(\sum_{k=1}^{n/2} P_2[(2k-1)^2Z, (2k-1)^2Y]
+P_n^{(E)} &=& \left(\sum_{k=1}^{n/2} P_2 \left[(2k-1)^2Z, (2k-1)^2Y\right]
 \right)-nT_3(V-h^4) \,, \nonumber \\
-E_n^{(E)} &=& \left(\sum_{k=1}^{n/2} E_2[(2k-1)^2Z, (2k-1)^2Y] \right)+
+E_n^{(E)} &=& \left(\sum_{k=1}^{n/2} E_2 \left[(2k-1)^2Z, (2k-1)^2Y \right]
+\right)+
 nT_3(V-h^4) \,.
 \end{eqnarray}
 % 
@@ -914,8 +911,8 @@ the context of the class of actions derived in Section~\ref{sec:relaxing-multi}
 and show that current observational data can strongly constrain the ability of
 this model to produce an observable tensor signal.
 
-The last terms appearing in the summations of Eqs. (\ref{eq:oddbrane}) 
-and (\ref{eq:evenbrane}) correspond  to the $k=(n-1)/2$ 
+The last terms appearing in the summations of Eqs.~\eqref{eq:oddbrane} 
+and \eqref{eq:evenbrane} correspond  to the $k=(n-1)/2$ 
 term when $n$ is odd and to the $k=n/2$ term when $n$ is even. This 
 implies that for all $n$, these terms can be expressed in the form 
 % 
@@ -929,10 +926,11 @@ P = -2T_3 \left\{ \frac{h^4 \left[ 1+2(n-1)^2Y
 % 
 
 
-Inspection of Eqs. (\ref{eq:2brane})-(\ref{eq:evenbrane}) implies that 
+Inspection of Eqs.~\eqref{eq:2brane}-\eqref{eq:evenbrane} implies that 
 the relativistic limit is realised for any finite number of branes when 
 $(n-1)^2 \XR \rightarrow 1$. In this case, the dominant contribution 
-to the summations appearing in Eqs. (\ref{eq:oddbrane}) and (\ref{eq:evenbrane})
+to the summations appearing in Eqs.~\eqref{eq:oddbrane} and
+\eqref{eq:evenbrane}
 will arise from the last term, \eq{eq:unifiedgenP-multi}. In this limit, 
 therefore, the kinetic function appearing in the effective action simplifies to 
 % 
@@ -977,7 +975,7 @@ the function in \eq{eq:unifiedP-multi}. Using the
 recursion relations defined in the previous section, 
 we see that in the large $n$ limit the kinetic function converges to 
 the corresponding function defined in the large $n$ 
-limit in \cite{thomasward}. This is not the same function as that for
+limit in \Rref{thomasward}. This is not the same function as that for
 $n$ separated branes, as the matrix degrees of freedom 
 lead to an additional potential term for the scalars. However it does belong
 to the same class of models with $l=1/2$. We have 
@@ -986,8 +984,9 @@ unfortunately not tractable. The key point is that there must exist some
 value of $n$, beyond which the function appears to look
 more like the standard DBI action, rather than the 
 approximate form proposed in (\ref{eq:unifiedP-multi}). For a range of background 
-solutions, the numerics suggest that the approximation is 
-valid up to terms of $\mathcal{O}(10)$. Since there are a large number of 
+solutions, numerical calculations suggest that the approximation is 
+valid up to terms of $\mathcal{O}(10)$ \cite{hltw}. Since there are a large
+number of 
 parameters in the theory, it is possible to find solutions 
 where $n \gg 10$. However we will then be forced to 
 generate a larger background flux, which will result 
@@ -1026,7 +1025,7 @@ f_2 (\varphi) = \frac{2}{T_3 h^4} \,.
 We may therefore immediately conclude from \eq{eq:consequence4-multi} that
 $\fnleq
 \simeq -0.3/c_s^2$. Moreover, since $\beta \simeq 0.9$ in this scenario, 
-Eqs. (\ref{eq:consequence-multi}) and (\ref{eq:consequence3-multi}) reduce to  
+Eqs.~\eqref{eq:consequence-multi} and \eqref{eq:consequence3-multi} reduce to  
 % 
 \begin{equation}
 \label{eq:csPXlimit}
@@ -1057,7 +1056,7 @@ the warp factor during observable inflation:
 \frac{r^2 \Pr}{\fnleq} \,.
 \end{equation}
 % 
-Eqs. \eqref{eq:csPXlimit} and \eqref{eq:warpfactor-multi} may now be
+Eqs.~\eqref{eq:csPXlimit} and \eqref{eq:warpfactor-multi} may now be
 substituted into 
 the bound \eqref{eq:LHbound} to yield
 %  
@@ -1095,7 +1094,7 @@ r_* < 2.8 \times 10^{-13} \frac{N}{(n-1)^2} (\fnleq)^2 \,.
 \end{equation}
 % 
 
-As in Section~\ref{sec:twlargen-multi}
+As in Section~\ref{sec:twlargen-multi},
 global tadpole cancellation constrains the magnitude of
 the background charge $N$ such that $N < \chi /
 24$. 
@@ -1107,7 +1106,7 @@ N < 75852
 \end{equation}
 % 
 for known solutions, although in principle higher values are possible. 
-Imposing the WMAP5 bound $\fnleq>-151$ in (\ref{eq:AdSupper-multi})
+Imposing the WMAP5 bound $\fnleq>-151$ in \eq{eq:AdSupper-multi}
 and noting that $n \ge 2$ for consistency then implies an absolute
 upper limit 
 on the tensor-scalar ratio:
@@ -1128,18 +1127,18 @@ should be observable \cite{songknox,vpj, Baumann:2008aq}. In view of this,
 it is interesting to consider whether
 a detectable gravitational wave background could in principle 
 be generated in this class of multi-brane inflationary 
-models. We find from (\ref{eq:AdSupper-multi}) that this would require 
+models. We find from \eq{eq:AdSupper-multi} that this would require 
 % 
 \begin{equation}
 \label{eq:nlimit-multi}
 n < 1 -5.3 \times 10^{-5} \sqrt{N} \fnleq < 1-0.014 \fnleq \,,
 \end{equation}
 % 
-where the theoretic limit ({\ref{eq:Nlimit-multi}) for 
+where the theoretic limit \eq{eq:Nlimit-multi} for 
 known compactifications has been imposed in the 
 second inequality. We may deduce, therefore, that  
 since we require $n \ge 2$ for consistency, a detectable tensor 
-signal will require $\fnleq < -70$, which implies that an observation of 
+signal will require $\fnleq < -70$. This implies that an observation of 
 the tensors should also be 
 accompanied by a sufficiently large -- and detectable -- non-Gaussianity. 
 In other words, this class of models could  
@@ -1177,22 +1176,22 @@ We must also ensure that our approximation $(n-1)^2Y \gg 1$
 is valid for consistency.  
 For the parameter values we have chosen this requires that 
 $g_s N \gg  (n-1)^2$ 
-and this is satisfied if the condition (\ref{eq:nlimit-multi}) 
+and this is satisfied if the condition \eqref{eq:nlimit-multi} 
 holds. Note also that we require $N \gg n$ for the supergravity 
 approximation to be under control and for backreaction effects to 
-be negligible. This is also satisfied when (\ref{eq:nlimit-multi})  
+be negligible. This is also satisfied when \eq{eq:nlimit-multi}  
 holds. 
 
 
 For completeness we should also consider the 
-BM bound (\ref{eq:genBMbound}) for this class of models. This is given by 
+BM bound \eqref{eq:genBMbound} for this class of models. This is given by 
 % 
 \begin{equation}
 \label{eq:BMAdS-multi}
-r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnleq 
+r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnleq \,,
 \end{equation}
 %  
-and, in the case of an $AdS_5 \times X_5$ throat, simplifies to
+and in the case of an $AdS_5 \times X_5$ throat simplifies to
 %  
 \begin{equation}
 \label{eq:bmadsbound}
@@ -1200,13 +1199,14 @@ r_* < -\frac{5}{\Neff^2}
 \frac{\fnleq}{(n-1)\sqrt{N}} \,.
 \end{equation}
 %  
-Comparing the limits (\ref{eq:AdSupper-multi}) and (\ref{eq:bmadsbound}) 
+Comparing the limits in Eqs.~\eqref{eq:AdSupper-multi}) and
+\eqref{eq:bmadsbound} 
 implies that the bound \eqref{eq:LHbound} is stronger than the corresponding BM
 bound \eqref{eq:genBMbound} if 
 % 
 \begin{equation}
 \label{eq:LHstrongerads}
-n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq 
+n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq \,,
 \end{equation}
 % 
 and this condition is always satisfied if 
@@ -1216,7 +1216,7 @@ and this condition is always satisfied if
 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq  <1  \, .
 \end{equation}
 % 
-Moreover, the bound (\ref{eq:allNbound-multi}) will itself be satisfied for 
+Moreover, the bound \eqref{eq:allNbound-multi} will itself be satisfied for 
 all values of $\fnleq$ and $N$ if it is satisfied when the limits 
 $\fnleq =-151$ and $N=75852$ are imposed. Hence, we conclude that the bound
 \eqref{eq:LHbound} 
@@ -1228,7 +1228,7 @@ and, in particular, on the functional form of the inflaton potential.
 However, if the ratio $\epsilon_H/P_{,X}$ remains approximately 
 constant during the final stages of inflation, one would anticipate that 
 $\Neff \lsim 60$. Nevertheless, if $N \ll 75852$, the bound 
-(\ref{eq:LHstrongerads}) will only be violated for $n \le 3$ if 
+\eqref{eq:LHstrongerads} will only be violated for $n \le 3$ if 
 $\Neff \gg 60$.  
 
 
@@ -1239,7 +1239,7 @@ the volume of the throat is much smaller
 than the volume of the compactified Calabi-Yau 
 three-fold. It is likely, therefore, 
 that the actual constraint on $r$ would be much stronger. Consequently, 
-although the bound (\ref{eq:nlimit-multi})  
+although the bound \eqref{eq:nlimit-multi}  
 does marginally allow for detectable tensors if $n$ is sufficiently 
 small, in practice this constraint would be further tightened by a more 
 complete calculation. Nonetheless, our analysis does not necessarily 
@@ -1285,9 +1285,10 @@ of $l \ne - 1/2$ arises in string-inspired settings or elsewhere.
 
 In Section~\ref{sec:multibranes-multi} we introduced the coincident $n$ branes
 model of Thomas and Ward \cite{thomasward}. We examined the predictions of this
-model in two limit, arbitrarily large and small finite $n$. The large $n$ model
+model in two limits, arbitrarily large $n$ and small finite $n$. The large $n$
+model
 is similar to the single brane case. Using the results of
-Section~\ref{sec:relaxing-dbi} we showed that the large $n$ case is strongly
+Section~\ref{sec:relaxing-dbi} we showed that it is strongly
 constrained by current observations.
 
 The finite $n$ model is of more theoretical interest as it exhibits the
@@ -1306,7 +1307,7 @@ string-inspired inflationary models that have been proposed to date
 generate an unobservable tensor background. We 
 found that a detectable signal is possible, in principle, 
 for typical string-theoretic parameter values 
-if the number of coincident branes, $n$, is either $2$ or $3$. 
+if the number of coincident branes is either $2$~or~$3$. 
 This is consistent with known F-theory configurations and 
 current WMAP5 limits on the non-Gaussianity. Furthermore, 
 we found that the level of non-Gaussianity must exceed $\fnleq 
