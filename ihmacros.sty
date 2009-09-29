@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % 
 % ihmacros.sty - Ian Huston
-% $Id: ihmacros.sty,v 1.15 2009/09/28 16:03:54 ith Exp $
+% $Id: ihmacros.sty,v 1.16 2009/09/29 10:50:42 ith Exp $
 % % % % % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihmacros}
@@ -107,6 +107,10 @@
 \newcommand{\lsim}{\mbox{\raisebox{-1.ex}{$\stackrel{\textstyle<}{\textstyle\sim}$}}}
 % 
 \newcommand{\convolve}{\star}
+
+%Derivatives of \N
+\newcommand{\dN}[1]{\ensuremath{#1^{\dagger}}}
+\newcommand{\ddN}[1]{\ensuremath{#1^{\dagger\dagger}}}
 
 % % % % % % % % % % % % % % % % % % % % % % % 
 % Karims definitions
