@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.11 2009/09/29 10:24:58 ith Exp $
+% $Id: numerical.tex,v 1.12 2009/09/29 10:40:20 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.11 2009/09/29 10:24:58 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.12 2009/09/29 10:40:20 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -161,8 +161,10 @@ $a_{\mathrm{init}}$ is the value of $a$ at the beginning of the
 simulation. If $a$ is set to be $1$ today we can calculate
 $a_{\mathrm{init}}$ once the background run is complete and the end
 time of inflation is determined as in Section
-\ref{sec:implementation}. We will use an overdot to denote
-differentiation with respect to $\N$.
+\ref{sec:implementation}. We will use a dagger ($\dN{}$) to denote
+differentiation with respect to $\N$ \footnote{This should not be confused
+with the use of $\dagger$ as Hermitian conjugate, which is confined to
+Section~\ref{sec:perts-intro}.}.
 
 
 The changes in derivatives required are as follows:
