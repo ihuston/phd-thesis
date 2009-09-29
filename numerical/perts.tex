@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.5 2009/09/29 10:40:19 ith Exp $
+% $Id: perts.tex,v 1.6 2009/09/29 11:12:59 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.5 2009/09/29 10:40:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.6 2009/09/29 11:12:59 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -335,15 +335,15 @@ equation in Fourier Space is
 % 
  && + \frac{1}{(2\pi)^3}\int \d^3q \d^3p\, \delta^3(\kvi -\pvi -\qvi) \left\{
 \frac{16\pi G}{\H}
-\left[ X
+\left[ Q
 \dvp1'(\pvi) \dvp1(\qvi) + \vp_{0}' a^2\Upp \dvp1(\pvi)\dvp1(\qvi)
 \right] \right. \nonumber \\
 %
  && + \left(\frac{8\pi G}{\H}\right)^2\vp_{0}'\left[2a^2\Uphi\vp_{0}'
-\dvp1(\pvi)\dvp1(\qvi) + \vp_{0}'X\dvp1(\pvi)\dvp1(\qvi) \right]
+\dvp1(\pvi)\dvp1(\qvi) + \vp_{0}'Q\dvp1(\pvi)\dvp1(\qvi) \right]
 \nonumber \\
 %
- && -2\left(\frac{4\pi G}{\H}\right)^2\frac{\vp_{0}' X}{\H} \left[X\dvp1(\pvi)
+ && -2\left(\frac{4\pi G}{\H}\right)^2\frac{\vp_{0}' Q}{\H} \left[Q\dvp1(\pvi)
 \dvp1(\qvi) +
 \vp_{0}' \dvp1(\pvi) \dvp1'(\qvi)\right] \nonumber \\
 %
@@ -354,7 +354,7 @@ equation in Fourier Space is
  && + F(\dvp1(\kvi), \dvp1'(\kvi)) = 0\,.
 \end{eqnarray}
 %
-Here we use $X=a^2 (8\pi G \U \vp_0'/\H + \Uphi)$ for convenience.
+Here we use $Q=a^2 (8\pi G \U \vp_0'/\H + \Uphi)$ for convenience.
 The $F$ term contains gradients of $\dvp1$ in real space and therefore
 the convolution integrals include additional factors of $k$ and
 $q$. It is given by
@@ -367,7 +367,7 @@ F\left(\dvp1(\kvi),\dvp1'(\kvi)\right)
 \Bigg\{ 
 2\left(\frac{8\pi G}{\H}\right)\frac{p_kq^k}{q^2}
 \delta\vp_{1}'(\pvi)\left(
-X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
+Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \nonumber\\
 &&
 +p^2\frac{16\pi G}{\H}\dvp1(\pvi)\vp_{0}'\dvp1(\qvi)
@@ -377,10 +377,10 @@ X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \vp_{0}'\delta\vp_{1}(\pvi)\vp_{0}'\delta\vp_{1}(\qvi)
 \Bigg]\nonumber\\
 &&
-+2\frac{X}{\H}\left(\frac{4\pi G}{\H}\right)^2 
++2\frac{Q}{\H}\left(\frac{4\pi G}{\H}\right)^2 
 \frac{p_lq^lp_mq^m+p^2q^2}{k^2q^2}
 \Bigg[\vp_{0}'\delta\vp_{1}(\pvi)
-\left(X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
+\left(Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \Bigg]
 %
 \nonumber\\
@@ -388,7 +388,7 @@ X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 &&
 +\frac{4\pi G}{\H}
 \Bigg[
-4X\frac{q^2+p_lq^l}{k^2}\left(
+4Q\frac{q^2+p_lq^l}{k^2}\left(
 \dvp1'(\pvi)\dvp1(\qvi)\right)
 -\vp_{0}'p_lq^l \delta\vp_{1}(\pvi)\delta\vp_{1}(\qvi)
 \Bigg]
@@ -398,8 +398,8 @@ X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 +\left(\frac{4\pi G}{\H}\right)^2
 \frac{\vp_{0}'}{\H}\Bigg[
 \frac{p_lq^lp_mq^m}{p^2q^2}
-\left( X\dvp1(\pvi)+\vp_{0}'\dvp1'(\pvi)\right)
-\left(X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
+\left( Q\dvp1(\pvi)+\vp_{0}'\dvp1'(\pvi)\right)
+\left(Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \Bigg]\nonumber\\
 %
 &&
@@ -415,8 +415,8 @@ X\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 +\left(\frac{4\pi G}{\H}\right)^2
 \frac{k^jk_i}{k^2}\Bigg(
 2\frac{p^ip_j}{p^2}
-\left(X\dvp1(\pvi)+\vp_{0}'\dvp1'(\pvi)\right)
-X\dvp1(\qvi)
+\left(Q\dvp1(\pvi)+\vp_{0}'\dvp1'(\pvi)\right)
+Q\dvp1(\qvi)
 \Bigg)\Bigg]
 \Bigg\}\,.
 \end{eqnarray}
@@ -437,7 +437,7 @@ evolution in the slow roll approximation. In our case this involves taking
 \frac{\left(\vp_{0}'\right)^2}{2a^2}\ll \U\,,
 \end{equation}
 %
-such that $X=0$ and $\H^2 = (8\pi G/3) a^2 \U$. The slow roll parameter
+such that $Q=0$ and $\H^2 = (8\pi G/3) a^2 \U$. The slow roll parameter
 $\epsilon_H$ as defined in Refs.~\cite{Malik:2006ir} and \cite{Seery:2005gb} 
 (which is the square-root of the usual $\epsilon$) is given by
 %
