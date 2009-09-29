@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.2 2009/09/21 14:45:45 ith Exp $
+% $Id: perts.tex,v 1.3 2009/09/29 09:59:32 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.2 2009/09/21 14:45:45 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.3 2009/09/29 09:59:32 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -110,6 +110,16 @@ on the calculation and describe the next steps required in
 detail. This calculation uses the slow roll version of the second
 order equation, but solves the full non-slow roll equations for the
 background and first order.
+% 
+The models that we test in this paper are single field models with a canonical
+action. Significant second order corrections
+are expected only when a non-canonical action or multiple fields are
+used, or slow roll is violated. Numerical simulations will be particularly
+useful in analysing models with these characteristics.
+We will discuss in
+Section~\ref{sec:disc} planned future work to extend our current numerical
+system to deal with these extensions beyond the standard single field slow roll
+inflation.
 
 
 In Section \ref{sec:perts-num} we will give a brief outline of
@@ -433,11 +443,12 @@ evolution in the slow roll approximation. In our case this involves taking
 \frac{\left(\vp_{0}'\right)^2}{2a^2}\ll \U\,,
 \end{equation}
 %
-such that $X=0$ and $\H^2 = (8\pi G/3) a^2 \U$. The standard slow roll
-parameter $\epsilon_H$ is given by \cite{book:liddle}
+such that $X=0$ and $\H^2 = (8\pi G/3) a^2 \U$. The slow roll parameter
+$\epsilon_H$ as defined in Refs.~\cite{Malik:2006ir} and \cite{Seery:2005gb} 
+(which is the square-root of the usual $\epsilon$) is given by
 %
 \begin{equation}
- \varepsilon_H = \frac{8\pi G}{2} \frac{\left(\vp_{0}'\right)^2}{\H}\,.
+ \varepsilon_H = \sqrt{4\pi G} \frac{\vp_{0}'}{\H}\,.
 \end{equation}
 %
 With this approximation the second order equation (\ref{eq:SOKG-real-num})
