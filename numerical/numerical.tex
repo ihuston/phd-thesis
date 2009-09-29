@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.10 2009/09/21 14:45:45 ith Exp $
+% $Id: numerical.tex,v 1.11 2009/09/29 10:24:58 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.10 2009/09/21 14:45:45 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.11 2009/09/29 10:24:58 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -152,7 +152,7 @@ number of e-foldings, and hence we use
 
 \begin{equation}
 \label{eq:def-ntime}
-n = \log ( a / a_{\mathrm{init}} )\,,
+\N = \log ( a / a_{\mathrm{init}} )\,,
 \end{equation}
 
 %
@@ -162,14 +162,15 @@ simulation. If $a$ is set to be $1$ today we can calculate
 $a_{\mathrm{init}}$ once the background run is complete and the end
 time of inflation is determined as in Section
 \ref{sec:implementation}. We will use an overdot to denote
-differentiation with respect to $n$.
+differentiation with respect to $\N$.
 
 
 The changes in derivatives required are as follows:
 %
 \begin{eqnarray}
- \pd{ }{\eta} &=& \frac{\d n}{\d \eta}\pd{}{n} = \H \pd{}{n} \,,\\
- \pd{ }{t} &=& \frac{\d \eta}{\d t} \frac{\d n}{\d \eta}\pd{}{n} = H \pd{}{n}\,,
+ \pd{ }{\eta} &=& \frac{\d \N}{\d \eta}\pd{}{\N} = \H \pd{}{\N} \,,\\
+ \pd{ }{t} &=& \frac{\d \eta}{\d t} \frac{\d \N}{\d \eta}\pd{}{\N} = H
+\pd{}{\N}\,,
 \end{eqnarray}
 %
 where $\eta$ and $t$ are conformal and coordinate time respectively with $H =
@@ -182,24 +183,24 @@ at the end of
 inflation. This gives approximately 65 e-foldings from the end of inflation until now. 
 % 
 The background and first order equations written in terms of the new time
-variable $n$ are
+variable $\N$ are
 %
 \begin{eqnarray}
-&&\ddot{\vp_{0}} + \frac{\U}{H^2}\dot{\vp_{0}} + \frac{\Uphi}{H^2} = 0 \,,
+&&\ddN{\vp_{0}} + \frac{\U}{H^2}\dN{\vp_{0}} + \frac{\Uphi}{H^2} = 0 \,,
 \label{eq:bgntime}\\
-&&\ddot{\dvp1} + \left(3 + \frac{\dot{H}}{H}\right)\dot{\dvp1} +
+&&\ddN{\dvp1} + \left(3 + \frac{\dN{H}}{H}\right)\dN{\dvp1} +
 \left[\left(\frac{k}{aH}\right)^2 + \frac{\Upp}{H^2} + \frac{8\pi G}{H^2}
-2\dot{\vp_{0}}\Uphi + \left(\frac{8\pi G}{H}\right)^2
-\left(\dot{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,. \label{eq:fontime}
+2\dN{\vp_{0}}\Uphi + \left(\frac{8\pi G}{H}\right)^2
+\left(\dN{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,. \label{eq:fontime}
 \end{eqnarray}
 % 
-The second order equation in terms of $n$ is
+The second order equation in terms of $\N$ is
 % 
 \begin{equation}
  \label{eq:KG2-fourier-sr-ntime}
-\ddot{\dvp2}(\kvi)+\left(3 + \frac{\dot{H}}{H}\right)
-\dot{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi)
-+\left(\frac{\Upp}{H^2}-{24 \pi G}(\dot{\vp_{0}})^2\right)
+\ddN{\dvp2}(\kvi)+\left(3 + \frac{\dN{H}}{H}\right)
+\dN{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi)
++\left(\frac{\Upp}{H^2}-{24 \pi G}(\dN{\vp_{0}})^2\right)
 \dvp2(\kvi) +S(\kvi) = 0 \,,
 \end{equation}
 % 
@@ -207,15 +208,15 @@ The second order equation in terms of $n$ is
 \label{eq:KG2-source-ntime}
 S(\kvi) &=& \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
 \frac{\Uppp}{H^2} q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
-&&+\, \frac{8\pi G}{(aH)^2}\dot{\vp_{0}} \Bigg[ 
+&&+\, \frac{8\pi G}{(aH)^2}\dN{\vp_{0}} \Bigg[ 
 \left( 3a^2\Upp q^2 + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi) %\nonumber\\
 -\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 B(\kvi,\qvi)
 \Bigg]\dvp1(\qvi) \nonumber\\
 %
-&&+\, 8\pi G \dot{\vp_{0}} \Bigg[
+&&+\, 8\pi G \dN{\vp_{0}} \Bigg[
 -\frac{3}{2}q^2 \tilde{C}(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq
 \tilde{D}(\kvi,\qvi) 
-\Bigg]\dot{\dvp1}(\qvi) \Bigg\}\,,
+\Bigg]\dN{\dvp1}(\qvi) \Bigg\}\,,
 %
 \end{eqnarray}
 %
@@ -223,15 +224,15 @@ where
 %
 \begin{eqnarray}
  \tilde{C}(\kvi,\qvi) &=& \frac{1}{aH} C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
-\dot{\dvp1}(\kvi-\qvi) \d\theta \,,\nonumber \\
+\dN{\dvp1}(\kvi-\qvi) \d\theta \,,\nonumber \\
  \tilde{D}(\kvi,\qvi) &=& \frac{1}{aH} D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
-\sin(\theta) \dot{\dvp1}(\kvi-\qvi)
+\sin(\theta) \dN{\dvp1}(\kvi-\qvi)
 \d\theta \,.
 \end{eqnarray}
 
 
 
-The argument of $\dvp1$ and $\dot{\dvp1}$ in the $A$--$\tilde{D}$ terms requires
+The argument of $\dvp1$ and $\dN{\dvp1}$ in the $A$--$\tilde{D}$ terms requires
 special consideration. 
 To compute the integrals, $\theta$ is sampled at 
 % 
@@ -253,7 +254,7 @@ found using
 While $\dvp1(\kvi)=\dvp1(k)$, the value of $|\kvi-\qvi|$ is at most
 $2\kmax$ where $k,q \in [\kmin,\kmax]$. This means that to calculate
 the source term for the $k$ range described we require that $\dvp1$
-and $\dot{\dvp1}$ be known in the range $[0, 2\kmax]$. In
+and $\dN{\dvp1}$ be known in the range $[0, 2\kmax]$. In
 Section \ref{sec:implementation} we will 
 show that this first order upper bound does not significantly affect
 performance. On the other hand $|\kvi-\qvi|$ can also drop below the
@@ -292,13 +293,13 @@ $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The background system requires initial conditions for $\vp_{0},
-\dot{\vp_{0}}$ and $H$. These initial conditions and the range of
+\dN{\vp_{0}}$ and $H$. These initial conditions and the range of
 e-foldings to be simulated must be selected with the choice of
 potential in mind. Not only must the
 e-folding range include an inflationary period, but the $k$ modes to
 be calculated at first and second order must begin inside the horizon
 during this range. For example the initial conditions $\vp_0 = 18\Mpl,
-\dot{\vp_0} = -1 \Mpl, H = 4.65\e{-5}\Mpl$ for the $\msqphisq$ model 
+\dN{\vp_0} = -1 \Mpl, H = 4.65\e{-5}\Mpl$ for the $\msqphisq$ model 
 give the background evolution described below and shown in Figure~\ref{fig:eps}.
 
 
@@ -323,11 +324,11 @@ of the first order equations as the initial conditions \cite{Salopek:1988qh}, wi
 \label{eq:foics}
  \dvp1|_{\mathrm{init}} &=& \frac{\sqrt{8\pi G}}{a}
 \frac{e^{-i k\eta}}{\sqrt{2k}} \,,\\
- \dot{\dvp1}|_{\mathrm{init}} &=& -\frac{\sqrt{8\pi G}}{a}
+ \dN{\dvp1}|_{\mathrm{init}} &=& -\frac{\sqrt{8\pi G}}{a}
 \frac{e^{-i k\eta}}{\sqrt{2k}} \left(1 + i \frac{k}{a H}\right) \,,
 \end{eqnarray}
 %
-where the conformal time $\eta$ can be calculated from $\eta=\int dn/aH \simeq
+where the conformal time $\eta$ can be calculated from $\eta=\int \d\N/aH \simeq
 -(aH(1-\epsilon_H))^{-1}$, when $\epsilon_H$ changes slowly. For example $\kwmap$ is initialised
 about $65$ e-foldings before the end of inflation and crosses the horizon about $5$ e-foldings
 later.
@@ -339,7 +340,7 @@ We are interested in the production of second order effects by the
 evolution of the the gaussian first order modes and we make no
 assumptions about the existence of second order perturbations before
 the simulation begins. Therefore we set the initial condition for each second order
-perturbation mode to be $\dvp2=0, \dot{\dvp2}=0$ at
+perturbation mode to be $\dvp2=0, \dN{\dvp2}=0$ at
 the time when the corresponding first order perturbation is initialised.
 
 
@@ -361,7 +362,7 @@ rewritten as two first order (in the time derivative) equations, is
 evolved from the specified initial state until some end time required
 to be after the end of the inflationary regime.  The end of inflation
 occurs when $\d^2a/\d t^2$ is no longer positive and the parameter
-$\varepsilon_H = -\dot{H}/H$ first becomes greater than or equal to $1$
+$\varepsilon_H = -\dN{H}/H$ first becomes greater than or equal to $1$
 (see Figure~\ref{fig:eps}). Here, this specifies a new end time for the 1st
 order run, although the simulation can run beyond the strict end of
 inflation if required. The initial conditions for the first order
@@ -371,8 +372,8 @@ system are then set as outlined above.
 \centering
  \includegraphics[scale=0.8]{./numerical/graphs/bgepsilon}
  \caption{The end of inflation is determined by calculating when
-   $\varepsilon_H=-\dot{H}/H=1$ (red dashed line). Along the $x$-axis,
-   $n$ is the number of e-foldings from the start of the
+   $\varepsilon_H=-\dN{H}/H=1$ (red dashed line). Along the $x$-axis,
+   $\N$ is the number of e-foldings from the start of the
    simulation.}
 \label{fig:eps}
 \end{figure}
@@ -707,7 +708,7 @@ the real and imaginary parts of the first order perturbations from
 when the initial conditions are set at $k/aH=50$ to just after horizon
 crossing. The x-axis for most of the following figures shows the
 number of e-foldings left until the end of inflation instead of the
-internally used time variable $n$.
+internally used time variable $\N$.
 %
 % 
 \begin{figure}
@@ -807,9 +808,9 @@ other terms in the second order evolution equation
 %
 \begin{equation}
 \label{eq:Tdefn}
- T(\kvi) = \left(3 + \frac{\dot{H}}{H}\right)
-\dot{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi)
-+\left(\frac{\Upp}{H^2}-{24 \pi G}(\dot{\vp_{0}})^2\right)
+ T(\kvi) = \left(3 + \frac{\dN{H}}{H}\right)
+\dN{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi)
++\left(\frac{\Upp}{H^2}-{24 \pi G}(\dN{\vp_{0}})^2\right)
 \dvp2(\kvi) \,,
 \end{equation}
 %
