@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.16 2009/10/05 15:52:09 ith Exp $
+% $Id: numerical.tex,v 1.17 2009/10/05 16:05:30 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.16 2009/10/05 15:52:09 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.17 2009/10/05 16:05:30 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -21,8 +21,8 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Numerics}
-\label{sec:numerics}
+\section{Introduction}
+\label{sec:intro-num}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -68,11 +68,14 @@ integration using the Romberg method as explained below.
 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Equations}
-\label{sec:numeqs}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Numerical Equations}
+\label{sec:eqs-num}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
 The equations in Section \ref{sec:slowroll} are not set up for a
@@ -161,7 +164,7 @@ $a_{\mathrm{init}}$ is the value of $a$ at the beginning of the
 simulation. If $a$ is set to be $1$ today we can calculate
 $a_{\mathrm{init}}$ once the background run is complete and the end
 time of inflation is determined as in Section
-\ref{sec:implementation}. We will use a dagger ($\dN{}$) to denote
+\ref{sec:impl-num}. We will use a dagger ($\dN{}$) to denote
 differentiation with respect to $\N$ \footnote{This should not be confused
 with the use of $\dagger$ as Hermitian conjugate, which is confined to
 Section~\ref{sec:perts-intro}.}.
@@ -257,13 +260,13 @@ While $\dvp1(\kvi)=\dvp1(k)$, the value of $|\kvi-\qvi|$ is at most
 $2\kmax$ where $k,q \in [\kmin,\kmax]$. This means that to calculate
 the source term for the $k$ range described we require that $\dvp1$
 and $\dN{\dvp1}$ be known in the range $[0, 2\kmax]$. In
-Section \ref{sec:implementation} we will 
+Section \ref{sec:impl-num} we will 
 show that this first order upper bound does not significantly affect
 performance. On the other hand $|\kvi-\qvi|$ can also drop below the
 lower cutoff of calculated $k$ modes. As discussed above we will implement a sharp cut off and
 take $\dvp1(k)=0$ for the values below
 $\kmin$. When $\Delta k \simeq \kmin$ this affects only the $k=q$ modes and
-is only significant close to $\kmin$. Section \ref{sec:codetests}
+is only significant close to $\kmin$. Section \ref{sec:tests-num}
 describes how the accuracy is affected by changing $\Delta k$ and
 other parameters. Without extrapolating outside our computed $k$ range
 it appears to be very difficult to avoid taking this small number of
@@ -288,11 +291,25 @@ order perturbation results from WMAP5 at the pivot scale
 $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267\times10^{-6}
 \Mpl, \lambda=1.5506\times10^{-13}$.
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Potentials and parameters}
+\label{sec:pots-num}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Initial Conditions} 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Initial Conditions} 
 \label{sec:initconds-num}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 The background system requires initial conditions for $\vp_{0},
 \dN{\vp_{0}}$ and $H$. These initial conditions and the range of
@@ -347,10 +364,14 @@ the time when the corresponding first order perturbation is initialised.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Implementation} 
-\label{sec:implementation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Implementation} 
+\label{sec:impl-num}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
 The current implementation of the code is mainly in Python and uses the
@@ -460,10 +481,14 @@ matured and some of the improvements discussed in Section \ref{sec:disc-num} hav
 been implemented.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Code Tests}
-\label{sec:codetests}
-%%%%%%%%%%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Code Tests}
+\label{sec:tests-num}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
 We have tested the numerical code in a variety of controlled
