@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.3 2009/10/05 11:21:28 ith Exp $
+% $Id: results.tex,v 1.4 2009/10/05 15:19:58 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.3 2009/10/05 11:21:28 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.4 2009/10/05 15:19:58 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -84,7 +84,7 @@ internally used time variable $\N$.
 % 
 \begin{figure}
  \centering
- \includegraphics[scale=0.8]{numerical/graphs/dp1_kwmap}
+ \includegraphics[width=\textwidth]{numerical/graphs/dp1_kwmap}
  \caption{The first order perturbation $\dvp1$ rescaled by
 $k^{3/2}/(\sqrt{2}\pi)$ from the beginning of the simulation until around
 horizon crossing (red dot-dashed line). The real (blue) and imaginary (green
@@ -106,7 +106,7 @@ magnitude of the resulting power spectra.
 % 
 \begin{figure}
  \centering
- \includegraphics[scale=0.8]{numerical/graphs/dp2_kwmap}
+ \includegraphics[width=\textwidth]{numerical/graphs/dp2_kwmap}
  \caption{The real (blue line) and imaginary (green dashed) components of the
 second order
 perturbation $\dvp2(\kwmap)$ from the beginning of the simulation until around
@@ -128,15 +128,15 @@ absolute magnitude of the source term for a single $k$ mode, $\kwmap$,
 for all time steps calculated.
 % 
 \begin{figure}
-\subfigure[Absolute magnitude of the source term.]{
- \includegraphics[scale=0.8]{numerical/graphs/src-kwmap-small}
+\centering
+\subfloat[Absolute magnitude of the source term.]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src-kwmap-small}
 \label{fig:src-full}
-}
+}\qquad
 % 
-\subfigure[Power spectrum of scalar perturbations $\mathcal{P}_{\delta\varphi} =
-\frac{k^3}{2\pi^2}
-|\delta\varphi|^2$.]{
- \includegraphics[scale=0.8]{numerical/graphs/Pphi-kwmap-nohoriz-small}
+\subfloat[Power spectrum of scalar perturbations $\mathcal{P}_{\delta\varphi} =
+\frac{k^3}{2\pi^2}|\delta\varphi|^2$.]{
+\includegraphics[width=0.43\textwidth]{numerical/graphs/Pphi-kwmap-nohoriz-small}
 \label{fig:Pphi-kwmap}
 }
 \caption{Source term and power spectrum for the WMAP pivot scale $\kwmap$.}
@@ -152,21 +152,21 @@ should be at least as large as $\kmin$ in order to reduce the error to
 a minimum.
 % 
 \begin{figure}
- \subfigure[Comparison of the source term for $\kwmap$ over three
-different
-ranges with different $\Delta k$s as specified in \eq{eq:Krangedefns}.]{
- \includegraphics[scale=0.8]{numerical/graphs/src-kwmap-3ranges-small}
- \label{fig:src-kwmap-3ranges}
-}
+\centering
+ \includegraphics[width=\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
+\caption{Comparison of the source term for $\kwmap$ over three
+different ranges with different $\Delta k$s as specified in
+\eq{eq:Krangedefns}.} 
+\label{fig:src-kwmap-3ranges}
+\end{figure}
 % 
-\subfigure[The source term for three different $k$ values including the WMAP
+\begin{figure}
+\centering
+ \includegraphics[width=\textwidth]{numerical/graphs/src-3ks-large}
+\caption{The source term for three different $k$ values including the WMAP
 pivot scale. As $k$
-gets larger (scale gets smaller) the source term becomes smaller.]{
- \includegraphics[scale=0.8]{numerical/graphs/src-3ks-small}
+gets larger (scale gets smaller) the source term becomes smaller.}
 \label{fig:src-3ks}
-}
-\caption{Two different comparisons of the source term $S$.}
-\label{fig:src-comparisons}
 \end{figure}
 % 
 % 
@@ -202,27 +202,21 @@ for the simulation by only calculating $S$ in the regions where it is
 important.
 %
 \begin{figure}
-% 
-\subfigure[The source term (lower blue line) is compared with the $T$ term
-(upper green
-line) as defined in the text for $\kwmap$. The source term is of comparable
-magnitude at the
-beginning of the simulation. ]{
- \includegraphics[scale=0.8]{numerical/graphs/src-vs-t-kwmap-small.pdf}
+\centering
+ \includegraphics[width=\textwidth]{numerical/graphs/src-vs-t-kwmap-large}
+\caption{The source term (lower blue line) is compared with the $T$ term
+(upper green line) as defined in the text for $\kwmap$. The source term is of
+comparable magnitude at the beginning of the simulation.}
  \label{fig:src-vs-others}
-}
+\end{figure}
 % 
- \subfigure[The quotient of $S$ and $T$ terms for three different $k$ values
-including
-the WMAP pivot scale. Depending on $k$ the source term only dominates at early
-stages or is
-important throughout the evolution.]{
- \includegraphics[scale=0.8]{numerical/graphs/s-over-t-3ks-small}
+\begin{figure}
+\centering
+ \includegraphics[width=\textwidth]{numerical/graphs/s-over-t-3ks-large}
+\caption{The quotient of $S$ and $T$ terms for three different $k$ values
+including the WMAP pivot scale. Depending on $k$ the source term only dominates
+at early stages or is important throughout the evolution.}
  \label{fig:s-over-t-3ks}
-}
-% 
-\caption{Source term $S$ compared with $T$.} 
-\label{fig:src-3ks-and-over-t}
 \end{figure}
 % 
 % 
@@ -244,20 +238,19 @@ would be closely
 related. 
 % 
 \begin{figure}
- \subfigure[The $\lambdaphifour$ model (green dashed line) initially has a
-larger source term but
-becomes
-smaller than the $\msqphisq$ model as evolution continues. After horizon
-crossing
-the $\lambdaphifour$ term is slightly larger.]{
- \includegraphics[scale=0.8]{numerical/graphs/src-mvl-small}
+\centering
+ \subfloat[The $\lambdaphifour$ model (green dashed line) initially has a
+larger source term but becomes smaller than the $\msqphisq$ model as evolution
+continues. After horizon crossing the $\lambdaphifour$ term is slightly
+larger.]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src-mvl-small}
  \label{fig:src-mvl}
-}
+}\qquad
 % 
-\subfigure[The crossover between the models at the early stages of the
+\subfloat[The crossover between the models at the early stages of the
 simulation, before horizon 
 crossing.]{
-\includegraphics[scale=0.8]{numerical/graphs/src-mvl-zoom-small}
+\includegraphics[width=0.43\textwidth]{numerical/graphs/src-mvl-zoom-small}
 \label{fig:src-mvl-zoom}
 }
 \caption{A comparison of the source term for the $\msqphisq$ and
@@ -279,10 +272,11 @@ Figure~\ref{fig:src-3ks}).
 It should also be remembered that the magnitude of other terms in the second
 order ODE is
 small for larger $k$s as shown by the ratio $|S|/|T|$ in
-Figure~\ref{fig:src-3ks-and-over-t}
+Figure~\ref{fig:s-over-t-3ks}
 where $T$ is defined above in \eq{eq:Tdefn}.
 \begin{figure}
-\includegraphics[scale=0.8]{numerical/graphs/src_kinit_log}
+\centering
+\includegraphics[width=\textwidth]{numerical/graphs/src_kinit_log}
  \caption{The absolute magnitude of the source term at the initial start time
 for each $k$ when
 $k = aH \times 50$ deep inside the horizon. The results are for the range
@@ -302,7 +296,8 @@ line plots $|S|$
 after all modes have exited the horizon, around 52 e-foldings before the end of
 inflation.
 \begin{figure}
-\includegraphics[scale=0.8]{numerical/graphs/src_3ns}
+\centering
+\includegraphics[width=\textwidth]{numerical/graphs/src_3ns}
 \caption{The absolute magnitude of the source term for all $ks$ in the range at
 three different
 timesteps: the upper blue line when only the largest modes have been
