@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.4 2009/10/05 15:19:58 ith Exp $
+% $Id: results.tex,v 1.5 2009/10/05 15:52:09 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.4 2009/10/05 15:19:58 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.5 2009/10/05 15:52:09 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -85,7 +85,7 @@ internally used time variable $\N$.
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/dp1_kwmap}
- \caption{The first order perturbation $\dvp1$ rescaled by
+ \caption[First Order Perturbation]{The first order perturbation $\dvp1$ rescaled by
 $k^{3/2}/(\sqrt{2}\pi)$ from the beginning of the simulation until around
 horizon crossing (red dot-dashed line). The real (blue) and imaginary (green
 dashed) perturbations are shown for $\kwmap$.}
@@ -107,7 +107,8 @@ magnitude of the resulting power spectra.
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/dp2_kwmap}
- \caption{The real (blue line) and imaginary (green dashed) components of the
+ \caption[Second Order perturbation]{The real (blue line) and imaginary (green
+dashed) components of the
 second order
 perturbation $\dvp2(\kwmap)$ from the beginning of the simulation until around
 the time
@@ -134,12 +135,14 @@ for all time steps calculated.
 \label{fig:src-full}
 }\qquad
 % 
-\subfloat[Power spectrum of scalar perturbations $\mathcal{P}_{\delta\varphi} =
+\subfloat[Power spectrum of scalar perturbations][Power spectrum of scalar
+perturbations $\mathcal{P}_{\delta\varphi} =
 \frac{k^3}{2\pi^2}|\delta\varphi|^2$.]{
 \includegraphics[width=0.43\textwidth]{numerical/graphs/Pphi-kwmap-nohoriz-small}
 \label{fig:Pphi-kwmap}
 }
-\caption{Source term and power spectrum for the WMAP pivot scale $\kwmap$.}
+\caption[The source term and power spectrum for $\kwmap$]{Source term and power
+spectrum for the WMAP pivot scale $\kwmap$.}
 \end{figure}
 % 
 Figure~\ref{fig:src-kwmap-3ranges} shows how the source term changes
@@ -154,8 +157,9 @@ a minimum.
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
-\caption{Comparison of the source term for $\kwmap$ over three
-different ranges with different $\Delta k$s as specified in
+\caption[Comparison of source term for different ranges]{Comparison of the source
+term for $\kwmap$ over three different ranges with different $\Delta k$s as specified
+in
 \eq{eq:Krangedefns}.} 
 \label{fig:src-kwmap-3ranges}
 \end{figure}
@@ -163,7 +167,8 @@ different ranges with different $\Delta k$s as specified in
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{numerical/graphs/src-3ks-large}
-\caption{The source term for three different $k$ values including the WMAP
+\caption[Source term at three different $k$s]{The source term for three different $k$
+values including the WMAP
 pivot scale. As $k$
 gets larger (scale gets smaller) the source term becomes smaller.}
 \label{fig:src-3ks}
@@ -204,7 +209,8 @@ important.
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{numerical/graphs/src-vs-t-kwmap-large}
-\caption{The source term (lower blue line) is compared with the $T$ term
+\caption[Source term compared to $T$ term]{The source term (lower blue line) is
+compared with the $T$ term
 (upper green line) as defined in the text for $\kwmap$. The source term is of
 comparable magnitude at the beginning of the simulation.}
  \label{fig:src-vs-others}
@@ -213,7 +219,8 @@ comparable magnitude at the beginning of the simulation.}
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{numerical/graphs/s-over-t-3ks-large}
-\caption{The quotient of $S$ and $T$ terms for three different $k$ values
+\caption[Quotient of $S$ and $T$]{The quotient of $S$ and $T$ terms for three
+different $k$ values
 including the WMAP pivot scale. Depending on $k$ the source term only dominates
 at early stages or is important throughout the evolution.}
  \label{fig:s-over-t-3ks}
@@ -239,7 +246,8 @@ related.
 % 
 \begin{figure}
 \centering
- \subfloat[The $\lambdaphifour$ model (green dashed line) initially has a
+ \subfloat[Comparison of full evolution][The $\lambdaphifour$
+model (green dashed line) initially has a
 larger source term but becomes smaller than the $\msqphisq$ model as evolution
 continues. After horizon crossing the $\lambdaphifour$ term is slightly
 larger.]{
@@ -247,14 +255,15 @@ larger.]{
  \label{fig:src-mvl}
 }\qquad
 % 
-\subfloat[The crossover between the models at the early stages of the
+\subfloat[Comparison at early times][The crossover between the models at the early
+stages of the
 simulation, before horizon 
 crossing.]{
 \includegraphics[width=0.43\textwidth]{numerical/graphs/src-mvl-zoom-small}
 \label{fig:src-mvl-zoom}
 }
-\caption{A comparison of the source term for the $\msqphisq$ and
-$\lambdaphifour$ models.}
+\caption[Comparison of the $\lambdaphifour$ and $\msqphisq$ models]{A comparison of 
+the source term for the $\msqphisq$ and $\lambdaphifour$ models.}
 \label{fig:src-mvl-main}
 \end{figure}
 % 
@@ -277,10 +286,9 @@ where $T$ is defined above in \eq{eq:Tdefn}.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{numerical/graphs/src_kinit_log}
- \caption{The absolute magnitude of the source term at the initial start time
-for each $k$ when
-$k = aH \times 50$ deep inside the horizon. The results are for the range
-$K_1=\left[ 1.9\e{-5},
+ \caption[Source term at initial start times]{The absolute magnitude of the source 
+term at the initial start time for each $k$ when $k = aH \times 50$ deep inside the
+horizon. The results are for the range $K_1=\left[ 1.9\e{-5},
 0.039 \right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
 \label{fig:src-kinit}
 \end{figure}
@@ -298,15 +306,12 @@ inflation.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{numerical/graphs/src_3ns}
-\caption{The absolute magnitude of the source term for all $ks$ in the range at
-three different
-timesteps: the upper blue line when only the largest modes have been
-initialised; the middle green
-line when all modes have been initialised; and the lower red dashed line when
-all modes have
+\caption[Source term at three different times]{The absolute magnitude of the source 
+term for all $ks$ in the range at three different timesteps: the upper blue line when
+only the largest modes have been initialised; the middle green line when all modes
+have been initialised; and the lower red dashed line when all modes have
 exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
-\right] \Mpc^{-1}= 
- \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
+\right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
 \label{fig:src-3ns}
 \end{figure}
 % 

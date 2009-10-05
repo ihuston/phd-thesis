@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.15 2009/10/05 15:19:58 ith Exp $
+% $Id: numerical.tex,v 1.16 2009/10/05 15:52:09 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.15 2009/10/05 15:19:58 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.16 2009/10/05 15:52:09 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -373,7 +373,8 @@ system are then set as outlined above.
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{./numerical/graphs/bgepsilon}
- \caption{The end of inflation is determined by calculating when
+ \caption[Plot of $\varepsilon_H$ near the end of inflation]{The end of inflation is
+determined by calculating when
    $\varepsilon_H=-\dN{H}/H=1$ (red dashed line). Along the $x$-axis,
    $\N$ is the number of e-foldings from the start of the
    simulation.}
@@ -507,7 +508,8 @@ covers a greater range than the others, extending to much smaller scales than WM
 \begin{figure}
 \centering
 % 
- \subfloat[The relative error for different $N_\theta$, the number of
+ \subfloat[Relative error for different $N_\theta$][The relative error for different
+$N_\theta$, the number of
 discretised $\theta$s, keeping the other parameters fixed and using the $K_3$
 range. The upper blue line ($N_\theta=129$) and middle green line
  ($N_\theta=257$) have relative errors at least an order of magnitude larger
@@ -516,14 +518,16 @@ than the lower red line ($N_\theta=513$).]{
  \label{fig:err-nthetas}
 }\qquad
 % 
-\subfloat[The relative error for the 3 different $k$ ranges $K1$, $K2$,
+\subfloat[Relative error for three different $k$ ranges][The relative error for the 3
+different $k$ ranges $K1$, $K2$,
 $K3$ (starting from the left). The parameter $\Delta k$
 is set equal to $1\e{-61}\Mpl, 3\e{-61}\Mpl, 1\e{-60}\Mpl$ respectively.]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/err-kranges-small.pdf}
  \label{fig:err-kranges}
 }
 % 
-\caption{Comparison of relative errors for different $N_\theta$ and $k$ ranges.}
+\caption[Two figures comparing relative errors]{Comparison of relative errors for
+different $N_\theta$ and $k$ ranges.}
 \label{fig:err-comparison}
 \end{figure}
 
@@ -579,7 +583,8 @@ we will keep it constant throughout.
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/err-deltak4.pdf}
- \caption{The relative error in convolution term $A$ for different values of $\Delta k$.
+ \caption[Relative error in the convolution term $A$]{The relative error in
+convolution term $A$ for different values of $\Delta k$.
 The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and $N_\theta=513$. The
 upper 
 blue line ($\Delta k=1\e{-61}\Mpl$ and middle green line ($\Delta k=3\e{-61}\Mpl$) have relative
@@ -630,7 +635,8 @@ very similar for higher values (not shown in the figure).
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/err-deltak-kmin.pdf}
  % err-deltak-kmin.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=
- \caption{The relative error of the convolution term for three different values of $\Delta k$. In
+ \caption[Relative error of the convolution term with fixed $\kmin$]{The 
+relative error of the convolution term for three different values of $\Delta k$. In
 contrast to Figure~\ref{fig:err-deltaks} $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1} \le \Delta k$ for
 each.}
  \label{fig:err-deltak-kmin}
