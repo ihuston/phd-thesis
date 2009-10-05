@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.17 2009/10/05 16:05:30 ith Exp $
+% $Id: numerical.tex,v 1.18 2009/10/05 18:19:11 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.17 2009/10/05 16:05:30 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.18 2009/10/05 18:19:11 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -300,6 +300,27 @@ $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
+\begin{figure}
+\centering%
+\subfloat[Fixing $m$ for $V(\vp)=\msqphisq$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_params-small}
+}\qquad%
+\subfloat[Fixing $\lambda$ for $V(\vp)=\lambdaphifour$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/lambdaphi4_params-small}
+}\\%
+\subfloat[Fixing $\lambda$ for $V(\vp)=\hybridtwoandfour$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/hybrid2and4_params-small}
+}\qquad%
+\subfloat[Fixing $\lambda$ for $V(\vp)=\linde$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/linde_params-small}
+}\\%
+\subfloat[Fixing $\lambda$ for $V(\vp)=\phitwooverthree$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/phi2over3_params-small}
+}
+\caption[Parameter values for different potentials]{Parameter values for the
+different potentials are chosen fixing $\Pr$ using WMAP5 data.}
+\label{fig:params-num}
+\end{figure}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
