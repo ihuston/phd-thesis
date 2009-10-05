@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.8 2009/10/05 16:05:30 ith Exp $
+% $Id: perts.tex,v 1.9 2009/10/05 18:19:54 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.8 2009/10/05 16:05:30 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.9 2009/10/05 18:19:54 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -215,15 +215,15 @@ $\varphi$ are defined as
 At second order the Sasaki-Mukhanov variable becomes more complicated
 \cite{Malik:2005cy,Malik:2003mv}:
 % 
-\begin{equation}
+\begin{align}
 \label{eq:Q2I-num}
-\wt{\dvp2}=\dvp2+\frac{\vp_{0}'}{\H}\psi_2
+\wt{\dvp2} &= \dvp2+\frac{\vp_{0}'}{\H}\psi_2
 +\left(\frac{\psi_1}{\H}\right)^2\left[
-2\H\vp_{0}'+\vp_{0}''-\frac{\H'}{\H}\vp_{0}'\right]
-+2\frac{\vp_{0}'}{\H^2}\psi_1'\psi_1+\frac{2}{\H}\psi_1\dvp1'
+2\H\vp_{0}'+\vp_{0}''-\frac{\H'}{\H}\vp_{0}'\right] \nonumber\\
+& \quad +2\frac{\vp_{0}'}{\H^2}\psi_1'\psi_1+\frac{2}{\H}\psi_1\dvp1'
 -2\delta\vp_{1,k}E_{1,}^{~k}
 +{\cal{X}}\left(\psi,E\right)\,,
-\end{equation}
+\end{align}
 % 
 where ${\cal{X}}\left(\psi,E\right)$ contains terms quadratic in
 gradients of the metric perturbations $\psi_1$ and $E_1$. From now on we will
@@ -259,20 +259,19 @@ The first order equation is
 %
 and the second order
 %
-\begin{eqnarray}
+\begin{align}
 \label{eq:KG2flatsingle-num}
-\dvp2''&+&2\H\dvp2'-\nabla^2\dvp2+a^2 \Upp \dvp2
-+a^2 \Uppp (\dvp1)^2 +2a^2 \Uphi \phi_2
+\dvp2'' &+ 2\H\dvp2'-\nabla^2\dvp2+a^2 \Upp \dvp2
++ a^2 \Uppp (\dvp1)^2 +2a^2 \Uphi \phi_2
 -\vp_{0}'\left(\nabla^2 B_2+\phi_2'\right)\nonumber\\
 %
-&+&4\vp_{0}' B_{1,k}\phi_{1,}^{~k}
+&+ 4\vp_{0}' B_{1,k}\phi_{1,}^{~k}
 +2\left(2\H\vp_{0}'+a^2 \Uphi\right) B_{1,k}B_{1,}^{~k}
-+4\phi_1\left(a^2 \Upp \dvp1-\nabla^2\dvp1\right)
-+4\vp_{0}'\phi_1\phi_1'\nonumber\\
-%
-&-&2\dvp1'\left(\nabla^2 B_1+\phi_1'\right)-4{\dvp1'}_{,k}B_{1,}^{~k}
-=0\,,
-\end{eqnarray}
++4\phi_1\left(a^2 \Upp \dvp1-\nabla^2\dvp1\right) \nonumber\\
+&+ 4\vp_{0}'\phi_1\phi_1'
+-2\dvp1'\left(\nabla^2 B_1+\phi_1'\right)-4{\dvp1'}_{,k}B_{1,}^{~k} \nonumber \\
+&= 0\,,
+\end{align}
 % 
 where as mentioned before all the variables are now in the flat gauge.
 
@@ -304,12 +303,13 @@ where $\kvi$ is the comoving wavenumber.
 In Fourier space the closed form of the first order Klein-Gordon equation
 transforms into
 %
-\begin{equation}
+\begin{multline}
 \label{eq:fokg}
- \dvp1(\kvi)'' + 2\H \dvp1(\kvi)' + k^2\dvp1(\kvi) + a^2 \left[\Upp +
+ \dvp1(\kvi)'' + 2\H \dvp1(\kvi)' + k^2\dvp1(\kvi) \\
++ a^2 \left[\Upp +
 \frac{8\pi G}{\H}\left(2\vp_{0}' \Uphi + (\vp_{0}')^2\frac{8\pi G
 }{\H}\U\right)\right]\dvp1(\kvi) = 0 \,.
-\end{equation}
+\end{multline}
 %
 As mentioned above the second order equation requires more careful
 consideration with terms quadratic in the first order perturbation, which
@@ -326,33 +326,32 @@ together and denote them by $F$.
 The full closed form second order Klein-Gordon
 equation in Fourier Space is
 %  
-\begin{eqnarray}
+\begin{align}
 \label{eq:SOKG-real-num}
- &&\dvp2''(\kvi) + 2\H \dvp2'(\kvi) + k^2 \dvp2(\kvi)
+\dvp2''(\kvi) &+ 2\H \dvp2'(\kvi) + k^2 \dvp2(\kvi) \nonumber \\
 %
-+ a^2\left[\Upp + \frac{8\pi G}{\H}\left(2\vp_{0}'\Uphi
+&+ a^2\left[\Upp + \frac{8\pi G}{\H}\left(2\vp_{0}'\Uphi
 + (\vp_0')^2\frac{8\pi G}{\H}\U \right) \right]\dvp2(\kvi) \nonumber \\
 % 
- && + \frac{1}{(2\pi)^3}\int \d^3q \d^3p\, \delta^3(\kvi -\pvi -\qvi) \left\{
-\frac{16\pi G}{\H}
-\left[ Q
-\dvp1'(\pvi) \dvp1(\qvi) + \vp_{0}' a^2\Upp \dvp1(\pvi)\dvp1(\qvi)
-\right] \right. \nonumber \\
+&+ \frac{1}{(2\pi)^3}\int \d^3q \d^3p\, \delta^3(\kvi -\pvi -\qvi) \biggl\{
+\biggr.\nonumber\\
+&\quad \frac{16\pi G}{\H} \left[ Q \dvp1'(\pvi) \dvp1(\qvi) + \vp_{0}' a^2\Upp
+\dvp1(\pvi)\dvp1(\qvi) \right]  \nonumber \\
 %
- && + \left(\frac{8\pi G}{\H}\right)^2\vp_{0}'\left[2a^2\Uphi\vp_{0}'
+&+ \left(\frac{8\pi G}{\H}\right)^2\vp_{0}'\left[2a^2\Uphi\vp_{0}'
 \dvp1(\pvi)\dvp1(\qvi) + \vp_{0}'Q\dvp1(\pvi)\dvp1(\qvi) \right]
 \nonumber \\
 %
- && -2\left(\frac{4\pi G}{\H}\right)^2\frac{\vp_{0}' Q}{\H} \left[Q\dvp1(\pvi)
+&- 2\left(\frac{4\pi G}{\H}\right)^2\frac{\vp_{0}' Q}{\H} \left[Q\dvp1(\pvi)
 \dvp1(\qvi) +
 \vp_{0}' \dvp1(\pvi) \dvp1'(\qvi)\right] \nonumber \\
 %
- && \left. +\frac{4\pi G}{\H} \vp_{0}' \dvp1'(\pvi) \dvp1'(\qvi) 
+\biggl. &+ \frac{4\pi G}{\H} \vp_{0}' \dvp1'(\pvi) \dvp1'(\qvi) 
  + a^2\left[\Uppp + \frac{8\pi G}{\H}\vp_{0}' \Upp\right] \dvp1(\pvi)
-\dvp1(\qvi) \right\} \nonumber \\
+\dvp1(\qvi) \biggr\} \nonumber \\
  %
- && + F(\dvp1(\kvi), \dvp1'(\kvi)) = 0\,.
-\end{eqnarray}
+&+ F(\dvp1(\kvi), \dvp1'(\kvi)) = 0\,.
+\end{align}
 %
 Here we use $Q=a^2 (8\pi G \U \vp_0'/\H + \Uphi)$ for convenience.
 The $F$ term contains gradients of $\dvp1$ in real space and therefore
