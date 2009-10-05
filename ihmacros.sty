@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % 
 % ihmacros.sty - Ian Huston
-% $Id: ihmacros.sty,v 1.16 2009/09/29 10:50:42 ith Exp $
+% $Id: ihmacros.sty,v 1.17 2009/10/05 22:10:13 ith Exp $
 % % % % % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihmacros}
@@ -63,8 +63,11 @@
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 %
 % Potentials
-\newcommand{\lambdaphifour}{\frac{1}{4}\lambda\varphi^4}
-\newcommand{\msqphisq}{\frac{1}{2} m^2 \varphi^2}
+\newcommand{\lambdaphifour}{\ensuremath{\frac{1}{4}\lambda\varphi^4}}
+\newcommand{\msqphisq}{\ensuremath{\frac{1}{2} m^2 \varphi^2}}
+\newcommand{\hybridtwoandfour}{\ensuremath{\msqphisq + \lambdaphifour}}
+\newcommand{\linde}{\ensuremath{-\msqphisq + \lambdaphifour +\frac{m^4}{4\lambda}}}
+\newcommand{\phitwooverthree}{\ensuremath{\lambda\varphi^{\frac{2}{3}}}}
 % 
 % 
 \newcommand{\cn}{\mathrm{\mathsf{c}}}
