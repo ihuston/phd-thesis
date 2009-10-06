@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.19 2009/10/06 10:53:29 ith Exp $
+% $Id: numerical.tex,v 1.20 2009/10/06 16:27:47 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.19 2009/10/06 10:53:29 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.20 2009/10/06 16:27:47 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -103,19 +103,19 @@ so must remain inside the $\theta$ integral. There is no $\omega$ dependence
 in $\dvp1$ with this choice of axes, so the last integral is simply evaluated.
 
 In the slow roll case there are only four different $\theta$ dependent terms,
-here labelled A--D:
+here labelled $\A$--$\D$:
 %
-\begin{eqnarray}
+\begin{align}
 \label{eq:AtoD-num}
- A(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) \d\theta \,,
+ \A(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) \d\theta \,,
 \nonumber\\
- B(\kvi,\qvi) &=& \int_0^\pi \cos(\theta)\sin(\theta) \dvp1(\kvi-\qvi)
+ \B(\kvi,\qvi) &= \int_0^\pi \cos(\theta)\sin(\theta) \dvp1(\kvi-\qvi)
 \d\theta \,,\nonumber\\
- C(\kvi,\qvi) &=& \int_0^\pi \sin(\theta) \dvp1'(\kvi-\qvi) \d\theta \,,
+ \C(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \dvp1'(\kvi-\qvi) \d\theta \,,
 \nonumber\\
- D(\kvi,\qvi) &=& \int_0^\pi \cos(\theta) \sin(\theta) \dvp1'(\kvi-\qvi)
+ \D(\kvi,\qvi) &= \int_0^\pi \cos(\theta) \sin(\theta) \dvp1'(\kvi-\qvi)
 \d\theta \,.
-\end{eqnarray}
+\end{align}
 %
 Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
 (\ref{eq:KG2-fourier-sr-num}) becomes:
@@ -134,14 +134,14 @@ second order system is run:
 \begin{align}
 \label{eq:KG2-src-sr-aterms}
 &S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
-a^2\Uppp q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
+a^2\Uppp q^2 \dvp1(\qvi) \A(\kvi,\qvi) \nonumber\\
 &+ \frac{8\pi G}{\H}\vp_{0}' \Bigg[ 
-\left( 3a^2\Upp + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi)
--\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 B(\kvi,\qvi)
+\left( 3a^2\Upp + \frac{7}{2}q^4 + 2k^2q^2\right) \A(\kvi,\qvi)
+-\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 \B(\kvi,\qvi)
 \Bigg]\dvp1(\qvi) \nonumber\\
 %
 &+ \frac{8\pi G}{\H}\vp_{0}' \Bigg[
--\frac{3}{2}q^2 C(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq D(\kvi,\qvi) 
+-\frac{3}{2}q^2 \C(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq \D(\kvi,\qvi) 
 \Bigg]\dvp1'(\qvi) \Bigg\} \,.
 %
 \end{align}
@@ -222,16 +222,16 @@ with the source term
 \begin{align}
 \label{eq:KG2-source-ntime}
 S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ &\Bigg\{
-\frac{\Uppp}{H^2} q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
+\frac{\Uppp}{H^2} q^2 \dvp1(\qvi) \A(\kvi,\qvi) \nonumber\\
 &+\, \frac{8\pi G}{(aH)^2}\dN{\vp_{0}} \Bigg[ 
-\left( 3a^2\Upp q^2 + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi) \nonumber\\
+\left( 3a^2\Upp q^2 + \frac{7}{2}q^4 + 2k^2q^2\right) \A(\kvi,\qvi) \nonumber\\
 % 
-&-\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 B(\kvi,\qvi)
+&-\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 \B(\kvi,\qvi)
 \Bigg]\dvp1(\qvi) \nonumber\\
 %
 &+\, 8\pi G \dN{\vp_{0}} \Bigg[
--\frac{3}{2}q^2 \tilde{C}(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq
-\tilde{D}(\kvi,\qvi) 
+-\frac{3}{2}q^2 \tilde{\C}(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq
+\tilde{\D}(\kvi,\qvi) 
 \Bigg]\dN{\dvp1}(\qvi) \Bigg\}\,,
 %
 \end{align}
@@ -239,16 +239,16 @@ S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ &\Bigg\{
 where 
 %
 \begin{align}
- \tilde{C}(\kvi,\qvi) &= \frac{1}{aH} C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
+ \tilde{\C}(\kvi,\qvi) &= \frac{1}{aH} \C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
 \dN{\dvp1}(\kvi-\qvi) \d\theta \,,\nonumber \\
- \tilde{D}(\kvi,\qvi) &= \frac{1}{aH} D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
+ \tilde{\D}(\kvi,\qvi) &= \frac{1}{aH} \D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
 \sin(\theta) \dN{\dvp1}(\kvi-\qvi)
 \d\theta \,.
 \end{align}
 
 
 
-The argument of $\dvp1$ and $\dN{\dvp1}$ in the $A$--$\tilde{D}$ terms requires
+The argument of $\dvp1$ and $\dN{\dvp1}$ in the $\A$--$\tilde{\D}$ terms requires
 special consideration. 
 To compute the integrals, $\theta$ is sampled at 
 % 
@@ -596,21 +596,21 @@ different $N_\theta$ and $k$ ranges.}
 The main new addition in the code is the calculation of the
 convolution of the perturbations for the source term
 \eq{eq:KG2-source-ntime}. In particular the first of the $\theta$ dependent terms in
-\eq{eq:AtoD-num}, $A$,
+\eq{eq:AtoD-num}, $\A$,
 can be convolved analytically for certain smooth $\dvp1(k)$s. 
  We take $\dvp1(k)$ to be similar in form to the initial conditions
 (\ref{eq:foics}), for example $\dvp1(k)\propto 1/\sqrt{k}$ with proportionality constant
 $\alpha$.
-If $I_A$ denotes the convolution of the $A$ term:
+If $I_\A$ denotes the convolution of the $\A$ term:
 % 
 \begin{equation}
- I_A (k) = 2\pi \int_{\kmin}^{\kmax} q^2 \dvp1(q) A(k, q) \d q \,,
+ I_\A (k) = 2\pi \int_{\kmin}^{\kmax} q^2 \dvp1(q) \A(k, q) \d q \,,
 \end{equation}
 % 
 then putting in $\dvp1(k) = \alpha/\sqrt{k}$ gives
 % 
 \begin{equation}
- I_A(k) = 2\pi \alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
+ I_\A(k) = 2\pi \alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
 \int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-4} \sin{\theta}\,. 
 \end{equation}
 % 
@@ -618,7 +618,7 @@ This has the analytic solution
 % 
 \begin{align}
 \label{eq:err-analytic-num}
- A(k) = \frac{\pi}{18}\frac{\alpha^2}{k} \Bigg\{ 
+ I_\A(k) = \frac{\pi}{18}\frac{\alpha^2}{k} \Bigg\{ 
 &3k^3\Bigg[\log\left(2\sqrt{k}\right) - \frac{\pi}{2}  + 
 \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) \nonumber \\
 % 
@@ -653,8 +653,8 @@ we will keep it constant throughout.
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/err-deltak4.pdf}
- \caption[Relative error in the convolution term $A$]{The relative error in
-convolution term $A$ for different values of $\Delta k$.
+ \caption[Relative error in the convolution term $\A$]{The relative error in
+convolution term $\A$ for different values of $\Delta k$.
 The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and $N_\theta=513$. The
 upper 
 blue line ($\Delta k=1\e{-61}\Mpl$ and middle green line ($\Delta k=3\e{-61}\Mpl$) have relative
@@ -714,7 +714,8 @@ each.}
 
 
 It should be noted that these tests show the relative errors in the
-computation of the $A$ convolution term, the most straightforward term in \eq{eq:AtoD-num}, only and
+computation of the $\A$ convolution term, the most straightforward term in
+\eq{eq:AtoD-num}, only and
 do not
 represent
 errors for the full calculation. However, they show that at least for

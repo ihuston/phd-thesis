@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.7 2009/10/06 16:06:32 ith Exp $
+% $Id: results.tex,v 1.8 2009/10/06 16:27:47 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.7 2009/10/06 16:06:32 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.8 2009/10/06 16:27:47 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -326,6 +326,19 @@ exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
+There are many possible next steps to improve the program outlined in
+Chapter \ref{ch:numericalsystem}. Chief amongst these is to implement the
+full source term equation (\ref{eq:KG2-source-ntime}). Although clearly
+more complicated than the slow roll case in \eq{eq:KG2-fourier-sr-ntime}
+only two more $\theta$ dependent terms need to be added to $\A$--$\D$ in
+\eq{eq:AtoD-num}.  For the two test models we have used in this paper, which
+are both slowly rolling during inflation, it is not expected that
+using the full source equation would result in an appreciably
+different outcome until the end of the inflationary phase. Though once
+the field has stopped to roll slowly, new observable features might
+arise as is indeed the case at first order. 
+
+
 Full second order equation in terms of $\N$:
 \begin{align}
  \label{eq:fullso-res}
@@ -345,17 +358,18 @@ where the full source equation is given by
 S_\mathrm{full}(\kvi) &= \frac{1}{(2\pi)^2}\int \d q q^2\Bigg\{ 
 % 
 \frac{1}{\left(H\right)^2} \left[ \Uppp + 3(8\pi G)\dN{\vp_0}\Upp\right]
- \dvp1(\qvi) A(\qvi) \nonumber \\
+ \dvp1(\qvi) \A(\kvi, \qvi) \nonumber \\
 % 
 &+\frac{(8\pi G)^2 \dN{\vp_0}}{(aH)^2}\left[ 2a^2\dN{\vp_0}\Uphi +\dN{\vp_0}Q
--\frac{Q^2}{2(aH)^2}\right] \dvp1(\qvi)A(\qvi) \nonumber \\
+-\frac{Q^2}{2(aH)^2}\right] \dvp1(\qvi) \A(\kvi, \qvi) \nonumber \\
 % 
 &- \frac{(8\pi G)^2}{(aH)^2}\frac{(\dN{\vp_0})^2 Q}{2} \dN{\dvp1}(\qvi)
-A(\qvi) \nonumber \\
+\A(\kvi, \qvi) \nonumber \\
 % 
-&+ \frac{2(8\pi G)Q}{(aH)^2} \dvp1(\qvi)\wt{C}(\qvi) 
+&+ \frac{2(8\pi G)Q}{(aH)^2} \dvp1(\qvi)\wt{\C}(\kvi, \qvi) 
 % 
-+ \frac{8\pi G \dN{\vp_0}}{2} \dN{\dvp1}(\qvi) \wt{C}(\qvi) \Bigg\} \nonumber \\
++ \frac{8\pi G \dN{\vp_0}}{2} \dN{\dvp1}(\qvi) \wt{\C}(\kvi, \qvi) \Bigg\} \nonumber
+\\
 % 
 &+ F_\mathrm{full}(\dvp1(\kvi), \dN{\dvp1}(\kvi))\,.
 \end{align}
@@ -363,14 +377,14 @@ The $F$ term for the full equation requires the use of three further $\theta$
 integrals in addition to those in \eq{eq:AtoD-num}:
 \begin{align}
 \label{eq:efg-terms-res}
- E(\kvi, \qvi) &= \int_0^\pi \cos^3(\theta) \sin(\theta) \dvp1(\kvi-\qvi)\d \theta
+ \E(\kvi, \qvi) &= \int_0^\pi \cos^3(\theta) \sin(\theta) \dvp1(\kvi-\qvi)\d \theta
 \nonumber \\
 % 
-F(\kvi, \qvi) &= \int_0^\pi \frac{\sin^3(\theta)}{|\kvi-\qvi|^2} \dvp1(\kvi-\qvi)\d
+\F(\kvi, \qvi) &= \int_0^\pi \frac{\sin^3(\theta)}{|\kvi-\qvi|^2} \dvp1(\kvi-\qvi)\d
 \theta
 \nonumber \\
 % 
-\wt{G}(\kvi, \qvi) &= \int_0^\pi \frac{\sin^3(\theta)}{|\kvi-\qvi|^2}
+\wt{\G}(\kvi, \qvi) &= \int_0^\pi \frac{\sin^3(\theta)}{|\kvi-\qvi|^2}
 \dN{\dvp1}(\kvi-\qvi)\d \theta \,.
 \end{align}
 % 
@@ -388,37 +402,56 @@ G}{4}(\dN{\vp_0})^2 \right)q^2 + \frac{3}{4}\frac{8\pi G}{(aH)^2} X^2 \right)
 \dvp1(\qvi) \nonumber \\
 % 
 & \qquad + (8\pi G) Q \dN{\vp_0} \left(\frac{3}{4} + \frac{q^2}{k^2}\right)
- \dN{\dvp1}(\qvi) \Bigg] A(\kvi, \qvi) \nonumber \\
+ \dN{\dvp1}(\qvi) \Bigg] \A(\kvi, \qvi) \nonumber \\
 % 
 &+ \Bigg[ \left( 2Q \frac{q}{k} \left(1- \frac{8\pi G}{(aH)^2} Q \dN{\vp_0}\right)
 -\frac{9}{2} \dN{\vp_0} k q - \dN{\vp_0} \frac{q^3}{k}\right) \dvp1(\qvi) \nonumber
 \\
 % 
-&\qquad - 2Q (8\pi G) (\dN{\vp_0})^2\frac{q}{k} \dN{\dvp1}(\qvi)\Bigg] B(\kvi, \qvi)
+&\qquad - 2Q (8\pi G) (\dN{\vp_0})^2\frac{q}{k} \dN{\dvp1}(\qvi)\Bigg] \B(\kvi, \qvi)
 \nonumber \\
 % 
 &+ \Bigg[ \left(-2 + (8\pi G)(\dN{\vp_0})^2 \left(\frac{1}{4} + \frac{1}{2aH}\right)
 \right) Q \dvp1(\qvi) \nonumber \\
 % 
 &\qquad + \left(\frac{8\pi G}{4}(\dN{\vp_0})^2 -2\right) \dN{\vp_0} (aH)^2
-\dN{\dvp1}(\qvi)\Bigg] \wt{C}(\kvi, \qvi)\nonumber \\
+\dN{\dvp1}(\qvi)\Bigg] \wt{\C}(\kvi, \qvi)\nonumber \\
 % 
 &+ \Bigg[ 2Q \frac{k}{q}\dvp1(\qvi) + \left(2\frac{k}{q}-\frac{q}{k}\right)
-\dN{\vp_0} (aH)^2 \dN{\dvp1}(\qvi) \Bigg]\wt{D}(\kvi, \qvi) \nonumber \\
+\dN{\vp_0} (aH)^2 \dN{\dvp1}(\qvi) \Bigg]\wt{\D}(\kvi, \qvi) \nonumber \\
 % 
 &+ (8\pi G) \dN{\vp_0} \Bigg[ \left(\frac{1}{4}(\dN{\vp_0})^2q^2 +
 \frac{Q^2}{2(aH)^2}\right) \dvp1(\qvi) + \frac{Q}{2}\dN{\vp_0} \dN{\dvp1}(\qvi)
-\Bigg] E(\kvi, \qvi) \nonumber\\
+\Bigg] \E(\kvi, \qvi) \nonumber\\
 % 
 &+ (8\pi G)^2 \dN{\vp_0} Q \Bigg[ -\frac{Q}{2(aH)^2}\left(\frac{k^2}{2}+q^2\right)
-\dvp1(\qvi) - \frac{1}{4} \dN{\vp_0} k^2 \dN{\dvp1}(\qvi) \Bigg] F(\kvi, \qvi)
+\dvp1(\qvi) - \frac{1}{4} \dN{\vp_0} k^2 \dN{\dvp1}(\qvi) \Bigg] \F(\kvi, \qvi)
 \nonumber \\
 % 
 &+ (8\pi G)^2 (\dN{\vp_0})^2 \Bigg[ -\frac{Q}{2}\left(\frac{k^2}{2} +
 \frac{q^2}{aH}\right)\dvp1(\qvi) -\frac{(aH)^2}{4}\dN{\vp_0}k^2 \dN{\dvp1}(\qvi)
-\Bigg] \wt{G}(\kvi, \qvi)
+\Bigg] \wt{\G}(\kvi, \qvi) \,.
 \end{align}
 
+
+Beyond this the next likely step is to implement a multi-field version of the
+system. This would allow the investigation of models that inherently
+produce large second order perturbations. In Ref.~\cite{Malik:2006ir} the
+Klein-Gordon equation is given for multiple fields and upgrading the
+simulation to use these equations is a
+straight-forward if lengthy process.  
+
+
+The performance of the numerical simulation could also be improved by
+analysing the most time consuming processes and investigating what
+optimisations could be implemented. As we have discussed above we have
+set $N_k=1025$ for our test runs. This provides good coverage of the
+WMAP $k$ range but it is not clear whether it sufficiently
+approximates the integral to infinity for the source term.  Currently
+we are restricted in our choice of $N_k$ by logistical factors \ie the
+running time and memory usage of the code. By optimising the routines
+for both memory and speed it is hoped we can extend the maximum value
+of $k$ to larger values.
 
 
 
@@ -471,37 +504,6 @@ evolution of the source term equation during the inflationary regime can be
 readily calculated.
 
 
-There are many possible next steps to improve the program outlined in
-Chapter \ref{ch:numericalsystem}. Chief amongst these is to implement the
-full source term equation (\ref{eq:KG2-source-ntime}). Although clearly
-more complicated than the slow roll case in \eq{eq:KG2-fourier-sr-ntime}
-only two more $\theta$ dependent terms need to be added to $A$--$D$ in
-\eq{eq:AtoD-num}.  For the two test models we have used in this paper, which
-are both slowly rolling during inflation, it is not expected that
-using the full source equation would result in an appreciably
-different outcome until the end of the inflationary phase. Though once
-the field has stopped to roll slowly, new observable features might
-arise as is indeed the case at first order. 
-
-
-Beyond this the next likely step is to implement a multi-field version of the
-system. This would allow the investigation of models that inherently
-produce large second order perturbations. In Ref.~\cite{Malik:2006ir} the
-Klein-Gordon equation is given for multiple fields and upgrading the
-simulation to use these equations is a
-straight-forward if lengthy process.  
-
-
-The performance of the numerical simulation could also be improved by
-analysing the most time consuming processes and investigating what
-optimisations could be implemented. As we have discussed above we have
-set $N_k=1025$ for our test runs. This provides good coverage of the
-WMAP $k$ range but it is not clear whether it sufficiently
-approximates the integral to infinity for the source term.  Currently
-we are restricted in our choice of $N_k$ by logistical factors \ie the
-running time and memory usage of the code. By optimising the routines
-for both memory and speed it is hoped we can extend the maximum value
-of $k$ to larger values.
 
 
 By computing the perturbations to second order we have direct access
