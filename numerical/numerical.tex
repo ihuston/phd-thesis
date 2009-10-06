@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.18 2009/10/05 18:19:11 ith Exp $
+% $Id: numerical.tex,v 1.19 2009/10/06 10:53:29 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.18 2009/10/05 18:19:11 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.19 2009/10/06 10:53:29 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -120,30 +120,33 @@ here labelled A--D:
 Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
 (\ref{eq:KG2-fourier-sr-num}) becomes:
 %
-\begin{eqnarray}
+\begin{equation}
 \label{eq:KG2-fourier-sr-aterms}
-&&\dvp2''(\kvi)+2\H\dvp2'(\kvi)+k^2\dvp2(\kvi)
+\dvp2''(\kvi)+2\H\dvp2'(\kvi)+k^2\dvp2(\kvi)
 +\left(a^2
 \Upp-{24 \pi G}(\vp_{0}')^2\right)
 \dvp2(\kvi)
-+ S(\kvi) = 0 \,,\\
++ S(\kvi) = 0 \,,
+\end{equation}
 %
+where $S(\kvi)$ is the source term which will be determined before the
+second order system is run:
+\begin{align}
 \label{eq:KG2-src-sr-aterms}
-&&S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
+&S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
 a^2\Uppp q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
-&& \qquad\qquad\qquad\qquad\qquad + \frac{8\pi G}{\H}\vp_{0}' \Bigg[ 
+&+ \frac{8\pi G}{\H}\vp_{0}' \Bigg[ 
 \left( 3a^2\Upp + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi)
 -\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 B(\kvi,\qvi)
 \Bigg]\dvp1(\qvi) \nonumber\\
 %
-&&\qquad\qquad\qquad\qquad \qquad+ \frac{8\pi G}{\H}\vp_{0}' \Bigg[
+&+ \frac{8\pi G}{\H}\vp_{0}' \Bigg[
 -\frac{3}{2}q^2 C(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq D(\kvi,\qvi) 
-\Bigg]\dvp1'(\qvi) \Bigg\} \,,
+\Bigg]\dvp1'(\qvi) \Bigg\} \,.
 %
-\end{eqnarray}
+\end{align}
 %
-where $S(\kvi)$ is the source term which will be determined before the
-second order system is run. The full set of equations which must be evolved are
+ The full set of equations which must be evolved are
 then \eq{eq:KGback-num} for the background, \eq{eq:fokg} for the first
 order perturbations and \eqs{eq:KG2-fourier-sr-aterms} and
 (\ref{eq:KG2-src-sr-aterms}) for the second order and source terms.
@@ -190,50 +193,58 @@ inflation. This gives approximately 65 e-foldings from the end of inflation unti
 The background and first order equations written in terms of the new time
 variable $\N$ are
 %
-\begin{eqnarray}
-&&\ddN{\vp_{0}} + \frac{\U}{H^2}\dN{\vp_{0}} + \frac{\Uphi}{H^2} = 0 \,,
-\label{eq:bgntime}\\
-&&\ddN{\dvp1} + \left(3 + \frac{\dN{H}}{H}\right)\dN{\dvp1} +
-\left[\left(\frac{k}{aH}\right)^2 + \frac{\Upp}{H^2} + \frac{8\pi G}{H^2}
-2\dN{\vp_{0}}\Uphi + \left(\frac{8\pi G}{H}\right)^2
+\begin{equation}
+\ddN{\vp_{0}} + \frac{\U}{H^2}\dN{\vp_{0}} + \frac{\Uphi}{H^2} = 0 \,,
+\label{eq:bgntime}
+\end{equation}
+% 
+\begin{multline}
+\ddN{\dvp1} + \left(3 + \frac{\dN{H}}{H}\right)\dN{\dvp1} 
+ + \Bigg[ \left(\frac{k}{aH}\right)^2 + \frac{\Upp}{H^2} + \frac{8\pi G}{H^2}
+ 2\dN{\vp_{0}}\Uphi \\
+% 
++ \left.\left(\frac{8\pi G}{H}\right)^2
 \left(\dN{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,. \label{eq:fontime}
-\end{eqnarray}
+\end{multline}
 % 
 The second order equation in terms of $\N$ is
 % 
-\begin{equation}
+\begin{multline}
  \label{eq:KG2-fourier-sr-ntime}
-\ddN{\dvp2}(\kvi)+\left(3 + \frac{\dN{H}}{H}\right)
-\dN{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi)
-+\left(\frac{\Upp}{H^2}-{24 \pi G}(\dN{\vp_{0}})^2\right)
-\dvp2(\kvi) +S(\kvi) = 0 \,,
-\end{equation}
+\ddN{\dvp2}(\kvi) + \left(3 + \frac{\dN{H}}{H}\right)
+\dN{\dvp2}(\kvi)+ \left(\frac{k}{aH}\right)^2\dvp2(\kvi) \\
 % 
-\begin{eqnarray}
++ \left(\frac{\Upp}{H^2}-{24 \pi G}(\dN{\vp_{0}})^2\right)
+\dvp2(\kvi) +S(\kvi) = 0 \,,
+\end{multline}
+% 
+with the source term
+\begin{align}
 \label{eq:KG2-source-ntime}
-S(\kvi) &=& \frac{1}{(2\pi)^2}\int \d q\ \Bigg\{
+S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ &\Bigg\{
 \frac{\Uppp}{H^2} q^2 \dvp1(\qvi) A(\kvi,\qvi) \nonumber\\
-&&+\, \frac{8\pi G}{(aH)^2}\dN{\vp_{0}} \Bigg[ 
-\left( 3a^2\Upp q^2 + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi) %\nonumber\\
--\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 B(\kvi,\qvi)
+&+\, \frac{8\pi G}{(aH)^2}\dN{\vp_{0}} \Bigg[ 
+\left( 3a^2\Upp q^2 + \frac{7}{2}q^4 + 2k^2q^2\right) A(\kvi,\qvi) \nonumber\\
+% 
+&-\left(\frac{9}{2} + \frac{q^2}{k^2}\right)kq^3 B(\kvi,\qvi)
 \Bigg]\dvp1(\qvi) \nonumber\\
 %
-&&+\, 8\pi G \dN{\vp_{0}} \Bigg[
+&+\, 8\pi G \dN{\vp_{0}} \Bigg[
 -\frac{3}{2}q^2 \tilde{C}(\kvi,\qvi) + \left(2-\frac{q^2}{k^2}\right)kq
 \tilde{D}(\kvi,\qvi) 
 \Bigg]\dN{\dvp1}(\qvi) \Bigg\}\,,
 %
-\end{eqnarray}
+\end{align}
 %
 where 
 %
-\begin{eqnarray}
- \tilde{C}(\kvi,\qvi) &=& \frac{1}{aH} C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
+\begin{align}
+ \tilde{C}(\kvi,\qvi) &= \frac{1}{aH} C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
 \dN{\dvp1}(\kvi-\qvi) \d\theta \,,\nonumber \\
- \tilde{D}(\kvi,\qvi) &=& \frac{1}{aH} D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
+ \tilde{D}(\kvi,\qvi) &= \frac{1}{aH} D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
 \sin(\theta) \dN{\dvp1}(\kvi-\qvi)
 \d\theta \,.
-\end{eqnarray}
+\end{align}
 
 
 
@@ -527,23 +538,28 @@ observations in the range $k\in [0.92 \e{-60}, 3.1 \times
 consider three different $k$ ranges both in our results and the tests
 of the code\footnotemark:
 %
-\begin{eqnarray}
+\begin{align}
 \label{eq:Krangedefns}
-K_1 &=& \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,,\quad \Delta k = 3.8\e{-5}\Mpc^{-1}
+K_1 &= \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,, &\Delta k = 3.8\e{-5}\Mpc^{-1}
 \,,\nonumber\\
-K_2 &=& \left[5.71\e{-5}, 0.12\right]\Mpc^{-1}\,, \quad \Delta k = 1.2\e{-4}\Mpc^{-1}\,,
+K_2 &= \left[5.71\e{-5}, 0.12\right]\Mpc^{-1}\,, &\Delta k =
+1.2\e{-4}\Mpc^{-1}\,,
 \nonumber\\ 
-K_3 &=& \left[0.52\e{-5}, 0.39\right]\Mpc^{-1}\,, \quad \Delta k = 3.8\e{-4}\Mpc^{-1} \,.
-\end{eqnarray}
+K_3 &= \left[0.52\e{-5}, 0.39\right]\Mpc^{-1}\,, &\Delta k = 3.8\e{-4}\Mpc^{-1}
+\,.
+\end{align}
 % 
 \footnotetext{The $k$ ranges in $\Mpl$ are:
-\begin{eqnarray*}
+\begin{align*}
 \label{eq:Krangedefns-mpl}
-K_1 &=& \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl\,,\quad \Delta k = 1\e{-61}\Mpl \nonumber\\
-K_2 &=& \left[1.5\times 10^{-61}, 3.0735\e{-58}\right]\Mpl\,, \quad \Delta k = 3\e{-61}\Mpl
+K_1 &= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl\,, &\Delta k = 1\e{-61}\Mpl\,,
+\nonumber\\
+K_2 &= \left[1.5\times 10^{-61}, 3.0735\e{-58}\right]\Mpl\,, &\Delta k =
+3\e{-61}\Mpl\,,
 \nonumber\\ 
-K_3 &=& \left[0.25\e{-60}, 1.02425\e{-57}\right]\Mpl\,, \quad \Delta k = 1\e{-60}\Mpl \,.
-\end{eqnarray*}
+K_3 &= \left[0.25\e{-60}, 1.02425\e{-57}\right]\Mpl\,, &\Delta k = 1\e{-60}\Mpl
+\,.
+\end{align*}
 }
 % 
 The first, $K_1$, has a very fine resolution but covers only a small portion of the WMAP range. 
@@ -600,19 +616,27 @@ then putting in $\dvp1(k) = \alpha/\sqrt{k}$ gives
 % 
 This has the analytic solution
 % 
-\begin{eqnarray}
+\begin{align}
 \label{eq:err-analytic-num}
- A(k) &=& \frac{\pi}{18}\frac{\alpha^2}{k} \left\{ 
-3k^3\left[\log\left(2\sqrt{k}\right) - \frac{\pi}{2}  + 
-\arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) 
- + \log\left(2\left(\sqrt{\kmin} + \sqrt{\kmin + k}\right)\right) \right.\right. \nonumber \\
-&& \left. -\, \log\left(2\left(\sqrt{\kmax} + \sqrt{\kmax + k}\right)\right) 
-  - \log\left(2\left(\sqrt{\kmax} + \sqrt{\kmax - k}\right)\right) \right]  \nonumber \\
-&& +\, \sqrt{\kmax}\left[\sqrt{\kmax -k} \left(-3k^2 + 14k\kmax - 8\kmax^2\right)  
- + \sqrt{\kmax +k} \left(3k^2 + 14k\kmax + 8\kmax^2\right)\right] \nonumber \\ 
-&& \left. -\, \sqrt{\kmin}\left[\sqrt{k -\kmin} \left(3k^2 - 14k\kmax + 8\kmax^2\right) 
- - \sqrt{k +\kmin} \left(3k^2 + 14k\kmax + 8\kmax^2\right)\right] \right\} \,.
-\end{eqnarray}
+ A(k) = \frac{\pi}{18}\frac{\alpha^2}{k} \Bigg\{ 
+&3k^3\Bigg[\log\left(2\sqrt{k}\right) - \frac{\pi}{2}  + 
+\arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) \nonumber \\
+% 
+ &+ \log\left(2\left(\sqrt{\kmin} + \sqrt{\kmin + k}\right)\right)
+- \log\left(2\left(\sqrt{\kmax} + \sqrt{\kmax + k}\right)\right) \nonumber \\
+% 
+&- \log\left(2\left(\sqrt{\kmax} + \sqrt{\kmax - k}\right)\right) \Bigg]  \nonumber\\
+% 
+&+ \sqrt{\kmax}\bigg[\sqrt{\kmax -k} \left(-3k^2 + 14k\kmax - 8\kmax^2\right)
+\nonumber \\
+%  
+ &\qquad+ \sqrt{\kmax +k} \left(3k^2 + 14k\kmax + 8\kmax^2\right)\bigg] \nonumber\\ 
+% 
+&- \sqrt{\kmin}\bigg[\sqrt{k -\kmin} \left(3k^2 - 14k\kmax +
+8\kmax^2\right) \nonumber \\
+% 
+&\qquad- \sqrt{k +\kmin} \left(3k^2 + 14k\kmax + 8\kmax^2\right)\bigg] \Bigg\} \,.
+\end{align}
 %
 We have tested our code against this analytic solution for various
 combinations of $k$ ranges and $N_\theta$. The relative error

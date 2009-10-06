@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.9 2009/10/05 18:19:54 ith Exp $
+% $Id: perts.tex,v 1.10 2009/10/06 10:53:29 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.9 2009/10/05 18:19:54 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.10 2009/10/06 10:53:29 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -358,25 +358,24 @@ The $F$ term contains gradients of $\dvp1$ in real space and therefore
 the convolution integrals include additional factors of $k$ and
 $q$. It is given by
 %
-\begin{eqnarray}
+\begin{align}
  \label{eq:Fdvk1-fourier-num}
-&&%\hspace{-5mm}
-F\left(\dvp1(\kvi),\dvp1'(\kvi)\right)
+&F\left(\dvp1(\kvi),\dvp1'(\kvi)\right)
 = \frac{1}{(2\pi)^3}\int \d^3p \d^3q\delta^3(\kvi-\pvi-\qvi) 
-\Bigg\{ 
-2\left(\frac{8\pi G}{\H}\right)\frac{p_kq^k}{q^2}
-\delta\vp_{1}'(\pvi)\left(
-Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
-\nonumber\\
-&&
-+p^2\frac{16\pi G}{\H}\dvp1(\pvi)\vp_{0}'\dvp1(\qvi)
+\Bigg\{ \nonumber \\
+% 
+&\quad 2\left(\frac{8\pi G}{\H}\right)\frac{p_kq^k}{q^2}
+\delta\vp_{1}'(\pvi)\left(Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
++p^2\frac{16\pi G}{\H}\dvp1(\pvi)\vp_{0}'\dvp1(\qvi) \nonumber \\
+% 
+&\quad 
 +\left(\frac{4\pi G}{\H}\right)^2
 \frac{\vp_{0}'}{\H}\Bigg[
 \left(p_lq^l-\frac{p^iq_jk^jk_i}{k^2}\right) 
 \vp_{0}'\delta\vp_{1}(\pvi)\vp_{0}'\delta\vp_{1}(\qvi)
 \Bigg]\nonumber\\
-&&
-+2\frac{Q}{\H}\left(\frac{4\pi G}{\H}\right)^2 
+% 
+&\quad +2\frac{Q}{\H}\left(\frac{4\pi G}{\H}\right)^2 
 \frac{p_lq^lp_mq^m+p^2q^2}{k^2q^2}
 \Bigg[\vp_{0}'\delta\vp_{1}(\pvi)
 \left(Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
@@ -384,8 +383,7 @@ Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 %
 \nonumber\\
 %
-&&
-+\frac{4\pi G}{\H}
+&\quad +\frac{4\pi G}{\H}
 \Bigg[
 4Q\frac{q^2+p_lq^l}{k^2}\left(
 \dvp1'(\pvi)\dvp1(\qvi)\right)
@@ -393,16 +391,14 @@ Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \Bigg]
 \nonumber\\
 %
-&&
-+\left(\frac{4\pi G}{\H}\right)^2
+&\quad +\left(\frac{4\pi G}{\H}\right)^2
 \frac{\vp_{0}'}{\H}\Bigg[
 \frac{p_lq^lp_mq^m}{p^2q^2}
 \left( Q\dvp1(\pvi)+\vp_{0}'\dvp1'(\pvi)\right)
 \left(Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \Bigg]\nonumber\\
 %
-&&
-+\frac{\vp_{0}'}{\H}
+&\quad +\frac{\vp_{0}'}{\H}
 \Bigg[
 8\pi G\left(\frac{p_lq^l+p^2}{k^2}q^2\dvp1(\pvi)\dvp1(\qvi)
 -\frac{q^2+p_lq^l}{k^2}\dvp1'(\pvi)\dvp1'(\qvi)
@@ -410,15 +406,14 @@ Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \nonumber\\
 %
 %
-&&\qquad\qquad\qquad
-+\left(\frac{4\pi G}{\H}\right)^2
+&\quad +\left(\frac{4\pi G}{\H}\right)^2
 \frac{k^jk_i}{k^2}\Bigg(
 2\frac{p^ip_j}{p^2}
 \left(Q\dvp1(\pvi)+\vp_{0}'\dvp1'(\pvi)\right)
 Q\dvp1(\qvi)
 \Bigg)\Bigg]
 \Bigg\}\,.
-\end{eqnarray}
+\end{align}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -447,37 +442,41 @@ $\epsilon_H$ as defined in Refs.~\cite{Malik:2006ir} and \cite{Seery:2005gb}
 With this approximation the second order equation (\ref{eq:SOKG-real-num})
 simplifies dramatically, and with the $F$ term included is
 %
-\begin{eqnarray}
+\begin{align}
  \label{eq:KG2-fourier-sr-num}
-&&\dvp2''(\kvi)+2\H\dvp2'(\kvi)+k^2\dvp2(\kvi)
+&\dvp2''(\kvi)+2\H\dvp2'(\kvi)+k^2\dvp2(\kvi)
 +\left(a^2
 \Upp-{24 \pi G}(\vp_{0}')^2\right)
-\dvp2(\kvi) \\
+\dvp2(\kvi) \nonumber\\
 %
-&&+\int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{
+&+ \int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{
 a^2\left(\Uppp
 + \frac{8\pi G}{\H}\vp_{0}' \Upp\right)
- \dvp1(\pvi)\dvp1(\qvi)
-+\frac{16\pi G}{\H}a^2
+ \dvp1(\pvi)\dvp1(\qvi) \nonumber \\
+%
+&\qquad +\frac{16\pi G}{\H}a^2
 \vp_{0}'\Upp\dvp1(\pvi)\dvp1(\qvi)\Bigg\}
 \nonumber \\
 %
-&&+ \frac{8\pi G}{\H}
+&+ \frac{8\pi G}{\H}
 \int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi)  \Bigg\{
 %
 \frac{8\pi G}{\H}\frac{p_l q^l}{q^2}\vp_{0}'\dvp1'(\pvi)
-\dvp1'(\qvi)
-+2p^2\vp_{0}' \dvp1(\pvi) \dvp1(\qvi)\nonumber\\
+\dvp1'(\qvi) \nonumber\\
+% 
+&\qquad+ 2p^2\vp_{0}' \dvp1(\pvi) \dvp1(\qvi)
 %
-&&\qquad\qquad\qquad\qquad
 +\vp_{0}'
 \Bigg(
 \left(\frac{p_lq^l+p^2}{k^2}q^2-\frac{p_lq^l}{2}\right)
-\dvp1(\pvi)\dvp1(\qvi)
-+\left(\frac{1}{2}-\frac{q^2+p_lq^l}{k^2}\right)
+\dvp1(\pvi)\dvp1(\qvi) \nonumber \\
+% 
+&\qquad+\left(\frac{1}{2}-\frac{q^2+p_lq^l}{k^2}\right)
 \dvp1'(\pvi)\dvp1'(\qvi)\Bigg)
-\Bigg\}=0 \,.\nonumber
-\end{eqnarray}
+\Bigg\} \nonumber \\
+% 
+&=0 \,.
+\end{align}
 %
 The numerical simulation in this paper will solve the slow roll
 version of the second order above, \eq{eq:KG2-fourier-sr-num}, the first
