@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.6 2009/10/05 16:05:30 ith Exp $
+% $Id: results.tex,v 1.7 2009/10/06 16:06:32 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.6 2009/10/05 16:05:30 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.7 2009/10/06 16:06:32 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -325,6 +325,102 @@ exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+Full second order equation in terms of $\N$:
+\begin{align}
+ \label{eq:fullso-res}
+\ddN{\dvp2} &+ \left(3 + \frac{\dN{H}}{H}\right) \dN{\dvp2} +
+\left(\frac{k}{aH}\right)^2 \dvp2 \nonumber \\
+% 
+&+ \frac{1}{H^2}\left[ \Upp + 8\pi G\left(2\dN{\vp_0}\Uphi + 8\pi G
+\left(\dN{\vp_0}\right)^2 \U \right)\right] \nonumber \\
+% 
+&+ S_\mathrm{full}(\kvi) = 0\,,
+\end{align}
+% 
+where the full source equation is given by
+% 
+\begin{align}
+\label{eq:fullsrc-res}
+S_\mathrm{full}(\kvi) &= \frac{1}{(2\pi)^2}\int \d q q^2\Bigg\{ 
+% 
+\frac{1}{\left(H\right)^2} \left[ \Uppp + 3(8\pi G)\dN{\vp_0}\Upp\right]
+ \dvp1(\qvi) A(\qvi) \nonumber \\
+% 
+&+\frac{(8\pi G)^2 \dN{\vp_0}}{(aH)^2}\left[ 2a^2\dN{\vp_0}\Uphi +\dN{\vp_0}Q
+-\frac{Q^2}{2(aH)^2}\right] \dvp1(\qvi)A(\qvi) \nonumber \\
+% 
+&- \frac{(8\pi G)^2}{(aH)^2}\frac{(\dN{\vp_0})^2 Q}{2} \dN{\dvp1}(\qvi)
+A(\qvi) \nonumber \\
+% 
+&+ \frac{2(8\pi G)Q}{(aH)^2} \dvp1(\qvi)\wt{C}(\qvi) 
+% 
++ \frac{8\pi G \dN{\vp_0}}{2} \dN{\dvp1}(\qvi) \wt{C}(\qvi) \Bigg\} \nonumber \\
+% 
+&+ F_\mathrm{full}(\dvp1(\kvi), \dN{\dvp1}(\kvi))\,.
+\end{align}
+The $F$ term for the full equation requires the use of three further $\theta$
+integrals in addition to those in \eq{eq:AtoD-num}:
+\begin{align}
+\label{eq:efg-terms-res}
+ E(\kvi, \qvi) &= \int_0^\pi \cos^3(\theta) \sin(\theta) \dvp1(\kvi-\qvi)\d \theta
+\nonumber \\
+% 
+F(\kvi, \qvi) &= \int_0^\pi \frac{\sin^3(\theta)}{|\kvi-\qvi|^2} \dvp1(\kvi-\qvi)\d
+\theta
+\nonumber \\
+% 
+\wt{G}(\kvi, \qvi) &= \int_0^\pi \frac{\sin^3(\theta)}{|\kvi-\qvi|^2}
+\dN{\dvp1}(\kvi-\qvi)\d \theta \,.
+\end{align}
+% 
+The term $\sin^3(\theta)/|\kvi-\qvi|^2 \rightarrow 0$ in the limit when $k=q$ and
+$\theta\rightarrow 0$.
+% 
+The full $F$ term can now be written:
+\begin{align}
+ \label{eq:fullfterm-res}
+F_\mathrm{full} &= \frac{8\pi G}{(2\pi)^2}\frac{1}{(aH)^2} \int \d q\, q^2 \Bigg\{
+\nonumber \\
+% 
+&  \dN{\vp_0}\Bigg[ \left(2k^2 + \left(\frac{7}{2} - \frac{8\pi
+G}{4}(\dN{\vp_0})^2 \right)q^2 + \frac{3}{4}\frac{8\pi G}{(aH)^2} X^2 \right)
+\dvp1(\qvi) \nonumber \\
+% 
+& \qquad + (8\pi G) Q \dN{\vp_0} \left(\frac{3}{4} + \frac{q^2}{k^2}\right)
+ \dN{\dvp1}(\qvi) \Bigg] A(\kvi, \qvi) \nonumber \\
+% 
+&+ \Bigg[ \left( 2Q \frac{q}{k} \left(1- \frac{8\pi G}{(aH)^2} Q \dN{\vp_0}\right)
+-\frac{9}{2} \dN{\vp_0} k q - \dN{\vp_0} \frac{q^3}{k}\right) \dvp1(\qvi) \nonumber
+\\
+% 
+&\qquad - 2Q (8\pi G) (\dN{\vp_0})^2\frac{q}{k} \dN{\dvp1}(\qvi)\Bigg] B(\kvi, \qvi)
+\nonumber \\
+% 
+&+ \Bigg[ \left(-2 + (8\pi G)(\dN{\vp_0})^2 \left(\frac{1}{4} + \frac{1}{2aH}\right)
+\right) Q \dvp1(\qvi) \nonumber \\
+% 
+&\qquad + \left(\frac{8\pi G}{4}(\dN{\vp_0})^2 -2\right) \dN{\vp_0} (aH)^2
+\dN{\dvp1}(\qvi)\Bigg] \wt{C}(\kvi, \qvi)\nonumber \\
+% 
+&+ \Bigg[ 2Q \frac{k}{q}\dvp1(\qvi) + \left(2\frac{k}{q}-\frac{q}{k}\right)
+\dN{\vp_0} (aH)^2 \dN{\dvp1}(\qvi) \Bigg]\wt{D}(\kvi, \qvi) \nonumber \\
+% 
+&+ (8\pi G) \dN{\vp_0} \Bigg[ \left(\frac{1}{4}(\dN{\vp_0})^2q^2 +
+\frac{Q^2}{2(aH)^2}\right) \dvp1(\qvi) + \frac{Q}{2}\dN{\vp_0} \dN{\dvp1}(\qvi)
+\Bigg] E(\kvi, \qvi) \nonumber\\
+% 
+&+ (8\pi G)^2 \dN{\vp_0} Q \Bigg[ -\frac{Q}{2(aH)^2}\left(\frac{k^2}{2}+q^2\right)
+\dvp1(\qvi) - \frac{1}{4} \dN{\vp_0} k^2 \dN{\dvp1}(\qvi) \Bigg] F(\kvi, \qvi)
+\nonumber \\
+% 
+&+ (8\pi G)^2 (\dN{\vp_0})^2 \Bigg[ -\frac{Q}{2}\left(\frac{k^2}{2} +
+\frac{q^2}{aH}\right)\dvp1(\qvi) -\frac{(aH)^2}{4}\dN{\vp_0}k^2 \dN{\dvp1}(\qvi)
+\Bigg] \wt{G}(\kvi, \qvi)
+\end{align}
+
+
+
 
 % 
 % 
