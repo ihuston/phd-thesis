@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.20 2009/10/06 16:27:47 ith Exp $
+% $Id: numerical.tex,v 1.21 2009/10/07 16:03:31 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.20 2009/10/06 16:27:47 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.21 2009/10/07 16:03:31 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -310,6 +310,36 @@ $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{figure}
+\centering%
+\subfloat[$V(\vp)=\msqphisq$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_potential-small}
+}\qquad%
+\subfloat[$V(\vp)=\lambdaphifour$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/lambdaphi4_potential-small}
+}\\%
+\subfloat[$V(\vp)=\phitwooverthree$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/phi2over3_potential-small}
+}
+\caption[Different potentials used]{Plots of the different potentials used. The
+potentials for the $\hybridtwoandfour$ and $\linde$ models with the parameters
+described are indistinguishable from the $\lambdaphifour$ potential.}
+\label{fig:potentials-num}
+\end{figure}
+
+\begin{figure}
+\centering%
+\subfloat[The potentials in terms of $\varphi$.]{
+\includegraphics[width=0.43\textwidth]
+  {numerical/graphs/cmp_pot_phi_msqlphphi23-small}
+}\qquad%
+\subfloat[The potentials in terms of $\N$.]{
+ \includegraphics[width=0.43\textwidth]
+  {numerical/graphs/cmp_pot_n_msqlphphi23-small}
+}
+\caption[Comparison of potentials]{A comparison of the different potentials used.}
+\label{fig:cmp-pot-num}
+\end{figure}
 
 \begin{figure}
 \centering%
@@ -325,7 +355,7 @@ $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267
 \subfloat[Fixing $\lambda$ for $V(\vp)=\linde$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/linde_params-small}
 }\\%
-\subfloat[Fixing $\lambda$ for $V(\vp)=\phitwooverthree$]{
+\subfloat[Fixing $\sigma$ for $V(\vp)=\phitwooverthree$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/phi2over3_params-small}
 }
 \caption[Parameter values for different potentials]{Parameter values for the
