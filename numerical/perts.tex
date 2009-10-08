@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.11 2009/10/08 14:57:35 ith Exp $
+% $Id: perts.tex,v 1.12 2009/10/08 15:23:48 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.11 2009/10/08 14:57:35 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.12 2009/10/08 15:23:48 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -99,19 +99,31 @@ contrast with previous attempts which have focused only on certain
 terms in the expression, for example \Rref{Finelli:2006wk}.
 
 
-In this paper we 
-solve numerically the second order Klein-Gordon
-equation in closed form in Fourier space and show that this procedure
-is readily applicable to the study of non-Gaussianity and other higher
-order effects.
-%
-As this is, to our knowledge, the first numerical solution to the full
-second order evolution equation we will outline the numerical steps
-taken in the system we have developed, examine the current constraints
-on the calculation and describe the next steps required in
-detail. This calculation uses the slow roll version of the second
+% Over the course of Chapters~\ref{ch:perts}, \ref{ch:numericalsystem} and
+% \ref{ch:results} the second order Klein-Gordon
+% equation in closed form is solved numerically in Fourier space and show that this
+% procedure
+% is readily applicable to the study of non-Gaussianity and other higher
+% order effects.
+In this chapter the equations of motion for first and second order field
+perturbations are described. These form the basis of the numerical calculation
+undertaken.
+% As this is, to the author's knowledge, the first numerical solution to the full
+% second order evolution equation 
+Chapter~\ref{ch:numericalsystem} describes the numerical implementation of the
+calculation, including the initial conditions used and the
+computational requirements. We outline the numerical steps
+taken in the system and examine the current constraints
+on the calculation. This calculation uses the slow roll version of the second
 order equation, but solves the full non-slow roll equations for the
 background and first order.
+% 
+We present the results of this calculation
+in Chapter~\ref{ch:results} including a comparison of the second
+order perturbation calculated for the four potentials used. We discuss
+these results and describe the next steps required in detail.
+
+%
 % 
 The models that we test in this paper are single field models with a canonical
 action. Significant second order corrections
@@ -119,21 +131,23 @@ are expected only when a non-canonical action or multiple fields are
 used, or slow roll is violated. Numerical simulations will be particularly
 useful in analysing models with these characteristics.
 We will discuss in
-Section~\ref{sec:disc} planned future work to extend our current numerical
+Section~\ref{sec:next-res} planned future work to extend our current numerical
 system to deal with these extensions beyond the standard single field slow roll
 inflation.
 
 
-In Section \ref{sec:perts-num} we will give a brief outline of
-perturbation theory and describe the second order perturbation
-equations that will be numerically calculated. Chapter
-\ref{ch:numericalsystem} describes the numerical implementation of the
-calculation, including the initial conditions used and the
-computational requirements. We present the results of this calculation
-in Section \ref{sec:results} including a comparison of the second
-order perturbation calculated for the $\msqphisq$ and
-$\lambdaphifour$ potentials. We will discuss these results
-and the next stages of this work in Section \ref{sec:disc-num}. 
+In Section~\ref{sec:perts-num} we introduce the Klein-Gordon equations
+for first and second order
+perturbations that will be numerically calculated. These are initially written in
+terms of the metric perturbations and
+then described in closed form (\ie in terms of the field perturbations alone). In
+Section~\ref{sec:slowroll} the second order equation is written in a slow roll
+approximation.
+% 
+Section~\ref{sec:observable-perts} describes the observable quantities that can be
+calculated from second order field perturbations. In Section~\ref{sec:disc-perts} we
+discuss the results of this chapter.
+
 
 
 
