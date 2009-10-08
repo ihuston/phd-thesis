@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.10 2009/10/06 10:53:29 ith Exp $
+% $Id: perts.tex,v 1.11 2009/10/08 14:57:35 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.10 2009/10/06 10:53:29 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.11 2009/10/08 14:57:35 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -25,7 +25,7 @@
 Cosmological perturbation theory is an essential tool for the analysis
 of cosmological models, in particular as the amount of observational
 data continues to increase. With the recent launch of the
-{\sc{planck}} satellite, the {\sc{wmap}} mission reaching its eighth
+Planck satellite, the WMAP mission reaching its eighth
 year, and a host of other new experiments, we will have access to more
 information about the early universe than ever before
 \cite{planck,Komatsu:2008hk}.
@@ -33,42 +33,43 @@ information about the early universe than ever before
 To distinguish between theoretical models 
 it is necessary to go beyond the standard statistical analyses that
 have been so successful in the recent past. As a result much interest
-has been focused on non-gaussianity as a new tool to help classify and
+has been focused on non-Gaussianity as a new tool to help classify and
 test models of the early universe. Perturbation theory beyond first
 order will be required to make the best possible use of 
-the data.  In this paper we outline an important step in the
-understanding of perturbation theory beyond first order, demonstrating
+the data. In Section~\ref{sec:perts-intro} cosmological perturbations at first order
+were introduced.  In Part~\ref{part:numerical} of this work we outline an important
+step in the understanding of perturbation theory beyond first order, demonstrating
 that second order perturbations are readily amenable to numerical
 calculation, even on small and intermediate scales inside the horizon.
 
 
 Inflationary model building has for the past few years focused on
 meeting the requirements of first order perturbation theory, namely
-that the power spectra of scalar and tensor perturbations should match
-that observed in the Cosmic Microwave Background (CMB).  Inflationary
-models are classified and tested based on their predictions for the
-power spectrum of curvature perturbations, the spectral index of these
-perturbations and the ratio of tensor to scalar perturbations.  As the
+that the power spectra of scalar and tensor perturbations as defined in
+Eqs.~\eq{eq:Prdefn-intro} and \eq{eq:Ptdefn-intro} should match
+those observed in the CMB.  Inflationary
+models are classified and tested based on their predictions for $\Pr$, $n_s$ and
+$r$. As the
 potential for moving beyond first order perturbations has been
-explored, these three observable quantities have been joined by a
-measure of the departure from gaussianity exhibited by the
-perturbations, the non-gaussianity parameter $\fnl$. This parameter is
+explored, these three observable quantities have been joined by the non-Gaussianity
+parameter $\fnl$. As described in Section~\ref{sec:fnl-intro}, this parameter is
 not yet well constrained by observational data in comparison with the
-other quantities but can already be used to rule out models with
-particularly strong non-gaussian signatures.
+other quantities. In Part~\ref{part:dbi}, however, it was shown that $\fnl$ can
+already be used to rule out models with particularly strong non-Gaussian signatures.
 
 
 There are two main approaches to studying higher order effects and
-non-gaussianity.  
-One approach uses nonlinear theory and a gradient expansion in various
-guises, either explicitly, \eg
-Refs.~\cite{Salopek:1990jq,Rigopoulos:2005xx} or in the form of the
+non-Gaussianity.  
+The first uses nonlinear theory and a gradient expansion in various
+forms, either explicitly, \eg
+Refs.~\cite{Salopek:1990jq,Rigopoulos:2005xx} or through the
 $\Delta N$ formalism, \eg
 Refs.~\cite{Starobinsky:1982ee,
 Starobinsky:1986fxa, Sasaki:1995aw, Sasaki:1998ug,
-Lyth:2004gb,Lyth:2005fi,Langlois:2006vv}
-By virtue of having to employ a gradient expansion this approach is so
-far only usable on scales much larger than the particle horizon.  The
+Lyth:2004gb,Lyth:2005fi,Langlois:2006vv}.
+Employing a gradient expansion restricts this approach so
+far to only be usable on scales much larger than the particle horizon.  
+The
 other approach uses cosmological perturbation theory following Bardeen
 \cite{Bardeen:1980kt} and extending it to second order,
 e.g.~Refs.~\cite{Tomita:1967,Mukhanov:1996ak,Bruni:1996im,
@@ -79,15 +80,16 @@ e.g.~Refs.~\cite{Tomita:1967,Mukhanov:1996ak,Bruni:1996im,
 (for an extensive list of references and a recent review on these
 issues see Ref.~\cite{Malik:2008im}).
 %
-This approach works on all scales, but can be more complex than in
-particular the $\Delta N$ formalism. Both these approaches give the
+This approach works on all scales, but can be complex in comparison to the
+$\Delta N$ formalism. Both these approaches give the
 same results on large scales \cite{Malik:2005cy}. We
-will follow the Bardeen approach in this paper.
+will follow the Bardeen approach here.
 
-As the first order perturbations of the inflaton field are taken in
-the standard treatment to be purely gaussian it is in general
+
+In Section~\ref{sec:fnl-intro} the first order perturbations of the inflaton field
+were taken to be purely Gaussian. It is therefore 
 necessary to go to second order in order to understand and estimate
-the non-gaussian contribution of any inflationary model (for a recent
+the non-Gaussian contribution of any inflationary model (for a recent
 review see Ref.~\cite{Malik:2008im}). Deriving the equations of motion is
 not trivial at second order and only recently was the Klein-Gordon
 equation for scalar fields derived in closed form, taking into account
@@ -100,7 +102,7 @@ terms in the expression, for example \Rref{Finelli:2006wk}.
 In this paper we 
 solve numerically the second order Klein-Gordon
 equation in closed form in Fourier space and show that this procedure
-is readily applicable to the study of non-gaussianity and other higher
+is readily applicable to the study of non-Gaussianity and other higher
 order effects.
 %
 As this is, to our knowledge, the first numerical solution to the full
@@ -142,7 +144,7 @@ and the next stages of this work in Section \ref{sec:disc-num}.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Perturbations}
+\section{Perturbation Equations}
 \label{sec:perts-num}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -159,7 +161,7 @@ given by one of the authors and we will outline the derivation in
 Ref.~\cite{Malik:2006ir} below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{First and Second Order}
+\subsection{Second Order Perturbations}
 \label{sec:fosoperts-num}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -283,7 +285,11 @@ Using the perturbed Einstein equations, the Klein-Gordon equations above can be
 written in closed form at both first and second orders. These equations will
 form the basis of the numerical scheme described in Chapter \ref{ch:numericalsystem}.
 
-
+% % % % % % % % % % % % % % % % 
+\subsection{Fourier transform}
+\label{sec:fourier-perts}
+% % % % % % % % % % % % % % % % 
+% 
 The dynamics of the scalar field becomes clearer in Fourier space but terms in
 the second order equation of the form $\left(\dvp1(x)\right)^2$ require the use
 of the convolution theorem (see for example \Rref{Vretblad:2005}).
