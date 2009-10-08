@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.12 2009/10/08 15:23:48 ith Exp $
+% $Id: perts.tex,v 1.13 2009/10/08 21:35:23 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.12 2009/10/08 15:23:48 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.13 2009/10/08 21:35:23 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -36,7 +36,7 @@ have been so successful in the recent past. As a result much interest
 has been focused on non-Gaussianity as a new tool to help classify and
 test models of the early universe. Perturbation theory beyond first
 order will be required to make the best possible use of 
-the data. In Section~\ref{sec:perts-intro} cosmological perturbations at first order
+the data. In Chapter~\ref{ch:introduction} cosmological perturbations at first order
 were introduced.  In Part~\ref{part:numerical} of this work we outline an important
 step in the understanding of perturbation theory beyond first order, demonstrating
 that second order perturbations are readily amenable to numerical
@@ -46,7 +46,7 @@ calculation, even on small and intermediate scales inside the horizon.
 Inflationary model building has for the past few years focused on
 meeting the requirements of first order perturbation theory, namely
 that the power spectra of scalar and tensor perturbations as defined in
-Eqs.~\eq{eq:Prdefn-intro} and \eq{eq:Ptdefn-intro} should match
+Eqs.~\eqref{eq:Prdefn-intro} and \eqref{eq:Ptdefn-intro} should match
 those observed in the CMB.  Inflationary
 models are classified and tested based on their predictions for $\Pr$, $n_s$ and
 $r$. As the
@@ -67,8 +67,8 @@ $\Delta N$ formalism, \eg
 Refs.~\cite{Starobinsky:1982ee,
 Starobinsky:1986fxa, Sasaki:1995aw, Sasaki:1998ug,
 Lyth:2004gb,Lyth:2005fi,Langlois:2006vv}.
-Employing a gradient expansion restricts this approach so
-far to only be usable on scales much larger than the particle horizon.  
+Employing a gradient expansion restricts this approach, so
+far, to only being usable on scales much larger than the particle horizon.  
 The
 other approach uses cosmological perturbation theory following Bardeen
 \cite{Bardeen:1980kt} and extending it to second order,
@@ -167,49 +167,58 @@ discuss the results of this chapter.
 
 In this section we will briefly review the derivation of first and
 second order perturbations in the uniform curvature gauge and describe
-the slow roll approximation that we will use in this paper. There are
+the slow roll approximation that will be used. There are
 many reviews on the subject of cosmological perturbation theory, and
 here we will follow Ref.~\cite{Malik:2008im}.  The full closed
 Klein-Gordon equation for second order perturbations was recently
-given by one of the authors and we will outline the derivation in
-Ref.~\cite{Malik:2006ir} below.
+derived in Ref.~\cite{Malik:2006ir} and the results of that paper will be
+outlined below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Second Order Perturbations}
 \label{sec:fosoperts-num}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-In this paper we will consider perturbations of a single scalar field
-and will work throughout in the uniform curvature or flat gauge. Our
+We will consider perturbations of a single scalar field
+and as in Section~\ref{sec:perts-intro} we will work in the uniform curvature or flat
+gauge. The
 goal is to describe scalar perturbations up to second order and the
-first step to achieve this is to examine the metric tensor:
+first step to achieve this is to examine the metric
+tensor up to second order.  This is
+a straightforward extension of \eq{eq:pertmetric-intro} with the vector and tensor
+perturbations ignored:
 %
-\begin{eqnarray}
+\begin{align}
 \label{eq:metric1-num}
 %
-g_{00}&=&-a^2\left(1+2\phi_1+\phi_2\right) \,, \\
+g_{00}&= -a^2\left(1+2\phi_1+\phi_2\right) \,, \nonumber\\
 %
-g_{0i}&=&a^2\left(B_1+\frac{1}{2}B_2\right)_{,i}\,, \\
+g_{0i}&= a^2\left(B_1+\frac{1}{2}B_2\right)_{,i}\,, \nonumber\\
 %
-g_{ij}&=&a^2\left[\left(1-2\psi_1-\psi_2\right)\delta_{ij}
+g_{ij}&= a^2\left[\left(1-2\psi_1-\psi_2\right)\delta_{ij}
 +2E_{1,ij}+E_{2,ij}\right]\,,
-\end{eqnarray}
+\end{align}
 %
-where $a=a(\eta)$ is the scale factor, $\eta$ conformal time,
-$\delta_{ij}$ is the flat background metric, $\phi_1$ and $\phi_2$ the
-lapse functions, and $\psi_1$ and $\psi_2$ the curvature perturbations
-at first and second order; $B_1$ and $B_2$ and $E_1$ and $E_2$ are
+where $\delta_{ij}$ is the flat background metric, $\phi_1$ and $\phi_2$ the
+lapse functions at first and second order, $\psi_1$ and $\psi_2$ the curvature
+perturbations, and $B_1$, $B_2$, $E_1$ and $E_2$ are
 scalar perturbations describing the shear.
-Spatial 3-hypersurfaces are flat in our chosen gauge and so
+In the uniform curvature gauge spatial 3-hypersurfaces are flat, so
 %  
 \begin{equation}
  \label{eq:gauge-num}
 \wt\psi_1=\wt\psi_2=\wt E_1=\wt E_2=0 \,,
 \end{equation}
 % 
-where the tilde denotes quantities in flat gauge.
+where the tilde denotes quantities in the flat gauge.
 
+where $\vp_0$ is the background value of the field and the perturbations of
+$\varphi$ are defined as
+%  
+\begin{equation}
+ \varphi(x^\mu) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
+\,.
+\end{equation}
 
 The Sasaki-Mukhanov variable, i.e.\ the field perturbation on uniform curvature
 hypersurfaces \cite{Sasaki:1986hm,Mukhanov:1988jd}, evaluated at first order is
@@ -220,13 +229,7 @@ given by
 \wt{\dvp1}=\dvp1+\frac{\vp_{0}'}{\H}\psi_1\,, 
 \end{equation}
 % 
-where $\vp_0$ is the background value of the field and the perturbations of
-$\varphi$ are defined as
-%  
-\begin{equation}
- \varphi(x^\mu) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
-\,.
-\end{equation}
+
 % 
 At second order the Sasaki-Mukhanov variable becomes more complicated
 \cite{Malik:2005cy,Malik:2003mv}:
