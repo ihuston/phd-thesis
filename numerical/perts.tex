@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.13 2009/10/08 21:35:23 ith Exp $
+% $Id: perts.tex,v 1.14 2009/10/09 18:59:58 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.13 2009/10/08 21:35:23 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.14 2009/10/09 18:59:58 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -178,15 +178,23 @@ outlined below.
 \subsection{Second Order Perturbations}
 \label{sec:fosoperts-num}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In Section~\ref{sec:perts-intro} cosmological perturbations of a single scalar field
+were introduced at first order. In this section we will consider perturbations up to
+second order, again working in the uniform curvature or flat
+gauge. 
+The steps taken in Section~\ref{sec:perts-intro} can be repeated at second order to
+find gauge invariant quantities. Recall that scalar quantities such as the inflaton
+field, $\varphi$, can be split into an homogeneous background part, $\vp_0$, and
+inhomogeneous perturbations. Up to second order $\vp$ becomes
+%  
+\begin{equation}
+ \varphi(\eta, x^\mu) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
+\,.
+\end{equation}
 
-We will consider perturbations of a single scalar field
-and as in Section~\ref{sec:perts-intro} we will work in the uniform curvature or flat
-gauge. The
-goal is to describe scalar perturbations up to second order and the
-first step to achieve this is to examine the metric
-tensor up to second order.  This is
-a straightforward extension of \eq{eq:pertmetric-intro} with the vector and tensor
-perturbations ignored:
+The metric tensor $g_{\mu\nu}$ must also be perturbed up to second order. In
+\eq{eq:pertmetric-intro} the vector and tensor perturbations were included at first
+order. Here we consider only the scalar metric perturbations:
 %
 \begin{align}
 \label{eq:metric1-num}
@@ -203,30 +211,66 @@ where $\delta_{ij}$ is the flat background metric, $\phi_1$ and $\phi_2$ the
 lapse functions at first and second order, $\psi_1$ and $\psi_2$ the curvature
 perturbations, and $B_1$, $B_2$, $E_1$ and $E_2$ are
 scalar perturbations describing the shear.
+% 
+In addition to the first order transformation vector \eqref{eq:xidefn-intro} there is
+now also a second order tranformation vector
+% 
+\begin{equation}
+ \label{eq:xi2defn-perts}
+\xi_2^\mu = (\alpha_1, \beta_{1,}^{~~i}) \,,
+\end{equation}
+% 
+where the spatial vector part of the transformation has been ignored. As before we
+can write down how a second order scalar quantity (such as $\dvp2$) will be
+transformed:
+% 
+\begin{equation}
+\label{eq:dvp2transform-perts}
+ \wt{\dvp2} = \dvp2 + \vp_0'\alpha_2 + \alpha_1\left(\vp_0'' \alpha_1 + \vp_0'
+\alpha_1' + 2\dvp1'\right) + \left(2\dvp1 + \vp_0'\alpha_1\right)_{,i}
+\beta_{1,}^{~~i} \,,
+\end{equation}
+% 
+where a tilde ($\wt{~}$) again denotes a transformed quantity. 
+The metric curvature perturbation transformation at first order is straightforward,
+$\wt{\psi_1} = \psi_1 =\H \alpha_1$, but at second order becomes more complicated:
+% 
+\begin{equation}
+ \label{eq:psi2transform-perts}
+\wt{\psi_2} = \psi_2 -\H\alpha_2 -\alpha_1\left(\H\alpha_1' + 
+              \left(\H' +2\H^2\right)\alpha_1 -2\psi_1' -4\H\psi_1\right)
+              -\left(\H\alpha_1 -2\psi_1\right)_{,i} \beta_{1,}^{~~i}\,.
+\end{equation}
+% 
 In the uniform curvature gauge spatial 3-hypersurfaces are flat, so
 %  
 \begin{equation}
  \label{eq:gauge-num}
-\wt\psi_1=\wt\psi_2=\wt E_1=\wt E_2=0 \,,
+\wt\psi_1=\wt\psi_2=\wt E_1=\wt E_2=0 \,.
 \end{equation}
 % 
-where the tilde denotes quantities in the flat gauge.
-
-where $\vp_0$ is the background value of the field and the perturbations of
-$\varphi$ are defined as
-%  
+As before these relations can be used at first and then second order to define gauge
+invariant variables. From Section~\ref{sec:perts-intro} the first order
+transformation variables in flat gauge satisfy $\alpha_1 = \psi_1/\H$ and $\beta_1
+= E_1$. At second order, for the transformation of scalar quantities, as in
+\eq{eq:dvp2transform-perts}, we require only $\alpha_2$ which is found by using
+\eq{eq:psi2transform-perts}:
 \begin{equation}
- \varphi(x^\mu) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
-\,.
+ \label{eq:alpha2-perts
 \end{equation}
 
+
+
+
+
+
 The Sasaki-Mukhanov variable, i.e.\ the field perturbation on uniform curvature
-hypersurfaces \cite{Sasaki:1986hm,Mukhanov:1988jd}, evaluated at first order is
-given by
+hypersurfaces \cite{Sasaki:1986hm,Mukhanov:1988jd}, was given at first order in
+\eq{eq:flatdvp1-intro}:
 %  
 \begin{equation}
 \label{eq:Q1I-num}
-\wt{\dvp1}=\dvp1+\frac{\vp_{0}'}{\H}\psi_1\,, 
+\wt{\dvp1}=\dvp1+\frac{\vp_{0}'}{\H}\psi_1\,.
 \end{equation}
 % 
 
