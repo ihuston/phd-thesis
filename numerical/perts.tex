@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.14 2009/10/09 18:59:58 ith Exp $
+% $Id: perts.tex,v 1.15 2009/10/10 10:27:19 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.14 2009/10/09 18:59:58 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.15 2009/10/10 10:27:19 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -194,7 +194,7 @@ inhomogeneous perturbations. Up to second order $\vp$ becomes
 
 The metric tensor $g_{\mu\nu}$ must also be perturbed up to second order. In
 \eq{eq:pertmetric-intro} the vector and tensor perturbations were included at first
-order. Here we consider only the scalar metric perturbations:
+order. Here we consider only the scalar metric perturbations \cite{Malik:2008im}:
 %
 \begin{align}
 \label{eq:metric1-num}
@@ -217,12 +217,12 @@ now also a second order tranformation vector
 % 
 \begin{equation}
  \label{eq:xi2defn-perts}
-\xi_2^\mu = (\alpha_1, \beta_{1,}^{~~i}) \,,
+\xi_2^\mu = (\alpha_2, \beta_{2,}^{~~i}) \,,
 \end{equation}
 % 
 where the spatial vector part of the transformation has been ignored. As before we
 can write down how a second order scalar quantity (such as $\dvp2$) will be
-transformed:
+transformed \cite{Malik:2005cy}:
 % 
 \begin{equation}
 \label{eq:dvp2transform-perts}
@@ -233,7 +233,8 @@ transformed:
 % 
 where a tilde ($\wt{~}$) again denotes a transformed quantity. 
 The metric curvature perturbation transformation at first order is straightforward,
-$\wt{\psi_1} = \psi_1 =\H \alpha_1$, but at second order becomes more complicated:
+$\wt{\psi_1} = \psi_1 -\H \alpha_1$, but at second order becomes more complicated
+\cite{Malik:2005cy}:
 % 
 \begin{equation}
  \label{eq:psi2transform-perts}
@@ -242,31 +243,29 @@ $\wt{\psi_1} = \psi_1 =\H \alpha_1$, but at second order becomes more complicate
               -\left(\H\alpha_1 -2\psi_1\right)_{,i} \beta_{1,}^{~~i}\,.
 \end{equation}
 % 
-In the uniform curvature gauge spatial 3-hypersurfaces are flat, so
+We will work in the uniform curvature gauge where spatial 3-hypersurfaces are flat,
+so
 %  
 \begin{equation}
  \label{eq:gauge-num}
 \wt\psi_1=\wt\psi_2=\wt E_1=\wt E_2=0 \,.
 \end{equation}
 % 
-As before these relations can be used at first and then second order to define gauge
+These relations can be used at first and then second order to define gauge
 invariant variables. From Section~\ref{sec:perts-intro} the first order
 transformation variables in flat gauge satisfy $\alpha_1 = \psi_1/\H$ and $\beta_1
-= E_1$. At second order, for the transformation of scalar quantities, as in
+= -E_1$. At second order, for the transformation of scalar quantities, as in
 \eq{eq:dvp2transform-perts}, we require only $\alpha_2$ which is found by using
-\eq{eq:psi2transform-perts}:
+\eq{eq:psi2transform-perts} to be
 \begin{equation}
- \label{eq:alpha2-perts
+ \label{eq:alpha2-perts}
+\alpha_2 = \frac{1}{\H}\left( \psi_2 + \frac{1}{\H}\psi_1 \psi_1' + 2\psi_1^2 
+             + \psi_{1,i} E_{1,}^{~~i} \right) \,.
 \end{equation}
-
-
-
-
-
 
 The Sasaki-Mukhanov variable, i.e.\ the field perturbation on uniform curvature
 hypersurfaces \cite{Sasaki:1986hm,Mukhanov:1988jd}, was given at first order in
-\eq{eq:flatdvp1-intro}:
+\eq{eq:flatdvp1-intro} as
 %  
 \begin{equation}
 \label{eq:Q1I-num}
@@ -294,12 +293,13 @@ drop the tildes and talk only about variables in the flat gauge.
 The potential of the scalar field is also split
 % 
 \begin{equation}
- U(\varphi) = \U + \delta U_{1} + \frac{1}{2}\delta U _{2}\,,\quad
- \delta U_{1} = \Uphi \dvp1 \,,\quad
- \delta U_{2} = \Upp \dvp1^2 + \Uphi\dvp2 \,,
+ V(\varphi) = \U + \delta V_{1} + \frac{1}{2}\delta V _{2}\,,\quad
+ \delta V_{1} = \Uphi \dvp1 \,,\quad
+ \delta V_{2} = \Upp \dvp1^2 + \Uphi\dvp2 \,.
 \end{equation}
 % 
-where $\Uphi = \pd{U}{\varphi}$.
+
+
 The Klein-Gordon equation describes the evolution of the scalar field. For the
 background field we have
 %
