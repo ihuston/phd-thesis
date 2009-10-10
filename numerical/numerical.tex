@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.23 2009/10/08 15:24:14 ith Exp $
+% $Id: numerical.tex,v 1.24 2009/10/10 11:03:11 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.23 2009/10/08 15:24:14 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.24 2009/10/10 11:03:11 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -410,7 +410,8 @@ of the first order equations as the initial conditions \cite{Salopek:1988qh}, wi
 \end{eqnarray}
 %
 where the conformal time $\eta$ can be calculated from $\eta=\int \d\N/aH \simeq
--(aH(1-\epsilon_H))^{-1}$, when $\epsilon_H$ changes slowly. For example $\kwmap$ is initialised
+-(aH(1-\bar{\varepsilon}^2_H))^{-1}$, when $\bar{\varepsilon}_H$ changes slowly. For
+example $\kwmap$ is initialised
 about $65$ e-foldings before the end of inflation and crosses the horizon about $5$ e-foldings
 later.
 We also use these formulae in the calculation of the source term in \eq{eq:KG2-source-ntime} to
@@ -447,7 +448,8 @@ rewritten as two first order (in the time derivative) equations, is
 evolved from the specified initial state until some end time required
 to be after the end of the inflationary regime.  The end of inflation
 occurs when $\d^2a/\d t^2$ is no longer positive and the parameter
-$\varepsilon_H = -\dN{H}/H$ first becomes greater than or equal to $1$
+$\bar{\varepsilon}^2_H = \varepsilon_H= -\dN{H}/H$ first becomes greater than or
+equal to $1$
 (see Figure~\ref{fig:eps}). Here, this specifies a new end time for the 1st
 order run, although the simulation can run beyond the strict end of
 inflation if required. The initial conditions for the first order
@@ -456,9 +458,11 @@ system are then set as outlined above.
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{./numerical/graphs/bgepsilon}
- \caption[Plot of $\varepsilon_H$ near the end of inflation]{The end of inflation is
+ \caption[Plot of $\bar{\varepsilon}_H$ near the end of inflation]{The end of
+inflation is
 determined by calculating when
-   $\varepsilon_H=-\dN{H}/H=1$ (red dashed line). Along the $x$-axis,
+   $\bar{\varepsilon}^2_H = \varepsilon_H=-\dN{H}/H=1$ (red dashed line). Along the
+$x$-axis,
    $\N$ is the number of e-foldings from the start of the
    simulation.}
 \label{fig:eps}
@@ -672,7 +676,8 @@ We have tested our code against this analytic solution for various
 combinations of $k$ ranges and $N_\theta$. The relative error
 %
 \begin{equation}
- \epsilon_\mathrm{rel} = \frac{|\mathrm{analytic}- \mathrm{calculated} |}{|\mathrm{analytic}|}
+ \epsilon_\mathrm{rel} = \frac{|\mathrm{analytic}- \mathrm{calculated}
+|}{|\mathrm{analytic}|}
 \end{equation}
 %
 is small for all the tested cases but certain combinations of
