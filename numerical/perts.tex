@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.17 2009/10/10 14:18:12 ith Exp $
+% $Id: perts.tex,v 1.18 2009/10/10 16:14:27 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.17 2009/10/10 14:18:12 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.18 2009/10/10 16:14:27 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -572,6 +572,56 @@ order equation (\ref{eq:fokg}) and the background equation
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+Cosmological perturbations at second order are becoming increasingly important as
+statistical quantities beyond the power spectrum and spectral index are
+investigated. Observations, however, do not tell us anything about the inflaton
+field directly. In this section the second order perturbations described above will
+be related to observable quantities to demonstrate how a numerical calculation could
+be useful in the future.
+% 
+
+The temperature fluctuations observed in the CMB can
+be directly related to the curvature perturbation $\R$. In
+Section~\ref{sec:perts-intro} $\R$ was defined at first order in terms of $\dvp1$.
+When the second order contribution is included the total comoving curvature
+perturbation is defined as
+% 
+\begin{equation}
+\label{eq:Rfulldefn-perts}
+ \R = \R_1 + \frac{1}{2}\R_2\,.
+\end{equation}
+% 
+The first order part is related to the inflaton perturbation in flat gauge by $\R_1
+= \H\dvp1/\vp_0'$. The second order part includes terms quadratic in $\dvp1$ and so
+in Fourier space requires convolutions. We are interested in the value of $\R$ after
+horizon crossing for the calculation of $\Pr$ and determination of the
+non-gaussianity produced during inflation. This allows us to neglect gradient terms
+in real space or terms proportional to $k$ in Fourier space.
+In this limit the real space expression for $\R_2$ is
+% 
+\begin{equation}
+ \label{eq:R2real-perts}
+\R_2(\eta, x^i) = \frac{\H}{\vp_0'}\dvp2 - 2\frac{\H}{\left(\vp_0'\right)^2}
+\dvp1'\dvp1 + \frac{\dvp1^2}{\left(\vp_0'\right)^2}\left(\H\frac{\vp_0''}{\vp_0} 
+ - \H' -2\H^2 \right)\,.
+\end{equation}
+% 
+In Fourier space this term becomes
+% 
+\begin{align}
+ \R_2(\eta, \kvi) = \frac{\H}{\vp_0'}\dvp2(\eta, \kvi) 
+  &+ \frac{1}{(2\pi)^3}\int \d^3q\, \d^3p\, \delta(\kvi-\qvi-\pvi) \Bigg\{
+\nonumber\\
+% 
+ &-2\frac{\H}{\left(\vp_0'\right)^2} \dvp1(\eta, \pvi)\dvp1'(\eta, \qvi) \nonumber\\
+%  
+&+\frac{1}{\left(\vp_0'\right)^2} \left(\H\frac{\vp_0''}{\vp_0} 
+ - \H' -2\H^2 \right) \dvp1(\eta,\pvi) \dvp1(\eta, \qvi)\Bigg\}\,.
+\end{align}
+
+* fnl and equation
+
 
 % 
 % 
