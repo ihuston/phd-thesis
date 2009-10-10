@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.47 2009/10/08 21:35:17 ith Exp $
+% $Id: mainintro.tex,v 1.48 2009/10/10 11:07:57 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.47 2009/10/08 21:35:17 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.48 2009/10/10 11:07:57 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -420,15 +420,15 @@ pressure of the universe is negative \cite{book:liddle, Baumann2009}:
  \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
   \Rightarrow E + 3P < 0 \,.
 \end{equation}
-We can also define a new parameter $\epsilon_H = -\dot{H}/H$ and then rewrite
+We can also define a new parameter $\varepsilon_H = -\dot{H}/H$ and then rewrite
 the Raychaudhuri equation \eqref{eq:Friedmann2-intro} as
 % 
 \begin{equation}
  \label{eq:Friedeps-intro}
- \frac{\ddot{a}}{a} = H^2 (1-\epsilon_H)\,.
+ \frac{\ddot{a}}{a} = H^2 (1-\varepsilon_H)\,.
 \end{equation}
 % 
-This parametrisation means that inflation only occurs when $\epsilon_H<1$.
+This parametrisation means that inflation only occurs when $\varepsilon_H<1$.
 In this subsection we describe briefly how inflation solves the problems
 outlined above and outline the inflationary dynamics of single scalar field
 models. 
@@ -542,7 +542,7 @@ which the inflationary period is necessarily long.
 We have seen that for
 inflation to occur the potential needs to dominate over kinetic energy. From
 \eq{eq:EandP-intro} this occurs in the limit $P\rightarrow -E$ or equivalently
-$\epsilon_H \ll 1$. However for this to remain the case for a sufficiently long
+$\varepsilon_H \ll 1$. However for this to remain the case for a sufficiently long
 period the second derivative of $\vp$ must be small enough. If we define
 another parameter 
 % 
@@ -550,15 +550,15 @@ another parameter
  \label{eq:etaHdefn-intro}
  \eta_H \equiv -\frac{\d \ln \dot{\vp}}{\d \ln a} =
 -\frac{\ddot{\vp}}{H\dot{\vp}}
- =\epsilon_H -\frac{\dot{\epsilon_H}}{2H\epsilon_H}\,,
+ =\varepsilon_H -\frac{\dot{\varepsilon_H}}{2H\varepsilon_H}\,,
 \end{equation}
 % 
-then taking $|\eta_H|\ll 1$ will ensure that $\dot{\vp}$ and $\epsilon_H$
+then taking $|\eta_H|\ll 1$ will ensure that $\dot{\vp}$ and $\varepsilon_H$
 change slowly, allowing inflation to last longer.
 
-The approximations $\epsilon_H\ll 1$ and $|\eta|\ll 1$ are known as the
+The approximations $\varepsilon_H\ll 1$ and $|\eta|\ll 1$ are known as the
 slow-roll conditions because they force the inflaton field $\vp$ to roll down
-the potential $V$ slowly. The parameters $\epsilon_H$ and $\eta_H$ are known as
+the potential $V$ slowly. The parameters $\varepsilon_H$ and $\eta_H$ are known as
 slow-roll parameters. Setting $\ddot{\vp}$ to be small is equivalent to
 making the friction $H\dot{\vp}$ in \eq{eq:phieom1-intro} dominant. With
 these approximations the
@@ -601,20 +601,20 @@ analysis to be valid the perturbation must be much smaller than the background
 field value. From the amplitude of perturbations in the CMB this approximation
 can be seen to be valid \cite{Komatsu:2008hk}. 
 
-If we suppose that $\varepsilon$ is a small quantity then the split in $\vp$
+If we suppose that $\epsilon$ is a small quantity then the split in $\vp$
 can be written as \cite{Malik:2008im}
 % 
 \begin{equation}
 \label{eq:pertsplit-intro}
-\vp(\eta, x^i) = \vp_0(\eta) + \varepsilon\dvp{}(\eta, x^i) \,.
+\vp(\eta, x^i) = \vp_0(\eta) + \epsilon\dvp{}(\eta, x^i) \,.
 \end{equation}
 % 
  The perturbation $\dvp{}(\eta, x^i)$ can be further expanded in
 powers of $\epsilon$.  We will follow the
-custom of not explicitly writing $\varepsilon$, instead relying on the order of
+custom of not explicitly writing $\epsilon$, instead relying on the order of
 the perturbation, denoted by a subscript, to keep track.
 If we expand in a Taylor series then up to second order (\ie including terms
-up to $\varepsilon^2$) we have:
+up to $\epsilon^2$) we have:
 % 
 \begin{equation}
  \vp(\eta, x^i) = \vp_0(\eta) + \dvp1(\eta, x^i) + \frac{1}{2}\dvp2(\eta, x^i)
@@ -780,7 +780,7 @@ the first order perturbation equation of motion is \cite{Malik:2008im}
 where $\U$ is the background value of the potential $V(\vp)$.
 %
 % \addtodo{Check that the Mukhanov eqn is equivalent} 
-% If we know assume that $\epsilon_H \ll1 $ and $|\eta_H|\ll1$ then we get the
+% If we know assume that $\varepsilon_H \ll1 $ and $|\eta_H|\ll1$ then we get the
 % slow-roll form of this equation:
 % % 
 % \begin{equation}
@@ -875,7 +875,7 @@ which has the plane wave solution
 % 
 This is the initial condition for modes which are well inside the horizon.
 
-Now consider the de Sitter limit in which $\epsilon_H\rightarrow 0$ and $H$
+Now consider the de Sitter limit in which $\varepsilon_H\rightarrow 0$ and $H$
 is constant. We have $z''/z = a''/a = 2/\eta^2$ so the mode equation is
 % 
 \begin{equation}
@@ -992,17 +992,17 @@ defined as
 % 
 where $r$ is usually quoted at a particular $k$ but could in principle depend
 on $k$. For the single field models we have been discussing in this section
-there is a consistency relation relating $r$ and $\epsilon_H$:
+there is a consistency relation relating $r$ and $\varepsilon_H$:
 % 
 \begin{equation}
 \label{eq:consistency-intro}
- r = 16 \epsilon_H\,.
+ r = 16 \varepsilon_H\,.
 \end{equation}
-As $\epsilon_H\ll1$ for slow-roll models of inflation the amplitude of tensor
+As $\varepsilon_H\ll1$ for slow-roll models of inflation the amplitude of tensor
 perturbations that these models produce is much smaller than the amplitude of
 curvature perturbations. This consistency relation is extremely important for
 testing models of inflation. The detection of a significant tensor mode signal
-would rule out slow roll models in which $\epsilon_H$ is much smaller than 1.
+would rule out slow roll models in which $\varepsilon_H$ is much smaller than 1.
 
 
 
@@ -1149,7 +1149,7 @@ The consistency relation \eqref{eq:consistency-intro} is now defined as
 % 
 \begin{equation}
 \label{eq:rdefn-dbiintro}
-  r = 16c_s \epsilon_H = -8c_s n_t \,.
+  r = 16c_s \varepsilon_H = -8c_s n_t \,.
 \end{equation}
 % 
 Hence, a sound speed different to unity leads to a violation of the 
@@ -1228,7 +1228,7 @@ single field inflation $\fnlloc$ is proportional to the slow roll parameters
 and therefore expected to be small. Non-linear contributions from the coupling
 of the gravitational potential to the curvature perturbation are expected to
 produce $\fnlloc$ of order one which would be much larger than the
-$O(\epsilon_H)$ contributions from single field slow roll inflation
+$O(\varepsilon_H)$ contributions from single field slow roll inflation
 \cite{Bartolo:2004if, Komatsu:2008hk}. Any detection of $\fnlloc$ at greater
 than $O(1)$ would present a challenge to such single field slow-roll models. 
 Currently the WMAP5 limits on $\fnlloc$ are centred around $\fnlloc=60$ but

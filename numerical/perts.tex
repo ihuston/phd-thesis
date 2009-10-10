@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.15 2009/10/10 10:27:19 ith Exp $
+% $Id: perts.tex,v 1.16 2009/10/10 11:07:57 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.15 2009/10/10 10:27:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.16 2009/10/10 11:07:57 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -300,15 +300,18 @@ The potential of the scalar field is also split
 % 
 
 
-The Klein-Gordon equation describes the evolution of the scalar field. For the
-background field we have
+The Klein-Gordon equations describes the evolution of the scalar field and are
+found by requiring the perturbed energy-momentum tensor $T_{\mu\nu}$ to obey the
+energy conservation equation $\nabla_\mu T^{\mu\nu}=0$ (see for example
+\Rref{Malik:2005cy}). For the
+background field, $\vp_0$, the Klein-Gordon equation is 
 %
 \begin{equation}
 \label{eq:KGback-num}
-\vp_{0}''+2\H\vp_{0}'+a^2 \Uphi = 0\,,   
+\vp_{0}''+2\H\vp_{0}'+a^2 \Uphi = 0\,.   
 \end{equation}
 %
-where $\H\equiv\frac{a'}{a}$ is related to the Hubble parameter $H$ by $\H=aH$.
+% 
 % 
 The first order equation is
 %
@@ -339,12 +342,10 @@ and the second order
 where as mentioned before all the variables are now in the flat gauge.
 
 
-The Einstein field equations are also required at first and second order. We
-will not reproduce them here but instead refer the interested reader to Section
-II B of \Rref{Malik:2006ir}.
-Using the perturbed Einstein equations, the Klein-Gordon equations above can be
-written in closed form at both first and second orders. These equations will
-form the basis of the numerical scheme described in Chapter \ref{ch:numericalsystem}.
+In order to write the Klein-Gordon equations in closed form the Einstein field
+equations \eqref{eq:einstein-intro} are also required at first and second order.
+These are not reproduced here but can be seen in Section~II~B of
+\Rref{Malik:2006ir} for example. 
 
 % % % % % % % % % % % % % % % % 
 \subsection{Fourier transform}
@@ -380,7 +381,7 @@ transforms into
 %
 As mentioned above the second order equation requires more careful
 consideration with terms quadratic in the first order perturbation, which
- require convolutions of the form
+require convolutions of the form
 %
 \begin{equation}
  f(x)g(x) \longrightarrow \frac{1}{(2 \pi)^3} \int \d^3q \d^3p\, \delta^3(\kvi
@@ -391,7 +392,7 @@ g(q^i) \,.
 For convenience we will group the terms with gradients of $\dvp1(x)$
 together and denote them by $F$. 
 The full closed form second order Klein-Gordon
-equation in Fourier Space is
+equation in Fourier Space is \cite{Malik:2006ir}
 %  
 \begin{align}
 \label{eq:SOKG-real-num}
@@ -420,10 +421,10 @@ equation in Fourier Space is
 &+ F(\dvp1(\kvi), \dvp1'(\kvi)) = 0\,.
 \end{align}
 %
-Here we use $Q=a^2 (8\pi G \U \vp_0'/\H + \Uphi)$ for convenience.
+Here $Q=a^2 (8\pi G \U \vp_0'/\H + \Uphi)$ is used for convenience.
 The $F$ term contains gradients of $\dvp1$ in real space and therefore
 the convolution integrals include additional factors of $k$ and
-$q$. It is given by
+$q$. It is given by \cite{Malik:2006ir}
 %
 \begin{align}
  \label{eq:Fdvk1-fourier-num}
@@ -491,7 +492,8 @@ Q\dvp1(\qvi)
 
 In order to establish the viability of a numerical calculation of the
 Klein-Gordon equation we have confined ourselves in this paper to studying the
-evolution in the slow roll approximation. In our case this involves taking
+evolution in the slow roll approximation. 
+This involves taking
 %
 \begin{equation}
  \vp_{0}'' = \H \vp_{0}' \simeq 0\,,\quad
@@ -499,11 +501,13 @@ evolution in the slow roll approximation. In our case this involves taking
 \end{equation}
 %
 such that $Q=0$ and $\H^2 = (8\pi G/3) a^2 \U$. The slow roll parameter
-$\epsilon_H$ as defined in Refs.~\cite{Malik:2006ir} and \cite{Seery:2005gb} 
-(which is the square-root of the usual $\epsilon$) is given by
+$\bar{\epsilon}_H$ as defined in Refs.~\cite{Malik:2006ir} and
+\cite{Seery:2005gb} 
+(which is the square-root of the usual $\epsilon_H$ used in
+Chapter~\ref{ch:introduction}) is given by
 %
 \begin{equation}
- \varepsilon_H = \sqrt{4\pi G} \frac{\vp_{0}'}{\H}\,.
+ \bar{\epsilon}_H = \sqrt{4\pi G} \frac{\vp_{0}'}{\H}\,.
 \end{equation}
 %
 With this approximation the second order equation (\ref{eq:SOKG-real-num})
