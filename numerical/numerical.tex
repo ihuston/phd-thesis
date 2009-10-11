@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.25 2009/10/11 13:40:03 ith Exp $
+% $Id: numerical.tex,v 1.26 2009/10/11 17:29:53 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.25 2009/10/11 13:40:03 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.26 2009/10/11 17:29:53 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -104,14 +104,13 @@ this chapter are summarised and discussed.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-
-The equations in Chapter~\ref{ch:perts} are not set up for a
+The Klein-Gordon equations in Chapter~\ref{ch:perts} are not set up for a
 numerical calculation and in this section we rearrange them into a more
 suitable form. This involves a change of time coordinate and grouping of terms
 into smaller units for calculation.
 The second order slow roll equation \eqref{eq:KG2-fourier-sr-num} can be further
 simplified by performing the $p$
-integral and changing to spherical polar coordinates $q, \theta, \omega$ where
+integral and changing to spherical polar coordinates $q, \theta$ and $\omega$ where
 $q=|\textbf{q}|$. The $\d^3q$ integral becomes
 % 
 \begin{equation}
@@ -145,7 +144,7 @@ here labelled $\A$--$\D$:
 \end{align}
 %
 Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
-(\ref{eq:KG2-fourier-sr-num}) becomes:
+\eqref{eq:KG2-fourier-sr-num} becomes:
 %
 \begin{equation}
 \label{eq:KG2-fourier-sr-aterms}
@@ -176,30 +175,24 @@ a^2\Uppp q^2 \dvp1(\qvi) \A(\kvi,\qvi) \nonumber\\
  The full set of equations which must be evolved are
 then \eq{eq:KGback-num} for the background, \eq{eq:fokg} for the first
 order perturbations and \eqs{eq:KG2-fourier-sr-aterms} and
-(\ref{eq:KG2-src-sr-aterms}) for the second order and source terms.
+\eqref{eq:KG2-src-sr-aterms} for the second order and source terms.
 
 
 A more appropriate time variable for the numerical simulation is the
-number of e-foldings, and hence we use 
+number of e-foldings \eqref{eq:nefolddefn-intro}, and we use 
 %
-
 \begin{equation}
 \label{eq:def-ntime}
 \N = \log ( a / a_{\mathrm{init}} )\,,
 \end{equation}
-
 %
-as our time variable instead of conformal time. Here,
-$a_{\mathrm{init}}$ is the value of $a$ at the beginning of the
-simulation. If $a$ is set to be $1$ today we can calculate
-$a_{\mathrm{init}}$ once the background run is complete and the end
-time of inflation is determined as in Section
-\ref{sec:impl-num}. We will use a dagger ($\dN{}$) to denote
+as our time variable instead of conformal time, measured from
+$a_{\mathrm{init}}$, the value of $a$ at the beginning of the
+simulation. We will use a dagger ($\dN{}$) to denote
 differentiation with respect to $\N$ \footnote{This should not be confused
 with the use of $\dagger$ as Hermitian conjugate, which is confined to
 Section~\ref{sec:perts-intro}.}.
-
-
+% 
 The changes in derivatives required are as follows:
 %
 \begin{eqnarray}
@@ -211,16 +204,59 @@ The changes in derivatives required are as follows:
 where $\eta$ and $t$ are conformal and coordinate time respectively with $H =
 \frac{\d a}{\d t}/a$ and $\H = aH$.
 % 
-\addtodo{Rewrite with more content}
-As mentioned above the value
-of $a$ at the end of inflation is calculated using the connection equation (see for example
-Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}) assuming that instantaneous
-reheating occurs
-at the end of
-inflation. This gives approximately 65 e-foldings from the end of inflation until
-now. 
 
-
+If $a$ is set to be $1$ today we can calculate
+$a_{\mathrm{init}}$ once the background run is complete and the number of e-foldings
+of inflation is determined.
+The value of $a$ at the end of inflation, $a_\mathrm{end}$, is calculated using the
+connection equation (see for example
+Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}). 
+If $a_0$ is the value of $a$ today we can relate these quantities by
+% 
+\begin{equation}
+ \label{eq:connection-num}
+\frac{a_\mathrm{end}}{a_0} = \frac{a_\mathrm{end}}{a_\mathrm{reh}}
+			     \frac{a_\mathrm{reh}}{a_\mathrm{eq}}
+			     \frac{a_\mathrm{eq}}{a_\mathrm{0}}\,,
+\end{equation}
+% 
+where $a_\mathrm{reh}$ and $a_\mathrm{eq}$ are the values of $a$ at the end of
+reheating and matter-radiation equality. Using the relationship between energy
+density and $a$ in matter and radiation dominated eras and the Friedmann
+equation \eqref{eq:Friedmann1-intro} from Section~\ref{sec:frw-intro} we can write
+% 
+\begin{equation}
+ \label{eq:conn2-num}
+\log\left(\frac{a_\mathrm{end}}{a_0}\right) =
+ -\frac{2}{3}\log\left(\frac{H_\mathrm{end}}{\Mpl}\right)
+ + \frac{1}{6}\log\left(\frac{H_\mathrm{reh}}{\Mpl}\right)
+ + \frac{1}{2}\log\left(\frac{H_\mathrm{eq}}{\Mpl}\right)
+ + \log\left(\frac{a_\mathrm{eq}}{a_0}\right)\,,
+\end{equation}
+% 
+where $H_\mathrm{end}$, $H_\mathrm{reh}$ and $H_\mathrm{eq}$ are the values of $H$
+at the end of inflation, end of reheating and matter-radiation equality. The value
+of $a_\mathrm{eq}$ is taken to be $4.15\e{-5} (\Omega_m h^2)^{-1}$ and
+$H_\mathrm{eq}=4.63\e{-54} \Omega_m^2 h^4 \Mpl$ \cite{Peiris:2008be, book:dodelson}.
+The mean value for $\Omega_m h^2$ given by WMAP5 + BAO + SN measurements is
+$\Omega_m h^2 =0.1369$ \cite{Komatsu:2008hk}. With these values and taking
+$a_0=1$, the scale factor at the end of inflation is given by
+% 
+\begin{equation}
+\label{eq:aend-num}
+a_\mathrm{end} \simeq e^{-72}
+\left(\frac{H_\mathrm{end}}{\Mpl}\right)^{-\frac{2}{3}} 
+\left(\frac{H_\mathrm{reh}}{\Mpl}\right)^{\frac{1}{6}}\,.
+\end{equation}
+% 
+For the results in Chapter~\ref{ch:results} it has been assumed that
+reheating occurs instantaneously at the end of
+inflation and $H_\mathrm{reh} = H_\mathrm{reh}$. This gives approximately 65
+e-foldings from the end of inflation until now. It also fixes the horizon crossing
+time of the WMAP pivot scale $\kwmap=0.002\Mpc{-1}$ to be about 60 e-foldings before
+the end of inflation. Because $H$ is not kept fixed during the calculation the
+number of e-foldings between horizon crossing and the end of inflation will differ
+depending on the potential of the model and the evolution of $H$. 
 
 
 % 
