@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.24 2009/10/10 11:03:11 ith Exp $
+% $Id: numerical.tex,v 1.25 2009/10/11 13:40:03 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.24 2009/10/10 11:03:11 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.25 2009/10/11 13:40:03 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -14,8 +14,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-
-\addtodo{Add intro to numerics}
 % 
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -27,25 +25,27 @@
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-
-Our goal in this paper is to show that, just as at first order, a
-direct numerical calculation of the second order perturbations of a
-scalar field system is achievable and in this section we will outline
-how we have implemented this system. In structuring the numerical
-system we have closely followed the work done at first order by Martin
+Our goal in Part~\ref{part:numerical} of this work is to show that, just as at first
+order, a direct numerical calculation of the second order perturbations of a
+scalar field system is achievable. 
+In this chapter the implementation of this system is outlined.
+The structure of the numerical
+system closely follows the work done at first order by Martin
 and Ringeval \cite{Martin:2006rs, Ringeval:2007am} and previously by
 Salopek \etal \cite{Salopek:1988qh}.
 
 
-A finite numerical range of $k$ modes to be calculated is required.
+The most important difference between an analytic and numerical treatment of the
+equations in Chapter~\ref{ch:perts} is the requirement to specify a finite
+numerical range of a finite number of $k$ modes to be calculated.
 The upper cutoff in $k$, which marks the smallest scale considered, is well
 motivated by the difficulty in observing primordial perturbations at these small
 scales. 
 At the other end we need to specify the largest scale or smallest $k$ that we
 will consider. Analytically this is often taken to be the size of the universe,
 with $k=0$ being the equivalent mode. One immediate problem with this is that
-the Bunch-Davies vacuum initial conditions outlined in Section
-\ref{sec:initconds-num} blow up. The standard workaround is to implement a cutoff
+the Bunch-Davies vacuum initial conditions in Section
+\ref{sec:perts-intro} blow up. The standard workaround is to implement a cutoff
 at large scales beyond which the amplitude of perturbations is zero. This is a
 pragmatic approach but recently there has been some evidence that a sharp
 cutoff similar to this could be responsible for the lack of power at large
@@ -60,12 +60,39 @@ which corresponds approximately\footnotemark  to $k\in \left[0.92 \e{-60}, 3.1 \
 \footnotetext{The approximate conversion for $\ell$ is $\ell\simeq \frac{2k}{H_0}$ and a
 Megaparsec
 is given in Planck units as $1\Mpc^{-1} \simeq 2.6247\e{-57} \Mpl$.}
-We will consider a similar range of $k$ modes in this paper, taking three
-different ranges outlined in Section \ref{sec:results}. The
-choice of $k$ range is flexible with the only constraint being that the number
-of modes at second order is one greater than a power of two. This enables faster
-integration using the Romberg method as explained below. 
+We will consider three different ranges of $k$ modes in producing the results in
+Chapter~\ref{ch:results}, all of which contain the WMAP pivot scale
+$\kwmap=0.002\Mpc^{-1}$. The
+choice of $k$ range is flexible with the only numerical constraint being that the
+number of modes at second order is one greater than a power of two. This enables
+faster integration using the Romberg method as explained below. 
 
+
+In Chapter~\ref{ch:perts} the Klein-Gordon equations of motion were described for the
+background field and first and second order field perturbations. These form the
+basis of the numerical calculation in this chapter. In Section~\ref{sec:eqs-num}
+these equations are rewritten in a form more amenable to numerical work. The time
+variable is changed from conformal time, $\eta$, to the number of e-foldings, $\N$.
+The convolution terms which are present in the Fourier space equations are
+considered in spherical polar coordinates and split into calculable units. 
+
+To test the numerical procedure four potentials have been used. These are defined in
+Section~\ref{sec:pots-num} and the steps taken to establish the values of the
+required parameters are outlined. The initial conditions used for the first order
+perturbations are the Bunch-Davies vacuum conditions as specified in
+Section~\ref{sec:perts-intro}. At second order the perturbations are set to be
+indentically zero at the beginning of the simulation as explained in
+Section~\ref{sec:initconds-num}. The section also describes the method and timing of
+the initialisation of the variables.
+
+
+In Section~\ref{sec:impl-num} the numerical method is discussed. The calculation can
+be split into four stages each of which is described in depth along with the
+logistical constraints and software environment. The numerical code is tested in
+Section~\ref{sec:tests-num} by comparing the computed value with an analytic result
+where this is possible. The choice of parameters in the calculation is informed by
+the results of this comparison. In Section~\ref{sec:disc-numerical} the results of
+this chapter are summarised and discussed.
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -78,11 +105,11 @@ integration using the Romberg method as explained below.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
-The equations in Section \ref{sec:slowroll} are not set up for a
+The equations in Chapter~\ref{ch:perts} are not set up for a
 numerical calculation and in this section we rearrange them into a more
 suitable form. This involves a change of time coordinate and grouping of terms
 into smaller units for calculation.
-The second order slow roll equation (\ref{eq:KG2-fourier-sr-num}) can be further
+The second order slow roll equation \eqref{eq:KG2-fourier-sr-num} can be further
 simplified by performing the $p$
 integral and changing to spherical polar coordinates $q, \theta, \omega$ where
 $q=|\textbf{q}|$. The $\d^3q$ integral becomes
@@ -183,12 +210,19 @@ The changes in derivatives required are as follows:
 %
 where $\eta$ and $t$ are conformal and coordinate time respectively with $H =
 \frac{\d a}{\d t}/a$ and $\H = aH$.
+% 
+\addtodo{Rewrite with more content}
 As mentioned above the value
 of $a$ at the end of inflation is calculated using the connection equation (see for example
 Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}) assuming that instantaneous
 reheating occurs
 at the end of
-inflation. This gives approximately 65 e-foldings from the end of inflation until now. 
+inflation. This gives approximately 65 e-foldings from the end of inflation until
+now. 
+
+
+
+
 % 
 The background and first order equations written in terms of the new time
 variable $\N$ are
@@ -292,24 +326,26 @@ accurate but also numerically intensive interpolation scheme.
 
 
 Throughout the discussion above we have not specified any particular
-potential $U$ and indeed the numerical code can use any reasonable
+potential $V$ and indeed the numerical code can use any reasonable
 potential provided that it gives a period of inflationary expansion in
-the e-folding range being simulated. In this paper we have used the two
-standard potentials $U=\msqphisq$ and $U=\lambdaphifour$
-but a modular system allows another potential to be used instead. We
-choose the parameters $m$ and $\lambda$ in agreement with the first
-order perturbation results from WMAP5 at the pivot scale
-$\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values $m=6.3267\times10^{-6}
-\Mpl, \lambda=1.5506\times10^{-13}$.
+the e-folding range being simulated. In the next section the four potentials which
+have been tested are outlined
+but a modular system allows other potentials to be used instead. 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Potentials and parameters}
+\subsection{Potentials and parameters}
 \label{sec:pots-num}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+We
+choose the parameters $m$ and $\lambda$ in agreement with the first
+order perturbation results from WMAP5 at the pivot scale
+$\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values
+$m=6.3267\times10^{-6}
+\Mpl, \lambda=1.5506\times10^{-13}$.
 \begin{figure}
 \centering%
 \subfloat[$V(\vp)=\msqphisq$]{
@@ -367,7 +403,7 @@ different potentials are chosen fixing $\Pr$ using WMAP5 data.}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Initial Conditions} 
+\subsection{Initial Conditions} 
 \label{sec:initconds-num}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
