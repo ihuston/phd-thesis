@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.27 2009/10/11 19:46:53 ith Exp $
+% $Id: numerical.tex,v 1.28 2009/10/11 20:38:12 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.27 2009/10/11 19:46:53 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.28 2009/10/11 20:38:12 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -397,15 +397,19 @@ $V_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can be obtained
 \end{enumerate}
 In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
 plotted in terms of $\vp$ and $\N$ over the course of the calculated inflationary
-period.
+period. Throughout the rest of this chapter we will use $V(\vp)=\msqphisq$ to
+demonstrate the calculation unless otherwise stated. In Chapter~\ref{ch:results} the
+results for each potential will be compared.
 
-For each potential there is one parameter that needs to be determined.
-We choose the parameters $m$,$\lambda$,$\sigma$ and $m_0$ to be in agreement with the
-WMAP5 curvature perturbation value at the pivot scale
+For each of the chosen potentials there is one free parameter that needs to be
+determined.
+We choose the parameters $m$, $\lambda$, $\sigma$ and $m_0$ so that $\Pr$ calculated
+for each model is in agreement with the
+WMAP5 value at the pivot scale
 $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$. 
-The dependence of $\Pr$ on each of the parameters can be seen in
+The dependence of $\Pr(\kwmap)$ on each of the parameters can be seen in
 Figure~\ref{fig:params-num}.
-Requiring $\Pr=2.457\e{-9}$
+Requiring $\Pr(\kwmap)=2.457\e{-9}$
 gives the values $m=6.32\e{-6}\Mpl$, $\lambda=1.55\e{-13}$, $\sigma= 3.82\e{-10}
 (\Mpl)^{\frac{10}{3}}$ and $m_0=1.74\e{-6}\Mpl$. Here we have chosen the lower of
 the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
@@ -485,7 +489,11 @@ e-folding range include an inflationary period, but the $k$ modes to
 be calculated at first and second order must begin inside the horizon
 during this range. For example the initial conditions $\vp_0 = 18\Mpl,
 \dN{\vp_0} = -1 \Mpl, H = 4.65\e{-5}\Mpl$ for the $\msqphisq$ model 
-give the background evolution described below and shown in Figure~\ref{fig:eps}.
+give the background evolution described below and shown in Figure~\ref{fig:eps}. As
+the evolution will quickly reach the attractor solution the choice for $\dN{\vp_0}$
+is not particularly important, changing the initial value adds or subtracts a small
+number of e-foldings of evolution before the modes are initialised
+\cite{Ringeval:2007am, Martin:2006rs}.
 
 
 The initial conditions are set for each $k$ mode a few e-foldings
@@ -497,13 +505,14 @@ horizon for the Minkowski limit to be taken. This initial time,
 $n_{\mathrm{init}}(k)$, is calculated to be when
 %  
 \begin{equation}
- \frac{k}{aH|_{\mathrm{init}}} = 50 \,.
+ \frac{k}{(aH)|_{\mathrm{init}}} = 50 \,.
 \end{equation}
 %
 The range of e-foldings being used must include the starting point for
 all $k$ modes, but the parameter on the right hand side, here chosen to
 be 50, can be changed if needed.  We use the small wavelength solution
-of the first order equations as the initial conditions \cite{Salopek:1988qh}, with
+of the first order equations described in Section~\ref{sec:perts-intro} as the
+initial conditions \cite{Salopek:1988qh}, with
 %
 \begin{eqnarray}
 \label{eq:foics}
@@ -519,7 +528,8 @@ example $\kwmap$ is initialised
 about $65$ e-foldings before the end of inflation and crosses the horizon about $5$ e-foldings
 later.
 We also use these formulae in the calculation of the source term in \eq{eq:KG2-source-ntime} to
-determine the value of $\dvp1$ for a $k$ mode before its evolution starts.
+determine the value of $\dvp1$ for a $k$ mode before its numerical evolution has
+begun.
 
 
 We are interested in the production of second order effects by the
@@ -541,28 +551,31 @@ the time when the corresponding first order perturbation is initialised.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
-The current implementation of the code is mainly in Python and uses the
+The current implementation of the code is mainly in the Python\footnote{Python
+website: \url{http://www.python.org}} programming language (with compiled Cython
+components) and uses the
 Numerical and Scientific Python modules for their strong compiled array support
 \cite{scipy}. The core of the model computation is a customised
 Runge-Kutta 4th order method (see for example Eq.~(25.5.10) in
 \cite{abramowitz+stegun}).  Following
-Refs.~\cite{Martin:2006rs,Ringeval:2007am} the numerical calculation
+Refs.~\cite{Martin:2006rs} and \cite{Ringeval:2007am} the numerical calculation
 proceeds in four stages. The background equation (\ref{eq:bgntime}),
-rewritten as two first order (in the time derivative) equations, is
+rewritten as two first order (in $\N$ derivatives) equations, is
 evolved from the specified initial state until some end time required
 to be after the end of the inflationary regime.  The end of inflation
 occurs when $\d^2a/\d t^2$ is no longer positive and the parameter
 $\bar{\varepsilon}^2_H = \varepsilon_H= -\dN{H}/H$ first becomes greater than or
 equal to $1$
-(see Figure~\ref{fig:eps}). Here, this specifies a new end time for the 1st
+(see Figure~\ref{fig:eps}). This specifies a new end time for the first
 order run, although the simulation can run beyond the strict end of
-inflation if required. The initial conditions for the first order
-system are then set as outlined above.
+inflation if required. For the $V(\vp)=\msqphisqwithV$ model the end of inflation is
+set by hand to remove the need for a second inflation-terminating field. The initial
+conditions for the first order system are then set as outlined above.
 %
 \begin{figure}
 \centering
  \includegraphics[width=\textwidth]{./numerical/graphs/bgepsilon}
- \caption[Plot of $\bar{\varepsilon}_H$ near the end of inflation]{The end of
+ \caption[Plot of $\varepsilon_H$ near the end of inflation]{The end of
 inflation is
 determined by calculating when
    $\bar{\varepsilon}^2_H = \varepsilon_H=-\dN{H}/H=1$ (red dashed line). Along the
@@ -573,7 +586,7 @@ $x$-axis,
 \end{figure}
 
 The system of ordinary differential equations for the first order
-perturbations from \eq{eq:fontime} is calculated using a standard
+perturbations in \eq{eq:fontime} is calculated using a standard
 Runge-Kutta method. A fixed time step method is used in order to
 simplify the construction of the  second order source term and because
 \emph{a priori} it is not known which time steps would be required at
@@ -583,7 +596,7 @@ straightforward to run multiple instances of the system and collate
 the results at the end. However, as will be discussed below, the first
 order calculation is not computationally expensive in comparison with
 the other stages and takes of the order of a few minutes for around
-$8000$ time steps and $1025$ $k$ modes.
+$8000$ time steps with $\Delta \N=0.01$ and $1025$ $k$ modes.
 
 
 Once the first order system has been solved 
@@ -595,7 +608,7 @@ back into real space was not considered due to the presence of both
 gradient operators and their inverses. Here the slow roll version of
 the source term integrand has been used, but the method can equally be
 applied to the full equation. This stage is the most computationally
-intensive and can be run in parallel as each time step is independent
+intensive and can be run in parallel, as each time step is independent
 of the others. The nature of the convolution integral and the
 dependence of the first order perturbation on the absolute value of
 its arguments requires that twice as many $k$ modes are calculated at
@@ -613,7 +626,7 @@ number of $k$ modes is
 N_k=2^l + 1\,,
 \end{equation}
 %
-for some\footnotemark $l\in\mathbb{N}$. 
+for some\footnotemark $\,l\in\mathbb{N}$. 
 \footnotetext{The number of discretised $k$ modes $N_k$ does not need to be equal to
   $N_\theta$.}
 This requirement can be lifted by opting for a less
@@ -646,9 +659,9 @@ Results for each stage are stored in the open HDF5 standard which can deal
 efficiently with large
 files and is very portable, allowing data analysis independent of the
 Python/Numpy programming environment.
-We intend to release the program under a suitable license once the code has
-matured and some of the improvements discussed in Section \ref{sec:disc-num} have
-been implemented.
+% We intend to release the program under a suitable license once the code has
+% matured and some of the improvements discussed in Section \ref{sec:disc-num} have
+% been implemented.
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -661,7 +674,7 @@ been implemented.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
-We have tested the numerical code in a variety of controlled
+The numerical code has been tested in a variety of controlled
 circumstances in order to quantify the effect of different choices of
 parameters. In particular it is important to know whether the values
 picked for $N_\theta$, the number of discretised $\theta$s, $\Delta k$, the size of the
