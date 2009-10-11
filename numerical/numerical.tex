@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.26 2009/10/11 17:29:53 ith Exp $
+% $Id: numerical.tex,v 1.27 2009/10/11 19:46:53 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.26 2009/10/11 17:29:53 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.27 2009/10/11 19:46:53 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -251,9 +251,9 @@ a_\mathrm{end} \simeq e^{-72}
 % 
 For the results in Chapter~\ref{ch:results} it has been assumed that
 reheating occurs instantaneously at the end of
-inflation and $H_\mathrm{reh} = H_\mathrm{reh}$. This gives approximately 65
+inflation and $H_\mathrm{reh} = H_\mathrm{end}$. This gives approximately 65
 e-foldings from the end of inflation until now. It also fixes the horizon crossing
-time of the WMAP pivot scale $\kwmap=0.002\Mpc{-1}$ to be about 60 e-foldings before
+time of the WMAP pivot scale $\kwmap=0.002\Mpc^{-1}$ to be about 60 e-foldings before
 the end of inflation. Because $H$ is not kept fixed during the calculation the
 number of e-foldings between horizon crossing and the end of inflation will differ
 depending on the potential of the model and the evolution of $H$. 
@@ -376,13 +376,41 @@ but a modular system allows other potentials to be used instead.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-We
-choose the parameters $m$ and $\lambda$ in agreement with the first
-order perturbation results from WMAP5 at the pivot scale
-$\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$ with the values
-$m=6.3267\times10^{-6}
-\Mpl, \lambda=1.5506\times10^{-13}$.
-\begin{figure}
+To demonstrate the numerical calculation four different single field slow roll
+potentials have been chosen. They are not meant to be an exhaustive selection
+but do exhibit an interesting variety of behaviours. The potentials used are
+% 
+\begin{enumerate}
+ \item $V(\vp) = \msqphisq$ This is the original chaotic inflation model which is
+still in good agreement with the observational data \cite{Alabidi:2008ej}.
+ \item $V(\vp) = \lambdaphifour$ Although increasingly in tension with observations
+ this is a standard large field potential model.
+ \item $V(\vp) = \phitwooverthree$ This potential with an unusual fractional index
+is the effective potential resulting from the monodromy inflation model of D$4$
+branes where observable tensor modes are possible \cite{Silverstein:2008sg,
+Alabidi:2008ej}.
+ \item $V(\vp) = \msqphisqwithV$ This hybrid inflation model requires inflation to
+be ended by the decay of another field which will not be simulated. Instead
+inflation will be manually set to end when $\vp \simeq 8$. By taking a value of
+$V_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can be obtained
+\cite{Linde:1993cn,Komatsu:2008hk}.
+\end{enumerate}
+In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
+plotted in terms of $\vp$ and $\N$ over the course of the calculated inflationary
+period.
+
+For each potential there is one parameter that needs to be determined.
+We choose the parameters $m$,$\lambda$,$\sigma$ and $m_0$ to be in agreement with the
+WMAP5 curvature perturbation value at the pivot scale
+$\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$. 
+The dependence of $\Pr$ on each of the parameters can be seen in
+Figure~\ref{fig:params-num}.
+Requiring $\Pr=2.457\e{-9}$
+gives the values $m=6.32\e{-6}\Mpl$, $\lambda=1.55\e{-13}$, $\sigma= 3.82\e{-10}
+(\Mpl)^{\frac{10}{3}}$ and $m_0=1.74\e{-6}\Mpl$. Here we have chosen the lower of
+the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
+
+\begin{figure}[h]
 \centering%
 \subfloat[$V(\vp)=\msqphisq$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_potential-small}
@@ -392,24 +420,29 @@ $m=6.3267\times10^{-6}
 }\\%
 \subfloat[$V(\vp)=\phitwooverthree$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/phi2over3_potential-small}
+}\qquad%
+\subfloat[$V(\vp)=\msqphisqwithV$]{
+ \includegraphics[width=0.43\textwidth]
+  {numerical/graphs/msqphisq_withV0_potential-small}
 }
-\caption[Different potentials used]{Plots of the different potentials used. The
-potentials for the $\hybridtwoandfour$ and $\linde$ models with the parameters
-described are indistinguishable from the $\lambdaphifour$ potential.}
+\caption[Different potentials used]{Plots of the four different potentials used.}
 \label{fig:potentials-num}
 \end{figure}
 
 \begin{figure}
 \centering%
-\subfloat[The potentials in terms of $\varphi$.]{
-\includegraphics[width=0.43\textwidth]
-  {numerical/graphs/cmp_pot_phi_msqlphphi23-small}
-}\qquad%
-\subfloat[The potentials in terms of $\N$.]{
- \includegraphics[width=0.43\textwidth]
-  {numerical/graphs/cmp_pot_n_msqlphphi23-small}
+\subfloat[The potentials in terms of $\varphi$.][The potentials in terms of
+$\varphi$ over the course of the background evolution.]{
+\includegraphics[width=0.8\textwidth]
+  {numerical/graphs/cmp_pot_phi-large}
+}\\%
+\subfloat[The potentials in terms of $\N$.][The potentials in terms of $\N$ for the
+last 70 e-foldings of inflation.]{
+ \includegraphics[width=0.8\textwidth]
+  {numerical/graphs/cmp_pot_n-large}
 }
-\caption[Comparison of potentials]{A comparison of the different potentials used.}
+\caption[Comparison of potentials]{A comparison of the four different potentials
+used.}
 \label{fig:cmp-pot-num}
 \end{figure}
 
@@ -421,14 +454,13 @@ described are indistinguishable from the $\lambdaphifour$ potential.}
 \subfloat[Fixing $\lambda$ for $V(\vp)=\lambdaphifour$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/lambdaphi4_params-small}
 }\\%
-\subfloat[Fixing $\lambda$ for $V(\vp)=\hybridtwoandfour$]{
- \includegraphics[width=0.43\textwidth]{numerical/graphs/hybrid2and4_params-small}
-}\qquad%
-\subfloat[Fixing $\lambda$ for $V(\vp)=\linde$]{
- \includegraphics[width=0.43\textwidth]{numerical/graphs/linde_params-small}
-}\\%
 \subfloat[Fixing $\sigma$ for $V(\vp)=\phitwooverthree$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/phi2over3_params-small}
+}\qquad%
+\subfloat[Fixing $m$ for $V(\vp)=\msqphisqwithV$]{
+ \label{fig:mv0-params-num}
+ \includegraphics[width=0.43\textwidth]
+  {numerical/graphs/msqphisq_withV0_params-small}
 }
 \caption[Parameter values for different potentials]{Parameter values for the
 different potentials are chosen fixing $\Pr$ using WMAP5 data.}
