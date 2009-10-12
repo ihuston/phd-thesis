@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.11 2009/10/12 10:24:10 ith Exp $
+% $Id: results.tex,v 1.12 2009/10/12 15:56:46 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.11 2009/10/12 10:24:10 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.12 2009/10/12 15:56:46 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -156,7 +156,7 @@ a minimum.
 % 
 \begin{figure}
 \centering
- \includegraphics[width=\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
 \caption[Comparison of source term for different ranges]{Comparison of the source
 term for $\kwmap$ over three different ranges with different $\Delta k$s as specified
 in
@@ -166,7 +166,7 @@ in
 % 
 \begin{figure}
 \centering
- \includegraphics[width=\textwidth]{numerical/graphs/src-3ks-large}
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/src-3ks-large}
 \caption[Source term at three different $k$s]{The source term for three different $k$
 values including the WMAP
 pivot scale. As $k$
@@ -208,7 +208,7 @@ important.
 %
 \begin{figure}
 \centering
- \includegraphics[width=\textwidth]{numerical/graphs/src-vs-t-kwmap-large}
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/src-vs-t-kwmap-large}
 \caption[Source term compared to $T$ term]{The source term (lower blue line) is
 compared with the $T$ term
 (upper green line) as defined in the text for $\kwmap$. The source term is of
@@ -218,7 +218,7 @@ comparable magnitude at the beginning of the simulation.}
 % 
 \begin{figure}
 \centering
- \includegraphics[width=\textwidth]{numerical/graphs/s-over-t-3ks-large}
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/s-over-t-3ks-large}
 \caption[Quotient of $S$ and $T$]{The quotient of $S$ and $T$ terms for three
 different $k$ values
 including the WMAP pivot scale. Depending on $k$ the source term only dominates
@@ -227,7 +227,65 @@ at early stages or is important throughout the evolution.}
 \end{figure}
 % 
 % 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+In Figure~\ref{fig:src-kinit} the value of $|S|$ at the start of the evolution
+of $\dvp2$ for
+each $k$ mode is shown. The magnitude of the source term is much smaller for
+larger $k$s (smaller
+scales). 
+Because the smaller $k$s begin their evolution earlier the relative difference
+in $|S|$ is not as
+pronounced when measured at a single timestep (see for example
+Figure~\ref{fig:src-3ks}).
+It should also be remembered that the magnitude of other terms in the second
+order ODE is
+small for larger $k$s as shown by the ratio $|S|/|T|$ in
+Figure~\ref{fig:s-over-t-3ks}
+where $T$ is defined above in \eq{eq:Tdefn}.
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{numerical/graphs/src_kinit_log}
+ \caption[Source term at initial start times]{The absolute magnitude of the source 
+term at the initial start time for each $k$ when $k = aH \times 50$ deep inside the
+horizon. The results are for the range $K_1=\left[ 1.9\e{-5},
+0.039 \right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
+\label{fig:src-kinit}
+\end{figure}
+% 
+
+The source term for all $k$s can also be compared for different timesteps. In
+Figure~\ref{fig:src-3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings
+before the end of
+inflation when $\dvp2$ has been initialised for only the very smallest $k$
+modes. The middle green
+line shows $|S|$ when all $\dvp2$ modes have been started. Finally the lower red
+line plots $|S|$
+after all modes have exited the horizon, around 52 e-foldings before the end of
+inflation.
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{numerical/graphs/src_3ns-large}
+\caption[Source term at three different times]{The absolute magnitude of the source 
+term for all $ks$ in the range at three different timesteps: the upper blue line when
+only the largest modes have been initialised; the middle green line when all modes
+have been initialised; and the lower red dashed line when all modes have
+exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
+\right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
+\label{fig:src-3ns}
+\end{figure}
+% 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Comparison of models}
+\label{sec:compare-res}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
 All the results quoted so far are for
@@ -267,55 +325,7 @@ the source term for the $\msqphisq$ and $\lambdaphifour$ models.}
 \label{fig:src-mvl-main}
 \end{figure}
 % 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-In Figure~\ref{fig:src-kinit} the value of $|S|$ at the start of the evolution
-of $\dvp2$ for
-each $k$ mode is shown. The magnitude of the source term is much smaller for
-larger $k$s (smaller
-scales). 
-Because the smaller $k$s begin their evolution earlier the relative difference
-in $|S|$ is not as
-pronounced when measured at a single timestep (see for example
-Figure~\ref{fig:src-3ks}).
-It should also be remembered that the magnitude of other terms in the second
-order ODE is
-small for larger $k$s as shown by the ratio $|S|/|T|$ in
-Figure~\ref{fig:s-over-t-3ks}
-where $T$ is defined above in \eq{eq:Tdefn}.
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{numerical/graphs/src_kinit_log}
- \caption[Source term at initial start times]{The absolute magnitude of the source 
-term at the initial start time for each $k$ when $k = aH \times 50$ deep inside the
-horizon. The results are for the range $K_1=\left[ 1.9\e{-5},
-0.039 \right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
-\label{fig:src-kinit}
-\end{figure}
-% 
-
-The source term for all $k$s can also be compared for different timesteps. In
-Figure~\ref{fig:src-3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings
-before the end of
-inflation when $\dvp2$ has been initialised for only the very smallest $k$
-modes. The middle green
-line shows $|S|$ when all $\dvp2$ modes have been started. Finally the lower red
-line plots $|S|$
-after all modes have exited the horizon, around 52 e-foldings before the end of
-inflation.
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{numerical/graphs/src_3ns}
-\caption[Source term at three different times]{The absolute magnitude of the source 
-term for all $ks$ in the range at three different timesteps: the upper blue line when
-only the largest modes have been initialised; the middle green line when all modes
-have been initialised; and the lower red dashed line when all modes have
-exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
-\right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
-\label{fig:src-3ns}
-\end{figure}
-% 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
