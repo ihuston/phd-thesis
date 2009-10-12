@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.28 2009/10/11 20:38:12 ith Exp $
+% $Id: numerical.tex,v 1.29 2009/10/12 10:23:55 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.28 2009/10/11 20:38:12 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.29 2009/10/12 10:23:55 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -890,3 +890,44 @@ our results in the next section.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+This chapter described the implementation of the numerical calculation of second
+order cosmological perturbations.
+The Klein-Gordon equations in Chapter~\ref{ch:perts} are the central focus of this
+computation. In Section~\ref{sec:eqs-num} these equations were rewritten using $\N$
+as the time variable, a choice more suitable for numerical work. The convolution
+integrals in \eq{eq:KG2-fourier-sr-num} can be considered in spherical polar
+coordinates and split into four sub-terms $\A$--$\wt{\D}$. Computing the source term
+\eq{eq:KG2-src-ntime} which is written using $\A$--$\wt{\D}$ is the most complex and
+time consuming part of the calculation.
+
+To demonstrate the numerical code four different potentials have been chosen and
+these were described in Section~\ref{sec:pots-num}. One parameter for each
+potentials was determined by comparing the calculated $\Pr$ with the WMAP5 value.
+
+In Section~\ref{sec:initconds-num} the initial conditions for the computed
+quantities were explained. Each $k$ mode is initialised well inside the horizon
+using the Bunch-Davies vacuum conditions from Section~\ref{sec:perts-intro}. The
+second order perturbations are set to zero to begin. This choice concentrates focus
+on the generation of second order effects only during the observable period of
+inflation.
+
+
+The technical implementation of the code was discussed in
+Section~\ref{sec:impl-num}. There are four stage in the procedure. First the
+background fields are evolved over a specified time period. The end time of
+inflation is then determined by the condition $\varepsilon_H=1$. With this
+information the initialisation of the first order modes can be performed. In the
+second stage the first order perturbation equations are solved. These results are
+used in the third stage to calculate the source term \eq{eq:KG`2-src-ntime} at each
+time for each $k$. Finally the second order perturbations equations are solved using
+the source term results.
+
+To test the source term calculation the numerical results were compared to an
+analytic solution in Section~\ref{sec:tests-num}. Numerical parameters such as
+$N_\theta$ and $N_k$ were set by minimising the relative error between these results.
+
+In Chapter~\ref{ch:perts} the theoretical equations for second order perturbations
+were introduced. In this chapter the practical implementation of a numerical
+calculation of these perturbations was discussed. In Chapter~\ref{ch:results} the
+results of this numerical calculation will be examined and the next steps towards an
+improved procedure will be discussed.
