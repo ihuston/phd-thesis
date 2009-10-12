@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.13 2009/10/12 15:57:17 ith Exp $
+% $Id: results.tex,v 1.14 2009/10/12 20:55:19 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.13 2009/10/12 15:57:17 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.14 2009/10/12 20:55:19 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -107,7 +107,7 @@ magnitude of the resulting power spectra.
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/dp2_kwmap}
- \caption[Second Order perturbation]{The real (blue line) and imaginary (green
+ \caption[Second Order Perturbation]{The real (blue line) and imaginary (green
 dashed) components of the
 second order
 perturbation $\dvp2(\kwmap)$ from the beginning of the simulation until around
@@ -291,9 +291,41 @@ exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
 All the results quoted so far are for
 the $\msqphisq$ model. 
 % 
-
+\begin{figure}[h]
+\centering%
+\subfloat[$V(\vp)=\msqphisq$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_msqphisq-small}
+}\qquad%
+\subfloat[$V(\vp)=\lambdaphifour$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_lambdaphi4-small}
+}\\%
+\subfloat[$V(\vp)=\phitwooverthree$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_phi2over3-small}
+}\qquad%
+\subfloat[$V(\vp)=\msqphisqwithV$]{
+ \includegraphics[width=0.43\textwidth]
+  {numerical/graphs/src_onek_msqphisq_withV0-small}
+}
+\caption[The source term for different potentials]{Plots of the source term for the
+four different potentials used.}
+\label{fig:potentials-num}
+\end{figure}
 % 
-
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap-large}
+ \caption[Comparison of source term for models]{Comparison of the source term
+evolution for the four different models.}
+\label{fig:cmp-src-kwmap}
+\end{figure}
+% 
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap_zoom-large}
+ \caption[Comparison of source term for models at early stage]{Comparison of the
+source term evolution for the four different models at early times.}
+\label{fig:cmp-src-kwmap}
+\end{figure}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
