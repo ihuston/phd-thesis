@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.31 2009/10/13 19:31:50 ith Exp $
+% $Id: numerical.tex,v 1.32 2009/10/13 21:13:26 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.31 2009/10/13 19:31:50 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.32 2009/10/13 21:13:26 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -897,7 +897,8 @@ computation. In Section~\ref{sec:eqs-num} these equations were rewritten using $
 as the time variable, a choice more suitable for numerical work. The convolution
 integrals in \eq{eq:KG2-fourier-sr-num} can be considered in spherical polar
 coordinates and split into four sub-terms $\A$--$\wt{\D}$. Computing the source term
-\eq{eq:KG2-src-ntime} which is written using $\A$--$\wt{\D}$ is the most complex and
+\eq{eq:KG2-source-ntime} which is written using $\A$--$\wt{\D}$ is the most complex
+and
 time consuming part of the calculation.
 
 To demonstrate the numerical code four different potentials have been chosen and
@@ -918,7 +919,7 @@ background fields are evolved over a specified time period. The end time of
 inflation is then determined by the condition $\varepsilon_H=1$. With this
 information the initialisation of the first order modes can be performed. In the
 second stage the first order perturbation equations are solved. These results are
-used in the third stage to calculate the source term \eq{eq:KG`2-src-ntime} at each
+used in the third stage to calculate the source term \eq{eq:KG2-source-ntime} at each
 time for each $k$. Finally the second order perturbations equations are solved using
 the source term results.
 
