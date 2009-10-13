@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.14 2009/10/12 20:55:19 ith Exp $
+% $Id: results.tex,v 1.15 2009/10/13 19:31:50 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.14 2009/10/12 20:55:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.15 2009/10/13 19:31:50 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -18,31 +18,33 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Results}
-\label{sec:results}
+\section{Introduction}
+\label{sec:intro-res}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-
-The main result of this paper is the demonstration of a numerical solution to
+The main result of Part~\ref{part:numerical} of this work is the demonstration of a
+numerical solution to
 the closed Klein-Gordon equation of motion for second order scalar field
-perturbations as described in \eq{eq:KG2-fourier-sr-num}. This includes the slow
-roll approximation of the source term for second order perturbations, but we
-have not used a slow
-roll version of the evolution equations for the background or first order
-perturbations. 
+perturbations in \eq{eq:KG2-fourier-sr-num}. This includes the slow
+roll approximation of the source term for second order perturbations, but the slow
+roll version of the evolution equations has not been used for the background or first
+order perturbations. 
 
-As a proof of concept we have tested the system with two standard potentials,
-$\msqphisq$ and $\lambdaphifour$ and computed results across three
+As a proof of concept the system was tested with four different
+potentials, $V(\vp)=\msqphisq$, $\lambdaphifour$, $\phitwooverthree$ and
+$\msqphisqwithV$, and results computed across three
 different $k$ ranges. As expected, considering the use of a single slowly
 rolling field, the second order perturbation we have calculated is extremely
 small in comparison with the first order term. However there are already
-differences apparent between the two potentials which will be outlined below.
-We have calibrated the parameters $m$ and $\lambda$ of the potentials using the
-WMAP 5 normalisation at $\kwmap=0.002 \Mpc^{-1} = 5.25 \e{-60}\Mpl$
-\cite{Komatsu:2008hk}.
-We have outlined in \eq{eq:Krangedefns} the three $k$ ranges that we will use,
+differences apparent between the potentials which will be outlined in
+Section~\ref{sec:compare-res}.
+
+We have listed the parameters $m$, $\lambda$, $\sigma$ and $m_0$ of the potentials
+in Section~\ref{sec:pots-num} which were found using the WMAP5 normalisation at
+$\kwmap=0.002 \Mpc^{-1} = 5.25 \e{-60}\Mpl$ \cite{Komatsu:2008hk}.
+We have also outlined in \eq{eq:Krangedefns} the three $k$ ranges that we will use,
 % 
 \begin{eqnarray*}
 K_1 &=& \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,,\quad \Delta k =
@@ -50,7 +52,7 @@ K_1 &=& \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,,\quad \Delta k =
 K_2 &=& \left[5.71\e{-5}, 0.12\right]\Mpc^{-1}\,, \quad \Delta k =
 1.2\e{-4}\Mpc^{-1}
 \nonumber\\ 
-K_3 &=& \left[0.52\e{-5}, 0.39\right]\Mpc^{-1}\,, \quad \Delta k =
+K_3 &=& \left[9.52\e{-5}, 0.39\right]\Mpc^{-1}\,, \quad \Delta k =
 3.8\e{-4}\Mpc^{-1} \,.
 \end{eqnarray*}
 Many of the results will be quoted for $\kwmap$ which lies in all three of these
@@ -62,14 +64,27 @@ the results from the three different $k$ ranges are very similar. The second
 order source term is somewhat dependent on the lower bound of $k$ (upper bound
 on size). This is expected and in the scale invariant case a log divergence can
 be shown to exist \cite{Lyth:2007jh}. We have implemented an arbitrary sharp
-cutoff at $\kmin$
-below
-which 
-$\dvp1$ is taken to be zero. As mentioned above there is some evidence to
-suggest that a 
-similar cutoff is supported by the WMAP data \cite{Sinha:2005mn,Kim:2009pf}. 
+cutoff at $\kmin$ below which 
+$\dvp1$ is taken to be zero. 
+As mentioned in Chapter~\ref{ch:numericalsystem} there is some evidence to suggest
+that a similar cutoff is supported by the WMAP data \cite{Sinha:2005mn,Kim:2009pf}. 
+
+In Section~\ref{sec:results} the numerical results for the computation described in
+Chapter~\ref{ch:numericalsystem} will be given. Comparisons of the results from the
+four different test potentials will be made in Section~\ref{sec:compare-res}. As
+this is just the first stage towards a full calculation of the source term the next
+steps required will be outlined in Section~\ref{sec:next-res}. Finally in
+Section~\ref{sec:disc-num} there will be a discussion of outcomes of the chapter.
 % 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\section{Results}
+\label{sec:results}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 At first order our solutions agree with previous work
 \cite{Salopek:1988qh,Martin:2006rs,Ringeval:2007am}, with oscillations
