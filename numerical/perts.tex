@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.19 2009/10/11 11:19:48 ith Exp $
+% $Id: perts.tex,v 1.20 2009/10/13 19:09:43 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.19 2009/10/11 11:19:48 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.20 2009/10/13 19:09:43 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -598,7 +598,7 @@ in Fourier space requires convolutions. We are interested in the value of $\R$ a
 horizon crossing for the calculation of $\Pr$ and determination of the
 non-gaussianity produced during inflation. This allows us to neglect gradient terms
 in real space or terms proportional to $k$ in Fourier space.
-In this limit the real space expression for $\R_2$ is
+In this limit the real space expression for $\R_2$ is \cite{Malik:2005cy}
 % 
 \begin{equation}
  \label{eq:R2real-perts}
@@ -607,7 +607,8 @@ In this limit the real space expression for $\R_2$ is
  - \H' -2\H^2 \right)\,.
 \end{equation}
 % 
-In Fourier space this term becomes
+By using the background evolution equation \eq{eq:KGback-num} and going to Fourier
+space this can be written as
 % 
 \begin{align}
  \R_2(\eta, \kvi) = \frac{\H}{\vp_0'}\dvp2(\eta, \kvi) 
@@ -616,12 +617,44 @@ In Fourier space this term becomes
 % 
  &-2\frac{\H}{\left(\vp_0'\right)^2} \dvp1(\eta, \pvi)\dvp1'(\eta, \qvi) \nonumber\\
 %  
-&+\frac{1}{\left(\vp_0'\right)^2} \left(\H\frac{\vp_0''}{\vp_0} 
- - \H' -2\H^2 \right) \dvp1(\eta,\pvi) \dvp1(\eta, \qvi)\Bigg\}\,.
+&-\frac{1}{\left(\vp_0'\right)^2} \left(
+  2\H^2 \frac{\vp_0'}{\vp_0} + \frac{a^2 \H}{\vp_0}\Uphi + (8\pi G)a^2 \U
+ \right)
+\dvp1(\eta,\pvi) \dvp1(\eta, \qvi)\Bigg\}\,.
+\end{align}
+% 
+Once the numerical calculation has been carried out at first and second order as
+described in Chapter~\ref{ch:numericalsystem} this quantity can be evaluated after
+horizon crossing.
+
+In Chapter~\ref{ch:introduction} the non-gaussianity parameter $\fnlloc$ was defined
+in terms of $\R$ in \eq{eq:fnllocdefn-intro}. Writing \eq{eq:fnllocdefn-intro} in
+Fourier space using \eq{eq:Rfulldefn-perts} gives
+% 
+\begin{align}
+ \R(\kvi) &= \R_1(\kvi) + \frac{1}{2}\R_2(\kvi) \nonumber \\
+% 
+ &= \R_1(\kvi)
+  + \frac{3}{5}\fnlloc \Bigg( \frac{1}{(2\pi)^3}\int \d q^3\, \R_1(\qvi)
+\R_1(\kvi-\qvi) \\ \nonumber
+% 
+  &\quad- \left\langle \frac{1}{(2\pi)^3} \int \d q^3\, \R_1(\qvi)
+\R_1(\kvi-\qvi) \right\rangle \Bigg) \,.
 \end{align}
 
-* fnl and equation
-
+A good approximation of the local non-gaussianity produced is then 
+% 
+\begin{align}
+ \label{eq:fnlloc-perts}
+\fnlloc &= \frac{5}{6} \R_2(\kvi) \Bigg[ \frac{1}{(2\pi)^3}\int \d q^3\, \R_1(\qvi)
+\R_1(\kvi-\qvi) \\ \nonumber
+% 
+  &\quad- \left\langle \frac{1}{(2\pi)^3} \int \d q^3\, \R_1(\qvi)
+\R_1(\kvi-\qvi) \right\rangle \Bigg]^{-1} \,.
+\end{align}
+% 
+Calculating $\dvp2$ and $\R2$ provides a direct insight into the behaviour and
+production of the non-gaussianity parameter $\fnl$. 
 
 % 
 % 
