@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.21 2009/10/14 09:30:07 ith Exp $
+% $Id: perts.tex,v 1.22 2009/10/14 11:32:23 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.21 2009/10/14 09:30:07 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.22 2009/10/14 11:32:23 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -429,7 +429,7 @@ $q$. It is given by \cite{Malik:2006ir}
 \begin{align}
  \label{eq:Fdvk1-fourier-num}
 &F\left(\dvp1(\kvi),\dvp1'(\kvi)\right)
-= \frac{1}{(2\pi)^3}\int \d^3p \d^3q\delta^3(\kvi-\pvi-\qvi) 
+= \frac{1}{(2\pi)^3}\int \d^3p\, \d^3q\,\delta^3(\kvi-\pvi-\qvi) 
 \Bigg\{ \nonumber \\
 % 
 &\quad 2\left(\frac{8\pi G}{\H}\right)\frac{p_kq^k}{q^2}
@@ -449,7 +449,7 @@ $q$. It is given by \cite{Malik:2006ir}
 \left(Q\dvp1(\qvi)+\vp_{0}'\dvp1'(\qvi)\right)
 \Bigg]
 %
-\nonumber\\
+\nonumber \displaybreak[0]\\
 %
 &\quad +\frac{4\pi G}{\H}
 \Bigg[
@@ -611,13 +611,13 @@ By using the background evolution equation \eq{eq:KGback-num} and going to Fouri
 space this can be written as
 % 
 \begin{align}
- \R_2(\eta, \kvi) = \frac{\H}{\vp_0'}\dvp2(\eta, \kvi) 
-  &+ \frac{1}{(2\pi)^3}\int \d^3q\, \d^3p\, \delta(\kvi-\qvi-\pvi) \Bigg\{
+ \R_2(\eta, \kvi) &= \frac{\H}{\vp_0'}\dvp2(\eta, \kvi) 
+  + \frac{1}{(2\pi)^3}\int \d^3q\, \d^3p\, \delta(\kvi-\qvi-\pvi) \Bigg\{
 \nonumber\\
 % 
- &-2\frac{\H}{\left(\vp_0'\right)^2} \dvp1(\eta, \pvi)\dvp1'(\eta, \qvi) \nonumber\\
+ &\qquad -2\frac{\H}{\left(\vp_0'\right)^2} \dvp1(\eta, \pvi)\dvp1'(\eta, \qvi) \nonumber\\
 %  
-&-\frac{1}{\left(\vp_0'\right)^2} \left(
+&\qquad -\frac{1}{\left(\vp_0'\right)^2} \left(
   2\H^2 \frac{\vp_0'}{\vp_0} + \frac{a^2 \H}{\vp_0}\Uphi + (8\pi G)a^2 \U
  \right)
 \dvp1(\eta,\pvi) \dvp1(\eta, \qvi)\Bigg\}\,.
@@ -673,7 +673,7 @@ In this chapter equations of motion have been introduced for a single scalar fie
 up to second order in cosmological perturbations. The second order gauge
 transformation has been discussed and the transformation components determined for
 the uniform curvature gauge.
-
+% 
 In Chapter~\ref{ch:introduction} first order classical perturbations were quantised
 in the Minkowski space limit and normalised using the Wronskian condition in
 \eq{eq:quantcondition-intro}. This constraint also fixes the quantisation for all
