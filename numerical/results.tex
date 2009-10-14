@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.18 2009/10/14 09:32:00 ith Exp $
+% $Id: results.tex,v 1.19 2009/10/14 11:33:07 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.18 2009/10/14 09:32:00 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.19 2009/10/14 11:33:07 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -318,8 +318,44 @@ exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 All the results quoted so far are for the $V(\vp)=\msqphisq$ model. In this section
-the results for all four models will be compared.
+the results for all four potentials will be compared using the K2 range for $k$. 
 % 
+% 
+\begin{figure}
+ \centering
+\includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_Pr_allks-large}
+\caption[Comparison of $\Pr$ for models]{Comparison of the power spectrum $\Pr$ for
+the four different models. The three models $V(\vp)=\msqphisq$, $\lambdaphifour$ and
+$\phitwooverthree$ have red spectra ($n_s <1$) while the $V(\vp) = \msqphisqwithV$
+model has a blue spectrum ($n_s>1$).}
+\label{fig:cmp-Pr}
+\end{figure}
+% 
+Figure~\ref{fig:cmp-Pr} shows the power spectrum of curvature perturbations, $\Pr$, for each
+potential. The $V(\vp)=\msqphisq$, $\lambdaphifour$ and $\phitwooverthree$ models all clearly have
+a red spectrum with $n_s <1$. On the other hand the $V(\vp)=\msqphisqwithV$ model has a blue
+spectrum ($n_s>1$) when $V_0$ to chosen to be $5\e{-10}\Mpl^4$ as specified in
+Section~\ref{sec:pots-num}. 
+% 
+The values of $n_s$ obtained for the four potentials are given in Table~\ref{table:ns-res}
+% 
+\begin{center}
+% use packages: array
+\begin{tabular}{|c|c|}
+\hline Potential & $n_s$ \\
+\hline
+$\msqphisq$ &  \\ 
+\hline
+$\lambdaphifour$ & × \\
+\hline 
+$\phitwooverthree$ & × \\
+\hline 
+$\msqphisqwithV$ & × \\
+\hline
+\end{tabular}
+\end{center}
+
+
 \begin{figure}[h]
 \centering%
 \subfloat[$V(\vp)=\msqphisq$]{
@@ -340,6 +376,19 @@ four different potentials used.}
 \label{fig:sourcecomparison-res}
 \end{figure}
 % 
+The source term for each model is shown separately in Figure~\ref{fig:sourcecomparison-res} for
+$\kwmap$ using the K2 range\footnotemark. 
+% 
+\footnotetext{These plots use a different $k$ range to the ones comparing $V(\vp)=\msqphisq$ and
+$\lambdaphifour$ in \Rref{hustonmalik}.}
+% 
+While clearly these source terms are superficially similar
+there are differences apparent. In Figure~\ref{fig:cmp-src-kwmap} the source terms are plotted
+together for $\kwmap$. To enable comparison each result is given in terms of the initialisation time
+for that mode. This is because the mode $\kwmap$ begins at different times for the slightly
+different models. The change in duration is a consequence of allowing $H$ to evolve the
+calculation. 
+
 \begin{figure}
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap-large}
@@ -348,6 +397,20 @@ evolution for the four different models.}
 \label{fig:cmp-src-kwmap}
 \end{figure}
 % 
+
+The source term results for the $V(\vp)=\msqphisq$ and $\lambdaphifour$ models are very similar.
+From horizon crossing to near the end of inflation the results appear to coincide.
+The $\lambdaphifour$ mode has a slightly longer duration and at late times is reduced in comparison
+with the $\msqphisq$ one. Figure~\ref{fig:cmp-src-zoom-kwmap} shows that at early times the
+relationship is more complicated with the $\lambdaphifour$ mode being larger for a significant
+period.
+
+In the early stage the amplitude of the $V(\vp)=\phitwooverthree$ is very similar to the other two
+results described above. After horizon crossing however there is a significant drop in the
+amplitude of $S$ in comparison with the $\msqphisq$ and $\lambdaphifour$ modes. This continues
+until late in the evolution when the $|S|$ increases swiftly to reach levels above both the others.
+The duration of the mode is shorter than the two other models described so far. 
+
 \begin{figure}
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap_zoom-large}
@@ -356,15 +419,20 @@ source term evolution for the four different models at early times.}
 \label{fig:cmp-src-zoom-kwmap}
 \end{figure}
 % 
-\begin{figure}
- \centering
-\includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_Pr_allks-large}
-\caption[Comparison of $\Pr$ for models]{Comparison of the power spectrum $\Pr$ for
-the four different models. The three models $V(\vp)=\msqphisq$, $\lambdaphifour$ and
-$\phitwooverthree$ have red spectra ($n_s <1$) while the $V(\vp) = \msqphisqwithV$
-model has a blue spectrum ($n_s>1$).}
-\label{fig:cmp-Pr}
-\end{figure}
+
+The final model $V(\vp)=\msqphisqwithV$ is nominally a hybrid inflation model requiring two fields.
+As described in Section~\ref{sec:pots-num}, in order to evaluate using the single field
+calculation the end time of inflation must be specified by hand. In this simulation $\vp\simeq 8$
+is taken as the end time. In this region the potential is extremely flat and the effect of this can
+be seen in the source term of the model. Before horizon crossing it is of comparable magnitude to
+the other terms. However a steep descent ensure that it is a few orders of magnitude smaller than
+the other terms after horizon crossing. In contrast to the behaviour of the other models, the source
+term does not increase close to the end of inflation. This is due to the enforced end time cut-off
+which means that $\bar{\varepsilon}_H$ does not become large.
+
+In this section we have described the results for four different single field potentials. As
+expected for single field slow roll models they exhibit similar properties. In the next section
+plans to extend the calculation to deal with more interesting models will be outlined.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
