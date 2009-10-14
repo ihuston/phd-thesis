@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.22 2009/10/14 11:32:23 ith Exp $
+% $Id: perts.tex,v 1.23 2009/10/14 13:04:02 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.22 2009/10/14 11:32:23 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.23 2009/10/14 13:04:02 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -119,13 +119,13 @@ order equation, but solves the full non-slow roll equations for the
 background and first order.
 % 
 We present the results of this calculation
-in Chapter~\ref{ch:results} including a comparison of the second
+in Chapter~\ref{ch:results}, including a comparison of the second
 order perturbation calculated for the four potentials used. We discuss
 these results and describe the next steps required in detail.
 
 %
 % 
-The models that tested in this calculation are single field models with a canonical
+The models tested in this calculation are single field models with a canonical
 action. Significant second order corrections
 are expected only when a non-canonical action or multiple fields are
 used, or slow roll is violated. Numerical simulations will be particularly
@@ -140,7 +140,7 @@ for first and second order perturbations are introduced. These will be the centr
 governing equations of the numerical calculation. They are
 initially written in
 terms of the metric perturbations and
-then described in closed form (\ie in terms of the field perturbations alone). In
+then described in closed form, \ie in terms of the field perturbations alone. In
 Section~\ref{sec:slowroll} the second order equation is written in a slow roll
 approximation.
 % 
@@ -290,7 +290,7 @@ At second order the Sasaki-Mukhanov variable becomes more complicated
 where ${\cal{X}}\left(\psi,E\right)$ contains terms quadratic in
 gradients of the metric perturbations $\psi_1$ and $E_1$. From now on we will
 drop the tildes and talk only about variables in the flat gauge.
-The potential of the scalar field is also split
+The potential of the scalar field is also split:
 % 
 \begin{equation}
  V(\varphi) = \U + \delta V_{1} + \frac{1}{2}\delta V _{2}\,,\quad
@@ -300,7 +300,7 @@ The potential of the scalar field is also split
 % 
 
 
-The Klein-Gordon equations describes the evolution of the scalar field and are
+The Klein-Gordon equations describe the evolution of the scalar field and are
 found by requiring the perturbed energy-momentum tensor $T_{\mu\nu}$ to obey the
 energy conservation equation $\nabla_\mu T^{\mu\nu}=0$ (see for example
 \Rref{Malik:2005cy}). For the
@@ -355,7 +355,7 @@ These are not reproduced here but can be seen in Section~II~B of
 The dynamics of the scalar field becomes clearer in Fourier space but terms in
 the second order equation of the form $\left(\dvp1(x)\right)^2$ require the use
 of the convolution theorem (see for example \Rref{Vretblad:2005}).
-Following Refs.~\cite{Malik:2006ir} and \cite{book:liddle} we will write
+Following Refs.~\cite{book:liddle} and \cite{Malik:2006ir} we will write
 $\dvp{}(k^i)$
 for the Fourier component of $\dvp{}(x)$ such that
 % 
@@ -491,8 +491,9 @@ Q\dvp1(\qvi)
 
 
 In order to establish the viability of a numerical calculation of the
-Klein-Gordon equation we have confined ourselves in this paper to studying the
-evolution in the slow roll approximation. 
+Klein-Gordon equation, Chapters~\ref{ch:numericalsystem} and \ref{ch:results} will be limited to
+considering the
+evolution of the second order perturbation in the slow roll approximation. 
 This involves taking
 %
 \begin{equation}
@@ -557,8 +558,8 @@ a^2\left(\Uppp
 %
 The numerical simulation described in Chapter~\ref{ch:numericalsystem} will solve the
 slow roll version of the second order equation given above,
-\eq{eq:KG2-fourier-sr-num}, the first
-order equation (\ref{eq:fokg}) and the background equation
+\eq{eq:KG2-fourier-sr-num}, the full first
+order equation (\ref{eq:fokg}) and the full background equation
 (\ref{eq:KGback-num}). 
 % 
 % 
@@ -624,7 +625,7 @@ space this can be written as
 \end{align}
 % 
 Once the numerical calculation has been carried out at first and second order as
-described in Chapter~\ref{ch:numericalsystem} this quantity can be evaluated after
+described in Chapter~\ref{ch:numericalsystem} this quantity could be evaluated after
 horizon crossing.
 
 In Chapter~\ref{ch:introduction} the non-gaussianity parameter $\fnlloc$ was defined
@@ -653,7 +654,7 @@ A good approximation of the local non-gaussianity produced is then
 \R_1(\kvi-\qvi) \right\rangle \Bigg]^{-1} \,.
 \end{align}
 % 
-Calculating $\dvp2$ and $\R2$ provides a direct insight into the behaviour and
+Calculating $\dvp2$ and $\R_2$ would provide a direct insight into the behaviour and
 production of the non-gaussianity parameter $\fnl$. 
 
 % 
@@ -680,7 +681,7 @@ in the Minkowski space limit and normalised using the Wronskian condition in
 the other orders of perturbation including $\dvp2$ \cite{Seery:2008qj}. 
 
 The perturbation equations are better understood in Fourier space although the cost
-of this approach is the necessity of convolution integrals of first order
+of this approach is the necessity of convolution integrals of the first order
 perturbations. Written in Fourier space the second order Klein-Gordon equation can
 be described purely in terms of the field perturbations and background quantities. 
 
@@ -697,6 +698,6 @@ cosmological perturbations beyond the linear first order is critical to accurate
 calculating higher order statisical effects. Section~\ref{sec:observable-perts}
 outlined the connection between $\dvp2$ and observable quantities such as the
 comoving curvature perturbation and the non-Gaussianity of the perturbations. Going
-beyond single field slow roll models, non-linear effects become more important In
+beyond single field slow roll models, non-linear effects become more important. In
 Chapters~\ref{ch:numericalsystem} and \ref{ch:results} the first step is taken
 towards calculating higher order perturbations for these models.
