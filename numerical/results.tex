@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.19 2009/10/14 11:33:07 ith Exp $
+% $Id: results.tex,v 1.20 2009/10/14 12:35:20 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.19 2009/10/14 11:33:07 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.20 2009/10/14 12:35:20 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -337,23 +337,27 @@ a red spectrum with $n_s <1$. On the other hand the $V(\vp)=\msqphisqwithV$ mode
 spectrum ($n_s>1$) when $V_0$ to chosen to be $5\e{-10}\Mpl^4$ as specified in
 Section~\ref{sec:pots-num}. 
 % 
-The values of $n_s$ obtained for the four potentials are given in Table~\ref{table:ns-res}
+The values of $n_s$ obtained for the four potentials are given in Table~\ref{table:ns-res}. 
 % 
+\begin{table}
 \begin{center}
 % use packages: array
-\begin{tabular}{|c|c|}
-\hline Potential & $n_s$ \\
+\begin{tabular}{|c|c|c|}
+\hline Potential & $n_s$ & $n_s - 1$ \\
 \hline
-$\msqphisq$ &  \\ 
+$\msqphisq$ & 0.965 & -0.035 \\ 
 \hline
-$\lambdaphifour$ & × \\
+$\lambdaphifour$ & 0.949 & -0.051 \\
 \hline 
-$\phitwooverthree$ & × \\
+$\phitwooverthree$ & 0.977 & -0.023 \\
 \hline 
-$\msqphisqwithV$ & × \\
+$\msqphisqwithV$ & 1.002 & 0.002 \\
 \hline
 \end{tabular}
+\caption{Spectral index values for the four potentials.}
+\label{table:ns-res}
 \end{center}
+\end{table}
 
 
 \begin{figure}[h]
