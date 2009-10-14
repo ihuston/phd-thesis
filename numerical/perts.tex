@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.20 2009/10/13 19:09:43 ith Exp $
+% $Id: perts.tex,v 1.21 2009/10/14 09:30:07 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.20 2009/10/13 19:09:43 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.21 2009/10/14 09:30:07 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -67,8 +67,8 @@ $\Delta N$ formalism, \eg
 Refs.~\cite{Starobinsky:1982ee,
 Starobinsky:1986fxa, Sasaki:1995aw, Sasaki:1998ug,
 Lyth:2004gb,Lyth:2005fi,Langlois:2006vv}.
-Employing a gradient expansion restricts this approach, so
-far, to only being usable on scales much larger than the particle horizon.  
+Employing a gradient expansion restricts this approach, at least currently, to only
+being usable on scales much larger than the particle horizon.  
 The
 other approach uses cosmological perturbation theory following Bardeen
 \cite{Bardeen:1980kt} and extending it to second order,
@@ -76,12 +76,12 @@ e.g.~Refs.~\cite{Tomita:1967,Mukhanov:1996ak,Bruni:1996im,
   Acquaviva:2002ud,Nakamura:2003wk,Noh:2004bc,
   Bernardeau:2002jy,Maldacena:2002vr,
   Finelli:2003bp,Bartolo:2004if,Enqvist:2004bk,Lyth:2005du,Seery:2005gb,
-  Malik:2003mv, Barnaby:2006cq}
-(for an extensive list of references and a recent review on these
-issues see Ref.~\cite{Malik:2008im}).
+  Malik:2003mv, Barnaby:2006cq}\footnotemark.
+\footnotetext{For an extensive list of references and a recent review on these
+issues see Ref.~\cite{Malik:2008im}.}
 %
-This approach works on all scales, but can be complex in comparison to the
-$\Delta N$ formalism. Both these approaches give the
+This works on all scales, but can be complex in comparison to the
+$\Delta N$ formalism. These two approaches give the
 same results on large scales \cite{Malik:2005cy}. We
 will follow the Bardeen approach here.
 
@@ -107,7 +107,7 @@ terms in the expression, for example \Rref{Finelli:2006wk}.
 % order effects.
 In this chapter the equations of motion for first and second order field
 perturbations are described. These form the basis of the numerical calculation
-undertaken.
+undertaken in the following two chapters.
 % As this is, to the author's knowledge, the first numerical solution to the full
 % second order evolution equation 
 Chapter~\ref{ch:numericalsystem} describes the numerical implementation of the
@@ -125,20 +125,20 @@ these results and describe the next steps required in detail.
 
 %
 % 
-The models that we test in this paper are single field models with a canonical
+The models that tested in this calculation are single field models with a canonical
 action. Significant second order corrections
 are expected only when a non-canonical action or multiple fields are
 used, or slow roll is violated. Numerical simulations will be particularly
 useful in analysing models with these characteristics.
-We will discuss in
-Section~\ref{sec:next-res} planned future work to extend our current numerical
-system to deal with these extensions beyond the standard single field slow roll
-inflation.
+Section~\ref{sec:next-res} discusses planned future work to extend the current
+numerical system to deal with these extensions beyond the standard single field slow
+roll inflation.
 
 
-In Section~\ref{sec:perts-num} we introduce the Klein-Gordon equations
-for first and second order
-perturbations that will be numerically calculated. These are initially written in
+In Section~\ref{sec:perts-num} of this chapter the Klein-Gordon equations
+for first and second order perturbations are introduced. These will be the central
+governing equations of the numerical calculation. They are
+initially written in
 terms of the metric perturbations and
 then described in closed form (\ie in terms of the field perturbations alone). In
 Section~\ref{sec:slowroll} the second order equation is written in a slow roll
