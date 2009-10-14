@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.21 2009/10/14 17:46:40 ith Exp $
+% $Id: results.tex,v 1.22 2009/10/14 18:37:02 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.21 2009/10/14 17:46:40 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.22 2009/10/14 18:37:02 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -343,17 +343,18 @@ The values of $n_s$ obtained for the four potentials are given in Table~\ref{tab
 \begin{table}
 \begin{center}
 % use packages: array
-\begin{tabular}{|c|c|c|}
-\hline Potential & $n_s$ & $n_s - 1$ \\
-\hline
+\begin{tabular}{ccr}
+\toprule
+Potential & $n_s$ & $n_s - 1$ \\
+\midrule
 $\msqphisq$ & 0.965 & -0.035 \\ 
-\hline
+% \hline
 $\lambdaphifour$ & 0.949 & -0.051 \\
-\hline 
+% \hline 
 $\phitwooverthree$ & 0.977 & -0.023 \\
-\hline 
+% \hline 
 $\msqphisqwithV$ & 1.002 & 0.002 \\
-\hline
+\bottomrule
 \end{tabular}
 \caption{Spectral index values for the four potentials.}
 \label{table:ns-res}
