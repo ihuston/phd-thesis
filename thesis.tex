@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.33 2009/10/05 15:52:19 ith Exp $
+% $Id: thesis.tex,v 1.34 2009/10/15 17:23:17 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
 %  twoside,
@@ -26,7 +26,7 @@ onehalfspacing % onehalfspacing or doublespacing
             ]{ihformat}
 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.33 2009/10/05 15:52:19 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.34 2009/10/15 17:23:17 ith Exp $}
 % \usepackage[inline]{showlabels}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -36,6 +36,7 @@ onehalfspacing % onehalfspacing or doublespacing
 \includeonly{
 abstract,
 acknowledgements,
+shortintro,
 mainintro,
 dbi/dbi-intro,
 dbi/dbi,
@@ -74,6 +75,9 @@ theend
 
 \onehalfspacing
 % % % % % % % % % % % % % % % % % % % % % % % % % 
+% Short introduction
+\include{shortintro}
+% 
 % Main introduction
 \include{mainintro}
 
