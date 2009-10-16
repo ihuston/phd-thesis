@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % shortintro.tex - Ian Huston
-% $Id: shortintro.tex,v 1.4 2009/10/16 14:58:14 ith Exp $
+% $Id: shortintro.tex,v 1.5 2009/10/16 17:18:31 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: shortintro.tex,v 1.4 2009/10/16 14:58:14 ith Exp $}
+{\version$Id: shortintro.tex,v 1.5 2009/10/16 17:18:31 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -143,13 +143,66 @@ non-Gaussianity and a tightening of the observational bounds could rule out the
 possibility of an obervable tensor signal from the model altogether.
 
 
-Part~\ref{part:numerical} applies numerical techniques to investigate the
-production of second order cosmological perturbations. In
-Chapter~\ref{ch:perts} the Klein-Gordon equation of the second order
-scalar field perturbation is described purely in terms of the field itself.
-This equation is the basis of the numerical calculation in
-Chapter~\ref{ch:numericalsystem} which is tested for two standard inflationary
-potentials. 
+In Part~\ref{part:numerical} the focus moves from theoretical to numerical
+techniques. Second order cosmological perturbations are numerically calculated for
+single field canonical inflationary models.
+
+In Chapter~\ref{ch:perts} the system of equations for the numerical calculation is
+developed. In order to understand non-linear perturbative effects it is necessary to
+examine models using perturbation theory beyond first order. The gauge
+transformation for second order perturbations is outlined and the effect on
+scalar quantities is considered for the uniform curvature gauge. In
+\Rref{Malik:2006ir} the Klein-Gordon equation for second order perturbations was
+written in terms of the field perturbations alone. This will form the basis of the
+numerical calculation once it is transformed into Fourier space. As the original
+equation involves terms quadratic in the first order perturbations, the Fourier
+transformed equation contains convolutions of these perturbations. As a first step
+towards demonstrating the calculation for the full equation the slow roll version of
+the source term is considered in the second order equation. The second order
+perturbations can be linked to observable quantities including the curvature
+perturbation and the non-gaussianity.
+
+
+
+The Klein-Gordon equations are the central governing equations of the 
+calculation described in Chapter~\ref{ch:numericalsystem}. They must first be
+rewritten in a form more suitable for numerical work. This involves changing the
+time coordinate to the number of elapsed e-foldings and writing the convolution
+terms in spherical polar coordinates. Four different single field slow roll
+potentials will be used and the parameters for these models are set by comparing
+the calculated power spectrum of first order scalar perturbations with the latest
+WMAP data. The initial conditions for the background field and perturbations must
+also be specified. The second order perturbations are intially set to zero, to
+highlight the creation of second order effects. As this is a novel procedure a
+thorough description of the implementation of the calculation is given. Where
+an analytic solution for one of the convolution terms is possible, this is compared
+with the calculated value. Numerical parameters are set by minimising the relative
+error of this test calculation.
+
+
+The results of the numerical calculation are presented in Chapter~\ref{ch:results}.
+Three different ranges of the discretised momentum are considered and general
+results presented for the $\msqphisq$ potential. 
+% Comment out results?
+As expected for a single field slow
+roll model the second order perturbations are highly suppressed compared to the
+first order. 
+The source term of the second order perturbation equation is similar in form to the
+power spectrum of first order perturbations, decreasing rapidly until horizon
+crossing after which a more steady amplitude is maintained.
+% 
+% 
+The results for all four potentials are also compared. Differences are apparent in
+the behaviour of the models after horizon crossing.
+This calculation represents only the first step towards a full numerical calculation
+of the second order Klein-Gordon equation. The next stages towards this goal are
+outlined and the second order equation for single field models without the slow roll
+assumption is written in the correct form for numerical use.
+
+% Add section about conclusions?
+
+
+
 
 
 
