@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.53 2009/10/19 10:56:44 ith Exp $
+% $Id: mainintro.tex,v 1.54 2009/10/19 13:07:57 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.53 2009/10/19 10:56:44 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.54 2009/10/19 13:07:57 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -18,7 +18,7 @@ In this chapter the foundations of inflationary cosmology are described.
 
 In Section~\ref{sec:frw-intro} the
 physics of
-an isotropic and homogeneous universe is reviewed. Then the inflationary
+an isotropic and homogeneous universe is reviewed. The inflationary
 scenario is introduced in Section~\ref{sec:inflation-intro}. 
 First order cosmological perturbation theory is presented in
 Section~\ref{sec:perts-intro} and inflationary models with non-canonical actions are
@@ -757,7 +757,7 @@ Substituting $u=a\dvp1$ gives the Mukhanov equation \cite{Mukhanov:1990me}
 % 
 where $z= a\vp_0'/\H$.
 
-\subsubsection{Quantum perturbations}
+\subsection{Quantum perturbations}
 So far we have considered classical perturbations. The generation of
 fluctuations is a quantum effect, however, and we need to consider the
 perturbations as quantum operators in some vacuum. 
@@ -862,7 +862,7 @@ apply to non slow-roll models so long as they are applied well before horizon
 crossing.
 
 
-\subsubsection{Power spectra and spectral indices}
+\subsection{Power spectra and spectral indices}
 The power spectrum of the inflaton perturbation $\dvp1 = u/a$ can now be
 defined as
 % 
@@ -987,7 +987,7 @@ Section~\ref{sec:obs-intro} are quoted at the scale $k=0.002\Mpc^{-1}$.
 
 
 If there is a non-trivial dependence of $\Pr$ or $\Pt$ on $k$ then higher order
-derivatives can be taken to give the ``running'' of the quantities. The runnings
+derivatives can be taken to give the running of the quantities. The runnings
 of the spectral indices are
 % 
 \begin{equation}
@@ -1079,24 +1079,6 @@ and $r$ in this case is bounded by
 \end{equation}
 at the 95\% confidence level.
 
-The current bounds on the non-Gaussianity parameter are not strong but have
-been steadily tightening. The WMAP5 bound on the local form of $\fnl$ is
-% 
-\begin{equation}
-\label{eq:fnlloc-wmap5-intro}
- -9<\fnlloc<111\,,
-\end{equation}
-% 
-and the bound on the equilateral form is
-% 
-\begin{equation}
-\label{eq:fnleq-wmap5-intro}
- -151<\fnleq<253\,,
-\end{equation}
-% 
-both at the 95\% confidence limit. 
-% Other groups have re-examined the WMAP data
-% and included previously absent parameter regions. 
 
 
 
@@ -1293,9 +1275,15 @@ produce $\fnlloc$ of order one which would be much larger than the
 $O(\varepsilon_H)$ contributions from single field slow roll inflation
 \cite{Bartolo:2004if, Komatsu:2008hk}. Any detection of $\fnlloc$ at greater
 than $O(1)$ would present a challenge to such single field slow-roll models. 
-Currently the WMAP5 limits on $\fnlloc$, presented in \eq{eq:fnlloc-wmap5-intro}, are
-centred around $\fnlloc=60$ but
-still include $\fnlloc=0$ at the 95\% confidence level.
+The current bounds on the non-Gaussianity parameter are not strong but have
+been steadily tightening. The WMAP5 bound on the local form of $\fnl$ is
+% 
+\begin{equation}
+\label{eq:fnlloc-wmap5-intro}
+ -9<\fnlloc<111\,.
+\end{equation}
+% 
+This observational limit still includes $\fnlloc=0$ at the 95\% confidence level.
 
 
 The other important case is   
@@ -1323,10 +1311,47 @@ CMB \cite{Yadav:2007yy,crim}. The more recent WMAP5 data set
 \cite{Komatsu:2008hk} improves on this bound somewhat, and
 also indicates that it is distinctly asymmetric. At the $95 \%$ confidence
 level, the bound on the 
-equilateral triangle, given in \eq{eq:fnleq-wmap5-intro}, is $-151 < \fnl <
-253$.
+equilateral triangle is 
+% 
+\begin{equation}
+\label{eq:fnleq-wmap5-intro}
+ -151<\fnleq<253\,.
+\end{equation}
+% 
+% Other groups have re-examined the WMAP data
+% and included previously absent parameter regions. 
 
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Discussion}
+\label{sec:disc-intro}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
+In this chapter the physics of the FRW universe has been described. Inflation has been introduced
+to solve problems with the standard Big Bang theory. To solve these problems the inflationary
+period must be of sufficient duration. This can be ensured by using models which comply with
+certain slow roll conditions. 
 
+To explain inhomogeneities in the early universe cosmological perturbation theory was presented up
+to first order. The power spectrum of scalar perturbations, $\Pr$, the spectral index of this
+spectrum, $n_s$ and the ratio of tensor-scalar perturbations, $r$, are the main observable
+quantities against which models can be tested. Slow roll models also must satisfy a consistency
+relation between the tilt of the tensor spectrum and $r$. Current observations favour an almost
+scale invariant red spectrum ($n_s<1$) with a low level of tensor signal. The accuracy of the
+current data is not yet good enough to meaningfully evaluate the slow roll consistency relation. 
+
+As well as the standard models, one can also construct inflationary models in which the action
+takes a non-canonical form. In these models the sound speed of scalar fluctuations, $c_s$, plays a
+pivotal role. The predictions for scalar perturbations are altered by a factor of $c_s$, as is the
+slow roll consistency relation. Non-canonical models also often exhibit strong non-linear effects
+which can be parameterised using the non-Gaussianity parameter $\fnl$. Canonical single field slow
+roll models do not predict large amounts of non-Gaussianity. 
+
+This chapter laid the foundations for the two main parts of this work in which first theoretical
+and then numerical techniques are used to constrain inflationary models. In the next chapter the
+DBI brane inflation scenario is presented. 
 
