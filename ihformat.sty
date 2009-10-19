@@ -1,7 +1,7 @@
 % % % % % % % % % % % % % 
 %  Ian Huston - ihformat.sty
 %  formatting and macros
-%  $Id: ihformat.sty,v 1.23 2009/10/14 18:37:43 ith Exp $
+%  $Id: ihformat.sty,v 1.24 2009/10/19 14:14:31 ith Exp $
 % % % % % % % % % % % % % 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{ihformat}
@@ -19,7 +19,7 @@
 \def\version$#1,v #2 #3${} }%
 % \renewcommand{\version}[$#1,v #2 #3 #4$]{#2, #3}}%
 % Use the following line in each file to specify revision, date
-% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.23 2009/10/14 18:37:43 ith Exp $}
+% \renewcommand{\CVSrevision}{\version$Id: ihformat.sty,v 1.24 2009/10/19 14:14:31 ith Exp $}
 
 % Should we use showlabels? Set with labels option, default is off.
 \newboolean{@showlabels}
@@ -82,9 +82,10 @@
 % Hyperlinking without footnotes.
 \ifthenelse{\boolean{@usehyperref}}%
 {\RequirePackage[pdftex,colorlinks,hyperfootnotes=false,linktocpage]{hyperref}}%
-{\newcommand{\hypersetup}[1]{}
-\newcommand{\url}[1]{#1}
-}%
+{\RequirePackage[draft]{hyperref}}
+% {\newcommand{\hypersetup}[1]{}
+% \newcommand{\url}[1]{#1}
+% }%
 
 % Should we use showlabels?
 \ifthenelse{\boolean{@showlabels}}{\RequirePackage[inline]{showlabels}}{}
