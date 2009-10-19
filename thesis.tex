@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.34 2009/10/15 17:23:17 ith Exp $
+% $Id: thesis.tex,v 1.35 2009/10/19 14:14:44 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
 %  twoside,
@@ -19,14 +19,14 @@ onehalfspacing % onehalfspacing or doublespacing
 % My formatting package
 % CVSon for cvs revision number in footers
 % CVSoff is default-
-\usepackage[CVSon, % CVS version in footers
-            labels, % show labels
-	    todos, % show todos
-            hyperref % Use hyperref for links
+\usepackage[%CVSon, % CVS version in footers
+            %labels, % show labels
+	    %todos, % show todos
+            %hyperref % Use hyperref for links
             ]{ihformat}
 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.34 2009/10/15 17:23:17 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.35 2009/10/19 14:14:44 ith Exp $}
 % \usepackage[inline]{showlabels}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -34,8 +34,8 @@ onehalfspacing % onehalfspacing or doublespacing
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Include list
 \includeonly{
-abstract,
-acknowledgements,
+% abstract,
+% acknowledgements,
 shortintro,
 mainintro,
 dbi/dbi-intro,
@@ -69,7 +69,7 @@ theend
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 %\setcounter{tocdepth}{0}
 \tableofcontents
-\listoffigures
+% \listoffigures
 %\listoftables
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
