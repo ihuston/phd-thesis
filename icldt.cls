@@ -102,7 +102,7 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % MARGINS
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\RequirePackage[left=4.0cm,right=2.0cm,top=2.97cm,bottom=3.50cm]%
+\RequirePackage[left=4.0cm,right=2.0cm,top=3.50cm,bottom=3.0cm]%
  {geometry}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \setkomafont{sectioning}{\rmfamily\bfseries}
