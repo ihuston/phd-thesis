@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.53 2009/10/26 17:37:59 ith Exp $
+% $Id: multibrane.tex,v 1.54 2009/10/27 12:22:38 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.53 2009/10/26 17:37:59 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.54 2009/10/27 12:22:38 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -141,16 +141,27 @@ for some positive constant $\alpha$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 A large non-Gaussian signature in the curvature perturbation is 
 typically generated in models where the sound speed of fluctuations 
-is small. To proceed, therefore, we consider 
-scenarios that satisfy this condition in the limit where 
+is small.
+By substituting \eq{eq:defalpha} into the definition of $\fnleq$ in
+\eq{eq:fnldefn-dbiintro}, we can see that for this case
+% 
+\begin{equation}
+ \fnleq \propto \frac{1}{c_s^2} \propto \Lambda\,.
+\end{equation}
+% 
+Recall that the definitions of $c_s^2$ and $\Lambda$ in \eqs{eq:defcs-dbiintro} and
+\eqref{eq:deflambda-dbiintro} are in terms of $P$ and its derivatives with respect
+to $X$. We can require that the magnitude of $\fnleq$ is large by considering
+scenarios in the limit where $c_s^2$ is small and $\Lambda$ is large or equivalently:
+% To proceed, therefore, we consider 
+% scenarios that satisfy this condition in the limit where 
 % 
 \begin{equation}
 \label{eq:Plimits}
 X^2 P_{,XXX} \gg XP_{,XX} \gg P_{,X} \,.
 \end{equation}
 % 
-
-Having taken these limits the constraint (\ref{eq:defalpha}) reduces to the 
+Having taken this limit the constraint \eqref{eq:defalpha} reduces to the 
 third-order, non-linear, partial differential equation
 % 
 \begin{equation}
