@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.34 2009/10/14 17:00:27 ith Exp $
+% $Id: numerical.tex,v 1.35 2009/10/29 17:25:10 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.34 2009/10/14 17:00:27 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.35 2009/10/29 17:25:10 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -30,69 +30,73 @@ order, a direct numerical calculation of the second order perturbations of a
 scalar field system is achievable. 
 In this chapter the implementation of this system is outlined.
 The structure of the numerical
-system closely follows the work done at first order by Martin
+system follows the work done at first order by Martin
 and Ringeval \cite{Martin:2006rs, Ringeval:2007am} and previously by
 Salopek \etal \cite{Salopek:1988qh}.
 
 
 The most important difference between an analytic and numerical treatment of the
-equations in Chapter~\ref{ch:perts} is the requirement to specify a finite
+equations presented in Chapter~\ref{ch:perts} is the requirement to specify a finite
 numerical range of a finite number of $k$ modes to be calculated.
 The upper cutoff in $k$, which marks the smallest scale considered, is well
-motivated by the difficulty in observing primordial perturbations at these small
+motivated by the difficulty in observing primordial perturbations at very small
 scales. 
-At the other end we need to specify the largest scale or smallest $k$ that we
-will consider. Analytically this is often taken to be the size of the universe,
-with $k=0$ being the equivalent mode. One immediate problem with this is that
-the Bunch-Davies vacuum initial conditions in Section
-\ref{sec:perts-intro} blow up. The standard workaround is to implement a cutoff
-at large scales beyond which the amplitude of perturbations is zero. This is a
-pragmatic approach but recently there has been some evidence that a sharp
+On the other hand, we also need to specify the largest scale (or smallest $k$) that
+we
+will consider. Analytically, this is often taken to be the size of the universe,
+with $k=0$ being the equivalent mode. One immediate problem with this
+specification, however, is that
+the Bunch-Davies vacuum initial conditions diverge. The standard approach to this
+problem is to implement a cutoff
+at large scales beyond which the amplitude of perturbations vanishes. This is a
+pragmatic approach, but recently there has been some evidence that a sharp
 cutoff similar to this could be responsible for the lack of power at large
 scales in the WMAP data \cite{Lyth:2007jh, spergel, Sinha:2005mn,Kim:2009pf}.
  
 The main concern is that the $k$ range covers most, if not all, of the modes observed
-to date in the CMB. The WMAP team rely for their main results,
-\cite{Komatsu:2008hk},  
- on $\ell$ multipoles in the range $\ell \in [3, 1000]$
+to date in the CMB. The WMAP team rely for their main results in 
+\Rref{Komatsu:2008hk}  
+ on $\ell$ multipoles in the range $\ell \in [3, 1000]$,
 which corresponds approximately\footnotemark  to $k\in \left[0.92 \e{-60}, 3.1 \times
 10^{-58}\right]\Mpl = \left[3.5\e{-4}, 0.12\right] \Mpc^{-1}$.
 \footnotetext{The approximate conversion for $\ell$ is $\ell\simeq \frac{2k}{H_0}$ and a
 Megaparsec
 is given in Planck units as $1\Mpc^{-1} \simeq 2.6247\e{-57} \Mpl$.}
-We will consider three different ranges of $k$ modes in producing the results in
+We will consider three different ranges of $k$ modes when producing the results in
 Chapter~\ref{ch:results}, all of which contain the WMAP pivot scale
 $\kwmap=0.002\Mpc^{-1}$. The
 choice of $k$ range is flexible with the only numerical constraint being that the
-number of modes at second order is one greater than a power of two. This enables
-faster integration using the Romberg method as explained below. 
+number of modes at second order should be equal to $2^l +1$, where $l$ is a positive
+integer. This enables
+faster integration using the Romberg method, as explained below. 
 
 
 In Chapter~\ref{ch:perts} the Klein-Gordon equations of motion were described for the
-background field, and first and second order field perturbations. These form the
-basis of the numerical calculation in this chapter. In Section~\ref{sec:eqs-num}
+background field, and the first and second order field perturbations. These form the
+basis of the numerical calculation in this chapter. In Section~\ref{sec:eqs-num},
 these equations are rewritten in a form more amenable to numerical work. The time
 variable is changed from conformal time, $\eta$, to the number of e-foldings, $\N$.
-The convolution terms which are present in the Fourier space equations are
-considered in spherical polar coordinates and split into calculable units. 
+The convolution terms which are present in the Fourier space equations are then
+written in terms of spherical polar coordinates and split into calculable units. 
 
 
-To test the numerical procedure four potentials have been used. These are defined in
+Four inflationary potentials were chosen in order to test the numerical calculation.
+These are defined in
 Section~\ref{sec:pots-num} and the steps taken to establish the values of the
 required parameters are outlined. The initial conditions used for the first order
-perturbations are the Bunch-Davies vacuum conditions as specified in
+perturbations are the Bunch-Davies vacuum conditions, as specified in
 Section~\ref{sec:perts-intro}. At second order the perturbations are set to be
-identically zero at the beginning of the simulation as explained in
+identically zero at the beginning of the simulation, as explained in
 Section~\ref{sec:initconds-num}. This section also describes the method and timing of
 the initialisation of the variables.
 
 
 In Section~\ref{sec:impl-num} the numerical method is discussed. The calculation can
-be split into four stages each of which is described in depth along with the
+be split into four stages, each of which is described in depth along with the
 logistical constraints and software environment. The numerical code is tested in
 Section~\ref{sec:tests-num} by comparing the computed value with an analytic result
-where this is possible. The choice of parameters in the calculation is informed by
-the results of this comparison. In Section~\ref{sec:disc-numerical} the results of
+where this is possible. The choice of parameters in the calculation is determined by
+the results of this comparison. In Section~\ref{sec:disc-numerical}, the results of
 this chapter are summarised and discussed.
 
 
@@ -105,13 +109,13 @@ this chapter are summarised and discussed.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-The Klein-Gordon equations in Chapter~\ref{ch:perts} are not set up for a
+The Klein-Gordon equations in Chapter~\ref{ch:perts} are not appropriate for a
 numerical calculation and in this section we rearrange them into a more
 suitable form. This involves a change of time coordinate and grouping of terms
 into smaller units for calculation.
 The second order slow roll equation \eqref{eq:KG2-fourier-sr-num} can be further
 simplified by performing the $p$
-integral and changing to spherical polar coordinates $q, \theta$ and $\omega$ where
+integral and changing to spherical polar coordinates $q, \theta$ and $\omega$, where
 $q=|\textbf{q}|$. The $\d^3q$ integral then becomes
 % 
 \begin{equation}
@@ -127,7 +131,8 @@ The argument of
 each $\dvp1$ or $\dvp1'$ term depends on $\theta$ through
 $|\kvi-\qvi|=\sqrt{k^2 + q^2 -2kq \cos\theta}$ and
 so must remain inside the $\theta$ integral. There is no $\omega$ dependence
-in $\dvp1$ with this choice of axes, so the last integral is simply evaluated.
+in $\dvp1$ with this choice of axes, so the last integral is straightforward
+to evaluate.
 
 In the slow roll case there are only four different $\theta$ dependent terms,
 here labelled $\A$--$\D$:
@@ -144,7 +149,8 @@ here labelled $\A$--$\D$:
 \d\theta \,.
 \end{align}
 %
-Written using the terms in \eqs{eq:AtoD-num} the slow roll equation
+When written in terms of the variables defined in \eqs{eq:AtoD-num},
+the slow roll equation
 \eqref{eq:KG2-fourier-sr-num} becomes:
 %
 \begin{equation}
@@ -180,11 +186,11 @@ order perturbations and \eqs{eq:KG2-fourier-sr-aterms} and
 
 
 A more appropriate time variable for the numerical simulation is the
-number of e-foldings \eqref{eq:nefolddefn-intro}, and we use 
+number of e-foldings \eqref{eq:nefolddefn-intro}. We employ 
 %
 \begin{equation}
 \label{eq:def-ntime}
-\N = \log ( a / a_{\mathrm{init}} )\,,
+\N = \log ( a / a_{\mathrm{init}} )
 \end{equation}
 %
 as our time variable instead of conformal time. This is measured from
@@ -194,7 +200,8 @@ differentiation with respect to $\N$ \footnote{This should not be confused
 with the use of $^\dagger$ as Hermitian conjugate, which is confined to
 Section~\ref{sec:perts-intro}.}.
 % 
-The changes in derivatives required are as follows:
+Derivatices with respect to conformal time, $\eta$, and coordinate time, $t$, are
+then given by
 %
 \begin{eqnarray}
  \pd{ }{\eta} &=& \frac{\d \N}{\d \eta}\pd{}{\N} = \H \pd{}{\N} \,,\\
@@ -202,17 +209,17 @@ The changes in derivatives required are as follows:
 \pd{}{\N}\,,
 \end{eqnarray}
 %
-where $\eta$ and $t$ are conformal and coordinate time respectively with $H =
-\frac{\d a}{\d t}/a$ and $\H = aH$.
+respectively, where $H = \d \ln a/\d t$ and $\H = aH$.
 % 
 
-If $a$ is set to be $1$ today we can calculate
+If $a$ is set to be unity at the present epoch, we can calculate
 $a_{\mathrm{init}}$ once the background run is complete and the number of e-foldings
-of inflation is determined.
-The value of $a$ at the end of inflation, $a_\mathrm{end}$, is calculated using the
+of inflation has been determined.
+The value of $a$ at the end of inflation, $a_\mathrm{end}$, is then calculated using
+the
 connection equation (see for example
 Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}). 
-If $a_0$ is the value of $a$ today we can relate these quantities by
+This is given by
 % 
 \begin{equation}
  \label{eq:connection-num}
@@ -223,8 +230,9 @@ If $a_0$ is the value of $a$ today we can relate these quantities by
 % 
 where $a_\mathrm{reh}$ and $a_\mathrm{eq}$ are the values of $a$ at the end of
 reheating and matter-radiation equality. Using the relationship between energy
-density and $a$ in matter and radiation dominated eras and the Friedmann
-equation \eqref{eq:Friedmann1-intro} from Section~\ref{sec:frw-intro} we can write
+densities and the scale factor relevant to the matter and radiation dominated
+eras, together with the Friedmann
+equation \eqref{eq:Friedmann1-intro}, we can write
 % 
 \begin{equation}
  \label{eq:conn2-num}
@@ -236,10 +244,11 @@ equation \eqref{eq:Friedmann1-intro} from Section~\ref{sec:frw-intro} we can wri
 \end{equation}
 % 
 where $H_\mathrm{end}$, $H_\mathrm{reh}$ and $H_\mathrm{eq}$ are the values of $H$
-at the end of inflation, end of reheating and matter-radiation equality. The value
+at the end of inflation, at the end of reheating and at matter-radiation equality.
+The value
 of $a_\mathrm{eq}$ is taken to be $4.15\e{-5} (\Omega_m h^2)^{-1}$ and
 $H_\mathrm{eq}=4.63\e{-54} \Omega_m^2 h^4 \Mpl$ \cite{Peiris:2008be, book:dodelson}.
-The mean value for $\Omega_m h^2$ given by WMAP5 + BAO + SN measurements is
+The mean value for $\Omega_m h^2$ determined by WMAP5 + BAO + SN measurements is
 $\Omega_m h^2 =0.1369$ \cite{Komatsu:2008hk}. With these values and taking
 $a_0=1$, the scale factor at the end of inflation is given by
 % 
@@ -250,14 +259,19 @@ a_\mathrm{end} \simeq e^{-72}
 \left(\frac{H_\mathrm{reh}}{\Mpl}\right)^{\frac{1}{6}}\,.
 \end{equation}
 % 
-For the results in Chapter~\ref{ch:results} it has been assumed that
+
+
+In Chapter~\ref{ch:results}, it is assumed that
 reheating occurs instantaneously at the end of
-inflation and $H_\mathrm{reh} = H_\mathrm{end}$. This gives approximately 65
-e-foldings from the end of inflation until now. It also fixes the horizon crossing
-time of the WMAP pivot scale $\kwmap=0.002\Mpc^{-1}$ to be about 60 e-foldings before
-the end of inflation. Because $H$ is not kept fixed during the calculation the
-number of e-foldings between horizon crossing and the end of inflation will differ
-depending on the potential of the model and the evolution of $H$. 
+inflation such that $H_\mathrm{reh} = H_\mathrm{end}$. This gives approximately 65
+e-foldings from the end of inflation to the present. It also fixes the horizon
+crossing
+time of the WMAP pivot scale, $\kwmap=0.002\Mpc^{-1}$, to be about 60 e-foldings
+before
+the end of inflation. Because the Hubble parameter is not kept fixed during the
+numerical calculation the
+number of e-foldings between horizon crossing and the end of inflation will depend
+on the form of the inflationary potential and the evolution of $H$. 
 
 
 % 
@@ -277,10 +291,11 @@ and
  2\dN{\vp_{0}}\Uphi \\
 % 
 + \left.\left(\frac{8\pi G}{H}\right)^2
-\left(\dN{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,. \label{eq:fontime}
+\left(\dN{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,, \label{eq:fontime}
 \end{multline}
 % 
-The second order equation in terms of $\N$ is
+respectively.
+The corresponding second order perturbation equation takes the form
 % 
 \begin{multline}
  \label{eq:KG2-fourier-sr-ntime}
@@ -291,7 +306,7 @@ The second order equation in terms of $\N$ is
 \dvp2(\kvi) +S(\kvi) = 0 \,,
 \end{multline}
 % 
-with the source term
+with the source term given by
 \begin{align}
 \label{eq:KG2-source-ntime}
 S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ &\Bigg\{
@@ -321,7 +336,7 @@ where
 
 
 
-The argument of $\dvp1$ and $\dN{\dvp1}$ in the $\A$--$\tilde{\D}$ terms requires
+The arguments of $\dvp1$ and $\dN{\dvp1}$ in the $\A$--$\tilde{\D}$ terms require
 special consideration. 
 To compute the integrals, $\theta$ is sampled at 
 % 
@@ -331,7 +346,8 @@ N_\theta = 2^l + 1
 \end{equation}
 % 
 points in the range
-$[0,\pi]$ (for some $l\in \mathbb{N}$ to allow Romberg integration) and the magnitude of
+$[0,\pi]$ (for some $l\in \mathbb{Z}^+$ to allow Romberg integration) and the
+magnitude of
 $\kvi-\qvi$
 is
 found using
@@ -341,32 +357,33 @@ found using
 \end{equation}
 %
 While $\dvp1(\kvi)=\dvp1(k)$, the value of $|\kvi-\qvi|$ is at most
-$2\kmax$ where $k,q \in [\kmin,\kmax]$. This means that to calculate
+$2\kmax$, where $k,q \in [\kmin,\kmax]$. This means that to calculate
 the source term for the $k$ range described we require that $\dvp1$
 and $\dN{\dvp1}$ be known in the range $[0, 2\kmax]$. In
-Section \ref{sec:impl-num} we will 
+Section \ref{sec:impl-num}, we will 
 show that this first order upper bound does not significantly affect
-performance. On the other hand $|\kvi-\qvi|$ can also drop below the
+performance. On the other hand, $|\kvi-\qvi|$ can also drop below the
 lower cutoff of calculated $k$ modes. As discussed above a sharp cutoff will be
 implemented and $\dvp1(k)=0$ used for the values below
 $\kmin$. When $\Delta k \simeq \kmin$ this affects only the $k=q$ modes and
-is only significant close to $\kmin$. Section \ref{sec:tests-num}
+is only significant close to $\kmin$. 
+Section \ref{sec:tests-num}
 describes how the accuracy is affected by changing $\Delta k$ and
 other parameters. Without extrapolating outside our computed $k$ range
-it appears to be very difficult to avoid taking this small number of
-$\dvp1$s to be zero.
+it appears to be very difficult to avoid taking $\dvp1=0$ for a small number of
+$k$ values below $\kmin$.
 
 
 The value of $|\kvi-\qvi|$ will not in general coincide with the computed $k$
-values of $\dvp1$. We use linear interpolation between the closest $k$s to
+values of $\dvp1$. We use linear interpolation between the neighbouring $k$'s to
 estimate the value of $\dvp1$ at these points. We leave to future work the
 implementation of a more
-accurate but also numerically intensive interpolation scheme.
+accurate and numerically more intensive interpolation scheme.
 
 
-Throughout the discussion above we have not specified any particular
-potential $V$ and indeed the numerical code can use any reasonable
-single field potential provided that it gives a period of inflationary expansion in
+Throughout the discussion above we have not specified any particular inflationary
+potential, $V$. Indeed the numerical code can use any reasonable
+single field potential provided that it drives a period of inflationary expansion in
 the e-folding range being simulated. In the next section the four potentials which
 have been tested are outlined. 
 
@@ -379,24 +396,33 @@ have been tested are outlined.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 To demonstrate the numerical calculation four different single field slow roll
-potentials have been chosen. They are not meant to be an exhaustive selection
-but do exhibit an interesting variety of behaviours. The potentials used are
+potentials were chosen. These are not intended to represent an exhaustive selection,
+but they do exhibit an interesting variety of behaviours. The potentials used are:
+% 
 % 
 \begin{enumerate}
+% 
  \item $V(\vp) = \msqphisq$. This is the original chaotic inflation model which is
 still in good agreement with the observational data \cite{Alabidi:2008ej}.
+% 
  \item $V(\vp) = \lambdaphifour$. Although increasingly in tension with observations
  this is a standard large field potential model.
+% 
  \item $V(\vp) = \phitwooverthree$. This potential with an unusual fractional index
 is the effective potential resulting from the monodromy inflation model of D$4$
-branes where observable tensor modes are possible \cite{Silverstein:2008sg,
+branes, where observable tensor modes are possible \cite{Silverstein:2008sg,
 Alabidi:2008ej}.
+% 
  \item $V(\vp) = \msqphisqwithV$. This hybrid inflation model requires inflation to
-be ended by the decay of another field but this will not be implemented. Instead
-inflation will be manually set to end when $\vp \simeq 8$. By taking a value of
-$U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can be obtained
+be terminated by the decay of another field. However, this will not be
+implemented in the code. Instead,
+inflation will be set by hand to end when $\vp \simeq 8$. By taking a value of
+$U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
 \cite{Linde:1993cn,Komatsu:2008hk}.
+% 
 \end{enumerate}
+% 
+% 
 In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
 plotted in terms of $\vp$ and $\N$ over the course of the calculated inflationary
 period. Throughout the rest of this chapter we will use $V(\vp)=\msqphisq$ to
@@ -469,7 +495,8 @@ used.}
   {numerical/graphs/msqphisq_withV0_params-small}
 }
 \caption[Parameter values for different potentials]{Parameter values for the
-different potentials are chosen fixing $\Pr$ using WMAP5 data.}
+different potentials are chosen by requiring consistency with the WMAP5
+normalisation of the power spectrum.}
 \label{fig:params-num}
 \end{figure}
 
@@ -488,11 +515,11 @@ $\dN{\vp_{0}}$. These initial conditions and the range of
 e-foldings to be simulated must be selected with the choice of
 potential in mind. Not only must the
 e-folding range include an inflationary period, but the $k$ modes to
-be calculated at first and second order must begin inside the horizon
-during this range. For example the initial value $\vp_0 = 18\Mpl$ for the
+be calculated at first and second order must begin inside the horizon. For example,
+the initial value $\vp_0 = 18\Mpl$ for the
 $\msqphisq$ model 
 gives the background evolution described below and shown in Figure~\ref{fig:eps}. As
-the evolution will quickly reach the attractor solution, the choice for $\dN{\vp_0}$
+the evolution quickly reaches the attractor solution, the choice for $\dN{\vp_0}$
 is not particularly important; changing the initial value adds or subtracts a small
 number of e-foldings of evolution before the modes are initialised
 \cite{Ringeval:2007am, Martin:2006rs}.
@@ -502,7 +529,7 @@ The initial conditions are set for each $k$ mode a few e-foldings
 before horizon crossing. This follows the example of Salopek
 \etal
 \cite{Salopek:1988qh} and is justified on the basis that the mode is
-sufficiently inside the
+sufficiently far inside the
 horizon for the Minkowski limit to be taken. This initial time,
 $\N_{\mathrm{init}}(k)$, is calculated to be when
 %  
@@ -524,8 +551,15 @@ initial conditions \cite{Salopek:1988qh}, with
 \frac{e^{-i k\eta}}{\sqrt{2k}} \left(1 + i \frac{k}{a H}\right) \,,
 \end{eqnarray}
 %
-where the conformal time $\eta$ can be calculated from $\eta=\int \d\N/aH \simeq
--(aH(1-\bar{\varepsilon}^2_H))^{-1}$, when $\bar{\varepsilon}_H$ changes slowly. For
+where conformal time $\eta$ can be calculated from 
+% 
+\begin{equation}
+\label{eq:etacalc-num}
+\eta=\int \d\N/aH \simeq
+-(aH(1-\bar{\varepsilon}^2_H))^{-1}\,,
+\end{equation} 
+% 
+when $\bar{\varepsilon}_H$ changes slowly. For
 example $\kwmap$ is initialised
 about $65$ e-foldings before the end of inflation and crosses the horizon about $5$ e-foldings
 later.
@@ -537,7 +571,7 @@ begun.
 We are interested in the production of second order effects by the
 evolution of the the Gaussian first order modes and we make no
 assumptions about the existence of second order perturbations before
-the simulation begins. Therefore we set the initial condition for each second order
+the simulation begins. Therefore, we set the initial condition for each second order
 perturbation mode to be $\dvp2=0, \dN{\dvp2}=0$ at
 the time when the corresponding first order perturbation is initialised.
 
@@ -558,20 +592,20 @@ website: \url{http://www.python.org}} programming language (with compiled Cython
 components) and uses the
 Numerical and Scientific Python modules for their strong compiled array support
 \cite{scipy}. The core of the model computation is a customised
-Runge-Kutta 4th order method (see for example Eq.~(25.5.10) in
+Runge-Kutta fourth order method (see, for example, Eq.~(25.5.10) in
 \cite{abramowitz+stegun}).  Following
 Refs.~\cite{Martin:2006rs} and \cite{Ringeval:2007am} the numerical calculation
 proceeds in four stages. The background equation (\ref{eq:bgntime}),
-rewritten as two first order (in $\N$ derivatives) equations, is
+rewritten as two first order equations, is
 evolved from the specified initial state until some end time required
 to be after the end of the inflationary regime.  The end of inflation
 occurs when $\d^2a/\d t^2$ is no longer positive and the parameter
-$\bar{\varepsilon}^2_H = \varepsilon_H= -\dN{H}/H$ first becomes greater than or
-equal to $1$
+$\bar{\varepsilon}^2_H = \varepsilon_H= -\dN{H}/H$ becomes greater than or
+equal to unity
 (see Figure~\ref{fig:eps}). This specifies a new end time for the first
 order run, although the simulation can run beyond the strict end of
-inflation if required. For the $V(\vp)=\msqphisqwithV$ model the end of inflation is
-set by hand to remove the need for a second inflation-terminating field. The initial
+inflation if required. For the $V(\vp)=\msqphisqwithV$ model, the end of inflation is
+set by hand to remove the need for a second, inflation-terminating field. The initial
 conditions for the first order system are then set as above.
 %
 \begin{figure}
@@ -587,30 +621,34 @@ $x$-axis,
 \label{fig:eps}
 \end{figure}
 
+
 The system of ordinary differential equations for the first order
-perturbations in \eq{eq:fontime} is calculated using a standard
+perturbations in \eq{eq:fontime} is integrated using a standard
 Runge-Kutta method. A fixed time step method is used in order to
-simplify the construction of the  second order source term and because
-\emph{a priori} it is not known which time steps would be required at
+simplify the construction of the  second order source term.
+This is also necessary since it is not known \emph{a priori}
+which time steps would be required at
 second order if an adaptive time step system were used. The first
 order equations are separable in terms of $k$ and so it is
-straightforward to run multiple instances of the system and collate
+straightforward to run the system in parallel and collate
 the results at the end. However, as will be discussed below, the first
 order calculation is not computationally expensive in comparison with
-the other stages and takes of the order of a few minutes for around
+the other stages and only takes of the order of a few minutes for around
 $8000$ time steps with $\Delta \N=0.01$ and $1025$ $k$ modes.
 
 
-Once the first order system has been solved 
+Once the first order system has been solved, 
 the source term for the second order system must be calculated. As the
 real space equation for the source involves terms quadratic in the
-first order perturbation it is necessary to perform a convolution in
-Fourier space, as shown in \eq{eq:KG2-fourier-sr-aterms}.  Transforming
-back into real space was not considered due to the presence of both
-gradient operators and their inverses. Here the slow roll version of
-the source term integrand has been used, but the method can equally be
-applied to the full equation. This stage is the most computationally
-intensive and can be run in parallel, as the calculation at each time step is
+first order perturbation, it is necessary to perform a convolution in
+Fourier space, as shown in \eq{eq:KG2-fourier-sr-aterms}.  We do not transform
+back into real space due to the presence of both
+gradient operators and their inverses. 
+Instead, the slow roll version of
+the source term integrand was used, although it is worth remarking that the method
+can also be
+applied to the full equation. This stage is computationally the most
+intensive, and can be run in parallel since the calculation at each time step is
 independent of the others. The nature of the convolution integral and the
 dependence of the first order perturbation on the absolute value of
 its arguments requires that twice as many $k$ modes are calculated at
@@ -618,7 +656,7 @@ first order than are desired at second order.  As
 the first order calculation is computationally cheaper than the source
 term integration, this does not significantly lower the possible
 resolution in $k$-space, which is still limited by the source term
-computation time.  Once the integrand is determined it is fed into a
+computation time.  Once the integrand is determined, it is fed into a
 Romberg integration scheme. As for $\theta$,  which was
 discretised by $N_\theta$ points in \eq{eq:AtoD-num}, this requires that the
 number of $k$ modes is
@@ -628,17 +666,17 @@ number of $k$ modes is
 N_k=2^l + 1\,,
 \end{equation}
 %
-for some\footnotemark $\,l\in\mathbb{N}$. 
+for some\footnotemark $\,l\in\mathbb{Z}^+$. 
 \footnotetext{The number of discretised $k$ modes $N_k$ does not need to be equal to
   $N_\theta$.}
-This requirement can be lifted by opting for a less
+This requirement can be relaxed by opting for a less
 accurate and somewhat slower standard quadrature routine.
 
 
 The second order system is finally run with the source term and other
 necessary data being read as required from the memory or disk. The
-Runge-Kutta method calculates half time steps for each required point,
-for example if $y(x_n)$ is known and $y(x_{n+1})=y(x_n+h)$ is required
+Runge-Kutta method calculates half time steps for each required point.
+For example, if $y(x_n)$ is known and $y(x_{n+1})=y(x_n+h)$ is required
 (for step size $h$), the method will calculate the derivatives of $y$
 at $y(x_n), y(x_n +h/2)$ and $y(x_n + h)$. As we need to specify the
 source term at every calculated timestep, the requested timestep for
@@ -649,17 +687,16 @@ first order variables between time steps.
 
 
 The second order system is similar in run time to the first order 
-system but the
-source integration is more complex, involving the
+system. However, the
+source integration is more complex and involves the
 integration of $N_k^2\times N_\theta$ values at
 each time step.
-Although a large amount of data is produced at each step at this
-stage for 
-each of the wavenumbers $k$, only the integrated result is stored to be used
+Although a large amount of data is produced at each step for 
+each of the wavenumbers $k$, only the integrated result is stored for use
 in the second order run.
-Results for each stage are stored in the open HDF5 standard which can deal
-efficiently with large
-files and is very portable, allowing data analysis independent of the
+Specifically, results for each stage are stored in the open HDF5 standard, which can
+deal efficiently with large
+files, is very portable and allows for data analysis independent of the
 Python/Numpy programming environment.
 % We intend to release the program under a suitable license once the code has
 % matured and some of the improvements discussed in Section \ref{sec:disc-num} have
@@ -678,17 +715,17 @@ Python/Numpy programming environment.
 
 The numerical code has been tested in a variety of controlled
 circumstances in order to quantify the effect of different parameter options. In
-particular it is important to know whether the values
-picked for $N_\theta$, the number of discretised $\theta$s, $\Delta k$, the size of
-the
-spacing of the discretised $k$ modes, and the range of
-$k$ values significantly impacts on the results. The ODE solving parts
-of the code are straightforward and follow standard algorithms.
+particular, it is important to establish whether the values
+specified for the number of discretised $\theta$'s, $N_\theta$, the size
+of the
+spacing of the discretised $k$ modes, $\Delta k$, and the range of
+$k$ values significantly impact on the results. The sections
+of the code that solve ODEs are straightforward and follow standard algorithms.
 
 
 As mentioned above the WMAP results \cite{Komatsu:2008hk} use
 observations in the range $k\in [0.92 \e{-60}, 3.1 \times
-  10^{-58}]\Mpl = [3.5\e{-4}, 0.12] M_{\mathrm{pc}}^{-1}$. We will
+  10^{-58}]\Mpl = [3.5\e{-4}, 0.12] \Mpc^{-1}$. We will
 consider three different $k$ ranges both in our results and the tests
 of the code\footnotemark:
 %
@@ -717,8 +754,10 @@ K_3 &= \left[0.25\e{-60}, 1.02425\e{-57}\right]\Mpl\,, &\Delta k = 1\e{-60}\Mpl
 }
 % 
 The first, $K_1$, has a very fine resolution but covers only a small portion of the WMAP range. 
-The next, $K_2$, is closest to the WMAP range with a still quite fine resolution.  The final
-range, $K_3$, has a larger $k$ mode step size $\Delta k = 1\e{-60}\Mpl = 3.8\e{-4}\Mpc^{-1}$ and
+The next, $K_2$, is closest to the WMAP range and still has quite a fine resolution. 
+The final
+range, $K_3$, has a larger $k$ mode step size, $\Delta k = 1\e{-60}\Mpl =
+3.8\e{-4}\Mpc^{-1}$, and
 covers a greater range than the others, extending to much smaller scales than WMAP can observe.
 
 \begin{figure}
@@ -734,9 +773,10 @@ than the lower red line ($N_\theta=513$).]{
  \label{fig:err-nthetas}
 }\qquad
 % 
-\subfloat[Relative error for three different $k$ ranges][The relative error for the 3
-different $k$ ranges $K1$, $K2$,
-$K3$ (starting from the left). The parameter $\Delta k$
+\subfloat[Relative error for three different $k$ ranges][The relative error for the
+three
+different $k$ ranges $K_1$, $K_2$,
+$K_3$ (starting from the left). The parameter $\Delta k$
 is set equal to $1\e{-61}\Mpl, 3\e{-61}\Mpl, 1\e{-60}\Mpl$ respectively.]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/err-kranges-small.pdf}
  \label{fig:err-kranges}
@@ -751,9 +791,9 @@ The main new addition in the code is the calculation of the
 convolution of the perturbations for the source term,
 \eq{eq:KG2-source-ntime}. The first of the $\theta$ dependent terms in
 \eq{eq:AtoD-num}, $\A$,
-can be convolved analytically for certain smooth $\dvp1(k)$s. 
+can be convolved analytically for certain smooth choices of $\dvp1(k)$. 
 Taking $\dvp1(k)$ to be similar in form to the initial conditions
-(\ref{eq:foics}), gives $\dvp1(k)\propto 1/\sqrt{k}$ with proportionality constant
+(\ref{eq:foics}) gives $\dvp1(k)\propto 1/\sqrt{k}$ with proportionality constant
 $\alpha$.
 If $I_\A$ denotes the convolution of the $\A$ term:
 % 
@@ -761,7 +801,7 @@ If $I_\A$ denotes the convolution of the $\A$ term:
  I_\A (k) = \int_{\kmin}^{\kmax} q^2 \dvp1(q) \A(k, q) \d q \,,
 \end{equation}
 % 
-then putting in $\dvp1(k) = \alpha/\sqrt{k}$ gives
+then substituting $\dvp1(k) = \alpha/\sqrt{k}$ implies that
 % 
 \begin{equation}
  I_\A(k) = \alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
@@ -801,20 +841,20 @@ combinations of $k$ ranges and $N_\theta$. The relative error
 \end{equation}
 %
 is small for all the tested cases but certain combinations of
-parameters turned out to be better than others. The relative error of
+parameters turned out to be more accurate than others. The relative error of
 all the following results is not affected by the choice of $\alpha$ so
-we will keep it constant throughout.
+we will keep its numerical value fixed throughout.
 
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/err-deltak4.pdf}
- \caption[Relative error in the convolution term $\A$]{The relative error in
+ \caption[Relative error in the convolution term $\A$]{The relative error in the
 convolution term $\A$ for different values of $\Delta k$.
 The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and $N_\theta=513$. The
 upper 
-blue line ($\Delta k=1\e{-61}\Mpl$ and middle green line ($\Delta k=3\e{-61}\Mpl$) have relative
-errors at
-least an order of magnitude larger than the lower red line ($\Delta k=1\e{-60}\Mpl$).}
+blue line ($\Delta k=1\e{-61}\Mpl$) and middle green line ($\Delta k=3\e{-61}\Mpl$)
+have relative errors at least an order of magnitude larger than the lower red line
+($\Delta k=1\e{-60}\Mpl$).}
  \label{fig:err-deltaks}
 \end{figure}
 
@@ -829,31 +869,31 @@ might expect.
 
 
 As mentioned above the choice of $k$ range is especially important as
-the convolution of the terms depends heavily on the minimum and
-maximum values of this range. Indeed this is clear from the analytic
+the convolution of the terms depends strongly on the minimum and
+maximum values of this range. Indeed, this is clear from the analytic
 solution in \eq{eq:err-analytic-num}. Figure~\ref{fig:err-kranges}
 shows the difference in relative error for the three different $k$
 ranges described above with 
 % Mpc values 
 $\Delta k= 3.8\e{-5}, 1.2\e{-4}$ and $3.8\e{-4}\Mpc^{-1}$
 % Mpl values
-($\Delta k= 1\e{-61}, 3\e{-61},1\e{-60}\Mpl$)
+($\Delta k= 1\e{-61}, 3\e{-61},1\e{-60}\Mpl$),
 respectively. The accuracy is similar in all three cases.
 
 
 Another important check is whether the resolution of the $k$ range is
-fine enough. Varying $\Delta k$ can not be done in isolation of
-course, if the constraint for $N_k$, \eq{eq:nk-constraint-num},
-is to
-be met. For this test the end of the $k$ range changed with $\Delta k$
-but the other parameters were kept fixed as $\kmin=1\e{-60}\Mpl=3.8\e{-4}\Mpc^{-1},
+fine enough. Varying $\Delta k$ can not be done in isolation if the
+constraint \eqref{eq:nk-constraint-num} for $N_k$ is to
+be satisfied. For this test the end of the $k$ range was changed with $\Delta k$
+but the other parameters were kept fixed at $\kmin=1\e{-60}\Mpl=3.8\e{-4}\Mpc^{-1},
 N_k = 1025$ and $N_\theta=513$. Figure~\ref{fig:err-deltaks} plots
-these results again for only three indicative values.  For $\Delta
-k<\kmin$, here the upper two lines, there is a marked degradation in
-the accuracy of the method. This is understandable as many
+these results again for three indicative values.  For $\Delta
+k<\kmin$, there is a marked degradation in
+the accuracy of the method for the upper two lines. This is understandable as many
 interpolations of multiples of $\Delta k$ below $\kmin$ will be set to
-$0$. Once $\Delta k$ is greater than $\kmin$ the relative error is
-very similar for higher values (not shown in the figure).
+zero. Once $\Delta k$ is greater than $\kmin$, the relative error is
+insensitive to further increases in the value of $\Delta k$. (This is not shown in
+the figure.)
 
 
 \begin{figure}
@@ -862,20 +902,19 @@ very similar for higher values (not shown in the figure).
  % err-deltak-kmin.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=
  \caption[Relative error of the convolution term with fixed $\kmin$]{The 
 relative error of the convolution term for three different values of $\Delta k$. In
-contrast to Figure~\ref{fig:err-deltaks} $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1} \le \Delta k$ for
-each.}
+contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1} \le
+\Delta k$ for each case.}
  \label{fig:err-deltak-kmin}
 \end{figure}
 
 
 It should be noted that these tests only show the relative errors in the
-computation of the $\A$ convolution term, the most straightforward term in
-\eq{eq:AtoD-num}, and
-do not
-represent
+computation of the convolution term $\A$, corresponding to the most straightforward
+term in \eq{eq:AtoD-num}. They
+do not represent
 errors for the full calculation. However, they show that at least for
 the pure convolution term the accuracy is good compared with the
-analytic results. Equation (\ref{eq:err-analytic-num}) gives some indication of
+analytic result. \eq{eq:err-analytic-num} gives some indication of
 the difficulty involved in finding an analytic solution for the other
 terms, although this is a goal for future work.
  
@@ -891,14 +930,14 @@ terms, although this is a goal for future work.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-This chapter described the implementation of the numerical calculation of second
+This chapter has described the implementation of the numerical calculation of second
 order cosmological perturbations.
 The Klein-Gordon equations in Chapter~\ref{ch:perts} are the central focus of this
 computation. In Section~\ref{sec:eqs-num} these equations were rewritten using $\N$
 as the time variable, a choice more suitable for numerical work. The convolution
-integrals in \eq{eq:KG2-fourier-sr-num} can be considered in spherical polar
+integrals in \eq{eq:KG2-fourier-sr-num} can be expressed in spherical polar
 coordinates and split into four sub-terms $\A$--$\wt{\D}$. Computing the source term
-\eq{eq:KG2-source-ntime} which is written using $\A$--$\wt{\D}$ is the most complex
+\eq{eq:KG2-source-ntime}, which is written using $\A$--$\wt{\D}$, is the most complex
 and
 time consuming part of the calculation.
 
@@ -909,26 +948,28 @@ potential was determined by comparing the calculated $\Pr$ with the WMAP5 value.
 In Section~\ref{sec:initconds-num} the initial conditions for the computed
 quantities were explained. Each $k$ mode is initialised well inside the horizon
 using the Bunch-Davies vacuum conditions from Section~\ref{sec:perts-intro}. The
-second order perturbations are set to zero to begin. This choice concentrates focus
+second order perturbations are initially set to zero. This choice
+concentrates focus
 on the generation of second order effects during the observable period of
 inflation.
 
 
 The technical implementation of the code was discussed in
-Section~\ref{sec:impl-num}. There are four stages in the procedure. First the
+Section~\ref{sec:impl-num}. There are four stages in the procedure. First, the
 background fields are evolved over a specified time period. The end time of
 inflation is then determined by the condition $\varepsilon_H=1$. With this
 information the initialisation of the first order modes can be performed. In the
-second stage the first order perturbation equations are solved. These results are
+second stage, the first order perturbation equations are solved. These results are
 used in the third stage to calculate the source term \eq{eq:KG2-source-ntime} at each
-time for each $k$. Finally the second order perturbations equations are solved using
+time for each $k$. Finally, the second order perturbation equations are solved using
 the source term results.
 
 To test the source term calculation the numerical results were compared to an
 analytic solution in Section~\ref{sec:tests-num}. Numerical parameters such as
-$N_\theta$ and $N_k$ were set by minimising the relative error between these results.
+$N_\theta$ and $N_k$ were set by minimising the relative error between the two
+approaches.
 
-In Chapter~\ref{ch:perts} the theoretical equations for second order perturbations
+In Chapter~\ref{ch:perts} the evolution equations for second order perturbations
 were introduced. In this chapter the practical implementation of a numerical
 calculation of these perturbations was discussed. In Chapter~\ref{ch:results} the
 results of this numerical calculation will be examined and the next steps towards an
