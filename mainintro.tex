@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.56 2009/10/21 11:50:49 ith Exp $
+% $Id: mainintro.tex,v 1.57 2009/10/29 12:36:56 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.56 2009/10/21 11:50:49 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.57 2009/10/29 12:36:56 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -372,12 +372,21 @@ which took place just after the Big Bang
 Starobinsky:1982ee}. During this
 expansion the comoving Hubble radius $(aH)^{-1}$ decreases and the isotropic
 pressure of the universe is negative \cite{book:liddle, Baumann2009}:
+% 
 \begin{equation}
 \label{eq:infldefn-intro}
  \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
   \Rightarrow E + 3P < 0 \,.
 \end{equation}
-We can also define a new parameter $\varepsilon_H = -\dot{H}/H$ and then rewrite
+% 
+We can also define a new parameter 
+% 
+\begin{equation}
+\label{eq:epsilonHdefn-intro}
+\varepsilon_H = -\frac{\dot{H}}{H^2}\,,
+\end{equation}
+% 
+and then rewrite
 the Raychaudhuri equation \eqref{eq:Friedmann2-intro} as
 % 
 \begin{equation}
