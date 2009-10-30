@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % dbi.tex - Ian Huston
-% $Id: dbi.tex,v 1.55 2009/10/29 12:36:56 ith Exp $
+% $Id: dbi.tex,v 1.56 2009/10/30 14:11:25 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.55 2009/10/29 12:36:56 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: dbi.tex,v 1.56 2009/10/30 14:11:25 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -954,12 +954,26 @@ next chapter.
 \label{sec:others-dbi}
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\begin{figure}[htb]
+ \centering
+ \includegraphics[keepaspectratio=true,
+width=\textwidth]{./dbi/graphs/dbi-review.pdf}
+ % dbi-review.pdf: 498x327 pixel, 72dpi, 17.57x11.54 cm, bb=0 0 498 327
+ \caption{A schematic of recent DBI inspired models}
+ \label{fig:review-dbi}
+\end{figure}
+% 
+
 We have found that the standard DBI model appears to be in conflict with
 observations. Many attempts have since been made to modify the original scenario in
-order to evade these bounds. These can be classified mainly according to
-whether they involve single or multiple fields. 
+order to evade these bounds. These can be classified according to
+whether they involve single or multiple fields and single or multiple branes.
+Figure~\ref{fig:review-dbi} shows a list of some models in
+each category.
 
-Single field models have the same single degree of freedom as DBI inflation but
+
+The most straightforward extensions of the DBI model have the same single degree of
+freedom, but
 rely on other physical mechanisms to ease the bounds on $r$.
 A natural extension to the single ${\rm D3}$-brane model 
 is to consider a ${\rm D}p$-brane wrapped around a $(p-3)$-cycle of the 
@@ -968,12 +982,11 @@ This leads to a change in the relationship
 between $\rho$ and $\vp$ from that defined in Section~\ref{sec:dbiinflation}
 \cite{Kobayashi:2007hm, Becker:2007ui, Ward:2007gs}.  
 For example, Becker \etal \cite{Becker:2007ui} 
-have proposed a model where inflation is driven by a warped ${\rm D5}$-brane. 
+have proposed a model in which inflation is driven by a warped ${\rm D5}$-brane. 
 In this case, the range of allowed values for the inflaton 
 becomes independent of the throat charge, $N$, which weakens the upper bound on 
 the tensor-scalar ratio to $r \lsim 0.04$. (Strictly speaking there is a weak
-dependence on the charge since
-$\Delta \varphi \sim N^{-1/4}$.)
+dependence on the charge since $\Delta \varphi \sim N^{-1/4}$.)
 However, in arriving at this bound, it was assumed that 
 backreaction effects of any fluxes in the throat were 
 negligible. 
@@ -981,47 +994,68 @@ Kobayashi \etal \cite{Kobayashi:2007hm}
 considered both ${\rm D5}$- and
 ${\rm D7}$ wrapped brane models, but concluded that the former case
 required an excessively large background charge in 
-order to relax the bounds on $r$. Whilst this is highly constraining, it is
-still much better than the single brane scenario, which
-requires a
-much higher background charge and therefore are effectively ruled
-out as a predictive model. 
+order to relax the bounds on $r$. 
+% 
+This requirement is highly constraining, but is
+still not as restrictive as the charge required by the single brane scenario,
+which effectively rules that out as a predictive model. 
+% 
 Thus, wrapped brane configurations are preferable to
-single brane models but the parameter space of the former is still severly
+single brane models but the parameter space of the former is still severely
 limited by the WMAP5 observations \cite{Alabidi:2008ej}. 
 % However
 % the difficulty in these models is that the backreaction is no longer under
 % control. 
 
+
 Another interesting proposal is warped Wilson line DBI. In this scenario, moduli
 fields associated with Wilson
 lines play the role of the inflaton \cite{Avgoustidis:2008zu}. This scenario is
 T-dual to the
-standard DBI model with non-parallel branes. The upper bound on $r$
-in \eq{eq:upperbound} a similar analysis in this case leads to a second
-consistent lower bound. Thus there is no conflict as long as enough tensor
-modes are produced that both lower bounds are met. 
+standard DBI model with non-parallel branes. In general, the model describes the
+physics of a single brane with multiple position fields and multiple Wilson line
+fields.
 % 
-Changing the physical setting can also allow larger field ranges. By considering
-D4-branes in compactified manifolds containing monodromies extremely large
-field ranges can be achieved. These lead to possibly observable tensor modes
-\cite{Silverstein:2008sg}. 
+However, in \Rref{Avgoustidis:2008zu} observational predictions were derived for
+the case when the brane position is fixed and only one Wilson line degree of freedom
+is used. This implementation is, therefore, a single brane, single field model.
+% 
+By following the method in Section~\ref{sec:upper-dbi} for this single field model,
+a lower bound on $r$ is derived, instead of the upper bound \eqref{eq:upperbound}
+\cite{Avgoustidis:2008zu}. The lower bound \eqref{eq:lowerbound} remains valid for
+this scenario. 
+% 
+There are, therefore, two lower bounds on $r$ and the inconsistency of the
+standard DBI model is not replicated. 
+ 
 
 
+Changing the physical setting can also allow larger field ranges. Extremely large
+field ranges can be achieved by considering
+D4-branes in compactified manifolds containing monodromies. These large field
+variations lead to possibly observable tensor modes
+\cite{Silverstein:2008sg}. Although formulated in Type IIA string theory, the
+monodromy model has a simple inflationary interpretation as a large field, slow roll
+model with the potential $V(\vp)=\vp^{2/3}$. 
+
+
+The next set of models that can be considered are the single brane, multi field
+models. 
+% 
 The warped throat is six-dimensional, so it is natural to consider the case where
 the D3-brane is not restricted to a radial trajectory. This was investigated in
 Refs.~\cite{spinflation} and \cite{Huang:2007hh}. Increasing the degrees of
-freedom in this way introduces the possibility of entropy mode production. There is a
-change in the predictions for the amount and type of non-Gaussianity produced
+freedom in this way introduces the possibility of entropy mode production. There are
+changes in the predictions for the amount and type of non-Gaussianity produced
 and the constraints on $r$ can be eased \cite{Arroja:2008yy, Langlois:2009ej,
 Langlois:2008qf, Langlois:2008wt, Mizuno:2009mv, Mizuno:2009cv}. 
 % 
-Differences in
-the bi- and tri-spectra could enable multi-field DBI models to be distinguished
-from single field ones. In particular multi-field DBI models
-have a unique tri-spectrum term with amplitude proportional to $\fnlloc\fnleq$
-\cite{RenauxPetel:2009sj}. This opens the possibility of a distinct
-observational signature for this type of model.
+% Differences in
+% the bi- and tri-spectra could enable multi-field DBI models to be distinguished
+% from single field ones. In particular multi-field DBI models
+% have a unique tri-spectrum term with amplitude proportional to $\fnlloc\fnleq$
+% \cite{RenauxPetel:2009sj}. This opens the possibility of a distinct
+% observational signature for this type of model.
 % 
 Other multi-field models introduce copies of the single DBI action with either
 the same or different sound speeds \cite{Cai:2008if, Cai:2009hw},  use
