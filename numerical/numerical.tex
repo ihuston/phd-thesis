@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.36 2009/11/05 13:04:51 ith Exp $
+% $Id: numerical.tex,v 1.37 2009/11/05 15:32:16 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.36 2009/11/05 13:04:51 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.37 2009/11/05 15:32:16 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -932,7 +932,8 @@ I_\B = 2\pi \int_\kmin^\kmax q^2 \dvp1(q) \B(k,q) \d q \,,
 has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
 % 
 \begin{align}
- I_\B = -\frac{\pi\alpha^2}{168}\Bigg\{ 
+\label{eq:intb-soln-num}
+ I_\B = -\frac{\pi\alpha^2}{168 k}\Bigg\{ 
 	&-63 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k}}{\sqrt{k+\kmin} + \sqrt{\kmin}}
 			    \Biggr)
 	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{\kmax-k} +
@@ -947,8 +948,90 @@ has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
 	&+\sqrt{\kmin}\Bigg[ \left(65k^3 - 8k\kmin^2 \right)\left(\sqrt{k+\kmin} -
 	  \sqrt{k-\kmin}\right) \nonumber \\
 	&\qquad +\left(-22k^2\kmin +16\kmin^3\right) \left(\sqrt{k+\kmin} +
-         \sqrt{k-\kmin} \right) \Bigg] \Bigg\}
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
+% 
+If in addition to $\dvp1(q) = \alpha/\sqrt{q}$ we also take
+% 
+\begin{equation}
+ \dN{\dvp1}(q) = -\frac{\alpha}{\sqrt{q}} -i\frac{\alpha\sqrt{q}}{\beta}\,
+\end{equation}
+% 
+then the $\wt{\C}$ and $\wt{\D}$ terms can also be integrated analytically.
+The integral of the $\wt{\C}$ term is 
+% 
+\begin{align}
+ \label{eq:cint-num}
+I_{\wt{\C}} &= \int\d^3 q\, \dvp1(\qvi) \dN{\dvp1}(\kvi-\qvi) 
+    = 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\C}(\kvi, \qvi) \\
+% 
+ &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
+     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} 
+            +\frac{i}{\beta}\left(k^2 + q^2 -2kq \cos\theta\right)^{\frac{1}{4}}
+	\right) \sin\theta \d \theta\,,
+\end{align}
+% 
+and the analytic solution is given by
+% 
+\begin{align}
+\label{eq:cint-soln-num}
+I_{\wt{\C}} = -I_\A -i\frac{\pi\alpha^2}{240 \beta k}\Bigg\{ 
+	&15 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k+\kmin} + \sqrt{\kmin}}{\sqrt{k}}
+			    \Biggr)
+	 + \log\Biggl( \frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k+\kmax}
+			+\sqrt{\kmax}}\Biggr) \nonumber \\
+	&-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+	\Bigg] \nonumber\\
+% 
+        &+\sqrt{\kmax}\Bigg[ \left(15k^3 + 136k\kmax^2 \right)\left(\sqrt{k+\kmax} +
+	  \sqrt{\kmax-k}\right) \nonumber \\
+	&\qquad +\left(118k^2\kmax -48\kmax^3\right) \left(\sqrt{k+\kmax} -
+         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
+% 
+	&-\sqrt{\kmin}\Bigg[ \left(15k^3 + 136k\kmin^2 \right)\left(\sqrt{k+\kmin} +
+	  \sqrt{k-\kmin}\right) \nonumber \\
+	&\qquad +\left(118k^2\kmin +48\kmin^3\right) \left(\sqrt{k+\kmin} -
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
+\end{align}
+ % 
+The integral of the $\wt{\D}$ term is 
+% 
+\begin{align}
+ \label{eq:dint-num}
+I_{\wt{\D}} &= 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\D}(\kvi, \qvi) \\
+% 
+ &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
+     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} 
+            +\frac{i}{\beta}\left(k^2 + q^2 -2kq \cos\theta\right)^{\frac{1}{4}}
+	\right) \cos\theta\sin\theta \d \theta\,,
+\end{align}
+% 
+and the analytic solution is
+% 
+\begin{align}
+\label{eq:dint-soln-num}
+I_{\wt{\D}} = -I_\B -i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ 
+	&135 k^5 \Bigg[ \log\Biggl(\frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k}}
+			    \Biggr)
+	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{k+\kmin} +
+			  \sqrt{\kmin}}\Biggr) \nonumber \\
+	&-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+	\Bigg] \nonumber\\
+% 
+        &-\sqrt{\kmax}\Bigg[ \left(-185k^4 + 168k^2\kmax^2-32\kmax^4
+	    \right)\left(\sqrt{k+\kmax} - \sqrt{\kmax-k}\right) \nonumber \\
+	&\qquad +\left(70k^3\kmax +16k\kmax^3\right) \left(\sqrt{k+\kmax} +
+         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
+% 
+	&+\sqrt{\kmin}\Bigg[ \left(-185k^4 + 168k^2\kmin^2 -32\kmax^4
+	    \right)\left(\sqrt{k+\kmin} - \sqrt{k-\kmin}\right) \nonumber \\
+	&\qquad +\left(70k^3\kmin +16k\kmin^3\right) \left(\sqrt{k+\kmin} +
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
+\end{align}
+
+
+
+
 
 
 
