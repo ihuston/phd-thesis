@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.37 2009/11/05 15:32:16 ith Exp $
+% $Id: numerical.tex,v 1.38 2009/11/05 18:03:17 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.37 2009/11/05 15:32:16 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.38 2009/11/05 18:03:17 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -798,13 +798,14 @@ $\alpha$.
 If $I_\A$ denotes the convolution of the $\A$ term:
 % 
 \begin{equation}
- I_\A (k) = \int_{\kmin}^{\kmax} q^2 \dvp1(q) \A(k, q) \d q \,,
+ I_\A (k) = \int \d q^3 \dvp1(\qvi) \dvp1(\kvi-\qvi) 
+          = 2\pi \int_{\kmin}^{\kmax} \d q\, q^2 \dvp1(\qvi) \A(\kvi, \qvi)\,,
 \end{equation}
 % 
 then substituting $\dvp1(k) = \alpha/\sqrt{k}$ implies that
 % 
 \begin{equation}
- I_\A(k) = \alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
+ I_\A(k) = 2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
 \int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-1/4} \sin{\theta}\,. 
 \end{equation}
 % 
@@ -812,26 +813,24 @@ This has the analytic solution
 % 
 \begin{align}
 \label{eq:err-analytic-num}
- I_\A(k) = \frac{1}{36}\frac{\alpha^2}{k} \Bigg\{ 
-&3k^3\Bigg[\log\left(2\sqrt{k}\right) - \frac{\pi}{2}  + 
-\arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) \nonumber \\
+ I_\A(k) = -\frac{\pi\alpha^2}{18 k}\Bigg\{ 
+	&3 k^3 \Bigg[ \log\Biggl(\frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k}}
+			    \Biggr)
+	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{\kmin+k} +
+		      \sqrt{\kmin}}\Biggr) \nonumber \\
+	&+\frac{\pi}{2} - \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+	\Bigg] \nonumber\\
 % 
- &+ \log\left(2\left(\sqrt{\kmin} + \sqrt{\kmin + k}\right)\right)
-- \log\left(2\left(\sqrt{\kmax} + \sqrt{\kmax + k}\right)\right) \nonumber \\
+        &-\sqrt{\kmax}\Bigg[ \left(3k^2 + 8\kmax^2 \right)\left(\sqrt{k+\kmax} -
+	  \sqrt{\kmax-k}\right) \nonumber \\
+	&\qquad + 14k\kmax\left(\sqrt{k+\kmax}+\sqrt{\kmax-k}\right)\Bigg]\nonumber\\
 % 
-&- \log\left(2\left(\sqrt{\kmax} + \sqrt{\kmax - k}\right)\right) \Bigg]  \nonumber\\
-% 
-&+ \sqrt{\kmax}\bigg[\sqrt{\kmax -k} \left(-3k^2 + 14k\kmax - 8\kmax^2\right)
-\nonumber \\
-%  
- &\qquad+ \sqrt{\kmax +k} \left(3k^2 + 14k\kmax + 8\kmax^2\right)\bigg] \nonumber\\ 
-% 
-&- \sqrt{\kmin}\bigg[\sqrt{k -\kmin} \left(3k^2 - 14k\kmax +
-8\kmax^2\right) \nonumber \\
-% 
-&\qquad- \sqrt{k +\kmin} \left(3k^2 + 14k\kmax + 8\kmax^2\right)\bigg] \Bigg\} \,.
+	&+\sqrt{\kmin}\Bigg[ \left(3k^2 + 8\kmin^2 \right)\left(\sqrt{k+\kmin} +
+	  \sqrt{k-\kmin}\right) \nonumber \\
+	&\qquad +14k\kmin \left(\sqrt{k+\kmin} -
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
-%
+% 
 We have tested our code against this analytic solution for various
 combinations of $k$ ranges and $N_\theta$. The relative error
 %
@@ -924,10 +923,14 @@ terms, although this is a goal for future work.
 Analytic solutions can also be found for the $\B$, $\wt{\C}$ and $\wt{\D}$ terms.
 The $\B$ term integral, $I_\B$, given by
 % 
-\begin{equation}
+\begin{align}
  \label{eq:bintegral-num}
-I_\B = 2\pi \int_\kmin^\kmax q^2 \dvp1(q) \B(k,q) \d q \,,
-\end{equation}
+I_\B &= 2\pi \int_{\kmin}^{\kmax} \d q\, q^2\dvp1(\qvi)\B(\kvi,\qvi) \nonumber\\
+% 
+     &= 2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
+\int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-1/4}
+\cos{\theta}\sin{\theta}\,. 
+\end{align}
 % 
 has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
 % 
@@ -963,11 +966,12 @@ The integral of the $\wt{\C}$ term is
 \begin{align}
  \label{eq:cint-num}
 I_{\wt{\C}} &= \int\d^3 q\, \dvp1(\qvi) \dN{\dvp1}(\kvi-\qvi) 
-    = 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\C}(\kvi, \qvi) \\
+    = 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\C}(\kvi, \qvi) \nonumber\\
 % 
  &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
-     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} 
-            +\frac{i}{\beta}\left(k^2 + q^2 -2kq \cos\theta\right)^{\frac{1}{4}}
+     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} \right.\nonumber \\
+            &\qquad \qquad \left.+\frac{i}{\beta}\left(k^2 + q^2 -2kq
+\cos\theta\right)^{\frac{1}{4}}
 	\right) \sin\theta \d \theta\,,
 \end{align}
 % 
@@ -1001,8 +1005,10 @@ The integral of the $\wt{\D}$ term is
 I_{\wt{\D}} &= 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\D}(\kvi, \qvi) \\
 % 
  &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
-     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} 
-            +\frac{i}{\beta}\left(k^2 + q^2 -2kq \cos\theta\right)^{\frac{1}{4}}
+     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} \right.\nonumber\\
+% 
+        &\qquad\qquad\left.+\frac{i}{\beta}\left(k^2 + q^2 -2kq
+\cos\theta\right)^{\frac{1}{4}}
 	\right) \cos\theta\sin\theta \d \theta\,,
 \end{align}
 % 
@@ -1010,12 +1016,13 @@ and the analytic solution is
 % 
 \begin{align}
 \label{eq:dint-soln-num}
-I_{\wt{\D}} = -I_\B -i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ 
+I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
 	&135 k^5 \Bigg[ \log\Biggl(\frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k}}
 			    \Biggr)
 	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{k+\kmin} +
 			  \sqrt{\kmin}}\Biggr) \nonumber \\
-	&-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+	&\qquad -\frac{\pi}{2} + \arctan\left(
+\frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
 	\Bigg] \nonumber\\
 % 
         &-\sqrt{\kmax}\Bigg[ \left(-185k^4 + 168k^2\kmax^2-32\kmax^4
@@ -1028,11 +1035,29 @@ I_{\wt{\D}} = -I_\B -i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{
 	&\qquad +\left(70k^3\kmin +16k\kmin^3\right) \left(\sqrt{k+\kmin} +
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
+% 
+The relative errors between the analytic and calculated values for $I_\B$,
+$I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num}. The errors
+for the $I_{\wt{\C}}$ and $I_{\wt{\D}}$ terms are very small, being of the order of
+$\e{-8}$ and $\e{-6}$ respectively. The relative error for the $I_\B$ term is
+larger, especially for small $k$ values. However the error is still below $0.08\%$
+for each of $K_1$, $K_2$ and $K_3$.
 
-
-
-
-
+\begin{figure}
+\centering%
+\subfloat[The relative error for $I_\B$ for each $k$ range.]{
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_bterm-half}
+}\\%
+\subfloat[The relative error for $I_{\wt{\C}}$ for each $k$ range.]{
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_cterm-half}
+}\\%
+\subfloat[The relative error for $I_{\wt{\D}}$ for each $k$ range.]{
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_dterm-half}
+}%
+\caption[Relative errors for three other terms]{The relative errors for $I_\B$,
+$I_{\wt{\C}}$ and $I_{\wt{\D}}$ for each of the $k$ ranges.}
+\label{fig:rel-bcd-num}
+\end{figure}
 
 
 % 
