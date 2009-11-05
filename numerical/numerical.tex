@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.41 2009/11/05 19:34:28 ith Exp $
+% $Id: numerical.tex,v 1.42 2009/11/05 22:21:50 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.41 2009/11/05 19:34:28 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.42 2009/11/05 22:21:50 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -77,7 +77,7 @@ basis of the numerical calculation in this chapter. In Section~\ref{sec:eqs-num}
 these equations are rewritten in a form more amenable to numerical work. The time
 variable is changed from conformal time, $\eta$, to the number of e-foldings, $\N$.
 The convolution terms which are present in the Fourier space equations are then
-written in terms of spherical polar coordinates and split into calculable units. 
+written in terms of spherical polar coordinates and split into smaller units. 
 
 
 Four inflationary potentials were chosen in order to test the numerical calculation.
@@ -195,8 +195,9 @@ number of e-foldings \eqref{eq:nefolddefn-intro}. We employ
 %
 as our time variable instead of conformal time. This is measured from
 $a_{\mathrm{init}}$, the value of $a$ at the beginning of the
-simulation. We will use a dagger ($\dN{}$) to denote
-differentiation with respect to $\N$ \footnote{This should not be confused
+simulation. We will use a dagger ($\dN{}$) to denote\footnotemark
+differentiation with respect to $\N$ 
+\footnotetext{This should not be confused
 with the use of $^\dagger$ as Hermitian conjugate, which is confined to
 Section~\ref{sec:perts-intro}.}.
 % 
@@ -215,9 +216,8 @@ respectively, where $H = \d \ln a/\d t$ and $\H = aH$.
 If $a$ is set to be unity at the present epoch, we can calculate
 $a_{\mathrm{init}}$ once the background run is complete and the number of e-foldings
 of inflation has been determined.
-The value of $a$ at the end of inflation, $a_\mathrm{end}$, is then calculated using
-the
-connection equation (see for example
+The value of $a$ at the end of inflation, $a_\mathrm{end}$, is calculated by
+connecting it with $a_0$ (see for example
 Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}). 
 This is given by
 % 
@@ -244,7 +244,8 @@ equation \eqref{eq:Friedmann1-intro}, we can write
 \end{equation}
 % 
 where $H_\mathrm{end}$, $H_\mathrm{reh}$ and $H_\mathrm{eq}$ are the values of $H$
-at the end of inflation, at the end of reheating and at matter-radiation equality.
+at the end of inflation, at the end of reheating and at matter-radiation equality
+respectively.
 The value
 of $a_\mathrm{eq}$ is taken to be $4.15\e{-5} (\Omega_m h^2)^{-1}$ and
 $H_\mathrm{eq}=4.63\e{-54} \Omega_m^2 h^4 \Mpl$ \cite{Peiris:2008be, book:dodelson}.
@@ -263,7 +264,8 @@ a_\mathrm{end} \simeq e^{-72}
 
 In Chapter~\ref{ch:results}, it is assumed that
 reheating occurs instantaneously at the end of
-inflation such that $H_\mathrm{reh} = H_\mathrm{end}$. This gives approximately 65
+inflation such that $H_\mathrm{reh} = H_\mathrm{end}$. This gives
+$a_\mathrm{end} \simeq 10^{-29}$ and approximately 65
 e-foldings from the end of inflation to the present. It also fixes the horizon
 crossing
 time of the WMAP pivot scale, $\kwmap=0.002\Mpc^{-1}$, to be about 60 e-foldings
@@ -279,7 +281,8 @@ The background and first order equations written in terms of the new time
 variable $\N$ are
 %
 \begin{equation}
-\ddN{\vp_{0}} + \frac{\U}{H^2}\dN{\vp_{0}} + \frac{\Uphi}{H^2} = 0 \,,
+\ddN{\vp_{0}} + \left(3 + \frac{\dN{H}}{H}\right)\dN{\vp_{0}} + \frac{\Uphi}{H^2} = 0
+\,,
 \label{eq:bgntime}
 \end{equation}
 % 
@@ -1040,7 +1043,7 @@ The relative errors between the analytic and calculated values for $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num} for the
 three final $k$ ranges. The errors
 for the $I_{\wt{\C}}$ and $I_{\wt{\D}}$ terms are very small, being of the order of
-$\e{-8}$ and $\e{-6}$ respectively. The relative error for the $I_\B$ term is
+$10^{-8}$ and $10^{-6}$ respectively. The relative error for the $I_\B$ term is
 larger, especially for small $k$ values. However the error is still below $0.08\%$
 for each of $K_1$, $K_2$ and $K_3$.
 

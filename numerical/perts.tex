@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.25 2009/11/05 19:34:28 ith Exp $
+% $Id: perts.tex,v 1.26 2009/11/05 22:21:50 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.25 2009/11/05 19:34:28 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.26 2009/11/05 22:21:50 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -49,8 +49,8 @@ meeting the requirements of first order perturbation theory, namely
 that the power spectra of scalar and tensor perturbations, as defined in
 Eqs.~\eqref{eq:Prdefn-intro} and \eqref{eq:Ptdefn-intro}, should match
 those observed in the CMB.  Inflationary
-models are classified and tested according to their predictions for $\Pr$, $n_s$ and
-$r$. 
+models are classified and tested according to their predictions for the scalar power
+spectrum, scalar spectral index and tensor-scalar ratio. 
 An important observable that arises at second order is the non-Gaussianity
 parameter $\fnl$. As described in Section~\ref{sec:fnl-intro}, this parameter is
 not yet well constrained by observational data in comparison with the
@@ -68,8 +68,8 @@ Refs.~\cite{Starobinsky:1982ee,
 Starobinsky:1986fxa, Sasaki:1995aw, Sasaki:1998ug,
 Lyth:2004gb,Lyth:2005fi,Langlois:2006vv}.
 
-However, a gradient expansion approach is restricted, at least
-currently, and can only be applied on scales much larger than the particle horizon.  
+However, a gradient expansion approach is restricted and can only be applied on
+scales much larger than the particle horizon.  
 The
 second approach uses cosmological perturbation theory developed by Bardeen
 \cite{Bardeen:1980kt} and extends it to second order,
@@ -81,7 +81,7 @@ second approach uses cosmological perturbation theory developed by Bardeen
 \footnotetext{For an extensive list of references and a recent review on these
 issues see Ref.~\cite{Malik:2008im}.}
 %
-This approach works on all scales, but can be complex in comparison to the
+This approach works on all scales, but can be more complex in comparison to the
 $\Delta N$ formalism. The two methods lead to identical results on large scales
 \cite{Malik:2005cy}. We
 will follow the Bardeen approach here.
@@ -121,7 +121,7 @@ background and first order systems.
 % 
 We present the results of the calculation
 in Chapter~\ref{ch:results}, including a comparison of the second
-order perturbation calculated for specific inflationary potentials. 
+order scalar field perturbation calculated for specific inflationary potentials. 
 
 %
 % 
@@ -240,14 +240,39 @@ transformed \cite{Malik:2005cy}:
 where a tilde ($\wt{~}$) denotes a transformed quantity. 
 The metric curvature perturbation transformation at first order is straightforward,
 $\wt{\psi_1} = \psi_1 -\H \alpha_1$, but at second order it becomes more complicated
-\cite{Malik:2005cy}:
+\cite{Malik:2008im}:
 % 
 \begin{equation}
  \label{eq:psi2transform-perts}
-\wt{\psi_2} = \psi_2 -\H\alpha_2 -\alpha_1\left(\H\alpha_1' + 
-              \left(\H' +2\H^2\right)\alpha_1 -2\psi_1' -4\H\psi_1\right)
-              -\left(\H\alpha_1 -2\psi_1\right)_{,i} \beta_{1,}^{~~i}\,.
+\wt{\psi_2} = \psi_2 -\H\alpha_2 -\frac{1}{4}\mathcal{X}^k_{~k} +
+ \frac{1}{4}\nabla^{-2} \mathcal{X}^{ij}_{~~ij}\,.
 \end{equation}
+% 
+The inverse
+\begin{align}
+ \label{Xijdef}
+\mathcal{X}_{ij} \equiv 
+&2\Big[\left(\H^2+\frac{a''}{a}\right)\alpha_1^2
++\H\left(\alpha_1\alpha_1'+\alpha_{1,k}\xi_{1}^{~k}
+\right)\Big] \delta_{ij}\nonumber\\
+%
+&
++4\Big[\alpha_1\left(C_{1ij}'+2\H C_{1ij}\right)
++C_{1ij,k}\xi_{1}^{~k}+C_{1ik}\xi_{1~~,j}^{~k}
++C_{1kj}\xi_{1~~,i}^{~k}\Big] \nonumber\\
+% 
+&+2\left(B_{1i}\alpha_{1,j}+B_{1j}\alpha_{1,i}\right)
++4\H\alpha_1\left( \xi_{1i,j}+\xi_{1j,i}\right)
+-2\alpha_{1,i}\alpha_{1,j}+2\xi_{1k,i}\xi_{1~~,j}^{~k} \nonumber \\
+% 
+&+\alpha_1\left( \xi_{1i,j}'+\xi_{1j,i}' \right)
++\left(\xi_{1i,jk}+\xi_{1j,ik}\right)\xi_{1}^{~k}
++\xi_{1i,k}\xi_{1~~,j}^{~k}+\xi_{1j,k}\xi_{1~~,i}^{~k} \nonumber \\
+% 
+&+\xi_{1i}'\alpha_{1,j}+\xi_{1j}'\alpha_{1,i}
+\,.
+\end{align}
+
 % 
 We will work in the uniform curvature gauge where spatial 3-hypersurfaces are flat.
 This implies that
@@ -268,10 +293,11 @@ $\beta_1
 % 
 \begin{equation}
  \label{eq:alpha2-perts}
-\alpha_2 = \frac{1}{\H}\left( \psi_2 + \frac{1}{\H}\psi_1 \psi_1' + 2\psi_1^2 
-             + \psi_{1,i} E_{1,}^{~~i} \right) \,.
+\alpha_2=\frac{\psi_2}{\H}+\frac{1}{4\H}\left[
+\nabla^{-2}\X^{ij}_{~~,ij}-\X^k_{ k}\right]\,,
 \end{equation}
 % 
+where the first order gauge variables have been substituted into $\X_{ij}$.
 
 The Sasaki-Mukhanov variable, \iec the field perturbation on uniform curvature
 hypersurfaces \cite{Sasaki:1986hm,Mukhanov:1988jd}, was given at first order in
@@ -288,16 +314,18 @@ At second order the Sasaki-Mukhanov variable becomes more complicated
 % 
 \begin{align}
 \label{eq:Q2I-num}
-\wt{\dvp2} &= \dvp2+\frac{\vp_{0}'}{\H}\psi_2
-+\left(\frac{\psi_1}{\H}\right)^2\left[
-2\H\vp_{0}'+\vp_{0}''-\frac{\H'}{\H}\vp_{0}'\right] \nonumber\\
-& \quad +2\frac{\vp_{0}'}{\H^2}\psi_1'\psi_1+\frac{2}{\H}\psi_1\dvp1'
--2\delta\vp_{1,k}E_{1,}^{~k}
-+{\cal{X}}\left(\psi,E\right)\,,
+% 
+\wt{\dvp2} = &\dvp2
++\frac{\vp_0'}{\H}\psi_2
++\frac{\vp_0'}{4\H}\left(
+\nabla^{-2}\X^{ij}_{~~,ij}-\X^k_{k}\right)
+\\
+&+\frac{\psi_1}{\H^2}\Big[\vp_0'' {\psi_1}
++\vp_0'\left(\psi_1'-\frac{\H'}{\H}\psi_1\right)+2\H\delta\vp_1'\Big]
++\left(2\dvp1+\frac{\vp_0'}{\H}\psi_1\right)_{,k}\xi_{1\mathrm{flat}}^k \,,
 \end{align}
 % 
-where ${\cal{X}}\left(\psi,E\right)$ contains terms that are quadratic in
-gradients of the metric perturbations $\psi_1$ and $E_1$. From now on we will
+where $\xi_{1\mathrm{flat}} = -(E_{1,i} +F_{1i})$. From now on we will
 drop the tildes and only refer to variables calculated in the flat gauge.
 
 
@@ -520,8 +548,8 @@ This involves taking
 such that $Q=0$ and $\H^2 = (8\pi G/3) a^2 \U$. 
 In Chapter~\ref{ch:introduction} the slow-roll parameter $\varepsilon_H$ was
 defined in \eq{eq:epsilonHdefn-intro}. 
-In this chapter and the rest of Part~\ref{part:numerical} a different slow 
-roll parameter will be used, called
+In this chapter and the rest of Part~\ref{part:numerical}, a different slow 
+roll parameter will be used, denoted by
 $\bar{\varepsilon}_H$ and defined in Refs.~\cite{Malik:2006ir} and
 \cite{Seery:2005gb}. 
 This new parameter is the square-root of $\varepsilon_H$ and is given by
@@ -655,9 +683,7 @@ in terms of $\R$ in \eq{eq:fnllocdefn-intro}. Writing \eq{eq:fnllocdefn-intro} i
 Fourier space using \eq{eq:Rfulldefn-perts} implies that
 % 
 \begin{align}
- \R(\kvi) &= \R_1(\kvi) + \frac{1}{2}\R_2(\kvi) \nonumber \\
-% 
- &= \R_1(\kvi)
+ \R(\kvi) &= \R_1(\kvi)
   + \frac{3}{5}\fnlloc \Bigg( \frac{1}{(2\pi)^3}\int \d q^3\, \R_1(\qvi)
 \R_1(\kvi-\qvi) \\ \nonumber
 % 
