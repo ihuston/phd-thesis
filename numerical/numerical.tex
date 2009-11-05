@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.35 2009/10/29 17:25:10 ith Exp $
+% $Id: numerical.tex,v 1.36 2009/11/05 13:04:51 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.35 2009/10/29 17:25:10 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.36 2009/11/05 13:04:51 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -805,7 +805,7 @@ then substituting $\dvp1(k) = \alpha/\sqrt{k}$ implies that
 % 
 \begin{equation}
  I_\A(k) = \alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
-\int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-4} \sin{\theta}\,. 
+\int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-1/4} \sin{\theta}\,. 
 \end{equation}
 % 
 This has the analytic solution
@@ -907,7 +907,7 @@ contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1}
  \label{fig:err-deltak-kmin}
 \end{figure}
 
-
+\addtodo{Change to incorporate new results}
 It should be noted that these tests only show the relative errors in the
 computation of the convolution term $\A$, corresponding to the most straightforward
 term in \eq{eq:AtoD-num}. They
@@ -918,6 +918,40 @@ analytic result. \eq{eq:err-analytic-num} gives some indication of
 the difficulty involved in finding an analytic solution for the other
 terms, although this is a goal for future work.
  
+% 
+% 
+% Bterm
+Analytic solutions can also be found for the $\B$, $\wt{\C}$ and $\wt{\D}$ terms.
+The $\B$ term integral, $I_\B$, given by
+% 
+\begin{equation}
+ \label{eq:bintegral-num}
+I_\B = 2\pi \int_\kmin^\kmax q^2 \dvp1(q) \B(k,q) \d q \,,
+\end{equation}
+% 
+has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
+% 
+\begin{align}
+ I_\B = -\frac{\pi\alpha^2}{168}\Bigg\{ 
+	&-63 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k}}{\sqrt{k+\kmin} + \sqrt{\kmin}}
+			    \Biggr)
+	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{\kmax-k} +
+		      \sqrt{\kmax}}\Biggr) \nonumber \\
+	&-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+	\Bigg] \nonumber\\
+% 
+        &+\sqrt{\kmax}\Bigg[ \left(-65k^3 + 8k\kmax^2 \right)\left(\sqrt{k+\kmax} +
+	  \sqrt{\kmax-k}\right) \nonumber \\
+	&\qquad +\left(22k^2\kmax -16\kmax^3\right) \left(\sqrt{k+\kmax} -
+         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
+	&+\sqrt{\kmin}\Bigg[ \left(65k^3 - 8k\kmin^2 \right)\left(\sqrt{k+\kmin} -
+	  \sqrt{k-\kmin}\right) \nonumber \\
+	&\qquad +\left(-22k^2\kmin +16\kmin^3\right) \left(\sqrt{k+\kmin} +
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\}
+\end{align}
+
+
+
 % 
 % 
 % 
