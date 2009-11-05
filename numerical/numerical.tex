@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.39 2009/11/05 18:10:38 ith Exp $
+% $Id: numerical.tex,v 1.40 2009/11/05 19:16:00 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.39 2009/11/05 18:10:38 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.40 2009/11/05 19:16:00 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -831,6 +831,17 @@ This has the analytic solution
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
 % 
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=0.8\textwidth]
+    {./numerical/graphs/errors_analytic_aterm-half.pdf}
+ % errors_analytic_aterm-half.pdf: 432x216 pixel, 72dpi, 15.24x7.62 cm
+ \caption{The analytic solution for $I_\A$ given in \eq{eq:err-analytic-num} for
+$k\in K_1$. The value of $\alpha$ is set as $2.7\e{57}$.}
+ \label{fig:inta-num}
+\end{figure}
+% 
+The $k$ dependence of $I_\A$ can be seen in Figure~\ref{fig:inta-num}. 
 We have tested our code against this analytic solution for various
 combinations of $k$ ranges and $N_\theta$. The relative error
 %
@@ -905,17 +916,6 @@ contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1}
 \Delta k$ for each case.}
  \label{fig:err-deltak-kmin}
 \end{figure}
-
-\addtodo{Change to incorporate new results}
-It should be noted that these tests only show the relative errors in the
-computation of the convolution term $\A$, corresponding to the most straightforward
-term in \eq{eq:AtoD-num}. They
-do not represent
-errors for the full calculation. However, they show that at least for
-the pure convolution term the accuracy is good compared with the
-analytic result. \eq{eq:err-analytic-num} gives some indication of
-the difficulty involved in finding an analytic solution for the other
-terms, although this is a goal for future work.
  
 % 
 % 
@@ -1037,11 +1037,19 @@ I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
 \end{align}
 % 
 The relative errors between the analytic and calculated values for $I_\B$,
-$I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num}. The errors
+$I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num} for the
+three final $k$ ranges. The errors
 for the $I_{\wt{\C}}$ and $I_{\wt{\D}}$ terms are very small, being of the order of
 $\e{-8}$ and $\e{-6}$ respectively. The relative error for the $I_\B$ term is
 larger, especially for small $k$ values. However the error is still below $0.08\%$
 for each of $K_1$, $K_2$ and $K_3$.
+
+
+It should be noted that these tests only show the relative errors in the
+computation of integrals of the four terms in \eq{eq:AtoD-num}. They
+do not represent
+errors for the full calculation. However, they show that the accuracy is good
+compared with the analytic result. 
 
 \begin{figure}
 \centering%
