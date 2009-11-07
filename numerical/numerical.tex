@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.42 2009/11/05 22:21:50 ith Exp $
+% $Id: numerical.tex,v 1.43 2009/11/07 13:22:51 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.42 2009/11/05 22:21:50 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.43 2009/11/07 13:22:51 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -330,6 +330,7 @@ S(\kvi) = \frac{1}{(2\pi)^2}\int \d q\ &\Bigg\{
 where 
 %
 \begin{align}
+\label{eq:cdtilde-num}
  \tilde{\C}(\kvi,\qvi) &= \frac{1}{aH} \C(\kvi-\qvi) = \int_0^\pi \sin(\theta)
 \dN{\dvp1}(\kvi-\qvi) \d\theta \,,\nonumber \\
  \tilde{\D}(\kvi,\qvi) &= \frac{1}{aH} \D(\kvi-\qvi) = \int_0^\pi \cos(\theta)
@@ -368,7 +369,8 @@ show that this first order upper bound does not significantly affect
 performance. On the other hand, $|\kvi-\qvi|$ can also drop below the
 lower cutoff of calculated $k$ modes. As discussed above a sharp cutoff will be
 implemented and $\dvp1(k)=0$ used for the values below
-$\kmin$. When $\Delta k \simeq \kmin$ this affects only the $k=q$ modes and
+$\kmin$. When the spacing of the discrete $k$ values, $\Delta k$,  is
+approximately $\kmin$ the cutoff affects only the $k=q$ modes and
 is only significant close to $\kmin$. 
 Section \ref{sec:tests-num}
 describes how the accuracy is affected by changing $\Delta k$ and
@@ -409,7 +411,7 @@ but they do exhibit an interesting variety of behaviours. The potentials used ar
 still in good agreement with the observational data \cite{Alabidi:2008ej}.
 % 
  \item $V(\vp) = \lambdaphifour$. Although increasingly in tension with observations
- this is a standard large field potential model.
+ this is a standard large field model.
 % 
  \item $V(\vp) = \phitwooverthree$. This potential with an unusual fractional index
 is the effective potential resulting from the monodromy inflation model of D$4$
@@ -427,8 +429,8 @@ $U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
 % 
 % 
 In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
-plotted in terms of $\vp$ and $\N$ over the course of the calculated inflationary
-period. Throughout the rest of this chapter we will use $V(\vp)=\msqphisq$ to
+plotted over the course of their evolution. Throughout the rest of this
+chapter we will use $V(\vp)=\msqphisq$ to
 demonstrate the calculation unless otherwise stated. In Chapter~\ref{ch:results} the
 results for each potential will be compared.
 
@@ -441,11 +443,29 @@ $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$.
 The dependence of $\Pr(\kwmap)$ on each of the parameters can be seen in
 Figure~\ref{fig:params-num}.
 Requiring $\Pr(\kwmap)=2.457\e{-9}$
-gives the values $m=6.32\e{-6}\Mpl$, $\lambda=1.55\e{-13}$, $\sigma= 3.82\e{-10}
-(\Mpl)^{\frac{10}{3}}$ and $m_0=1.74\e{-6}\Mpl$. Here we have chosen the lower of
-the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
+gives the values shown in Table~\ref{tab:params-num}. Here we have chosen the lower
+of the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
 
-\begin{figure}[h]
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Potential & Parameter & Value\\
+\midrule
+$\msqphisq$ & $m$ & $6.32\e{-6}\Mpl$\\
+$\lambdaphifour$ & $\lambda$ & $1.55\e{-13}$\\
+$\phitwooverthree$ & $\sigma$ & $3.82\e{-10}\Mpl^{\frac{10}{3}}$\\
+$\msqphisqwithV$ & $m_0$ & $1.74\e{-6}\Mpl$\\
+\bottomrule
+\end{tabular}
+\caption[Parameter values]{The parameter values for the four potentials, chosen so
+that $\Pr(\kwmap)$ is in agreement with the WMAP5 value.}
+\label{tab:params-num}
+\end{center}
+% 
+\end{table}
+
+\begin{figure}[tb]
 \centering%
 \subfloat[$V(\vp)=\msqphisq$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_potential-small}
@@ -464,7 +484,7 @@ the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
 \label{fig:potentials-num}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb]
 \centering%
 \subfloat[The potentials in terms of $\varphi$.][The potentials in terms of
 $\varphi$ over the course of the background evolution.]{
@@ -481,18 +501,18 @@ used.}
 \label{fig:cmp-pot-num}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb]
 \centering%
-\subfloat[Fixing $m$ for $V(\vp)=\msqphisq$]{
+\subfloat[Fixing $m$ for $V(\vp)=\msqphisq$.]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_params-small}
 }\qquad%
-\subfloat[Fixing $\lambda$ for $V(\vp)=\lambdaphifour$]{
+\subfloat[Fixing $\lambda$ for $V(\vp)=\lambdaphifour$.]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/lambdaphi4_params-small}
 }\\%
-\subfloat[Fixing $\sigma$ for $V(\vp)=\phitwooverthree$]{
+\subfloat[Fixing $\sigma$ for $V(\vp)=\phitwooverthree$.]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/phi2over3_params-small}
 }\qquad%
-\subfloat[Fixing $m$ for $V(\vp)=\msqphisqwithV$]{
+\subfloat[Fixing $m$ for $V(\vp)=\msqphisqwithV$.]{
  \label{fig:mv0-params-num}
  \includegraphics[width=0.43\textwidth]
   {numerical/graphs/msqphisq_withV0_params-small}
@@ -529,7 +549,7 @@ number of e-foldings of evolution before the modes are initialised
 
 
 The initial conditions are set for each $k$ mode a few e-foldings
-before horizon crossing. This follows the example of Salopek
+before horizon crossing. This follows Salopek
 \etal
 \cite{Salopek:1988qh} and is justified on the basis that the mode is
 sufficiently far inside the
@@ -594,7 +614,7 @@ The current implementation of the code is mainly in the Python\footnote{Python
 website: \url{http://www.python.org}} programming language (with compiled Cython
 components) and uses the
 Numerical and Scientific Python modules for their strong compiled array support
-\cite{scipy}. The core of the model computation is a customised
+\cite{scipy}. The core of the model computation is a
 Runge-Kutta fourth order method (see, for example, Eq.~(25.5.10) in
 \cite{abramowitz+stegun}).  Following
 Refs.~\cite{Martin:2006rs} and \cite{Ringeval:2007am} the numerical calculation
@@ -611,7 +631,7 @@ inflation if required. For the $V(\vp)=\msqphisqwithV$ model, the end of inflati
 set by hand to remove the need for a second, inflation-terminating field. The initial
 conditions for the first order system are then set as above.
 %
-\begin{figure}
+\begin{figure}[tb]
 \centering
  \includegraphics[width=\textwidth]{./numerical/graphs/bgepsilon}
  \caption[Plot of $\varepsilon_H$ near the end of inflation]{The end of
@@ -626,7 +646,7 @@ $x$-axis,
 
 
 The system of ordinary differential equations for the first order
-perturbations in \eq{eq:fontime} is integrated using a standard
+perturbations in \eq{eq:fontime} is integrated using a standard fourth order
 Runge-Kutta method. A fixed time step method is used in order to
 simplify the construction of the  second order source term.
 This is also necessary since it is not known \emph{a priori}
@@ -697,7 +717,8 @@ each time step.
 Although a large amount of data is produced at each step for 
 each of the wavenumbers $k$, only the integrated result is stored for use
 in the second order run.
-Specifically, results for each stage are stored in the open HDF5 standard, which can
+Specifically, results for each stage are stored in the open HDF5 standard
+\cite{pytables, hdf5}, which can
 deal efficiently with large
 files, is very portable and allows for data analysis independent of the
 Python/Numpy programming environment.
@@ -717,7 +738,7 @@ Python/Numpy programming environment.
 
 
 The numerical code has been tested in a variety of controlled
-circumstances in order to quantify the effect of different parameter options. In
+circumstances in order to quantify the effects of different parameter options. In
 particular, it is important to establish whether the values
 specified for the number of discretised $\theta$'s, $N_\theta$, the size
 of the
@@ -763,7 +784,7 @@ range, $K_3$, has a larger $k$ mode step size, $\Delta k = 1\e{-60}\Mpl =
 3.8\e{-4}\Mpc^{-1}$, and
 covers a greater range than the others, extending to much smaller scales than WMAP can observe.
 
-\begin{figure}
+\begin{figure}[tb]
 \centering
 % 
  \subfloat[Relative error for different $N_\theta$][The relative error for different
@@ -790,7 +811,7 @@ different $N_\theta$ and $k$ ranges.}
 \label{fig:err-comparison}
 \end{figure}
 
-The main new addition in the code is the calculation of the
+The central calculation in the code is of the
 convolution of the perturbations for the source term,
 \eq{eq:KG2-source-ntime}. The first of the $\theta$ dependent terms in
 \eq{eq:AtoD-num}, $\A$,
@@ -834,7 +855,7 @@ This has the analytic solution
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
 % 
-\begin{figure}[htb]
+\begin{figure}[tb]
  \centering
  \includegraphics[width=0.8\textwidth]
     {./numerical/graphs/errors_analytic_aterm-half.pdf}
@@ -861,13 +882,14 @@ we will keep its numerical value fixed throughout.
 \begin{figure}[htb]
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/err-deltak4.pdf}
- \caption[Relative error in the convolution term $\A$]{The relative error in the
-convolution term $\A$ for different values of $\Delta k$.
-The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and $N_\theta=513$. The
-upper 
-blue line ($\Delta k=1\e{-61}\Mpl$) and middle green line ($\Delta k=3\e{-61}\Mpl$)
-have relative errors at least an order of magnitude larger than the lower red line
-($\Delta k=1\e{-60}\Mpl$).}
+ \caption[Relative error in the integral $I_\A$]{The relative error in the
+integral $I_\A$ for different values of $\Delta k$.
+The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and
+$N_\theta=513$. 
+The value of $\Delta k$ is less than $\kmin$ for the upper 
+blue line ($\Delta k=1\e{-61}\Mpl$) and the middle green line ($\Delta
+k=3\e{-61}\Mpl$). These have relative errors at least an order of magnitude larger
+than the lower red line for which $\Delta k=\kmin=1\e{-60}\Mpl$.}
  \label{fig:err-deltaks}
 \end{figure}
 
@@ -913,8 +935,8 @@ the figure.)
  \centering
  \includegraphics[width=\textwidth]{numerical/graphs/err-deltak-kmin.pdf}
  % err-deltak-kmin.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=
- \caption[Relative error of the convolution term with fixed $\kmin$]{The 
-relative error of the convolution term for three different values of $\Delta k$. In
+ \caption[Relative error of $I_\A$ with fixed $\kmin$]{The 
+relative error of the integral $I_\A$ for three different values of $\Delta k$. In
 contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1} \le
 \Delta k$ for each case.}
  \label{fig:err-deltak-kmin}
@@ -1065,7 +1087,8 @@ compared with the analytic result.
 \subfloat[The relative error for $I_{\wt{\D}}$ for each $k$ range.]{
  \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_dterm-half}
 }%
-\caption[Relative errors for three other terms]{The relative errors for $I_\B$,
+\caption[Relative errors for $I_\B$, $I_{\wt{\C}}$ and $I_{\wt{\D}}$]{The relative
+errors for $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ for each of the $k$ ranges.}
 \label{fig:rel-bcd-num}
 \end{figure}
@@ -1089,7 +1112,8 @@ The Klein-Gordon equations in Chapter~\ref{ch:perts} are the central focus of th
 computation. In Section~\ref{sec:eqs-num} these equations were rewritten using $\N$
 as the time variable, a choice more suitable for numerical work. The convolution
 integrals in \eq{eq:KG2-fourier-sr-num} can be expressed in spherical polar
-coordinates and split into four sub-terms $\A$--$\wt{\D}$. Computing the source term
+coordinates and split into four sub-terms $\A$--$\wt{\D}$ in \eqs{eq:AtoD-num} and
+\eqref{eq:cdtilde-num}. Computing the source term
 \eq{eq:KG2-source-ntime}, which is written using $\A$--$\wt{\D}$, is the most complex
 and
 time consuming part of the calculation.
@@ -1110,7 +1134,8 @@ inflation.
 The technical implementation of the code was discussed in
 Section~\ref{sec:impl-num}. There are four stages in the procedure. First, the
 background fields are evolved over a specified time period. The end time of
-inflation is then determined by the condition $\varepsilon_H=1$. With this
+inflation is then determined by the condition $\varepsilon_H=1$ and the scale factor
+calculated for this time. With this
 information the initialisation of the first order modes can be performed. In the
 second stage, the first order perturbation equations are solved. These results are
 used in the third stage to calculate the source term \eq{eq:KG2-source-ntime} at each
