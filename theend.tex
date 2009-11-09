@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % theend.tex - Ian Huston
-% $Id: theend.tex,v 1.6 2009/11/09 16:44:08 ith Exp $
+% $Id: theend.tex,v 1.7 2009/11/09 18:15:40 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: theend.tex,v 1.6 2009/11/09 16:44:08 ith Exp $}
+{\version$Id: theend.tex,v 1.7 2009/11/09 18:15:40 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -130,5 +130,55 @@ If, as expected, the observational limits on $\fnleq$ tighten considerably in th
 future, the possibility of an observable tensor signal from the multi coincident
 brane model could be ruled out.
 
+\pagebreak
+% Numerical
+In Part~\ref{part:numerical}, numerical methods were used to test inflationary
+models up to second order in cosmological perturbation theory. The Klein-Gordon
+equation at second order was derived in \Rref{Malik:2006ir} for the multi-field
+case. In Chapter~\ref{ch:perts}, second order gauge transformations were outlined
+and the KG equation reproduced for a single scalar field model. In contrast to the
+$\Delta \N$ approach, this equation is valid on all scales, both inside and outside
+the horizon. 
+
+In Fourier space, the second order KG equation \eqref{eq:SOLG-real-num} contains a
+convolution term of the first order scalar field perturbation. For this first
+demonstration of the numerical system, a slow roll approximation of the full
+equation was used. 
+
+Calculating the second order scalar field perturbations provides the possibility of
+a unique insight into the generation and evolution of non-linear contributions to
+the scalar curvature perturbation. The long term aim of this continuing project is
+to analyze multi-field, non slow roll models in which non-Gaussian effects are
+expected to play an important role.
+
+As a step towards that goal, we described the implementation of a numerical
+calculation of the single field, slow roll, second order equation in
+Chapter~\ref{ch:numericalsystem}. The construction and evaluation of the convolved
+source term in \eq{eq:KG2-src-sr-aterms} proved to be the most numerically complex
+step required. 
+
+To allow a numerical calculation an energy scale cutoff must be implemented. We used
+a sharp cutoff at small wavenumbers below which the perturbations were taken to be
+identically zero. Another cutoff at small scales or large wavenumbers was dictated
+by practical reasons of calculation size and computation time.
+
+We defined, in \eq{eq:AtoD-num}, four $\theta$ dependent integrals
+into which the convolution term can be decomposed. By comparison with an analytic
+solution for a particular smooth choice of the first order perturbation, an estimate
+was made of the relative error present in the integration of one of these terms. The
+number of discrete wavenumber values, their spacing, and the number of discrete
+$\theta$ values were chosen to minimise this error. From these values, three
+different closed finite ranges of discrete values of the wavenumber were defined.
+These all contain the WMAP pivot scale at $\kwmap=0.002\Mpc^{-1}$ and cover the
+WMAP observed scales to varying degrees.
+% 
+The other $\theta$ dependent terms have small relative errors for the three chosen
+ranges. 
 
 
+
+The execution of the code is in four stages, building on previous calculations of
+first order perturbations in Refs.~\cite{Martin:2006rs, Ringeval:2007am} and
+\cite{Salopek:1988qh}. Despite the large volume of calculations required at each
+time step, the easily parallelisable nature of the source term calculations allows
+the run time to be reduced significantly.
