@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.43 2009/11/07 13:22:51 ith Exp $
+% $Id: numerical.tex,v 1.44 2009/11/09 11:56:58 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.43 2009/11/07 13:22:51 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.44 2009/11/09 11:56:58 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -714,14 +714,29 @@ system. However, the
 source integration is more complex and involves the
 integration of $N_k^2\times N_\theta$ values at
 each time step.
-Although a large amount of data is produced at each step for 
-each of the wavenumbers $k$, only the integrated result is stored for use
-in the second order run.
-Specifically, results for each stage are stored in the open HDF5 standard
+When $N_k=1025$ and $N_\theta=513$, the first order evolution lasts around 200
+seconds. The source calculation, on the other hand, takes approximately 200 seconds
+for each time step. Each of the four terms $\A-\wt{\D}$ is approximately 16 gigabytes
+in size at each time step for these values of $N_k$ and $N_\theta$. However, only the
+integrated result is stored for use
+in the second order run. This is approximately $16$ kilobytes in size for each time
+step. 
+Results for each stage are stored in the open HDF5 standard
 \cite{pytables, hdf5}, which can
 deal efficiently with large
 files, is very portable and allows for data analysis independent of the
 Python/Numpy programming environment.
+
+The full calculation contains around 8000 timesteps, making the source term
+calculation approximately 470 hours long. Each time step in independent of the
+others, however, so parallelisation of the system is straightforward. The results in
+Chapter~\ref{ch:results} were obtained on the Virgo Cluster in the Astronomy Unit at
+Queen Mary, University of London. The code was run on ten nodes, each containing
+four Opteron cores with a clock speed of $1994$Mhz. With this configuration the run
+time of the source term calculation is reduced to under twelve hours. 
+
+
+
 % We intend to release the program under a suitable license once the code has
 % matured and some of the improvements discussed in Section \ref{sec:disc-num} have
 % been implemented.
