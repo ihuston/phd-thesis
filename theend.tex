@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % theend.tex - Ian Huston
-% $Id: theend.tex,v 1.7 2009/11/09 18:15:40 ith Exp $
+% $Id: theend.tex,v 1.8 2009/11/09 19:16:26 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: theend.tex,v 1.7 2009/11/09 18:15:40 ith Exp $}
+{\version$Id: theend.tex,v 1.8 2009/11/09 19:16:26 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -69,8 +69,8 @@ and taking the best fit value for $n_s$, we found that the most conservative low
 limit is $r>0.005$. This is clearly incompatible with the previously derived upper
 bound. Therefore, for standard parameter values, the D3-brane DBI scenario is not
 viable. Numerical simulations by Peiris \etal in \Rref{Peiris:2007gz} have
-demonstrated the lower bound using the
-Hamiltonian flow approach and the relativistic limit.
+demonstrated the lower bound, in the relativistic limit, using the
+Hamiltonian flow approach.
 
 The discovery of the inconsistent bounds for DBI inflation has had a noticeable
 impact on the research community, spurring interest in finding models which evade
@@ -85,16 +85,16 @@ if the product of $f_1$ and $f_2$ is large on observable scales.
 
 
 % Multi
-More general actions which relax the bounds were derived in
+More general actions, which relax the bounds on $r$, were derived in
 Chapter~\ref{ch:multibrane}. By retaining the proportionality of $\Lambda$ and
 $c_s^{-2}$, which is present in the DBI model, and requiring that $\fnleq$ is large,
 we found a class of actions similar in form to DBI. 
-Instead of a square-root in the kinetic term, the index of the central term of these
+Instead of a square-root in the kinetic term, the index of the main term of these
 actions depends on the constant of proportionality between $\Lambda$ and the sound
 speed.
 The upper bound on $r$ can be derived for these general actions and when the index
 is below the critical value of $1/2$ of the standard DBI scenario, this bound is
-significantly relaxed. When new models are proposed the
+significantly relaxed. When new models are proposed, the
 phenomenological description of this family of actions allows easy identification of
 those models for which the bound on $r$ is less stringent. 
 
@@ -113,18 +113,18 @@ less than 150, at which point the assumption of arbitrarily large $n$ is
 questionable.
 
 More promising is the finite $n$ limit of the coincident brane model. The
-non-Abelian nature of the interactions leads in this case to a recursive definition
+non-Abelian nature of the interactions leads, in this case, to a recursive definition
 of the $n$-brane action in terms of the $n=2$ one. In
 Section~\ref{sec:finiten-multi} we showed that the action for finite $n$ is one of
 the class of bound-evading actions described above. This identification is possible
 because the last term of the recursive sum dominates in the relativistic limit. This
-approximation is valid at least when $n<10$. The backreaction of the multiple
+approximation is valid at least when $n<10$ and the backreaction of the multiple
 branes is kept well under control for this range of $n$.
 
 Although the bounds on $r$ are eased
 for this model, we showed that observations strongly constrain the possibility of
 production of an observable tensor signal. If an observable tensor-scalar ratio is
-considered to be $r>10{-4}$ then only the two or three brane cases are capable of
+considered to be $r>10^{-4}$ then only the two or three brane cases are capable of
 producing such a signal. This bound on $n$ depends on the WMAP5 limit on $\fnleq$.
 If, as expected, the observational limits on $\fnleq$ tighten considerably in the
 future, the possibility of an observable tensor signal from the multi coincident
@@ -140,7 +140,7 @@ and the KG equation reproduced for a single scalar field model. In contrast to t
 $\Delta \N$ approach, this equation is valid on all scales, both inside and outside
 the horizon. 
 
-In Fourier space, the second order KG equation \eqref{eq:SOLG-real-num} contains a
+In Fourier space, the second order KG equation \eqref{eq:SOKG-real-num} contains a
 convolution term of the first order scalar field perturbation. For this first
 demonstration of the numerical system, a slow roll approximation of the full
 equation was used. 
@@ -182,3 +182,28 @@ first order perturbations in Refs.~\cite{Martin:2006rs, Ringeval:2007am} and
 \cite{Salopek:1988qh}. Despite the large volume of calculations required at each
 time step, the easily parallelisable nature of the source term calculations allows
 the run time to be reduced significantly.
+
+
+To test the code, four different, large field, monomial potentials were used. Each
+one depends on a single parameter which was fixed by comparing the resultant scalar
+curvature power spectrum with the WMAP5 normalisation value. The slow roll
+approximation can be applied to all four of the potentials.
+
+We presented the results for each potential in Chapter~\ref{ch:results}. The first
+order results match those in Refs.~\cite{Martin:2006rs, Ringeval:2007am} and
+\cite{Salopek:1988qh}. The results of the source term calculation show that before
+horizon crossing, the source term amplitude decays rapidly for all four potentials.
+After horizon crossing it becomes steadier and eventually increase at later times,
+when the slow roll approximation breaks down.
+
+The choice of wavenumber range affects the amplitude of the source term, as
+expected, due to the implementation of a sharp cutoff at large scales. This
+dependence is only apparent, however, before horizon crossing. For a particular
+range, as wavenumber increase, the magnitude of the source term decreases. However,
+the ratio of the source term to other terms in the KG equation increases with
+wavenumber. 
+
+As expected the amplitude of the second order scalar perturbations is much smaller
+than that of the first order ones. After the generation of the second order
+perturbations at early times, their evolution is that of a damped harmonic
+oscillator similar to the first order evolution.
