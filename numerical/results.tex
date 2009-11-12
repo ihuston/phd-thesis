@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.25 2009/11/07 13:22:31 ith Exp $
+% $Id: results.tex,v 1.26 2009/11/12 23:42:26 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.25 2009/11/07 13:22:31 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.26 2009/11/12 23:42:26 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -607,6 +607,203 @@ second order Klein-Gordon equation is given for multiple fields and upgrading th
 simulation to use these equations should be a straight-forward, if lengthy, process.
 Extending the current data-structures and routines to a fixed number of extra fields
 will increase the numerical complexity and the run-time of the code. 
+
+For example, suppose the perturbations of two scalar fields, $\vp$ and $\chi$, are to
+be calculated. Let $V$ denote the sum of the potentials for each field. As the
+coding environment we have used can easily handle arrays of variables, it is useful
+to write the equations in vector form. The following definitions will be used:
+% 
+\begin{align}
+ \bm{\vp_0} &= \begin{pmatrix}
+                \vp_0 \\
+		\chi_0
+               \end{pmatrix} \,,
+% 
+ &\bm{\dvp1} = \begin{pmatrix}
+                \dvp1 \\
+		\delta\chi_1
+               \end{pmatrix} \,,
+% 
+ \bm{\dvp2} = \begin{pmatrix}
+                \dvp2 \\
+		\delta\chi_2
+               \end{pmatrix} \,,& \\
+% 
+ \bm{V_1} &= \begin{pmatrix}
+             \Uphi \\
+	     V_\chi 
+            \end{pmatrix} \,, 
+% 
+ &\bm{V_2} = \begin{pmatrix}
+             \Upp & V_{,\vp\chi} \\
+	     V_{,\chi\vp} & V_{,\chi\chi}
+            \end{pmatrix} \,, 
+% 
+\bm{V_3} = \begin{pmatrix}
+            \Uppp & V_{,\vp\vp\chi} \\
+	    V_{,\vp\vp\chi} & V_{,\vp\chi\chi} \\
+	    V_{,\vp\chi\chi} & V_{,\chi\chi\chi}
+           \end{pmatrix} \,.&
+\end{align}
+% 
+In conformal time the Friedmann equation becomes
+% 
+\begin{equation}
+ \H^2 = \frac{8\pi G}{3} \left( \frac{1}{2}\vp_0'^2 + \frac{1}{2}\chi_0'^2 + a^2 \U
+\right) 
+% 
+= \frac{8\pi G}{3}\left( \frac{1}{2}\bm{\vp_0}'^{T} \bm{\vp_0}' + a^2 \U \right) \,,
+\end{equation}
+% 
+where $\bm{\vp}^{T}$ denotes the transpose of $\bm{\vp}$.
+% 
+The background vector equation of motion is given by
+% 
+\begin{equation}
+ \bm{\vp_0}'' + 2\H \bm{\vp_0}' + a^2 \bm{V_1} = \bm{0}\,,
+\end{equation}
+% 
+where $\bm{0}$ is the zero vector.
+The first order vector equation is
+% 
+\begin{multline}
+ \bm{\dvp1}''(\kvi) + 2\H \bm{\dvp1}'(\kvi) \\
+ + \left( k^2 \bm{1}  + \bm{V_2} 
+ + \frac{8\pi G}{\H}\left\{ 
+  \bm{\vp_0}' \bm{V_1}^{T} + \bm{V_1}\bm{\vp_0}'^T
+  + \frac{8\pi G}{\H}\U \bm{\vp_0}' \bm{\vp_0}'^T
+\right\}
+\right)\bm{\dvp1}(\kvi) = \bm{0}\,,
+\end{multline}
+% 
+where $\bm{1}$ is the identity matrix.
+
+We will outline the second order vector equation using the slow roll approximation.
+In the multi field case there are many more slow roll parameters than in the
+single field case. Extending the definition of $\bar{\varepsilon}_H$ in
+\eq{eq:bareps-defn-perts} to two fields gives
+% 
+\begin{align}
+ \bar{\varepsilon}_\vp &= \sqrt{4\pi G} \left( \frac{\vp_0'}{\H} \right) \,,\\
+ \bar{\varepsilon}_\chi &= \sqrt{4\pi G} \left( \frac{\chi_0'}{\H} \right)\,,
+\end{align}
+% 
+and there are now four $\eta_H$ parameters corresponding to the different
+combinations of second derivatives of $V$. These can be written together in a matrix
+as
+% 
+\begin{equation}
+ (\eta_{IJ}) = \bm{\eta}_H = \frac{a^2}{3\H^2} \bm{V_2} \,,
+\end{equation}
+% 
+where $I,J = \vp,\chi$.
+The magnitude of $\eta_{IJ}$ is only small in the adiabatic direction, so terms
+including $\eta_{IJ}$ are kept when making the slow roll approximation
+\cite{Malik:2006ir}.
+
+The second order, slow roll, vector equation is 
+% 
+\begin{align}
+ \bm{\dvp2}''(\kvi) + 2\H\bm{\dvp2}'(\kvi) 
+ + \left( k^2\bm{1} + a^2\bm{V_2} - 24\pi G \bm{\vp_0}' \bm{\vp_0}'^T \right)
+       \bm{\dvp2}(\kvi)
+ + \bm{S}(\kvi) = \bm{0}\,,
+\end{align}
+% 
+and the slow roll source term equation is
+% 
+\begin{align}
+\label{eq:src-vector-res}
+\bm{S}(\kvi) =  
+&\frac{1}{(2\pi)^3}\int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{ \\
+% 
+&a^2 \Bigg[ 
+\begin{pmatrix}
+\dvp1(\pvi) & \delta \chi_1(\pvi) & 0  \nonumber\\
+0           & \dvp1(\pvi)         & \delta \chi_1(\pvi) 
+\end{pmatrix}
+\bm{V_3}\bm{\dvp1}(\qvi) 
+% 
++ \frac{8\pi G}{\H}\left( 
+    \bm{\dvp1}^T(\pvi) \bm{V_2} \bm{\dvp1}(\qvi)
+\right) \bm{\vp_0}' \Bigg] \nonumber\\
+% 
+&+ \frac{16\pi G a^2}{\H}\left(\bm{\vp_0}'^T \bm{\dvp1}(\pvi) \right)
+    \bm{V_2} \bm{\dvp1}(\qvi) \nonumber \\
+% 
+&+ \frac{8\pi G}{\H} \Bigg[ 2\frac{p_l q^l}{q^2} 
+      \left(\bm{\vp_0}'^T \bm{\dvp1}'(\qvi) \right) \bm{\dvp1}'(\pvi)
+ + 2p^2 \left(\bm{\vp_0}'^T \bm{\dvp1}(\qvi) \right) \bm{\dvp1}(\pvi) \nonumber \\
+% 
+&+\left( \frac{p_l q^l + p^2}{k^2}q^2 - \frac{p_l q^l}{2} \right) 
+      \left( \bm{\dvp1}^T(\pvi) \bm{\dvp1}(\qvi) \right) \bm{\vp_0}' \nonumber \\
+% 
+&+\left(\frac{1}{2} -\frac{p_l q^l + q^2}{k^2}\right) 
+      \left( \bm{\dvp1}'^T(\pvi) \bm{\dvp1}'(\qvi) \right) \bm{\vp_0}' \Bigg] \Bigg\}
+\end{align}
+
+Following the method of Section~\ref{sec:eqs-num}, the $\d^3p$ integral is evaluated
+and the $\d^3 q$ integral is written in spherical polar coordinates. The $\theta$
+dependent terms, which are equivalent to \eq{eq:AtoD-num} in the single field case,
+are given by
+% 
+\begin{align}
+\label{eq:AtoD-vectors-res}
+ \A_\vp(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) \d\theta \,,
+\nonumber \\
+ \A_\chi(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \delta \chi_1(\kvi-\qvi) \d\theta \,,
+\nonumber\\
+ \bm{\A}(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \bm{\dvp1}(\kvi-\qvi) \d\theta \,,
+\nonumber\\
+ \bm{\B}(\kvi,\qvi) &= \int_0^\pi \cos(\theta)\sin(\theta) \bm{\dvp1}(\kvi-\qvi)
+\d\theta \,,\nonumber\\
+ \bm{\C}(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \bm{\dvp1}'(\kvi-\qvi) \d\theta \,,
+\nonumber\\
+ \bm{\D}(\kvi,\qvi) &= \int_0^\pi \cos(\theta) \sin(\theta) \bm{\dvp1}'(\kvi-\qvi)
+\d\theta \,.
+\end{align}
+% 
+The first two equations are not vector equations but are needed for the explicit
+matrix term in \eq{eq:src-vector-res}. We rewrite that equation with these
+definitions to obtain:
+% 
+\begin{align}
+ \bm{S}(\kvi) = &\frac{1}{(2\pi)^2}\int\d q \Bigg\{ \nonumber \\
+% 
+&a^2 q^2\Biggl[ \begin{pmatrix}
+                 \A_\vp(\kvi,\qvi) & \A_\chi(\kvi,\qvi) & 0 \\
+		 0                 & \A_\vp(\kvi, \qvi) & \A_\chi(\kvi, \qvi)
+                \end{pmatrix}
+		\bm{V_3} \bm{\dvp1}(\qvi) \nonumber \\
+& \qquad +\frac{8\pi G}{\H} \left( \bm{\A}^T(\kvi,\qvi) \bm{V_2}
+\bm{\dvp1}(\qvi)\right) \bm{\vp_0}'
+	\Biggr] \nonumber \\
+% 
+&+ \frac{16\pi G}{\H}a^2 q^2 \left( \bm{\vp_0}'^T \bm{\A}(\kvi,\qvi) \right)
+	\bm{V_2}\bm{\dvp1}(\qvi) \nonumber \\
+% 
+&+ \frac{8\pi G}{\H} \Bigg[ 2\left( \bm{\vp_0}'^T \bm{\dvp1}'(\qvi) \right)
+	\left( kq \bm{\D}(\kvi,\qvi) - q^2 \bm{\C}(\kvi, \qvi) \right) \nonumber \\
+% 
+&\qquad +2q^2 \left( \bm{\vp_0}'^T \bm{\dvp1}(\qvi) \right)
+	\left( (k^2 + q^2)\bm{\A}(\kvi,\qvi) - 2kq\bm{\B}(\kvi, \qvi) \right)\notag\\
+% 
+&\qquad + \left(\left[ \frac{3}{2}q^4 \bm{\A}^T(\kvi,\qvi) 
+	- \left( \frac{1}{2}kq^3 + \frac{q^5}{k}\right) \bm{\B}^T(\kvi,\qvi)
+	\right] \bm{\dvp1}(\qvi) \right) \bm{\vp_0}' \nonumber \\
+% 
+&\qquad + \left(\left[ \frac{1}{2}q^2 \bm{\C}^T(\kvi,\qvi) 
+	- \frac{q^3}{k} \bm{\D}^T(\kvi,\qvi)
+	\right] \bm{\dvp1}'(\qvi) \right) \bm{\vp_0}' \Bigg] \Bigg\} \,.
+\end{align}
+% 
+This expression for $\bm{S}$ reduces to \eq{eq:KG2-src-sr-aterms} when only one
+field is considered. At least in the slow roll case, the multi field source term
+equation is not considerably more complex than the single field one. The extra
+numerical complexity arises from the calculation of the new $\theta$
+dependent terms in \eq{eq:AtoD-vectors-res} and the increased memory cost this
+involves. 
+
 
 
 
