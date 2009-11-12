@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.28 2009/11/09 18:16:00 ith Exp $
+% $Id: perts.tex,v 1.29 2009/11/12 23:42:11 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.28 2009/11/09 18:16:00 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.29 2009/11/12 23:42:11 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -555,6 +555,7 @@ $\bar{\varepsilon}_H$ and defined in Refs.~\cite{Malik:2006ir} and
 This new parameter is the square-root of $\varepsilon_H$ and is given by
 %
 \begin{equation}
+\label{eq:bareps-defn-perts}
  \bar{\varepsilon}_H = \sqrt{4\pi G} \frac{\vp_{0}'}{\H} = \sqrt{\varepsilon_H}\,.
 \end{equation}
 %
@@ -573,7 +574,7 @@ simplifies dramatically, and with the $F$ term reduces to
 \Upp-{24 \pi G}(\vp_{0}')^2\right)
 \dvp2(\kvi) \nonumber\\
 %
-&+ \int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{
+&+ \frac{1}{(2\pi)^3}\int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi) \Bigg\{
 a^2\left(\Uppp
 + \frac{8\pi G}{\H}\vp_{0}' \Upp\right)
  \dvp1(\pvi)\dvp1(\qvi) \nonumber \\
@@ -582,7 +583,7 @@ a^2\left(\Uppp
 \vp_{0}'\Upp\dvp1(\pvi)\dvp1(\qvi)\Bigg\}
 \nonumber \\
 %
-&+ \frac{8\pi G}{\H}
+&+ \frac{1}{(2\pi)^3}\frac{8\pi G}{\H}
 \int \d^3p\ \d^3q\ \delta^3(\kvi-\pvi-\qvi)  \Bigg\{
 %
 \frac{8\pi G}{\H}\frac{p_l q^l}{q^2}\vp_{0}'\dvp1'(\pvi)
