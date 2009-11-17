@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.45 2009/11/17 17:19:11 ith Exp $
+% $Id: numerical.tex,v 1.46 2009/11/17 22:32:03 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.45 2009/11/17 17:19:11 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.46 2009/11/17 22:32:03 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -976,7 +976,7 @@ has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
 % 
 \begin{align}
 \label{eq:intb-soln-num}
- I_\B = -\frac{\pi\alpha^2}{168 k}\Bigg\{ 
+ I_\B = -\frac{\pi\alpha^2}{168 k^2}\Bigg\{ 
 	&-63 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k}}{\sqrt{k+\kmin} + \sqrt{\kmin}}
 			    \Biggr)
 	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{\kmax-k} +
@@ -1000,7 +1000,7 @@ If in addition to $\dvp1(q) = \alpha/\sqrt{q}$ we also take
  \dN{\dvp1}(q) = -\frac{\alpha}{\sqrt{q}} -i\frac{\alpha\sqrt{q}}{\beta}\,
 \end{equation}
 % 
-then the $\wt{\C}$ and $\wt{\D}$ terms can also be integrated analytically.
+then the $\wt{\C}$ and $\wt{\D}$ terms can be integrated analytically.
 The integral of the $\wt{\C}$ term is 
 % 
 \begin{align}
