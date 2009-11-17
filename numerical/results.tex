@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.28 2009/11/17 13:39:39 ith Exp $
+% $Id: results.tex,v 1.29 2009/11/17 17:18:52 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.28 2009/11/17 13:39:39 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.29 2009/11/17 17:18:52 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -195,23 +195,32 @@ a minimum. In Figure~\ref{fig:src-3ks} the source term is plotted at three diffe
 values of $k$ for the range $K_1$. As $k$ increases, or equivalently the length scale
 decreases, the magnitude of the source term after horizon crossing decreases. 
 % 
-\begin{figure}
+\begin{figure}[tb]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
-\caption[Comparison of source term for different ranges]{Comparison of the source
-term \eqref{eq:KG2-source-ntime} for $\kwmap$ over the three different ranges $K_1$,
-$K_2$ and $K_3$, specified in \eq{eq:Kranges-res}.} 
+\caption[Comparison of source term for different ranges]{A comparison of the source
+term \eqref{eq:KG2-source-ntime}, for the scale $\kwmap=5.25\e{-60}\Mpl$, over the
+three different ranges $K_1$,
+$K_2$ and $K_3$, which were specified in \eq{eq:Kranges-res}. Before horizon
+crossing there is a significant difference in the amplitude of the source term for
+$\kwmap$. After horizon crossing, however, the magnitude of $S$ is independent of
+the choice of $K_i$.
+} 
 \label{fig:src-kwmap-3ranges}
 \end{figure}
 % 
-\begin{figure}
+\begin{figure}[tb]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-3ks-large}
-\caption[Source term at three different $k$s]{The source term
+\caption[Source term at three different values of $k$]{The source term
 \eqref{eq:KG2-source-ntime} for three different $k$
 values in the $K_1$ range, including the WMAP
-pivot scale, $\kwmap=5.25\e{-60}\Mpl$. As $k$
-gets larger (scale gets smaller) the source term becomes smaller.}
+pivot scale, $\kwmap=5.25\e{-60}\Mpl$ (middle green line). As the value of $k$
+increases or equivalently the scale decreases, the magnitude of the source term
+decreases. The calculation of the source term for each $k$ value starts from the
+timestep at which the corresponding first order perturbation is initialised, \iec
+when $k/aH = 50$.
+}
 \label{fig:src-3ks}
 \end{figure}
 % 
@@ -262,9 +271,13 @@ comparable magnitude at the beginning of the simulation.}
  \includegraphics[width=0.8\textwidth]{numerical/graphs/s-over-t-3ks-large}
 \caption[Quotient of $S$ and $T$]{The quotient of the $S$ term,
 \eq{eq:KG2-source-ntime}, and the $T$ term, \eq{eq:Tdefn}, for three
-different $k$ values
-including the WMAP pivot scale. Depending on $k$ the source term only dominates
-at early stages or is important throughout the evolution.}
+different $k$ values in the range $K_1$,
+including the WMAP pivot scale, $\kwmap=5.25\e{-60}\Mpl$.  
+For small values of $k$ the source term is not comparable to the magnitude of $T$
+after horizon crossing. However, for larger $k$ values (smaller scales) the two
+terms have comparable magnitude.
+It is, therefore,
+important to calculate the source term over the full range of e-foldings.}
  \label{fig:s-over-t-3ks}
 \end{figure}
 % 
@@ -286,10 +299,9 @@ Figure~\ref{fig:s-over-t-3ks}.
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_kinit_log}
  \caption[Source term at initial start times]{The absolute magnitude of the source 
-term at the initial start time for each $k$ when $k/aH = 50$ deep inside
+term at the initial start time for each $k$ value when $k/aH = 50$ deep inside
 the
-horizon. The results are for the range $K_1=\left[ 1.9\e{-5},
-0.039 \right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
+horizon. The results are for the range $K_1$.}
 \label{fig:src-kinit}
 \end{figure}
 % 
@@ -308,11 +320,13 @@ inflation.
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_3ns-large}
 \caption[Source term at three different times]{The absolute magnitude of the source 
-term for all $ks$ in the range at three different timesteps: the upper blue line when
-only the largest modes have been initialised; the middle green line when all modes
-have been initialised; and the lower red dashed line when all modes have
-exited the horizon. The $k$ range shown here is $K_1=\left[ 1.9\e{-5}, 0.039
-\right] \Mpc^{-1}= \left[0.5\e{-61}, 1.0245\e{-58}\right]\Mpl$.}
+term for all $k$ values in the range $K_1$ at three different timesteps. The upper
+blue line shows $|S|$ at approximately $69$ e-foldings before the end of inflation
+when
+only the largest modes have been initialised. The middle green line shows $|S|$ when
+all modes
+have been initialised and the lower red dashed line when all modes have
+exited the horizon.}
 \label{fig:src-3ns}
 \end{figure}
 % 
@@ -337,8 +351,9 @@ the results for all four potentials will be compared using the $K_2$ range for $
  \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_Pr_allks-large}
 \caption[Comparison of $\Pr$ for models]{Comparison of the power spectrum $\Pr$ for
-the four different models. The three models $V(\vp)=\msqphisq$, $\lambdaphifour$ and
-$\phitwooverthree$ have red spectra ($n_s <1$) while the $V(\vp) = \msqphisqwithV$
+the four different models. The three models with potentials $\msqphisq$,
+$\lambdaphifour$ and
+$\phitwooverthree$ have red spectra ($n_s <1$) while the $\msqphisqwithV$
 model has a blue spectrum ($n_s>1$).}
 \label{fig:cmp-Pr}
 \end{figure}
@@ -346,9 +361,9 @@ model has a blue spectrum ($n_s>1$).}
 Figure~\ref{fig:cmp-Pr} shows the power spectrum of curvature perturbations, $\Pr$, for each
 potential. The $\msqphisq$, $\lambdaphifour$ and $\phitwooverthree$ models all
 clearly have
-a red spectrum with $n_s <1$. On the other hand the $\msqphisqwithV$ model has
+a red spectrum with $n_s <1$. On the other hand, the $\msqphisqwithV$ model has
 a blue
-spectrum ($n_s>1$) when $U_0$ to chosen to be $5\e{-10}\Mpl^4$ as specified in
+spectrum ($n_s>1$) when $U_0$ to chosen to be $5\e{-10}\Mpl^4$, as specified in
 Section~\ref{sec:pots-num}. 
 % 
 The values of $n_s$ obtained for the four potentials are given in Table~\ref{table:ns-res}. 
@@ -369,7 +384,13 @@ $\phitwooverthree$ & 0.977 & -0.023 \\
 $\msqphisqwithV$ & 1.002 & 0.002 \\
 \bottomrule
 \end{tabular}
-\caption{Spectral index values for the four potentials.}
+\caption[Spectral index values for the four potentials]
+{The spectral index for scalar perturbations for each of the four
+potentials used. These values are calculated for the $\kwmap$ scale, five e-foldings
+after it crosses the horizon. The potential parameters are listed in
+Table~\ref{tab:params-num}. The value $U_0=5\e{-10}\Mpl^{4}$ was chosen to ensure
+a blue spectrum ($n_s>1$).
+}
 \label{table:ns-res}
 \end{center}
 \end{table}
@@ -391,7 +412,7 @@ $\msqphisqwithV$ & 1.002 & 0.002 \\
   {numerical/graphs/src_onek_msqphisq_withV0-small}
 }
 \caption[The source term for different potentials]{Plots of the source term for the
-four different potentials used.}
+four different potentials studied.}
 \label{fig:sourcecomparison-res}
 \end{figure}
 % 
@@ -401,24 +422,31 @@ $\kwmap$ using the $K_2$ range\footnotemark.
 \footnotetext{These plots use a different $k$ range to the ones comparing $V(\vp)=\msqphisq$ and
 $\lambdaphifour$ in \Rref{hustonmalik}.}
 % 
-While clearly these source terms are superficially similar
-there are differences apparent. In Figure~\ref{fig:cmp-src-kwmap} the source terms are plotted
-together for $\kwmap$. The $\kwmap$ mode begins at different times for the
-different models. To enable comparison each result is plotted in terms of the
-initialisation time for that mode.  The change in duration is a consequence of
+Although these terms are qualitatively similar,
+differences between them are apparent. Figure~\ref{fig:cmp-src-kwmap} brings
+together the source terms at $\kwmap$ to enable a direct comparison to be made. The
+$\kwmap$ mode begins at different times for the
+different models. Each result is therefore plotted in terms of the
+initialisation time for that mode.  This change in duration is a consequence of
 allowing $H$ to evolve during the calculation. 
 
 \begin{figure}
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap-large}
  \caption[Comparison of source term for models]{Comparison of the source term
-evolution for the four different models.}
+evolution for the four different models. After horizon crossing the magnitude of the
+source term is larger for the quadratic and quartic models than for the other two.
+Towards the end of the numerical calculation there is a marked increase in $|S|$ for
+three of the models as $\bar{\varepsilon}_H$ increases towards unity. The end time of
+inflation is specified by hand for the hybrid inflation model, so this effect is
+not seen.}
 \label{fig:cmp-src-kwmap}
 \end{figure}
 % 
 
-The source term results for the $V(\vp)=\msqphisq$ and $\lambdaphifour$ models are very similar.
-From horizon crossing to near the end of inflation the results appear to coincide.
+The source term results for the quadratic and quartic potentials are very similar.
+Indeed, from horizon crossing to near the end of inflation the results appear to
+coincide.
 The $\lambdaphifour$ mode has a slightly longer duration and at late times is reduced in comparison
 with the $\msqphisq$ one. Figure~\ref{fig:cmp-src-zoom-kwmap} shows that at early times the
 relationship is more complicated with the $\lambdaphifour$ mode being larger for a significant
@@ -426,7 +454,8 @@ period.
 
 In the early stages the amplitude of the $V(\vp)=\phitwooverthree$ model is very
 similar to the other two
-results described above. After horizon crossing however there is a significant drop in the
+results described above. After horizon crossing, however, there is a significant drop
+in the
 amplitude of $S$ in comparison with the $\msqphisq$ and $\lambdaphifour$ models. This
 continues
 until late in the evolution when $|S|$ increases swiftly to reach levels above the
@@ -438,19 +467,26 @@ described so far.
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap_zoom-large}
  \caption[Comparison of source term for models at early stage]{Comparison of the
-source term evolution for the four different models at early times.}
+source term evolution for the four different models at early times. This figure
+highlights the early evolution of the four models shown in
+Figure~\ref{fig:cmp-src-kwmap}. Before horizon crossing the magnitude of the source
+term is comparable for each model. After horizon crossing differences between the
+models become apparent.}
 \label{fig:cmp-src-zoom-kwmap}
 \end{figure}
 % 
 
-The final model, $V(\vp)=\msqphisqwithV$, is nominally a hybrid inflation model
+The fourth model, with potential $V(\vp)=\msqphisqwithV$, is nominally a hybrid
+inflation model
 requiring two fields.
-As described in Section~\ref{sec:pots-num}, in order to evaluate using the single field
+As described in Section~\ref{sec:pots-num}, in order to perform the single field
 calculation, the end time of inflation must be specified by hand. In this simulation
 $\vp\simeq 8$
-is taken as the end time. In this region the potential is extremely flat and the effect of this can
+is taken as the end time. The potential is extremely flat in this region and the
+effect of this can
 be seen in the source term of the model. Before horizon crossing it is of comparable magnitude to
-the other terms. However a steep descent ensures that it is a few orders of magnitude
+the other terms. However, a steep decrease in $|S|$ ensures that it is a few orders
+of magnitude
 smaller than
 the other terms after horizon crossing. In contrast to the behaviour of the other models, the source
 term does not increase close to the end of inflation. This is due to the enforced end time cut-off
@@ -463,29 +499,30 @@ plans to extend the calculation to deal with more interesting models will be out
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Next Steps}
+\section{Future Directions}
 \label{sec:next-res}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-There are many possible next steps to improve the program outlined in
+There are many possible ways to improve the program outlined in
 Chapter \ref{ch:numericalsystem}. Chief amongst these is the implementation of the
 full second order source term given in \eqs{eq:SOKG-real-num} and
 \eqref{eq:Fdvk1-fourier-num}. Although clearly
-more complicated than the slow roll case in \eq{eq:KG2-fourier-sr-ntime},
+more complicated than the slow roll case of \eq{eq:KG2-fourier-sr-ntime},
 only three more $\theta$ dependent terms need to be added to the $\A$--$\D$ terms
-listed in \eq{eq:AtoD-num}.  The four potentials used above are all slowly rolling
-during inflation. Therefore it is not expected that
-using the full source equation would result in an appreciably
+listed in \eq{eq:AtoD-num}.  The four potentials considered above all result in 
+slow roll inflation. Therefore, it is not expected that
+using the full source equation will result in an appreciably
 different outcome in these models until near the end of the inflationary phase. Once
-the field has stopped rolling slowly, new observable features might
-arise as is indeed the case at first order. 
+the field has stopped rolling slowly, new observable features are expected to
+arise, as is indeed the case at first order. 
 
 
-To set up the numerical system to use the full second order equation
-\eqs{eq:SOKG-real-num} and \eqref{eq:Fdvk1-fourier-num}, they must be written in
-terms of $\N$ with the $\theta$ dependent terms grouped together. The main equation
+\eqs{eq:SOKG-real-num} and \eqref{eq:Fdvk1-fourier-num} must be written in
+terms of $\N$, with the $\theta$ dependent terms grouped together, in order to set
+up the numerical system completely at second order. 
+The main equation
 becomes
 \begin{multline}
  \label{eq:fullso-res}
@@ -498,7 +535,7 @@ becomes
 + S_\mathrm{full}(\kvi) = 0\,,
 \end{multline}
 % 
-and the full source equation is given by
+where the full source equation is given by
 % 
 \begin{align}
 \label{eq:fullsrc-res}
@@ -523,7 +560,7 @@ S_\mathrm{full}(\kvi) = \frac{1}{(2\pi)^2}\int \d q q^2 &\Bigg\{
 % 
 The $F_\mathrm{full}$ term in \eq{eq:fullsrc-res} requires the use of three further
 $\theta$
-integrals in addition to those in \eq{eq:AtoD-num}:
+integrals in addition to those presented in \eq{eq:AtoD-num}. These take the form
 % 
 \begin{align}
 \label{eq:efg-terms-res}
@@ -537,12 +574,11 @@ integrals in addition to those in \eq{eq:AtoD-num}:
 \dN{\dvp1}(\kvi-\qvi)\d \theta \,.
 \end{align}
 % 
-It is worth noting that the term $\sin^3(\theta)/|\kvi-\qvi|^2$ goes to $0$ in the
-limit when $k=q$ and
+It is worth noting that the term $\sin^3(\theta)/|\kvi-\qvi|^2$ tends to zero in the
+limit where $k=q$ and
 $\theta\rightarrow 0$.
 % 
-Using the terms $\E$, $\F$ and $\wt{\G}$, the $F_\mathrm{full}$ term can now be
-written:
+The $F_\mathrm{full}$ term can now be written in terms of $\E$, $\F$ and $\wt{\G}$:
 \begin{align}
  \label{eq:fullfterm-res}
 F_\mathrm{full} &= \frac{8\pi G}{(2\pi)^2}\frac{1}{(aH)^2} \int \d q\, q^2 \Bigg\{
@@ -584,42 +620,45 @@ G}{4}(\dN{\vp_0})^2 \right)q^2 + \frac{3}{4}\frac{8\pi G}{(aH)^2} X^2 \right)
 \Bigg] \wt{\G}(\kvi, \qvi) \Bigg\} \,.
 \end{align}
 % 
-This set of equations is clearly much longer than the slow roll ones used in
-Chapter~\ref{ch:numericalsystem}. The numerical complexity is, however, not
-much greater, once the three terms in \eq{eq:efg-terms-res} are calculated. The
-running
-time of the full calculation will clearly be a significant constraint.
+\eqs{eq:fullsrc-res} and \eqref{eq:fullfterm-res} are clearly more complicated than
+the slow roll versions used in
+Chapter~\ref{ch:numericalsystem}. The numerical complexity is not significantly
+greater, however, once the three terms in \eq{eq:efg-terms-res} have been calculated.
+The running time of the full calculation will clearly be a significant constraint.
 
 With this in mind, the performance of the numerical simulation could be improved by
 analysing the most time consuming processes and investigating what
-optimisations could be implemented. The realisation of the current, perhaps
+optimisations might be implemented. The current, perhaps
 inelegant, procedure will allow any performance improvements to be benchmarked for
-accuracy as well as speed.
+accuracy as well as for speed.
 % 
-As discussed above $N_k$ was set to $1025$ for the test runs. This provides good
+As discussed above, $N_k$ was set to $1025$ for the test runs. This provides good
 coverage of the
-WMAP $k$ range but it is not clear whether it sufficiently
-approximates the integral to infinity for the source term.  Currently
-logistical factors, including the running time and memory usage of the code,
+WMAP $k$ range, but it is not clear whether it sufficiently
+approximates the integral to infinity for the source term.  Logistical factors,
+including the running time and memory usage of the code,
 restrict the choice of $N_k$. By optimising the routines
-for reduced memory and increased speed it should be possible to extend the $k$ ranges
-and increase the resolution. 
+for reduced memory and increased speed it is hoped that the range of scales can be
+extended and the resolution enhanced.
 
 
-Beyond these considerations the next step is to implement a multi-field
+Beyond these considerations, the next significant step is to implement a multi-field
 version of the system. This would allow the investigation of models that inherently
 produce large second order perturbations. In \Rref{Malik:2006ir} the
-second order Klein-Gordon equation is given for multiple fields and upgrading the
-simulation to use these equations should be a straight-forward, if lengthy, process.
+second order Klein-Gordon equation for multiple fields was presented and upgrading
+the
+simulation to use these equations should be a straight-forward (if lengthy) process.
 Extending the current data-structures and routines to a fixed number of extra fields
 will increase the numerical complexity and the run-time of the code. 
 
-For example, suppose the perturbations of two scalar fields, $\vp$ and $\chi$, are to
+For example, let us suppose that the second order perturbations of two scalar fields,
+$\vp$ and $\chi$, are to
 be calculated. Let $V$ denote the sum of the potentials for each field. As the
 coding environment we have used can easily handle arrays of variables, it is useful
 to write the equations in vector form. The following definitions will be used:
 % 
 \begin{align}
+\label{eq:vector-defns-res}
  \bm{\vp_0} &= \begin{pmatrix}
                 \vp_0 \\
 		\chi_0
@@ -825,65 +864,68 @@ involves.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-Part~\ref{part:numerical} of this work described the numerical
-solution of the evolution equations for second order scalar perturbations, using the
-closed form of the Klein-Gordon equation in \eq{eq:KG2-fourier-sr-num}. Direct
-calculation of field perturbations beyond
-first order using perturbation theory has been shown to be readily achievable, though
-not trivial.
+Part~\ref{part:numerical} of this thesis has described the numerical
+solution of the evolution equations for second order scalar perturbations. The
+closed form of the Klein-Gordon equation \eqref{eq:KG2-fourier-sr-num} has ben
+employed for the first time. We have hown that direct
+calculation of the field perturbations beyond
+first order using perturbation theory is readily achievable, although
+it is non-trivial.
 
 This first demonstration has been limited to considering
 the slow roll approximation of the source term in \eq{eq:KG2-fourier-sr-num} which
 is quadratic in first order perturbations. Slow roll has not been imposed on the
 background or first order equations. Four different
-potentials
-$V(\vp)=\msqphisq$, $\lambdaphifour$, $\phitwooverthree$ and $\msqphisqwithV$ were
+potentials were
 used to demonstrate the capabilities of the
-system. The singularity at $k=0$ which arises as larger and larger
-scales are considered is avoided by implementing a cutoff at small
-wavenumbers below $\kmin$. This is a pragmatic choice necessary for
+system. The singularity at $k=0$, which arises as larger and larger
+scales are considered, is avoided by implementing a cutoff at small
+wavenumbers below $\kmin$. 
+This is a pragmatic choice necessary for
 the calculation.
 It is also necessary to
-pick a maximum $k$ value, and this choice is dictated by computational
+specify a maximum value of $k$. This choice is dictated by computational
 resources and with reference to observationally relevant scales. In
-this demonstration $k$ ranges have been used which are comparable with the
+this demonstration, $k$ ranges have been used which are comparable with the
 scales observed by the WMAP satellite. By comparing the analytical results of the
 convolution integral with the numerical calculation, values of the parameters
-$N_\theta, N_k$ and $\Delta k$ were chosen which minimise
-the numerical error. The convolution scheme that has been implemented
+$N_\theta, N_k$ and $\Delta k$ were chosen in such a way that the numerical error
+was minimised. The convolution scheme that has been implemented
 works best when $\Delta k>\kmin$.
 
 
 We have seen explicitly that the second order calculations for the chosen
-potentials are obtainable once the cut-off for $\kmin$ is
-implemented. As expected for these unexceptional potentials in the slowly
-rolling regime the magnitude of second order perturbations is extremely
-suppressed in comparison with the first order amplitude. We have shown the
-evolution of the source term equation during the inflationary regime can be
+potentials can be completed once the cut-off for $\kmin$ is
+imposed. As expected for these potentials the magnitude of second order perturbations
+is extremely
+suppressed in the slowly rollng regime, in comparison with the first order amplitude.
+We have also shown that the
+evolution of the source term during the inflationary regime can be
 readily calculated.
 
 
-By computing the perturbations to second order we have direct access
-to the non-Gaussianity of $\dvp{}$.  While useful for the toy models
-discussed above (with $\fnl\simeq0$), when used to investigate models
-with predictions  large non-linearity parameter $\fnl$, this technique
+By computing the perturbations to second order, we have direct access
+to the non-Gaussianity of $\dvp{}$.  This is useful for the toy models
+discussed above (where $\fnl\simeq0$). When used to investigate models
+that predict a large non-linearity parameter, $\fnl$, this technique
 could yield greater insight into the formation and development of the
-non-Gaussian contributions by studying the contribution of the different
-terms in the source term \eq{eq:KG2-source-ntime}.
+non-Gaussian contributions by studying the effects of the different
+terms in the source equation \eqref{eq:KG2-source-ntime}.
 %
-It was shown recently that in order to calculate $\fnl$, instead of
-using the standard method based on the Lagrangian formalism
-\cite{Maldacena:2002vr}, one can use the field equations
-\cite{Musso:2006pt,Seery:2008qj}. The method presented here will
-therefore eventually allow a full numerical calculation of $\fnl$.
+It was shown recently that $\fnl$ can be calculated directly from the field
+equations \cite{Musso:2006pt,Seery:2008qj}, instead of
+using the standard method based on a Lagrangian formalism
+\cite{Maldacena:2002vr}. The method presented here
+will
+therefore eventually allow a full numerical calculation of $\fnl$ to be made.
 
 
 In summary, we have demonstrated that numerically solving the closed
 Klein-Gordon equation for second order perturbations is possible. The slow roll
 version of the source term was used in the calculation, but
-as described in Section~\ref{sec:next-res}, the extention of the system to use
+as described in Section~\ref{sec:next-res}, the extention of the system to include
 the full source term is achievable. 
-The analytic and numerical solutions for one of the convolution terms have been
-compared and found to be in good agreement.
+The analytic and numerical solutions for one of the convolution terms were
+compared directly and found to be in good agreement.
 The models used have been shown to have negligible second order
-perturbations in line with analytic results. 
+perturbations in line with known analytic results. 
