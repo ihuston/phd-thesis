@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.26 2009/11/12 23:42:26 ith Exp $
+% $Id: results.tex,v 1.27 2009/11/17 12:49:14 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.26 2009/11/12 23:42:26 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.27 2009/11/17 12:49:14 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -24,42 +24,45 @@
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-The main result of Part~\ref{part:numerical} of this work is the demonstration of a
-numerical solution to
+The main result of Part~\ref{part:numerical} of this work is the numerical
+integration of
 the closed Klein-Gordon equation of motion for second order scalar field
-perturbations in \eq{eq:KG2-fourier-sr-num}. This includes the slow
-roll approximation of the source term for second order perturbations, but the slow
-roll version of the evolution equations has not been used for the background or first
-order perturbations. In this chapter the results of the numerical calculation
-defined in Chapter~\ref{ch:numericalsystem} will be presented. This represents the
+perturbations, \eq{eq:KG2-fourier-sr-num}. The slow
+roll approximation of the source term for second order perturbations was employed,
+but the complete versions of the evolution equations were used for the
+background and first
+order perturbations. In this chapter the results of the numerical calculation will be
+presented. This represents the
 first step towards a full calculation of the Klein-Gordon equation at second order.
-In addition to the results provided below, plans will be described for future work to
-improve the numerical system and increase its applicability. 
+In addition to the new results obtained, plans will be described for future
+work aimed at improving the numerical system and increasing its range
+of applicability. 
 
-As a proof of concept the numerical system was tested with four different
+As a proof of concept, the numerical system was tested with four different
 potentials, $V(\vp)=\msqphisq$, $\lambdaphifour$, $\phitwooverthree$ and
 $\msqphisqwithV$, and results computed across three
-different $k$ ranges. As expected, considering the use of a single slowly
-rolling field, the second order perturbation we have calculated is extremely
-small in comparison with the first order term. However there are already
-differences apparent between the potentials which will be outlined in
+different $k$ ranges. As expected, the second order perturbation for a single,
+slowly rolling inflaton field that we have calculated is extremely
+small in comparison with the first order term. However, there are
+differences apparent between the potentials, which will be outlined in
 Section~\ref{sec:compare-res}.
 
-We have listed the parameters $m$, $\lambda$, $\sigma$ and $m_0$ of the potentials
+We have listed the potential parameters $m$, $\lambda$, $\sigma$ and $m_0$
 in Table~\ref{tab:params-num}. These were found using the WMAP5 normalisation
 at $\kwmap=0.002 \Mpc^{-1} = 5.25 \e{-60}\Mpl$ \cite{Komatsu:2008hk}.
 We have also outlined in \eq{eq:Krangedefns} the three $k$ ranges that have been
 used:
 % 
-\begin{align*}
+\begin{align}
+\label{eq:Kranges-res}
 K_1 &= \left[1.9\e{-5}, 0.039\right]\Mpc^{-1}\,,\quad \Delta k =
-3.8\e{-5}\Mpc^{-1} \nonumber\\
+3.8\e{-5}\Mpc^{-1} \,,\nonumber\\
 K_2 &= \left[5.71\e{-5}, 0.12\right]\Mpc^{-1}\,, \quad \Delta k =
-1.2\e{-4}\Mpc^{-1}
+1.2\e{-4}\Mpc^{-1} \,,
 \nonumber\\ 
 K_3 &= \left[9.52\e{-5}, 0.39\right]\Mpc^{-1}\,, \quad \Delta k =
 3.8\e{-4}\Mpc^{-1} \,.
-\end{align*}
+\end{align}
 Many of the results will be quoted for $\kwmap$ which lies in all three of these
 ranges.
 
@@ -67,20 +70,22 @@ Given that the first order perturbations for the chosen potentials produce an
 almost scale invariant power spectrum with no running, it is no surprise that
 the results from the three different $k$ ranges are very similar. The second
 order source term is somewhat dependent on the lower bound of $k$ (upper bound
-on size). This is expected and in the scale invariant case a log divergence can
+on size). This is also to be expected and in the scale invariant case a logarithmic
+divergence can
 be shown to exist \cite{Lyth:2007jh}. We have implemented an arbitrary sharp
-cutoff at $\kmin$ below which 
+cutoff at $\kmin$, below which 
 $\dvp1$ is taken to be zero. 
 As mentioned in Chapter~\ref{ch:numericalsystem}, there is some evidence to suggest
 that a similar cutoff might be supported by the WMAP data
 \cite{Sinha:2005mn,Kim:2009pf}. 
 
-In Section~\ref{sec:results} the numerical results for the computation described in
-Chapter~\ref{ch:numericalsystem} will be given. Comparisons of the results from the
-four different test potentials will be made in Section~\ref{sec:compare-res}. As
-this is just the first stage towards a full calculation of the source term the next
-steps required will be outlined in Section~\ref{sec:next-res}. Finally in
-Section~\ref{sec:disc-num} there will be a discussion of outcomes of the chapter.
+In Section~\ref{sec:results}, the numerical results for the computation described in
+Chapter~\ref{ch:numericalsystem} are presented. Comparisons of the results from the
+four different test potentials will be made in Section~\ref{sec:compare-res}. Since
+this represents the first stage towards a full calculation of the source term, the
+next
+steps that will be required are outlined in Section~\ref{sec:next-res}. Finally,
+in Section~\ref{sec:disc-num} we discuss some of the consequences of our results.
 % 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -91,11 +96,6 @@ Section~\ref{sec:disc-num} there will be a discussion of outcomes of the chapter
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-In Section~\ref{sec:msqphisq-res} general results will be given demonstrating the
- operation of the numerical system. These results all use the
-$V(\vp)=\msqphisq$ potential for the purposes of comparison. The results for the four
-different potentials will be compared in Section~\ref{sec:compare-res}.
-
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -106,14 +106,15 @@ different potentials will be compared in Section~\ref{sec:compare-res}.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 At first order the solutions obtained agree with previous work in
-Refs.~\cite{Salopek:1988qh, Martin:2006rs, Ringeval:2007am}, with oscillations
-being damped until horizon crossing (when $k=aH$) after which the
-curvature perturbation becomes conserved. Figure~\ref{fig:dp1} shows
+Refs.~\cite{Salopek:1988qh, Martin:2006rs, Ringeval:2007am}. Oscillations
+are damped until horizon crossing (when $k=aH$) after which the
+curvature perturbation becomes conserved. Figure~\ref{fig:dp1} shows the evolution of
 the real and imaginary parts of the first order perturbations from
 when the initial conditions are set at $k/aH=50$ to just after horizon
-crossing. The x-axis for most of the following figures shows the
-number of e-foldings left until the end of inflation ($\N_\mathrm{end}-\N$) instead
-of the internally used time variable $\N$.
+crossing. The horizontal axis for most of the following figures parametrises the
+number of e-foldings remaining until the end of inflation ($\N_\mathrm{end}-\N$),
+instead
+of the time variable $\N$ employed in the calculations.
 %
 % 
 \begin{figure}
@@ -122,7 +123,7 @@ of the internally used time variable $\N$.
  \caption[First Order Perturbation]{The first order perturbation $\dvp1$ rescaled by
 $k^{3/2}/(\sqrt{2}\pi)$ from the beginning of the simulation until around
 horizon crossing (red dot-dashed line). The real (blue) and imaginary (green
-dashed) perturbations are shown for $\kwmap$.}
+dashed) parts of the perturbation are shown for the scale $\kwmap$.}
 \label{fig:dp1}
 \end{figure}
 % 
@@ -131,11 +132,11 @@ dashed) perturbations are shown for $\kwmap$.}
 
 
 Figure~\ref{fig:dp2realimag} shows the evolution of the second
-order perturbations for $\kwmap$. As mentioned above the
-overall amplitude of the second order perturbations is many orders of
-magnitude smaller than the first order ones. In Figures~\ref{fig:dp1}
+order perturbations for the scale $\kwmap$. As mentioned above, the
+overall amplitude of the second order perturbation is many orders of
+magnitude smaller than the corresponding first order one. In Figures~\ref{fig:dp1}
 and \ref{fig:dp2realimag} the field values have been rescaled by
-$k^{3/2}/(\sqrt{2}\pi)$ to allow a better appreciation of the
+$k^{3/2}/(\sqrt{2}\pi)$ to allow for a better appreciation of the
 magnitude of the resulting power spectra.
 % 
 \begin{figure}
@@ -155,7 +156,7 @@ of horizon exit (red dot-dashed line).}
 
 
 The source term $S(\kvi)$ is calculated using \eq{eq:KG2-src-sr-aterms} at each time
-step using the results of the first order and background runs. This term
+step using the results of the first order and background simulations. This term
 drives the production of second order perturbations as shown in
 \eqs{eq:KG2-fourier-sr-num} and
 \eqref{eq:KG2-fourier-sr-ntime}. Figure~\ref{fig:src-full} shows the
@@ -195,7 +196,7 @@ a minimum.
 term \eqref{eq:KG2-source-ntime} for $\kwmap$ over three different ranges with
 different $\Delta k$s as specified
 in
-\eq{eq:Krangedefns}.} 
+\eq{eq:Kranges-res}.} 
 \label{fig:src-kwmap-3ranges}
 \end{figure}
 % 
