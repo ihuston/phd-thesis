@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.47 2009/11/18 18:17:36 ith Exp $
+% $Id: numerical.tex,v 1.48 2009/11/20 15:23:24 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.47 2009/11/18 18:17:36 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.48 2009/11/20 15:23:24 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -762,7 +762,7 @@ $k$ values significantly impact on the results. The sections
 of the code that solve ODEs are straightforward and follow standard algorithms.
 
 
-As mentioned above the WMAP results \cite{Komatsu:2008hk} use
+As mentioned above, the WMAP results \cite{Komatsu:2008hk} use
 observations in the range $k\in [0.92 \e{-60}, 3.1 \times
   10^{-58}]\Mpl = [3.5\e{-4}, 0.12] \Mpc^{-1}$. We will
 consider three different $k$ ranges both in our results and the tests
@@ -797,7 +797,7 @@ The next, $K_2$, is closest to the WMAP range and still has quite a fine resolut
 The final
 range, $K_3$, has a larger $k$ mode step size, $\Delta k = 1\e{-60}\Mpl =
 3.8\e{-4}\Mpc^{-1}$, and
-covers a greater range than the others, extending to much smaller scales than WMAP can observe.
+covers a greater range than the others. It extends to much smaller scales than WMAP can observe.
 
 \begin{figure}[tb]
 \centering
@@ -870,7 +870,7 @@ This has the analytic solution
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
 % 
-\begin{figure}[tb]
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]
     {./numerical/graphs/errors_analytic_aterm-half.pdf}
@@ -889,10 +889,10 @@ combinations of $k$ ranges and $N_\theta$. The relative error
 |}{|\mathrm{analytic}|}
 \end{equation}
 %
-is small for all the tested cases but certain combinations of
-parameters turned out to be more accurate than others. The relative error of
+is small for all the tested cases, but certain combinations of
+parameters turn out to be more accurate than others. The relative error of
 all the following results is not affected by the choice of $\alpha$ so
-we will keep its numerical value fixed throughout.
+we will keep its numerical value fixed throughout as $2.7\e{57}$.
 
 \begin{figure}[htb]
  \centering
@@ -961,7 +961,7 @@ contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1}
 % 
 % Bterm
 Analytic solutions can also be found for the $\B$, $\wt{\C}$ and $\wt{\D}$ terms.
-The $\B$ term integral, $I_\B$, given by
+The $\B$ term integral, $I_\B$, is given by
 % 
 \begin{align}
  \label{eq:bintegral-num}
@@ -972,7 +972,7 @@ I_\B &= 2\pi \int_{\kmin}^{\kmax} \d q\, q^2\dvp1(\qvi)\B(\kvi,\qvi) \nonumber\\
 \cos{\theta}\sin{\theta}\,. 
 \end{align}
 % 
-has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
+and has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
 % 
 \begin{align}
 \label{eq:intb-soln-num}
@@ -994,7 +994,7 @@ has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
 % 
-If in addition to $\dvp1(q) = \alpha/\sqrt{q}$ we also take
+If, in addition to $\dvp1(q) = \alpha/\sqrt{q}$, we also take
 % 
 \begin{equation}
  \dN{\dvp1}(q) = -\frac{\alpha}{\sqrt{q}} -i\frac{\alpha\sqrt{q}}{\beta}\,
@@ -1080,15 +1080,15 @@ The relative errors between the analytic and calculated values for $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num} for the
 three final $k$ ranges. The errors
 for the $I_{\wt{\C}}$ and $I_{\wt{\D}}$ terms are very small, being of the order of
-$10^{-8}$ and $10^{-6}$ respectively. The relative error for the $I_\B$ term is
-larger, especially for small $k$ values. However the error is still below $0.08\%$
-for each of $K_1$, $K_2$ and $K_3$.
+$10^{-8}$ and $10^{-6}$, respectively. The relative error for the $I_\B$ term is
+larger, especially for small $k$ values. However, the error is still below $0.08\%$
+for each of the $K_1$, $K_2$ and $K_3$ ranges.
 
 
 It should be noted that these tests only show the relative errors in the
 computation of integrals of the four terms in \eq{eq:AtoD-num}. They
 do not represent
-errors for the full calculation. However, they show that the accuracy is good
+errors for the full calculation. However, they do show that the accuracy is good
 compared with the analytic result. 
 
 \begin{figure}
