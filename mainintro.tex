@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.61 2009/11/20 15:53:36 ith Exp $
+% $Id: mainintro.tex,v 1.62 2009/11/20 16:08:14 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.61 2009/11/20 15:53:36 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.62 2009/11/20 16:08:14 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -106,14 +106,14 @@ of the
 Einstein-Hilbert ($S_\mathrm{EH}$) and matter ($S_\mathrm{M}$) actions which are
 defined as 
 % 
-\begin{eqnarray}
+\begin{align}
 \label{eq:EHeqn-intro}
- S_\mathrm{EH} &=& \frac{1}{16\pi G}\int \d^4 x \sqrt{|g|} \left(R +
+ S_\mathrm{EH} &= \frac{1}{16\pi G}\int \d^4 x \sqrt{|g|} \left(R +
 2\Lambda_c\right) \,,\\
 \label{eq:matteraction-intro}
- S_\mathrm{M} &=& \int \d^4 x \sqrt{|g|}
+ S_\mathrm{M} &= \int \d^4 x \sqrt{|g|}
 \mathcal{L}_\mathrm{M} \,.
-\end{eqnarray}
+\end{align}
 %
 Here $g$ is the determinant of the metric $g_{\mu\nu}$, $R$ is the Ricci
 scalar, $G$ is Newton's gravitational constant, $\Lambda_c$ is a cosmological
@@ -162,13 +162,13 @@ perfect fluid can now be used to derive the equations of motion of the fluid.
 From the metric in \eq{eq:frwmetric-intro} the $00$ and $ij$ components of the
 Ricci tensor can be found:
 % 
-\begin{eqnarray}
+\begin{align}
 \label{eq:Ricci00-intro}
- R_{00} &=& -3 \frac{\ddot{a}}{a} \,,\\
+ R_{00} &= -3 \frac{\ddot{a}}{a} \,,\\
 \label{eq:Ricciij-intro}
- R_{ij} &=& \delta_{ij} \left[ 2\dot{a}^2 +
+ R_{ij} &= \delta_{ij} \left[ 2\dot{a}^2 +
   a \ddot{a} + 2\frac{K}{a^2} \right] \,.
-\end{eqnarray}
+\end{align}
 % 
 The Friedmann equations are then determined from the Einstein equations
 \eqref{eq:einstein-intro}.
@@ -483,12 +483,12 @@ of $V$ becomes a standard derivative $V_{,\vp}$.
 With these choices we have the following relations for the matter
 energy-density and isotropic pressure:
 % 
-\begin{eqnarray}
+\begin{align}
 \label{eq:EandP-intro}
- E &=& \frac{1}{2}\dot{\varphi}^2 + V(\varphi) \,,\\
+ E &= \frac{1}{2}\dot{\varphi}^2 + V(\varphi) \,,\\
 \label{eq:Pdefn-intro}
- P &=& \frac{1}{2}\dot{\varphi}^2 - V(\varphi) \,.
-\end{eqnarray}
+ P &= \frac{1}{2}\dot{\varphi}^2 - V(\varphi) \,.
+\end{align}
 % 
 Under these conditions the kinetic function $P(\varphi, X)$ can be identified as
 the isotropic pressure. The dynamics of the field are governed by the potential
@@ -528,10 +528,10 @@ making the friction $H\dot{\vp}$ in \eq{eq:phieom1-intro} dominant. With
 these approximations the
 equations of motion for a slowly rolling field become
 % 
-\begin{eqnarray}
- \dot{\vp} &\simeq& - \frac{V_{,\vp}}{3H}\,, \\
- H^2 &\simeq& \frac{8\pi G}{3}V(\vp)\,.
-\end{eqnarray}
+\begin{align}
+ \dot{\vp} &\simeq - \frac{V_{,\vp}}{3H}\,, \\
+ H^2 &\simeq \frac{8\pi G}{3}V(\vp)\,.
+\end{align}
 
 
 
@@ -674,27 +674,27 @@ the inflaton perturbation will transform as \cite{Malik:2008im, Malik:2008yp}
 where a tilde ($\wt{~}$) denotes a transformed quantity. For the metric
 perturbations the
 transformations for the scalars are
-\begin{eqnarray}
+\begin{align}
  \label{transphi1}
-\widetilde {\phi_1} &=& \phi_1 +\H\alpha_1+\alpha_1'\,,\\
+\widetilde {\phi_1} &= \phi_1 +\H\alpha_1+\alpha_1'\,,\\
 %
 \label{transpsi1}
-\widetilde \psi_1 &=& \psi_1-\H\alpha_1 \,,\\
+\widetilde \psi_1 &= \psi_1-\H\alpha_1 \,,\\
 %
 \label{transB1}
-\widetilde B_1 &=& B_1-\alpha_1+\beta_1'\,,\\
+\widetilde B_1 &= B_1-\alpha_1+\beta_1'\,,\\
 %
 \label{transE1}
-\widetilde E_1 &=& E_1+\beta_1\,,
-\end{eqnarray}
+\widetilde E_1 &= E_1+\beta_1\,,
+\end{align}
 and for the vectors
-\begin{eqnarray}
+\begin{align}
  \label{transS1}
-\widetilde {S_{1}^{~i}} &=& S_{1}^{~i}-\gamma_1'\,, \\
+\widetilde {S_{1}^{~i}} &= S_{1}^{~i}-\gamma_1'\,, \\
 %
 \label{transF1}
-\widetilde {F_{1}^{~i}} &=& F_{1}^{~i}+\gamma_1\,. 
-\end{eqnarray}
+\widetilde {F_{1}^{~i}} &= F_{1}^{~i}+\gamma_1\,. 
+\end{align}
 % 
 The tensor perturbation $h_{1ij}$ does not change under transformation at first
 order, but does at subsequent orders.
@@ -742,13 +742,13 @@ values only by eliminating the metric perturbations using
 In Fourier space and in terms of the conformal time $\eta$, the closed form of
 the first order perturbation equation of motion is \cite{Malik:2008im}
 % 
-\begin{eqnarray}
+\begin{multline}
 \label{eq:fokg-intro}
-&& \dvp1''(\kvi) + 2\H \dvp1'(\kvi) + k^2\dvp1(\kvi) \nonumber\\
-&&+ a^2 \left[\Upp +
+\dvp1''(\kvi) + 2\H \dvp1'(\kvi) + k^2\dvp1(\kvi) \\
++ a^2 \left[\Upp +
 \frac{8\pi G}{\H}\left(2\vp_{0}' \Uphi + (\vp_{0}')^2\frac{8\pi G
 }{\H}\U\right)\right]\dvp1(\kvi) = 0 \,,
-\end{eqnarray}
+\end{multline}
 % 
 where $\U$ is the background value of the potential $V(\vp)$.
 %

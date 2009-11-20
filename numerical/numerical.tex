@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.50 2009/11/20 15:53:37 ith Exp $
+% $Id: numerical.tex,v 1.51 2009/11/20 16:08:14 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.50 2009/11/20 15:53:37 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.51 2009/11/20 16:08:14 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -204,11 +204,11 @@ Section~\ref{sec:perts-intro}.}.
 Derivatices with respect to conformal time, $\eta$, and coordinate time, $t$, are
 then given by
 %
-\begin{eqnarray}
- \pd{ }{\eta} &=& \frac{\d \N}{\d \eta}\pd{}{\N} = \H \pd{}{\N} \,,\\
- \pd{ }{t} &=& \frac{\d \eta}{\d t} \frac{\d \N}{\d \eta}\pd{}{\N} = H
+\begin{align}
+ \pd{ }{\eta} &= \frac{\d \N}{\d \eta}\pd{}{\N} = \H \pd{}{\N} \,,\\
+ \pd{ }{t} &= \frac{\d \eta}{\d t} \frac{\d \N}{\d \eta}\pd{}{\N} = H
 \pd{}{\N}\,,
-\end{eqnarray}
+\end{align}
 %
 respectively, where $H = \d \ln a/\d t$ and $\H = aH$.
 % 
@@ -572,13 +572,13 @@ be 50, can be changed if needed.  We use the small wavelength solution
 of the first order equations described in Section~\ref{sec:perts-intro} as the
 initial conditions \cite{Salopek:1988qh}, with
 %
-\begin{eqnarray}
+\begin{align}
 \label{eq:foics}
- \dvp1|_{\mathrm{init}} &=& \frac{\sqrt{8\pi G}}{a}
+ \dvp1|_{\mathrm{init}} &= \frac{\sqrt{8\pi G}}{a}
 \frac{e^{-i k\eta}}{\sqrt{2k}} \,,\\
- \dN{\dvp1}|_{\mathrm{init}} &=& -\frac{\sqrt{8\pi G}}{a}
+ \dN{\dvp1}|_{\mathrm{init}} &= -\frac{\sqrt{8\pi G}}{a}
 \frac{e^{-i k\eta}}{\sqrt{2k}} \left(1 + i \frac{k}{a H}\right) \,,
-\end{eqnarray}
+\end{align}
 %
 where conformal time $\eta$ can be calculated from 
 % 
