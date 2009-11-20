@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.30 2009/11/20 14:57:13 ith Exp $
+% $Id: results.tex,v 1.31 2009/11/20 15:53:37 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.30 2009/11/20 14:57:13 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.31 2009/11/20 15:53:37 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -117,7 +117,7 @@ instead
 of the time variable $\N$ employed in the calculations.
 %
 % 
-\begin{figure}
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/dp1_kwmap}
  \caption[First Order Perturbation]{The first order perturbation $\dvp1$ rescaled by
@@ -139,7 +139,7 @@ and \ref{fig:dp2realimag} the field values have been rescaled by
 $k^{3/2}/(\sqrt{2}\pi)$ to allow for a better appreciation of the
 magnitude of the resulting power spectra.
 % 
-\begin{figure}
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/dp2_kwmap}
  \caption[Second Order Perturbation]{The real (blue line) and imaginary (green
@@ -166,7 +166,7 @@ The source term is large at early times, and closely follows the form
 of the spectrum of the first order perturbations, as can be seen from
 Figure~\ref{fig:Pphi-kwmap}.
 % 
-\begin{figure}[tb]
+\begin{figure}[htbp]
 \centering
 \subfloat[Absolute magnitude of the source term.]{
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-kwmap-large}
@@ -195,7 +195,7 @@ a minimum. In Figure~\ref{fig:src-3ks} the source term is plotted at three diffe
 values of $k$ for the range $K_1$. As $k$ increases, or equivalently the length scale
 decreases, the magnitude of the source term after horizon crossing decreases. 
 % 
-\begin{figure}[tb]
+\begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
 \caption[Comparison of source term for different ranges]{A comparison of the source
@@ -209,7 +209,7 @@ the choice of $K_i$.
 \label{fig:src-kwmap-3ranges}
 \end{figure}
 % 
-\begin{figure}[tb]
+\begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-3ks-large}
 \caption[Source term at three different values of $k$]{The source term
@@ -254,7 +254,7 @@ determined, it may be possible to significantly reduce the time
 required for the simulation by restricting the calculation of $S$ to those regions
 where it is important.
 %
-\begin{figure}
+\begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-vs-t-kwmap-large}
 \caption[Source term compared to $T$ term]{The source term (lower blue line), as
@@ -266,7 +266,7 @@ comparable magnitude at the beginning of the simulation.}
 \end{figure}
 % 
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/s-over-t-3ks-large}
 \caption[Quotient of $S$ and $T$]{The quotient of the $S$ term,
@@ -295,7 +295,7 @@ It should also be remembered that the magnitude of the other terms in the second
 order ODE is small for larger $k$ modes as shown by the ratio $|S|/|T|$ in
 Figure~\ref{fig:s-over-t-3ks}.
 % 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_kinit_log}
  \caption[Source term at initial start times]{The absolute magnitude of the source 
@@ -316,7 +316,7 @@ red line illustrates $|S|$
 after all modes have exited the horizon, around 52 e-foldings before the end of
 inflation.
 % 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_3ns-large}
 \caption[Source term at three different times]{The absolute magnitude of the source 
@@ -347,7 +347,7 @@ All the results quoted so far are for the $V(\vp)=\msqphisq$ model. In this sect
 the results for all four potentials will be compared using the $K_2$ range for $k$. 
 % 
 % 
-\begin{figure}
+\begin{figure}[htbp]
  \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_Pr_allks-large}
 \caption[Comparison of $\Pr$ for models]{Comparison of the power spectrum $\Pr$ for
@@ -396,7 +396,7 @@ a blue spectrum ($n_s>1$).
 \end{table}
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering%
 \subfloat[$V(\vp)=\msqphisq$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_msqphisq-small}
@@ -430,7 +430,7 @@ different models. Each result is therefore plotted in terms of the
 initialisation time for that mode.  This change in duration is a consequence of
 allowing $H$ to evolve during the calculation. 
 
-\begin{figure}
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap-large}
  \caption[Comparison of source term for models]{Comparison of the source term
@@ -463,7 +463,7 @@ others.
 The duration of the mode in this model is shorter than in the other two models
 described so far. 
 
-\begin{figure}
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap_zoom-large}
  \caption[Comparison of source term for models at early stage]{Comparison of the

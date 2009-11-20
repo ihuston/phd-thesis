@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.49 2009/11/20 15:33:25 ith Exp $
+% $Id: numerical.tex,v 1.50 2009/11/20 15:53:37 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.49 2009/11/20 15:33:25 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.50 2009/11/20 15:53:37 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -400,6 +400,25 @@ have been tested are outlined.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Potential & Parameter & Value\\
+\midrule
+$\msqphisq$ & $m$ & $6.32\e{-6}\Mpl$\\
+$\lambdaphifour$ & $\lambda$ & $1.55\e{-13}$\\
+$\phitwooverthree$ & $\sigma$ & $3.82\e{-10}\Mpl^{\frac{10}{3}}$\\
+$\msqphisqwithV$ & $m_0$ & $1.74\e{-6}\Mpl$\\
+\bottomrule
+\end{tabular}
+\caption[Parameter values]{The parameter values for the four potentials, chosen so
+that $\Pr(\kwmap)$ is in agreement with the WMAP5 value.}
+\label{tab:params-num}
+\end{center}
+% 
+\end{table}
+
 To demonstrate the numerical calculation four different single field slow roll
 potentials were chosen. These are not intended to represent an exhaustive selection,
 but they do exhibit an interesting variety of behaviours. The potentials used are:
@@ -428,44 +447,7 @@ $U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
 \end{enumerate}
 % 
 % 
-In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
-plotted over the course of their evolution. Throughout the rest of this
-chapter we will use $V(\vp)=\msqphisq$ to
-demonstrate the calculation unless otherwise stated. In Chapter~\ref{ch:results} the
-results for each potential will be compared.
-
-For each of the chosen potentials there is one free parameter that needs to be
-determined.
-We choose the parameters $m$, $\lambda$, $\sigma$ and $m_0$ so that $\Pr$ calculated
-for each model is in agreement with the
-WMAP5 value at the pivot scale
-$\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$. 
-The dependence of $\Pr(\kwmap)$ on each of the parameters can be seen in
-Figure~\ref{fig:params-num}.
-Requiring $\Pr(\kwmap)=2.457\e{-9}$
-gives the values shown in Table~\ref{tab:params-num}. Here we have chosen the lower
-of the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
-
-\begin{table}[htb]
-\begin{center}
-\begin{tabular}{ccc}
-\toprule
-Potential & Parameter & Value\\
-\midrule
-$\msqphisq$ & $m$ & $6.32\e{-6}\Mpl$\\
-$\lambdaphifour$ & $\lambda$ & $1.55\e{-13}$\\
-$\phitwooverthree$ & $\sigma$ & $3.82\e{-10}\Mpl^{\frac{10}{3}}$\\
-$\msqphisqwithV$ & $m_0$ & $1.74\e{-6}\Mpl$\\
-\bottomrule
-\end{tabular}
-\caption[Parameter values]{The parameter values for the four potentials, chosen so
-that $\Pr(\kwmap)$ is in agreement with the WMAP5 value.}
-\label{tab:params-num}
-\end{center}
-% 
-\end{table}
-
-\begin{figure}[tb]
+\begin{figure}[htbp]
 \centering%
 \subfloat[$V(\vp)=\msqphisq$]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_potential-small}
@@ -483,8 +465,17 @@ that $\Pr(\kwmap)$ is in agreement with the WMAP5 value.}
 \caption[Different potentials used]{Plots of the four different potentials used.}
 \label{fig:potentials-num}
 \end{figure}
+% 
+% 
+In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
+plotted over the course of their evolution. Throughout the rest of this
+chapter we will use $V(\vp)=\msqphisq$ to
+demonstrate the calculation unless otherwise stated. In Chapter~\ref{ch:results} the
+results for each potential will be compared.
 
-\begin{figure}[tb]
+
+
+\begin{figure}[htbp]
 \centering%
 \subfloat[The potentials in terms of $\varphi$.][The potentials in terms of
 $\varphi$ over the course of the background evolution.]{
@@ -501,7 +492,22 @@ used.}
 \label{fig:cmp-pot-num}
 \end{figure}
 
-\begin{figure}[tb]
+
+For each of the chosen potentials there is one free parameter that needs to be
+determined.
+We choose the parameters $m$, $\lambda$, $\sigma$ and $m_0$ so that $\Pr$ calculated
+for each model is in agreement with the
+WMAP5 value at the pivot scale
+$\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$. 
+The dependence of $\Pr(\kwmap)$ on each of the parameters can be seen in
+Figure~\ref{fig:params-num}.
+Requiring $\Pr(\kwmap)=2.457\e{-9}$
+gives the values shown in Table~\ref{tab:params-num}. Here we have chosen the lower
+of the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
+
+
+
+\begin{figure}[htbp]
 \centering%
 \subfloat[Fixing $m$ for $V(\vp)=\msqphisq$.]{
  \includegraphics[width=0.43\textwidth]{numerical/graphs/msqphisq_params-small}
@@ -631,9 +637,9 @@ inflation if required. For the $V(\vp)=\msqphisqwithV$ model, the end of inflati
 set by hand to remove the need for a second, inflation-terminating field. The initial
 conditions for the first order system are then set as above.
 %
-\begin{figure}[tb]
+\begin{figure}[htbp]
 \centering
- \includegraphics[width=\textwidth]{./numerical/graphs/bgepsilon}
+ \includegraphics[width=0.8\textwidth]{./numerical/graphs/bgepsilon}
  \caption[Plot of $\varepsilon_H$ near the end of inflation]{The end of
 inflation is
 determined by calculating when
@@ -799,7 +805,7 @@ range, $K_3$, has a larger $k$ mode step size, $\Delta k = 1\e{-60}\Mpl =
 3.8\e{-4}\Mpc^{-1}$, and
 covers a greater range than the others. It extends to much smaller scales than WMAP can observe.
 
-\begin{figure}[tb]
+\begin{figure}[htbp]
 \centering
 % 
  \subfloat[Relative error for different $N_\theta$][The relative error for different
@@ -824,6 +830,17 @@ is set equal to $1\e{-61}\Mpl, 3\e{-61}\Mpl, 1\e{-60}\Mpl$ respectively.]{
 \caption[Two figures comparing relative errors]{Comparison of relative errors for
 different $N_\theta$ and $k$ ranges.}
 \label{fig:err-comparison}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.8\textwidth]
+    {./numerical/graphs/errors_analytic_aterm-half.pdf}
+ % errors_analytic_aterm-half.pdf: 432x216 pixel, 72dpi, 15.24x7.62 cm
+ \caption[The analytic solution of $I_\A$]{The analytic solution of $I_\A$ given in
+\eq{eq:err-analytic-num} for
+$k\in K_1$. The value of $\alpha$ is set as $2.7\e{57}$.}
+ \label{fig:inta-num}
 \end{figure}
 
 The central calculation in the code is of the
@@ -870,15 +887,7 @@ This has the analytic solution
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
 % 
-\begin{figure}[htbp]
- \centering
- \includegraphics[width=0.8\textwidth]
-    {./numerical/graphs/errors_analytic_aterm-half.pdf}
- % errors_analytic_aterm-half.pdf: 432x216 pixel, 72dpi, 15.24x7.62 cm
- \caption{The analytic solution for $I_\A$ given in \eq{eq:err-analytic-num} for
-$k\in K_1$. The value of $\alpha$ is set as $2.7\e{57}$.}
- \label{fig:inta-num}
-\end{figure}
+% 
 % 
 The $k$ dependence of $I_\A$ can be seen in Figure~\ref{fig:inta-num}. 
 We have tested our code against this analytic solution for various
@@ -894,7 +903,7 @@ parameters turn out to be more accurate than others. The relative error of
 all the following results is not affected by the choice of $\alpha$ so
 we will keep its numerical value fixed throughout as $2.7\e{57}$.
 
-\begin{figure}[htb]
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/err_deltaks-large}
  \caption[Relative error in the integral $I_\A$]{The relative error in the
@@ -946,7 +955,7 @@ insensitive to further increases in the value of $\Delta k$. (This is not shown 
 the figure.)
 
 
-\begin{figure}[htb]
+\begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/err_deltak_kmin-large.pdf}
  % err-deltak-kmin.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=
@@ -969,7 +978,7 @@ I_\B &= 2\pi \int_{\kmin}^{\kmax} \d q\, q^2\dvp1(\qvi)\B(\kvi,\qvi) \nonumber\\
 % 
      &= 2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
 \int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-1/4}
-\cos{\theta}\sin{\theta}\,. 
+\cos{\theta}\sin{\theta}\,,
 \end{align}
 % 
 and has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
@@ -1078,7 +1087,7 @@ I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
 % 
 The relative errors between the analytic and calculated values for $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num} for the
-three final $k$ ranges with $\beta=10^_{-62}$. The errors
+three final $k$ ranges with $\beta=10^{-62}$. The errors
 for the $I_{\wt{\C}}$ and $I_{\wt{\D}}$ terms are very small, being of the order of
 $10^{-8}$ and $10^{-6}$, respectively. The relative error for the $I_\B$ term is
 larger, especially for small $k$ values. However, the error is still below $0.08\%$
@@ -1091,7 +1100,7 @@ do not represent
 errors for the full calculation. However, they do show that the accuracy is good
 compared with the analytic result. 
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering%
 \subfloat[The relative error for $I_\B$ for each $k$ range.]{
  \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_bterm-half}
@@ -1104,7 +1113,7 @@ compared with the analytic result.
 }%
 \caption[Relative errors for $I_\B$, $I_{\wt{\C}}$ and $I_{\wt{\D}}$]{The relative
 errors for $I_\B$,
-$I_{\wt{\C}}$ and $I_{\wt{\D}}$ for each of the $k$ ranges with $\beta=10^_{-62}$.}
+$I_{\wt{\C}}$ and $I_{\wt{\D}}$ for each of the $k$ ranges with $\beta=10^{-62}$.}
 \label{fig:rel-bcd-num}
 \end{figure}
 
