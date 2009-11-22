@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % theend.tex - Ian Huston
-% $Id: theend.tex,v 1.16 2009/11/22 13:18:36 ith Exp $
+% $Id: theend.tex,v 1.17 2009/11/22 18:32:41 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: theend.tex,v 1.16 2009/11/22 13:18:36 ith Exp $}
+{\version$Id: theend.tex,v 1.17 2009/11/22 18:32:41 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -47,7 +47,7 @@ outlined in Chapter~\ref{ch:dbi-intro}. In this model, a D3-brane propagates in 
 six-dimensional warped throat. The radial position of the brane from the tip of the
 throat assumes the role of the inflaton field. The non-canonical nature of the DBI
 action restricts the kinetic energy of this field no matter how steep the potential.
-Thise allows an inflationary period of sufficient duration to occur.
+This allows an inflationary period of sufficient duration to occur.
 This model was widely regarded as a very promising realisation of an inflationary
 model in a string-theory context.
 
@@ -138,38 +138,16 @@ brane model could be ruled out.
 
 % Numerical
 In Part~\ref{part:numerical} of this thesis, numerical methods were used to test inflationary
-models up to second order in cosmological perturbation theory. The Klein-Gordon
-equation at second order was derived in \Rref{Malik:2006ir} for the multi-field
-case. 
-
-%New stuff
-The construction of any numerical code involves a considerable committment of time
-and resource so it is important to understand why such an endeavour should be
-undertaken. 
-The numerical calculation of first order cosmological perturbations is an invaluable
-part of the cosmologist's toolkit. It allows analytic predictions of inflationary
-models to be confirmed where these exists, but also generates predictions where no
-analytic solution is possible. Predictions based on the slow roll approximation can
-also be tested against the full evolution equation. 
-
-We have taken the first step towards upgrading the standard numerical calculation to
-include second order scalar perturbations. In this thesis we have presented the
-first numerical calculation of the Klein-Gordon equation for second order
-perturbations which was derived in \Rref{Malik:2006ir}. Although we have restricted
-ourselves here to the single field, slow roll version of the second order equation,
-the expertise gained and the lessons learned in the development of the numerical
-system will aide significantly when the next steps towards a full multi-field
-calculation are taken.
-
-In the past a numerical calculation on the scale we have achieved would have been
-the preserve of dedicated supercomputing facilities. We have demonstrated that a
-calculation of this scope is now possible using relatively modest local resources.
-
-
+models up to second order in cosmological perturbation theory. 
+% 
+% 
+The Klein-Gordon equation at second order was derived in \Rref{Malik:2006ir} for the
+multi-field case. 
 In Chapter~\ref{ch:perts}, second order gauge transformations were outlined
-and the KG equation reproduced for a single scalar field model. In contrast to the
-$\Delta \N$ approach, this equation is valid on all scales, both inside and outside
-the horizon. 
+and the Klein-Gordon equation reproduced for a single scalar field model. In contrast
+to the $\Delta \N$ approach, this equation is valid on all scales, both inside and
+outside the horizon. 
+
 
 In Fourier space, the second order Klein-Gordon equation \eqref{eq:SOKG-real-num} contains a
 convolution term of the first order scalar field perturbation. For this first
@@ -182,6 +160,14 @@ the scalar curvature perturbation. The long term aim of this continuing project 
 to analyse multi-field, non-slow roll models, in which non-Gaussian effects are
 expected to play an important role.
 
+One advantage of using the inflaton field equations is that we can directly
+investigate the generation of the perturbations. Integrating the evolution
+equation for a derived observable quantity would, instead, add a degree of
+separation from the physical origins of the perturbation. Indeed, there is, as yet,
+no known evolution equation for one of the main observable quantities, the comoving
+curvature perturbation, at second order. 
+
+
 As a step towards this goal, we described the implementation of a numerical
 calculation of the single field, slow roll, second order equation in
 Chapter~\ref{ch:numericalsystem}. The construction and evaluation of the convolved
@@ -191,7 +177,7 @@ step required.
 To allow a numerical calculation, an energy scale cutoff must be implemented. We used
 a sharp cutoff at small wavenumbers below which the perturbations were taken to be
 identically zero. Another cutoff at small scales (or equivalently large wavenumbers) was dictated
-by practical considerations of calculation size and computation time.
+by practical considerations of calculation size and computation time. 
 
 We defined, in \eq{eq:AtoD-num}, four $\theta$ dependent integrals
 into which the convolution term can be decomposed. By comparison with an analytic
@@ -203,16 +189,26 @@ different finite ranges of discrete values of the wavenumber were defined.
 These all contain the WMAP pivot scale at $\kwmap=0.002\Mpc^{-1}$ and cover the
 WMAP observed scales to varying degrees.
 % 
-The three other $\theta$ dependent terms have small relative errors for the chosen
-ranges. 
+Despite the $k$ ranges having being chosen to minimise the relative error in only
+one of the $\theta$ dependent terms, the three other terms also display
+small relative errors for these ranges. 
+% 
+The analytic solutions which have been found will form  an
+important part of the testing regime for any future modifications to the numerical
+code. 
 
 
 
 The execution of the code is in four stages, building on previous calculations of
-first order perturbations in Refs.~\cite{Martin:2006rs, Ringeval:2007am, Salopek:1988qh}. Despite
-the large volume of calculations required at each
+first order perturbations in Refs.~\cite{Martin:2006rs, Ringeval:2007am,
+Salopek:1988qh}. First the background equations are solved and the end time of
+inflation is fixed. The initial conditions for the first order perturbation can then
+be set and solutions found for the evolution equations.
+Despite the large volume of calculations required at each
 time step, the easily parallelisable nature of the source term calculations allows
-the run time to be reduced significantly.
+the run time of the third stage to be reduced significantly. 
+The final stage of the calculation uses the source term results to solve the second
+order perturbation equations.
 
 
 To test the code, four different, large field, monomial potentials were used. Each
@@ -230,7 +226,7 @@ as the slow roll approximation breaks down.
 The choice of wavenumber range affects the amplitude of the source term, as
 expected, due to the implementation of a sharp cutoff at large scales. This
 dependence is only apparent, however, before horizon crossing. For a particular
-range,  the magnitude of the source term decreases as wavenumber increase. However,
+range,  the magnitude of the source term decreases as wavenumber increases. However,
 the ratio of the source term to the other terms in the Klein-Gordon equation increases with
 wavenumber. 
 
@@ -239,20 +235,82 @@ than that of the first order ones. After the generation of the second order
 perturbations at early times, their evolution is that of a damped harmonic
 oscillator similar to the first order evolution.
 
+We have shown that the magnitude of the source term can be important throughout the
+full evolution and that it is not sufficient to only calculate this term for
+modes either entirely inside or outside the horizon, \iec taking a short or long
+wavelength approximation respectively. By solving the evolution equations of the
+inflaton field perturbation we have been able to access both of these
+regimes. This is in contrast to other approaches, particularly the $\Delta\N$
+formalism, which is only applicable in the large scale limit.
+
+
+%New stuff
+The construction of any numerical code involves a considerable commitment of time
+and resources so it is important to understand why such an endeavour has been
+undertaken. 
+The numerical calculation of first order cosmological perturbations is an invaluable
+part of the cosmologist's toolkit. It allows analytic predictions of inflationary
+models to be confirmed where these exist, but also generates predictions where no
+analytic solution is possible. Another important use is to test predictions based
+on the slow roll approximation  against the full evolution equations. 
+
+We have taken the first step towards upgrading this standard numerical calculation to
+include second order scalar perturbations. 
+% 
+The ability to check the predictions of inflationary models at second order will
+be a powerful tool to constrain these models and check the consistency of any
+analytic assumptions that have been made. 
+% 
+We have presented the
+first numerical calculation of the Klein-Gordon equation for second order scalar
+perturbations which was derived in \Rref{Malik:2006ir}. Although we have restricted
+ourselves in this thesis to the single field, slow roll version of the second order
+equation,
+the expertise gained and the lessons learned in the development of the numerical
+system will be of significant assistance when the next steps towards a full
+multi-field calculation are taken. 
+% 
+
+
+In the past, a numerical calculation on the scale we have achieved would have been
+the preserve of dedicated supercomputing facilities. We have demonstrated that a
+calculation of this scope is now possible using relatively modest local resources.
+Looking forward, as the computational power available continues to improve, the
+second order numerical calculation may become as straightforward to utilise as the
+first order one is now. 
+
+The equations of motion of the inflaton scalar field are similar in form to the
+governing equations of other important cosmological phenomena. Therefore, it should
+be possible to adapt the numerical system we have constructed and apply it to other
+areas of interest, such as tensor perturbations and vorticity generation. 
+
 
 The numerical calculation described is the first step towards a system capable of
 handling the multi-field, non-slow roll models, for which non-linear contributions
 are important. In Section~\ref{sec:next-res}, the next steps towards this goal were
-outlined. The full single field, non-slow roll equation can be treated using the
-method already described. Three more $\theta$ dependent terms are necessary to
-compute the full convolution integral in this case. 
+outlined. 
+% 
+Going forward with both the non-slow roll, single field calculation and the slow
+roll, multi-field calculation will pave the way for calculating the
+non-slow roll, multi-field equations.
+% 
+
+The full single field, non-slow roll equation can be treated using the
+method already described. 
+Three more $\theta$ dependent terms are necessary to
+compute the full convolution integral in this case. It will be important to find
+analytic solutions for these three extra terms, as done in the slow roll case, in
+order to gauge the effectiveness of the extended code.
 
 The Klein-Gordon equation for the multi-field case introduces further complexity. We plan to
 expand the numerical system to encompass two or three scalar fields. The differences
 between single and multi-field models are already apparent for these cases. We have
 presented the slow roll source term equation for multiple fields in vector notation.
 The definitions of the four $\theta$ dependent terms used in the single
-field slow roll model were also extended to the multi-field case. 
+field slow roll model were also extended to the multi-field case. Beyond the slow
+roll approximation, the full multi-field equation should be treatable in a similar
+manner to the single field case, by introducing further $\theta$ dependent terms.
+
 
 
 To conclude, it is worth reiterating our opening remarks. Cosmology has moved from
