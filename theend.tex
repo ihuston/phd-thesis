@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % theend.tex - Ian Huston
-% $Id: theend.tex,v 1.18 2009/11/22 23:15:25 ith Exp $
+% $Id: theend.tex,v 1.19 2009/11/23 11:48:02 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: theend.tex,v 1.18 2009/11/22 23:15:25 ith Exp $}
+{\version$Id: theend.tex,v 1.19 2009/11/23 11:48:02 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -154,20 +154,28 @@ convolution term of the first order scalar field perturbation. For this first
 demonstration of the numerical system, a slow roll approximation of the full
 equation was used. 
 
+
 Calculating the second order scalar field perturbations provides the possibility of
 a unique insight into the generation and evolution of non-linear contributions to
-the scalar curvature perturbation. The long term aim of this continuing project is
+the scalar curvature perturbation. 
+% 
+One advantage of using the inflaton field equations is that we can directly
+investigate how the perturbations are generated.
+Integrating the evolution
+equation for a derived observable quantity instead, would add a degree of
+separation from the physical origins of this process. Indeed, there is, as yet,
+no known evolution equation for the main observable quantity, the comoving
+curvature perturbation, at second order. 
+% 
+Using cosmological perturbation theory also provides control over the calculation.
+The domain of applicability of the perturbative expansion is well defined and the
+resultant equations are certain to be valid in this domain.
+
+
+The long term aim of this continuing project is
 to analyse multi-field, non-slow roll models, in which non-Gaussian effects are
 expected to play an important role.
-
-One advantage of using the inflaton field equations is that we can directly
-investigate the generation of the perturbations. Integrating the evolution
-equation for a derived observable quantity would, instead, add a degree of
-separation from the physical origins of the perturbation. Indeed, there is, as yet,
-no known evolution equation for one of the main observable quantities, the comoving
-curvature perturbation, at second order. 
-
-
+% 
 As a step towards this goal, we described the implementation of a numerical
 calculation of the single field, slow roll, second order equation in
 Chapter~\ref{ch:numericalsystem}. The construction and evaluation of the convolved
@@ -184,24 +192,26 @@ into which the convolution term can be decomposed. By comparison with an analyti
 solution for a particular smooth choice of the first order perturbation, an estimate
 was made of the relative error present in the integration of each term. The
 number of discrete wavenumber values, their spacing, and the number of discrete
-$\theta$ values were chosen to minimise the error in one of these. From these values, three
+$\theta$ values were chosen to minimise the error in one of the integrals. From
+these parameter values, three
 different finite ranges of discrete values of the wavenumber were defined.
 These all contain the WMAP pivot scale at $\kwmap=0.002\Mpc^{-1}$ and cover the
 WMAP observed scales to varying degrees.
 % 
-Despite the $k$ ranges having being chosen to minimise the relative error in only
-one of the $\theta$ dependent terms, the three other terms also display
-small relative errors for these ranges. 
+Despite the $k$ ranges having being chosen to minimise the relative error in the
+integral of only
+one of the $\theta$ dependent terms, the integrals of the three other terms also
+display small relative errors for these ranges. 
 % 
-The analytic solutions which have been found will form  an
-important part of the testing regime for any future modifications to the numerical
-code. 
+The analytic solutions which have been found will form an
+important part of the verification of any future modifications to the
+numerical code. 
 
 
 
 The execution of the code is in four stages, building on previous calculations of
 first order perturbations in Refs.~\cite{Martin:2006rs, Ringeval:2007am,
-Salopek:1988qh}. First the background equations are solved and the end time of
+Salopek:1988qh}. To begin, the background equations are solved and the end time of
 inflation is fixed. The initial conditions for the first order perturbation can then
 be set and solutions found for the evolution equations.
 Despite the large volume of calculations required at each
@@ -238,9 +248,10 @@ oscillator similar to the first order evolution.
 We have shown that the magnitude of the source term can be important throughout the
 full evolution and that it is not sufficient to calculate this term only for
 modes either entirely inside or outside the horizon, \iec taking a short or long
-wavelength approximation respectively. By solving the evolution equations of the
-inflaton field perturbation we have been able to access both of these
-regimes. This is in contrast to other approaches, particularly the $\Delta\N$
+wavelength approximation respectively. We have been able to access both of these
+regimes, by solving the evolution equations of the
+inflaton field perturbation. This is in contrast to other approaches which could
+have been taken, for example using the $\Delta\N$
 formalism, which is only applicable in the large scale limit.
 
 
@@ -253,14 +264,17 @@ part of the cosmologist's toolkit. It allows analytic predictions of inflationar
 models to be confirmed where these exist, but also generates predictions where no
 analytic solution is possible. Another important use is to test predictions based
 on the slow roll approximation  against the full evolution equations. 
-
+% 
 We have taken the first step towards upgrading this standard numerical calculation to
 include second order scalar perturbations. 
 % 
 The ability to check the predictions of inflationary models at second order will
 be a powerful tool to constrain these models and check the consistency of any
-analytic assumptions that have been made. 
+analytic assumptions that have been made. Solving the inflaton field equations
+provides the most direct access to the non-linear effects that the increase in
+available statistics have made observationally important.
 % 
+
 We have presented the
 first numerical calculation of the Klein-Gordon equation for second order scalar
 perturbations which was derived in \Rref{Malik:2006ir}. Although we have restricted
@@ -275,14 +289,18 @@ multi-field calculation are taken.
 In the past, a numerical calculation on the scale we have achieved would have been
 the preserve of dedicated supercomputing facilities. We have demonstrated that a
 calculation of this scope is now possible using relatively modest local resources.
-Looking forward, as the computational power available continues to increase, the
-second order numerical calculation may become as straightforward to utilise as the
-first order one is now. 
+If the computational power available increases, the practical limits on the
+resolution and extent of the $k$ ranges will ease. Further improvements in the
+efficiency of the code will also relieve these constraints.
+% 
 
-The equations of motion of the inflaton scalar field are similar in form to the
-governing equations of other important cosmological phenomena. Therefore, it should
-be possible to adapt the numerical system we have constructed and apply it to other
-areas of interest, such as tensor perturbations and vorticity generation. 
+Another consideration in the development of a numerical system is the possibility of
+re-use afterwards.
+The equations of motion of the inflaton scalar field are similar in form
+to the governing equations of other important cosmological phenomena. Therefore, it
+should be possible to adapt the numerical system we have constructed and apply it to
+other areas of interest, such as the evolution of tensor perturbations and the
+generation of vorticity in the early universe. 
 
 
 The numerical calculation described is the first step towards a system capable of
@@ -290,8 +308,9 @@ handling the multi-field, non-slow roll models, for which non-linear contributio
 are important. In Section~\ref{sec:next-res}, the next steps towards this goal were
 outlined. 
 % 
-Going forward with both the non-slow roll, single field calculation and the slow
-roll, multi-field calculation will pave the way for calculating the
+Continuing our work by calculating the second order perturbations for both the
+non-slow roll, single field case and the slow
+roll, multi-field case will pave the way for the calculation of the
 non-slow roll, multi-field equations.
 % 
 
