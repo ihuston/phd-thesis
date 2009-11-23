@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % 
 % theend.tex - Ian Huston
-% $Id: theend.tex,v 1.19 2009/11/23 11:48:02 ith Exp $
+% $Id: theend.tex,v 1.20 2009/11/23 13:46:03 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: theend.tex,v 1.19 2009/11/23 11:48:02 ith Exp $}
+{\version$Id: theend.tex,v 1.20 2009/11/23 13:46:03 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -69,7 +69,7 @@ from this model.
 
 In addition to this, we also derived a lower bound on $r$ in \eq{eq:lowerbound}.
 This depends on observable quantities, namely the scalar spectral index and the
-equilateral non-gaussianity. Saturating the WMAP5 observational limit on $\fnleq$
+equilateral non-Gaussianity. Saturating the WMAP5 observational limit on $\fnleq$
 and taking the best fit value for $n_s$, we found that the most conservative lower
 limit is $r>0.005$. This is clearly incompatible with the previously derived upper
 bound. Therefore, for standard parameter values, the D3-brane DBI scenario is not
@@ -161,9 +161,10 @@ the scalar curvature perturbation.
 % 
 One advantage of using the inflaton field equations is that we can directly
 investigate how the perturbations are generated.
-Integrating the evolution
-equation for a derived observable quantity instead, would add a degree of
-separation from the physical origins of this process. Indeed, there is, as yet,
+If, instead, we integrated the evolution
+equation for a derived observable quantity, there would be a degree of
+separation from the physical origins of this process. Indeed, there is, as
+yet,
 no known evolution equation for the main observable quantity, the comoving
 curvature perturbation, at second order. 
 % 
@@ -287,15 +288,15 @@ multi-field calculation are taken.
 
 
 In the past, a numerical calculation on the scale we have achieved would have been
-the preserve of dedicated supercomputing facilities. We have demonstrated that a
+the preserve of dedicated super-computing facilities. We have demonstrated that a
 calculation of this scope is now possible using relatively modest local resources.
 If the computational power available increases, the practical limits on the
 resolution and extent of the $k$ ranges will ease. Further improvements in the
-efficiency of the code will also relieve these constraints.
+efficiency of the code will also loosen these constraints.
 % 
 
 Another consideration in the development of a numerical system is the possibility of
-re-use afterwards.
+code re-use.
 The equations of motion of the inflaton scalar field are similar in form
 to the governing equations of other important cosmological phenomena. Therefore, it
 should be possible to adapt the numerical system we have constructed and apply it to
@@ -318,7 +319,8 @@ The full single field, non-slow roll equation can be treated using the
 method already described. 
 Three more $\theta$ dependent terms are necessary to
 compute the full convolution integral in this case. It will be important to find
-analytic solutions for these three extra terms, as done in the slow roll case, in
+analytic solutions for these three extra terms, as already done for the terms in the
+slow roll case, in
 order to gauge the effectiveness of the extended code.
 
 The Klein-Gordon equation for the multi-field case introduces further complexity. We plan to
