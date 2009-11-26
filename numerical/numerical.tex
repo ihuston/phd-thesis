@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.51 2009/11/20 16:08:14 ith Exp $
+% $Id: numerical.tex,v 1.52 2009/11/26 16:53:40 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.51 2009/11/20 16:08:14 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.52 2009/11/26 16:53:40 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -412,8 +412,9 @@ $\phitwooverthree$ & $\sigma$ & $3.82\e{-10}\Mpl^{\frac{10}{3}}$\\
 $\msqphisqwithV$ & $m_0$ & $1.74\e{-6}\Mpl$\\
 \bottomrule
 \end{tabular}
-\caption[Parameter values]{The parameter values for the four potentials, chosen so
-that $\Pr(\kwmap)$ is in agreement with the WMAP5 value.}
+\caption[Parameter Values for the Four Potentials]{The parameter values for the four
+potentials, chosen so
+that $\mathcal{P}^2_{\mathcal{R}_1}(\kwmap)$ is in agreement with the WMAP5 value.}
 \label{tab:params-num}
 \end{center}
 % 
@@ -462,7 +463,7 @@ $U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
  \includegraphics[width=0.43\textwidth]
   {numerical/graphs/msqphisq_withV0_potential-small}
 }
-\caption[Different potentials used]{Plots of the four different potentials used.}
+\caption[The Four Potentials]{Plots of the four different potentials investigated.}
 \label{fig:potentials-num}
 \end{figure}
 % 
@@ -487,8 +488,7 @@ last 70 e-foldings of inflation.]{
  \includegraphics[width=0.8\textwidth]
   {numerical/graphs/cmp_pot_n-large}
 }
-\caption[Comparison of potentials]{A comparison of the four different potentials
-used.}
+\caption[Comparisons of the Potentials]{Two comparisons of the four potentials.}
 \label{fig:cmp-pot-num}
 \end{figure}
 
@@ -523,7 +523,7 @@ of the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
  \includegraphics[width=0.43\textwidth]
   {numerical/graphs/msqphisq_withV0_params-small}
 }
-\caption[Parameter values for different potentials]{Parameter values for the
+\caption[Parameter Values for the Potentials]{Parameter values for the
 different potentials are chosen by requiring consistency with the WMAP5
 normalisation of the power spectrum.}
 \label{fig:params-num}
@@ -640,11 +640,11 @@ conditions for the first order system are then set as above.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{./numerical/graphs/bgepsilon}
- \caption[Plot of $\varepsilon_H$ near the end of inflation]{The end of
+ \caption[The Value of $\varepsilon_H$ Near the End of Inflation]{The end of
 inflation is
 determined by calculating when
-   $\bar{\varepsilon}^2_H = \varepsilon_H=-\dN{H}/H=1$ (red dashed line). Along the
-$x$-axis,
+   $\bar{\varepsilon}^2_H = \varepsilon_H=-\dN{H}/H=1$ (red dashed line). On the
+horizontal axis,
    $\N$ is the number of e-foldings from the start of the
    simulation.}
 \label{fig:eps}
@@ -805,6 +805,18 @@ range, $K_3$, has a larger $k$ mode step size, $\Delta k = 1\e{-60}\Mpl =
 3.8\e{-4}\Mpc^{-1}$, and
 covers a greater range than the others. It extends to much smaller scales than WMAP can observe.
 
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.8\textwidth]
+    {./numerical/graphs/errors_analytic_aterm-half.pdf}
+ % errors_analytic_aterm-half.pdf: 432x216 pixel, 72dpi, 15.24x7.62 cm
+ \caption[The Analytic Solution of $I_\A$]{The analytic solution of $I_\A$ given in
+\eq{eq:err-analytic-num} for
+$k\in K_1$. The value of $\alpha$ is set as $2.7\e{57}$.}
+ \label{fig:inta-num}
+\end{figure}
+
 \begin{figure}[htbp]
 \centering
 % 
@@ -827,21 +839,12 @@ is set equal to $1\e{-61}\Mpl, 3\e{-61}\Mpl, 1\e{-60}\Mpl$ respectively.]{
  \label{fig:err-kranges}
 }
 % 
-\caption[Two figures comparing relative errors]{Comparison of relative errors for
+\caption[Relative Errors in $I_\A$ for Different $N_\theta$ and $k$
+Ranges]{Comparison of relative errors in $I_\A$ for
 different $N_\theta$ and $k$ ranges.}
 \label{fig:err-comparison}
 \end{figure}
 
-\begin{figure}[htbp]
- \centering
- \includegraphics[width=0.8\textwidth]
-    {./numerical/graphs/errors_analytic_aterm-half.pdf}
- % errors_analytic_aterm-half.pdf: 432x216 pixel, 72dpi, 15.24x7.62 cm
- \caption[The analytic solution of $I_\A$]{The analytic solution of $I_\A$ given in
-\eq{eq:err-analytic-num} for
-$k\in K_1$. The value of $\alpha$ is set as $2.7\e{57}$.}
- \label{fig:inta-num}
-\end{figure}
 
 The central calculation in the code is of the
 convolution of the perturbations for the source term,
@@ -906,7 +909,8 @@ we will keep its numerical value fixed throughout as $2.7\e{57}$.
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/err_deltaks-large}
- \caption[Relative error in the integral $I_\A$]{The relative error in the
+ \caption[Relative Error in $I_\A$ for Different $\Delta k$]{The relative error in
+the
 integral $I_\A$ for different values of $\Delta k$.
 The other parameters are fixed: $\kmin=1\times10^{-60}\Mpl, N_k = 1025$ and
 $N_\theta=513$. 
@@ -959,8 +963,8 @@ the figure.)
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/err_deltak_kmin-large.pdf}
  % err-deltak-kmin.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=
- \caption[Relative error of $I_\A$ with fixed $\kmin$]{The 
-relative error of the integral $I_\A$ for three different values of $\Delta k$. In
+ \caption[Relative Error in $I_\A$ with fixed $\kmin$]{The 
+relative error in the integral $I_\A$ for three different values of $\Delta k$. In
 contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1} \le
 \Delta k$ for each case.}
  \label{fig:err-deltak-kmin}
@@ -1102,17 +1106,17 @@ compared with the analytic result.
 
 \begin{figure}[htbp]
 \centering%
-\subfloat[The relative error for $I_\B$ for each $k$ range.]{
+\subfloat[The relative error in $I_\B$ for each $k$ range.]{
  \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_bterm-half}
 }\\%
-\subfloat[The relative error for $I_{\wt{\C}}$ for each $k$ range.]{
+\subfloat[The relative error in $I_{\wt{\C}}$ for each $k$ range.]{
  \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_cterm-half}
 }\\%
-\subfloat[The relative error for $I_{\wt{\D}}$ for each $k$ range.]{
+\subfloat[The relative error in $I_{\wt{\D}}$ for each $k$ range.]{
  \includegraphics[width=0.8\textwidth]{numerical/graphs/errors_dterm-half}
 }%
-\caption[Relative errors for $I_\B$, $I_{\wt{\C}}$ and $I_{\wt{\D}}$]{The relative
-errors for $I_\B$,
+\caption[Relative Errors in $I_\B$, $I_{\wt{\C}}$ and $I_{\wt{\D}}$]{The relative
+errors in $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ for each of the $k$ ranges with $\beta=10^{-62}$.}
 \label{fig:rel-bcd-num}
 \end{figure}

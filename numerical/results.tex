@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.31 2009/11/20 15:53:37 ith Exp $
+% $Id: results.tex,v 1.32 2009/11/26 16:53:40 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.31 2009/11/20 15:53:37 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.32 2009/11/26 16:53:40 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -173,14 +173,15 @@ Figure~\ref{fig:Pphi-kwmap}.
 \label{fig:src-full}
 }\\
 % 
-\subfloat[Power spectrum of scalar perturbations][Power spectrum of scalar
-perturbations $\mathcal{P}^2_{\delta\varphi} =
-\frac{k^3}{2\pi^2}|\delta\varphi|^2$.]{
+\subfloat[First Order Power Spectrum of Scalar Perturbations][Power spectrum of
+first order scalar
+perturbations $\mathcal{P}^2_{\delta\varphi_1} =
+\frac{k^3}{2\pi^2}|\delta\varphi_1|^2$.]{
 \includegraphics[width=0.8\textwidth]{numerical/graphs/Pphi-kwmap-nohoriz-large}
 \label{fig:Pphi-kwmap}
 }
-\caption[The source term and power spectrum for $\kwmap$]{Source term and power
-spectrum for the WMAP pivot scale $\kwmap$.}
+\caption[Source Term and First Order Power Spectrum for $\kwmap$]{Source term and
+first order power spectrum for the WMAP pivot scale $\kwmap$.}
 \end{figure}
 % 
 Figure~\ref{fig:src-kwmap-3ranges} shows how the source term depends on
@@ -198,7 +199,8 @@ decreases, the magnitude of the source term after horizon crossing decreases.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-kwmap-3ranges-large}
-\caption[Comparison of source term for different ranges]{A comparison of the source
+\caption[Comparison of Source Term for Different $k$ Ranges]{A comparison of the
+source
 term \eqref{eq:KG2-source-ntime}, for the scale $\kwmap=5.25\e{-60}\Mpl$, over the
 three different ranges $K_1$,
 $K_2$ and $K_3$, which were specified in \eq{eq:Kranges-res}. Before horizon
@@ -212,7 +214,7 @@ the choice of $K_i$.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-3ks-large}
-\caption[Source term at three different values of $k$]{The source term
+\caption[Source Term at Three Different Values of $k$]{The source term
 \eqref{eq:KG2-source-ntime} for three different $k$
 values in the $K_1$ range, including the WMAP
 pivot scale, $\kwmap=5.25\e{-60}\Mpl$ (middle green line). As the value of $k$
@@ -257,7 +259,7 @@ where it is important.
 \begin{figure}[htbp]
 \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/src-vs-t-kwmap-large}
-\caption[Source term compared to $T$ term]{The source term (lower blue line), as
+\caption[Source Term Compared to $T$ Term]{The source term (lower blue line), as
 defined in \eq{eq:KG2-source-ntime}, is
 compared with the $T$ term
 (upper green line), as defined in \eq{eq:Tdefn}, for $\kwmap$. The source term is of
@@ -298,7 +300,7 @@ Figure~\ref{fig:s-over-t-3ks}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_kinit_log}
- \caption[Source term at initial start times]{The absolute magnitude of the source 
+ \caption[Source Term at Initialisation]{The absolute magnitude of the source 
 term at the initial start time for each $k$ value when $k/aH = 50$ deep inside
 the
 horizon. The results are for the range $K_1$.}
@@ -319,7 +321,7 @@ inflation.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_3ns-large}
-\caption[Source term at three different times]{The absolute magnitude of the source 
+\caption[Source Term at Three Different Times]{The absolute magnitude of the source 
 term for all $k$ values in the range $K_1$ at three different timesteps. The upper
 blue line shows $|S|$ at approximately $69$ e-foldings before the end of inflation
 when
@@ -350,7 +352,8 @@ the results for all four potentials will be compared using the $K_2$ range for $
 \begin{figure}[htbp]
  \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_Pr_allks-large}
-\caption[Comparison of $\Pr$ for models]{Comparison of the power spectrum $\Pr$ for
+\caption[Comparison of $\mathcal{P}^2_{\mathcal{R}_1}$ for the Four
+Potentials]{Comparison of the power spectrum $\mathcal{P}^2_{\mathcal{R}_1}$ for
 the four different models. The three models with potentials $\msqphisq$,
 $\lambdaphifour$ and
 $\phitwooverthree$ have red spectra ($n_s <1$) while the $\msqphisqwithV$
@@ -384,7 +387,7 @@ $\phitwooverthree$ & 0.977 & -0.023 \\
 $\msqphisqwithV$ & 1.002 & 0.002 \\
 \bottomrule
 \end{tabular}
-\caption[Spectral index values for the four potentials]
+\caption[Spectral Index Values for the Four Potentials]
 {The spectral index for scalar perturbations for each of the four
 potentials used. These values are calculated for the $\kwmap$ scale, five e-foldings
 after it crosses the horizon. The potential parameters are listed in
@@ -411,7 +414,8 @@ a blue spectrum ($n_s>1$).
  \includegraphics[width=0.43\textwidth]
   {numerical/graphs/src_onek_msqphisq_withV0-small}
 }
-\caption[The source term for different potentials]{Plots of the source term for the
+\caption[Source Term for the Four Potentials]{Plots of the source
+term for the
 four different potentials studied.}
 \label{fig:sourcecomparison-res}
 \end{figure}
@@ -433,7 +437,8 @@ allowing $H$ to evolve during the calculation.
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap-large}
- \caption[Comparison of source term for models]{Comparison of the source term
+ \caption[Comparison of Source Term for the Four Potentials]{Comparison of the
+source term
 evolution for the four different models. After horizon crossing the magnitude of the
 source term is larger for the quadratic and quartic models than for the other two.
 Towards the end of the numerical calculation there is a marked increase in $|S|$ for
@@ -466,7 +471,7 @@ described so far.
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/cmp_src_kwmap_zoom-large}
- \caption[Comparison of source term for models at early stage]{Comparison of the
+ \caption[Comparison of Source Term at Early Times]{Comparison of the
 source term evolution for the four different models at early times. This figure
 highlights the early evolution of the four models shown in
 Figure~\ref{fig:cmp-src-kwmap}. Before horizon crossing the magnitude of the source
