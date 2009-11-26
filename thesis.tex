@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Thesis - Ian Huston
-% $Id: thesis.tex,v 1.42 2009/11/20 13:56:15 ith Exp $
+% $Id: thesis.tex,v 1.43 2009/11/26 16:29:09 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \documentclass[
 %  twoside,
@@ -19,14 +19,14 @@ onehalfspacing % onehalfspacing or doublespacing
 % My formatting package
 % CVSon for cvs revision number in footers
 % CVSoff is default-
-\usepackage[CVSon, % CVS version in footers
-            labels, % show labels
-	    todos, % show todos
-            hyperref % Use hyperref for links
+\usepackage[%CVSon, % CVS version in footers
+            %labels, % show labels
+	    %todos, % show todos
+            %hyperref % Use hyperref for links
             ]{ihformat}
 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.42 2009/11/20 13:56:15 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.43 2009/11/26 16:29:09 ith Exp $}
 % \usepackage[inline]{showlabels}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -97,7 +97,7 @@ theend
 
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Part II: Numerical simulations
-\part{Numerical simulations of the evolution of second order perturbations}
+\part{Numerical Simulations of the Evolution of Second Order Perturbations}
 \label{part:numerical}
 \include{numerical/perts}
 \include{numerical/numerical}
@@ -107,6 +107,7 @@ theend
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Conclusion and summary
 \part{Conclusion}
+\label{part:conclusion}
 % \setcounter{part}{0}
 % \phantomsection
 % The part:\thepart
