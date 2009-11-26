@@ -113,9 +113,12 @@
  \thispagestyle{\titlepagestyle}
  \noindent\begin{minipage}[t]{\textwidth}
   \centering\large
-  \ifx\@university\@empty \else \@university\par\fi
-  \@college
+  Astronomy Unit
+
   \ifx\@department\@empty \else \par School of \@department\fi
+
+  \@college
+  \ifx\@university\@empty \else \@university\par\fi
  \end{minipage}
  \null\vfill
  \begin{center}
@@ -126,7 +129,7 @@
    \@author
   \end{tabular}\par}
   \vskip 1.5em
-  {\Large \@date \par}
+%   {\Large \@date \par}
   \vskip \z@ \@plus3fill
   \ifx\@supervisor\@empty \else
   {\Large Supervised by \@supervisor \par}
