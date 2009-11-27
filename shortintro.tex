@@ -1,10 +1,10 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % shortintro.tex - Ian Huston
-% $Id: shortintro.tex,v 1.8 2009/11/16 16:58:58 ith Exp $
+% $Id: shortintro.tex,v 1.9 2009/11/27 15:03:27 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}%
-{\version$Id: shortintro.tex,v 1.8 2009/11/16 16:58:58 ith Exp $}
+{\version$Id: shortintro.tex,v 1.9 2009/11/27 15:03:27 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -18,14 +18,14 @@ In the past cosmology was a speculative science. The scarcity of observational
 data meant that many conflicting theories for the evolution of the universe were
 entertained, with nothing but personal opinion to differentiate between them.
 The explosion in the quantity and quality of observational data in recent years
-has led to a much more competitive market-place for ideas about the physical
+has led to a much more competitive marketplace of ideas about the physical
 beginning of the universe.
 
 The Big Bang scenario has emerged as a cohesive framework for the evolution of
 the universe from very early times. The observation of the Cosmic
 Microwave Background (CMB) provided much supporting evidence for this scenario
 \cite{book:kolbturner}. This
-relic radiation emitted 300,000 years after the Big Bang continues to
+relic radiation, emitted 300,000 years after the Big Bang, continues to
 be our primary source of information about the early universe.
 
 The inflationary scenario is an attempt to solve problems with the standard Big
@@ -36,7 +36,8 @@ Starobinsky:1982ee}. These fluctuations link the classical scales of
 relativistic gravity with the quantum scales of Planck level physics. There are
 many possible realisations of inflation and there has been an explosion in the
 number of theoretical models which agree with current observational limits
-(for reviews see for example \cite{book:liddle, Alabidi:2008ej, Baumann2009}).
+(for reviews see, for example, Refs.~\cite{book:liddle, Alabidi:2008ej,
+Baumann2009}).
 
 Ground and space-based observations have significantly challenged theoretical
 cosmological models with a wealth of new data. The Wilkinson Microwave
@@ -53,14 +54,14 @@ distribution.
 
 Constraining the parameter space of inflationary models is an important step
 towards limiting the number of observationally viable models, and ultimately
-towards identifying one such model as the best candidate to descibe the
+towards identifying one such model as the best candidate to describe the
 physics of the early
 universe. 
 % In this work theoretical and numerical methods are used to constrain
 % particular classes of inflationary models.
 
 The goal of this thesis is to constrain inflationary models in two very different
-ways: by deriving theoretical limits on their parameter spaces, and by demonstrating
+ways: by deriving analytic limits on their parameter spaces, and by demonstrating
 a numerical calculation which will allow the investigation of higher order
 perturbations. Both these methods have the potential to limit the
 parameter space of the models investigated and possibly to rule them out.
@@ -87,7 +88,7 @@ extended objects called branes in superstring theory and are considered to be so
 the most promising candidates for achieving inflation using string theory.
 
 Chapter~\ref{ch:dbi-intro} outlines the Dirac-Born-Infeld (DBI) scenario in
-terms of the string theoretic background and how it applies in four-dimensions
+terms of the string theoretic background and how it applies in four dimensions
 as a realisation of inflation. The six extra dimensions required by string theory
 play an integral role in this scenario. These are compactified into a complex
 manifold whose geometry allows extended regions called throats to exist. DBI
@@ -106,7 +107,8 @@ the field value and the tensor mode amplitude are explored further. In the DBI
 scenario,
 Baumann \& McAllister \cite{bmpaper} placed a conservative
 upper bound on the total production of tensor modes during inflation, by assuming the
-brane does not move further than the length of the throat. By considering only the
+brane does not propagate further than the length of the throat. By considering only
+the
 period of observable inflation, which takes place over a much smaller region of the
 throat, we have derived a new bound which is considerably stronger. In the
 generic
@@ -118,7 +120,7 @@ the sensitivity of future observational experiments.
 If attention is limited to brane motion down the throat, another complementary bound
 on the tensor modes can be derived, which depends on the non-Gaussianity of the
 scalar modes produced
-during inflation. The DBI scenario is inherently non-Gaussian in nature but, even
+during inflation. The DBI scenario is inherently non-Gaussian in nature, but, even
 assuming the largest levels allowed by observations, the tensor-scalar ratio must
 exceed $0.005$. These two bounds are clearly incompatible in the generic
 case and only a very fine-tuned selection of model parameters allows the standard DBI
@@ -138,7 +140,7 @@ Instead of considering a single brane moving in the throat, a more natural scena
 might involve multiple branes. These could be created from the energy released by a
 brane/anti-brane annihilation and could move up the throat away from the tip.
 In \Rref{thomasward}, Thomas \& Ward described the case when these branes are
-coincident. When a large number of branes coincide the resultant action is similar
+coincident. When a large number of branes coincide, the resultant action is similar
 to the single brane action and is restricted by the bounds on the tensor-scalar
 ratio. For a small, finite number of branes, however, the action is non-Abelian in
 nature and is one of the family of ``bound-relaxing'' actions described above.
@@ -175,28 +177,28 @@ The Klein-Gordon equations are the central governing equations of the
 calculation described in Chapter~\ref{ch:numericalsystem}. They must first be
 rewritten in a form more suitable for numerical work. This involves changing the
 time coordinate to the number of elapsed e-foldings and writing the convolution
-terms in spherical polar coordinates. Four different single field slow roll
+terms in spherical polar coordinates. Four different single field, slow roll
 potentials will be investigated. The parameters for these models are set by
 comparing
 the calculated power spectrum of first order scalar perturbations with the latest
 WMAP data. The initial conditions for the background field and perturbations must
-also be specified. The second order perturbations are intially set to zero, to
-highlight the creation of second order effects. As this is a novel procedure a
+also be specified. The second order perturbations are initially set to zero, to
+highlight the creation of second order effects. As this is a novel procedure, a
 thorough description of the implementation of the calculation is given. Where
-an analytic solution for one of the convolution terms is possible, this is compared
+an analytic solution for the convolution terms is possible, this is compared
 with the calculated value. Numerical parameters are set by minimising the relative
-error of this test calculation.
+error in the calculation of one of the terms.
 
 
 The results of the numerical calculation are presented in Chapter~\ref{ch:results}.
 Three different ranges of the discretised momenta are considered and general
 results presented for the quadratic potential. 
 % Comment out results?
-As expected for a single field slow
+As expected for a single field, slow
 roll model, the second order perturbations are highly suppressed compared to the
 first order ones. 
 The source term of the second order perturbation equation is similar in form to the
-power spectrum of first order perturbations. It descreases rapidly until
+power spectrum of the first order perturbations. It decreases rapidly until
 horizon
 crossing after which a more steady amplitude is maintained.
 % 
@@ -205,8 +207,13 @@ The results for all four potentials are also compared. Differences are apparent 
 the behaviour of the models after horizon crossing.
 This calculation represents only the first step towards a full numerical integration
 of the second order Klein-Gordon equation. The next stages towards this goal are
-outlined and the second order equation for single field models without the slow roll
-assumption is written in the correct form for numerical use.
+outlined. The second order equation for single field models without the slow roll
+assumption is written in the correct form for numerical use and the second order
+equations for the two field case are presented in vector form.
+% 
+
+In Chapter~\ref{ch:conclusions} the results of the thesis are discussed and some
+final conclusions are presented.
 
 % Add section about conclusions?
 
@@ -228,7 +235,8 @@ Throughout this thesis units are chosen such that $\Mpl \equiv (8\pi G )^{-1/2}=
 
 An overdot ($\dot{~}$) is used for differentiation with respect to proper
 time $t$ and a prime ($'$) for differentiation with respect to conformal time
-$\eta$. The dagger symbol ($^\dagger$) denotes differentiation with respect to the
+$\eta$. From Chapter~\ref{ch:numericalsystem} onwards,  the dagger symbol
+($^\dagger$) denotes differentiation with respect to the
 number of e-foldings $\N$.
 % 
 A subscripted comma denotes partial differentiation by the symbol it
