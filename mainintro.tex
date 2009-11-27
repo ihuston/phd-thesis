@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % mainintro.tex - Ian Huston
-% $Id: mainintro.tex,v 1.65 2009/11/26 16:53:40 ith Exp $
+% $Id: mainintro.tex,v 1.66 2009/11/27 17:43:24 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.65 2009/11/26 16:53:40 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: mainintro.tex,v 1.66 2009/11/27 17:43:24 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -43,28 +43,29 @@ The cosmological principle is central to the Friedmann-Robertson-Walker
 (FRW\footnotemark) Universe. 
 \footnotetext{Lema\^{i}tre is sometimes also included in this group to give
 FLRW.}
-According to this postulate there is no privileged
+According to this postulate, there is no privileged
 place in the universe and no privileged direction in which to make observations.
 These assertions
 are formalised by assuming that the universe is homogeneous and isotropic at
 every point. This clearly conflicts with the highly inhomogeneous nature of matter
-on planetary and solar system scales but is assumed to hold as larger and larger
+on planetary and solar system scales, but is assumed to hold as larger and larger
 scales are considered.
-Surveys of the observable universe indicate that this holds up to the largest
+Surveys of the observable universe indicate that this assumption is valid up to
+the largest
 scales observed \cite{Colless:2001gk, York:2000gk}. 
-Historically homogeneity and isotropy were assumed primarily for simplicity.
+Historically, homogeneity and isotropy were assumed primarily for simplicity.
 Many alternative approaches can be taken. Violating these assumptions can
-be done for example by specifying a preferred direction or supposing that the
+be done, for example, by specifying a preferred direction or supposing that the
 universe is formed by a series of voids connected by filaments. Although many
-of these approaches have been disregarded due to lack of evidence some are still
-allowed by the observations
+of these approaches have been disregarded due to lack of evidence, some are still
+allowed by observations
 \cite{GarciaBellido:2008nz,Alexander:2007xx,Alnes:2005rw,Hunt:2008wp}.
 
 This section outlines the dynamics of the standard Big Bang scenario.
-By assuming homogeneity and isotropy the equations of motion of a
+By assuming homogeneity and isotropy, the equations of motion of a
 fluid-filled universe can be derived. What follows here is a
 standard exposition of well-known physics and has been the subject of
-numerous reviews including Refs~\cite{book:kolbturner, book:kip, book:liddle}.
+numerous reviews including Refs.~\cite{book:kolbturner, book:kip, book:liddle}.
 
 
 By imposing both homogeneity and isotropy on a general 4-dimensional metric, the
@@ -82,16 +83,13 @@ is obtained:
 % 
 where $K=+1, 0$ or $-1$ depending on whether the universe is closed, flat
 or open respectively. The time-like coordinate in the metric is $t$, known as
-proper time, and differentiation with respect to $t$ is denoted by an
-overdot $(\dot{~})$. 
-
-
+proper time. 
+% 
 The spatial part of the FRW metric is multiplied by the scale factor $a(t)$.
 This characterises the size of space-like hypersurfaces at
-different coordinate times. In an expanding universe $a$ grows with
-increasing $t$ and
-$\dot{a}>0$.
-The definition of the Hubble parameter $H$ captures this expansion:
+different times. In an expanding universe, $a$ grows with
+increasing $t$ and $\dot{a}>0$.
+The definition of the Hubble parameter, $H$, captures this expansion:
 % Definition of Hubble parameter
 \begin{equation}
  \label{eq:Hdefn-intro}
@@ -101,7 +99,7 @@ The definition of the Hubble parameter $H$ captures this expansion:
 
 
 The Einstein equations can be derived by the variational principle from the
-action $S$ where $S\equiv S_\mathrm{EH} + S_\mathrm{M}$. This is the sum
+action $S$, where $S\equiv S_\mathrm{EH} + S_\mathrm{M}$. This is the sum
 of the
 Einstein-Hilbert ($S_\mathrm{EH}$) and matter ($S_\mathrm{M}$) actions which are
 defined as 
@@ -135,7 +133,7 @@ where $T_{\mu\nu}$ is the stress energy tensor obtained by the variation of the
 matter Lagrangian. 
 In the definitions above we have included a
 cosmological constant term, $\Lambda_c$, for completeness. In the early
-universe this term is subdominant and will be negligible until much later
+universe this term is sub-dominant and will be negligible until much later
 \cite{book:liddle}. From now on we will
 disregard the contribution of such a term in the early universe.
 
@@ -159,7 +157,7 @@ The trace of $T$ is given by
 % 
 The Einstein equations and the stress-energy tensor of the
 perfect fluid can now be used to derive the equations of motion of the fluid.
-From the metric in \eq{eq:frwmetric-intro} the $00$ and $ij$ components of the
+From the metric in \eq{eq:frwmetric-intro}, the $0$-$0$ and $i$-$j$ components of the
 Ricci tensor can be found:
 % 
 \begin{align}
@@ -195,9 +193,9 @@ energy density:
 \end{equation}
 
 
-The last three equations \eqref{eq:Friedmann1-intro},
+The last three equations, \eqref{eq:Friedmann1-intro},
 \eqref{eq:Friedmann2-intro}
-and \eqref{eq:continuity-intro} will determine the evolution of the
+and \eqref{eq:continuity-intro}, will determine the evolution of the
 perfect fluid. Two important solutions of these equations are
 the radiation and
 matter dominated universes. In the standard Big Bang scenario the universe is
@@ -215,7 +213,7 @@ t^{2/3}$ for the radiation and matter eras respectively.
 
 
 % Horizons
-Instead of using coordinate time as above we could bring
+Instead of using proper time as above we could bring
 the scale factor outside the whole metric and use conformal time $\eta$
 defined by
 % Conformal time
@@ -223,7 +221,7 @@ defined by
 \label{eq:etatime-intro}
  \eta = \int\frac{\d t}{a}\,.
 \end{equation}
-A prime ($'$) signifies differentiation with respect to $\eta$. 
+% 
 The metric written in conformal time is then 
 % 
 \begin{equation}
@@ -236,7 +234,7 @@ The metric written in conformal time is then
 \end{equation}
 
 % 
-Because all the coordinates in the line element are now scaled by $a(t)$ we
+As all the coordinates in the line element are now scaled by $a(t)$, we
 have defined a coordinate grid which does not change as the universe expands.
 These ``comoving'' coordinates allow distances to be compared at different
 eras with ease. A comoving distance $x$ can be translated into a physical
@@ -251,7 +249,7 @@ will remain fixed.
 
 One particularly important distance is the maximum distance light could have
 propagated from some initial time $t_i$ to a later time $t$. From
-\eq{eq:comovingdefn-intro} this is simply the conformal time integrated from
+\eq{eq:comovingdefn-intro}, this is simply the conformal time integrated from
 the initial time and is called the comoving or particle horizon.
 If the initial time is restricted to
 being at some finite time in the past, as in the Big Bang scenario, then the
@@ -268,7 +266,7 @@ shows that it is also the logarithmic integral of the comoving Hubble
 radius $1/aH$. This distance is how far particles can travel in one
 ``e-folding'', the time for $a$ to expand by one exponential factor. 
 The number of e-foldings between two measurements of the scale factor, $a_i$
-and $a_f$ is given by
+and $a_f$, is given by
 \begin{equation}
 \label{eq:nefolddefn-intro}
  \N = \ln \frac{a_f}{a_i}\,.
@@ -311,7 +309,7 @@ of serious problems. Two of the main problems are described in this section.
 \subsubsection{Flatness Problem} 
 \label{sec:flatprob}
 The Friedmann equation
-\eq{eq:Friedmann1-intro} can be re-written as
+\eqref{eq:Friedmann1-intro} can be re-written as
 % 
 \begin{equation}
 \label{eq:omegadefn-intro}
@@ -320,29 +318,30 @@ The Friedmann equation
 % 
 where $\Omega(t)=E(t)/E_\mathrm{crit}$ and the critical density
 $E_\mathrm{crit}= 3H^2/8\pi G$. 
-If $\ddot{a}>0$ then $\Omega$ goes towards the critical value $\Omega=1$, whereas if
-$\ddot{a}<0$ it is diverges from this value. The flat universe, $K=0$,
+If $\ddot{a}>0$ then $\Omega$ approaches the critical value $\Omega=1$ over time,
+whereas if
+$\ddot{a}<0$ it diverges from this value. The flat universe, $K=0$,
 is an unstable fixed point in the parameter space.
-Current observations confirm $\Omega=1$ within about 2\% at a 95\% confidence
+Current observations confirm that $\Omega=1$ within about 2\%, at a 95\% confidence
 level \cite{Komatsu:2008hk}.
 During the radiation and matter dominated eras $aH$ is decreasing with time,
-meaning that $\Omega$ diverges away from 1. If it is measured now as being very
-close to 1 then in the past it must have been even closer. The requirement of
-extreme proximity to $\Omega=1$ as an initial condition is known as the
-flatness problem. 
+so that $\Omega$ diverges away from 1. If the measured value is now very
+close to 1 then in the past it must have been even closer. 
+The fine-tuning in the initial conditions required for this proximity to $\Omega=1$
+is known as the flatness problem. 
 
 
 \subsubsection{Horizon Problem} \label{sec:horizprob}
 The particle horizon, also known
 as the comoving horizon, defines the maximum separation between two points that
 have been in causal contact sometime in the past. During the radiation and
-matter eras this comoving horizon increases monotonically and so length-scales
-which are now entering the horizon would have been far outside the horizon in
+matter eras, this comoving horizon increases monotonically and so length scales
+which are now entering the horizon would have been far outside it in
 the past. 
 The CMB as observed by the WMAP satellite is extremely smooth on scales that
 would have been far outside the horizon at the time of last scattering
 \cite{Komatsu:2008hk}. These regions of space have very similar energies and
-yet they could not have been in causal contact since the Big Bang. 
+yet according to the Big Bang scenario they could never have been in causal contact. 
 
 % 
 % \subsubsection{Cosmological Defects} \label{sec:cosdefects}
@@ -370,16 +369,19 @@ Inflation is a period of accelerated expansion in the size of the universe
 which took place just after the Big Bang
 \cite{Starobinsky:1980te,Guth:1980zm,Albrecht:1982wi,Linde:1981mu,
 Starobinsky:1982ee}. During this
-expansion the comoving Hubble radius $(aH)^{-1}$ decreases and the isotropic
+expansion phase  the comoving Hubble radius $(aH)^{-1}$ decreases and the isotropic
 pressure of the universe is negative \cite{book:liddle, Baumann2009}:
 % 
 \begin{equation}
 \label{eq:infldefn-intro}
- \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 \Rightarrow \ddot{a}>0
-  \Rightarrow E + 3P < 0 \,.
+ \frac{\d }{\d t}\left( \frac{1}{aH}\right) <0 
+\quad \Rightarrow  \quad
+\ddot{a}>0
+\quad \Rightarrow \quad
+E + 3P < 0 \,.
 \end{equation}
 % 
-We can also define a new parameter 
+We can define a new parameter 
 % 
 \begin{equation}
 \label{eq:epsilonHdefn-intro}
@@ -394,7 +396,7 @@ the Raychaudhuri equation \eqref{eq:Friedmann2-intro} as
  \frac{\ddot{a}}{a} = H^2 (1-\varepsilon_H)\,.
 \end{equation}
 % 
-This parametrisation means that inflation only occurs when $\varepsilon_H<1$.
+This parametrisation illustrates that inflation only occurs when $\varepsilon_H<1$.
 In this subsection we describe briefly how inflation solves the problems
 outlined above and outline the inflationary dynamics of single scalar field
 models. 
@@ -408,17 +410,17 @@ Comoving scales that entered the horizon recently, such as
 those we observe in the CMB, would have been within the horizon previously. 
 During this period, the energy density could reach an equilibrium
 value.
-Figure~\ref{fig:comovingscales-intro} shows how by extending
-the era of inflation far enough into the past any comoving length could
+Figure~\ref{fig:comovingscales-intro} shows how, by extending
+the era of inflation far enough into the past, any comoving length could
 previously have been inside the horizon.
 Observations require that inflation lasted at least long enough that all the
 scales we measure today were previously inside the horizon. 
 % 
 \begin{figure}[htbp]
- \includegraphics[width=\textwidth]{graphs/scales.pdf}
+ \includegraphics[width=0.8\textwidth]{graphs/scales.pdf}
  \caption[Comoving Scales and the Hubble Radius]{Comoving scales that have recently
 entered the horizon would
-previously have been inside the horizon if the inflationary period extended far
+previously have been inside the horizon, if the inflationary period extended far
 enough into the past.}
  \label{fig:comovingscales-intro}
 \end{figure}
@@ -445,17 +447,12 @@ must be
 sufficiently long. Approximately $50$--$70$ e-foldings is considered standard
 \cite{book:liddle}. Inflation
 can last longer than this but only the last 50--70 e-foldings will be important
-for the length scales of our observable universe. As the scale factor of the
-universe expands
-in the region of $e^{60}\simeq 10^{26}$ times, the volume would increase by a
-factor of $e^{180}$.  The number density
-of any monopoles or other relics that existed before inflation would therefore be
-diluted so much that observing these relics would be increasingly unlikely. 
+for the length scales of our observable universe. 
 
 
-As mentioned above during inflation the universe is filled with material that
-has negative isotropic pressure.
-Clearly whatever drives inflation cannot be matter or radiation in their usual
+During inflation the universe is filled by material exhibiting negative isotropic
+pressure.
+Therefore, whatever drives inflation cannot be matter or radiation in their usual
 forms. The simplest proposal is to fill the universe with a single scalar field
 $\varphi$. The canonical action for this field is
 \begin{equation}
@@ -468,7 +465,7 @@ is called the kinetic
 function. In Section~\ref{sec:noncanoninfl} we will consider other
 choices for $P$. 
 
-The equation of motion for $\varphi$ for the canonical $P=X-V$ is
+The equation of motion for $\varphi$, for the canonical action $P=X-V$, is
 % 
 \begin{equation}
  \label{eq:phieom1-intro}
@@ -492,22 +489,22 @@ energy-density and isotropic pressure:
 % 
 Under these conditions the kinetic function $P(\varphi, X)$ can be identified as
 the isotropic pressure. The dynamics of the field are governed by the potential
-$V(\varphi)$. Inflation requires $P<-E/3$ so from Eqs \eqref{eq:EandP-intro} and
+$V(\varphi)$. Inflation requires $P<-E/3$, so from Eqs.~\eqref{eq:EandP-intro} and
 \eqref{eq:Pdefn-intro} inflation
-can also be thought of as a period when the potential energy $V$ dominates over
+can also be thought of as a period when the potential energy dominates over
 the kinetic energy. 
 
 
 Inflation needs to last long enough to solve the problems described above. A generic
 potential is not likely to satisfy these requirements without fine-tuning. One
-approach to achieve this longevity is to require potentials to meet
-conditions under which the inflationary period is necessarily long. 
-
+approach is to enforce conditions on the potential under which the inflationary
+period is necessarily long. 
+% 
 We have seen that for
-inflation to occur the potential needs to dominate over kinetic energy. From
-\eq{eq:EandP-intro} this occurs in the limit $P\rightarrow -E$ or equivalently
-$\varepsilon_H \ll 1$. However for this to remain the case for a sufficiently long
-period the second derivative of $\vp$ must be small enough. If we define
+inflation to occur the potential needs to dominate over the kinetic energy. From
+\eq{eq:EandP-intro}, this occurs in the limit $P\rightarrow -E$ or equivalently
+$\varepsilon_H \ll 1$. However, for this to remain the case for a sufficiently long
+period the second derivative of $\vp$ must be small. If we define
 another parameter 
 % 
 \begin{equation}
@@ -517,12 +514,12 @@ another parameter
  =\varepsilon_H -\frac{\dot{\varepsilon_H}}{2H\varepsilon_H}\,,
 \end{equation}
 % 
-then taking $|\eta_H|\ll 1$ will ensure that $\dot{\vp}$ and $\varepsilon_H$
-change slowly, allowing inflation to last longer.
+then taking $|\eta_H|\ll 1$ ensures that $\dot{\vp}$ and $\varepsilon_H$
+change slowly. This allows an inflationary phase of sufficient duration to occur.
 
 The approximations $\varepsilon_H\ll 1$ and $|\eta|\ll 1$ are known as the
 slow roll conditions because they force the inflaton field $\vp$ to roll down
-the potential $V$ slowly. The parameters $\varepsilon_H$ and $\eta_H$ are known as
+the potential $V$ slowly. The parameters $\varepsilon_H$ and $\eta_H$ are the
 slow roll parameters. Setting $\ddot{\vp}$ to be small is equivalent to
 making the friction $H\dot{\vp}$ in \eq{eq:phieom1-intro} dominant. With
 these approximations the
@@ -550,7 +547,7 @@ Section~\ref{sec:inflation-intro}. Such a field, however, will
 lead only to a homogeneous universe later. How does the myriad structure
 that we see around us form? From stars to galaxies to clusters, the
 gravitational force has concentrated energy density over the history of the
-universe but some initial fluctuation must have been present to begin this
+universe, but some initial fluctuation must have been present to begin this
 process. One of the main achievements of inflation is to provide a physical
 origin for
 such initial fluctuations. In Chapter~\ref{ch:perts} we will formally develop
@@ -560,10 +557,10 @@ important for inflation.
 
 
 Suppose that a full inhomogeneous scalar field
-$\varphi$ is split into a homogeneous background field $\vp_0$ as we described
-above and an inhomogeneous perturbation $\dvp{}(\eta,x^i)$ for $i=1,2,3$. For the
+$\varphi$ is split into a homogeneous background field $\vp_0$, as described
+above, and an inhomogeneous perturbation $\dvp{}(\eta,x^i)$ for $i=1,2,3$. For the
 following
-analysis to be valid the perturbation must be much smaller than the background
+analysis to be applicable the perturbation must be much smaller than the background
 field value. From the amplitude of perturbations in the CMB this approximation
 can be seen to be valid \cite{Komatsu:2008hk}. 
 
@@ -593,7 +590,7 @@ contains only linear contributions and the higher order terms contain non-linear
 terms. 
 
 
-Instead of working in coordinate space we can also consider
+Instead of working in coordinate space, we can also consider
 the perturbation in Fourier space using the definition
 % 
 \begin{equation}
@@ -604,9 +601,9 @@ x^i)
 \end{equation}
 where $k^i$ are the components of the comoving wavenumber vector $\bf{k}$. The
 amplitude of this
-vector $k=|\kvi|$ identifies whether a particular mode is inside or outside
+vector $k=|\bf{k}|$ identifies whether a particular mode is inside or outside
 the comoving horizon. Wavemodes inside the comoving horizon are identified by
-$k>aH$ while $k<aH$ for those outside the horizon. 
+$k>aH$, while $k<aH$ for those outside the horizon. 
 
 
 We must also consider perturbations in the metric tensor $g_{\mu\nu}$. If the
@@ -637,9 +634,10 @@ is divergence free and traceless:
   \quad h^k_{1~k}= 0\,.
 \end{equation}
 % 
-In the previous equation $\phi$ is the lapse function, $\psi$ is the curvature
-perturbation, $B$ and $E$ are the scalar part of the shear, $S_i$, and $F_i$
-are the vector parts of the shear, and $h_{ij}$ is the tensor perturbation
+In the previous equations $\phi$ is the lapse function, $\psi$ is the curvature
+perturbation, $B_1$ and $E_1$ are the scalar part of the shear, $S_{1i}$, and
+$F_{1i}$
+are the vector parts of the shear, and $h_{1ij}$ is the tensor perturbation
 describing gravitational waves.
 % Scalar field inflation does not produce vector perturbations so we will not
 % consider them  \cite{book:liddle}.
@@ -649,13 +647,13 @@ Splitting an inhomogeneous spacetime into background and perturbation is not a
 covariant operation. This leads to an ambiguity in the choice of coordinates
 which must be rectified by choosing a gauge. Gauge transformations relate
 physical results in one gauge to those in another. To choose a gauge one must
-specify how spacetime is foliated, i.e. a slicing, and how coordinates in one
-spatial hypersurface are related to those in another, i.e. a threading
+specify how spacetime is foliated, \iec a slicing, and how coordinates in one
+spatial hypersurface are related to those in another, \iec a threading
 \cite{Malik:2008im}. We will
-employ the uniform curvature gauge in which spatial hypersurfaces are flat. It
+employ the uniform curvature gauge in which spatial hypersurfaces are flat. This
 is also known as the flat gauge.
 
-The gauge transformation vector at first order  $\xi_1^\mu$ can be split into
+The gauge transformation vector at first order,  $\xi_1^\mu$, can be split into
 scalar
 and vector parts
 % 
@@ -751,18 +749,7 @@ the first order perturbation equation of motion is \cite{Malik:2008im}
 \end{multline}
 % 
 where $\U$ is the background value of the potential $V(\vp)$.
-%
-% \addtodo{Check that the Mukhanov eqn is equivalent} 
-% If we know assume that $\varepsilon_H \ll1 $ and $|\eta_H|\ll1$ then we get the
-% slow roll form of this equation:
-% % 
-% \begin{equation}
-%  \label{eq:fokg-sr-intro}
-%  \dvp1''(\kvi) + 2\H \dvp1'(\kvi) + \left( k^2 + a^2\Upp\right) \dvp1(\kvi) =
-% 0 \,.
-% \end{equation}
-
-
+% 
 Substituting $u=a\dvp1$ gives the Mukhanov equation \cite{Mukhanov:1990me}
 % 
 \begin{equation}
@@ -773,8 +760,8 @@ Substituting $u=a\dvp1$ gives the Mukhanov equation \cite{Mukhanov:1990me}
 where $z= a\vp_0'/\H$.
 
 \subsection{Quantum Perturbations}
-So far we have considered classical perturbations. The generation of
-fluctuations is a quantum effect, however, and we need to consider the
+So far we have considered classical perturbations. However, the generation of
+fluctuations is a quantum effect and we need to consider the
 perturbations as quantum operators in some vacuum. 
 
 In Minkowski space the quantisation of $u(\kvi)$ is straightforward.
@@ -830,8 +817,9 @@ therefore assumed to evolve in flat space. This suggests the Minkowski vacuum as
 most natural vacuum state to select and this choice of vacuum at
 early times is known as the Bunch-Davies vacuum.
 % 
-In the limit $\eta\rightarrow -\infty, k/aH\rightarrow \infty$ the mode equation
-\eq{eq:weqn-intro} becomes
+In the limit $\eta\rightarrow -\infty$ (or equivalently $k/aH\rightarrow \infty$),
+the mode equation
+\eqref{eq:weqn-intro} becomes
 % 
 \begin{equation}
   w''(\kvi) + k^2 w(\kvi) = 0\,,
@@ -882,17 +870,17 @@ The power spectrum of the inflaton perturbation $\dvp1 = u/a$ can now be
 defined as
 % 
 \begin{equation}
-  \langle \dvp1(\textbf{k}) \dvp1(\textbf{k}') \rangle 
-   \equiv (2\pi)^3 \delta(\textbf{k} + \textbf{k}') P_{\dvp{}}^2 (k)
-   = (2\pi)^3 \delta(\textbf{k} + \textbf{k}') \frac{|w(\kb)|^2}{a^2}\,,
+  \langle \dvp1(\textbf{k}) \dvp1(\wt{\textbf{k}}) \rangle 
+   \equiv (2\pi)^3 \delta(\textbf{k} + \wt{\textbf{k}}) P_{\dvp{}}^2 (k)
+   = (2\pi)^3 \delta(\textbf{k} + \wt{\textbf{k}}) \frac{|w(\kb)|^2}{a^2}\,,
 \end{equation}
 % 
 where $\langle \ldots \rangle$ denotes the ensemble average. 
-If taken over a large enough volume the ensemble average and spatial average
+If taken over a large enough volume, the ensemble average and spatial average
 are equivalent \cite{book:lyth}.
 The power spectrum
 $P_{\dvp{}}^2$ depends only on the magnitude of the wavenumber
-vector $k=|\bf{k}|$ but has dimensions of $k^{-3}$. A dimensionless power
+vector, $k=|\bf{k}|$, but has dimensions of $k^{-3}$. A dimensionless power
 spectrum
 can be defined as
 % 
@@ -904,12 +892,12 @@ P_{\dvp{}}^2(k)\,.
 % 
 
 In a similar way we can define the power spectrum of the comoving curvature
-perturbation $\R = H\dvp1/\dot{\vp_0}$:
+perturbation $\R = H\dvp1/\dot{\vp}_0$:
 % 
 \begin{equation}
  \label{eq:Prdefn-intro}
- \langle \R(\textbf{k}) \R(\textbf{k}') \rangle 
-   = (2\pi)^3 \delta(\textbf{k} + \textbf{k}') P_\R^2 (k)\,,
+ \langle \R(\textbf{k}) \R(\wt{\textbf{k}}) \rangle 
+   = (2\pi)^3 \delta(\textbf{k} + \wt{\textbf{k}}) P_\R^2 (k)\,,
 \end{equation}
 %
 and the dimensionless power spectrum
@@ -921,7 +909,7 @@ P_{\R}^2(k)\,.
 
 A slow roll inflation model in a quasi-de Sitter spacetime will have the
 Fourier mode solution given in \eq{eq:wfinal-intro}. 
-After horizon crossing, when $k\gg aH$, this gives $|w|^2 = 1/(2k^3 \eta^2)$ so 
+After horizon crossing, when $k\ll aH$, this gives $|w|^2 = 1/(2k^3 \eta^2)$ so 
 % 
 \begin{equation}
 \label{eq:pphi-intro}
@@ -971,15 +959,12 @@ on $k$. The tensor-scalar ratio can also be written in terms of $\varepsilon_H$:
 \end{equation}
 As $\varepsilon_H\ll1$ for slow roll models of inflation the amplitude of tensor
 perturbations that these models produce is much smaller than the amplitude of
-curvature perturbations. This consistency relation is extremely important for
-testing models of inflation. The detection of a significant tensor mode signal
-would rule out slow roll models in which $\varepsilon_H$ is much smaller than 1.
-
+curvature perturbations. 
 
 
 % Post spectra derivations
-A curvature perturbation power spectrum $\Pr(k)$ which is independent of
-wavenumber $k$ is said to be scale invariant. The spectral index $n_s$ is a
+If the curvature perturbation power spectrum, $\Pr(k)$, is independent of
+wavenumber $k$, it is said to be scale invariant. The spectral index $n_s$ is a
 measure of the deviation from scale invariance:
 % 
 \begin{equation}
@@ -987,7 +972,7 @@ measure of the deviation from scale invariance:
  n_s -1 = \frac{\d \ln (\Pr(k))}{\d \ln k}\,,
 \end{equation}
 % 
-where $n_s=1$ denotes scale invariant. The spectral index of
+where $n_s=1$ denotes a scale invariant spectrum. The spectral index of
 the tensor power spectrum can be similarly defined:
 % 
 \begin{equation}
@@ -1109,7 +1094,7 @@ at the 95\% confidence level.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 In the previous section we considered the dynamics of a scalar field with a
-canonical action $P(\vp, X) = X - V(\vp)$ where $X \equiv -\frac{1}{2}g^{\mu
+canonical action $P(\vp, X) = X - V(\vp)$, where $X \equiv -\frac{1}{2}g^{\mu
 \nu}\nabla_\mu \varphi \nabla_\nu \varphi$ is the kinetic energy. 
 In this
 section we will generalise
@@ -1118,7 +1103,7 @@ field actions appear frequently in string theory derived inflationary models.
 In Chapters~\ref{ch:dbi-intro}, \ref{ch:dbi} and \ref{ch:multibrane}
 there are explicit examples of non-canonical scenarios.
 
-We will consider the same action as before
+We will consider an action of the same form as before
 % 
 \begin{equation}
 \label{eq:DBIaction-dbiintro2}
@@ -1126,8 +1111,8 @@ S=\int  \d^4x \sqrt{|g|} \left[ \frac{\Mpl^2}{2} R
 + P (\varphi , X) \right] \,,
 \end{equation}
 % 
-with minimal coupling to the gravitational sector. Varying this action with a
-homogeneous field $\vp=\vp(t)$ naturally gives the stress-energy tensor as in
+with minimal coupling to the gravitational sector. Varying this action gives the
+stress-energy tensor in
 \eq{eq:fluidstress-intro} where $u_\mu = \partial_\mu\vp/\sqrt{2X}$. 
 % Insert energy momentum tensor.
 The energy density $E$ is defined as
@@ -1135,7 +1120,7 @@ The energy density $E$ is defined as
  E = 2X\PX - P\,,
 \end{equation}
 % 
-and for a homogeneous field the kinetic term $P(\vp, X)$ is the
+and for a homogeneous scalar field the kinetic term $P(\vp, X)$ is the
 isotropic pressure. 
 It proves convenient to define two parameters in terms of the 
 kinetic function $P$ and its derivatives \cite{lidser1,lidser3}: 
@@ -1151,17 +1136,18 @@ kinetic function $P$ and its derivatives \cite{lidser1,lidser3}:
 \end{align}
 % 
 The first parameter, $c_s$, is called the sound speed of the fluctuations
-in the inflaton field. This can be significantly less than unity, 
+in the inflaton field. This can be significantly less than unity for non-canonical
+actions, 
 in contrast to slow roll inflation driven by a canonical 
 field such that $c_s = P_{,X} =1$.
 % 
-Christopherson and Malik showed in \Rref{Christopherson:2008ry} that $c_s$
+Christopherson \& Malik showed in \Rref{Christopherson:2008ry} that $c_s$
 is in fact the phase speed of the fluctuations and not the sound speed
 which is defined as $\dot{P}/\dot{E}$. However, in common with the rest of the
 literature, we will continue to use $c_s$ as defined in \eq{eq:defcs-dbiintro}. 
 
 The generation of quantum perturbations in the non-canonical case is similar to
-the canonical one but now includes contributions from $c_s$. Again letting
+the canonical one, but now includes contributions from $c_s$. Letting
 $u=a\dvp1$, the Mukhanov equation for the
 Fourier modes, \eq{eq:ueq-intro}, becomes
 \cite{gm}:
@@ -1176,11 +1162,11 @@ where $z$ has been redefined as
  z = \frac{a\sqrt{E+P}}{c_s H} = \frac{a\sqrt{2X\PX}}{c_s H} \,.
 \end{equation}
 % 
-We quantize the $u$ modes using the Bunch-Davies vacuum as above and now
-consider the amplitude $w(\kvi)$. Instead of considering whether modes are
+We quantise the $u$ modes using the Bunch-Davies vacuum as above and work with the
+amplitude $w(\kvi)$. Instead of considering whether modes are
 inside the comoving horizon, it is now important to distinguish between modes
-inside and outside the sound horizon, where $kc_s = aH$. Far inside the sound
-horizon with $kc_s \gg aH$ the mode solution takes a similar asymptotic form to
+inside and outside the sound horizon, defined by $kc_s = aH$. Far inside the sound
+horizon, where $kc_s \gg aH$, the mode solution takes a similar asymptotic form to
 \eq{eq:subhsoln-intro}:
 % 
 \begin{equation}
@@ -1188,9 +1174,10 @@ horizon with $kc_s \gg aH$ the mode solution takes a similar asymptotic form to
 \end{equation}
 
 
-Following the same analysis above we find that the amplitude of the curvature 
+Following the same analysis as above, the amplitude of the curvature 
 perturbations 
-generated during inflation changes in this case and is given by \cite{gm}
+generated during inflation can be found and is given by
+\cite{gm}
 % 
 \begin{equation} 
 \label{eq:Ps-dbiintro}
@@ -1198,10 +1185,10 @@ generated during inflation changes in this case and is given by \cite{gm}
 \end{equation}
 % 
 This expression is only valid after exit from the sound horizon. In contrast
-the tensor perturbations are not effected by the change in the action. The
+the tensor perturbations are not affected by the change in the action. The
 expression for the power spectrum $\Pt$ in \eq{eq:Ptdefn-intro} is still valid.
-This should be evaluated after the modes have exited the normal horizon
-when $k\ll aH$. 
+This should be evaluated after the modes have exited the normal horizon,
+\iec when $k < aH$. 
 The consistency relation \eqref{eq:consistency-intro} is now defined as
 \cite{gm} 
 % 
@@ -1225,9 +1212,11 @@ detectable in the foreseeable future \cite{lidser1,lidser2}.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-The initial conditions described above have Gaussian statistics, with no correlations between modes
+The initial fluctuations described above have Gaussian statistics, with no
+correlations between modes
 on different scales. All the information about the perturbations can be obtained from the
-two-point function or power spectrum as defined in \eqref{eq:Prdefn-intro}. For a Gaussian random 
+two-point function or power spectrum as defined in \eq{eq:Prdefn-intro}. For a
+Gaussian random 
 field all higher point functions are either zero or combinations of the two-point function. In
 particular the three-point function of $\R$, $\langle
 \R(x_1)\R(x_2)\R(x_3)\rangle$, will be zero for purely Gaussian $\R$. We can
@@ -1240,7 +1229,7 @@ transform of the three point function in terms of the bispectrum $B$
 k_3)\,,
 \end{equation}
 % 
-where translation invariance imposes the conservation of the $\kb$s and
+where translation invariance imposes the conservation of the $\kb$ vectors and
 the bispectrum
 depends only on the magnitude of each wavenumber. Any deviation from Gaussianity
 will result in a
@@ -1273,7 +1262,7 @@ The local non-Gaussian parameter $\fnlloc$ can be related to the bispectrum by:
 P_\R^2(k_2)P_\R^2(k_3) + P_\R^2(k_3)P_\R^2(k_1)\right]\,.
 \end{equation}
 % 
-If $P_\R^2(k)$ is approximately scale invariant, $P_\R^2(k) = c k^{-3}$ then
+If $P_\R^2(k)$ is approximately scale invariant, $P_\R^2(k) = c k^{-3}$, then
 the bispectrum becomes \cite{Baumann2009}
 % 
 \begin{equation}
@@ -1281,14 +1270,16 @@ the bispectrum becomes \cite{Baumann2009}
 \frac{1}{k_2^3 k_3^3} + \frac{1}{k_3^3 k_1^3}\right]\,.
 \end{equation}
 % 
-This is maximised if one of the $k_i$ is much smaller than the others. Momentum
-conservation then requires the other two to be approximately equal. This is
-the squeezed shape in momentum space where for example $k_3 \ll k_1,k_2$. In
+This expression is maximised if one of the $k_i$ is much smaller than the other two.
+Momentum
+conservation then requires that they are approximately equal. This
+configuration is a squeezed triangle in momentum space where, for example, $k_3 \ll
+k_1,k_2$. In
 single field inflation $\fnlloc$ is proportional to the slow roll parameters
 and therefore expected to be small. Non-linear contributions from the coupling
 of the gravitational potential to the curvature perturbation are expected to
 produce $\fnlloc$ of order one which would be much larger than the
-$O(\varepsilon_H)$ contributions from single field slow roll inflation
+$O(\varepsilon_H)$ contributions from single field, slow roll inflation
 \cite{Bartolo:2004if, Komatsu:2008hk}. Any detection of $\fnlloc$ at greater
 than $O(1)$ would present a challenge to such single field slow roll models. 
 The current bounds on the non-Gaussianity parameter are not strong but have
@@ -1320,13 +1311,10 @@ parameter is given by \cite{chenetal,lidser3}
 \end{equation}
 %  
 Data from WMAP3 imposed the bound $|\fnl| < 300$ on this parameter
-\cite{spergel}. The corresponding bounds for other triangle configurations 
-may be much tighter than this and this may be particularly relevant if 
-non-Gaussian signatures have indeed been detected in the 
-CMB \cite{Yadav:2007yy,crim}. The more recent WMAP5 data set
-\cite{Komatsu:2008hk} improves on this bound somewhat, and
+\cite{spergel}. The more recent WMAP5 data set
+improves on this bound somewhat \cite{Komatsu:2008hk}, and
 also indicates that it is distinctly asymmetric. At the $95 \%$ confidence
-level, the bound on the 
+level, the current bound on the 
 equilateral triangle is 
 % 
 \begin{equation}
@@ -1348,14 +1336,18 @@ equilateral triangle is
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 In this chapter the physics of the FRW universe has been described. Inflation has been introduced
-to solve problems with the standard Big Bang theory. To solve these problems the inflationary
+to solve problems with the standard Big Bang scenario. To solve these problems the
+inflationary
 period must be of sufficient duration. This can be ensured by using models which comply with
 certain slow roll conditions. 
 
-To explain inhomogeneities in the early universe cosmological perturbation theory was presented up
+To explain inhomogeneities in the early universe, cosmological perturbation theory
+was presented up
 to first order. The power spectrum of scalar perturbations, $\Pr$, the spectral index of this
-spectrum, $n_s$ and the ratio of tensor-scalar perturbations, $r$, are the main observable
-quantities against which models can be tested. Slow roll models also must satisfy a consistency
+spectrum, $n_s$, and the ratio of tensor-scalar perturbations, $r$, are the main
+observable
+quantities against which models can be tested. Slow roll models must also satisfy a
+consistency
 relation between the tilt of the tensor spectrum and $r$. Current observations favour an almost
 scale invariant red spectrum ($n_s<1$) with a low level of tensor signal. The accuracy of the
 current data is not yet good enough to meaningfully evaluate the slow roll consistency relation. 
@@ -1364,10 +1356,11 @@ As well as the standard models, one can also construct inflationary models in wh
 takes a non-canonical form. In these models the sound speed of scalar fluctuations, $c_s$, plays a
 pivotal role. The predictions for scalar perturbations are altered by a factor of $c_s$, as is the
 slow roll consistency relation. Non-canonical models also often exhibit strong non-linear effects
-which can be parameterised using the non-Gaussianity parameter $\fnl$. Canonical single field slow
+which can be parametrised using the non-Gaussianity parameter $\fnl$. Canonical single field slow
 roll models do not predict large amounts of non-Gaussianity. 
 
-This chapter laid the foundations for the two main parts of this work in which first theoretical
+This chapter laid the foundations for the two main parts of this work in which first
+analytic
 and then numerical techniques are used to constrain inflationary models. In the next chapter the
 DBI brane inflation scenario is presented. 
 
