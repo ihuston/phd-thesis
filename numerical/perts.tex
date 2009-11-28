@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical-intro.tex - Ian Huston
-% $Id: perts.tex,v 1.31 2009/11/26 16:22:53 ith Exp $
+% $Id: perts.tex,v 1.32 2009/11/28 17:10:54 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.31 2009/11/26 16:22:53 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: perts.tex,v 1.32 2009/11/28 17:10:54 ith Exp $}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -38,7 +38,8 @@ has been focused on non-Gaussianity as a new tool to classify and
 test models of the early universe. Perturbation theory beyond first
 order will be required to make the best possible use of 
 the data. In Chapter~\ref{ch:introduction} cosmological perturbations at first order
-were introduced.  In Part~\ref{part:numerical} of this work we outline an important
+were introduced.  In Part~\ref{part:numerical} of this thesis, we outline an
+important
 step in the understanding of perturbation theory beyond first order, demonstrating
 that second order perturbations are readily amenable to numerical
 calculation, even on small and intermediate scales inside the horizon.
@@ -60,7 +61,7 @@ already be used to rule out models with particularly strong non-Gaussian signatu
 
 There are two main approaches to studying higher order effects and
 non-Gaussianity.  
-The first uses nonlinear theory and a gradient expansion in various
+The first uses non-linear theory and a gradient expansion in various
 forms, either explicitly, \eg
 Refs.~\cite{Salopek:1990jq,Rigopoulos:2005xx}, or through the
 $\Delta \N$ formalism, \eg
@@ -131,7 +132,7 @@ are expected only in models with a non-canonical action or multiple fields, or
 when slow roll is violated. Numerical simulations will be particularly
 useful in analysing models with these characteristics.
 Section~\ref{sec:next-res} discusses planned future work to extend the current
-numerical system to deal with these extensions beyond the standard single field, slow
+numerical system to deal with models beyond the standard single field, slow
 roll inflation.
 
 
@@ -140,13 +141,13 @@ for first and second order perturbations are introduced. These will be the centr
 governing equations of the numerical calculation. They are
 initially written in
 terms of the metric perturbations and
-then described in closed form, \iec terms of the field perturbations
+then described in closed form, \iec in terms of the field perturbations
 alone. In
 Section~\ref{sec:slowroll}, the second order equation is written in a slow roll
 approximation.
 % 
 Section~\ref{sec:observable-perts} describes the observable quantities that can be
-calculated from second order field perturbations. In Section~\ref{sec:disc-perts}, we
+calculated from second order field perturbations. In Section~\ref{sec:disc-perts} we
 discuss the results of this chapter.
 
 
@@ -217,7 +218,7 @@ scalar perturbations describing the shear.
 % 
 In addition to the first order transformation vector \eqref{eq:xidefn-intro}, there
 is
-now a second order tranformation vector
+now a second order transformation vector
 % 
 \begin{equation}
  \label{eq:xi2defn-perts}
@@ -245,10 +246,11 @@ $\wt{\psi_1} = \psi_1 -\H \alpha_1$, but at second order it becomes more complic
 \begin{equation}
  \label{eq:psi2transform-perts}
 \wt{\psi_2} = \psi_2 -\H\alpha_2 -\frac{1}{4}\mathcal{X}^k_{~k} +
- \frac{1}{4}\nabla^{-2} \mathcal{X}^{ij}_{~~ij}\,.
+ \frac{1}{4}\nabla^{-2} \mathcal{X}^{ij}_{~~ij}\,,
 \end{equation}
 % 
-The inverse
+where $\mathcal{X}_{ij}$ is given by
+% 
 \begin{align}
  \label{Xijdef}
 \mathcal{X}_{ij} \equiv 
@@ -270,8 +272,10 @@ The inverse
 +\xi_{1i,k}\xi_{1~~,j}^{~k}+\xi_{1j,k}\xi_{1~~,i}^{~k} \nonumber \\
 % 
 &+\xi_{1i}'\alpha_{1,j}+\xi_{1j}'\alpha_{1,i}
-\,.
+\,,
 \end{align}
+% 
+and $B_{1i}$ and $C_{1ij}$ were defined in \eq{eq:svt-intro}.
 
 % 
 We will work in the uniform curvature gauge where spatial 3-hypersurfaces are flat.
@@ -541,11 +545,11 @@ the framework of the slow roll approximation.
 This involves taking
 %
 \begin{align}
- \vp_{0}'' + \H \vp_{0}' &\simeq 0\,,\quad \\
-\frac{\left(\vp_{0}'\right)^2}{2a^2} &\ll \U\,,
+ &\vp_{0}'' + \H \vp_{0}' \simeq 0\,,\quad \\
+&\frac{\left(\vp_{0}'\right)^2}{2a^2} \ll \U\,,
 \end{align}
 %
-such that $Q=0$ and $\H^2 = (8\pi G/3) a^2 \U$. 
+such that $Q\simeq0$ and $\H^2 \simeq (8\pi G/3) a^2 \U$. 
 In Chapter~\ref{ch:introduction} the slow roll parameter $\varepsilon_H$ was
 defined in \eq{eq:epsilonHdefn-intro}. 
 In this chapter and the rest of Part~\ref{part:numerical}, a different slow 
@@ -565,7 +569,7 @@ will implement the slow roll approximation by keeping terms up to and including
 $\mathcal{O}(\bar{\varepsilon}^2_H)$ and terms which are
 $\mathcal{O}(\bar{\varepsilon}_H \eta_H)$. 
 Within this approximation the second order equation (\ref{eq:SOKG-real-num})
-simplifies dramatically, and with the $F$ term reduces to
+simplifies dramatically, and with the $F$ term included it reduces to
 %
 \begin{align}
  \label{eq:KG2-fourier-sr-num}
@@ -683,26 +687,26 @@ In Chapter~\ref{ch:introduction} the non-Gaussianity parameter $\fnlloc$ was def
 in terms of $\R$ in \eq{eq:fnllocdefn-intro}. Writing \eq{eq:fnllocdefn-intro} in
 Fourier space using \eq{eq:Rfulldefn-perts} implies that
 % 
-\begin{align}
- \R(\kvi) &= \R_1(\kvi)
+\begin{multline}
+ \R(\kvi) = \R_1(\kvi)
   + \frac{3}{5}\fnlloc \Bigg( \frac{1}{(2\pi)^3}\int \d q^3\, \R_1(\qvi)
-\R_1(\kvi-\qvi) \\ \nonumber
+\R_1(\kvi-\qvi) \\ 
 % 
-  &\quad- \left\langle \frac{1}{(2\pi)^3} \int \d q^3\, \R_1(\qvi)
+  \quad- \left\langle \frac{1}{(2\pi)^3} \int \d q^3\, \R_1(\qvi)
 \R_1(\kvi-\qvi) \right\rangle \Bigg) \,,
-\end{align}
+\end{multline}
 % 
 where $\langle \rangle$ denotes the expectation value.
 A good approximation of the local non-Gaussianity produced is then given by
 % 
-\begin{align}
+\begin{multline}
  \label{eq:fnlloc-perts}
-\fnlloc &= \frac{5}{6} \R_2(\kvi) \Bigg[ \frac{1}{(2\pi)^3}\int \d q^3\, \R_1(\qvi)
-\R_1(\kvi-\qvi) \\ \nonumber
+\fnlloc = \frac{5}{6} \R_2(\kvi) \Bigg[ \frac{1}{(2\pi)^3}\int \d q^3\, \R_1(\qvi)
+\R_1(\kvi-\qvi) \\
 % 
-  &\quad- \left\langle \frac{1}{(2\pi)^3} \int \d q^3\, \R_1(\qvi)
+  \quad- \left\langle \frac{1}{(2\pi)^3} \int \d q^3\, \R_1(\qvi)
 \R_1(\kvi-\qvi) \right\rangle \Bigg]^{-1} \,.
-\end{align}
+\end{multline}
 % 
 Calculating $\dvp2$ and $\R_2$ therefore provides direct insight into the behaviour
 and
@@ -749,10 +753,10 @@ calculation described in the next chapter.
 Finding numerical solutions of \eq{eq:KG2-fourier-sr-num} is the first step towards
 solving the full equation \eqref{eq:SOKG-real-num} for a single field and
 ultimately the multi-field equation given in \Rref{Malik:2006ir}. Understanding
-cosmological perturbations beyond linear order is critical if higher order statisical
+cosmological perturbations beyond linear order is critical if higher order statistical
 effects are to be accurately calculated. Section~\ref{sec:observable-perts}
 outlined the connection between $\dvp2$ and observable quantities such as the
 comoving curvature perturbation and the non-Gaussianity of the perturbations. Going
-beyond single field slow roll models, non-linear effects become more important. In
+beyond single field, slow roll models, non-linear effects become more important. In
 Chapters~\ref{ch:numericalsystem} and \ref{ch:results} the first step is taken
 towards calculating higher order perturbations for these models.
