@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.61 2009/11/26 16:29:09 ith Exp $
+% $Id: multibrane.tex,v 1.62 2009/11/28 14:08:45 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.61 2009/11/26 16:29:09 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.62 2009/11/28 14:08:45 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -42,7 +42,7 @@ In these models, the bounds on $r$ can be relaxed
 if significant non-Gaussianities are generated.
 
 
-As reviewed in Section~\ref{sec:others-dbi} many alternative ways to relax these
+As reviewed in Section~\ref{sec:others-dbi}, many alternative ways to relax these
 bounds have been proposed, including
 models based upon multiple fields, the addition of
 angular momentum as another degree of freedom and using
@@ -70,10 +70,11 @@ with a subset being coincident and the remainder being widely separated.
 In Section~\ref{sec:multibranes-multi} we introduce the multi-brane
 model with $n$ coincident branes described in \Rref{thomasward}. We will
 consider two limiting cases of this model. The large $n$ case is similar in
-form to the original DBI model and we will show in
+form to the original DBI model, and we will show in
 Section~\ref{sec:twlargen-multi} that it can be constrained using the
-formalism derived in Chapter~\ref{ch:dbi}. In contrast, for a finite number of
-branes the effective action in the relativistic limit is shown to be in the
+formalism derived in Chapter~\ref{ch:dbi}. In contrast, the effective action in the
+relativistic limit for a finite number of
+branes is shown to be in the
 class of actions for which the bounds on $r$ can be relaxed.
 In Section~\ref{sec:finiten-multi} we find that
 such models 
@@ -97,7 +98,8 @@ the number of coincident branes is sufficiently small.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
 In Chapter~\ref{ch:dbi-intro} we described the standard DBI scenario, in
-which the kinetic function $P$ takes the form given in \eq{eq:Pdefn-dbiintro}:
+which the kinetic function $P(\vp, X)$ takes the form given in
+\eq{eq:Pdefn-dbiintro}:
 %  
 \begin{equation}
 \label{eq:DBIkinetic}
@@ -152,7 +154,8 @@ By substituting \eq{eq:defalpha} into the definition of $\fnleq$ in
 Recall that the definitions of $c_s^2$ and $\Lambda$ in \eqs{eq:defcs-dbiintro} and
 \eqref{eq:deflambda-dbiintro} are in terms of $P$ and its derivatives with respect
 to $X$. We can require that the magnitude of $\fnleq$ is large by considering
-scenarios in the limit where $c_s^2$ is small and $\Lambda$ is large or equivalently:
+scenarios in the limit where $c_s^2$ is small and $\Lambda$ is large, or
+equivalently:
 % To proceed, therefore, we consider 
 % scenarios that satisfy this condition in the limit where 
 % 
@@ -161,7 +164,7 @@ scenarios in the limit where $c_s^2$ is small and $\Lambda$ is large or equivale
 X^2 P_{,XXX} \gg XP_{,XX} \gg P_{,X} \,.
 \end{equation}
 % 
-Having taken this limit the constraint \eqref{eq:defalpha} reduces to the 
+Having taken this limit, the constraint \eqref{eq:defalpha} reduces to the 
 third-order, non-linear, partial differential equation
 % 
 \begin{equation}
@@ -169,12 +172,12 @@ third-order, non-linear, partial differential equation
 P^2_{,XX} = \frac{\alpha}{6} P_{,X} P_{,XXX} \,.
 \end{equation}
 % 
-Changing the dependent variable to $Q \equiv P_{,XX}/P_{,X}$ 
+Changing the dependent variable to $\Upsilon \equiv P_{,XX}/P_{,X}$ 
 reduces \eq{eq:pde-multi} to
 %  
 \begin{equation}
 \label{eq:Qdefn-multi}
-\alpha Q_{,X} = (6-\alpha )Q^2 \,,
+\alpha \Upsilon_{,X} = (6-\alpha )\Upsilon^2 \,,
 \end{equation}
 % 
 and it is straightforward to integrate \eq{eq:Qdefn-multi} 
@@ -230,10 +233,11 @@ and this reduces to
 % 
 \begin{equation}
 \label{eq:genreduce-multi}
-\alpha Q_{,X} = (6-\alpha ) Q^2 + \frac{3(2-\alpha )}{2} \frac{Q}{X} \, ,
+\alpha \Upsilon_{,X} = (6-\alpha ) \Upsilon^2 + \frac{3(2-\alpha )}{2}
+\frac{\Upsilon}{X} \, ,
 \end{equation}
 % 
-where $Q \equiv P_{,XX}/P_{,X}$. 
+where $\Upsilon \equiv P_{,XX}/P_{,X}$. 
 \eq{eq:genreduce-multi} can be transformed into the 
 linear equation
 % 
@@ -242,7 +246,7 @@ linear equation
 U_{,X}+ \frac{3(2-\alpha )}{2\alpha} \frac{U}{X} = \frac{\alpha -6}{\alpha}
 \end{equation}
 % 
-after the change of variables $U \equiv 1/Q$
+after the change of variables $U \equiv 1/\Upsilon$
 and the general solution to \eq{eq:lineargen-multi} is given by
 %  
 \begin{equation}
@@ -372,7 +376,7 @@ namely those associated with multiple coincident branes.
 More specifically, if the branes are
 spatially separated, the effective action is algebraically equivalent 
 to that of a single brane. It will therefore not satisfy the 
-bound on $l$ \footnote{In this discussion, we are ignoring 
+bound on $l$\footnote{In this discussion, we are ignoring 
 the non-trivial backreaction of these branes on the background, and therefore 
 one should be careful about the range of validity of the effective action.}. 
 In the remainder of this chapter we will examine the case of $n$ coincident
@@ -400,11 +404,11 @@ results in a kinetic function satisfying $l \le 1/2$.
 
 We have seen how the form of the kinetic function
 $P$ can significantly change the
-strength of the bound in \eq{eq:LHbound} on the tensor-scalar ratio, depending
+strength of the bound \eqref{eq:LHbound} on the tensor-scalar ratio, depending
 on its explicit
 form. One model in which a suitable form for 
 $P$ is realised is the multiple coincident
-brane model as outlined by Thomas and Ward in \Rref{thomasward}.
+brane model as outlined by Thomas \& Ward in \Rref{thomasward}.
 In this model, the flux annihilation process 
 generates $n$ coincident branes that are initially located at the 
 bottom of a throat region. The dynamics of this configuration
@@ -418,8 +422,8 @@ fuzzy nature of the geometry.
 % literature\footnote{There is also a proposal by Tseytlin \cite{Tseytlin}
 % for the non-Abelian theory of coincident D-branes.} \cite{myers1, myers2}. 
 In general the open string degrees of freedom for $n$ coincident branes 
-combine to fill out representations of $U(n)$ (as opposed to $U(1)^n$ 
-in the case of separated branes). This introduces a non-Abelian 
+combine to fill out representations of $U(n)$, as opposed to $U(1)^n$ 
+in the case of separated branes. This introduces a non-Abelian 
 structure into the theory. In the single brane case, the fluctuations of the 
 brane are characterised by induced scalar fields on the world-volume. 
 However, for multiple branes
@@ -468,7 +472,7 @@ permutations})\,.
 For a large number of branes, $n \gg 1$, the symmetric trace can be
 approximated with a trace, 
 which results in the usual DBI action multiplied by a potential term (as
-described in \cite{thomasward, Kachru:2002gs}). 
+described in Refs.~\cite{thomasward, Kachru:2002gs}). 
 However for finite $n$, the symmetrisation becomes more important and it
 is essential to have some means of performing this operation. A prescription for
 treating the symmetric trace at finite $n$ was proposed
@@ -561,7 +565,7 @@ Chapter~\ref{ch:dbi} can be relaxed.
 Comparison with \eq{eq:genaction-dbi} 
 implies that $f_1f_2 =2nW$ and $f_2=2/(T_3h^4)$. Hence, 
 the new features of this model relative to the standard single-brane 
-scenario are parametrized in terms of the fuzzy potential $W (\varphi )$. 
+scenario are parametrised in terms of the fuzzy potential $W (\varphi )$. 
 This configuration is conjectured to be dual to 
 a ${\rm D5}$-brane which is wrapped around a two-cycle 
 of the throat \cite{dual1,dual2,dual3}. 
@@ -572,7 +576,7 @@ relaxing the gravitational wave constraints\footnote{Note that
 the case $n \gg 1$ and
 $W \sim 1$ will not significantly relax the BM bound, 
 since we require $n \ll N$ for backreaction effects to be negligible.}. 
-The generalized BM bound (\ref{eq:f2bound}) may now be expressed as 
+The generalised BM bound (\ref{eq:f2bound}) may now be expressed as 
 a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales: 
 % 
 \begin{equation}
@@ -677,7 +681,7 @@ h_{\rm tip} = \exp \left( - \frac{2\pi K}{3Mg_s} \right) \,.
 % 
 % and $K,M \in {\rm \bf Z^+}$ are the units of flux associated 
 % with the NS-NS and R-R three-forms, respectively, such that $N=MK$.
-In this case, the generalized BM bound (\ref{eq:warptorelax}) becomes
+In this case, the generalised BM bound (\ref{eq:warptorelax}) becomes
 %  
 \begin{equation}
 \label{eq:loglimit-dbi}
@@ -694,7 +698,7 @@ unity) for the supergravity approximation to be reliable.
 Substituting this requirement into expression (\ref{eq:loglimit-dbi}) 
 results in a necessary (but not sufficient) condition 
 on the ${\rm D3}$-brane charge for the 
-generalized BM bound to be satisfied:
+generalised BM bound to be satisfied:
 %  
 \begin{equation}
 \label{eq:Nlowerlimit-dbi}
@@ -723,7 +727,7 @@ which becomes $N \, \gsim \, 10^2$ for $1-n_s \simeq 0.05$ and $-\fnleq>5$.
 
 In general, however, the $K$ and $M$ units of flux are not independent. 
 F-theory compactification on Calabi-Yau four-folds
-provides a geometric way of parametrizing  
+provides a geometric way of parametrising  
 type IIB string compactifications
 \cite{witten1,witten2,witten3,sethi,gkp,klemm}. 
 Global tadpole cancellation constrains the topology of the four-fold
@@ -750,12 +754,12 @@ It is known that the Euler number for four-folds
 corresponding to hypersurfaces in weighted projective spaces
 can be as high as $\chi \le 1,820,448$ \cite{klemm},
 so there are many compactifications that could 
-in principle satisfy the generalized BM bound.
+in principle satisfy the generalised BM bound.
 On the other hand, the above limit on the Euler characteristic 
 does allow us to gain some insight into the 
 topology of the extra dimensions, since compactifications 
 which result in a small Euler characteristic would be  
-incompatible with the generalized BM bound. 
+incompatible with the generalised BM bound. 
 
 % 
 % 
@@ -777,8 +781,8 @@ incompatible with the generalized BM bound.
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 The coincident brane model outlined in Section~\ref{sec:multibranes-multi}
-takes a significantly different form if instead of assuming a large number of
-coincident branes there are now only a small finite number. The prescription for
+takes a significantly different form if, instead of assuming a large number of
+coincident branes, there are now only a small finite number. The prescription for
 the symmetrised trace given in Eqs.~\eqref{eq:str-even-multi} and
 \eqref{eq:str-odd-multi} must be used, where $\rho$ is determined from
 \eq{eq:finiten-rho-multi}. 
@@ -945,12 +949,15 @@ difficult to constrain this model when $N\gg n$.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 In the last section we introduced the multi-coincident brane model in the limit
 of a finite number of branes. In this section we will consider this model in
-the context of the class of actions derived in Section~\ref{sec:relaxing-multi}
+the context of the class of actions derived in Section~\ref{sec:relaxing-multi},
 and show that current observational data can strongly constrain the ability of
 this model to produce an observable tensor signal.
 
 The last term appearing in the summation of $P_n$ in \eq{eq:combinedPn-multi}
-is $P_2[(n-1)^2Z,$ $(n-1)^2Y]$. 
+is 
+\begin{equation}
+P_n^{\mathrm{last}} = P_2\left[(n-1)^2Z, (n-1)^2Y\right]\,.
+\end{equation} 
 This 
 means that for all $n$, this term can be expressed in the form 
 % 
@@ -964,7 +971,7 @@ P_n^\mathrm{last} = -2T_3 \left\{ \frac{h^4 \left[ 1+2(n-1)^2Y
 % 
 
 
-Inspection of Eqs.~\eqref{eq:2brane}-\eqref{eq:combinedPn-multi} implies that 
+Inspection of Eqs.~\eqref{eq:2brane}--\eqref{eq:combinedPn-multi} implies that 
 the relativistic limit is realised for any finite number of branes when 
 $(n-1)^2 \XR \rightarrow 1$. In this case, the dominant contribution 
 to the summations appearing in \eq{eq:combinedPn-multi}
@@ -1063,7 +1070,7 @@ f_1 (\varphi) = -2T_3 h^4 \sqrt{1+(n-1)^2Y} , \qquad
 f_2 (\varphi) = \frac{2}{T_3 h^4} \,.
 \end{equation}
 % 
-We may therefore immediately conclude from \eq{eq:consequence4-multi} that
+We may, therefore, immediately conclude from \eq{eq:consequence4-multi} that
 $\fnleq
 \simeq -0.3/c_s^2$. Moreover, since $\beta \simeq 0.9$ in this scenario, 
 Eqs.~\eqref{eq:consequence-multi} and \eqref{eq:consequence3-multi} reduce to  
@@ -1087,7 +1094,7 @@ that
 \frac{1}{\fnleq}\,.
 \end{equation}
 % 
-Substituting the tensor-scalar ratio (\ref{eq:rdefn-dbiintro}) into  
+Substituting the tensor-scalar ratio into  
 \eq{eq:usefulPs-multi} then results in a constraint on the magnitude of 
 the warp factor during observable inflation:
 %  
@@ -1161,7 +1168,7 @@ r_* < 5 \times 10^{-4} \, .
 
 This limit is below the sensitivity of the Planck satellite 
 $(r \gsim 0.02 )$ \cite{planck}. On the other hand, 
-the projected sensitivity of future CMB polarization experiments 
+the projected sensitivity of future CMB polarisation experiments 
 indicates that a background of primordial 
 gravitational waves with $r_* \gsim 10^{-4}$ 
 should be observable \cite{songknox,vpj, Baumann:2008aq}. In view of this, 
@@ -1181,7 +1188,7 @@ second inequality. We may deduce, therefore, that
 since we require $n \ge 2$ for consistency, a detectable tensor 
 signal will require $-\fnleq >70$. This implies that an observation of 
 the tensors should also be 
-accompanied by a sufficiently large -- and detectable -- non-Gaussianity. 
+accompanied by a sufficiently large --- and detectable --- non-Gaussianity. 
 In other words, this class of models could  
 be ruled out if tensors are observed in the absence of any
 non-Gaussianity. On the other hand, the current 
@@ -1205,7 +1212,7 @@ volume of the Einstein manifold $X_5$ will also weaken the upper limit.
 
 Let us re-iterate that this limit on $n$ is well within the 
 regime of validity for the theory, which we have argued is 
-self-consistent for $n<10$. Moreover since the constraint (\ref{eq:nlimit-multi})
+self-consistent for $n<10$. Moreover, since the constraint (\ref{eq:nlimit-multi})
 arises using the absolute maximal bound on the known 
 Euler characteristics, it suggests that in realistic scenarios $n$ will 
 always be much smaller than this. Indeed, one could argue that 
@@ -1273,7 +1280,7 @@ $\Neff \lesssim 60$. Nevertheless, if $N \ll 75852$, the bound
 $\Neff \gg 60$.  
 
 
-Finally, it should be emphasized that the derivation of the bound in
+Finally, it should be emphasised that the derivation of the bound in
 \eq{eq:LHbound} 
 underestimates the Planck mass by assuming that 
 the volume of the throat is much smaller 
@@ -1317,7 +1324,7 @@ multi-brane configurations.
 
 In this chapter we have identified a phenomenological class of 
 effective actions for which the constraints 
-on $r$ are relaxed if significant (and detectable) 
+on $r$ are relaxed, if significant (and detectable) 
 non-Gaussian curvature perturbations are generated during inflation. 
 We have provided approximate and exact derivations of this class of models which coincide
 in the relativistic limit. It would be interesting to 
@@ -1325,17 +1332,17 @@ investigate whether the effective action (\ref{eq:gensoln-multi}) with values
 of $l \ne - 1/2$ arises in string-inspired settings or elsewhere.
 
 In Section~\ref{sec:multibranes-multi} we introduced the coincident $n$-brane
-model of Thomas and Ward \cite{thomasward}. We examined the predictions of this
+model of Thomas \& Ward \cite{thomasward}. We examined the predictions of this
 model in two limits, arbitrarily large $n$ and small finite $n$. The large $n$
 model
 is similar to the single brane case. Using the results of
-Section~\ref{sec:relaxing-dbi} we showed that it is strongly
+Section~\ref{sec:relaxing-dbi}, we showed that it is strongly
 constrained by current observations.
 
 The finite $n$ model is of more theoretical interest as it exhibits the
 non-Abelian nature of the scenario. In \Rref{hltw} a recursive approach was
 derived to calculate the pressure and energy densities for $n>2$ models using
-the $n=2$ results. In the relativistic limit these finite $n$ models are
+the $n=2$ results. In the relativistic limit, these finite $n$ models are
 included in the class of actions derived in Section~\ref{sec:relaxing-multi}
 which relax the bounds on $r$. The backreaction of these models can also be
 kept well under control.
@@ -1352,7 +1359,7 @@ if the number of coincident branes is either $2$~or~$3$.
 This is consistent with known F-theory configurations and 
 current WMAP5 limits on the non-Gaussianity. Furthermore, 
 we found that the level of non-Gaussianity must satisfy $-\fnleq 
-\gsim 70$ if such configurations are to generate a detectable tensor 
+\gtrsim 70$ if such configurations are to generate a detectable tensor 
 signal. This is well within the projected sensitivity 
 of the Planck satellite \cite{planck}.   
 
@@ -1369,7 +1376,6 @@ provide strong motivation for considering the cosmological consequences
 of these multi-brane configurations when specific choices for the 
 inflaton potential are made. In particular, it would be interesting 
 to employ the techniques developed in
-\cite{bean,Peiris:2007gz,Lorenz:2007ze,Bean:2007eh,Bean:2008ga} 
 to identify the regions of parameter space that are consistent 
 with current cosmological observations.  
 
