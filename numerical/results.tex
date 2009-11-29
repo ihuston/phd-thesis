@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % results.tex - Ian Huston
-% $Id: results.tex,v 1.32 2009/11/26 16:53:40 ith Exp $
+% $Id: results.tex,v 1.33 2009/11/29 14:03:21 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.32 2009/11/26 16:53:40 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: results.tex,v 1.33 2009/11/29 14:03:21 ith Exp $}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -24,9 +24,9 @@
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-The main result of Part~\ref{part:numerical} of this work is the numerical
+The main result of Part~\ref{part:numerical} of this thesis is the numerical
 integration of
-the closed Klein-Gordon equation of motion for second order scalar field
+the Klein-Gordon equation of motion for second order scalar field
 perturbations, \eq{eq:KG2-fourier-sr-num}. The slow
 roll approximation of the source term for second order perturbations was employed,
 but the complete versions of the evolution equations were used for the
@@ -105,17 +105,18 @@ in Section~\ref{sec:disc-num} we discuss some of the consequences of our results
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-At first order the solutions obtained agree with previous work in
+At first order the solutions obtained for the quadratic potential agree with previous
+work in
 Refs.~\cite{Salopek:1988qh, Martin:2006rs, Ringeval:2007am}. Oscillations
 are damped until horizon crossing (when $k=aH$) after which the
 curvature perturbation becomes conserved. Figure~\ref{fig:dp1} shows the evolution of
-the real and imaginary parts of the first order perturbations from
-when the initial conditions are set at $k/aH=50$ to just after horizon
+the real and imaginary parts of the first order perturbation from
+when the initial conditions are set, at $k/aH=50$, to just after horizon
 crossing. The horizontal axis for most of the following figures parametrises the
 number of e-foldings remaining until the end of inflation ($\N_\mathrm{end}-\N$),
 instead
 of the time variable $\N$ employed in the calculations.
-%
+
 % 
 \begin{figure}[htbp]
  \centering
@@ -127,9 +128,6 @@ dashed) parts of the perturbation are shown for the scale $\kwmap$.}
 \label{fig:dp1}
 \end{figure}
 % 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-
 
 Figure~\ref{fig:dp2realimag} shows the evolution of the second
 order perturbations for the scale $\kwmap$. As mentioned above, the
@@ -220,7 +218,7 @@ values in the $K_1$ range, including the WMAP
 pivot scale, $\kwmap=5.25\e{-60}\Mpl$ (middle green line). As the value of $k$
 increases or equivalently the scale decreases, the magnitude of the source term
 decreases. The calculation of the source term for each $k$ value starts from the
-timestep at which the corresponding first order perturbation is initialised, \iec
+time step at which the corresponding first order perturbation is initialised, \iec
 when $k/aH = 50$.
 }
 \label{fig:src-3ks}
@@ -248,13 +246,16 @@ magnitude during the early stages of the simulation.
 % 
 Figure~\ref{fig:s-over-t-3ks}
 shows a comparison of $|S|/|T|$ for three different $k$ values. 
-The magnitude of $S$ is closer to that of the rest of the terms in the ODE for the
+The magnitude of $S$ is closer to that of the rest of the terms for the
 larger $k$ mode.
 A priori, the range of $k$ modes where $S$ will be large for a particular chosen
 potential is not known. However, once the relevant values of $k$ have been
 determined, it may be possible to significantly reduce the time
 required for the simulation by restricting the calculation of $S$ to those regions
-where it is important.
+where it is important. Figure~\ref{fig:s-over-t-3ks} shows that it is not possible
+to arbitrarily ignore the contribution of $S$ either inside or outside the horizon.
+The full calculation on sub- and super-horizon scales is important for the evolution
+of the second order perturbation at different scales.
 %
 \begin{figure}[htbp]
 \centering
@@ -287,11 +288,11 @@ important to calculate the source term over the full range of e-foldings.}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-In Figure~\ref{fig:src-kinit} the value of $|S|$ at the start of the evolution
-of $\dvp2$ for each $k$ mode is shown. The magnitude of the source term is much
+In Figure~\ref{fig:src-kinit} the value of $|S|$ at the initialisation time
+for each $k$ mode is shown. The initial magnitude of the source term is much
 smaller for larger values of $k$ (smaller scales). 
 Because the smaller $k$ modes begin their evolution earlier, the relative difference
-in $|S|$ is not as pronounced when measured at a single timestep (see for example
+in $|S|$ is not as pronounced when measured at a single time step (see for example
 Figure~\ref{fig:src-3ks}).
 It should also be remembered that the magnitude of the other terms in the second
 order ODE is small for larger $k$ modes as shown by the ratio $|S|/|T|$ in
@@ -308,8 +309,8 @@ horizon. The results are for the range $K_1$.}
 \end{figure}
 % 
 
-The source term for all $k$ modes can also be compared for different timesteps. In
-Figure~\ref{fig:src-3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings
+The source term can also be compared at different time steps over all the $k$ values.
+In Figure~\ref{fig:src-3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings
 before the end of
 inflation when $\dvp1$ has been initialised for only the very smallest $k$
 modes. The middle green
@@ -322,7 +323,7 @@ inflation.
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_3ns-large}
 \caption[Source Term at Three Different Times]{The absolute magnitude of the source 
-term for all $k$ values in the range $K_1$ at three different timesteps. The upper
+term for all $k$ values in the range $K_1$ at three different time steps. The upper
 blue line shows $|S|$ at approximately $69$ e-foldings before the end of inflation
 when
 only the largest modes have been initialised. The middle green line shows $|S|$ when
@@ -345,8 +346,9 @@ exited the horizon.}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-All the results quoted so far are for the $V(\vp)=\msqphisq$ model. In this section
-the results for all four potentials will be compared using the $K_2$ range for $k$. 
+All the results quoted so far have been for the quadratic potential. In this
+section
+the results for all four potentials will be compared using the $K_2$ range. 
 % 
 % 
 \begin{figure}[htbp]
@@ -361,7 +363,8 @@ model has a blue spectrum ($n_s>1$).}
 \label{fig:cmp-Pr}
 \end{figure}
 % 
-Figure~\ref{fig:cmp-Pr} shows the power spectrum of curvature perturbations, $\Pr$, for each
+Figure~\ref{fig:cmp-Pr} shows the power spectrum of first order curvature
+perturbations, $\mathcal{P}^2_{\mathcal{R}_1}$, for each
 potential. The $\msqphisq$, $\lambdaphifour$ and $\phitwooverthree$ models all
 clearly have
 a red spectrum with $n_s <1$. On the other hand, the $\msqphisqwithV$ model has
@@ -531,11 +534,11 @@ The main equation
 becomes
 \begin{multline}
  \label{eq:fullso-res}
-\ddN{\dvp2} + \left(3 + \frac{\dN{H}}{H}\right) \dN{\dvp2} +
-\left(\frac{k}{aH}\right)^2 \dvp2 \\
+\ddN{\dvp2}(\kvi) + \left(3 + \frac{\dN{H}}{H}\right) \dN{\dvp2}(\kvi) +
+\left(\frac{k}{aH}\right)^2 \dvp2(\kvi) \\
 % 
 + \frac{1}{H^2}\left[ \Upp + 8\pi G\left(2\dN{\vp_0}\Uphi + 8\pi G
-\left(\dN{\vp_0}\right)^2 \U \right)\right] 
+\left(\dN{\vp_0}\right)^2 \U \right)\right] \dvp2(\kvi)
 % 
 + S_\mathrm{full}(\kvi) = 0\,,
 \end{multline}
@@ -669,12 +672,12 @@ to write the equations in vector form. The following definitions will be used:
 		\chi_0
                \end{pmatrix} \,, &
 % 
- \bm{\dvp1} &= \begin{pmatrix}
+ &\bm{\dvp1} = \begin{pmatrix}
                 \dvp1 \\
 		\delta\chi_1
                \end{pmatrix} \,, &
 % 
- \bm{\dvp2} &= \begin{pmatrix}
+ &\bm{\dvp2} = \begin{pmatrix}
                 \dvp2 \\
 		\delta\chi_2
                \end{pmatrix} \,, \\
@@ -684,12 +687,12 @@ to write the equations in vector form. The following definitions will be used:
 	     V_{,\chi} 
             \end{pmatrix} \,, &
 % 
- \bm{V_2} &= \begin{pmatrix}
+ &\bm{V_2} = \begin{pmatrix}
              \Upp & V_{,\vp\chi} \\
 	     V_{,\chi\vp} & V_{,\chi\chi}
             \end{pmatrix} \,, &
 % 
-\bm{V_3} &= \begin{pmatrix}
+&\bm{V_3} = \begin{pmatrix}
             \Uppp & V_{,\vp\vp\chi} \\
 	    V_{,\vp\vp\chi} & V_{,\vp\chi\chi} \\
 	    V_{,\vp\chi\chi} & V_{,\chi\chi\chi}
@@ -801,13 +804,13 @@ are given by
 \begin{align}
 \label{eq:AtoD-vectors-res}
  \A_\vp(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \dvp1(\kvi-\qvi) \d\theta \,,
-\nonumber \\
+\nonumber \\ \displaybreak
  \A_\chi(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \delta \chi_1(\kvi-\qvi) \d\theta \,,
-\nonumber\\
+\nonumber\\ \displaybreak
  \bm{\A}(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \bm{\dvp1}(\kvi-\qvi) \d\theta \,,
-\nonumber\\
+\nonumber\\ \displaybreak
  \bm{\B}(\kvi,\qvi) &= \int_0^\pi \cos(\theta)\sin(\theta) \bm{\dvp1}(\kvi-\qvi)
-\d\theta \,,\nonumber\\
+\d\theta \,,\nonumber\\ \displaybreak
  \bm{\C}(\kvi,\qvi) &= \int_0^\pi \sin(\theta) \bm{\dvp1}'(\kvi-\qvi) \d\theta \,,
 \nonumber\\
  \bm{\D}(\kvi,\qvi) &= \int_0^\pi \cos(\theta) \sin(\theta) \bm{\dvp1}'(\kvi-\qvi)
@@ -852,8 +855,7 @@ This expression for $\bm{S}$ reduces to \eq{eq:KG2-src-sr-aterms} when only one
 field is considered. At least in the slow roll case, the multi-field source term
 equation is not considerably more complex than the single field one. The extra
 numerical complexity arises from the calculation of the new $\theta$
-dependent terms in \eq{eq:AtoD-vectors-res} and the increased memory cost this
-involves. 
+dependent terms in \eq{eq:AtoD-vectors-res}. 
 
 
 
@@ -872,8 +874,8 @@ involves.
 
 Part~\ref{part:numerical} of this thesis has described the numerical
 solution of the evolution equations for second order scalar perturbations. The
-closed form of the Klein-Gordon equation \eqref{eq:KG2-fourier-sr-num} has ben
-employed for the first time. We have hown that direct
+closed form of the Klein-Gordon equation \eqref{eq:KG2-fourier-sr-num} has been
+employed for the first time. We have shown that direct
 calculation of the field perturbations beyond
 first order using perturbation theory is readily achievable, although
 it is non-trivial.
@@ -904,15 +906,15 @@ We have seen explicitly that the second order calculations for the chosen
 potentials can be completed once the cut-off for $\kmin$ is
 imposed. As expected for these potentials the magnitude of second order perturbations
 is extremely
-suppressed in the slowly rollng regime, in comparison with the first order amplitude.
+suppressed in the slowly rolling regime, in comparison with the first order
+amplitude.
 We have also shown that the
 evolution of the source term during the inflationary regime can be
 readily calculated.
 
 
 By computing the perturbations to second order, we have direct access
-to the non-Gaussianity of $\dvp{}$.  This is useful for the toy models
-discussed above (where $\fnl\simeq0$). When used to investigate models
+to the non-Gaussianity of $\dvp{}$. When used to investigate models
 that predict a large non-linearity parameter, $\fnl$, this technique
 could yield greater insight into the formation and development of the
 non-Gaussian contributions by studying the effects of the different
@@ -929,9 +931,9 @@ therefore eventually allow a full numerical calculation of $\fnl$ to be made.
 In summary, we have demonstrated that numerically solving the closed
 Klein-Gordon equation for second order perturbations is possible. The slow roll
 version of the source term was used in the calculation, but
-as described in Section~\ref{sec:next-res}, the extention of the system to include
+as described in Section~\ref{sec:next-res}, the extension of the system to include
 the full source term is achievable. 
-The analytic and numerical solutions for one of the convolution terms were
+The analytic and numerical solutions for the convolution terms were
 compared directly and found to be in good agreement.
 The models used have been shown to have negligible second order
 perturbations in line with known analytic results. 
