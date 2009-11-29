@@ -1,9 +1,9 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % numerical.tex - Ian Huston
-% $Id: numerical.tex,v 1.52 2009/11/26 16:53:40 ith Exp $
+% $Id: numerical.tex,v 1.53 2009/11/29 12:44:59 ith Exp $
 % % % % % % % % % % % % % % % % % % % % % 
 % Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.52 2009/11/26 16:53:40 ith Exp $}
+\renewcommand{\CVSrevision}{\version$Id: numerical.tex,v 1.53 2009/11/29 12:44:59 ith Exp $}
 % \input{numerical/paper3}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -25,13 +25,14 @@
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-Our goal in Part~\ref{part:numerical} of this work is to show that, just as at first
+Our goal in Part~\ref{part:numerical} of this thesis is to show that, just as at
+first
 order, a direct numerical calculation of the second order perturbations of a
 scalar field system is achievable. 
 In this chapter the implementation of this system is outlined.
 The structure of the numerical
 system follows the work done at first order by Martin
-and Ringeval \cite{Martin:2006rs, Ringeval:2007am} and previously by
+\& Ringeval \cite{Martin:2006rs, Ringeval:2007am} and previously by
 Salopek \etal \cite{Salopek:1988qh}.
 
 
@@ -92,7 +93,7 @@ the initialisation of the variables.
 
 
 In Section~\ref{sec:impl-num} the numerical method is discussed. The calculation can
-be split into four stages, each of which is described in depth along with the
+be split into four stages, each of which is described in depth, along with the
 logistical constraints and software environment. The numerical code is tested in
 Section~\ref{sec:tests-num} by comparing the computed value with an analytic result
 where this is possible. The choice of parameters in the calculation is determined by
@@ -195,13 +196,13 @@ number of e-foldings \eqref{eq:nefolddefn-intro}. We employ
 %
 as our time variable instead of conformal time. This is measured from
 $a_{\mathrm{init}}$, the value of $a$ at the beginning of the
-simulation. We will use a dagger ($\dN{}$) to denote\footnotemark
-differentiation with respect to $\N$ 
+simulation. We will use a dagger\footnotemark\ ($\dN{}$) to denote differentiation
+with respect to $\N$.
 \footnotetext{This should not be confused
 with the use of $^\dagger$ as Hermitian conjugate, which is confined to
-Section~\ref{sec:perts-intro}.}.
+Section~\ref{sec:perts-intro}.}
 % 
-Derivatices with respect to conformal time, $\eta$, and coordinate time, $t$, are
+Derivatives with respect to conformal time, $\eta$, and coordinate time, $t$, are
 then given by
 %
 \begin{align}
@@ -219,7 +220,7 @@ of inflation has been determined.
 The value of $a$ at the end of inflation, $a_\mathrm{end}$, is calculated by
 connecting it with $a_0$ (see for example
 Eq.~(3.19) in \Rref{book:liddle} or Eq.~(7) in \Rref{Peiris:2008be}). 
-This is given by
+The relation between them is given by
 % 
 \begin{equation}
  \label{eq:connection-num}
@@ -277,8 +278,8 @@ on the form of the inflationary potential and the evolution of $H$.
 
 
 % 
-The background and first order equations written in terms of the new time
-variable $\N$ are
+The background and first order equations, written in terms of the new time
+variable $\N$, are
 %
 \begin{equation}
 \ddN{\vp_{0}} + \left(3 + \frac{\dN{H}}{H}\right)\dN{\vp_{0}} + \frac{\Uphi}{H^2} = 0
@@ -289,12 +290,12 @@ variable $\N$ are
 and
 % 
 \begin{multline}
-\ddN{\dvp1} + \left(3 + \frac{\dN{H}}{H}\right)\dN{\dvp1} 
+\ddN{\dvp1}(\kvi) + \left(3 + \frac{\dN{H}}{H}\right)\dN{\dvp1}(\kvi) 
  + \Bigg[ \left(\frac{k}{aH}\right)^2 + \frac{\Upp}{H^2} + \frac{8\pi G}{H^2}
  2\dN{\vp_{0}}\Uphi \\
 % 
 + \left.\left(\frac{8\pi G}{H}\right)^2
-\left(\dN{\vp_{0}}\right)^2\U \right]\dvp1 = 0\,, \label{eq:fontime}
+\left(\dN{\vp_{0}}\right)^2\U \right]\dvp1(\kvi) = 0\,, \label{eq:fontime}
 \end{multline}
 % 
 respectively.
@@ -380,8 +381,8 @@ $k$ values below $\kmin$.
 
 
 The value of $|\kvi-\qvi|$ will not in general coincide with the computed $k$
-values of $\dvp1$. We use linear interpolation between the neighbouring $k$'s to
-estimate the value of $\dvp1$ at these points. We leave to future work the
+values of $\dvp1$. We use linear interpolation between the neighbouring $k$ values to
+estimate $\dvp1$ at these points. We leave to future work the
 implementation of a more
 accurate and numerically more intensive interpolation scheme.
 
@@ -420,7 +421,7 @@ that $\mathcal{P}^2_{\mathcal{R}_1}(\kwmap)$ is in agreement with the WMAP5 valu
 % 
 \end{table}
 
-To demonstrate the numerical calculation four different single field slow roll
+To demonstrate the numerical calculation four different single field, slow roll
 potentials were chosen. These are not intended to represent an exhaustive selection,
 but they do exhibit an interesting variety of behaviours. The potentials used are:
 % 
@@ -470,7 +471,7 @@ $U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
 % 
 In Figures~\ref{fig:potentials-num} and \ref{fig:cmp-pot-num} the potentials are
 plotted over the course of their evolution. Throughout the rest of this
-chapter we will use $V(\vp)=\msqphisq$ to
+chapter we will use the quadratic model to
 demonstrate the calculation unless otherwise stated. In Chapter~\ref{ch:results} the
 results for each potential will be compared.
 
@@ -495,13 +496,15 @@ last 70 e-foldings of inflation.]{
 
 For each of the chosen potentials there is one free parameter that needs to be
 determined.
-We choose the parameters $m$, $\lambda$, $\sigma$ and $m_0$ so that $\Pr$ calculated
+We choose the parameters $m$, $\lambda$, $\sigma$ and $m_0$ so that
+$\mathcal{P}^2_{\mathcal{R}_1}$ calculated
 for each model is in agreement with the
 WMAP5 value at the pivot scale
 $\kwmap=0.002\Mpc^{-1} \simeq5.25\times10^{- 60} \Mpl$. 
-The dependence of $\Pr(\kwmap)$ on each of the parameters can be seen in
+The dependence of $\mathcal{P}^2_{\mathcal{R}_1}(\kwmap)$ on each of the parameters
+can be seen in
 Figure~\ref{fig:params-num}.
-Requiring $\Pr(\kwmap)=2.457\e{-9}$
+Requiring $\mathcal{P}^2_{\mathcal{R}_1}(\kwmap)=2.457\e{-9}$
 gives the values shown in Table~\ref{tab:params-num}. Here we have chosen the lower
 of the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
 
@@ -525,7 +528,7 @@ of the two possible values of $m_0$ shown in Figure~\ref{fig:mv0-params-num}.
 }
 \caption[Parameter Values for the Potentials]{Parameter values for the
 different potentials are chosen by requiring consistency with the WMAP5
-normalisation of the power spectrum.}
+normalisation of the first order power spectrum.}
 \label{fig:params-num}
 \end{figure}
 
@@ -623,7 +626,7 @@ Numerical and Scientific Python modules for their strong compiled array support
 \cite{scipy}. The core of the model computation is a
 Runge-Kutta fourth order method (see, for example, Eq.~(25.5.10) in
 \cite{abramowitz+stegun}).  Following
-Refs.~\cite{Martin:2006rs} and \cite{Ringeval:2007am} the numerical calculation
+Refs.~\cite{Martin:2006rs} and \cite{Ringeval:2007am}, the numerical calculation
 proceeds in four stages. The background equation (\ref{eq:bgntime}),
 rewritten as two first order equations, is
 evolved from the specified initial state until some end time required
@@ -708,9 +711,9 @@ Runge-Kutta method calculates half time steps for each required point.
 For example, if $y(x_n)$ is known and $y(x_{n+1})=y(x_n+h)$ is required
 (for step size $h$), the method will calculate the derivatives of $y$
 at $y(x_n), y(x_n +h/2)$ and $y(x_n + h)$. As we need to specify the
-source term at every calculated timestep, the requested timestep for
+source term at every calculated time step, the requested time step for
 the second order method must be twice that used at first order.  This decreases the
-accuracy of the method but does not require the use
+accuracy of the method, but does not require the use
 of splines and interpolation techniques to determine background and
 first order variables between time steps.
 
@@ -733,8 +736,8 @@ deal efficiently with large
 files, is very portable and allows for data analysis independent of the
 Python/Numpy programming environment.
 
-The full calculation contains around 8000 timesteps, making the source term
-calculation approximately 470 hours long. Each time step in independent of the
+The full calculation contains around 8000 time steps, making the source term
+calculation approximately 470 hours long. Each time step is independent of the
 others, however, so parallelisation of the system is straightforward. The results in
 Chapter~\ref{ch:results} were obtained on the Virgo Cluster in the Astronomy Unit at
 Queen Mary, University of London. The code was run on ten nodes, each containing
@@ -854,7 +857,7 @@ can be convolved analytically for certain smooth choices of $\dvp1(k)$.
 Taking $\dvp1(k)$ to be similar in form to the initial conditions
 (\ref{eq:foics}) gives $\dvp1(k)\propto 1/\sqrt{k}$ with proportionality constant
 $\alpha$.
-If $I_\A$ denotes the convolution of the $\A$ term:
+If $I_\A$ denotes the following integral of the $\A$ term:
 % 
 \begin{equation}
  I_\A (k) = \int \d q^3 \dvp1(\qvi) \dvp1(\kvi-\qvi) 
@@ -902,8 +905,8 @@ combinations of $k$ ranges and $N_\theta$. The relative error
 \end{equation}
 %
 is small for all the tested cases, but certain combinations of
-parameters turn out to be more accurate than others. The relative error of
-all the following results is not affected by the choice of $\alpha$ so
+parameters turn out to be more accurate than others. The relative errors of
+all the following results are not affected by the choice of $\alpha$ so
 we will keep its numerical value fixed throughout as $2.7\e{57}$.
 
 \begin{figure}[htbp]
@@ -1091,7 +1094,7 @@ I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
 % 
 The relative errors between the analytic and calculated values for $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num} for the
-three final $k$ ranges with $\beta=10^{-62}$. The errors
+three final $k$ ranges, with $\beta=10^{-62}$. The errors
 for the $I_{\wt{\C}}$ and $I_{\wt{\D}}$ terms are very small, being of the order of
 $10^{-8}$ and $10^{-6}$, respectively. The relative error for the $I_\B$ term is
 larger, especially for small $k$ values. However, the error is still below $0.08\%$
@@ -1148,7 +1151,8 @@ time consuming part of the calculation.
 
 To demonstrate the numerical code, four different potentials have been chosen and
 these were described in Section~\ref{sec:pots-num}. One parameter for each
-potential was determined by comparing the calculated $\Pr$ with the WMAP5 value.
+potential was determined by comparing the calculated $\mathcal{P}^2_{\mathcal{R}_1}$
+with the WMAP5 value.
 
 In Section~\ref{sec:initconds-num} the initial conditions for the computed
 quantities were explained. Each $k$ mode is initialised well inside the horizon
@@ -1166,8 +1170,10 @@ inflation is then determined by the condition $\varepsilon_H=1$ and the scale fa
 calculated for this time. With this
 information the initialisation of the first order modes can be performed. In the
 second stage, the first order perturbation equations are solved. These results are
-used in the third stage to calculate the source term \eq{eq:KG2-source-ntime} at each
-time for each $k$. Finally, the second order perturbation equations are solved using
+used in the third stage to calculate the source term \eqref{eq:KG2-source-ntime} at
+each
+time step and for each $k$ value. Finally, the second order perturbation equations
+are solved using
 the source term results.
 
 To test the source term calculation the numerical results were compared to 
