@@ -504,7 +504,7 @@ $SU(2)$ sphere. In the large $n$ limit, this is given by
 \hat{C} \,,
 \end{equation}
 % 
-where $\lambda \equiv 2\pi l_s^2 = 2\pi m_s^{-2}$, 
+where $\lambda \equiv 2\pi l_s^2 = 2\pi \ms^{-2}$, 
 whereas for finite $n$, it becomes
 % 
 \begin{equation}
@@ -554,7 +554,7 @@ W (\varphi ) \equiv \sqrt{1+ C^{-1}h^{-4}(\varphi ) \varphi^4}
 \end{equation}
 % 
 defines the so-called `fuzzy' potential, 
-$C = \pi^2 \hat{C}T_3^2/m_s^4$ is a model-dependent constant and 
+$C = \pi^2 \hat{C}T_3^2/\ms^4$ is a model-dependent constant and 
 $\hat{C} \simeq n^2$ in the large $n$ limit. 
 
 The kinetic term \eqref{eq:largeP-multi} is clearly of the same form as the
@@ -604,7 +604,7 @@ value of the inflaton during observable inflation:
 where $\lambda \equiv \pi N/(2 \mathrm{Vol}(X_5))$. 
 However, non-perturbative string effects are expected to become 
 important below a cutoff scale, $\varphi_{\rm cut} = 
-h_{\rm cut} \lambda^{1/4} m_s$, where $h_{\rm cut}$ is the value of the 
+h_{\rm cut} \lambda^{1/4} \ms$, where $h_{\rm cut}$ is the value of the 
 warp factor at that scale. For consistency, therefore, one requires 
 $\varphi_*>\varphi_{\rm cut}$, which implies an upper limit on the 
 ${\rm D3}$-brane charge: 
@@ -612,10 +612,10 @@ ${\rm D3}$-brane charge:
 \begin{equation}
 \label{eq:Nlimit-dbi}
 N< \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
-\left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,.
+\left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,.
 \end{equation}
 % 
-Assuming the typical values $m_s \sim 10^{-2}\Mpl$, 
+Assuming the typical values $\ms \sim 10^{-2}\Mpl$, 
 $\Delta \N_* \simeq 4$ and 
 $h_{\rm cut} \sim 10^{-2}$ implies
 %   
@@ -632,7 +632,7 @@ is a constant and the condition that $W \gg 1$ becomes
 % 
 \begin{equation}
 \label{eq:Chatlimit}
-\hat{C} \ll \frac{4\pi^2g_sN}{\mathrm{Vol}(X_5)} \,.
+\hat{C} \ll \frac{4\pi^2\gs N}{\mathrm{Vol}(X_5)} \,.
 \end{equation}
 % 
 Hence, combining inequalities 
@@ -642,11 +642,11 @@ Hence, combining inequalities
 \label{eq:nlimit-dbi}
 \hat{C} \ll 
 \frac{32 \pi^4 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
-\frac{g_s}{\mathrm{Vol} (X_5) }
-\left( \frac{\Mpl}{h_{\rm cut}m_s} \right)^4  \,,
+\frac{\gs}{\mathrm{Vol} (X_5) }
+\left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,,
 \end{equation}
 % 
-and specifying $g_s \sim 10^{-2}$ and 
+and specifying $\gs \sim 10^{-2}$ and 
 $\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
 % 
 \begin{equation}
@@ -676,7 +676,7 @@ the warp factor asymptotes to a constant value
 % 
 \begin{equation}
 \label{eq:KStip-dbi}
-h_{\rm tip} = \exp \left( - \frac{2\pi K}{3Mg_s} \right) \,.
+h_{\rm tip} = \exp \left( - \frac{2\pi K}{3M\gs} \right) \,.
 \end{equation}
 % 
 % and $K,M \in {\rm \bf Z^+}$ are the units of flux associated 
@@ -685,14 +685,14 @@ In this case, the generalised BM bound (\ref{eq:warptorelax}) becomes
 %  
 \begin{equation}
 \label{eq:loglimit-dbi}
-\frac{8\pi K}{3Mg_s} -\ln N > 4 \ln \left( \frac{m_s}{g_s^{1/4}\Mpl} \right)
+\frac{8\pi K}{3M\gs} -\ln N > 4 \ln \left( \frac{\ms}{\gs^{1/4}\Mpl} \right)
 -\ln \left( 
 \frac{64\pi^5 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
 \right) \,.
 \end{equation}
 % 
 The radius of the three-sphere at the tip of the KS 
-throat is of the order $(g_sM)^{1/2}$ in string units 
+throat is of the order $(\gs M)^{1/2}$ in string units 
 and this must be large (and at the very least should exceed
 unity) for the supergravity approximation to be reliable. 
 Substituting this requirement into expression (\ref{eq:loglimit-dbi}) 
@@ -702,9 +702,9 @@ generalised BM bound to be satisfied:
 %  
 \begin{equation}
 \label{eq:Nlowerlimit-dbi}
-\frac{1}{N} \exp \left( \frac{8\pi g_s N}{3}  \right)
+\frac{1}{N} \exp \left( \frac{8\pi \gs N}{3}  \right)
 > \frac{\sqrt{-3\fnleq} ( \Delta \N_*)^2}{64\pi^5 
-(1-n_s)\Pr} \frac{1}{g_s} \left( \frac{m_s}{\Mpl} \right)^4 \,.
+(1-n_s)\Pr} \frac{1}{\gs} \left( \frac{\ms}{\Mpl} \right)^4 \,.
 \end{equation}
 % 
 
@@ -1123,12 +1123,12 @@ takes the constant value
 % 
 \begin{equation}
 \label{eq:YAds-multi}
-\YAdS \equiv \frac{4\pi^2 g_s N}{(n-1)^4 \Vol} \,.
+\YAdS \equiv \frac{4\pi^2 \gs N}{(n-1)^4 \Vol} \,.
 \end{equation}
 % 
 As before, we choose natural field-theoretic values for the volume, 
 $\Vol \simeq \pi^3$, and the string coupling, 
-$g_s \simeq 10^{-2}$, and further assume that 
+$\gs \simeq 10^{-2}$, and further assume that 
 $(n-1)^2 Y \gg 1$. 
 We again assume that the tensor-scalar ratio does not change significantly
 over the entire range of scales that are accessible to cosmological
@@ -1200,11 +1200,11 @@ unknown configurations with $N$ exceeding the bound (\ref{eq:Nlimit-multi}).
 
 
 In the above analysis we assumed that the string coupling 
-took the value $g_s \simeq 10^{-2}$. For the $AdS_5 \times X_5$ throat, 
-the bound (\ref{eq:actualLH-multi}) depends proportionally on $g_s$ and can 
+took the value $\gs \simeq 10^{-2}$. For the $AdS_5 \times X_5$ throat, 
+the bound (\ref{eq:actualLH-multi}) depends proportionally on $\gs$ and can 
 therefore be weakened by allowing for larger values of the string coupling. 
 For example, increasing this parameter by a factor of $4$ 
-to $g_s \simeq 0.04$ (so that it is still in the perturbative regime)
+to $\gs \simeq 0.04$ (so that it is still in the perturbative regime)
 relaxes the limit on the number of branes for the tensors to be detectable to 
 $n \le 5$. Similarly, considering a smaller value for the 
 volume of the Einstein manifold $X_5$ will also weaken the upper limit. 
@@ -1223,7 +1223,7 @@ likely to be valid over a large distribution of the flux landscape.
 We must also ensure that our approximation $(n-1)^2Y \gg 1$ 
 is valid for consistency.  
 For the parameter values we have chosen this requires that 
-$g_s N \gg  (n-1)^2$ 
+$\gs N \gg  (n-1)^2$ 
 and this is satisfied if the condition \eqref{eq:nlimit-multi} 
 holds. Note also that we require $N \gg n$ for the supergravity 
 approximation to be under control and for backreaction effects to 
