@@ -1131,7 +1131,7 @@ kinetic function $P$ and its derivatives \cite{lidser1,lidser3}:
 % 
 \begin{align}
 \label{eq:defcs-dbiintro}
- c_s^2 &\equiv \frac{\PX}{E_{,X}} =  \frac{\PX}{\PX + 2X P_{,XX}} \,,
+ \cs^2 &\equiv \frac{\PX}{E_{,X}} =  \frac{\PX}{\PX + 2X P_{,XX}} \,,
 \\
 \label{eq:deflambda-dbiintro}
 \Lambda &\equiv  \frac{X^2 P_{,XX} +
@@ -1139,42 +1139,42 @@ kinetic function $P$ and its derivatives \cite{lidser1,lidser3}:
 2X^2 P_{,XX}}\,.
 \end{align}
 % 
-The first parameter, $c_s$, is called the sound speed of the fluctuations
+The first parameter, $\cs$, is called the sound speed of the fluctuations
 in the inflaton field. This can be significantly less than unity for non-canonical
 actions, 
 in contrast to slow roll inflation driven by a canonical 
-field such that $c_s = P_{,X} =1$.
+field such that $\cs = P_{,X} =1$.
 % 
-Christopherson \& Malik showed in \Rref{Christopherson:2008ry} that $c_s$
+Christopherson \& Malik showed in \Rref{Christopherson:2008ry} that $\cs$
 is in fact the phase speed of the fluctuations and not the sound speed
 which is defined as $\dot{P}/\dot{E}$. However, in common with the rest of the
-literature, we will continue to use $c_s$ as defined in \eq{eq:defcs-dbiintro}. 
+literature, we will continue to use $\cs$ as defined in \eq{eq:defcs-dbiintro}. 
 
 The generation of quantum perturbations in the non-canonical case is similar to
-the canonical one, but now includes contributions from $c_s$. Letting
+the canonical one, but now includes contributions from $\cs$. Letting
 $u=a\dvp1$, the Mukhanov equation for the
 Fourier modes, \eq{eq:ueq-intro}, becomes
 \cite{gm}:
 % 
 \begin{equation}
- u''(\kvi) + \left[c_s^2 k^2 - \frac{z''}{z}\right] u(\kvi) = 0\,,
+ u''(\kvi) + \left[\cs^2 k^2 - \frac{z''}{z}\right] u(\kvi) = 0\,,
 \end{equation}
 % 
 where $z$ has been redefined as
 % 
 \begin{equation}
- z = \frac{a\sqrt{E+P}}{c_s H} = \frac{a\sqrt{2X\PX}}{c_s H} \,.
+ z = \frac{a\sqrt{E+P}}{\cs H} = \frac{a\sqrt{2X\PX}}{\cs H} \,.
 \end{equation}
 % 
 We quantise the $u$ modes using the Bunch-Davies vacuum as above and work with the
 amplitude $w(\kvi)$. Instead of considering whether modes are
 inside the comoving horizon, it is now important to distinguish between modes
-inside and outside the sound horizon, defined by $kc_s = aH$. Far inside the sound
-horizon, where $kc_s \gg aH$, the mode solution takes a similar asymptotic form to
+inside and outside the sound horizon, defined by $k\cs = aH$. Far inside the sound
+horizon, where $k\cs \gg aH$, the mode solution takes a similar asymptotic form to
 \eq{eq:subhsoln-intro}:
 % 
 \begin{equation}
- w(\kvi) = \frac{1}{\sqrt{2kc_s}} e^{-ikc_s \eta}\,.
+ w(\kvi) = \frac{1}{\sqrt{2k\cs}} e^{-ik\cs \eta}\,.
 \end{equation}
 
 
@@ -1185,7 +1185,7 @@ generated during inflation can be found and is given by
 % 
 \begin{equation} 
 \label{eq:Ps-dbiintro}
- \Pr = \frac{H^4}{8\pi^2 X}\frac{1}{c_s \PX} \,.
+ \Pr = \frac{H^4}{8\pi^2 X}\frac{1}{\cs \PX} \,.
 \end{equation}
 % 
 This expression is only valid after exit from the sound horizon. In contrast
@@ -1198,7 +1198,7 @@ The consistency relation \eqref{eq:consistency-intro} is now defined as
 % 
 \begin{equation}
 \label{eq:rdefn-dbiintro}
-  r = 16c_s \varepsilon_H = -8c_s n_T \,.
+  r = 16\cs \varepsilon_H = -8\cs n_T \,.
 \end{equation}
 % 
 Hence, a sound speed different to unity leads to a violation of the 
@@ -1302,7 +1302,7 @@ where the three momenta have equal magnitude, which corresponds to the
 equilateral triangle limit. Non-Gaussianity of this shape is chiefly produced
 by models with non-canonical kinetic terms as defined in
 Section~\ref{sec:noncanoninfl}. The equilateral non-Gaussianity parameter
-$\fnleq$ can be evaluated in terms of the sound speed $c_s$ and the
+$\fnleq$ can be evaluated in terms of the sound speed $\cs$ and the
 $\Lambda$ parameter defined in \eq{eq:deflambda-dbiintro}.
 The leading-order contribution to the
 non-linearity 
@@ -1310,8 +1310,8 @@ parameter is given by \cite{chenetal,lidser3}
 % 
 \begin{equation} 
 \label{eq:fnldefn-dbiintro}
- \fnl = -\frac{35}{108}\left(\frac{1}{c_s^2} -1 \right) +
-\frac{5}{81}\left( \frac{1}{c_s^2} -1 -2\Lambda \right) \,.
+ \fnl = -\frac{35}{108}\left(\frac{1}{\cs^2} -1 \right) +
+\frac{5}{81}\left( \frac{1}{\cs^2} -1 -2\Lambda \right) \,.
 \end{equation}
 %  
 Data from WMAP3 imposed the bound $|\fnl| < 300$ on this parameter
@@ -1357,8 +1357,8 @@ scale invariant red spectrum ($n_s<1$) with a low level of tensor signal. The ac
 current data is not yet good enough to meaningfully evaluate the slow roll consistency relation. 
 
 As well as the standard models, one can also construct inflationary models in which the action
-takes a non-canonical form. In these models the sound speed of scalar fluctuations, $c_s$, plays a
-pivotal role. The predictions for scalar perturbations are altered by a factor of $c_s$, as is the
+takes a non-canonical form. In these models the sound speed of scalar fluctuations, $\cs$, plays a
+pivotal role. The predictions for scalar perturbations are altered by a factor of $\cs$, as is the
 slow roll consistency relation. Non-canonical models also often exhibit strong non-linear effects
 which can be parametrised using the non-Gaussianity parameter $\fnl$. Canonical single field slow
 roll models do not predict large amounts of non-Gaussianity. 

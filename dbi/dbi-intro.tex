@@ -605,7 +605,7 @@ inflaton fluctuations. For the kinetic function in
 % 
 \begin{equation}
 \label{eq:csdefn-dbiintro}
-c_s = \frac{1}{P_{,X}} = \sqrt{1 -2T^{-1}X}  \,.
+\cs = \frac{1}{P_{,X}} = \sqrt{1 -2T^{-1}X}  \,.
 \end{equation}
 % 
 The condition that the sound speed be real 
@@ -630,8 +630,8 @@ end of inflation.
 
 The definitions of the slow roll parameters defined in
 Section~\ref{sec:slowroll-intro} 
-change when $c_s$ is not equal to unity and we
-will include a third parameter, $s$, which quantifies the rate of change of $c_s$.
+change when $\cs$ is not equal to unity and we
+will include a third parameter, $s$, which quantifies the rate of change of $\cs$.
 The inflationary dynamics during this phase can  
 be quantified in terms of these three parameters: 
 % 
@@ -643,11 +643,11 @@ be quantified in terms of these three parameters:
 \label{eq:defeta-dbiintro}
 \eta_H &\equiv  \frac{2\Mpl^2}{\gamma}\frac{H_{,\vp\vp}}{H} \,,\\
 \label{eq:defs-dbiintro}
-s &\equiv \frac{\dot{c_s}}{c_sH} 
+s &\equiv \frac{\dot{\cs}}{\cs H} 
 = \frac{2\Mpl^2}{\gamma} \frac{H_{,\vp}}{H}\frac{\gamma_{,\vp}}{\gamma}  \,,
 \end{align}
 % 
-where $\gamma \equiv 1/c_s$. 
+where $\gamma \equiv 1/\cs$. 
 We will assume that the quasi-de Sitter conditions 
 $\{ \varepsilon_H, |\eta_H | , |s | \}  \ll 1$ apply during observable inflation. 
 In this regime, the amplitudes and spectral indices of the two-point functions 
@@ -656,7 +656,7 @@ for the scalar and tensor perturbations are given by \cite{gm}
 \begin{align}
 \label{eq:spectra-dbiintro}
 \Pr &= \frac{H^4}{4\pi^2\dot{\varphi}^2} =\frac{1}{8 \pi^2 \Mpl^2}
-\frac{H^2}{c_s \varepsilon_H}\,,
+\frac{H^2}{\cs \varepsilon_H}\,,
 \\
 \Pt &= \frac{2}{\pi^2} \frac{H^2}{\Mpl^2} \,,
 \\
@@ -669,7 +669,7 @@ for the scalar and tensor perturbations are given by \cite{gm}
 respectively. $\Pt$ and $n_t$ are evaluated when $k=aH$ but $\Pr$ and $n_s$ are
 evaluated 
 when the scale with wavenumber $k$ crosses 
-the sound horizon $k c_s = aH$.  
+the sound horizon $k \cs = aH$.  
 
 % \addtodo{WMAP5}
 % Recent observations of the CMB 
@@ -686,22 +686,22 @@ from purely Gaussian statistics may be large
 DBI inflation produces non-Gaussianity maximised in the equilateral
 configuration and the leading contribution is in the form of
 \eq{eq:fnldefn-dbiintro}. 
-When $c_s\PX=1$ the second term in 
+When $\cs\PX=1$ the second term in 
 \eq{eq:fnldefn-dbiintro} is identically zero and $\fnleq$ becomes
 \cite{chenetal,lidser2}
 % 
 \begin{equation}
 \label{eq:fnlcs-dbiintro}
-\fnleq \simeq -\frac{1}{3} \left( \frac{1}{c_s^2} -1 \right) \,.
+\fnleq \simeq -\frac{1}{3} \left( \frac{1}{\cs^2} -1 \right) \,.
 \end{equation}
 % 
-When $c_s\ll1$ a significant level of non-Gaussianity is produced.
+When $\cs\ll1$ a significant level of non-Gaussianity is produced.
 % 
 For a homogeneous field $2X = \dot{\vp}^2$, so from \eq{eq:csdefn-dbiintro} we
 find that
 \begin{equation}
 \label{eq:phiT-dbiintro}
- \dot{\vp}^2 = T(\vp)(1-c_s^2)\,.
+ \dot{\vp}^2 = T(\vp)(1-\cs^2)\,.
 \end{equation}
 Eqs. \eqref{eq:spectra-dbiintro},
 \eqref{eq:fnlcs-dbiintro} and \eqref{eq:phiT-dbiintro}
@@ -735,7 +735,7 @@ is related to the tensor-scalar ratio by \cite{lyth,bmpaper}
 \begin{equation}
 \label{eq:genlyth-dbiintro}
 \frac{1}{\Mpl^2}
-\left( \frac{\d \varphi}{\d \N} \right)^2 = \frac{r}{8 c_s P_{,X}}
+\left( \frac{\d \varphi}{\d \N} \right)^2 = \frac{r}{8 \cs P_{,X}}
 \,,
 \end{equation}
 % 
@@ -747,19 +747,19 @@ inflation and the end of inflation is then given by
 \begin{equation}
 \label{eq:totalfield-dbiintro}
 \frac{\Delta \varphi_{\rm inf}}{\Mpl} = 
-\left( \frac{r}{8 c_s P_{,X}} \right)_*^{1/2} \Neff \,,
+\left( \frac{r}{8 \cs P_{,X}} \right)_*^{1/2} \Neff \,,
 \end{equation}
 % 
 where
 % 
 \begin{equation}
 \label{eq:Neff-dbiintro}
-\Neff \equiv \left( \frac{c_sP_{,X}}{r}\right)_*^{1/2}
+\Neff \equiv \left( \frac{\cs P_{,X}}{r}\right)_*^{1/2}
 \int_0^{\N_{\rm end}}  
-\left( \frac{r}{c_sP_{,X}} \right)^{1/2} \d \N \,.
+\left( \frac{r}{\cs P_{,X}} \right)^{1/2} \d \N \,.
 \end{equation}
 % 
-If $r/(c_s P_{,X})$ varies 
+If $r/(\cs P_{,X})$ varies 
 sufficiently slowly during observable inflation, 
 the corresponding change in the value of the inflaton  
 field is given approximately by \cite{lyth,bmpaper}
@@ -767,7 +767,7 @@ field is given approximately by \cite{lyth,bmpaper}
 \begin{equation}
 \label{eq:approxlyth-dbiintro}
 \left( \frac{\Delta \varphi}{\Mpl} \right)_*^2 \simeq 
-\frac{(\Delta \N_*)^2}{8} \left( \frac{r}{c_sP_{,X}} \right)_* \,.
+\frac{(\Delta \N_*)^2}{8} \left( \frac{r}{\cs P_{,X}} \right)_* \,.
 \end{equation}
 % 
 This equality links the total variation of the inflaton during observable inflation
@@ -802,7 +802,7 @@ be small.
 % 
 In the case of DBI inflation the speed of sound
 parameter
-takes the simple form $c_s = 1/\PX$. The previously derived
+takes the simple form $\cs = 1/\PX$. The previously derived
 results for $\Pr$ and $n_s$, as well as the redefined slow roll parameters 
 \eqref{eq:epsdefn-dbiintro}--\eqref{eq:defs-dbiintro} can then be expressed in terms
 of this parameter. 
