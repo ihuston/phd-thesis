@@ -164,10 +164,11 @@ Ricci tensor can be found:
 \label{eq:Ricci00-intro}
  R_{00} &= -3 \frac{\ddot{a}}{a} \,,\\
 \label{eq:Ricciij-intro}
- R_{ij} &= \delta_{ij} \left[ 2\dot{a}^2 +
-  a \ddot{a} + 2\frac{K}{a^2} \right] \,.
+ R_{ij} &= \gamma_{ij} \left[ 2\dot{a}^2 +
+  a \ddot{a} + 2K \right] \,,
 \end{align}
 % 
+where $\gamma_{ij}$ is the time independent spatial part of the metric in \eq{eq:frwmetric-intro}.
 The Friedmann equations are then determined from the Einstein equations
 \eqref{eq:einstein-intro}.
 The $00$ equation gives
@@ -433,7 +434,7 @@ Now consider the time derivative of $|\Omega -1|$ as defined in
 % 
 \begin{equation}
  \label{eq:omegaderiv-intro}
- \frac{\d}{\d t}\left(|\Omega -1 |\right) = 2\frac{\d}{\d t}
+ \frac{\d}{\d t}\left(|\Omega -1 |\right) = 3\frac{\d}{\d t}
 \left(\frac{1}{aH}\right)\,.
 \end{equation}
 % 
@@ -616,7 +617,7 @@ the metric can be written with perturbations, up to first order, as follows:
  \label{eq:pertmetric-intro}
  g_{00} &= -a^2 (1 + 2\phi_1) \,, \nonumber\\
  g_{0i} &= a^2 B_{1i} \,, \nonumber\\
- g_{ij} &= a^2\left(\delta_{ij} + 2C_{ij} \right) \,.
+ g_{ij} &= a^2\left(\delta_{ij} + 2C_{1ij} \right) \,.
 \end{align}
 % 
 The $0$-$i$ and $i$-$j$ perturbations can be decomposed into scalar, vector and
@@ -692,10 +693,10 @@ transformations for the scalars are
 and for the vectors
 \begin{align}
  \label{transS1}
-\widetilde {S_{1}^{~i}} &= S_{1}^{~i}-\gamma_1'\,, \\
+\widetilde {S_{1}^{~i}} &= S_{1}^{~i}-{\gamma_1^i}'\,, \\
 %
 \label{transF1}
-\widetilde {F_{1}^{~i}} &= F_{1}^{~i}+\gamma_1\,. 
+\widetilde {F_{1}^{~i}} &= F_{1}^{~i}+\gamma_1^i\,. 
 \end{align}
 % 
 The tensor perturbation $h_{1ij}$ does not change under transformation at first
@@ -705,7 +706,7 @@ are not perturbed by scalar or vector perturbations, so $\wt{\psi_1} = \wt{E_1}
 =0$ and $\wt{F_{1i}} = \textbf{0}$.  This is equivalent to the transformation
 % 
 \begin{equation}
- \alpha_1 = \frac{\psi_1}{\H}\,,\quad \beta_1=E_1 \,, \quad \gamma^i_1 =
+ \alpha_1 = \frac{\psi_1}{\H}\,,\quad \beta_1=-E_1 \,, \quad \gamma^i_1 =
 -F^i_1\,.
 \end{equation}
 
@@ -798,14 +799,14 @@ In Minkowski space these operators have the usual commutation relations
 \end{equation}
 and
 \begin{equation}
-[\hat{a}(\kb), \hat{a}(\kb')] = 0\,.
+[\hat{a}^\dagger(\kb), \hat{a}^\dagger(\kb')] = [\hat{a}(\kb), \hat{a}(\kb')] = 0\,.
 \end{equation}
 % 
 The $w$ modes are normalised by the condition \cite{Mukhanov:2005sc}
 % 
 \begin{equation}
 \label{eq:quantcondition-intro}
- i(w^\star(\kvi)w'(\kvi) - {w^{\star}}'(\kvi)w(\kvi)) = 1\,.
+ w^\star(\kvi)w'(\kvi) - {w^{\star}}'(\kvi)w(\kvi) = i\,.
 \end{equation}
 
 
@@ -839,7 +840,7 @@ which has the plane wave solution
 This is the initial condition for modes which are well inside the horizon.
 
 Now consider the de Sitter limit in which $\varepsilon_H\rightarrow 0$ and $H$
-is constant. We have $z''/z = a''/a = 2/\eta^2$ so the mode equation is
+is constant. We have $z''/z = a''/a = 2/\eta^2$ so the mode equation is \cite{Baumann2009}
 % 
 \begin{equation}
   w''(\kvi) + \left[ k^2 -\frac{2}{\eta^2} \right]w(\kvi) = 0\,.
@@ -1099,7 +1100,7 @@ at the 95\% confidence level.
 
 In the previous section we considered the dynamics of a scalar field with a
 canonical action $P(\vp, X) = X - V(\vp)$, where $X \equiv -\frac{1}{2}g^{\mu
-\nu}\nabla_\mu \varphi \nabla_\nu \varphi$ is the kinetic energy. 
+\nu}\partial_\mu \varphi \partial_\nu \varphi$ is the kinetic energy. 
 In this
 section we will generalise
 that analysis to include non-canonical actions. Non-canonical scalar
@@ -1154,7 +1155,7 @@ The generation of quantum perturbations in the non-canonical case is similar to
 the canonical one, but now includes contributions from $\cs$. Letting
 $u=a\dvp1$, the Mukhanov equation for the
 Fourier modes, \eq{eq:ueq-intro}, becomes
-\cite{gm}:
+\cite{gm, Mukhanov:2005sc}:
 % 
 \begin{equation}
  u''(\kvi) + \left[\cs^2 k^2 - \frac{z''}{z}\right] u(\kvi) = 0\,,
@@ -1310,11 +1311,11 @@ parameter is given by \cite{chenetal,lidser3}
 % 
 \begin{equation} 
 \label{eq:fnldefn-dbiintro}
- \fnl = -\frac{35}{108}\left(\frac{1}{\cs^2} -1 \right) +
+ \fnleq = -\frac{35}{108}\left(\frac{1}{\cs^2} -1 \right) +
 \frac{5}{81}\left( \frac{1}{\cs^2} -1 -2\Lambda \right) \,.
 \end{equation}
 %  
-Data from WMAP3 imposed the bound $|\fnl| < 300$ on this parameter
+Data from WMAP3 imposed the bound $|\fnleq| < 300$ on this parameter
 \cite{spergel}. The more recent WMAP5 data set
 improves on this bound somewhat \cite{Komatsu:2008hk}, and
 also indicates that it is distinctly asymmetric. At the $95 \%$ confidence
