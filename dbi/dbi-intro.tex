@@ -285,8 +285,18 @@ at different spacetime points can affect the physics at those points.
 \subsection{T-duality}
 \label{sec:tduality-dbiintro}
 % T-Duality
-Suppose we have a string theory compactified on a circle of radius $L$. Instead
-of being a continuum, the momentum of a closed string takes discrete values
+In string theory an extra space time symmetry is present which relates physical properties in
+theories with large compactification radius with those in theories with small radius. 
+Suppose we have a string theory compactified on a circle of radius $L$. The ``T-duality''
+transformation which relates two physical theories with this one compactified dimension is
+% 
+\begin{equation}
+\label{eq:tdualtransform-dbiintro}
+ L \rightarrow \wt{L} = \frac{\alpha'}{L}\,.
+\end{equation}
+% 
+Now consider what effect this transformation will have on the momentum of a closed string. Instead
+of being a continuum, the momentum takes discrete values
 $j/L$ for $j \in \mathbb{Z}$. This is a KK tower of massive states. As we
 complete a circuit around the compact dimension, the value of the coordinate
 function embedding the string in the background will increase by $2\pi w
@@ -312,18 +322,14 @@ uncompactified dimension. This major departure from the standard
 compactification result is a purely stringy effect. 
 
 The formula for the mass spectrum, \eq{eq:closedmass-dbiintro}, is invariant
-when $j$ and $w$ are exchanged given the transformation
-\begin{equation}
- L \rightarrow \wt{L} = \frac{\alpha'}{L}\,.
-\end{equation}
+when $j$ and $w$ are exchanged given the transformation in \eq{eq:tdualtransform-dbiintro}.
 Writing the equations of motion in terms of $\wt{L}$, having interchanged $j$ and
-$w$,
-gives a new theory
-which is compactified on a circle of radius $\wt{L}$. This is known as the
-T-dual theory and the transformation is called T-duality
-\cite{Sakai1986,Kikkawa1984b}. The two
+$w$, gives a new theory which is compactified on a circle of radius $\wt{L}$. This is known as the
+T-dual theory \cite{Sakai1986,Kikkawa1984b}. The two
 theories are physically identical since T-duality is an exact symmetry
-of string theory for closed strings.
+of string theory for closed strings. The T-duality applies to all physics in the theory and in
+particular also affects open string modes. These behave in a different way under T-duality to closed
+strings as will be described below.
 
 % 
 \subsection{D-Branes}
@@ -338,24 +344,27 @@ coordinate solutions of the strings are related by such a symmetry.
 
 
 We introduced T-duality by explaining
-its effects on closed strings. But what happens when open strings are
-T-dualised? Open strings, as their name suggests, have two open ends and
+its effects on closed strings. But what happens to the open strings in a T-dualised theory? Open
+strings, as their name suggests, have two open ends and
 consequently cannot have a conserved winding number such as $w$. Suppose once more
 that one
 of the $D$ dimensions is compactified. As $L\rightarrow0$, the non-zero momentum
 states become infinitely massive, but in contrast to the closed case there is now
-no continuum of winding states. Thus, the theory now lives in $D-1$ dimensions
-similar to standard KK compactification \cite{Johnson2000}.
-
+no continuum of winding states. Thus, the open string now lives in $D-1$ dimensions
+similar to the result of standard KK compactification \cite{Johnson2000}.
+The endpoints of the open strings 
+then observe Dirichlet boundary conditions, taking fixed values in the compactified
+direction.
 There are still closed strings in this theory, however, and these continue to
-move in the full $D$ dimensions. The endpoints of the open strings now observe
-Dirichlet boundary conditions, taking fixed values in the compactified
-direction. This also follows if more than one coordinate is made periodic.
+move in the full $D$ dimensions after being T-dualised.  
+
+The result is similar if more than
+one coordinate is made periodic.
 If $D-p-1$ spatial dimensions are compactified, for some $p$, then the ends of
 the open
 strings can still move freely in the other $p$ spatial dimensions on a $p+1$
 dimensional hypersurface. This hypersurface is called a Dirichlet brane or
-D$p$-brane. 
+D$p$-brane. The closed string modes move in the full $D$ dimensions.
 % 
 In Type IIB theory with supersymmetric strings, an extra condition implies that
 only D$p$-branes with $p=1,3,5,7,9$ are stable\footnotemark.
