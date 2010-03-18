@@ -570,7 +570,13 @@ single-brane DBI term, with $l=1/2$ in the scheme outlined in
 Section~\ref{sec:relaxing-multi}. We can therefore apply the analysis of
 Section~\ref{sec:relaxing-dbi} to investigate whether the bounds described in
 Chapter~\ref{ch:dbi} can be relaxed.
-Comparison with \eq{eq:genaction-dbi} 
+Comparison with \eq{eq:genaction-dbi},
+% 
+\begin{equation}
+\label{eq:genaction-multi}
+P= -f_1 (\varphi ) \sqrt{1-f_2 (\varphi ) X} -f_3 (\varphi) \,,
+\end{equation}
+% 
 implies that $f_1f_2 =2nW$ and $f_2=2/(T_3h^4)$. Hence, 
 the new features of this model relative to the standard single-brane 
 scenario are parametrised in terms of the fuzzy potential $W (\varphi )$. 
@@ -578,18 +584,30 @@ This configuration is conjectured to be dual to
 a ${\rm D5}$-brane which is wrapped around a two-cycle 
 of the throat \cite{dual1,dual2,dual3}. 
 
+% % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{\texorpdfstring{Bound on $n$ during IR propagation}{Bound on n during IR propagation}}
+% % % % % % % % % % % % % % % % % % % % % % % % 
 
 The regime $W \gg 1$ is of interest for 
 relaxing the gravitational wave constraints\footnote{Note that 
 the case $n \gg 1$ and
 $W \sim 1$ will not significantly relax the BM bound, 
 since we require $n \ll N$ for backreaction effects to be negligible.}. 
-The generalised BM bound (\ref{eq:f2bound}) may now be expressed as 
+The generalised BM bound for IR models, with branes propagating towards the bulk, is given by 
+\eq{eq:f2IRlower}:
+% 
+\begin{equation}
+\label{eq:f2IRlower-multi}
+\frac{f_2\Mpl^4}{N} > \frac{(\Delta \N_*)^2}{4\pi^2}
+\frac{\sqrt{-3\fnleq}}{(1-n_s)\Pr}  \,.
+\end{equation}
+% 
+As we know $f_2$, this may be expressed as 
 a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales: 
 % 
 \begin{equation}
 \label{eq:warptorelax}
-\frac{NT_3h^4_*}{\Mpl^4} < 
+N T_3 \left(\frac{h_*}{\Mpl}\right)^4 < 
 \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq}(\Delta \N_*)^2} \,.
 \end{equation}
 % 
@@ -606,21 +624,27 @@ value of the inflaton during observable inflation:
 \label{eq:phivalue-dbi}
 \frac{\varphi_*^4}{\Mpl^4} < 
 \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} 
-\frac{\lambda}{N} \,,
+\frac{T_3 L^4}{N} \,.
 \end{equation}
 %  
-where $\lambda \equiv \pi N/(2 \mathrm{Vol}(X_5))$. 
 However, non-perturbative string effects are expected to become 
 important below a cutoff scale, $\varphi_{\rm cut} = 
-h_{\rm cut} \lambda^{1/4} \ms$, where $h_{\rm cut}$ is the value of the 
+h_{\rm cut} \sqrt{T_3} L$, where $h_{\rm cut}$ is the value of the 
 warp factor at that scale. For consistency, therefore, one requires 
-$\varphi_*>\varphi_{\rm cut}$, which implies an upper limit on the 
+$\varphi_*>\varphi_{\rm cut}$, so that 
+% 
+\begin{equation}
+ N T_3 \left(\frac{h_\mathrm{cut} }{\Mpl}\right)^4 < 
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} \,,
+\end{equation}
+% 
+which implies an upper limit on the 
 ${\rm D3}$-brane charge: 
 % 
 \begin{equation}
 \label{eq:Nlimit-dbi}
-N< \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
-\left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,.
+N< \frac{64\pi^5 \gs (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
+\left( \frac{\Mpl}{h_{\rm cut} \ms} \right)^4   \,.
 \end{equation}
 % 
 Assuming the typical values $\ms \sim 10^{-2}\Mpl$, 
@@ -628,15 +652,19 @@ $\Delta \N_* \simeq 4$ and
 $h_{\rm cut} \sim 10^{-2}$ implies
 %   
 \begin{equation}
-N < 7 \times 10^7 (1-n_s)(-\fnleq)^{-1/2} < 2\times 10^6, 
+N < 1.76 \times 10^8 (1-n_s)(-\fnleq)^{-1/2} \,, 
 \end{equation}
 % 
-where 
-the latter inequality follows for $1-n_s <0.05$ and $-\fnleq>5$. 
+and for $1-n_s <0.05$ and $-\fnleq>5$ the inequality becomes
+% 
+\begin{equation}
+ N < 4\times 10^6\,.
+\end{equation}
+%  
 
 
-For an $AdS_5$ throat, the fuzzy potential 
-is a constant and the condition that $W \gg 1$ becomes 
+For an $AdS_5$ throat, the fuzzy potential $W$ is a constant,
+and the condition that $W \gg 1$ becomes 
 % 
 \begin{equation}
 \label{eq:Chatlimit}
@@ -649,8 +677,8 @@ Hence, combining inequalities
 \begin{equation}
 \label{eq:nlimit-dbi}
 \hat{C} \ll 
-\frac{32 \pi^4 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
-\frac{\gs}{\mathrm{Vol} (X_5) }
+\frac{2 (2\pi)^7 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
+\frac{\gs^2}{\mathrm{Vol} (X_5) }
 \left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,,
 \end{equation}
 % 
@@ -658,24 +686,30 @@ and specifying $\gs \sim 10^{-2}$ and
 $\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
 % 
 \begin{equation}
-\hat{C} \ll 10^{6} (1-n_s)(-\fnleq)^{-1/2} < 2 \times 10^4,
+\hat{C} \ll 2.25\times 10^{6} (1-n_s)(-\fnleq)^{-1/2} < 5\times 10^4,
 \end{equation}
 % 
  or equivalently,
 %   
 \begin{equation}
-n \ll 150.
+\label{eq:nbound-multi}
+n \ll 225.
 \end{equation}
 % 
-Furthermore, since $f_1f_2 \simeq {\rm constant}$, 
-the inequality (\ref{eq:genBMbound}) may be strengthened by a 
-factor of $(   \Neff /\Delta \N_*)^2$ by 
+In deriving the action \eqref{eq:largeP-multi} the number of coincident branes was assumed to be
+large. However we have now found that for the case of branes propagating towards the bulk, the
+number of such branes is bounded from above.
+Furthermore, since $f_1f_2 \simeq {\rm constant}$ for the $AdS_5$ throat, 
+the stronger form of the inequality (\ref{eq:genBMbound}) may be used. The right hand side of
+inequality \eqref{eq:nlimit-dbi} would be reduced by a factor of $(   \Neff /\Delta \N_*)^2$ by
 substituting 
 $\Delta \N_* \rightarrow \Neff$. This ratio 
-could be as 
-high as $(60/4)^2 \simeq 200 $, which would rule out this particular
-model. 
+could be as high as $(60/4)^2 \simeq 200 $, leading to $n$ being less than $15$. In this case
+the assumption of large $n$ would clearly be inconsistent and the model would be ruled out. 
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Bound on D3 charge at the tip of the throat}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 Since the branes are initially located at the tip of the 
 throat, another case of interest is the IR limit of the KS geometry, where 

@@ -154,3 +154,128 @@ fluxes in other throats and propagate toward the bulk.
 In \Rref{thomasward} Thomas \& Ward argue that it is unlikely that only a single brane is left
 after the flux annihilation process, due to the large amount of fine tuning necessary to achieve
 this. Instead it is more likely that a number of branes remain.
+
+\subsection{Point 10: Rephrasing of Section 5.4 about large n limit}
+\textbf{Two subsection headers have been inserted and the main bulk of Section 5.4 has been
+rephrased. A factor of 2 error has been fixed but conclusions remain the same.}
+
+\textbf{Reworked section:}
+
+The regime $W \gg 1$ is of interest for 
+relaxing the gravitational wave constraints\footnote{Note that 
+the case $n \gg 1$ and
+$W \sim 1$ will not significantly relax the BM bound, 
+since we require $n \ll N$ for backreaction effects to be negligible.}. 
+The generalised BM bound for IR models, with branes propagating towards the bulk, is given by 
+\eq{eq:f2IRlower}:
+% 
+\begin{equation}
+\label{eq:f2IRlower-multi}
+\frac{f_2\Mpl^4}{N} > \frac{(\Delta \N_*)^2}{4\pi^2}
+\frac{\sqrt{-3\fnleq}}{(1-n_s)\Pr}  \,.
+\end{equation}
+% 
+As we know $f_2$, this may be expressed as 
+a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales: 
+% 
+\begin{equation}
+\label{eq:warptorelax}
+N T_3 \left(\frac{h_*}{\Mpl}\right)^4 < 
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq}(\Delta \N_*)^2} \,.
+\end{equation}
+% 
+
+
+We now consider whether this limit can be satisfied for reasonable choices 
+of parameters when the warped compactification corresponds to 
+an $AdS_5$ or KS throat, respectively. Recall that the warp 
+factor for the $AdS_5$ throat is given by $h=\varphi/(\sqrt{T_3}L)$.  
+Condition (\ref{eq:warptorelax}) therefore reduces to a constraint on the 
+value of the inflaton during observable inflation: 
+% 
+\begin{equation}
+\label{eq:phivalue-dbi}
+\frac{\varphi_*^4}{\Mpl^4} < 
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} 
+\frac{T_3 L^4}{N} \,.
+\end{equation}
+%  
+However, non-perturbative string effects are expected to become 
+important below a cutoff scale, $\varphi_{\rm cut} = 
+h_{\rm cut} \sqrt{T_3} L$, where $h_{\rm cut}$ is the value of the 
+warp factor at that scale. For consistency, therefore, one requires 
+$\varphi_*>\varphi_{\rm cut}$, so that 
+% 
+\begin{equation}
+ N T_3 \left(\frac{h_\mathrm{cut} }{\Mpl}\right)^4 < 
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} \,,
+\end{equation}
+% 
+which implies an upper limit on the 
+${\rm D3}$-brane charge: 
+% 
+\begin{equation}
+\label{eq:Nlimit-dbi}
+N< \frac{64\pi^5 \gs (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
+\left( \frac{\Mpl}{h_{\rm cut} \ms} \right)^4   \,.
+\end{equation}
+% 
+Assuming the typical values $\ms \sim 10^{-2}\Mpl$, 
+$\Delta \N_* \simeq 4$ and 
+$h_{\rm cut} \sim 10^{-2}$ implies
+%   
+\begin{equation}
+N < 1.76 \times 10^8 (1-n_s)(-\fnleq)^{-1/2} \,, 
+\end{equation}
+% 
+and for $1-n_s <0.05$ and $-\fnleq>5$ the inequality becomes
+% 
+\begin{equation}
+ N < 4\times 10^6\,.
+\end{equation}
+%  
+
+
+For an $AdS_5$ throat, the fuzzy potential $W$ is a constant,
+and the condition that $W \gg 1$ becomes 
+% 
+\begin{equation}
+\label{eq:Chatlimit}
+\hat{C} \ll \frac{4\pi^2\gs N}{\mathrm{Vol}(X_5)} \,.
+\end{equation}
+% 
+Hence, combining inequalities 
+(\ref{eq:Nlimit-dbi}) and (\ref{eq:Chatlimit}) implies that
+%  
+\begin{equation}
+\label{eq:nlimit-dbi}
+\hat{C} \ll 
+\frac{2 (2\pi)^7 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
+\frac{\gs^2}{\mathrm{Vol} (X_5) }
+\left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,,
+\end{equation}
+% 
+and specifying $\gs \sim 10^{-2}$ and 
+$\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
+% 
+\begin{equation}
+\hat{C} \ll 2.25\times 10^{6} (1-n_s)(-\fnleq)^{-1/2} < 5\times 10^4,
+\end{equation}
+% 
+ or equivalently,
+%   
+\begin{equation}
+\label{eq:nbound-multi}
+n \ll 225.
+\end{equation}
+% 
+In deriving the action \eqref{eq:largeP-multi} the number of coincident branes was assumed to be
+large. However we have now found that for the case of branes propagating towards the bulk, the
+number of such branes is bounded from above.
+Furthermore, since $f_1f_2 \simeq {\rm constant}$ for the $AdS_5$ throat, 
+the stronger form of the inequality (\ref{eq:genBMbound}) may be used. The right hand side of
+inequality \eqref{eq:nlimit-dbi} would be reduced by a factor of $(   \Neff /\Delta \N_*)^2$ by
+substituting 
+$\Delta \N_* \rightarrow \Neff$. This ratio 
+could be as high as $(60/4)^2 \simeq 200 $, leading to $n$ being less than $15$. In this case
+the assumption of large $n$ would clearly be inconsistent and the model would be ruled out. 
