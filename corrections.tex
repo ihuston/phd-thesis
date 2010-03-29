@@ -144,6 +144,134 @@ is proportional to $1/p$. Hence by setting $q=1$ and letting $p$ become large, t
 made arbitrarily small \cite{gauntlett}. On the other hand, the largest volume occurs for $p=2$,
 $q=1$ giving $\mathrm{Vol}(Y^{2,1})\simeq 0.29\pi^3$. 
 
+\subsection{Point 8: Rewrite Section 4.4 more clearly}
+\textbf{Many changes have been made to Section 4.4 including splitting the later parts into two
+subsections. The functions $f_1$, $f_2$ and $f_3$ have been renamed $f_A$ etc in order to avoid
+confusion with Section 5.2. Many equations from previous sections have been repeated in order to
+improve readability.}
+
+\textbf{Major changes:}
+
+\textbf{Change to introductory section on Pg 58:}
+
+In this section, we take a phenomenological 
+approach and consider the following kinetic function which has a more general form than the DBI one
+but still contains a square root term:
+% 
+\begin{equation}
+\label{eq:genaction-dbi}
+P= -f_A (\varphi ) \sqrt{1-f_B (\varphi ) X} -f_C (\varphi) \,,
+\end{equation}
+% 
+where $f_i (\varphi )$ are unspecified functions of the inflaton 
+field. We will assume 
+implicitly that these functions have a suitable form for 
+generating a successful phase of inflation.
+A direct comparison with \eq{eq:Pdefn-dbiintro} 
+indicates that the standard DBI action can be recovered by setting $f_A f_B =2$. This implies
+that $\cs P_{,X} =1$ and greatly simplifies the form of \eq{eq:rtheory}. 
+Another important property in the DBI case is that the warp factor uniquely determines 
+the kinetic structure of the action, i.e., $h^4 \propto f_A \propto f_B^{-1}$.  
+In view of this, it is interesting to consider whether
+the gravitational wave constraints could be weakened by relaxing one 
+or both of these conditions. 
+
+% 
+% \eq{eq:genaction-dbi} 
+% can be transformed into a similar form to that of 
+% \eq{eq:Pdefn-dbiintro} through the field redefinition 
+% % 
+% \begin{equation}
+% \label{eq:defvarphi}
+% \tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_Af_B}{2}}  \,.
+% \end{equation}
+% 
+
+We can differentiate $P(X, \vp)$ in \eq{eq:genaction-dbi} to find:
+% 
+\begin{align}
+ \PX &= \frac{f_A f_B}{2\sqrt{1-f_B X}} \,, \\
+ P_{,XX} &= \frac{f_A f_B}{2}\frac{f_B}{2(1-f_B X)^{\frac{3}{2}}} \,.
+\end{align}
+% 
+% 
+The sound speed of fluctuations in 
+the inflaton, defined in \eq{eq:defcs-dbiintro}, is then given by
+%  
+\begin{equation}
+\label{eq:cs-dbi}
+\cs = \sqrt{1-f_B X} = \frac{f_Af_B}{2} \frac{1}{P_{,X}}  \,,
+\end{equation}
+% 
+and the scalar power spectrum \eqref{eq:Ps-dbiintro} by
+% 
+\begin{equation}
+\label{eq:spectrum-dbi}
+\Pr = \frac{1}{2\pi^2}\frac{H^4}{f_Af_B\dot{\varphi}^2}  \,.
+\end{equation}
+
+\textbf{Explanation of generalisation of BM bound on Pg 59 expanded and revised:}
+
+The BM bound \eqref{eq:BMboundr} restricts the maximal 
+variation of the scalar field $\varphi$ in the full throat region for DBI inflation. 
+This is determined by expression \eqref{eq:BMbound-dbi} 
+for generic warped geometries that are asymptotically 
+$AdS_5 \times X_5$ away from the tip of the throat. However, in Section~\ref{sec:lyth-dbiintro} the
+Lyth bound was also defined for general
+non-canonical actions. For the more general kinetic function
+\eqref{eq:genaction-dbi}, the BM bound becomes
+% 
+\begin{equation}
+\label{eq:bmboundgen-dbi}
+ r < \frac{32}{N(\Neff)^2}\cs\PX = \frac{16}{N(\Neff)^2}f_A f_B \,.
+\end{equation}
+% 
+To use this bound we must be able to calculate $\Neff$ over the full range of e-foldings of
+inflation. This requires knowledge of the behaviour of $f_A$ and $f_B$ over that range. 
+
+A more cautious approach would be to restrict our attention to 
+the observable stage of inflation.
+Assuming that the variation
+of $f_Af_B = 2 \cs\PX$ is negligible during that epoch, we can use
+\eq{eq:approxlyth-dbiintro} which states that 
+% 
+\begin{equation}
+\label{eq:genphivary1}
+\left( \frac{\Delta \varphi}{\Mpl} \right)^2_{*} \simeq 
+\frac{(\Delta \N_{*} )^2}{8} \left(\frac{r}{\cs\PX}\right)_*  
+= \frac{(\Delta \N_{*} )^2}{4} \left(\frac{r}{f_A f_B}\right)_*  \,.
+\end{equation}
+% 
+In addition, 
+if observable scales leave the horizon 
+while the brane is inside the throat, the change in the field value 
+must satisfy $| \Delta \varphi_*|<\varphi_{UV}$. It follows from \eqs{eq:bmboundgen-dbi} and
+\eqref{eq:genphivary1}, therefore, that 
+% 
+\begin{equation}
+\label{eq:genBMbound}
+r_*< \frac{32}{N (\Delta \N_{*})^2} (\cs\PX)_* = \frac{16}{N (\Delta \N_{*})^2}
+(f_Af_B)_* \,.
+\end{equation}
+% 
+
+Condition 
+(\ref{eq:genBMbound}) will be referred to as the 
+generalised BM bound. 
+We have been
+conservative by restricting our discussion to the 
+observable phase of inflation. A stronger condition is obtained by using
+\eq{eq:bmboundgen-dbi}, which is equivalent to substituting $\Delta \N_* \rightarrow 
+\Neff$. If 
+$f_Af_B$ remains nearly constant over the last $\N$ 
+e-foldings of inflation, 
+then $\Neff$ may be as large as $60$ and the right hand side of \eq{eq:genBMbound} will be reduced
+by a factor of $225$. 
+Thus, the generalised bound 
+(\ref{eq:genBMbound}) should be regarded as a necessary 
+(but not sufficient) condition to be satisfied by the tensor modes.
+
+
 \subsection{Point 9: Naturalness of multi-coincident brane inflation}
 \textbf{Added to Section 5.1 on Pg 65:}
 

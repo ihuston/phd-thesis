@@ -600,7 +600,7 @@ that the constraints on the tensor modes can be satisfied.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
 In this section, we take a phenomenological 
-approach and consider the following kinetic function that has a more general form than the DBI one
+approach and consider the following kinetic function which has a more general form than the DBI one
 but still contains a square root term:
 % 
 \begin{equation}
@@ -609,31 +609,39 @@ P= -f_A (\varphi ) \sqrt{1-f_B (\varphi ) X} -f_C (\varphi) \,,
 \end{equation}
 % 
 where $f_i (\varphi )$ are unspecified functions of the inflaton 
-field\footnote{It is assumed 
-implicitly that the functions have a suitable form for 
-generating a successful phase of inflation.}.
+field. We will assume 
+implicitly that these functions have a suitable form for 
+generating a successful phase of inflation.
 A direct comparison with \eq{eq:Pdefn-dbiintro} 
-indicates that the standard DBI action exhibits two important properties. 
-The first is the condition that $f_A f_B =2$. This implies that 
-$\cs P_{,X} =1$ and greatly simplifies the form of \eq{eq:rtheory}. 
-The second property is that the warp factor uniquely determines 
+indicates that the standard DBI action can be recovered by setting $f_A f_B =2$. This implies
+that $\cs P_{,X} =1$ and greatly simplifies the form of \eq{eq:rtheory}. 
+Another important property in the DBI case is that the warp factor uniquely determines 
 the kinetic structure of the action, i.e., $h^4 \propto f_A \propto f_B^{-1}$.  
 In view of this, it is interesting to consider whether
 the gravitational wave constraints could be weakened by relaxing one 
 or both of these conditions. 
 
+% 
+% \eq{eq:genaction-dbi} 
+% can be transformed into a similar form to that of 
+% \eq{eq:Pdefn-dbiintro} through the field redefinition 
+% % 
+% \begin{equation}
+% \label{eq:defvarphi}
+% \tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_Af_B}{2}}  \,.
+% \end{equation}
+% 
 
-\eq{eq:genaction-dbi} 
-can be transformed into a similar form to that of 
-\eq{eq:Pdefn-dbiintro} through the field redefinition 
+We can differentiate $P(X, \vp)$ in \eq{eq:genaction-dbi} to find:
 % 
-\begin{equation}
-\label{eq:defvarphi}
-\tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_Af_B}{2}}  \,.
-\end{equation}
+\begin{align}
+ \PX &= \frac{f_A f_B}{2\sqrt{1-f_B X}} \,, \\
+ P_{,XX} &= \frac{f_A f_B}{2}\frac{f_B}{2(1-f_B X)^{\frac{3}{2}}} \,.
+\end{align}
 % 
-This implies that the sound speed of fluctuations in 
-the inflaton, defined in \eq{eq:defcs-dbiintro} is given by
+% 
+The sound speed of fluctuations in 
+the inflaton, defined in \eq{eq:defcs-dbiintro}, is then given by
 %  
 \begin{equation}
 \label{eq:cs-dbi}
@@ -652,7 +660,14 @@ non-Gaussianity constraint (\ref{eq:fnlcs-dbiintro}) remain unaltered
 for this more general class 
 of models \cite{lidser2}. It 
 follows, therefore, 
-that the CMB normalisation condition (\ref{eq:obswarp-dbiintro}) 
+that the CMB normalisation condition (\ref{eq:obswarp-dbiintro}):
+%  
+\begin{equation}
+\label{eq:obswarp2-dbi}
+\frac{T (\varphi)}{\Mpl^4}  = 
+\frac{\pi^2}{16} r^2\Pr \left( 1-\frac{1}{3\fnleq} \right) \,,
+\end{equation}
+% 
 generalises to a constraint on the value of $f_A (\varphi_*)$:
 %   
 \begin{equation}
@@ -662,15 +677,22 @@ generalises to a constraint on the value of $f_A (\varphi_*)$:
 \end{equation}
 % 
 Finally, the expression for the scalar spectral index
-follows most directly by generalising \eq{eq:obscon1} 
-via the correspondence (\ref{eq:defvarphi}). It  
-is straightforward to show that
+follows by generalising the derivation of \eq{eq:obscon1} given by
+% 
+\begin{equation}
+\label{eq:obscon1-repeat}
+1-n_s = \frac{r}{4} \sqrt{1-3\fnleq} + \frac{\nnleq}{1-3\fnleq}
+\mp \sqrt{\frac{r}{8}} \left( \frac{T_{,\vp}}{T} \Mpl \right)_*  \,.
+\end{equation}
+% 
+It 
+is straightforward to show that for the more general kinetic function this expression becomes
 %  
 \begin{equation}
 \label{eq:nsconstraintW}
 1-n_s = \frac{r}{4} \sqrt{1-3\fnleq}
- +\frac{\nnleq}{1-3\fnleq} \mp \sqrt{\frac{r}{4f_Af_B}} \left( 
-\frac{f_{1,\vp}}{f_A} \Mpl \right)_*  \,.
+ +\frac{\nnleq}{1-3\fnleq} \mp \sqrt{\frac{r}{4f_A f_B}} \left( 
+\frac{f_{A,\vp}}{f_A} \Mpl \right)_*  \,.
 \end{equation}
 % 
 
@@ -688,37 +710,44 @@ is straightforward to show that
 % = \sqrt{\frac{r_*}{8}}  \Neff \,.
 % \end{equation}
 % % 
-In Section~\ref{sec:lyth-dbiintro} the Lyth bound was defined for general
-non-canonical actions. 
-If we restrict our attention to 
-the observable stage of inflation, and further assume that the variation
+
+\subsection{A more general BM bound}
+
+The BM bound \eqref{eq:BMboundr} restricts the maximal 
+variation of the scalar field $\varphi$ in the full throat region for DBI inflation. 
+This is determined by expression \eqref{eq:BMbound-dbi} 
+for generic warped geometries that are asymptotically 
+$AdS_5 \times X_5$ away from the tip of the throat. However, in Section~\ref{sec:lyth-dbiintro} the
+Lyth bound was also defined for general
+non-canonical actions. For the more general kinetic function
+\eqref{eq:genaction-dbi}, the BM bound becomes
+% 
+\begin{equation}
+\label{eq:bmboundgen-dbi}
+ r < \frac{32}{N(\Neff)^2}\cs\PX = \frac{16}{N(\Neff)^2}f_A f_B \,.
+\end{equation}
+% 
+To use this bound we must be able to calculate $\Neff$ over the full range of e-foldings of
+inflation. This requires knowledge of the behaviour of $f_A$ and $f_B$ over that range. 
+
+A more cautious approach would be to restrict our attention to 
+the observable stage of inflation.
+Assuming that the variation
 of $f_Af_B = 2 \cs\PX$ is negligible during that epoch, we can use
-\eq{eq:approxlyth-dbiintro} to deduce that 
+\eq{eq:approxlyth-dbiintro} which states that 
 % 
 \begin{equation}
 \label{eq:genphivary1}
 \left( \frac{\Delta \varphi}{\Mpl} \right)^2_{*} \simeq 
-\frac{(\Delta \N_{*} )^2}{8} \left(\frac{r}{\cs\PX}\right)_*  \,.
+\frac{(\Delta \N_{*} )^2}{8} \left(\frac{r}{\cs\PX}\right)_*  
+= \frac{(\Delta \N_{*} )^2}{4} \left(\frac{r}{f_A f_B}\right)_*  \,.
 \end{equation}
 % 
-On the other hand, the BM bound restricts the maximal 
-variation of the scalar field $\varphi$ in the throat region. 
-This will be determined by expression (\ref{eq:BMbound-dbi}) 
-for generic warped geometries that are asymptotically 
-$AdS_5 \times X_5$ away from the tip of the throat. In addition, 
+In addition, 
 if observable scales leave the horizon 
 while the brane is inside the throat, the change in the field value 
-must satisfy $| \Delta \varphi_*|<\varphi_{UV}$. It follows from   
-\eq{eq:approxlyth-dbiintro}, therefore, that\footnote{We are 
-being conservative by restricting our discussion to the 
-observable phase of inflation. More generally, if 
-$f_Af_B$ remains nearly constant over the last $\N$ 
-e-foldings of inflation, 
-we may substitute $\Delta \N_* \rightarrow 
-\Neff$, where $\Neff$ 
-may be as large as 60. Thus, the generalised bound 
-(\ref{eq:genBMbound}) should be regarded as a necessary 
-(but not sufficient) condition to be satisfied by the tensor modes.} 
+must satisfy $| \Delta \varphi_*|<\varphi_{UV}$. It follows from \eqs{eq:bmboundgen-dbi} and
+\eqref{eq:genphivary1}, therefore, that 
 % 
 \begin{equation}
 \label{eq:genBMbound}
@@ -727,13 +756,28 @@ r_*< \frac{32}{N (\Delta \N_{*})^2} (\cs\PX)_* = \frac{16}{N (\Delta \N_{*})^2}
 \end{equation}
 % 
 
-
-We will refer to condition 
-(\ref{eq:genBMbound}) as the 
+Condition 
+(\ref{eq:genBMbound}) will be referred to as the 
 generalised BM bound. 
-Combining expressions (\ref{eq:observef1}) and (\ref{eq:genBMbound}) then
-results in a necessary condition on the value of $f_B(\varphi_*)$ 
-for the generalised BM bound to be satisfied:
+We have been
+conservative by restricting our discussion to the 
+observable phase of inflation. A stronger condition is obtained by using
+\eq{eq:bmboundgen-dbi}, which is equivalent to substituting $\Delta \N_* \rightarrow 
+\Neff$. If 
+$f_Af_B$ remains nearly constant over the last $\N$ 
+e-foldings of inflation, 
+then $\Neff$ may be as large as $60$ and the right hand side of \eq{eq:genBMbound} will be reduced
+by a factor of $225$. 
+Thus, the generalised bound 
+(\ref{eq:genBMbound}) should be regarded as a necessary 
+(but not sufficient) condition to be satisfied by the tensor modes.
+
+
+
+Given expressions (\ref{eq:observef1}) and (\ref{eq:genBMbound})
+we can either constrain $r$ using a specified value for $f_B$, or find a necessary
+condition on the value of $f_B(\varphi_*)$
+for the generalised BM bound to be satisfied using $r$ and $\Pr$:
 %  
 \begin{equation}
 \label{eq:f2bound}
@@ -741,14 +785,14 @@ for the generalised BM bound to be satisfied:
 \frac{1}{r\Pr} \,.
 \end{equation}
 % 
-This condition can also be interpreted as a lower limit on $r$ 
-for a given value of $f_B (\varphi_*)$.  
 
 
 In UV models, identical arguments that led to 
 the lower limit (\ref{eq:lowerbound}) on the tensor-scalar ratio
 will also apply in this more general context if, as expected, $f_A (\varphi) $ 
-is a monotonically increasing function. A necessary condition for
+is a monotonically increasing function. 
+
+A necessary condition for
 the lower and upper limits
 (\ref{eq:lowerbound}) and (\ref{eq:genBMbound}) to be compatible, therefore, is  
 that  
@@ -762,8 +806,8 @@ f_Af_B > \frac{N (\Delta \N_*)^2 (1-n_s)}{4\sqrt{-3\fnleq}} \,.
 
 In IR scenarios, however, the positive sign will apply in the 
 last term of the right-hand side of \eq{eq:nsconstraintW}.
-Hence, assuming $f_{1,\vp} >0$ and neglecting the term proportional to 
-$\nnleq/\fnleq$ yields an {\em upper} limit on the tensor-scalar ratio:
+Hence, assuming $f_{A,\vp} >0$ and neglecting the term proportional to 
+$\nnleq/\fnleq$ yields another {\em upper} limit on the tensor-scalar ratio:
 % 
 \begin{equation}
 \label{eq:IRupper}
@@ -776,12 +820,21 @@ for the generalised BM bound to be satisfied in IR inflation:
 % 
 \begin{equation}
 \label{eq:f2IRlower}
-\frac{f_B\Mpl^4}{N} > \frac{\sqrt{3} (\Delta \N_*)^2}{4\pi^2}
-\frac{\sqrt{-\fnleq}}{(1-n_s)\Pr}  \,.
+\frac{f_B\Mpl^4}{N} > \frac{(\Delta \N_*)^2}{4\pi^2}
+\frac{\sqrt{-3\fnleq}}{(1-n_s)\Pr}  \,.
 \end{equation}
 % 
 
-The upper bound on $r$ that we derived in Section~\ref{sec:upper-dbi} arises 
+To summarise, for the more general kinetic function in \eq{eq:genaction-dbi}, the parameters
+$f_A$ and $f_B$ must satisfy \eqs{eq:observef1} and \eqref{eq:f2bound}, where we have restricted our
+interest to the era of observable inflation. For UV models the lower and upper bounds on the
+tensor-scalar ratio will be compatible if \eq{eq:evade} is satisfied. For IR models two upper
+bounds on $r$ have been found, which when combined constrain $f_B$ as in \eq{eq:f2IRlower}. This
+constraint will prove useful in Section~\ref{sec:ir-largen-bound-multi}.
+
+\subsection{The new upper bound for general models}
+
+The newly derived upper bound on $r$ for DBI models, \eq{eq:generalbound}, arises 
 because the warp factor in standard DBI models 
 completely specifies the kinetic 
 energy of the inflaton field. Deriving a corresponding bound for 
@@ -789,15 +842,22 @@ the generalised model (\ref{eq:genaction-dbi}) would be more involved,
 since the CMB normalisation (\ref{eq:observef1}) only 
 directly constrains the function 
 $f_A (\varphi )$ and this may not necessarily depend on the warp factor. 
-Nonetheless, the constraints \eqref{eq:halfwayconstraint} and
-\eqref{eq:trapeziumlimit} can be 
-combined with \eq{eq:approxlyth-dbiintro} to derive a limit 
-on the tensor-scalar ratio in terms of the warp factor and $P(X,\vp)$, and we find
+Instead, the constraint \eqref{eq:hbound6}, given by
+% 
+\begin{equation}
+\label{eq:hbound6-repeat-dbi}
+\left( \frac{\Delta \varphi}{\Mpl} \right)_*^6 < \frac{\pi T_3}{\Vol} 
+\left( \frac{h_*}{\Mpl} \right)^4 \,,
+\end{equation} 
+% 
+can be 
+combined with \eq{eq:genphivary1} to derive a limit 
+on the tensor-scalar ratio in terms of the warp factor and $P(X,\vp)$. We find
 that 
 % 
 \begin{equation}
 \label{eq:LHbound}
-r_* < \frac{10}{(\Delta \N)_*^2} \left( \frac{T_3}{\Vol} \right)^{1/3} 
+r_* < \frac{8}{(\Delta \N)_*^2} \left(\frac{\pi T_3}{\Vol} \right)^{1/3} 
 \left( \frac{h_*}{\Mpl} \right)^{4/3} \left( \cs P_{,X} \right)_* \,.
 \end{equation}
 % 
@@ -814,9 +874,16 @@ check that any given model must satisfy
 irrespective of the form of the inflaton potential. 
 % 
 
+It is worthwhile to compare \eq{eq:LHbound} with the BM bound for the full evolution given in
+\eq{eq:bmboundgen-dbi}. To evaluate the BM bound requires knowledge of $f_A$ and $f_B$ over the
+whole of the inflationary era. 
+In contrast, using \eq{eq:LHbound} only requires values during observable inflation. However
+$\cs\PX=f_A f_B/2$ must be assumed to be slowly varying for \eq{eq:LHbound} to
+be valid. As discussed in Section~\ref{sec:lyth-dbiintro} this is a reasonable assumption for
+models in which $\PX$ is larger than $\mathcal{O}(\epsilon_H^2)$ during observable inflation. 
 
-Comparison of the limits \eqref{eq:genBMbound} and \eqref{eq:LHbound}
-implies that the latter is the stronger of the two when
+As the two bounds provide upper limits on $r$ their relative strength can be compared. The bound
+\eqref{eq:LHbound} is stronger than the full throat BM bound if
 % 
 \begin{equation}
 \label{eq:LHstronger}
@@ -834,142 +901,26 @@ and  $\gs \simeq 10^{-2}$, this implies that
 h_*^{4/3} N < 300 \frac{(\Delta \N)^2_*}{\Neff^2} \,.
 \end{equation}
 % 
+If the more conservative approach outlined above is taken, the BM bound for observable
+inflation, \eq{eq:genBMbound}, is weaker than \eq{eq:LHbound} when
+% 
+\begin{equation}
+\label{eq:LHstronger-weakBM}
+h_*^{4/3} N < 300 \,.
+\end{equation}
+% 
 
-To summarise this section, 
-expressions \eqref{eq:genBMbound} and \eqref{eq:LHbound} imply that the 
-bounds described in Section~\ref{sec:upper-dbi}
+To summarise this section, new bounds have been derived which generalise those described in
+Section~\ref{sec:upper-dbi} to the case of the kinetic function in \eq{eq:genaction-dbi}.
+The expressions \eqref{eq:bmboundgen-dbi}, \eqref{eq:genBMbound} and \eqref{eq:LHbound} imply that
+the 
+bounds on $r$
 could be relaxed if $2\cs\PX = f_Af_B \gg 1$ on observable scales. 
 It is therefore important to develop string-inspired models 
 where this condition arises naturally. We will explore this possibility in the
 next chapter.
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% % =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% \section{Theoretic Upper Bounds on the Tensor-Scalar Ratio}
-% \label{sec:theobound-multi}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% % =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-% \addtodo{Refer to dbi-intro chapter and defns there.}
-% The ten-dimensional metric of the warped deformed conifold inside a  
-% throat region has the form
-% %  
-% \begin{equation}
-% \label{eq:conemetric-multi}
-% \d s_{10}^2= h^2 ( \rho) \d s_4^2 + h^{-2} (\rho ) 
-% \left( \d\rho^2 +\rho^2 \d s_{X_5}^2 \right) \,,
-% \end{equation}
-% %  
-% where the `warp factor' $h(\rho )$ is a function of the radial 
-% coordinate $\rho$ along the throat and $X_5$ denotes a five-dimensional, 
-% Sasaki-Einstein manifold. In many scenarios, the ten-dimensional 
-% manifold (\ref{eq:conemetric-multi}) can be approximated by the product 
-% $AdS_5 \times X_5$, where $AdS_5$ represents five-dimensional, 
-% anti-de Sitter space. In this case, the warp factor is given by
-% %   
-% \begin{equation}
-% h = \frac{\rho}{L} , \qquad 
-% L^4 = \frac{4\pi^4 \gs N}{\Vol \ms^4}\,,
-% \end{equation}
-% %  
-% where $L$ denotes the $AdS_5$ radius of curvature, 
-% $\Vol$ is the volume of the five-manifold $X_5$ with unit radius, 
-% $N$ is the ${\rm D3}$-brane charge in the throat, 
-% $\gs$ is the string coupling and $\ms$ is the string mass scale. 
-% Generally the value of the inflaton field 
-% is determined by the radial position of the 
-% ${\rm D3}$-brane in the throat, 
-% $\varphi \equiv \rho \sqrt{T_3}$, where $T_3 \equiv  
-% \ms^4/[(2\pi)^3\gs]$ is the brane tension. 
-
-
-% The four-dimensional Planck mass is related to the volume 
-% of the compactified Calabi-Yau three-fold, $V_6$, such that
-% $\Mpl^2 =V_6 \kappa_{10}^{-2}$, where $\kappa_{10}^2 \equiv \frac{1}{2}
-% (2 \pi )^7 \gs^2/ \ms^{8} = \pi /T_3^{2}$ for a 
-% ${\rm D3}$-brane \footnote{We parameterise the Planck scale 
-% in terms of the ${\rm D3}$-brane tension out of convenience, 
-% and note that there is no physical relationship between the two.}. 
-% Hence the Planck mass is bounded from 
-% below by the volume of a throat region, 
-% $\Mpl^2 >V_{6\,{\rm th}} \kappa_{10}^{-2}$, 
-% where $V_{6\,{\rm th}} \lsim V_6$ denotes the throat volume. 
-% For an $AdS_5 \times X_5$ throat, Baumann \& McAllister (BM)
-% exploited this inequality to derive an upper limit on the 
-% maximum variation of the inflaton field in the throat, 
-% $\Delta \varphi_{\rm max} < 2\Mpl/\sqrt{N}$, which leads to the 
-% corresponding limit $|\Delta \varphi |_* < 2\Mpl /\sqrt{N}$ \cite{bmpaper}.  
-% Combining this with the constraint (\ref{eq:approxlyth-dbiintro}) therefore 
-% yields an upper limit on the tensor-scalar ratio: 
-% % 
-% \begin{equation}
-% \label{eq:BMbound-multi}
-% r_* < \frac{32}{N \Neff^2} \left( 
-% \cs P_{,X} \right)_* \,.
-% \end{equation}
-% % 
-
-% 
-% \addtodo{ Change to reference chapter not paper. Change bound name?}
-% Two of the authors (Lidsey \& Huston, LH) derived a complementary bound on
-% the 
-% tensor-scalar ratio by noting that during observable inflation
-% the brane spans a fraction of the throat volume \cite{lidseyhuston}
-% % 
-% \begin{equation}
-% \label{eq:approxvol}
-% | \Delta V_{6\,*} | \simeq \Vol \frac{| \Delta \rho_*| \rho_*^5}{h_*^4}
-% \end{equation}
-% % 
-% and, since $| \Delta V_{6\,*} |< 
-% V_{6\,{\rm th}}$, it follows that
-% %  
-% \begin{equation}
-% \label{eq:firstbound-multi}
-% \left(\frac{\Delta \varphi}{\Mpl}\right)^2_* < \frac{T_3 \kappa_{10}^2
-% (\Delta \rho_*)^2}{| \Delta V_{6*}|} \,.
-% \end{equation}
-% % 
-% It was then assumed that the fractional change in the value of the 
-% inflaton field during observable inflation was less than unity:
-% % 
-% \begin{equation}
-% \label{eq:delta1constraint}
-% |\Delta \varphi_* | <  \varphi_* \,.
-% \end{equation}
-% %  
-% This condition is necessarily satisfied in UV
-% versions of the scenario, 
-% where the brane is moving towards the tip of the throat, but must be 
-% assumed as a further constraint in IR versions 
-% where the brane moves out of the throat, since in these latter cases
-% $\varphi_*$ could be very small. Combining the limit 
-% (\ref{eq:delta1constraint}) with \eq{eq:approxvol} then implies that
-% %  
-% \begin{equation}
-% | \Delta V_{6\,*} | > \Vol \frac{( \Delta \rho_* )^6}{h_*^4}
-% \end{equation}
-% % 
-% and substituting this constraint into the bound (\ref{eq:firstbound-multi})
-% yields 
-% the condition
-%  
-% \begin{equation}
-% \left( \frac{\Delta \varphi}{\Mpl} \right)_*^6 < \frac{\pi T_3}{\Vol} 
-% \left( \frac{h_*}{\Mpl} \right)^4 \,.
-% \end{equation}
-
-% Finally substituting the constraint (\ref{eq:approxlyth-dbiintro}) 
-% yields the upper limit \cite{lidseyhuston}
-% % 
-% 
-% 
-% 
-% In the following Section, we identify a class of models in which  
-% these bounds could be relaxed. 
-% 
 % 
 % 
 % 
