@@ -600,11 +600,12 @@ that the constraints on the tensor modes can be satisfied.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
 In this section, we take a phenomenological 
-approach and consider a general kinetic function of the form:
+approach and consider the following kinetic function that has a more general form than the DBI one
+but still contains a square root term:
 % 
 \begin{equation}
 \label{eq:genaction-dbi}
-P= -f_1 (\varphi ) \sqrt{1-f_2 (\varphi ) X} -f_3 (\varphi) \,,
+P= -f_A (\varphi ) \sqrt{1-f_B (\varphi ) X} -f_C (\varphi) \,,
 \end{equation}
 % 
 where $f_i (\varphi )$ are unspecified functions of the inflaton 
@@ -613,10 +614,10 @@ implicitly that the functions have a suitable form for
 generating a successful phase of inflation.}.
 A direct comparison with \eq{eq:Pdefn-dbiintro} 
 indicates that the standard DBI action exhibits two important properties. 
-The first is the condition that $f_1 f_2 =2$. This implies that 
+The first is the condition that $f_A f_B =2$. This implies that 
 $\cs P_{,X} =1$ and greatly simplifies the form of \eq{eq:rtheory}. 
 The second property is that the warp factor uniquely determines 
-the kinetic structure of the action, i.e., $h^4 \propto f_1 \propto f_2^{-1}$.  
+the kinetic structure of the action, i.e., $h^4 \propto f_A \propto f_B^{-1}$.  
 In view of this, it is interesting to consider whether
 the gravitational wave constraints could be weakened by relaxing one 
 or both of these conditions. 
@@ -628,7 +629,7 @@ can be transformed into a similar form to that of
 % 
 \begin{equation}
 \label{eq:defvarphi}
-\tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_1f_2}{2}}  \,.
+\tilde{\varphi} \equiv \int d \varphi \sqrt{\frac{f_Af_B}{2}}  \,.
 \end{equation}
 % 
 This implies that the sound speed of fluctuations in 
@@ -636,14 +637,14 @@ the inflaton, defined in \eq{eq:defcs-dbiintro} is given by
 %  
 \begin{equation}
 \label{eq:cs-dbi}
-\cs = \sqrt{1-f_2 X} = \frac{f_1f_2}{2} \frac{1}{P_{,X}}  \,,
+\cs = \sqrt{1-f_B X} = \frac{f_Af_B}{2} \frac{1}{P_{,X}}  \,,
 \end{equation}
 % 
 and the scalar power spectrum \eqref{eq:Ps-dbiintro} by
 % 
 \begin{equation}
 \label{eq:spectrum-dbi}
-\Pr = \frac{1}{2\pi^2}\frac{H^4}{f_1f_2\dot{\varphi}^2}  \,.
+\Pr = \frac{1}{2\pi^2}\frac{H^4}{f_Af_B\dot{\varphi}^2}  \,.
 \end{equation}
 % 
 However, the consistency equation (\ref{eq:rdefn-dbiintro}) and 
@@ -652,11 +653,11 @@ for this more general class
 of models \cite{lidser2}. It 
 follows, therefore, 
 that the CMB normalisation condition (\ref{eq:obswarp-dbiintro}) 
-generalises to a constraint on the value of $f_1 (\varphi_*)$:
+generalises to a constraint on the value of $f_A (\varphi_*)$:
 %   
 \begin{equation}
 \label{eq:observef1}
-\left( \frac{f_1}{\Mpl^4} \right)_{*} \simeq \frac{\pi^2}{16} r^2\Pr
+\left( \frac{f_A}{\Mpl^4} \right)_{*} \simeq \frac{\pi^2}{16} r^2\Pr
 \left( 1- \frac{1}{3\fnleq} \right)  \,.
 \end{equation}
 % 
@@ -668,8 +669,8 @@ is straightforward to show that
 \begin{equation}
 \label{eq:nsconstraintW}
 1-n_s = \frac{r}{4} \sqrt{1-3\fnleq}
- +\frac{\nnleq}{1-3\fnleq} \mp \sqrt{\frac{r}{4f_1f_2}} \left( 
-\frac{f_{1,\vp}}{f_1} \Mpl \right)_*  \,.
+ +\frac{\nnleq}{1-3\fnleq} \mp \sqrt{\frac{r}{4f_Af_B}} \left( 
+\frac{f_{1,\vp}}{f_A} \Mpl \right)_*  \,.
 \end{equation}
 % 
 
@@ -683,7 +684,7 @@ is straightforward to show that
 % % 
 % \begin{equation}
 % \label{eq:newphivar}
-% \int_0^{\varphi_{*}} \frac{d\varphi}{\Mpl} \, \sqrt{\frac{f_1f_2}{2}} 
+% \int_0^{\varphi_{*}} \frac{d\varphi}{\Mpl} \, \sqrt{\frac{f_Af_B}{2}} 
 % = \sqrt{\frac{r_*}{8}}  \Neff \,.
 % \end{equation}
 % % 
@@ -691,7 +692,7 @@ In Section~\ref{sec:lyth-dbiintro} the Lyth bound was defined for general
 non-canonical actions. 
 If we restrict our attention to 
 the observable stage of inflation, and further assume that the variation
-of $f_1f_2 = 2 \cs\PX$ is negligible during that epoch, we can use
+of $f_Af_B = 2 \cs\PX$ is negligible during that epoch, we can use
 \eq{eq:approxlyth-dbiintro} to deduce that 
 % 
 \begin{equation}
@@ -711,7 +712,7 @@ must satisfy $| \Delta \varphi_*|<\varphi_{UV}$. It follows from
 \eq{eq:approxlyth-dbiintro}, therefore, that\footnote{We are 
 being conservative by restricting our discussion to the 
 observable phase of inflation. More generally, if 
-$f_1f_2$ remains nearly constant over the last $\N$ 
+$f_Af_B$ remains nearly constant over the last $\N$ 
 e-foldings of inflation, 
 we may substitute $\Delta \N_* \rightarrow 
 \Neff$, where $\Neff$ 
@@ -722,7 +723,7 @@ may be as large as 60. Thus, the generalised bound
 \begin{equation}
 \label{eq:genBMbound}
 r_*< \frac{32}{N (\Delta \N_{*})^2} (\cs\PX)_* = \frac{16}{N (\Delta \N_{*})^2}
-(f_1f_2)_* \,.
+(f_Af_B)_* \,.
 \end{equation}
 % 
 
@@ -731,22 +732,22 @@ We will refer to condition
 (\ref{eq:genBMbound}) as the 
 generalised BM bound. 
 Combining expressions (\ref{eq:observef1}) and (\ref{eq:genBMbound}) then
-results in a necessary condition on the value of $f_2(\varphi_*)$ 
+results in a necessary condition on the value of $f_B(\varphi_*)$ 
 for the generalised BM bound to be satisfied:
 %  
 \begin{equation}
 \label{eq:f2bound}
-\frac{f_2 (\varphi_*)\Mpl^4}{N} > \frac{(\Delta \N_*)^2}{\pi^2} 
+\frac{f_B (\varphi_*)\Mpl^4}{N} > \frac{(\Delta \N_*)^2}{\pi^2} 
 \frac{1}{r\Pr} \,.
 \end{equation}
 % 
 This condition can also be interpreted as a lower limit on $r$ 
-for a given value of $f_2 (\varphi_*)$.  
+for a given value of $f_B (\varphi_*)$.  
 
 
 In UV models, identical arguments that led to 
 the lower limit (\ref{eq:lowerbound}) on the tensor-scalar ratio
-will also apply in this more general context if, as expected, $f_1 (\varphi) $ 
+will also apply in this more general context if, as expected, $f_A (\varphi) $ 
 is a monotonically increasing function. A necessary condition for
 the lower and upper limits
 (\ref{eq:lowerbound}) and (\ref{eq:genBMbound}) to be compatible, therefore, is  
@@ -754,7 +755,7 @@ that
 % 
 \begin{equation}
 \label{eq:evade}
-f_1f_2 > \frac{N (\Delta \N_*)^2 (1-n_s)}{4\sqrt{-3\fnleq}} \,.
+f_Af_B > \frac{N (\Delta \N_*)^2 (1-n_s)}{4\sqrt{-3\fnleq}} \,.
 \end{equation}
 % 
 
@@ -770,12 +771,12 @@ r_* < \frac{4(1-n_s)}{\sqrt{-3\fnleq}}  \,.
 \end{equation}
 % 
 Combining conditions (\ref{eq:f2bound}) and (\ref{eq:IRupper}) 
-therefore leads to a constraint on $f_2 (\varphi_*) $
+therefore leads to a constraint on $f_B (\varphi_*) $
 for the generalised BM bound to be satisfied in IR inflation: 
 % 
 \begin{equation}
 \label{eq:f2IRlower}
-\frac{f_2\Mpl^4}{N} > \frac{\sqrt{3} (\Delta \N_*)^2}{4\pi^2}
+\frac{f_B\Mpl^4}{N} > \frac{\sqrt{3} (\Delta \N_*)^2}{4\pi^2}
 \frac{\sqrt{-\fnleq}}{(1-n_s)\Pr}  \,.
 \end{equation}
 % 
@@ -787,7 +788,7 @@ energy of the inflaton field. Deriving a corresponding bound for
 the generalised model (\ref{eq:genaction-dbi}) would be more involved, 
 since the CMB normalisation (\ref{eq:observef1}) only 
 directly constrains the function 
-$f_1 (\varphi )$ and this may not necessarily depend on the warp factor. 
+$f_A (\varphi )$ and this may not necessarily depend on the warp factor. 
 Nonetheless, the constraints \eqref{eq:halfwayconstraint} and
 \eqref{eq:trapeziumlimit} can be 
 combined with \eq{eq:approxlyth-dbiintro} to derive a limit 
@@ -837,7 +838,7 @@ h_*^{4/3} N < 300 \frac{(\Delta \N)^2_*}{\Neff^2} \,.
 To summarise this section, 
 expressions \eqref{eq:genBMbound} and \eqref{eq:LHbound} imply that the 
 bounds described in Section~\ref{sec:upper-dbi}
-could be relaxed if $2\cs\PX = f_1f_2 \gg 1$ on observable scales. 
+could be relaxed if $2\cs\PX = f_Af_B \gg 1$ on observable scales. 
 It is therefore important to develop string-inspired models 
 where this condition arises naturally. We will explore this possibility in the
 next chapter.
