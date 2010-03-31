@@ -212,94 +212,8 @@ l \equiv \frac{2(\alpha -3 )}{\alpha -6} \, .
 The inequalities \eqref{eq:Plimits} 
 are satisfied in the relativistic limit, where $X \simeq 1/f_2$, justifying their use.
 We consider the inflationary dynamics in the relativistic limit in what follows but for
-completeness we show in the next section that \eq{eq:defalpha} can be solved
+completeness we show in Appendix~\ref{sec:apx-multi} that \eq{eq:defalpha} can be solved
 analytically without this approximation. 
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{Analytic General Solution}
-\label{sec:apx-multi}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\eq{eq:defalpha} can be analytically solved in full 
-generality without imposing the limits (\ref{eq:Plimits}) on the 
-derivatives of the kinetic function. This allows us to determine the 
-most general class of models where the non-linearity parameter 
-satisfies the condition $\fnleq \propto 1/\cs^2$ at leading order. 
-
-In general \eq{eq:defalpha} takes the form 
-% 
-\begin{equation}
-\label{eq:genPXeqn-multi}
-(2-\alpha ) P_{,X}P_{,XX} + 4XP^2_{,XX} = \frac{2\alpha }{3}
-X P_{,X}P_{,XXX}
-\end{equation}
-% 
-and this reduces to 
-% 
-\begin{equation}
-\label{eq:genreduce-multi}
-\alpha \Upsilon_{,X} = (6-\alpha ) \Upsilon^2 + \frac{3(2-\alpha )}{2}
-\frac{\Upsilon}{X} \, ,
-\end{equation}
-% 
-where $\Upsilon \equiv P_{,XX}/P_{,X}$. 
-\eq{eq:genreduce-multi} can be transformed into the 
-linear equation
-% 
-\begin{equation}
-\label{eq:lineargen-multi}
-U_{,X}+ \frac{3(2-\alpha )}{2\alpha} \frac{U}{X} = \frac{\alpha -6}{\alpha}
-\end{equation}
-% 
-after the change of variables $U \equiv 1/\Upsilon$
-and the general solution to \eq{eq:lineargen-multi} is given by
-%  
-\begin{equation}
-\label{eq:gensolnlinear-multi}
-\frac{P_{,XX}}{P_{,X}} = \frac{1}{X\left[ f_2(\varphi) X^{(\alpha -6)/2\alpha}
--2 \right] } \, .
-\end{equation}
-% 
-Integrating a second time implies that
-% 
-\begin{equation}
-\label{eq:secondint-multi}
-P_{,X} = -f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
-\end{equation}
-% 
-where $s \equiv (\alpha -6 )/(2 \alpha)$ and we have redefined 
-the arbitrary integration functions $f_i(\varphi )$.  
-Finally \eq{eq:secondint-multi} can be formally integrated 
-in terms of a hypergeometric function
-%  
-\begin{equation}
- \label{eq:thirdint-multi}
- P= -f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
-\right)  \, ,
-\end{equation}
-%  
-which represents the most general solution for this class of models. 
-Note that we have set the
-remaining constant of integration to zero to ensure 
-that the kinetic function vanishes in the limit of
-zero velocity. In fact this expression admits many 
-different classes of solution, arising as limits
-of the expansion of the hypergeometric function.
-
-
-% The special case of $\alpha =2$ $(s=-1)$ implies (after a 
-% further redefinition of the functions $f_i (\varphi ))$ that 
-% % 
-% \begin{equation}
-% \label{eq:DBIsoln-multi}
-% P = -f_1 \sqrt{1-f_2 X} -f_3
-% \end{equation}
-% % 
-% and this corresponds to the standard DBI action (\ref{eq:DBIkinetic}) 
-% \cite{chenetal,lidser2}.          
 
 
 
@@ -1275,53 +1189,7 @@ be negligible. This is also satisfied when \eq{eq:nlimit-multi}
 holds. 
 
 
-For completeness we should also consider the 
-BM bound \eqref{eq:genBMbound} for this class of models. This is given by 
-% 
-\begin{equation}
-\label{eq:BMAdS-multi}
-r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnleq \,,
-\end{equation}
-%  
-and in the case of an $AdS_5 \times X_5$ throat simplifies to
-%  
-\begin{equation}
-\label{eq:bmadsbound}
-r_* < -\frac{5}{\Neff^2} 
-\frac{\fnleq}{(n-1)\sqrt{N}} \,.
-\end{equation}
-%  
-Comparing the limits in Eqs.~\eqref{eq:AdSupper-multi} and
-\eqref{eq:bmadsbound} 
-implies that the bound \eqref{eq:LHbound} is stronger than the corresponding BM
-bound \eqref{eq:genBMbound} if 
-% 
-\begin{equation}
-\label{eq:LHstrongerads}
-n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq \,,
-\end{equation}
-% 
-and this condition is always satisfied if 
-% 
-\begin{equation}
-\label{eq:allNbound-multi}
--5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq  <1  \, .
-\end{equation}
-% 
-Moreover, the bound \eqref{eq:allNbound-multi} will itself be satisfied for 
-all values of $\fnleq$ and $N$ if it is satisfied when the limits 
-$\fnleq =-151$ and $N=75852$ are imposed. Hence, we conclude that the bound
-\eqref{eq:LHbound} 
-is stronger for $\Neff < 75$. 
-In general, it is difficult to quantify 
-the magnitude of $\Neff$ without 
-imposing further restrictions on the parameters of the models 
-and, in particular, on the functional form of the inflaton potential. 
-However, if the ratio $\varepsilon_H/P_{,X}$ remains approximately 
-constant during the final stages of inflation, one would anticipate that 
-$\Neff \lesssim 60$. Nevertheless, if $N \ll 75852$, the bound 
-\eqref{eq:LHstrongerads} will only be violated for $n \le 3$ if 
-$\Neff \gg 60$.  
+  
 
 
 Finally, it should be emphasised that the derivation of the bound in
