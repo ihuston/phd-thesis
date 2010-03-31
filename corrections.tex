@@ -434,6 +434,55 @@ three of the models as $\bar{\varepsilon}_H$ increases towards unity. The end ti
 inflation is specified by hand for the contrived toy model, so this effect is
 not seen.
 
+\subsection{Point 14: Redo figures with unphysical oscillations}
+\textbf{Fig 8.9 has been changed to remove the upper plot which showed the source term before all
+but the smallest mode had been initialised. The relevant text has also been changed. The new figure
+is shown in Fig~\ref{fig:src-3ns-2}.}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{numerical/graphs/src_3ns-large}
+\caption[Source Term at Two Different Times]{The absolute magnitude of the source 
+term for all $k$ values in the range $K_1$ at two different time steps. The green line shows
+$|S|$ when all modes have been initialised. The lower red dashed line shows $|S|$ approximately 
+52 e-foldings before the end of inflation, when all modes have
+exited the horizon.}
+\label{fig:src-3ns-2}
+\end{figure}
+
+\textbf{Each subfigure in Fig 8.11 has been changed to remove the erroneous sourceterm info before
+the mode is initialised. The new figures are as shown in Fig~\ref{fig:newsrccmp}.
+}
+
+\begin{figure}[htbp]
+\centering%
+\subfloat[$V(\vp)=\msqphisq$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_msqphisq-small}
+}\qquad%
+\subfloat[$V(\vp)=\lambdaphifour$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_lambdaphi4-small}
+}\\%
+\subfloat[$V(\vp)=\phitwooverthree$]{
+ \includegraphics[width=0.43\textwidth]{numerical/graphs/src_onek_phi2over3-small}
+}\qquad%
+\subfloat[$V(\vp)=\msqphisqwithV$]{
+ \includegraphics[width=0.43\textwidth]
+  {numerical/graphs/src_onek_msqphisq_withV0-small}
+}
+\caption[Source Term for the Four Potentials]{Plots of the source
+term for the
+four different potentials studied.}
+\label{fig:newsrccmp}
+\end{figure}
+
+\textbf{In the case of the other figures, especially Fig 8.4 on Pg 123 and Fig 8.5 on Pg 124, the
+small oscillations at early times are not a numerical artifact. The first order perturbations at
+these times are highly oscillatory as they have not yet been damped sufficiently. (See for example
+Fig 8.1 on Pg 121.) In convolving the first order perturbations there is no expectation that
+oscillations in one mode will be matched by those in another. At later times when the first order
+modes are approximately constant the resulting source term is clearly smoother. 
+}
+
 \section{Kazuya's Corrections}
 \subsection{Point 1: How are constraints on $r$ obtained}
 \textbf{Added to discussion in Section 2.4 on Pg 32:}
