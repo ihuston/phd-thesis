@@ -290,3 +290,90 @@ I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
          \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
 \end{align}
 % 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Discussion of properties of source term for different potentials}
+\label{sec:apx-srcdisc}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+The evolution of the source term for the four potentials has been discussed in
+Section~\ref{sec:compare-res}, with particular emphasis on the evolution after horizon crossing as
+shown in Figure~\ref{fig:cmp-src-kwmap}. Here the differences apparent at early times, shown in
+Figure~\ref{fig:cmp-src-zoom-kwmap} are commented on.
+
+At early times the first order perturbations are still very close to the Bunch-Davies initial
+conditions as outlined in Section~\ref{sec:initconds-num}. In particular the perturbations are
+highly oscillatory with phase $\exp(-k\eta)$, where $\eta$ is the conformal time. When
+$\varepsilon_H$ is small this is given by 
+% 
+\begin{equation}
+ \eta = -\frac{1}{aH(1-\varepsilon_H)}\,.
+\end{equation}
+% 
+It is therefore instructive to plot the slow roll parameter $\varepsilon_H$ for the four potentials
+at these early times, as has been done in Figures~\ref{fig:eps-apx} and \ref{fig:eps-zoom-apx}. For
+completeness the other slow roll parameter $\eta_H$ defined in \eq{eq:etaHdefn-intro} has been
+plotted in Figures~\ref{fig:eta-apx} and \ref{fig:eta-zoom-apx}. 
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/epsilon_slowroll-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption{The value of $\varepsilon_H$ for the four potentials.}
+ \label{fig:eps-apx}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/epsilon_slowroll_zoom-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption{The value of $\varepsilon_H$ for the four potentials at early times.}
+ \label{fig:eps-zoom-apx}
+\end{figure}
+
+Figures~\ref{fig:eps-apx} and \ref{fig:eta-apx} show $\varepsilon_H$ and $\eta_H$ for the
+four different models. Figures~\ref{fig:eps-zoom-apx} and
+\ref{fig:eta-zoom-apx} show the early stages of the evolution as in
+Fig~\ref{fig:cmp-src-zoom-kwmap}.
+
+As is clear from these figures the change in the slow roll parameters is not easily related
+to the differences in the profiles of the four potentials in Figure~\ref{fig:cmp-src-zoom-kwmap}. In
+particular, although $\varepsilon_H$ and $\eta_H$ are quite different for the quadratic and quartic
+models, the magnitude of $S$ after horizon crossing for these models is very similar.
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/eta_slowroll-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption{The value of $\eta_H$ for the four potentials.}
+ \label{fig:eta-apx}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/eta_slowroll_zoom-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption{The value of $\eta_H$ for the four potentials at early times.}
+ \label{fig:eta-zoom-apx}
+\end{figure}
+
+At the earliest stages of the calculation of $S$, one or two e-foldings after the initialisation of
+the first order perturbation, there appear to be small oscillations which affect the models in
+different ways. The highly oscillatory initial conditions, combined with the small but appreciable
+differences in $\varepsilon_H$ and $\eta_H$ contribute to this effect. In
+Figure~\ref{fig:cos-keta-apx} the real part of the phase of the initial condition for $\dvp1$ is
+plotted just after initialisation for the four potentials. The small differences in phase for each
+model combined with the sharp cutoff at large and small $k$ values could explain the variations
+in $|S|$ at early times as seen in Figure~\ref{fig:cmp-src-zoom-kwmap}. 
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/cos_keta_kwmap_zoom-large.pdf}
+ % cos_keta_kwmap_zoom-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption{The real part of the phase in the Bunch Davies initial conditions for the four different
+potentials at early times.}
+ \label{fig:cos-keta-apx}
+\end{figure}
