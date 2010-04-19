@@ -610,6 +610,59 @@ oscillations in one mode will be matched by those in another. At later times whe
 modes are approximately constant the resulting source term is clearly smoother. 
 }
 
+
+\subsection{Point 16: Discuss cases where one needs to go beyond slow roll}
+
+\textbf{Added to the Future Directions section (8.3) on Pg 133:}
+
+As we have seen the slow roll approximation is very helpful in reducing the equations of motion to
+a manageable size. However, many interesting models break the assumptions of a slowly rolling field
+and to investigate these models it is necessary to use the full field equations.
+
+Models in which the field potential is not smooth due to the presence of a feature are
+particularly interesting examples of single field inflation for which slow roll is broken. 
+As the
+derivatives of the potential can be large around the feature, these models must necessarily be
+handled without assumptions about the size of the slow roll parameters. 
+In \Rref{Adams:2001vc} a model with a step potential was proposed which takes the form
+% 
+\begin{equation}
+ V(\vp) = \frac{1}{2}m^2\vp^2\left(1 + c\tanh\left(\frac{\vp -\vp_s}{d}\right)\right)\,,
+\end{equation}
+% 
+where $\vp_s$, $c$ and $d$ parametrise the location, height and width of the step feature. A bump
+model has also been proposed \cite{Chen:2008wn}, with potential 
+% 
+\begin{equation}
+ V(\vp) = \frac{1}{2}m^2\vp^2\left(1 + c\,\mathrm{sech}\left(\frac{\vp-\vp_b}{d}\right)\right)\,,
+\end{equation}
+% 
+where again $\vp_b$, $c$ and $d$ parametrise the feature. At first order these models introduce
+noticeable differences in the scalar power spectrum. They are also known to be able to produce
+significant amounts of non-gaussianity in shapes which are not similar to either the local or
+equilateral types described in Section~\ref{sec:fnl-intro} \cite{Chen:2006xjb, Chen:2008wn}.
+
+
+It will also be important to go beyond slow roll in the multiple field case.
+To obtain analytic results, the study of multi-field models has often been restricted to those with
+either sum or product separable potentials. Even very simple
+models with two fields such as the double inflation model with the potential given by
+\cite{Turner:1986te, Silk:1986vc}
+% 
+\begin{equation}
+ V(\vp,\chi) = \frac{1}{2}m_\vp^2\vp^2 + \frac{1}{2}m_\chi^2 \chi^2\,,
+\end{equation}
+% 
+can violate slow roll when the fields $\vp$ and $\chi$ are close to
+equality. To go some way towards considering the full range of possible multi-field models with
+arbitrary inflationary potentials then requires that the full non-slow roll evolution equations are
+used.
+
+
+As far as the implementation of the code is concerned, the extension to the non-slow roll single
+field case is the next step.
+
+
 \section{Kazuya's Corrections}
 \subsection{Point 1: How are constraints on $r$ obtained}
 \textbf{Added to discussion in Section 2.4 on Pg 32:}
