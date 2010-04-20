@@ -967,6 +967,38 @@ using the standard method based on a Lagrangian formalism
 will
 therefore eventually allow a full numerical calculation of $\fnl$ to be made.
 
+Our numerical code evolves the second order perturbation itself and gives an insight into how this
+field behaves through the full course of the inflationary era. This is in contrast to other
+approaches which only consider the result for the three point function of the field, or
+alternatively of the curvature perturbation.
+% 
+The computational system handles perturbations with scales both inside and outside the horizon. Any
+effects of horizon crossing are visible and no assumptions need to be made about the form of the
+solution inside the horizon.
+
+The numerical code, when developed with the full equation, will not require any simplifying
+assumptions about the form of the potential used. This allows models which are not amenable to
+analytic analysis to be examined. Examples of models which require consideration beyond the slow
+roll approximation include single field models with a step or other feature in the potential, and
+multi-field double inflation models where the field values are roughly equal.
+
+
+The code we have developed is also applicable in other physical circumstances. Beyond scalar
+perturbations the form of the source term is similar in other interesting cosmological physics. 
+The generation and evolution of non-Gaussian curvature perturbations is, of course, directly related
+to the behaviour of the second order scalars as has been described in Section~\ref{sec:fnl-intro}
+and Section~\ref{sec:observable-perts}. Investigating and classifying non-Gaussian signatures for
+inflationary models is the main goal of our future work.
+
+The generation of vorticity in a cosmological setting has physical parallels with the equations we
+have studied. This second order effect arises through the vector perturbations which we have not
+considered in this thesis. Vorticity in the early universe could also lead to the generation of
+primordial magnetic fields, an area which is of increasing interest
+\cite{Christopherson:2009bt,1950ZNatA...5...65B}.
+% 
+The wave equations for tensor mode perturbations also exhibit the same form as the scalar equations
+with a source term at second order. The code we have developed could be modified to examine the
+behaviour of gravitational waves in the early universe at second order.
 
 In summary, we have demonstrated that numerically solving the closed
 Klein-Gordon equation for second order perturbations is possible. The slow roll
