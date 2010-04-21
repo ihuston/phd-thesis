@@ -20,9 +20,9 @@ onehalfspacing % onehalfspacing or doublespacing
 % CVSon for cvs revision number in footers
 % CVSoff is default-
 \usepackage[%CVSon, % CVS version in footers
-            labels, % show labels
+            %labels, % show labels
 	    %todos, % show todos
-            hyperref % Use hyperref for links
+            %hyperref % Use hyperref for links
             ]{ihformat}
 
 % Redefine CVSRevision for this section
@@ -44,7 +44,8 @@ numerical/perts,
 numerical/numerical,
 numerical/results,
 theend,
-appendix
+appendix,
+% corrections % corrections - Do NOT insert in final version!
 }
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \begin{document}
@@ -119,6 +120,8 @@ appendix
 \appendix
 \include{appendix}
 
+% Corrections - DO NOT INSERT IN FINAL VERSION
+% \include{corrections}
 % \listoftodos
 % \end{doublespace}
 \begin{singlespace}
