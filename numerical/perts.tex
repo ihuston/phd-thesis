@@ -712,6 +712,111 @@ Calculating $\dvp2$ and $\R_2$ therefore provides direct insight into the behavi
 and
 production of the non-Gaussianity parameter $\fnlloc$. 
 
+
+To go beyond the local shape of the non-Gaussianity it is necessary to calculate the full
+bispectrum of the perturbations. In practice the bispectrum of the curvature perturbation on
+uniform density hypersurfaces, $\zeta$, is used in setting observational limits. At first order this
+is simply related to the comoving curvature perturbation by $\zeta_1 = -\R_1$. At second order the
+relationship is more complicated. For large scales outside the horizon, $\zeta_2$ can be related to
+the field perturbations in real space using \cite{Malik:2005cy}
+% 
+\begin{equation}
+ \zeta_2(x^i) = -\frac{\H}{\vp_0'}\dvp2(x^i) - \left[4 - 3\frac{(\vp_0')^2 - a^2\U}{(\vp_0')^2/2
++a^2\U} \right]\left(\frac{\H}{\vp_0'} \right)^2 \dvp1(x^i)^2\,. 
+\end{equation}
+% 
+In Fourier space this again introduces a convolution integral of the first order perturbations.
+
+The bispectrum of $\zeta$ is given by
+% 
+\begin{equation}
+ \langle \zeta(\kb_1)\zeta(\kb_2)\zeta(\kb_3)\rangle = 
+        (2\pi)^3 \delta(\kb_1+\kb_2+\kb_3) B(k_1,k_2,k_3)\,,
+\end{equation}
+% 
+where translation invariance introduces the delta function. The $k$ dependence of the bispectrum 
+is usually separated from an overall amplitude factor and considered as a shape function
+$F(k_1,k_2,k_3)$. The bispectrum is then of the form \cite{Liguori:2010hx, Babich:2004gb}
+% 
+\begin{equation}
+ \langle \zeta(\kb_1)\zeta(\kb_2)\zeta(\kb_3)\rangle = 
+        A (2\pi)^3 \delta(\kb_1 + \kb_2 + \kb_3) F(k_1,k_2,k_3)\,,
+\end{equation}
+% 
+and for a particular shape function $F$ the best estimator for $A$ when the non-Gaussianity is
+small is given by \cite{Babich:2004gb}
+% 
+\begin{equation}
+\label{eq:fnlampl-perts}
+\hat{A} = \frac{\sum_{\kb_i} \zeta(\kb_1)\zeta(\kb_2)\zeta(\kb_3) F(k_1,k_2,k_3)/ 
+                (\sigma^2_{k_1}\sigma^2_{k_2}\sigma^2_{k_3}) }
+                {\sum_{\kb_i} F(k_1,k_2,k_3)^2/(\sigma^2_{k_1}\sigma^2_{k_2}\sigma^2_{k_3})} \,,
+\end{equation}
+% 
+where $\sigma_{k_i}$ is the variance of the mode and the sums run over all the triangles in $k$
+space subject. If $\kb_3$ is chosen to be the longest side of the triangle then the triangle
+inequality enforces
+% 
+\begin{equation}
+ k_3 \le k_1 + k_2\,.
+\end{equation}
+% 
+\eq{eq:fnlampl-perts} provides a blueprint for how to evaluate the bispectrum in terms of a
+particular given shape. To compare a primordial bispectrum with the observed temperature bispectrum
+from the CMB it is necessary to construct the spherical harmonics of the bispectrum and use
+transfer functions to relate the primordial values with the observed values. We have not
+carried out this procedure in this thesis. However, one of the goals of our future work is to
+undertake such a comparison of the numerically generated bispectrum with the observed quantity. 
+
+As mentioned above, the shape most often used in comparisons with observations is the local shape
+given by the
+ansatz in \eq{eq:fnllocdefn-intro}. The expression for $F_\mathrm{local}$ is
+\cite{Babich:2004gb, Komatsu:2010fb}
+% 
+\begin{equation}
+ F_\mathrm{local}(k_1,k_2,k_3) = 2N\fnlloc \left(\frac{1}{k_1^3 k_2^3}
+                                  +\frac{1}{k_2^3 k_3^3} + \frac{1}{k_1^3 k_3^3}\right) \,,
+\end{equation}
+% 
+where the spectrum has been taken to be scale invariant and $N$ is a normalisation factor. 
+
+This is not the only shape
+that has been considered and, as we have seen, non-canonical inflationary actions generate a
+bispectrum which is peaked
+when the magnitudes of the $k$ modes are approximately equal. The form of $F$ for the equilateral
+case is \cite{Komatsu:2010fb}
+% 
+\begin{multline}
+ F_\mathrm{eq}(k_1,k_2,k_3) = 6 N \fnleq \left\{ -\frac{1}{k_1^3 k_2^3} -\frac{1}{k_2^3 k_3^3}
+                                -\frac{1}{k_3^3 k_1^3}  \right.\\
+                                \left.-\frac{2}{(k_1 k_2 k_3)^2}  + \left[ \frac{1}{k_1 k_2^2 k_3^3}
++ \mathrm{5 perms} \right]
+                                \right\} \,.
+\end{multline}
+% 
+
+A third form has been proposed which is nearly orthogonal to the other two shapes
+\cite{Senatore:2009gt}. These shapes all have the property that they are separable functions of
+each $k_i$ or can be constructed from these separable functions. This property eases analytic
+calculations but clearly does not hold for generic shapes. 
+% 
+There has been a proposal to define the
+shape of the bispectrum in terms of a set of basis vector shapes
+\cite{Fergusson:2009nv,Liguori:2010hx}. This would remove the need for only separable shapes to be
+considered and would allow for a straightforward analysis of the bispectrum from its primordial
+value up to the observed bispectrum in the CMB. 
+
+We have seen that the second order scalar perturbation is not the direct observable quantity of
+interest. The bispectrum of the curvature perturbations, which contains a contribution from the
+second order non-linear part, can be compared with observations either by use of various
+shape functions or through a full analysis with transfer of the primordial values. A future goal of
+our work is to compare the bispectrum obtained numerically with that from observations. 
+
+
+
+
+
+
 % 
 % 
 % 
