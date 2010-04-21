@@ -161,6 +161,123 @@ $\Neff \lesssim 60$. Nevertheless, if $N \ll 75852$, the bound
 \eqref{eq:LHstrongerads} will only be violated for $n \le 3$ if 
 $\Neff \gg 60$.
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Discussion of Homogeneous Solution for Second Order Equation}
+\label{sec:init-apx}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+The homogeneous equation for the second order perturbations is  
+% 
+\begin{equation}
+\label{eq:homogen-apx}
+ \dvp2''(\eta, \kvi) + 2\H \dvp2'(\eta, \kvi) 
++ \left[ k^2 + a^2\Upp - 24\pi G (\vp_0')^2 \right]\dvp2(\eta,\kvi) = 0\,.
+\end{equation}
+% 
+During slow roll, with the slow roll variables $\varepsilon_H$ and $\eta_H$ defined in
+Chapter~\ref{ch:introduction}, this becomes
+% 
+\begin{equation}
+ \dvp2'' + 2\H \dvp2' + \left[k^2 + 3\H^2(\eta_H + \varepsilon_H)\right]\dvp2 = 0\,.
+\end{equation}
+% 
+If we let $u=a\dvp2$, this equation can be rewritten as
+% 
+\begin{equation}
+\label{eq:uH-apx}
+ u'' + \left[k^2 +\H^2(3\eta_H - 2\varepsilon_H - 2)\right]u = 0\,.
+\end{equation}
+% 
+When $\varepsilon_H$ is small, the conformal time $\eta$ is given by 
+% 
+\begin{equation}
+ \eta \simeq -\frac{1}{\H(1-\varepsilon_H)}\,,
+\end{equation}
+% 
+so we can rewrite \eq{eq:uH-apx} as
+% 
+\begin{equation}
+ u'' + \left[k^2 + \frac{1}{(-\eta)^2}\frac{3\eta_H -2\varepsilon_H -2}{(1-\varepsilon_H)^2} 
+       \right]u = 0\,.
+\end{equation}
+% 
+If the derivatives are taken in terms of $(-\eta)$ instead of $\eta$ this is in the form of a
+Bessel equation with solutions in terms of Hankel functions given by
+% 
+\begin{equation}
+ u_{1,2} = \sqrt{-\eta} H_\nu^{(1,2)}(-k\eta)\,, 
+\end{equation}
+% 
+where $H_\nu^{(1,2)}$ are the Hankel functions (Bessel functions of the third kind), and $\nu$ is
+given by
+% 
+\begin{equation}
+ \nu^2 = \frac{6\varepsilon_H -12\eta_H + 7}{4(1-2\varepsilon_H)}\,.
+\end{equation}
+%
+
+The full solution for $u$ is then
+% 
+\begin{equation}
+ u_\mathrm{full} = C_1 \sqrt{-\eta} H_\nu^{(1)}(-k\eta) +
+                   C_2 \sqrt{-\eta} H_\nu^{(2)}(-k\eta)\,,
+\end{equation}
+% 
+where $C_1, C_2\in \mathbb{C}$. When the (real) argument of the Hankel functions goes to $+\infty$
+they have the following asymptotic form \cite{abramowitz+stegun}:
+% 
+\begin{align}
+ H_\nu^{(1)}(z) &\rightarrow \sqrt{\frac{2}{\pi z}} e^{i(z-\frac{\pi}{2}\nu - \frac{\pi}{4})} \,,\\
+ H_\nu^{(2)}(z) &\rightarrow \sqrt{\frac{2}{\pi z}} e^{-i(z-\frac{\pi}{2}\nu - \frac{\pi}{4})} \,.
+\end{align}
+% 
+
+So at early times when $\eta\rightarrow -\infty$ and $-k\eta\rightarrow +\infty$ we have the
+following expressions for u:
+% 
+\begin{align}
+ u_{i} &= \sqrt{\frac{2}{\pi k}}\left( C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})}
+                + C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \right) \,,\\
+ u_{i}' &= i k\sqrt{\frac{2}{\pi k}}\left( -C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})}
+                + C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \right) \,,\\
+\end{align}
+% 
+where we have assumed that $\nu$ is slowly varying far in the past, \iec the derivatives of the slow
+roll parameters are very small. The initial conditions used in Section~\ref{sec:initconds-num} are
+$\dvp2=0, \dN{\dvp2}=0$ at some initial time when the first order perturbations are initialised. If
+we let
+$\eta_*$ denote this initial time then from $u_*=0$ we have
+% 
+\begin{equation}
+ C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} = -C_2 e^{+i(k\eta +\frac{\pi}{2}\nu +
+\frac{\pi}{4})}\,.
+\end{equation}
+% 
+We know that $u'=(a\dvp2)' = \H \dvp2 + a\H \dN{\dvp2}$ so setting $\dvp2=0=\dN{\dvp2}$ gives
+% 
+\begin{equation}
+ C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} = +C_2 e^{+i(k\eta +\frac{\pi}{2}\nu +
+\frac{\pi}{4})}\,.
+\end{equation}
+% 
+For these initial conditions then clearly we have
+% 
+\begin{equation}
+C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} =
+ -C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \,,
+\end{equation}
+% 
+and so $C_2 = 0 + 0i$ and $C_1=0+0i$ for these initial conditions.
+
+With this choice of initial conditions for the ordinary differential equation the homogeneous
+solution is identically zero throughout the evolution. This has also been shown numerically by
+solving \eq{eq:homogen-apx} using a Runge-Kutta scheme and the background values for
+$\H$ and $\vp+0$.
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
