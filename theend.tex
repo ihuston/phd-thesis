@@ -85,13 +85,25 @@ In Section~\ref{sec:relaxing-dbi}, a phenomenological approach was taken to easi
 the upper bound on the tensor-scalar ratio. By considering a DBI-type action with unspecified field
 functions,
 $f_i$, we showed that the generalised lower and upper bounds can be consistent
-if the product of $f_1$ and $f_2$ is sufficiently large on observable scales.
+if the product of $f_A$ and $f_B$ is sufficiently large on observable scales. This provides a guide
+to the types of models which could evade the inconsistency of the bounds on $r$. For more general
+models with a non-canonical action, a bound on $r$ which relates the geometry of the throat, the
+number of e-foldings of observable inflation, and the derivatives of the action has been derived in
+\eq{eq:LHbound}. This bound, although it does not in general relate to observational quantities can
+be used when the details of a particular physical model are known.
 
-The discovery of these incompatible bounds for DBI inflation has had a noticeable
+The discovery of the incompatible bounds on $r$ for DBI inflation has had a noticeable
 impact on the research community, spurring interest in finding models which evade
 these bounds. Many such models have been proposed with varying degrees of success. In
 Section~\ref{sec:others-dbi} these were categorised according to whether they
-featured single or multiple fields, and single or multiple branes. 
+featured single or multiple fields, and single or multiple branes. Some of these models are still
+constrained by the bounds on $r$ but not to the same extent as the standard DBI scenario. For
+example the parameter space of the models with wrapped brane configurations is still extremely
+limited by the observational values from WMAP5 \cite{Alabidi:2008ej}. For other models an analysis
+in terms of the bounds derived in this thesis has yet to be undertaken. As the observational limits
+on $\fnleq$ and $r$ continue to improve, an important step in ensuring the validity of DBI based
+models is to check whether equivalent bounds to those derived here exist, and whether they can be
+met for any significant proportion of the parameter space.
 
 % Multi
 General actions which relax the bounds on $r$, were derived in
@@ -115,7 +127,12 @@ the total action is simply the sum of copies of the single brane action.
 
 In the limit of a large number of branes being coincident, the effective action is
 similar to $n$ times the single brane model, with the addition of a fuzzy potential
-term. The bounds on $r$ can be somewhat relaxed when this potential is large,
+term. 
+% 
+Indeed this model is of the type considered phenomenologically in Section~\ref{sec:relaxing-dbi} and
+the bounds derived in that section can be applied. 
+% 
+These bounds on $r$ can be somewhat relaxed when this potential is large,
 but the model is still strongly constrained by current observations. For an $AdS_5$
 throat, standard parameter choices limit the number of allowed branes to be
 less than 150, at which point the assumption of arbitrarily large $n$ becomes
@@ -138,6 +155,13 @@ producing such a signal. This bound on $n$ depends on the WMAP5 limit on $\fnleq
 If, as expected, the observational limits on $\fnleq$ tighten considerably in the
 future, the possibility of an observable tensor signal from the multi-coincident
 brane model could be ruled out.
+
+On the other hand, the choice of $r>10^{-4}$ as the threshold of an observable signal is very
+optimistic. If foreground removal techniques and the signal-to-noise ratios of future experiments
+cannot reach this threshold, and instead reach $r>10^{-3}$, no number of branes will be able to
+produce an observable tensor signal when combined with the current limits on the non-Gaussianity.
+There will then be little possibility of a distinguishing
+observational signature for these coincident brane models.
 
 % Numerical
 In Part~\ref{part:numerical} of this thesis, numerical methods were used to test inflationary
@@ -174,6 +198,17 @@ curvature perturbation, at second order.
 Using cosmological perturbation theory also provides control over the calculation.
 The domain of applicability of the perturbative expansion is well defined and the
 resultant equations are certain to be valid in this domain.
+
+% 
+The main observable quantity is not however the second order scalar perturbation, but rather the
+departure from Gaussianity in the CMB temperature map, parametrised by the amplitude of the
+bispectrum of the perturbations. In Section~\ref{sec:observable-perts} we outlined how $\fnl$ could
+be calculated from the numerically found $\dvp2$ both for the local type and more generally using
+the bispectrum of the uniform density curvature perturbation. As the observational limits on $\fnl$
+are tightened over the course of the remaining WMAP releases and future Planck data, the importance
+of comparing the predictions for $\fnl$ of inflationary models with the observed values will only
+increase. In this thesis we have not computed $\fnl$ for the models we have considered, but this is
+an important future step that will be undertaken. 
 
 
 The long term aim of this continuing project is
@@ -223,12 +258,31 @@ time step, the easily parallelisable nature of the source term calculations allo
 the run time of the third stage to be reduced significantly. 
 The final stage of the calculation uses the source term results to solve the second
 order perturbation equations.
+% 
+
+The initial conditions for the second order perturbations are taken to be $\dvp2=0$ and
+$\dN{\dvp2}=0$ as described in Section~\ref{sec:initconds-num}. For this choice of initial
+conditions the homogeneous part of the solution of the second order equation is zero at all times.
+As the perturbations are supposed to become more Gaussian the further back in time they are
+considered, in the limit of the far past the second order perturbations should be zero. It remains
+to be investigated whether the choice of initialisation time is sufficiently far in the past for
+this assumption to be accurate. At first order it is known that the perturbations are well
+ approximated by the Bunch-Davies vacuum initial conditions even just a few e-foldings before
+horizon crossing. However, this choice of initialisation time may not be the most appropriate for
+the second order perturbations. In future work it would be worth considering whether the analytic
+Green's function solution for $\dvp2$ at very early times could be integrated until the numerical
+initialisation time and used as the initial condition for the perturbation. 
 
 
-To test the code, four different, large field, monomial potentials were used. Each
-potential depends on a single parameter, which was fixed by comparing the resultant scalar
+To test the code, four different, large field, monomial potentials were used. These were the
+standard quadratic and quartic potentials, a fractional index potential derived from the monodromy
+string inflation model and a toy model in which inflation is stopped by hand and a blue spectrum is
+produced.
+Each potential depends on a single parameter, which was fixed by comparing the resultant scalar
 curvature power spectrum with the WMAP5 normalisation. The slow roll
-approximation can be applied to all four potentials.
+approximation can be applied to all four potentials. These potentials are not meant to represent an
+exhaustive survey of single field slow roll models but are sufficiently different to exhibit
+different power spectra and second order source terms.
 
 We presented the results for each potential in Chapter~\ref{ch:results}. The first
 order results match those in Refs.~\cite{Martin:2006rs, Ringeval:2007am, Salopek:1988qh}. The
@@ -236,6 +290,12 @@ results of the source term calculation show that before
 horizon crossing, the source term amplitude decays rapidly for all four potentials.
 The amplitude changes less after horizon crossing, until later times when it increases
 as the slow roll approximation breaks down.
+
+The four different potentials have similar amplitudes before horizon crossing but reach different
+values after horizon crossing. The differences in the slow roll parameters for each potential are
+compared with the source term values in Appendix~\ref{sec:apx-srcdisc}. The slow roll parameters
+do not appear to be directly related to the amplitudes of the source terms, at least in a linear
+fashion.
 
 The choice of wavenumber range affects the amplitude of the source term, as
 expected, due to the implementation of a sharp cutoff at large scales. This
@@ -299,12 +359,15 @@ efficiency of the code will also loosen these constraints.
 % 
 
 Another consideration in the development of a numerical system is the possibility of
-code re-use.
+code re-use. One of our future goals is to develop our code into a numerical toolkit which
+can be applied to a variety of physical situations.
 The equations of motion of the inflaton scalar field are similar in form
 to the governing equations of other important cosmological phenomena. Therefore, it
 should be possible to adapt the numerical system we have constructed and apply it to
-other areas of interest, such as the evolution of tensor perturbations and the
-generation of vorticity in the early universe. 
+other areas of interest. The form of the second order equation and source term are similar to those
+applicable in the evolution of tensor perturbations and the
+generation of vorticity in the early universe. The flexibility of the numerical system we have
+developed will be a positive factor in any attempt to apply our code to these physical systems. 
 
 
 The numerical calculation described is the first step towards a system capable of
@@ -324,7 +387,10 @@ Three more $\theta$ dependent terms are necessary to
 compute the full convolution integral in this case. It will be important to find
 analytic solutions for these three extra terms, as already done for the terms in the
 slow roll case, in
-order to gauge the effectiveness of the extended code.
+order to gauge the effectiveness of the extended code. When the extension to non slow-roll models
+is complete, it will be possible to investigate models with a step or other feature in their
+potential. These models can exhibit large amounts of non-Gaussianity produced around the feature
+with a shape dependence that is more general than that of the local and equilateral forms. 
 
 The Klein-Gordon equation for the multi-field case introduces further complexity. We plan to
 expand the numerical system to encompass two or three scalar fields. The differences
