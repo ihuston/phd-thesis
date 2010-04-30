@@ -412,6 +412,139 @@ I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Analytic Solution for Source Term}
+\label{sec:analyticsrc-apx}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+Suppose the first order perturbations are given by the non-interacting de Sitter space solution
+such that
+% 
+ \begin{equation}
+ \dvp1(\eta, \kvi) = \frac{1}{a\sqrt{2 k}} \left( 1 - \frac{i}{k \eta}\right) \,,
+\end{equation}
+% 
+and the derivative in terms of $\N$ is 
+% 
+\begin{equation}
+ \dN{\dvp1}(\eta, \kvi) = -  \frac{1}{a\sqrt{2 k}} \left( 1 -
+                        \frac{i}{k \eta}\right) \left(1 + \frac{1}{aH\eta}\right)
+                         - \frac{i}{a^2 H \sqrt{2}}\sqrt{k}\,.
+\end{equation}
+% 
+The analytic solution of \eq{eq:KG2-source-ntime} for this choice of first order
+solution can be written in terms of four integrals of the $\A$-$\wt{\D}$ terms:
+% 
+\begin{equation}
+\label{eq:KG2-source-jterms}
+S(\kvi) = \frac{1}{(2\pi)^2} \left\{J_\A + J_\B + J_{\wt{\C}} + J_{\wt{\D}} \right\}\,,
+\end{equation}
+% 
+where
+\begin{align}
+ J_\A(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left( 
+                \frac{\Uppp}{H^2} q^2 + \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left[ 
+ 3a^2\Upp q^2  + \frac{7}{2}q^4 + 2k^2q^2 \right] \right) \dvp1(\qvi) \A(\kvi, \qvi) \,, \\
+% 
+ J_\B(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(-\frac{9}{2} - \frac{q^2}{k^2}\right)kq^3
+ \dvp1(\qvi) \B(\kvi, \qvi) \,, \\
+%  
+J_{\wt{\C}}(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(
+                        -8\pi G \dN{\vp_{0}} \frac{3}{2}q^2 \right) \dN{\dvp1}(\qvi)
+\wt{\C}(\kvi, \qvi) \,, \\
+%  
+J_{\wt{\D}}(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(
+                       8\pi G \dN{\vp_{0}} \left[2-\frac{q^2}{k^2}\right] kq \right)
+\dN{\dvp1}(\qvi) \wt{\D}(\kvi, \qvi) \,. \\
+\end{align}
+% 
+
+The analytic solution for $J_\A$ is given by
+\begin{multline}
+J_\A = \left( 
+                \frac{\Uppp}{H^2} + \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left[ 
+ 3a^2\Upp    + 2k^2 \right] \right)\frac{ \alpha^2}{2880\eta ^2 k}\Bigg\{\\
+240 k \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) \left(\eta ^2 k^2-12 i \eta  k-24\right) \\
+-120 k \pi  \left(\eta ^2 k^2-12 i \eta  k-24\right)
+-80\sqrt{\kmax}
+   \Bigg(\Bigg[3 \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right) k^2 \\
+-14 \kmax
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right) k+8 \kmax^2
+   \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right)\Bigg] \eta ^2 \\
++48 i \left(\kmax
+   \left(\sqrt{k+\kmax}-\sqrt{\kmax-k}\right)+k
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right)\right) \eta \\
++72
+   \left(\sqrt{k+\kmax}-\sqrt{\kmax-k}\right)\Bigg) \displaybreak[0]\\
+% 
+-80 \sqrt{\kmin} \Bigg(\Bigg[3
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) k^2
+-14 \kmin\left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right) k \\
++8 \kmin^2
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right)\Bigg] \eta ^2
++12 i \Bigg[k
+   \left(\sqrt{k-\kmin}-4 \sqrt{k+\kmin}\right) \\
++2 \kmin
+\left(\sqrt{k-\kmin}-2
+   \sqrt{k+\kmin}\right)\Bigg] \eta +72
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)\Bigg) \displaybreak[0]\\
+% 
++240 k \left(\eta ^2 k^2+24\right)\log\left(2 \sqrt{k}\right)
+-240 k \left(\eta ^2 k^2+24\right)\log \left(2 \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right)\\
+-240 k \left(\eta ^2 k^2+24\right) \log \left(2\left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right)\\
++240 k \left(\eta ^2 k^2+24\right) \log
+\left(2 \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right)\Bigg\} \displaybreak[0]\\
+% 
+%
++ \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\frac{7}{2}\frac{\alpha ^2}{2880 \eta
+^2 k} \Bigg\{3 \sqrt{2} \left(-317 \eta ^2 k^2+1000 i \eta  k+560\right) k^3 \\
++3\sqrt{2} \left(317 \eta ^2 k^2-1000 i \eta  k-560\right) k^3 \\
++45 \left(\eta ^2 k^2-12 i \eta k-16\right) \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) k^3
++45\left(\eta ^2 k^2+8 i \eta k+16\right)
+   \log \left(2 \sqrt{k}\right) k^3 \\
+-45 \left(\eta ^2 k^2+8 i \eta  k+16\right) \log \left(2
+   \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^3 \\
+-45 \left(\eta ^2 k^2-8 i \eta 
+   k+16\right) \log \left(2 \left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^3 \\
++45\left(\eta ^2 k^2-8 i \eta  k+16\right) \log \left(2
+\left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^3 -\frac{45}{2} \left(\eta ^2 k^2-12 i \eta 
+k-16\right) \pi  k^3 \displaybreak[0]\\
+% 
+-3 \sqrt{\kmax} \Bigg(15 \eta ^2
+   \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right) k^4 \\
+ +10 \eta  (\eta  \kmax+12 i)
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right) k^3 \\ 
++8 \left(\eta ^2 \kmax^2+10 i \eta 
+   \kmax+30\right) \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right) k^2 \\
+-16 \kmax \left(11\eta ^2 \kmax^2-20 i \eta  \kmax-10\right)
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right) k \\
++128 \kmax^2 \left(\eta ^2 \kmax^2-5i \eta  \kmax-5\right)
+\left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right)\Bigg) \displaybreak[0]\\
+%  
+-3 \sqrt{\kmin} \Bigg(15 \eta ^2 \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) k^4 \\
++10 \eta\left(\eta  \kmin \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)-6 i \left(3
+   \sqrt{k-\kmin}+2 \sqrt{k+\kmin}\right)\right) k^3 \\
++8 \Bigg(\eta ^2
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) \kmin^2-5 i \eta  \left(3
+   \sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\
++30
+   \left(\sqrt{k+\kmin}-\sqrt{k-\kmin}\right)\Bigg) k^2 \displaybreak[0]\\
+-16 \kmin \Bigg(11 \eta ^2
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right) \kmin^2-10 i \eta 
+   \left(\sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\+10
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right)\Bigg) k \\
++64 \kmin^2 \Bigg(2 \eta ^2
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) \kmin^2+5 i \eta 
+   \left(\sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\
++10
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)\Bigg)\Bigg)\Bigg\} 
+\end{multline}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Discussion of properties of source term for different potentials}
 \label{sec:apx-srcdisc}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
