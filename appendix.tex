@@ -446,8 +446,8 @@ where
                 \frac{\Uppp}{H^2} q^2 + \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left[ 
  3a^2\Upp q^2  + \frac{7}{2}q^4 + 2k^2q^2 \right] \right) \dvp1(\qvi) \A(\kvi, \qvi) \,, \\
 % 
- J_\B(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(-\frac{9}{2} - \frac{q^2}{k^2}\right)kq^3
- \dvp1(\qvi) \B(\kvi, \qvi) \,, \\
+ J_\B(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left(-\frac{9}{2} -
+\frac{q^2}{k^2}\right)kq^3 \dvp1(\qvi) \B(\kvi, \qvi) \,, \\
 %  
 J_{\wt{\C}}(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(
                         -8\pi G \dN{\vp_{0}} \frac{3}{2}q^2 \right) \dN{\dvp1}(\qvi)
@@ -537,7 +537,96 @@ k-16\right) \pi  k^3 \displaybreak[0]\\
    \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) \kmin^2+5 i \eta 
    \left(\sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\
 +10
-   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)\Bigg)\Bigg)\Bigg\} 
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)\Bigg)\Bigg)\Bigg\}\,. 
+\end{multline}
+
+The analytic solution for $J_\B$ is 
+% 
+\begin{multline}
+J_\B = -\frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\frac{9}{2}\frac{\alpha ^2}{2822400 \eta ^2
+k} \Bigg\{29400 \left(4 \eta ^2 k^2+15 i \eta k+120\right)
+\arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) k^3 \\
++29400 \left(4 \eta ^2 k^2-51 i \eta 
+   k-120\right) \log \left(2 \sqrt{k}\right) k^3 \\
+-29400 \left(4 \eta ^2 k^2-51 i \eta k-120\right) \log
+   \left(2 \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^3 \\
+-29400 \left(4 \eta ^2 k^2+51 i \eta  k-120\right) \log \left(2
+\left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^3 \\
++29400 \left(4 \eta ^2 k^2+51 i \eta  k-120\right) \log \left(2
+   \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^3 \\
+-14700 \left(4 \eta ^2 k^2+15 i
+\eta 
+   k+120\right) \pi  k^3 
++280 \sqrt{\kmax (k+\kmax)} \Bigg(420 \eta ^2 k^4 \\
++5 \eta  (200 \eta \kmax+303 i) k^3 + \left(-416 \eta ^2 \kmax^2+6414 i \eta  \kmax+11592\right)
+k^2 \\ 
+- 24\kmax \left(8 \eta ^2 \kmax^2-87 i \eta  \kmax-126\right) k 
++48 \kmax^2\left(8\eta ^2 \kmax^2+53 i \eta  \kmax+84\right)\Bigg) \displaybreak[0]\\
+% 
+-280 \sqrt{\kmax (\kmax-k)}
+   \Bigg(420 \eta ^2 k^4-5 \eta  (200 \eta  \kmax+303 i) k^3 \\
++\left(-416 \eta ^2 \kmax^2+6414 i
+   \eta  \kmax+11592\right) k^2+24 \kmax \left(8 \eta ^2 \kmax^2-87 i \eta 
+   \kmax-126\right) k \\
++48 \kmax^2 \left(8 \eta ^2 \kmax^2+53 i \eta 
+   \kmax+84\right)\Bigg) \displaybreak[0] \\
+% 
+-280 \sqrt{\kmin} \sqrt{k+\kmin} \Bigg(420 \eta ^2 k^4+5
+\eta 
+   (200 \eta  \kmin+303 i) k^3 \\
++\left(-416 \eta ^2 \kmin^2+6414 i \eta \kmin+11592\right)k^2 -24 \kmin \left(8 \eta ^2 \kmin^2-87
+i \eta  \kmin-126\right) k \\
++48 \kmin^2 \left(8 \eta ^2 \kmin^2+53 i \eta  \kmin+84\right)\Bigg) \displaybreak[0]\\
+-280 \sqrt{(k-\kmin)
+   \kmin} \Bigg(420 \eta ^2 k^4+5 \eta  (1083 i-200 \eta  \kmin) k^3 \\
+-2 \left(208 \eta ^2
+   \kmin^2+2547 i \eta  \kmin+5796\right) k^2+24 \kmin \left(8 \eta ^2
+\kmin^2+67 i
+   \eta  \kmin+126\right) k \\
++48 \kmin^2 \left(8 \eta ^2 \kmin^2-73 i \eta 
+   \kmin-84\right)\Bigg)\Bigg\} \displaybreak[1]\\
+% 
+% 
+- \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\frac{\alpha ^2}{2822400 \eta ^2 k^3} \Bigg\{105
+\left(270 \eta ^2 k^2+2765 i \eta  k+4956\right) \arctan \left(\sqrt{\frac{\kmin}{k-\kmin}}\right)
+   k^5 \\
++105 \left(270 \eta ^2 k^2-3745 i \eta  k-4956\right) \log \left(2 \sqrt{k}\right) k^5\\
+-105\left(270 \eta ^2 k^2-3745 i \eta  k-4956\right) \log \left(2
+   \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^5 \\
+-105 \left(270 \eta ^2 k^2+3745 i \eta 
+   k-4956\right) \log \left(2 \left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^5 \\
++105\left(270  \eta ^2 k^2+3745 i \eta  k-4956\right) \log \left(2
+   \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^5 \\
+-\frac{105}{2} \left(270 \eta ^2 k^2+2765 i \eta  k+4956\right) \pi  k^5\displaybreak[0]\\
+% 
+-\sqrt{\kmax (\kmax-k)} \Bigg(28350 \eta ^2 k^6+525 \eta  (36
+   \eta  \kmax-749 i) k^5 \\
++70 \left(216 \eta ^2 \kmax^2-3745 i \eta\kmax-7434\right) k^4 
+-40 \kmax \left(3516 \eta ^2 \kmax^2-133 i \eta  \kmax+8673\right) k^3 \\
+-48 \kmax^2 \left(1360 \eta ^2 \kmax^2-18655 i \eta  \kmax-22442\right) k^2 \\
++64 \kmax^3 \left(600 \eta ^2 \kmax^2-5110 i \eta  \kmax-5733\right) k \\
++256\kmax^4 \left(300 \eta ^2 \kmax^2+1855 i \eta  \kmax+2646\right)\Bigg) \displaybreak[0]\\
+% 
++\sqrt{\kmax(k+\kmax)} \Bigg(28350 \eta ^2 k^6-525 \eta  (36 \eta  \kmax-749 i) k^5 \\
++70 \left(216 \eta ^2  \kmax^2-3745 i \eta  \kmax-7434\right) k^4
++40 \kmax \left(3516 \eta ^2 \kmax^2-133 i \eta  \kmax+8673\right) k^3 \\
+-48 \kmax^2 \left(1360 \eta^2 \kmax^2-18655 i \eta  \kmax-22442\right) k^2
+-64 \kmax^3 \left(600\eta ^2 \kmax^2-5110 i \eta  \kmax-5733\right) k \\
++256 \kmax^4 \left(300 \eta^2 \kmax^2+1855 i \eta  \kmax+2646\right)\Bigg) \displaybreak[0] \\
+% 
+-\sqrt{\kmin} \sqrt{k+\kmin}
+   \Bigg(28350 \eta ^2 k^6-525 \eta  (36 \eta  \kmin-749 i) k^5 \\
++70 \left(216 \eta ^2 \kmin^2-3745 i \eta  \kmin-7434\right) k^4
++40 \kmin \left(3516 \eta ^2 \kmin^2-133 i \eta  \kmin+8673\right) k^3 \\
+-48 \kmin^2 \left(1360 \eta^2 \kmin^2-18655 i \eta  \kmin-22442\right) k^2
+-64 \kmin^3 \left(600\eta ^2 \kmin^2-5110 i \eta  \kmin-5733\right) k \\
++256 \kmin^4 \left(300 \eta^2\kmin^2+1855 i \eta  \kmin+2646\right)\Bigg) \displaybreak[0]\\
+-\sqrt{(k-\kmin) \kmin}\Bigg(28350 \eta ^2 k^6+525 \eta  (36 \eta  \kmin+553 i) k^5 \\
++70 \left(216\eta ^2 \kmin^2+2765 i \eta\kmin+7434\right) k^4 
+-40 \kmin \left(3516 \eta ^2\kmin^2-9247 i \eta\kmin-8673\right) k^3 \\
+-48 \kmin^2 \left(1360 \eta^2 \kmin^2+15155 i \eta\kmin+22442\right) k^2 
++64 \kmin^3 \left(600\eta ^2 \kmin^2+3710 i \eta\kmin+5733\right) k \\
++256 \kmin^4 \left(300 \eta ^2\kmin^2-2555 i \eta\kmin-2646\right)\Bigg)\Bigg\}
 \end{multline}
 
 
