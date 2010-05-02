@@ -178,7 +178,7 @@ perturbations $\mathcal{P}^2_{\delta\varphi_1} =
 \includegraphics[width=0.8\textwidth]{numerical/graphs/Pphi-kwmap-nohoriz-large}
 \label{fig:Pphi-kwmap}
 }
-\caption[Source Term and First Order Power Spectrum for $\kwmap$]{Source term and
+\caption[Source Term and First Order Power Spectrum for $\kwmap$]{Source term and 
 first order power spectrum for the WMAP pivot scale $\kwmap$.}
 \end{figure}
 % 
@@ -359,13 +359,14 @@ and the derivative in terms of $\N$ is
 
 The source term is found using \eq{eq:KG2-source-ntime} and the values of the background
 quantities. The analytical solution of \eq{eq:KG2-source-ntime} for this choice of first order
-solution is given in Appendix~\ref{sec:analyticsrc-apx} in Eqs. (\ref{}-\ref{}).
+solution is given in Appendix~\ref{sec:analyticsrc-apx} in Eqs.
+(\ref{eq:Jdefns-apx}-\ref{eq:JD-apx}).
 
 In Figure~\ref{fig:analytic-61before-res} the analytical and calculated solutions are plotted for
 one timestep about 60 e-foldings before the end of inflation. At a single time step the correlation
 between the two solutions for $S$ is very good. There is a deviation at small
-values of $k$ due to the divergence of the analytical solution as $k$ approaches zero. This
-divergence is not replicated in the calculated version. However, this only strongly affects the
+values of $k$ due to the analytical solution getting rapidly smaller as $k$ approaches zero. This
+ is not replicated in the calculated version. However, this only strongly affects the
 result for the smallest values of $k$ and for $\kwmap$ for example the relative error of the
 calculated solution compared to the analytical solution is about $10^{-4}$. The relative error of
 the calculated solution is shown in Figure~\ref{fig:analytic-61before-errors-res} for a single time
@@ -384,15 +385,29 @@ e-foldings before the end of inflation.}
 \begin{figure}
  \centering
  \includegraphics[width=0.8\textwidth]{numerical/graphs/analytic_v_calced_61beforeend_errors-large}
- % analytic_v_calced_61beforeend_errors-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432
-324
  \caption[Relative Error Of Calculated Solution at One Time Step]{The relative error of the
 calculated solution compared to the analytical solution for the source term. The error is shown
 for all $k$ values at one time step, approximately 60 e-foldings before the end of inflation.}
  \label{fig:analytic-61before-errors-res}
 \end{figure}
 
+The analytical and calculated values for the source term can also be compared for a single $k$
+value across a range of time steps. In Figure~\ref{fig:analytic-prehorizon-res} the absolute
+magnitude of the source term for $\kwmap$ is plotted for a range of a few e-foldings before horizon
+crossing. The analytical and calculated results are extremely similar and not distinguishable in the
+plot. The relative error of the calculated solution is around $10^{-4}$. Because the first order
+perturbations do not include any phase information the result is much smoother than the result
+generated using the full first order phase information. However, as the phase angle is a function of
+$|\kvi-\qvi|$ it cannot be trivially ignored in the computation of the full convolution integral. 
 
+\begin{figure}
+ \centering
+ \includegraphics{numerical/graphs/analytic_v_calced_prehorizon-large.pdf}
+ % analytic_v_calced_prehorizon-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Comparison of Solutions Before Horizon Crossing]{A comparison of the analytical and
+calculated results for the source term of the $\kwmap$ mode before horizon crossing.}
+ \label{fig:analytic-prehorizon-res}
+\end{figure}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
