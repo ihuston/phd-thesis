@@ -339,8 +339,8 @@ Solution}
 % =========================================================== %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 In this section results for the quadratic model will be compared with an analytic solution for this
-model. However, an analytic result is difficult to obtain for the case of the full first
-order solution in terms of Hankel functions with the phase information included. The analytic
+model. However, an analytical result is difficult to obtain for the case of the full first
+order solution in terms of Hankel functions with the phase information included. The analytical
 solution we will use, therefore, is the non-interacting de Sitter
 space solution with the phase information ignored. The first order perturbations are then given by
 % 
@@ -358,10 +358,40 @@ and the derivative in terms of $\N$ is
 % 
 
 The source term is found using \eq{eq:KG2-source-ntime} and the values of the background
-quantities. The analytic solution of \eq{eq:KG2-source-ntime} for this choice of first order
+quantities. The analytical solution of \eq{eq:KG2-source-ntime} for this choice of first order
 solution is given in Appendix~\ref{sec:analyticsrc-apx} in Eqs. (\ref{}-\ref{}).
 
-  
+In Figure~\ref{fig:analytic-61before-res} the analytical and calculated solutions are plotted for
+one timestep about 60 e-foldings before the end of inflation. At a single time step the correlation
+between the two solutions for $S$ is very good. There is a deviation at small
+values of $k$ due to the divergence of the analytical solution as $k$ approaches zero. This
+divergence is not replicated in the calculated version. However, this only strongly affects the
+result for the smallest values of $k$ and for $\kwmap$ for example the relative error of the
+calculated solution compared to the analytical solution is about $10^{-4}$. The relative error of
+the calculated solution is shown in Figure~\ref{fig:analytic-61before-errors-res} for a single time
+step.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/analytic_v_calced_61beforeend-large}
+ % analytic_v_calced_61beforeend-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Comparison of Analytical and Calculated Source Terms]{A comparison of the
+analytical and calculated solutions for the source term at one time step, approximately 60
+e-foldings before the end of inflation.}
+ \label{fig:analytic-61before-res}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/analytic_v_calced_61beforeend_errors-large}
+ % analytic_v_calced_61beforeend_errors-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432
+324
+ \caption[Relative Error Of Calculated Solution at One Time Step]{The relative error of the
+calculated solution compared to the analytical solution for the source term. The error is shown
+for all $k$ values at one time step, approximately 60 e-foldings before the end of inflation.}
+ \label{fig:analytic-61before-errors-res}
+\end{figure}
+
 
 
 
