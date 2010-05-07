@@ -56,6 +56,14 @@ to satisfy the observational constraints.
 One alternative possibility is to consider 
 multiple brane configurations\footnote{In certain limits this approach 
 is actually dual to considering wrapped branes \cite{Ward:2007gs}.}. 
+One scenario in which multiple branes are expected is after brane flux annihilation, in which
+branes travelling down the throat annihilate with the trapped flux, creating new branes
+\cite{thomasward, DeWolfe:2004qx, Kachru:2002gs}. These are then attracted by other branes and
+fluxes in other throats and propagate toward the bulk.
+In \Rref{thomasward} Thomas \& Ward argue that it is unlikely that only a single brane is left
+after the flux annihilation process, due to the large amount of fine tuning necessary to achieve
+this. Instead it is more likely that a number of branes remain.
+
 In the case where  
 $n$ branes are localised initially at equal distances, $l > l_s$, and 
 subsequently follow the same trajectory, 
@@ -204,94 +212,8 @@ l \equiv \frac{2(\alpha -3 )}{\alpha -6} \, .
 The inequalities \eqref{eq:Plimits} 
 are satisfied in the relativistic limit, where $X \simeq 1/f_2$, justifying their use.
 We consider the inflationary dynamics in the relativistic limit in what follows but for
-completeness we show in the next section that \eq{eq:defalpha} can be solved
+completeness we show in Appendix~\ref{sec:apx-multi} that \eq{eq:defalpha} can be solved
 analytically without this approximation. 
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{Analytic General Solution}
-\label{sec:apx-multi}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% =========================================================== %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\eq{eq:defalpha} can be analytically solved in full 
-generality without imposing the limits (\ref{eq:Plimits}) on the 
-derivatives of the kinetic function. This allows us to determine the 
-most general class of models where the non-linearity parameter 
-satisfies the condition $\fnleq \propto 1/\cs^2$ at leading order. 
-
-In general \eq{eq:defalpha} takes the form 
-% 
-\begin{equation}
-\label{eq:genPXeqn-multi}
-(2-\alpha ) P_{,X}P_{,XX} + 4XP^2_{,XX} = \frac{2\alpha }{3}
-X P_{,X}P_{,XXX}
-\end{equation}
-% 
-and this reduces to 
-% 
-\begin{equation}
-\label{eq:genreduce-multi}
-\alpha \Upsilon_{,X} = (6-\alpha ) \Upsilon^2 + \frac{3(2-\alpha )}{2}
-\frac{\Upsilon}{X} \, ,
-\end{equation}
-% 
-where $\Upsilon \equiv P_{,XX}/P_{,X}$. 
-\eq{eq:genreduce-multi} can be transformed into the 
-linear equation
-% 
-\begin{equation}
-\label{eq:lineargen-multi}
-U_{,X}+ \frac{3(2-\alpha )}{2\alpha} \frac{U}{X} = \frac{\alpha -6}{\alpha}
-\end{equation}
-% 
-after the change of variables $U \equiv 1/\Upsilon$
-and the general solution to \eq{eq:lineargen-multi} is given by
-%  
-\begin{equation}
-\label{eq:gensolnlinear-multi}
-\frac{P_{,XX}}{P_{,X}} = \frac{1}{X\left[ f_2(\varphi) X^{(\alpha -6)/2\alpha}
--2 \right] } \, .
-\end{equation}
-% 
-Integrating a second time implies that
-% 
-\begin{equation}
-\label{eq:secondint-multi}
-P_{,X} = -f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
-\end{equation}
-% 
-where $s \equiv (\alpha -6 )/(2 \alpha)$ and we have redefined 
-the arbitrary integration functions $f_i(\varphi )$.  
-Finally \eq{eq:secondint-multi} can be formally integrated 
-in terms of a hypergeometric function
-%  
-\begin{equation}
- \label{eq:thirdint-multi}
- P= -f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
-\right)  \, ,
-\end{equation}
-%  
-which represents the most general solution for this class of models. 
-Note that we have set the
-remaining constant of integration to zero to ensure 
-that the kinetic function vanishes in the limit of
-zero velocity. In fact this expression admits many 
-different classes of solution, arising as limits
-of the expansion of the hypergeometric function.
-
-
-% The special case of $\alpha =2$ $(s=-1)$ implies (after a 
-% further redefinition of the functions $f_i (\varphi ))$ that 
-% % 
-% \begin{equation}
-% \label{eq:DBIsoln-multi}
-% P = -f_1 \sqrt{1-f_2 X} -f_3
-% \end{equation}
-% % 
-% and this corresponds to the standard DBI action (\ref{eq:DBIkinetic}) 
-% \cite{chenetal,lidser2}.          
 
 
 
@@ -562,26 +484,45 @@ single-brane DBI term, with $l=1/2$ in the scheme outlined in
 Section~\ref{sec:relaxing-multi}. We can therefore apply the analysis of
 Section~\ref{sec:relaxing-dbi} to investigate whether the bounds described in
 Chapter~\ref{ch:dbi} can be relaxed.
-Comparison with \eq{eq:genaction-dbi} 
-implies that $f_1f_2 =2nW$ and $f_2=2/(T_3h^4)$. Hence, 
+Comparison with \eq{eq:genaction-dbi},
+% 
+\begin{equation}
+\label{eq:genaction-multi}
+P= -f_A (\varphi ) \sqrt{1-f_B (\varphi ) X} -f_C (\varphi) \,,
+\end{equation}
+% 
+implies that $f_Af_B =2nW$ and $f_B=2/(T_3h^4)$. Hence, 
 the new features of this model relative to the standard single-brane 
 scenario are parametrised in terms of the fuzzy potential $W (\varphi )$. 
 This configuration is conjectured to be dual to 
 a ${\rm D5}$-brane which is wrapped around a two-cycle 
 of the throat \cite{dual1,dual2,dual3}. 
 
+% % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Bound on \texorpdfstring{$n$}{n} during IR Propagation}
+\label{sec:ir-largen-bound-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % 
 
 The regime $W \gg 1$ is of interest for 
 relaxing the gravitational wave constraints\footnote{Note that 
 the case $n \gg 1$ and
 $W \sim 1$ will not significantly relax the BM bound, 
 since we require $n \ll N$ for backreaction effects to be negligible.}. 
-The generalised BM bound (\ref{eq:f2bound}) may now be expressed as 
+The generalised BM bound for IR models, with branes propagating towards the bulk, is given by 
+\eq{eq:f2IRlower}:
+% 
+\begin{equation}
+\label{eq:f2IRlower-multi}
+\frac{f_B\Mpl^4}{N} > \frac{(\Delta \N_*)^2}{4\pi^2}
+\frac{\sqrt{-3\fnleq}}{(1-n_s)\Pr}  \,.
+\end{equation}
+% 
+As we know $f_B$, this may be expressed as 
 a limit on the value of the warp factor $h(\varphi_*)$ on CMB scales: 
 % 
 \begin{equation}
 \label{eq:warptorelax}
-\frac{NT_3h^4_*}{\Mpl^4} < 
+N T_3 \left(\frac{h_*}{\Mpl}\right)^4 < 
 \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq}(\Delta \N_*)^2} \,.
 \end{equation}
 % 
@@ -598,21 +539,27 @@ value of the inflaton during observable inflation:
 \label{eq:phivalue-dbi}
 \frac{\varphi_*^4}{\Mpl^4} < 
 \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} 
-\frac{\lambda}{N} \,,
+\frac{T_3 L^4}{N} \,.
 \end{equation}
 %  
-where $\lambda \equiv \pi N/(2 \mathrm{Vol}(X_5))$. 
 However, non-perturbative string effects are expected to become 
 important below a cutoff scale, $\varphi_{\rm cut} = 
-h_{\rm cut} \lambda^{1/4} \ms$, where $h_{\rm cut}$ is the value of the 
+h_{\rm cut} \sqrt{T_3} L$, where $h_{\rm cut}$ is the value of the 
 warp factor at that scale. For consistency, therefore, one requires 
-$\varphi_*>\varphi_{\rm cut}$, which implies an upper limit on the 
+$\varphi_*>\varphi_{\rm cut}$, so that 
+% 
+\begin{equation}
+ N T_3 \left(\frac{h_\mathrm{cut} }{\Mpl}\right)^4 < 
+\frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2} \,,
+\end{equation}
+% 
+which implies an upper limit on the 
 ${\rm D3}$-brane charge: 
 % 
 \begin{equation}
 \label{eq:Nlimit-dbi}
-N< \frac{8\pi^2 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
-\left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,.
+N< \frac{64\pi^5 \gs (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
+\left( \frac{\Mpl}{h_{\rm cut} \ms} \right)^4   \,.
 \end{equation}
 % 
 Assuming the typical values $\ms \sim 10^{-2}\Mpl$, 
@@ -620,15 +567,19 @@ $\Delta \N_* \simeq 4$ and
 $h_{\rm cut} \sim 10^{-2}$ implies
 %   
 \begin{equation}
-N < 7 \times 10^7 (1-n_s)(-\fnleq)^{-1/2} < 2\times 10^6, 
+N < 1.76 \times 10^8 (1-n_s)(-\fnleq)^{-1/2} \,, 
 \end{equation}
 % 
-where 
-the latter inequality follows for $1-n_s <0.05$ and $-\fnleq>5$. 
+and for $1-n_s <0.05$ and $-\fnleq>5$ the inequality becomes
+% 
+\begin{equation}
+ N < 4\times 10^6\,.
+\end{equation}
+%  
 
 
-For an $AdS_5$ throat, the fuzzy potential 
-is a constant and the condition that $W \gg 1$ becomes 
+For an $AdS_5$ throat, the fuzzy potential $W$ is a constant,
+and the condition that $W \gg 1$ becomes 
 % 
 \begin{equation}
 \label{eq:Chatlimit}
@@ -641,8 +592,8 @@ Hence, combining inequalities
 \begin{equation}
 \label{eq:nlimit-dbi}
 \hat{C} \ll 
-\frac{32 \pi^4 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
-\frac{\gs}{\mathrm{Vol} (X_5) }
+\frac{2 (2\pi)^7 (1-n_s)\Pr}{\sqrt{-3\fnleq} ( \Delta \N_*)^2}
+\frac{\gs^2}{\mathrm{Vol} (X_5) }
 \left( \frac{\Mpl}{h_{\rm cut}\ms} \right)^4  \,,
 \end{equation}
 % 
@@ -650,24 +601,30 @@ and specifying $\gs \sim 10^{-2}$ and
 $\mathrm{Vol}(X_5) \simeq \pi^3$ then yields the limit  
 % 
 \begin{equation}
-\hat{C} \ll 10^{6} (1-n_s)(-\fnleq)^{-1/2} < 2 \times 10^4,
+\hat{C} \ll 2.25\times 10^{6} (1-n_s)(-\fnleq)^{-1/2} < 5\times 10^4,
 \end{equation}
 % 
  or equivalently,
 %   
 \begin{equation}
-n \ll 150.
+\label{eq:nbound-multi}
+n \ll 225.
 \end{equation}
 % 
-Furthermore, since $f_1f_2 \simeq {\rm constant}$, 
-the inequality (\ref{eq:genBMbound}) may be strengthened by a 
-factor of $(   \Neff /\Delta \N_*)^2$ by 
+In deriving the action \eqref{eq:largeP-multi} the number of coincident branes was assumed to be
+large. However we have now found that for the case of branes propagating towards the bulk, the
+number of such branes is bounded from above.
+Furthermore, since $f_Af_B \simeq {\rm constant}$ for the $AdS_5$ throat, 
+the stronger form of the inequality (\ref{eq:genBMbound}) may be used. The right hand side of
+inequality \eqref{eq:nlimit-dbi} would be reduced by a factor of $(   \Neff /\Delta \N_*)^2$ by
 substituting 
 $\Delta \N_* \rightarrow \Neff$. This ratio 
-could be as 
-high as $(60/4)^2 \simeq 200 $, which would rule out this particular
-model. 
+could be as high as $(60/4)^2 \simeq 200 $, leading to $n$ being less than $15$. In this case
+the assumption of large $n$ would clearly be inconsistent and the model would be ruled out. 
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection{Bound on D3 Charge at the Tip of the Throat}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 Since the branes are initially located at the tip of the 
 throat, another case of interest is the IR limit of the KS geometry, where 
@@ -1051,6 +1008,7 @@ case $\alpha =18/5$ or $s=-1/3$ in the analytic solution
 \eqref{eq:thirdint-multi} which after redefinition of the $f_i (\varphi)$
 becomes:
 % 
+
 \begin{equation}
 P = \frac{-f_1\left[8 - 4f_2X^{1/3}
 -\left(f_2X^{1/3}\right)^2\right]}{\sqrt{1-f_2X^{1/3}}} -f_3 \, .
@@ -1231,53 +1189,7 @@ be negligible. This is also satisfied when \eq{eq:nlimit-multi}
 holds. 
 
 
-For completeness we should also consider the 
-BM bound \eqref{eq:genBMbound} for this class of models. This is given by 
-% 
-\begin{equation}
-\label{eq:BMAdS-multi}
-r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnleq \,,
-\end{equation}
-%  
-and in the case of an $AdS_5 \times X_5$ throat simplifies to
-%  
-\begin{equation}
-\label{eq:bmadsbound}
-r_* < -\frac{5}{\Neff^2} 
-\frac{\fnleq}{(n-1)\sqrt{N}} \,.
-\end{equation}
-%  
-Comparing the limits in Eqs.~\eqref{eq:AdSupper-multi} and
-\eqref{eq:bmadsbound} 
-implies that the bound \eqref{eq:LHbound} is stronger than the corresponding BM
-bound \eqref{eq:genBMbound} if 
-% 
-\begin{equation}
-\label{eq:LHstrongerads}
-n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq \,,
-\end{equation}
-% 
-and this condition is always satisfied if 
-% 
-\begin{equation}
-\label{eq:allNbound-multi}
--5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq  <1  \, .
-\end{equation}
-% 
-Moreover, the bound \eqref{eq:allNbound-multi} will itself be satisfied for 
-all values of $\fnleq$ and $N$ if it is satisfied when the limits 
-$\fnleq =-151$ and $N=75852$ are imposed. Hence, we conclude that the bound
-\eqref{eq:LHbound} 
-is stronger for $\Neff < 75$. 
-In general, it is difficult to quantify 
-the magnitude of $\Neff$ without 
-imposing further restrictions on the parameters of the models 
-and, in particular, on the functional form of the inflaton potential. 
-However, if the ratio $\varepsilon_H/P_{,X}$ remains approximately 
-constant during the final stages of inflation, one would anticipate that 
-$\Neff \lesssim 60$. Nevertheless, if $N \ll 75852$, the bound 
-\eqref{eq:LHstrongerads} will only be violated for $n \le 3$ if 
-$\Neff \gg 60$.  
+  
 
 
 Finally, it should be emphasised that the derivation of the bound in

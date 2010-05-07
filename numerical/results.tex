@@ -132,7 +132,13 @@ dashed) parts of the perturbation are shown for the scale $\kwmap$.}
 Figure~\ref{fig:dp2realimag} shows the evolution of the second
 order perturbations for the scale $\kwmap$. As mentioned above, the
 overall amplitude of the second order perturbation is many orders of
-magnitude smaller than the corresponding first order one. In Figures~\ref{fig:dp1}
+magnitude smaller than the corresponding first order one. 
+% 
+The results given for $\dvp2$ in this
+chapter are for the full solution which includes a homogeneous and particular solution as described in
+Section~\ref{sec:initconds-num}.
+% 
+ In Figures~\ref{fig:dp1}
 and \ref{fig:dp2realimag} the field values have been rescaled by
 $k^{3/2}/(\sqrt{2}\pi)$ to allow for a better appreciation of the
 magnitude of the resulting power spectra.
@@ -178,7 +184,7 @@ perturbations $\mathcal{P}^2_{\delta\varphi_1} =
 \includegraphics[width=0.8\textwidth]{numerical/graphs/Pphi-kwmap-nohoriz-large}
 \label{fig:Pphi-kwmap}
 }
-\caption[Source Term and First Order Power Spectrum for $\kwmap$]{Source term and
+\caption[Source Term and First Order Power Spectrum for $\kwmap$]{Source term and 
 first order power spectrum for the WMAP pivot scale $\kwmap$.}
 \end{figure}
 % 
@@ -310,11 +316,8 @@ horizon. The results are for the range $K_1$.}
 % 
 
 The source term can also be compared at different time steps over all the $k$ values.
-In Figure~\ref{fig:src-3ns} the upper blue line shows $|S(k)|$ around 69 e-foldings
-before the end of
-inflation when $\dvp1$ has been initialised for only the very smallest $k$
-modes. The middle green
-line shows $|S|$ when all $\dvp1$ modes have started to evolve. Finally, the lower
+In Figure~\ref{fig:src-3ns} the green
+line shows $|S|$ when all $\dvp1$ modes have started to evolve. The lower
 red line illustrates $|S|$
 after all modes have exited the horizon, around 52 e-foldings before the end of
 inflation.
@@ -322,20 +325,95 @@ inflation.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{numerical/graphs/src_3ns-large}
-\caption[Source Term at Three Different Times]{The absolute magnitude of the source 
-term for all $k$ values in the range $K_1$ at three different time steps. The upper
-blue line shows $|S|$ at approximately $69$ e-foldings before the end of inflation
-when
-only the largest modes have been initialised. The middle green line shows $|S|$ when
-all modes
-have been initialised and the lower red dashed line when all modes have
+\caption[Source Term at Two Different Times]{The absolute magnitude of the source 
+term for all $k$ values in the range $K_1$ at two different time steps. The green line shows
+$|S|$ when all modes have been initialised. The lower red dashed line shows $|S|$ approximately 
+52 e-foldings before the end of inflation, when all modes have
 exited the horizon.}
 \label{fig:src-3ns}
 \end{figure}
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Comparison of \texorpdfstring{$V(\vp)=\msqphisq$}{m-squared Model} Results with Analytic
+Solution}
+\label{sec:analytic-res}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+In this section results for the quadratic model will be compared with an analytic solution for this
+model. However, an analytical result is difficult to obtain for the case of the full first
+order solution in terms of Hankel functions with the phase information included. The analytical
+solution we will use, therefore, is the non-interacting de Sitter
+space solution with the phase information ignored. The first order perturbations are then given by
+% 
+\begin{equation}
+ \dvp1(\eta, \kvi) = \frac{1}{a\sqrt{2 k}} \left( 1 - \frac{i}{k \eta}\right) \,,
+\end{equation}
+% 
+and the derivative in terms of $\N$ is 
+% 
+\begin{equation}
+ \dN{\dvp1}(\eta, \kvi) = -  \frac{1}{a\sqrt{2 k}} \left( 1 -
+                        \frac{i}{k \eta}\right) \left(1 + \frac{1}{aH\eta}\right)
+                         - \frac{i}{a^2 H \sqrt{2}}\sqrt{k}\,.
+\end{equation}
+% 
 
+The source term is found using \eq{eq:KG2-source-ntime} and the values of the background
+quantities. The analytical solution of \eq{eq:KG2-source-ntime} for this choice of first order
+solution is given in Appendix~\ref{sec:analyticsrc-apx} in Eqs.
+(\ref{eq:Jdefns-apx}-\ref{eq:JD-apx}).
+
+In Figure~\ref{fig:analytic-61before-res} the analytical and calculated solutions are plotted for
+one timestep about 60 e-foldings before the end of inflation. At a single time step the correlation
+between the two solutions for $S$ is very good. There is a deviation at small
+values of $k$ due to the analytical solution getting rapidly smaller as $k$ approaches zero. This
+ is not replicated in the calculated version. However, this only strongly affects the
+result for the smallest values of $k$ and for $\kwmap$ for example the relative error of the
+calculated solution compared to the analytical solution is about $10^{-4}$. The relative error of
+the calculated solution is shown in Figure~\ref{fig:analytic-61before-errors-res} for a single time
+step.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/analytic_v_calced_61beforeend-large}
+ % analytic_v_calced_61beforeend-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Comparison of Analytical and Calculated Source Terms]{A comparison of the
+analytical and calculated solutions for the source term at one time step, approximately 60
+e-foldings before the end of inflation.}
+ \label{fig:analytic-61before-res}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/analytic_v_calced_61beforeend_errors-large}
+ \caption[Relative Error Of Calculated Solution at One Time Step]{The relative error of the
+calculated solution compared to the analytical solution for the source term. The error is shown
+for all $k$ values at one time step, approximately 60 e-foldings before the end of inflation.}
+ \label{fig:analytic-61before-errors-res}
+\end{figure}
+
+The analytical and calculated values for the source term can also be compared for a single $k$
+value across a range of time steps. In Figure~\ref{fig:analytic-prehorizon-res} the absolute
+magnitude of the source term for $\kwmap$ is plotted for a range of a few e-foldings before horizon
+crossing. The analytical and calculated results are extremely similar and not distinguishable in the
+plot. The relative error of the calculated solution is around $10^{-4}$. Because the first order
+perturbations do not include any phase information the result is much smoother than the result
+generated using the full first order phase information. However, as the phase angle is a function of
+$|\kvi-\qvi|$ it cannot be trivially ignored in the computation of the full convolution integral. 
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{numerical/graphs/analytic_v_calced_prehorizon-large.pdf}
+ % analytic_v_calced_prehorizon-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Comparison of Solutions Before Horizon Crossing]{A comparison of the analytical and
+calculated results for the source term of the $\kwmap$ mode before horizon crossing.}
+ \label{fig:analytic-prehorizon-res}
+\end{figure}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -446,7 +524,7 @@ evolution for the four different models. After horizon crossing the magnitude of
 source term is larger for the quadratic and quartic models than for the other two.
 Towards the end of the numerical calculation there is a marked increase in $|S|$ for
 three of the models as $\bar{\varepsilon}_H$ increases towards unity. The end time of
-inflation is specified by hand for the hybrid inflation model, so this effect is
+inflation is specified by hand for the contrived toy model, so this effect is
 not seen.}
 \label{fig:cmp-src-kwmap}
 \end{figure}
@@ -484,9 +562,7 @@ models become apparent.}
 \end{figure}
 % 
 
-The fourth model, with potential $V(\vp)=\msqphisqwithV$, is nominally a hybrid
-inflation model
-requiring two fields.
+The fourth model, with potential $V(\vp)=\msqphisqwithV$, is a contrived toy model.
 As described in Section~\ref{sec:pots-num}, in order to perform the single field
 calculation, the end time of inflation must be specified by hand. In this simulation
 $\vp\simeq 8$
@@ -516,7 +592,54 @@ plans to extend the calculation to deal with more interesting models will be out
 There are many possible ways to improve the program outlined in
 Chapter \ref{ch:numericalsystem}. Chief amongst these is the implementation of the
 full second order source term given in \eqs{eq:SOKG-real-num} and
-\eqref{eq:Fdvk1-fourier-num}. Although clearly
+\eqref{eq:Fdvk1-fourier-num}. 
+As we have seen the slow roll approximation is very helpful in reducing the equations of motion to
+a manageable size. However, many interesting models break the assumptions of a slowly rolling field
+and to investigate these models it is necessary to use the full field equations.
+
+Models in which the field potential is not smooth due to the presence of a feature are
+particularly interesting examples of single field inflation for which slow roll is broken. 
+As the
+derivatives of the potential can be large around the feature, these models must necessarily be
+handled without assumptions about the size of the slow roll parameters. 
+In \Rref{Adams:2001vc} a model with a step potential was proposed which takes the form
+% 
+\begin{equation}
+ V(\vp) = \frac{1}{2}m^2\vp^2\left(1 + c\tanh\left(\frac{\vp -\vp_s}{d}\right)\right)\,,
+\end{equation}
+% 
+where $\vp_s$, $c$ and $d$ parametrise the location, height and width of the step feature. A bump
+model has also been proposed \cite{Chen:2008wn}, with potential 
+% 
+\begin{equation}
+ V(\vp) = \frac{1}{2}m^2\vp^2\left(1 + c\,\mathrm{sech}\left(\frac{\vp-\vp_b}{d}\right)\right)\,,
+\end{equation}
+% 
+where again $\vp_b$, $c$ and $d$ parametrise the feature. At first order these models introduce
+noticeable differences in the scalar power spectrum. They are also known to be able to produce
+significant amounts of non-Gaussianity in shapes which are not similar to either the local or
+equilateral types described in Section~\ref{sec:fnl-intro} \cite{Chen:2006xjb, Chen:2008wn}.
+
+
+It will also be important to go beyond slow roll in the multiple field case.
+To obtain analytic results, the study of multi-field models has often been restricted to those with
+either sum or product separable potentials. Even very simple
+models with two fields such as the double inflation model with the potential given by
+\cite{Turner:1986te, Silk:1986vc}
+% 
+\begin{equation}
+ V(\vp,\chi) = \frac{1}{2}m_\vp^2\vp^2 + \frac{1}{2}m_\chi^2 \chi^2\,,
+\end{equation}
+% 
+can violate slow roll when the fields $\vp$ and $\chi$ are close to
+equality. To go some way towards considering the full range of possible multi-field models with
+arbitrary inflationary potentials then requires that the full non-slow roll evolution equations are
+used.
+
+
+As far as the implementation of the code is concerned, the extension to the non-slow roll single
+field case is the next step.
+Although clearly
 more complicated than the slow roll case of \eq{eq:KG2-fourier-sr-ntime},
 only three more $\theta$ dependent terms need to be added to the $\A$--$\D$ terms
 listed in \eq{eq:AtoD-num}.  The four potentials considered above all result in 
@@ -526,6 +649,7 @@ different outcome in these models until near the end of the inflationary phase. 
 the field has stopped rolling slowly, new observable features are expected to
 arise, as is indeed the case at first order. 
 
+ 
 
 \eqs{eq:SOKG-real-num} and \eqref{eq:Fdvk1-fourier-num} must be written in
 terms of $\N$, with the $\theta$ dependent terms grouped together, in order to set
@@ -927,6 +1051,38 @@ using the standard method based on a Lagrangian formalism
 will
 therefore eventually allow a full numerical calculation of $\fnl$ to be made.
 
+Our numerical code evolves the second order perturbation itself and gives an insight into how this
+field behaves through the full course of the inflationary era. This is in contrast to other
+approaches which only consider the result for the three point function of the field, or
+alternatively of the curvature perturbation.
+% 
+The computational system handles perturbations with scales both inside and outside the horizon. Any
+effects of horizon crossing are visible and no assumptions need to be made about the form of the
+solution inside the horizon.
+
+The numerical code, when developed with the full equation, will not require any simplifying
+assumptions about the form of the potential used. This allows models which are not amenable to
+analytic analysis to be examined. Examples of models which require consideration beyond the slow
+roll approximation include single field models with a step or other feature in the potential, and
+multi-field double inflation models where the field values are roughly equal.
+
+
+The code we have developed is also applicable in other physical circumstances. Beyond scalar
+perturbations the form of the source term is similar in other interesting cosmological physics. 
+The generation and evolution of non-Gaussian curvature perturbations is, of course, directly related
+to the behaviour of the second order scalars as has been described in Section~\ref{sec:fnl-intro}
+and Section~\ref{sec:observable-perts}. Investigating and classifying non-Gaussian signatures for
+inflationary models is the main goal of our future work.
+
+The generation of vorticity in a cosmological setting has physical parallels with the equations we
+have studied. This second order effect arises through the vector perturbations which we have not
+considered in this thesis. Vorticity in the early universe could also lead to the generation of
+primordial magnetic fields, an area which is of increasing interest
+\cite{Christopherson:2009bt,1950ZNatA...5...65B}.
+% 
+The wave equations for tensor mode perturbations also exhibit the same form as the scalar equations
+with a source term at second order. The code we have developed could be modified to examine the
+behaviour of gravitational waves in the early universe at second order.
 
 In summary, we have demonstrated that numerically solving the closed
 Klein-Gordon equation for second order perturbations is possible. The slow roll

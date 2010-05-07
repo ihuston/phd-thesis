@@ -25,11 +25,11 @@ onehalfspacing % onehalfspacing or doublespacing
             %hyperref % Use hyperref for links
             ]{ihformat}
 
+
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.43 2009/11/26 16:29:09 ith Exp $}
 % \usepackage[inline]{showlabels}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Include list
@@ -44,7 +44,9 @@ dbi/multibrane,
 numerical/perts,
 numerical/numerical,
 numerical/results,
-theend
+theend,
+appendix,
+% corrections % corrections - Do NOT insert in final version!
 }
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \begin{document}
@@ -114,13 +116,20 @@ theend
 \include{theend}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
+% % % % % % % % % % % % % % % % % % % % % % % % 
+% Appendix
+\appendix
+\include{appendix}
+
+% Corrections - DO NOT INSERT IN FINAL VERSION
+% \include{corrections}
 % \listoftodos
 % \end{doublespace}
 \begin{singlespace}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Bibliography
 \bibliography{thesis}
-\bibliographystyle{../../packages/utphys-ih}
+\bibliographystyle{utphys-ih}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % 

@@ -1,0 +1,1006 @@
+% % % % % % % % % % % % % % % % % % % % % % 
+% appendix.tex - Ian Huston
+% 
+% % % % % % % % % % % % % % % % % % % % % % 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\chapter{Appendix}
+\label{ch:appendix}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+The following materials supplement the calculations and discussions in the main thesis.
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Analytic Solution of Generalised Sound Speed Relation}
+\label{sec:apx-multi}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\eq{eq:defalpha} can be analytically solved in full 
+generality without imposing the limits (\ref{eq:Plimits}) on the 
+derivatives of the kinetic function. This allows us to determine the 
+most general class of models where the non-linearity parameter 
+satisfies the condition $\fnleq \propto 1/\cs^2$ at leading order. 
+
+In general \eq{eq:defalpha} takes the form 
+% 
+\begin{equation}
+\label{eq:genPXeqn-multi}
+(2-\alpha ) P_{,X}P_{,XX} + 4XP^2_{,XX} = \frac{2\alpha }{3}
+X P_{,X}P_{,XXX}
+\end{equation}
+% 
+and this reduces to 
+% 
+\begin{equation}
+\label{eq:genreduce-multi}
+\alpha \Upsilon_{,X} = (6-\alpha ) \Upsilon^2 + \frac{3(2-\alpha )}{2}
+\frac{\Upsilon}{X} \, ,
+\end{equation}
+% 
+where $\Upsilon \equiv P_{,XX}/P_{,X}$. 
+\eq{eq:genreduce-multi} can be transformed into the 
+linear equation
+% 
+\begin{equation}
+\label{eq:lineargen-multi}
+U_{,X}+ \frac{3(2-\alpha )}{2\alpha} \frac{U}{X} = \frac{\alpha -6}{\alpha}
+\end{equation}
+% 
+after the change of variables $U \equiv 1/\Upsilon$
+and the general solution to \eq{eq:lineargen-multi} is given by
+%  
+\begin{equation}
+\label{eq:gensolnlinear-multi}
+\frac{P_{,XX}}{P_{,X}} = \frac{1}{X\left[ f_2(\varphi) X^{(\alpha -6)/2\alpha}
+-2 \right] } \, .
+\end{equation}
+% 
+Integrating a second time implies that
+% 
+\begin{equation}
+\label{eq:secondint-multi}
+P_{,X} = -f_1 (\varphi ) \left( 1- f_2(\varphi ) X^{-s} \right)^{1/(2s)}  \, ,
+\end{equation}
+% 
+where $s \equiv (\alpha -6 )/(2 \alpha)$ and we have redefined 
+the arbitrary integration functions $f_i(\varphi )$.  
+Finally \eq{eq:secondint-multi} can be formally integrated 
+in terms of a hypergeometric function
+%  
+\begin{equation}
+ \label{eq:thirdint-multi}
+ P= -f_1X \,{_2}F_1 \left( -\frac{1}{s}, -\frac{1}{2s}; 1-\frac{1}{s}, f_2X^{-s}
+\right)  \, ,
+\end{equation}
+%  
+which represents the most general solution for this class of models. 
+Note that we have set the
+remaining constant of integration to zero to ensure 
+that the kinetic function vanishes in the limit of
+zero velocity. In fact this expression admits many 
+different classes of solution, arising as limits
+of the expansion of the hypergeometric function.
+
+
+% The special case of $\alpha =2$ $(s=-1)$ implies (after a 
+% further redefinition of the functions $f_i (\varphi ))$ that 
+% % 
+% \begin{equation}
+% \label{eq:DBIsoln-multi}
+% P = -f_1 \sqrt{1-f_2 X} -f_3
+% \end{equation}
+% % 
+% and this corresponds to the standard DBI action (\ref{eq:DBIkinetic}) 
+% \cite{chenetal,lidser2}.          
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Generalised BM bound for Finite \texorpdfstring{$n$}{n} Models}
+\label{sec:apx-genbmbound}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+For completeness we should also consider the 
+BM bound \eqref{eq:genBMbound} for the finite $n$ multi-coincident brane models. This is
+given by 
+% 
+\begin{equation}
+\label{eq:BMAdS-multi}
+r_* < -\frac{42}{N \Neff^2}\sqrt{1 +(n-1)^2Y}\fnleq \,,
+\end{equation}
+%  
+and in the case of an $AdS_5 \times X_5$ throat simplifies to
+%  
+\begin{equation}
+\label{eq:bmadsbound}
+r_* < -\frac{5}{\Neff^2} 
+\frac{\fnleq}{(n-1)\sqrt{N}} \,.
+\end{equation}
+%  
+Comparing the limits in Eqs.~\eqref{eq:AdSupper-multi} and
+\eqref{eq:bmadsbound} 
+implies that the bound \eqref{eq:LHbound} is stronger than the corresponding BM
+bound \eqref{eq:genBMbound} if 
+% 
+\begin{equation}
+\label{eq:LHstrongerads}
+n > 1 -5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq \,,
+\end{equation}
+% 
+and this condition is always satisfied if 
+% 
+\begin{equation}
+\label{eq:allNbound-multi}
+-5.5 \times 10^{-14} N^{3/2} \Neff^2 \fnleq  <1  \, .
+\end{equation}
+% 
+Moreover, the bound \eqref{eq:allNbound-multi} will itself be satisfied for 
+all values of $\fnleq$ and $N$ if it is satisfied when the limits 
+$\fnleq =-151$ and $N=75852$ are imposed. Hence, we conclude that the bound
+\eqref{eq:LHbound} 
+is stronger for $\Neff < 75$. 
+In general, it is difficult to quantify 
+the magnitude of $\Neff$ without 
+imposing further restrictions on the parameters of the models 
+and, in particular, on the functional form of the inflaton potential. 
+However, if the ratio $\varepsilon_H/P_{,X}$ remains approximately 
+constant during the final stages of inflation, one would anticipate that 
+$\Neff \lesssim 60$. Nevertheless, if $N \ll 75852$, the bound 
+\eqref{eq:LHstrongerads} will only be violated for $n \le 3$ if 
+$\Neff \gg 60$.
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Discussion of Homogeneous Solution for Second Order Equation}
+\label{sec:init-apx}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+The homogeneous equation for the second order perturbations is  
+% 
+\begin{equation}
+\label{eq:homogen-apx}
+ \dvp2''(\eta, \kvi) + 2\H \dvp2'(\eta, \kvi) 
++ \left[ k^2 + a^2\Upp - 24\pi G (\vp_0')^2 \right]\dvp2(\eta,\kvi) = 0\,.
+\end{equation}
+% 
+During slow roll, with the slow roll variables $\varepsilon_H$ and $\eta_H$ defined in
+Chapter~\ref{ch:introduction}, this becomes
+% 
+\begin{equation}
+ \dvp2'' + 2\H \dvp2' + \left[k^2 + 3\H^2(\eta_H + \varepsilon_H)\right]\dvp2 = 0\,.
+\end{equation}
+% 
+If we let $u=a\dvp2$, this equation can be rewritten as
+% 
+\begin{equation}
+\label{eq:uH-apx}
+ u'' + \left[k^2 +\H^2(3\eta_H - 2\varepsilon_H - 2)\right]u = 0\,.
+\end{equation}
+% 
+When $\varepsilon_H$ is small, the conformal time $\eta$ is given by 
+% 
+\begin{equation}
+ \eta \simeq -\frac{1}{\H(1-\varepsilon_H)}\,,
+\end{equation}
+% 
+so we can rewrite \eq{eq:uH-apx} as
+% 
+\begin{equation}
+ u'' + \left[k^2 + \frac{1}{(-\eta)^2}\frac{3\eta_H -2\varepsilon_H -2}{(1-\varepsilon_H)^2} 
+       \right]u = 0\,.
+\end{equation}
+% 
+If the derivatives are taken in terms of $(-\eta)$ instead of $\eta$ this is in the form of a
+Bessel equation with solutions in terms of Hankel functions given by
+% 
+\begin{equation}
+ u_{1,2} = \sqrt{-\eta} H_\nu^{(1,2)}(-k\eta)\,, 
+\end{equation}
+% 
+where $H_\nu^{(1,2)}$ are the Hankel functions (Bessel functions of the third kind), and $\nu$ is
+given by
+% 
+\begin{equation}
+ \nu^2 = \frac{6\varepsilon_H -12\eta_H + 7}{4(1-2\varepsilon_H)}\,.
+\end{equation}
+%
+
+The full solution for $u$ is then
+% 
+\begin{equation}
+ u_\mathrm{full} = C_1 \sqrt{-\eta} H_\nu^{(1)}(-k\eta) +
+                   C_2 \sqrt{-\eta} H_\nu^{(2)}(-k\eta)\,,
+\end{equation}
+% 
+where $C_1, C_2\in \mathbb{C}$. When the (real) argument of the Hankel functions goes to $+\infty$
+they have the following asymptotic form \cite{abramowitz+stegun}:
+% 
+\begin{align}
+ H_\nu^{(1)}(z) &\rightarrow \sqrt{\frac{2}{\pi z}} e^{i(z-\frac{\pi}{2}\nu - \frac{\pi}{4})} \,,\\
+ H_\nu^{(2)}(z) &\rightarrow \sqrt{\frac{2}{\pi z}} e^{-i(z-\frac{\pi}{2}\nu - \frac{\pi}{4})} \,.
+\end{align}
+% 
+
+So at early times when $\eta\rightarrow -\infty$ and $-k\eta\rightarrow +\infty$ we have the
+following expressions for u:
+% 
+\begin{align}
+ u_{i} &= \sqrt{\frac{2}{\pi k}}\left( C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})}
+                + C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \right) \,,\\
+ u_{i}' &= i k\sqrt{\frac{2}{\pi k}}\left( -C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})}
+                + C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \right) \,,\\
+\end{align}
+% 
+where we have assumed that $\nu$ is slowly varying far in the past, \iec the derivatives of the slow
+roll parameters are very small. 
+
+As explained in Section~\ref{sec:initconds-num}, the results given for $\dvp2$ are for the full solution
+including the homogeneous part. To remove the homogeneous part of the solution the initial conditions
+for the full $\dvp2$ should be chosen such that $C_1=C_2=0$ at all times. 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Analytic Tests for \texorpdfstring{$\B,\wt{\C}$ and $\wt{\D}$}{B, C and D} Terms}
+\label{sec:apx-codetests}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% 
+% 
+% Bterm
+Analytic solutions can also be found for the $\B$, $\wt{\C}$ and $\wt{\D}$ terms.
+The $\B$ term integral, $I_\B$, is given by
+% 
+\begin{align}
+ \label{eq:bintegral-num}
+I_\B &= 2\pi \int_{\kmin}^{\kmax} \d q\, q^2\dvp1(\qvi)\B(\kvi,\qvi) \nonumber\\
+% 
+     &= 2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
+\int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-1/4}
+\cos{\theta}\sin{\theta}\,,
+\end{align}
+% 
+and has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
+% 
+\begin{align}
+\label{eq:intb-soln-num}
+ I_\B = -\frac{\pi\alpha^2}{168 k^2}\Bigg\{ 
+        &-63 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k}}{\sqrt{k+\kmin} + \sqrt{\kmin}}
+                            \Biggr)
+         + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{\kmax-k} +
+                      \sqrt{\kmax}}\Biggr) \nonumber \\
+        &-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+        \Bigg] \nonumber\\
+% 
+        &+\sqrt{\kmax}\Bigg[ \left(-65k^3 + 8k\kmax^2 \right)\left(\sqrt{k+\kmax} +
+          \sqrt{\kmax-k}\right) \nonumber \\
+        &\qquad +\left(22k^2\kmax -16\kmax^3\right) \left(\sqrt{k+\kmax} -
+         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
+        &+\sqrt{\kmin}\Bigg[ \left(65k^3 - 8k\kmin^2 \right)\left(\sqrt{k+\kmin} -
+          \sqrt{k-\kmin}\right) \nonumber \\
+        &\qquad +\left(-22k^2\kmin +16\kmin^3\right) \left(\sqrt{k+\kmin} +
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
+\end{align}
+% 
+If, in addition to $\dvp1(q) = \alpha/\sqrt{q}$, we also take
+% 
+\begin{equation}
+ \dN{\dvp1}(q) = -\frac{\alpha}{\sqrt{q}} -i\frac{\alpha\sqrt{q}}{\beta}\,
+\end{equation}
+% 
+then the $\wt{\C}$ and $\wt{\D}$ terms can be integrated analytically.
+The integral of the $\wt{\C}$ term is 
+% 
+\begin{align}
+ \label{eq:cint-num}
+I_{\wt{\C}} &= \int\d^3 q\, \dvp1(\qvi) \dN{\dvp1}(\kvi-\qvi) 
+    = 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\C}(\kvi, \qvi) \nonumber\\
+% 
+ &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
+     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} \right.\nonumber \\
+            &\qquad \qquad \left.+\frac{i}{\beta}\left(k^2 + q^2 -2kq
+\cos\theta\right)^{\frac{1}{4}}
+        \right) \sin\theta \d \theta\,,
+\end{align}
+% 
+and the analytic solution is given by
+% 
+\begin{align}
+\label{eq:cint-soln-num}
+I_{\wt{\C}} = -I_\A -i\frac{\pi\alpha^2}{240 \beta k}\Bigg\{ 
+        &15 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k+\kmin} + \sqrt{\kmin}}{\sqrt{k}}
+                            \Biggr)
+         + \log\Biggl( \frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k+\kmax}
+                        +\sqrt{\kmax}}\Biggr) \nonumber \\
+        &-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+        \Bigg] \nonumber\\
+% 
+        &+\sqrt{\kmax}\Bigg[ \left(15k^3 + 136k\kmax^2 \right)\left(\sqrt{k+\kmax} +
+          \sqrt{\kmax-k}\right) \nonumber \\
+        &\qquad +\left(118k^2\kmax -48\kmax^3\right) \left(\sqrt{k+\kmax} -
+         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
+% 
+        &-\sqrt{\kmin}\Bigg[ \left(15k^3 + 136k\kmin^2 \right)\left(\sqrt{k+\kmin} +
+          \sqrt{k-\kmin}\right) \nonumber \\
+        &\qquad +\left(118k^2\kmin +48\kmin^3\right) \left(\sqrt{k+\kmin} -
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
+\end{align}
+ % 
+The integral of the $\wt{\D}$ term is 
+% 
+\begin{align}
+ \label{eq:dint-num}
+I_{\wt{\D}} &= 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\D}(\kvi, \qvi) \\
+% 
+ &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
+     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} \right.\nonumber\\
+% 
+        &\qquad\qquad\left.+\frac{i}{\beta}\left(k^2 + q^2 -2kq
+\cos\theta\right)^{\frac{1}{4}}
+        \right) \cos\theta\sin\theta \d \theta\,,
+\end{align}
+% 
+and the analytic solution is
+% 
+\begin{align}
+\label{eq:dint-soln-num}
+I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
+        &135 k^5 \Bigg[ \log\Biggl(\frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k}}
+                            \Biggr)
+         + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{k+\kmin} +
+                          \sqrt{\kmin}}\Biggr) \nonumber \\
+        &\qquad -\frac{\pi}{2} + \arctan\left(
+\frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
+        \Bigg] \nonumber\\
+% 
+        &-\sqrt{\kmax}\Bigg[ \left(-185k^4 + 168k^2\kmax^2-32\kmax^4
+            \right)\left(\sqrt{k+\kmax} - \sqrt{\kmax-k}\right) \nonumber \\
+        &\qquad +\left(70k^3\kmax +16k\kmax^3\right) \left(\sqrt{k+\kmax} +
+         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
+% 
+        &+\sqrt{\kmin}\Bigg[ \left(-185k^4 + 168k^2\kmin^2 -32\kmax^4
+            \right)\left(\sqrt{k+\kmin} - \sqrt{k-\kmin}\right) \nonumber \\
+        &\qquad +\left(70k^3\kmin +16k\kmin^3\right) \left(\sqrt{k+\kmin} +
+         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
+\end{align}
+% 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Analytic Solution for Source Term}
+\label{sec:analyticsrc-apx}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+Suppose the first order perturbations are given by the non-interacting de Sitter space solution
+such that
+% 
+ \begin{equation}
+ \dvp1(\eta, \kvi) = \frac{1}{a\sqrt{2 k}} \left( 1 - \frac{i}{k \eta}\right) \,,
+\end{equation}
+% 
+and the derivative in terms of $\N$ is 
+% 
+\begin{equation}
+ \dN{\dvp1}(\eta, \kvi) = -  \frac{1}{a\sqrt{2 k}} \left( 1 -
+                        \frac{i}{k \eta}\right) \left(1 + \frac{1}{aH\eta}\right)
+                         - \frac{i}{a^2 H \sqrt{2}}\sqrt{k}\,.
+\end{equation}
+% 
+The analytic solution of \eq{eq:KG2-source-ntime} for this choice of first order
+solution can be written in terms of four integrals of the $\A$-$\wt{\D}$ terms:
+% 
+\begin{equation}
+\label{eq:KG2-source-jterms}
+S(\kvi) = \frac{1}{(2\pi)^2} \left\{J_\A + J_\B + J_{\wt{\C}} + J_{\wt{\D}} \right\}\,,
+\end{equation}
+% 
+where
+\begin{align}
+\label{eq:Jdefns-apx}
+ J_\A(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left( 
+                \frac{\Uppp}{H^2} q^2 + \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left[ 
+ 3a^2\Upp q^2  + \frac{7}{2}q^4 + 2k^2q^2 \right] \right) \dvp1(\qvi) \A(\kvi, \qvi) \,, \\
+% 
+ J_\B(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left(-\frac{9}{2} -
+\frac{q^2}{k^2}\right)kq^3 \dvp1(\qvi) \B(\kvi, \qvi) \,, \\
+%  
+J_{\wt{\C}}(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(
+                        -8\pi G \dN{\vp_{0}} \frac{3}{2}q^2 \right) \dN{\dvp1}(\qvi)
+\wt{\C}(\kvi, \qvi) \,, \\
+%  
+J_{\wt{\D}}(\kvi) &= \int_{\kmin}^{\kmax} \d q\, \left(
+                       8\pi G \dN{\vp_{0}} \left[2-\frac{q^2}{k^2}\right] kq \right)
+\dN{\dvp1}(\qvi) \wt{\D}(\kvi, \qvi) \,. 
+\end{align}
+% 
+
+The analytic solution for $J_\A$ is given by
+\begin{multline}
+\label{eq:JA-apx}
+% 
+J_\A = \left( 
+                \frac{\Uppp}{H^2} + \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\left[ 
+ 3a^2\Upp    + 2k^2 \right] \right)\frac{ \alpha^2}{2880\eta ^2 k}\Bigg\{\\
+240 k \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) \left(\eta ^2 k^2-12 i \eta  k-24\right) \\
+-120 k \pi  \left(\eta ^2 k^2-12 i \eta  k-24\right)
+-80\sqrt{\kmax}
+   \Bigg(\Bigg[3 \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right) k^2 \\
+-14 \kmax
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right) k+8 \kmax^2
+   \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right)\Bigg] \eta ^2 \\
++48 i \left(\kmax
+   \left(\sqrt{k+\kmax}-\sqrt{\kmax-k}\right)+k
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right)\right) \eta \\
++72
+   \left(\sqrt{k+\kmax}-\sqrt{\kmax-k}\right)\Bigg) \displaybreak[0]\\
+% 
+-80 \sqrt{\kmin} \Bigg(\Bigg[3
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) k^2
+-14 \kmin\left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right) k \\
++8 \kmin^2
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right)\Bigg] \eta ^2
++12 i \Bigg[k
+   \left(\sqrt{k-\kmin}-4 \sqrt{k+\kmin}\right) \\
++2 \kmin
+\left(\sqrt{k-\kmin}-2
+   \sqrt{k+\kmin}\right)\Bigg] \eta +72
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)\Bigg) \displaybreak[0]\\
+% 
++240 k \left(\eta ^2 k^2+24\right)\log\left(2 \sqrt{k}\right)
+-240 k \left(\eta ^2 k^2+24\right)\log \left(2 \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right)\\
+-240 k \left(\eta ^2 k^2+24\right) \log \left(2\left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right)\\
++240 k \left(\eta ^2 k^2+24\right) \log
+\left(2 \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right)\Bigg\} \displaybreak[0]\\
+% 
+%
++ \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\frac{7}{2}\frac{\alpha ^2}{2880 \eta
+^2 k} \Bigg\{3 \sqrt{2} \left(-317 \eta ^2 k^2+1000 i \eta  k+560\right) k^3 \\
++3\sqrt{2} \left(317 \eta ^2 k^2-1000 i \eta  k-560\right) k^3 \\
++45 \left(\eta ^2 k^2-12 i \eta k-16\right) \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) k^3
++45\left(\eta ^2 k^2+8 i \eta k+16\right)
+   \log \left(2 \sqrt{k}\right) k^3 \\
+-45 \left(\eta ^2 k^2+8 i \eta  k+16\right) \log \left(2
+   \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^3 \\
+-45 \left(\eta ^2 k^2-8 i \eta 
+   k+16\right) \log \left(2 \left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^3 \\
++45\left(\eta ^2 k^2-8 i \eta  k+16\right) \log \left(2
+\left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^3 -\frac{45}{2} \left(\eta ^2 k^2-12 i \eta 
+k-16\right) \pi  k^3 \displaybreak[0]\\
+% 
+-3 \sqrt{\kmax} \Bigg(15 \eta ^2
+   \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right) k^4 \\
+ +10 \eta  (\eta  \kmax+12 i)
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right) k^3 \\ 
++8 \left(\eta ^2 \kmax^2+10 i \eta 
+   \kmax+30\right) \left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right) k^2 \\
+-16 \kmax \left(11\eta ^2 \kmax^2-20 i \eta  \kmax-10\right)
+   \left(\sqrt{\kmax-k}+\sqrt{k+\kmax}\right) k \\
++128 \kmax^2 \left(\eta ^2 \kmax^2-5i \eta  \kmax-5\right)
+\left(\sqrt{\kmax-k}-\sqrt{k+\kmax}\right)\Bigg) \displaybreak[0]\\
+%  
+-3 \sqrt{\kmin} \Bigg(15 \eta ^2 \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) k^4 \\
++10 \eta\left(\eta  \kmin \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)-6 i \left(3
+   \sqrt{k-\kmin}+2 \sqrt{k+\kmin}\right)\right) k^3 \\
++8 \Bigg(\eta ^2
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) \kmin^2-5 i \eta  \left(3
+   \sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\
++30
+   \left(\sqrt{k+\kmin}-\sqrt{k-\kmin}\right)\Bigg) k^2 \displaybreak[0]\\
+-16 \kmin \Bigg(11 \eta ^2
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right) \kmin^2-10 i \eta 
+   \left(\sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\+10
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right)\Bigg) k \\
++64 \kmin^2 \Bigg(2 \eta ^2
+   \left(\sqrt{k-\kmin}+\sqrt{k+\kmin}\right) \kmin^2+5 i \eta 
+   \left(\sqrt{k-\kmin}-2 \sqrt{k+\kmin}\right) \kmin \\
++10
+   \left(\sqrt{k-\kmin}-\sqrt{k+\kmin}\right)\Bigg)\Bigg)\Bigg\}\,. 
+\end{multline}
+% 
+The analytic solution for $J_\B$ is 
+% 
+\begin{multline}
+\label{eq:JB-apx}
+% 
+J_\B = -\frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\frac{9}{2}\frac{\alpha ^2}{2822400 \eta ^2
+k} \Bigg\{29400 \left(4 \eta ^2 k^2+15 i \eta k+120\right)
+\arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) k^3 \\
++29400 \left(4 \eta ^2 k^2-51 i \eta 
+   k-120\right) \log \left(2 \sqrt{k}\right) k^3 \\
+-29400 \left(4 \eta ^2 k^2-51 i \eta k-120\right) \log
+   \left(2 \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^3 \\
+-29400 \left(4 \eta ^2 k^2+51 i \eta  k-120\right) \log \left(2
+\left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^3 \\
++29400 \left(4 \eta ^2 k^2+51 i \eta  k-120\right) \log \left(2
+   \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^3 \\
+-14700 \left(4 \eta ^2 k^2+15 i
+\eta 
+   k+120\right) \pi  k^3 
++280 \sqrt{\kmax (k+\kmax)} \Bigg(420 \eta ^2 k^4 \\
++5 \eta  (200 \eta \kmax+303 i) k^3 + \left(-416 \eta ^2 \kmax^2+6414 i \eta  \kmax+11592\right)
+k^2 \\ 
+- 24\kmax \left(8 \eta ^2 \kmax^2-87 i \eta  \kmax-126\right) k 
++48 \kmax^2\left(8\eta ^2 \kmax^2+53 i \eta  \kmax+84\right)\Bigg) \displaybreak[0]\\
+% 
+-280 \sqrt{\kmax (\kmax-k)}
+   \Bigg(420 \eta ^2 k^4-5 \eta  (200 \eta  \kmax+303 i) k^3 \\
++\left(-416 \eta ^2 \kmax^2+6414 i
+   \eta  \kmax+11592\right) k^2+24 \kmax \left(8 \eta ^2 \kmax^2-87 i \eta 
+   \kmax-126\right) k \\
++48 \kmax^2 \left(8 \eta ^2 \kmax^2+53 i \eta 
+   \kmax+84\right)\Bigg) \displaybreak[0] \\
+% 
+-280 \sqrt{\kmin} \sqrt{k+\kmin} \Bigg(420 \eta ^2 k^4+5
+\eta 
+   (200 \eta  \kmin+303 i) k^3 \\
++\left(-416 \eta ^2 \kmin^2+6414 i \eta \kmin+11592\right)k^2 -24 \kmin \left(8 \eta ^2 \kmin^2-87
+i \eta  \kmin-126\right) k \\
++48 \kmin^2 \left(8 \eta ^2 \kmin^2+53 i \eta  \kmin+84\right)\Bigg) \displaybreak[0]\\
+-280 \sqrt{(k-\kmin)
+   \kmin} \Bigg(420 \eta ^2 k^4+5 \eta  (1083 i-200 \eta  \kmin) k^3 \\
+-2 \left(208 \eta ^2
+   \kmin^2+2547 i \eta  \kmin+5796\right) k^2+24 \kmin \left(8 \eta ^2
+\kmin^2+67 i
+   \eta  \kmin+126\right) k \\
++48 \kmin^2 \left(8 \eta ^2 \kmin^2-73 i \eta 
+   \kmin-84\right)\Bigg)\Bigg\} \displaybreak[1]\\
+% 
+% 
+- \frac{8\pi G}{(aH)^2}\dN{\vp_{0}}\frac{\alpha ^2}{2822400 \eta ^2 k^3} \Bigg\{105
+\left(270 \eta ^2 k^2+2765 i \eta  k+4956\right) \arctan \left(\sqrt{\frac{\kmin}{k-\kmin}}\right)
+   k^5 \\
++105 \left(270 \eta ^2 k^2-3745 i \eta  k-4956\right) \log \left(2 \sqrt{k}\right) k^5\\
+-105\left(270 \eta ^2 k^2-3745 i \eta  k-4956\right) \log \left(2
+   \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^5 \\
+-105 \left(270 \eta ^2 k^2+3745 i \eta 
+   k-4956\right) \log \left(2 \left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^5 \\
++105\left(270  \eta ^2 k^2+3745 i \eta  k-4956\right) \log \left(2
+   \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^5 \\
+-\frac{105}{2} \left(270 \eta ^2 k^2+2765 i \eta  k+4956\right) \pi  k^5\displaybreak[0]\\
+% 
+-\sqrt{\kmax (\kmax-k)} \Bigg(28350 \eta ^2 k^6+525 \eta  (36
+   \eta  \kmax-749 i) k^5 \\
++70 \left(216 \eta ^2 \kmax^2-3745 i \eta\kmax-7434\right) k^4 
+-40 \kmax \left(3516 \eta ^2 \kmax^2-133 i \eta  \kmax+8673\right) k^3 \\
+-48 \kmax^2 \left(1360 \eta ^2 \kmax^2-18655 i \eta  \kmax-22442\right) k^2 \\
++64 \kmax^3 \left(600 \eta ^2 \kmax^2-5110 i \eta  \kmax-5733\right) k \\
++256\kmax^4 \left(300 \eta ^2 \kmax^2+1855 i \eta  \kmax+2646\right)\Bigg) \displaybreak[0]\\
+% 
++\sqrt{\kmax(k+\kmax)} \Bigg(28350 \eta ^2 k^6-525 \eta  (36 \eta  \kmax-749 i) k^5 \\
++70 \left(216 \eta ^2  \kmax^2-3745 i \eta  \kmax-7434\right) k^4
++40 \kmax \left(3516 \eta ^2 \kmax^2-133 i \eta  \kmax+8673\right) k^3 \\
+-48 \kmax^2 \left(1360 \eta^2 \kmax^2-18655 i \eta  \kmax-22442\right) k^2
+-64 \kmax^3 \left(600\eta ^2 \kmax^2-5110 i \eta  \kmax-5733\right) k \\
++256 \kmax^4 \left(300 \eta^2 \kmax^2+1855 i \eta  \kmax+2646\right)\Bigg) \displaybreak[0] \\
+% 
+-\sqrt{\kmin} \sqrt{k+\kmin}
+   \Bigg(28350 \eta ^2 k^6-525 \eta  (36 \eta  \kmin-749 i) k^5 \\
++70 \left(216 \eta ^2 \kmin^2-3745 i \eta  \kmin-7434\right) k^4
++40 \kmin \left(3516 \eta ^2 \kmin^2-133 i \eta  \kmin+8673\right) k^3 \\
+-48 \kmin^2 \left(1360 \eta^2 \kmin^2-18655 i \eta  \kmin-22442\right) k^2
+-64 \kmin^3 \left(600\eta ^2 \kmin^2-5110 i \eta  \kmin-5733\right) k \\
++256 \kmin^4 \left(300 \eta^2\kmin^2+1855 i \eta  \kmin+2646\right)\Bigg) \displaybreak[0]\\
+-\sqrt{(k-\kmin) \kmin}\Bigg(28350 \eta ^2 k^6+525 \eta  (36 \eta  \kmin+553 i) k^5 \\
++70 \left(216\eta ^2 \kmin^2+2765 i \eta\kmin+7434\right) k^4 
+-40 \kmin \left(3516 \eta ^2\kmin^2-9247 i \eta\kmin-8673\right) k^3 \\
+-48 \kmin^2 \left(1360 \eta^2 \kmin^2+15155 i \eta\kmin+22442\right) k^2 
++64 \kmin^3 \left(600\eta ^2 \kmin^2+3710 i \eta\kmin+5733\right) k \\
++256 \kmin^4 \left(300 \eta ^2\kmin^2-2555 i \eta\kmin-2646\right)\Bigg)\Bigg\}\,.
+\end{multline}
+% 
+The analytic solution for $J_{\wt{\C}}$ is 
+% 
+\begin{multline}
+\label{eq:JC-apx}
+% 
+ J_{\wt{\C}} = -8\pi G \dN{\vp_{0}} \frac{3}{2} \frac{\alpha ^2 }{14400 \beta ^2 \eta ^4 k}
+\Bigg\{-15 k \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right)
+   \Bigg(9 \eta ^4 k^4-60 i \eta ^3 k^3-560 \eta ^2 k^2 \\
++960 i \eta  k-80 \beta ^2 \eta ^2 \left(\eta ^2 k^2-12 i \eta  k-24\right) 
++20 \beta  \eta\left(-3 i \eta ^3 k^3-32 \eta ^2 k^2+96 i \eta k+192\right)+1920\Bigg)
+\displaybreak[0]\\
+% 
++\frac{15}{2} k \pi  \Bigg(9 \eta ^4 k^4-60 i \eta ^3 k^3-560 \eta ^2
+k^2+960 i
+   \eta  k-80 \beta ^2 \eta ^2 \left(\eta ^2 k^2-12 i \eta  k-24\right) \\
++20 \beta  \eta  \left(-3 i\eta ^3 k^3-32 \eta ^2 k^2+96 i \eta  k+192\right)+1920\Bigg)
+\displaybreak[0]\\
+% 
+-\sqrt{\kmax (\kmax-k)} \Bigg(9 \left(15 k^4+10 \kmax k^3-248 \kmax^2 k^2+336 \kmax^3 k
+-128\kmax^4\right) \eta ^4 \\
++3840 i (k-\kmax)^2 \kmax \eta ^3 +80 \left(69 k^2-178 \kmax k+184 \kmax^2\right) \eta ^2 \\ 
++400 \beta ^2 \left(\left(3 k^2-14 \kmax k+8 \kmax^2\right) \eta^2 
++48 i (k-\kmax) \eta -72\right)\eta ^2+19200 i (k-\kmax) \eta \\
++320 \beta  \Bigg[12 i   (k-\kmax)^2 \kmax \eta ^3+\left(21 k^2-62 \kmax k+56 \kmax^2\right) \eta
+^2 \\
++120 i(k-\kmax) \eta  -180\Bigg] \eta -28800\Bigg) \displaybreak[0] \\
+% 
++\sqrt{\kmax (k+\kmax)} \Bigg(9\left(15 k^4-10 \kmax k^3-248 \kmax^2 k^2-336 \kmax^3 k-128
+\kmax^4\right) \eta ^4 \\
++3840 i \kmax (k+\kmax)^2 \eta ^3+80 \left(69 k^2+178 \kmax k+184 \kmax^2\right)\eta^2 \\
++400 \beta^2 \left(\left(3 k^2+14 \kmax k+8 \kmax^2\right) \eta ^2 -48 i (k+\kmax)
+   \eta -72\right) \eta ^2 \\
+-19200 i (k+\kmax) \eta +320 \beta  \Bigg[12 i \kmax
+(k+\kmax)^2 \eta ^3+\left(21 k^2+62 \kmax k+56 \kmax^2\right) \eta ^2 \\
+-120 i (k+\kmax) \eta -180\Bigg] \eta -28800\Bigg) \displaybreak[0] \\
+% 
++\sqrt{\kmin} \sqrt{k+\kmin} \Bigg(9 \left(-15 k^4+10  \kmin k^3+248 \kmin^2 k^2+336 \kmin^3 k+128
+\kmin^4\right) \eta ^4 \\
+-3840 i \kmin (k+\kmin)^2 \eta ^3-80 \left(69 k^2+178 \kmin k+184 \kmin^2\right)\eta^2 \\
+-400 \beta ^2 \left(\left(3 k^2+14 \kmin k+8 \kmin^2\right) \eta ^2-48 i(k+\kmin)
+   \eta -72\right) \eta ^2 \\
++19200 i (k+\kmin) \eta +320 \beta  \Bigg[-12 i \kmin
+   (k+\kmin)^2 \eta ^3-\left(21 k^2+62 \kmin k+56 \kmin^2\right) \eta ^2 \\
++120 i(k+\kmin) \eta +180\Bigg] \eta +28800\Bigg) \displaybreak[0]\\
+% 
+-\sqrt{(k-\kmin) \kmin} \Bigg(-9\left(15
+   k^4+10 \kmin k^3-248 \kmin^2 k^2+336 \kmin^3 k-128 \kmin^4\right) \eta^4 \\
++60 i \left(15 k^3-54 \kmin k^2+8 \kmin^2 k+16 \kmin^3\right) \eta ^3
+-80 \left(39k^2-38  \kmin k+104 \kmin^2\right) \eta ^2 \\
++400 \beta ^2 \left(\left(3 k^2-14 \kmin k+8 \kmin^2\right) \eta ^2+12 i (k+2 \kmin) \eta
++72\right) \eta ^2 \\
++4800 i (k+2 \kmin) \eta +20 i \beta  \Bigg[3 \left(15 k^3-54 \kmin k^2+8 \kmin^2 k+16
+\kmin^3\right) \eta ^3 \\
++32 i \left(3 k^2+4 \kmin k+8 \kmin^2\right) \eta ^2+480 (k+2 \kmin) \eta -2880
+i\Bigg]
+   \eta +28800\Bigg) \displaybreak[0] \\
+% 
++15 k \left(9 \eta ^4 k^4-400 \eta ^2 k^2-320 \beta  \eta 
+\left(\eta ^2
+   k^2-12\right)+80 \beta ^2 \eta ^2 \left(\eta ^2 k^2+24\right)+1920\right) \log \left(2
+\sqrt{k}\right) \\
+-15k \Bigg(9 \eta ^4 k^4-400 \eta ^2 k^2-320 \beta  \eta  \left(\eta ^2 k^2-12\right)\\
++80 \beta ^2\eta ^2 \left(\eta ^2 k^2+24\right)+1920\Bigg) \log \left(2
+   \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) \\
+-15 k \Bigg(9 \eta ^4 k^4-400 \eta ^2 k^2-320
+   \beta  \eta  \left(\eta ^2 k^2-12\right) \\
++80 \beta ^2 \eta ^2 \left(\eta ^2
+k^2+24\right)+1920\Bigg) \log \left(2 \left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) \\
++15 k \Bigg(9 \eta ^4 k^4-400\eta ^2 k^2-320 \beta  \eta  \left(\eta ^2 k^2-12\right) \\
++80 \beta ^2 \eta ^2 \left(\eta ^2 k^2+24\right)+1920\Bigg) \log \left(2
+   \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right)\Bigg\} \,.
+\end{multline}
+% 
+The analytic solution for $J_{\wt{\D}}$ is 
+% 
+\begin{multline}
+\label{eq:JD-apx}
+% 
+J_{\wt{\D}} = 8\pi G \dN{\vp_{0}}\frac{\alpha ^2}{302400\beta ^2\eta ^4 k} 
+\Bigg\{-5040 k \arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right) \Bigg(9 \eta ^4 k^4 
++230 \eta ^2 k^2+260 i \eta k\\
++20 \beta ^2 \eta ^2 \left(2 \eta ^2 k^2+13 i \eta  k-12\right) 
++10\beta \eta \left(27 \eta^2 k^2+52 i \eta  k-48\right)-240\Bigg) \displaybreak[0]\\
++2520 k \pi\Bigg(9 \eta ^4 k^4+230 \eta ^2 k^2+260 i \eta  k+20
+\beta ^2\eta ^2 \left(2 \eta ^2 k^2+13 i \eta  k-12\right)\\
++10 \beta  \eta  \left(27 \eta ^2 k^2+52 i\eta k-48\right)-240\Bigg)
++\frac{16\sqrt{k+\kmax}}{\kmax^{3/2}} \Bigg(-35 \eta ^2 \Bigg(111 \eta ^2
+   \kmax^2 \displaybreak[0]\\
++192 i \eta  \kmax+64 \beta  \eta  (3 i \eta  \kmax+1)+64\Bigg) k^4
+-5\eta\Bigg(-294 \eta ^3 \kmax^3-717 i \eta ^2 \kmax^2+2656 \eta  \kmax \\
++960 \beta ^2\eta ^2 (3 \eta  \kmax-i)+\beta  \eta  \left(-717 i \eta ^2 \kmax^2+5536 \eta 
+\kmax-1920 i\right)-960 i\Bigg) k^3 \\
+-6 \Bigg(-588 \eta ^4 \kmax^4+1305 i \eta ^3 \kmax^3+9965
+\eta ^2 \kmax^2+15520 i \eta  \kmax\displaybreak[0]\\
++20 \beta ^2 \eta ^2 \left(45 \eta ^2\kmax^2+776 i\eta\kmax+252\right)+5 \beta\eta\Bigg(261 i
+\eta ^3 \kmax^3+2173 \eta ^2\kmax^2 
++6208 i\eta  \kmax+2016\Bigg) \displaybreak[0]\\
++5040\Bigg) k^2 +4 \kmax \Bigg(84 \eta ^4 \kmax^4-330 i\eta ^3 \kmax^3-3275 \eta ^2 \kmax^2+7065 i
+\eta  \kmax-15 \beta ^2 \eta ^2 \Bigg(20\eta ^2 \kmax^2 \\
+-471 i \eta  \kmax+1008\Bigg)-5 \beta\eta  \left(66 i \eta ^3\kmax^3+715\eta ^2 \kmax^2-2826 i \eta 
+\kmax+6048\right)-15120\Bigg) k\\
++8 \kmax^2\Bigg(-84 \eta^4 \kmax^4+330 i \eta ^3 \kmax^3-1450 \eta ^2 \kmax^2+2385 i \eta 
+\kmax+15 \beta^2 \eta ^2 \Bigg(20 \eta ^2 \kmax^2\\
++159 i \eta  \kmax+378\Bigg)+10 \beta  \eta\left(33 i \eta ^3 \kmax^3-115 \eta ^2 \kmax^2+477 i
+\eta \kmax+1134\right)+5670\Bigg)\Bigg)\displaybreak[0]\\
++16\kmax^{-3/2} \sqrt{\kmax-k}\Bigg(35\eta ^2 \left(111 \eta ^2 \kmax^2+192 i \eta 
+\kmax+64 \beta \eta  (3 i \eta \kmax+1)+64\right) k^4\\
++5 \eta  \Bigg(294 \eta ^3 \kmax^3+717 i \eta^2 \kmax^2-2656
+   \eta  \kmax-960 \beta ^2 \eta ^2 (3 \eta  \kmax-i) \\
++i \beta  \eta  \left(717 \eta ^2  \kmax^2+5536 i \eta  \kmax+1920\right)+960 i\Bigg) k^3+6
+\Bigg(-588 \eta ^4\kmax^4+1305 i \eta ^3 \kmax^3 \\
++9965 \eta ^2 \kmax^2+15520 i \eta\kmax+20 \beta
+   ^2 \eta ^2 \left(45 \eta ^2 \kmax^2+776 i \eta  \kmax+252\right) \\
++5 \beta  \eta\left(261 i \eta ^3 \kmax^3+2173 \eta ^2 \kmax^2+6208 i \eta 
+\kmax+2016\right)+5040\Bigg)k^2
++4 \kmax \Bigg(84 \eta ^4 \kmax^4 \\
+-330 i \eta ^3 \kmax^3-3275 \eta ^2\kmax^2+7065 i\eta  \kmax-15 \beta ^2 \eta ^2 \left(20 \eta ^2
+\kmax^2-471 i \eta \kmax+1008\right)\\
+-5 \beta  \eta  \left(66 i \eta ^3 \kmax^3+715 \eta ^2\kmax^2-2826 i
+   \eta  \kmax+6048\right)-15120\Bigg) k \displaybreak[0] \\
+-8 \kmax^2 \Bigg(-84 \eta ^4 \kmax^4+330i \eta^3 \kmax^3-1450 \eta ^2 \kmax^2+2385 i \eta 
+\kmax+15 \beta ^2 \eta ^2 \bigg(20\eta ^2 \kmax^2\\
++159 i \eta  \kmax+378\bigg)+10 \beta  \eta\left(33 i \eta ^3\kmax^3-115 \eta ^2 \kmax^2+477 i \eta 
+\kmax+1134\right)+5670\Bigg)\Bigg)\displaybreak[0]\\
+% 
++16 \kmin^{-3/2}
+   \sqrt{k+\kmin} \Bigg(35 \eta ^2 \left(111 \eta ^2 \kmin^2+192 i \eta  \kmin+64
+\beta \eta  (3 i \eta  \kmin+1)+64\right) k^4 \\
+-5 \eta  \Bigg(294 \eta ^3 \kmin^3+717 i \eta^2\kmin^2-2656 \eta  \kmin-960 \beta ^2 \eta ^2 (3
+\eta  \kmin-i) \\
++i \beta  \eta\left(717 \eta ^2 \kmin^2+5536 i \eta  \kmin+1920\right)+960 i\Bigg) k^3
++6\Bigg(-588 \eta ^4 \kmin^4 \\
++1305 i \eta ^3 \kmin^3+9965 \eta ^2 \kmin^2+15520 i \eta 
+\kmin+20 \beta ^2 \eta ^2 \left(45 \eta ^2 \kmin^2+776 i \eta  \kmin+252\right) \\
++5 \beta  \eta \left(261 i \eta ^3 \kmin^3+2173 \eta ^2 \kmin^2+6208 i \eta 
+   \kmin+2016\right)+5040\Bigg) k^2\displaybreak[0]\\
+-4 \kmin \Bigg(84 \eta ^4 \kmin^4-330 i \eta^3\kmin^3-3275 \eta ^2 \kmin^2+7065 i \eta  \kmin-15
+\beta ^2 \eta ^2 \bigg(20\eta ^2\kmin^2\\
+-471 i \eta  \kmin+1008\bigg)
+-5 \beta  \eta  \left(66 i\eta ^3\kmin^3+715 \eta ^2 \kmin^2-2826 i \eta 
+\kmin+6048\right)-15120\Bigg) k\\
+-8 \kmin^2\Bigg(-84 \eta^4 \kmin^4+330 i \eta ^3 \kmin^3-1450 \eta ^2 \kmin^2+2385 i \eta 
+\kmin+15 \beta^2 \eta ^2 \bigg(20 \eta ^2 \kmin^2 \\
++159 i \eta  \kmin+378\bigg)+10 \beta  \eta\left(33 i
+   \eta ^3 \kmin^3-115 \eta ^2 \kmin^2+477 i \eta 
+   \kmin+1134\right)+5670\Bigg)\Bigg)\displaybreak[0]\\
+% 
+-16\kmin^{-3/2}\sqrt{k-\kmin}\Bigg(35\eta ^2 \left(111 \eta ^2 \kmin^2+192 i \eta  \kmin+64 \beta
+ \eta  (3 i \eta \kmin+1)+64\right) k^4\\
++10 \eta  \Bigg(147 \eta ^3 \kmin^3-1104 i \eta ^2\kmin^2+1552
+   \eta  \kmin+480 \beta ^2 \eta ^2 (3 \eta  \kmin-i)\\
++16 \beta  \eta  \left(-69 i \eta^2  
+\kmin^2+187 \eta  \kmin-60 i\right)-480 i\Bigg) k^3+6 \Bigg(-588 \eta ^4
+\kmin^4+480 i\eta ^3 \kmin^3\\
++8165 \eta ^2 \kmin^2+14720 i \eta  \kmin-20 \beta ^2 \eta ^2\left(45
+   \eta ^2 \kmin^2-736 i \eta  \kmin-252\right)\\
++5 \beta  \eta  \left(96 i \eta ^3 \kmin^3+1453 \eta ^2 \kmin^2+5888 i \eta 
+\kmin+2016\right)+5040\Bigg) k^2 \\
++4 \kmin \Bigg(84 \eta ^4 \kmin^4+120 i \eta ^3 \kmin^3-2675 \eta ^2\kmin^2+6165 i\eta  \kmin+15
+\beta ^2 \eta ^2 \bigg(20 \eta ^2 \kmin^2 \\
++411 i \eta\kmin-1008\bigg)+5 i \beta  \eta  \left(24 \eta ^3 \kmin^3+475 i \eta ^2
+\kmin^2+2466 \eta  \kmin+6048 i\right)-15120\Bigg) k\displaybreak[0]\\
++8 \kmin^2 \bigg(84 \eta ^4\kmin^4+120i \eta^3 \kmin^3+2050 \eta ^2 \kmin^2-3285 i \eta  \kmin+15
+\beta ^2 \eta ^2 \bigg(20\eta ^2\kmin^2 \\
+-219 i \eta  \kmin-378\bigg)+10 \beta  \eta  \left(12 i
+\eta ^3\kmin^3+235  \eta ^2 \kmin^2-657 i \eta 
+\kmin-1134\right)-5670\bigg)\Bigg) \displaybreak[0]\\
+% 
+-5040 k\bigg(-9 \eta ^4 k^4-45 i \eta ^3 k^3-150 \eta ^2 k^2-340 i \eta  k+20 \beta ^2 \eta ^2
+\left(2\eta ^2 k^2-17 i \eta  k+12\right)\\
++5 \beta  \eta  \left(-9 i \eta ^3 k^3-22 \eta ^2 k^2-136
+i \eta k+96\right)+240\bigg) \log \left(2 \sqrt{k}\right)\\
++5040 k \bigg(-9 \eta ^4 k^4-45 i \eta^3 k^3-150 \eta^2 k^2-340 i \eta  k+20 \beta ^2 \eta ^2
+\left(2 \eta ^2 k^2-17 i \eta  k+12\right)\\
++5 \beta \eta \left(-9 i \eta ^3 k^3-22 \eta ^2 k^2-136 i \eta  k+96\right)+240\bigg) \log
+\left(2 \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) \\
++5040 k \bigg(-9 \eta ^4 k^4+45 i \eta^3 k^3-150 \eta ^2 k^2+340 i \eta  k+20 \beta ^2 \eta ^2
+\left(2 \eta ^2 k^2+17 i \eta k+12\right)\\
++5 \beta\eta  \left(9 i \eta ^3 k^3-22 \eta ^2 k^2+136 i \eta  k+96\right)+240\bigg) \log \left(2
+   \left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right)\\
+-5040 k \bigg(-9 \eta ^4 k^4+45 i \eta^3 k^3-150 \eta ^2 k^2+340 i \eta  k+20 \beta ^2 \eta ^2
+\left(2 \eta ^2 k^2+17 i \eta k+12\right) \\
++5 \beta \eta  \left(9 i \eta ^3 k^3-22 \eta ^2 k^2+136 i \eta  k+96\right)+240\bigg) \log \left(2
+   \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right)\Bigg\} \displaybreak[1]\\
+% 
+% 
+% 
+% 
+ +8\pi G \dN{\vp_{0}} \frac{\alpha ^2}{604800\beta ^2 \eta^4 k^3} 
+\Bigg\{315 \Bigg(-9 \eta ^4 k^4+60 i \eta^3 k^3 -130 \eta ^2 k^2+300 i \eta  k\\
++20\beta ^2 \eta ^2 \left(4 \eta ^2 k^2+15 i \eta  k+120\right)+10
+\beta  \eta  \left(6 i \eta ^3 k^3-5 \eta^2 k^2+60 i \eta  k+480\right)\\
++2400\Bigg)\arctan\left(\sqrt{\frac{\kmin}{k-\kmin}}\right)k^3 
++315 \Bigg(9 \eta ^4 k^4+10 i \eta ^3 k^3 +290 \eta ^2 k^2-1020 i \eta  k\\
++20 \beta ^2 \eta^2\left(4 \eta ^2 k^2-51 i \eta  k-120\right)
++10\beta  \eta  \left(i \eta ^3 k^3+37 \eta ^2 k^2-204i\eta k-480\right)\\
+-2400\Bigg) \log \left(2\sqrt{k}\right) k^3 -315 \Bigg(9 \eta ^4 k^4+10 i \eta ^3
+k^3+290\eta ^2 k^2-1020 i \eta  k\\
++20 \beta ^2 \eta ^2 \left(4 \eta ^2 k^2-51 i \eta 
+k-120\right)+10\beta  \eta \left(i \eta ^3 k^3+37 \eta ^2 k^2-204 i \eta  k-480\right)\\
+-2400\Bigg)\log \left(2 \left(\sqrt{\kmax}+\sqrt{\kmax-k}\right)\right) k^3 
+-315 \Bigg(9 \eta ^4 k^4-10 i \eta^3 k^3\\
++290 \eta ^2 k^2+1020 i \eta  k+20 \beta ^2 \eta ^2\left(4 \eta ^2 k^2+51 i \eta 
+k-120\right)+10 \beta\eta \bigg(-i \eta ^3 k^3+37 \eta ^2 k^2\\
++204 i \eta k-480\bigg)
+-2400\Bigg) \log\left(2\left(\sqrt{\kmax}+\sqrt{k+\kmax}\right)\right) k^3+315 \Bigg(9 \eta ^4
+k^4-10 i \eta^3 k^3\\
++290 \eta ^2 k^2+1020 i \eta  k+20 \beta ^2 \eta ^2 \left(4 \eta ^2 k^2+51 i\eta 
+k-120\right)\\
++10   \beta  \eta  \left(-i \eta ^3 k^3+37 \eta ^2 k^2+204 i \eta 
+k-480\right)
+-2400\Bigg) \log\left(2  \left(\sqrt{\kmin}+\sqrt{k+\kmin}\right)\right) k^3 \displaybreak[0]\\
+% 
+-\frac{315}{2} \Bigg(-9 \eta ^4 k^4+60 i \eta ^3 k^3-130 \eta ^2 k^2+300 i \eta  k+20 \beta ^2
+\eta ^2 \left(4 \eta ^2 k^2+15 i \eta k+120\right)\\
++10 \beta  \eta  \left(6 i \eta ^3 k^3-5 \eta ^2 k^2+60 i \eta 
+k+480\right)+2400\Bigg) \pi k^3\displaybreak[0]\\
++\sqrt{\kmax} \sqrt{k+\kmax} \Bigg\{2835 \eta ^4 k^6-630 i \eta ^3(5 \beta  \eta-3 i
+   \kmax \eta +5) k^5+14 \eta ^2 \Bigg(1800 \beta ^2 \eta ^2\\
+-1428 \kmax^2 \eta ^2+2710 i\kmax \eta +5 \beta  (542 i \eta  \kmax+3201) \eta +14205\Bigg) k^4\\
++4\eta \Bigg(2364 \eta^3 \kmax^3+6620 i \eta ^2 \kmax^2-9465 \eta  \kmax+75 \beta ^2 \eta ^2 (200
+\eta \kmax+303 i)\displaybreak[0]\\
++5 \beta  \eta  \left(1324 i \eta ^2 \kmax^2+1107 \eta  \kmax+9090
+   i\right)+22725 i\Bigg) k^3\\
+-24 \Bigg(-1392 \eta ^4 \kmax^4+2500 i \eta ^3\kmax^3+13010 \eta^2 \kmax^2-16035 i \eta  \kmax+5
+\beta ^2 \eta ^2 \bigg(208 \eta ^2\kmax^2\\
+-3207 i \eta \kmax-5796\bigg)+10 \beta  \eta  \left(250 i \eta ^3 \kmax^3+1405 \eta ^2
+   \kmax^2-3207 i \eta  \kmax-5796\right)-28980\Bigg) k^2\displaybreak[0] \\
+% 
++160 \kmax \Bigg(24 \eta^4  \kmax^4-88 i \eta ^3 \kmax^3-597 \eta ^2 \kmax^2+783 i \eta  \kmax-9
+\beta ^2 \eta ^2 \bigg(8 \eta ^2 \kmax^2\\
+-87 i \eta  \kmax-126\bigg)+\beta  \eta  \left(-88 i\eta ^3
+   \kmax^3-669 \eta ^2 \kmax^2+1566 i \eta  \kmax+2268\right)+1134\Bigg) k\\
++320 \kmax^2 \Bigg(-24 \eta ^4 \kmax^4+88 i \eta ^3 \kmax^3-348 \eta ^2
+\kmax^2+477 i\eta  \kmax\\
++9 \beta ^2 \eta ^2 \left(8 \eta ^2 \kmax^2+53 i \eta\kmax+84\right)+2
+   \beta  \eta  \bigg(44 i \eta ^3 \kmax^3-138 \eta ^2 \kmax^2\\
++477 i \eta\kmax+756\bigg)+756\Bigg)\Bigg\}\displaybreak[1]\\
+% 
++\sqrt{\kmax} \sqrt{\kmax-k} \Bigg\{-2835 \eta^4 k^6-630 \eta ^3 (5 i \beta  \eta +3 \kmax \eta +5
+i) k^5-14 \eta ^2 \Bigg(1800 \beta ^2\eta^2\\
+-1428 \kmax^2 \eta ^2+2710 i \kmax \eta +5 \beta (542i \eta  \kmax+3201)\eta +14205\Bigg) k^4\\
++4\eta  \Bigg(2364 \eta ^3 \kmax^3+6620 i \eta ^2 \kmax^2-9465\eta\kmax+75 \beta ^2 \eta ^2 (200
+\eta \kmax+303 i)\\
++5 \beta  \eta  \left(1324 i \eta ^2 \kmax^2+1107 \eta  \kmax+9090 i\right)+22725
+i\Bigg) k^3+24 \Bigg(-1392 \eta ^4\kmax^4+2500 i \eta ^3 \kmax^3 \\
++13010 \eta ^2 \kmax^2-16035 i\eta\kmax+5 \beta^2 \eta ^2 \left(208 \eta ^2 \kmax^2-3207 i \eta 
+\kmax-5796\right) \displaybreak[0]\\
++10 \beta  \eta\left(250 i \eta ^3 \kmax^3+1405 \eta ^2 \kmax^2-3207 i \eta 
+\kmax-5796\right)-28980\Bigg) k^2\\
++160 \kmax \Bigg(24 \eta ^4 \kmax^4-88 i \eta ^3 \kmax^3-597
+\eta ^2 \kmax^2+783 i \eta  \kmax-9 \beta ^2 \eta ^2 \bigg(8 \eta ^2 \kmax^2-87 i \eta \kmax\\
+-126\bigg)+\beta  \eta  \left(-88 i \eta ^3 \kmax^3-669 \eta ^2\kmax^2+1566 i
+   \eta  \kmax+2268\right)+1134\Bigg) k \displaybreak[0]\\
+-320 \kmax^2 \Bigg(-24 \eta ^4 \kmax^4+88i \eta^3 \kmax^3-348 \eta ^2 \kmax^2+477 i \eta  \kmax\\
++9\beta ^2 \eta ^2 \left(8\eta ^2\kmax^2+53 i \eta  \kmax+84\right)+2 \beta  \eta  \bigg(44 i
+\eta^3\kmax^3-138 \eta^2 \kmax^2+477 i \eta  \kmax+756\bigg)+756\Bigg)\Bigg\}\displaybreak[0]\\
+% 
+-\sqrt{k-\kmin}\sqrt{\kmin} \Bigg\{-2835 \eta ^4 k^6+1890 i \eta ^3 (10 \beta  \eta +i \kmin \eta
++10) k^5+14 \eta ^2 \Bigg(1800 \beta ^2 \eta ^2\\
++1428 \kmin^2 \eta ^2-1660 i \kmin \eta +5 \beta(-332 i\eta  \kmin-1761) \eta -10605\Bigg) k^4-4
+\eta  \Bigg(-2364 \eta ^3 \kmin^3\\
++13480 i\eta ^2 \kmin^2
++39465 \eta  \kmin+75 \beta ^2 \eta ^2(200 \eta  \kmin-1083 i)+5 \beta\eta 
+   \bigg(2696 i \eta ^2 \kmin^2+10893 \eta  \kmin \displaybreak[0]\\
+-32490 i\bigg)-81225 i\Bigg) k^3
+-24 \Bigg(1392 \eta ^4 \kmin^4-1000 i \eta ^3 \kmin^3-10930 \eta ^2 \kmin^2+12735 i
+\eta \kmin\\
++5 \beta ^2 \eta ^2 \left(208 \eta ^2 \kmin^2+2547 i \eta\kmin+5796\right)+10
+   \beta  \eta  \bigg(-100 i \eta ^3 \kmin^3\\
+-989 \eta ^2 \kmin^2+2547 i \eta \kmin+5796\bigg)+28980\Bigg) k^2+160 \kmin \Bigg(24 \eta ^4
+\kmin^4+32 i \eta^3\kmin^3 \displaybreak[0]\\
+-453 \eta ^2 \kmin^2+603 i \eta  \kmin+9 \beta ^2 \eta ^2 \left(8 \eta^2
+   \kmin^2+67 i \eta  \kmin+126\right)+\beta  \eta  \bigg(32 i \eta ^3 \kmin^3-381
+\eta ^2 \kmin^2\\
++1206 i \eta  \kmin+2268\bigg)+1134\Bigg) k+320 \kmin^2 \Bigg(24 \eta^4 \kmin^4+32 i \eta ^3
+\kmin^3+492 \eta ^2 \kmin^2-657 i \eta  \kmin\\
++9\beta ^2 \eta ^2 \left(8 \eta ^2 \kmin^2-73 i \eta  \kmin-84\right)+2 \beta  \eta  \bigg(16 i
+\eta ^3 \kmin^3\\
++282 \eta ^2 \kmin^2-657 i \eta\kmin-756\bigg)-756\Bigg)\Bigg\}\displaybreak[1]\\
+% 
++\sqrt{\kmin} \sqrt{k+\kmin} \Bigg(-2835 \eta^4 k^6+630 \eta ^3 (5 i \beta  \eta +3 \kmin \eta +5
+i) k^5-14 \eta ^2 \bigg(1800 \beta ^2\eta^2\\
+-1428 \kmin^2 \eta ^2+2710 i \kmin \eta +5 \beta  (542i \eta  \kmin+3201)\eta
+   +14205\bigg) k^4-4 \eta  \bigg(2364 \eta ^3 \kmin^3\\
++6620 i \eta ^2 \kmin^2-9465\eta\kmin+75 \beta ^2 \eta ^2 (200 \eta  \kmin+303 i)+5 \beta  \eta 
+\bigg(1324 i \eta ^2\kmin^2+1107 \eta  \kmin \displaybreak[0]\\
++9090 i\bigg)+22725 i\bigg) k^3+24 \Bigg(-1392 \eta^4
+   \kmin^4+2500 i \eta ^3 \kmin^3+13010 \eta ^2 \kmin^2-16035 i \eta \kmin\\
++5 \beta^2 \eta ^2 \left(208 \eta ^2 \kmin^2-3207 i \eta  \kmin-5796\right)+10 \beta  \eta 
+\bigg(250 i \eta ^3 \kmin^3+1405 \eta ^2 \kmin^2 \displaybreak[0]\\
+-3207 i \eta\kmin-5796\bigg)-28980\Bigg) k^2-160 \kmin \Bigg(24 \eta ^4 \kmin^4-88 i \eta ^3
+\kmin^3-597 \eta ^2 \kmin^2+783 i \eta  \kmin\\
+-9 \beta ^2 \eta ^2 \left(8 \eta ^2 \kmin^2-87 i\eta \kmin-126\right)+\beta  \eta  \bigg(-88 i
+\eta ^3 \kmin^3-669 \eta ^2\kmin^2\\
++1566 i \eta  \kmin+2268\bigg)+1134\Bigg) k-320 \kmin^2 \bigg(-24 \eta ^4 \kmin^4+88
+i \eta^3 \kmin^3-348 \eta ^2 \kmin^2+477 i \eta  \kmin\\
++9 \beta ^2 \eta ^2 \left(8\eta ^2 \kmin^2+53 i \eta  \kmin+84\right)\\
++2 \beta  \eta  \left(44 i\eta ^3\kmin^3-138 \eta
+   ^2 \kmin^2+477 i \eta  \kmin+756\right)+756\bigg)\Bigg)\Bigg\} \,.
+\end{multline}
+
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Discussion of properties of source term for different potentials}
+\label{sec:apx-srcdisc}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% =========================================================== %
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+The evolution of the source term for the four potentials has been discussed in
+Section~\ref{sec:compare-res}, with particular emphasis on the evolution after horizon crossing as
+shown in Figure~\ref{fig:cmp-src-kwmap}. Here the differences apparent at early times, shown in
+Figure~\ref{fig:cmp-src-zoom-kwmap} are commented on.
+
+At early times the first order perturbations are still very close to the Bunch-Davies initial
+conditions as outlined in Section~\ref{sec:initconds-num}. In particular the perturbations are
+highly oscillatory with phase $\exp(-k\eta)$, where $\eta$ is the conformal time. When
+$\varepsilon_H$ is small this is given by 
+% 
+\begin{equation}
+ \eta = -\frac{1}{aH(1-\varepsilon_H)}\,.
+\end{equation}
+% 
+It is therefore instructive to plot the slow roll parameter $\varepsilon_H$ for the four potentials
+at these early times, as has been done in Figures~\ref{fig:eps-apx} and \ref{fig:eps-zoom-apx}. For
+completeness the other slow roll parameter $\eta_H$ defined in \eq{eq:etaHdefn-intro} has been
+plotted in Figures~\ref{fig:eta-apx} and \ref{fig:eta-zoom-apx}. 
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/epsilon_slowroll-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Value of $\varepsilon_H$ for the Four Potentials]{The value of $\varepsilon_H$ for
+the four potentials.}
+ \label{fig:eps-apx}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/epsilon_slowroll_zoom-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Value of $\varepsilon_H$ for the Four Potentials at Early Times]{The value of
+$\varepsilon_H$ for the four potentials at early times.}
+ \label{fig:eps-zoom-apx}
+\end{figure}
+
+Figures~\ref{fig:eps-apx} and \ref{fig:eta-apx} show $\varepsilon_H$ and $\eta_H$ for the
+four different models. Figures~\ref{fig:eps-zoom-apx} and
+\ref{fig:eta-zoom-apx} show the early stages of the evolution as in
+Fig~\ref{fig:cmp-src-zoom-kwmap}.
+
+As is clear from these figures the change in the slow roll parameters is not easily related
+to the differences in the profiles of the four potentials in Figure~\ref{fig:cmp-src-zoom-kwmap}. In
+particular, although $\varepsilon_H$ and $\eta_H$ are quite different for the quadratic and quartic
+models, the magnitude of $S$ after horizon crossing for these models is very similar.
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/eta_slowroll-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Value of $\eta_H$ for the Four Potentials]{The value of $\eta_H$ for the four
+potentials.}
+ \label{fig:eta-apx}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/eta_slowroll_zoom-large.pdf}
+ % epsilon_slowroll-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Value of $\eta_H$ for the Four Potentials at Early Times]{The value of $\eta_H$ for the
+four potentials at early times.}
+ \label{fig:eta-zoom-apx}
+\end{figure}
+
+At the earliest stages of the calculation of $S$, one or two e-foldings after the initialisation of
+the first order perturbation, there appear to be small oscillations which affect the models in
+different ways. The highly oscillatory initial conditions, combined with the small but appreciable
+differences in $\varepsilon_H$ and $\eta_H$ contribute to this effect. In
+Figure~\ref{fig:cos-keta-apx} the real part of the phase of the initial condition for $\dvp1$ is
+plotted just after initialisation for the four potentials. The small differences in phase for each
+model combined with the sharp cutoff at large and small $k$ values could explain the variations
+in $|S|$ at early times as seen in Figure~\ref{fig:cmp-src-zoom-kwmap}. 
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.75\textwidth]{numerical/graphs/cos_keta_kwmap_zoom-large.pdf}
+ % cos_keta_kwmap_zoom-large.pdf: 432x324 pixel, 72dpi, 15.24x11.43 cm, bb=0 0 432 324
+ \caption[Real Part of the Phase at Early Times]{The real part of the phase in the Bunch Davies
+initial conditions for the four different
+potentials at early times.}
+ \label{fig:cos-keta-apx}
+\end{figure}

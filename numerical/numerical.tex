@@ -439,11 +439,9 @@ is the effective potential resulting from the monodromy inflation model of D$4$
 branes, where observable tensor modes are possible \cite{Silverstein:2008sg,
 Alabidi:2008ej}.
 % 
- \item $V(\vp) = \msqphisqwithV$. This hybrid inflation model requires inflation to
-be terminated by the decay of another field. However, this will not be
-implemented in the code. Instead,
-inflation will be set by hand to end when $\vp \simeq 8$. By taking a value of
-$U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
+ \item $V(\vp) = \msqphisqwithV$. This is a contrived toy model which requires inflation to
+be terminated by hand. We will set inflation to end when $\vp \simeq 8$. By taking a value
+of $U_0 = 5\e{-10}\Mpl^{4}$ a blue spectrum ($n_s>1$) can then be obtained
 \cite{Linde:1993cn,Komatsu:2008hk}.
 % 
 \end{enumerate}
@@ -606,8 +604,27 @@ assumptions about the existence of second order perturbations before
 the simulation begins. Therefore, we set the initial condition for each second order
 perturbation mode to be $\dvp2=0, \dN{\dvp2}=0$ at
 the time when the corresponding first order perturbation is initialised.
+One argument in favour of this choice of initial conditions is that far in the past the perturbations
+are assumed to be Gaussian and therefore the second (and higher) order perturbations would be identically zero. 
+% 
+
+A numerical solution for the second order perturbation equation will contain a homogeneous solution
+and a particular solution. 
+The homogeneous part of the solution of
+the slow roll equation, \eq{eq:KG2-fourier-sr-ntime}, can be calculated analytically 
+as done in Appendix~\ref{sec:init-apx}. On their own the initial conditions we have chosen above do not  
+remove this homogeneous solution from the result for $\dvp2$ in general. In order to do this, and keep only the 
+particular solution to the equation, it is necessary to ensure that the homogeneous solution is the trivial $(0,0)$ 
+solution throughout the evolution. We have not attempted to do this in this thesis but it is an important
+issue for further study in the future. Approaches to removing the homogeneous part of the solution include
+calculating a semi-analytic value for the second order initial conditions which equals the particular solution
+ or numerically trying to select the trivial
+homogeneous solution by introducing a ramping function to the source term in \eq{eq:KG2-source-ntime}.
+In summary, the results quoted in Chapter~\ref{ch:results} for the second order perturbations include both a homogeneous 
+and particular solution. Extraction of either of these parts from the full result remains an issue for future study.
 
 
+  
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -973,125 +990,8 @@ contrast to Figure~\ref{fig:err-deltaks}, $\kmin=1\e{-61}\Mpl=3.8\e{-5}\Mpc^{-1}
  \label{fig:err-deltak-kmin}
 \end{figure}
  
-% 
-% 
-% Bterm
-Analytic solutions can also be found for the $\B$, $\wt{\C}$ and $\wt{\D}$ terms.
-The $\B$ term integral, $I_\B$, is given by
-% 
-\begin{align}
- \label{eq:bintegral-num}
-I_\B &= 2\pi \int_{\kmin}^{\kmax} \d q\, q^2\dvp1(\qvi)\B(\kvi,\qvi) \nonumber\\
-% 
-     &= 2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}}
-\int_{0}^{\pi} \d\theta\, (k^2 + q^2 -2k q \cos{\theta})^{-1/4}
-\cos{\theta}\sin{\theta}\,,
-\end{align}
-% 
-and has the following analytic solution when $\dvp1(q) = \alpha/\sqrt{q}$:
-% 
-\begin{align}
-\label{eq:intb-soln-num}
- I_\B = -\frac{\pi\alpha^2}{168 k^2}\Bigg\{ 
-	&-63 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k}}{\sqrt{k+\kmin} + \sqrt{\kmin}}
-			    \Biggr)
-	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{\kmax-k} +
-		      \sqrt{\kmax}}\Biggr) \nonumber \\
-	&-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
-	\Bigg] \nonumber\\
-% 
-        &+\sqrt{\kmax}\Bigg[ \left(-65k^3 + 8k\kmax^2 \right)\left(\sqrt{k+\kmax} +
-	  \sqrt{\kmax-k}\right) \nonumber \\
-	&\qquad +\left(22k^2\kmax -16\kmax^3\right) \left(\sqrt{k+\kmax} -
-         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
-	&+\sqrt{\kmin}\Bigg[ \left(65k^3 - 8k\kmin^2 \right)\left(\sqrt{k+\kmin} -
-	  \sqrt{k-\kmin}\right) \nonumber \\
-	&\qquad +\left(-22k^2\kmin +16\kmin^3\right) \left(\sqrt{k+\kmin} +
-         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
-\end{align}
-% 
-If, in addition to $\dvp1(q) = \alpha/\sqrt{q}$, we also take
-% 
-\begin{equation}
- \dN{\dvp1}(q) = -\frac{\alpha}{\sqrt{q}} -i\frac{\alpha\sqrt{q}}{\beta}\,
-\end{equation}
-% 
-then the $\wt{\C}$ and $\wt{\D}$ terms can be integrated analytically.
-The integral of the $\wt{\C}$ term is 
-% 
-\begin{align}
- \label{eq:cint-num}
-I_{\wt{\C}} &= \int\d^3 q\, \dvp1(\qvi) \dN{\dvp1}(\kvi-\qvi) 
-    = 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\C}(\kvi, \qvi) \nonumber\\
-% 
- &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
-     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} \right.\nonumber \\
-            &\qquad \qquad \left.+\frac{i}{\beta}\left(k^2 + q^2 -2kq
-\cos\theta\right)^{\frac{1}{4}}
-	\right) \sin\theta \d \theta\,,
-\end{align}
-% 
-and the analytic solution is given by
-% 
-\begin{align}
-\label{eq:cint-soln-num}
-I_{\wt{\C}} = -I_\A -i\frac{\pi\alpha^2}{240 \beta k}\Bigg\{ 
-	&15 k^4 \Bigg[ \log\Biggl(\frac{\sqrt{k+\kmin} + \sqrt{\kmin}}{\sqrt{k}}
-			    \Biggr)
-	 + \log\Biggl( \frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k+\kmax}
-			+\sqrt{\kmax}}\Biggr) \nonumber \\
-	&-\frac{\pi}{2} + \arctan\left( \frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
-	\Bigg] \nonumber\\
-% 
-        &+\sqrt{\kmax}\Bigg[ \left(15k^3 + 136k\kmax^2 \right)\left(\sqrt{k+\kmax} +
-	  \sqrt{\kmax-k}\right) \nonumber \\
-	&\qquad +\left(118k^2\kmax -48\kmax^3\right) \left(\sqrt{k+\kmax} -
-         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
-% 
-	&-\sqrt{\kmin}\Bigg[ \left(15k^3 + 136k\kmin^2 \right)\left(\sqrt{k+\kmin} +
-	  \sqrt{k-\kmin}\right) \nonumber \\
-	&\qquad +\left(118k^2\kmin +48\kmin^3\right) \left(\sqrt{k+\kmin} -
-         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
-\end{align}
- % 
-The integral of the $\wt{\D}$ term is 
-% 
-\begin{align}
- \label{eq:dint-num}
-I_{\wt{\D}} &= 2\pi \int \d q\, q^2 \dvp1(\qvi) \wt{\D}(\kvi, \qvi) \\
-% 
- &= -2\pi\alpha^2 \int_{\kmin}^{\kmax} \d q\, q^{\frac{3}{2}} \int_0^\pi 
-     \left( \left(k^2 + q^2 -2kq \cos\theta\right)^{-\frac{1}{4}} \right.\nonumber\\
-% 
-        &\qquad\qquad\left.+\frac{i}{\beta}\left(k^2 + q^2 -2kq
-\cos\theta\right)^{\frac{1}{4}}
-	\right) \cos\theta\sin\theta \d \theta\,,
-\end{align}
-% 
-and the analytic solution is
-% 
-\begin{align}
-\label{eq:dint-soln-num}
-I_{\wt{\D}} = -I_\B &-i\frac{\pi\alpha^2}{900\beta k^2}\Bigg\{ \nonumber \\
-	&135 k^5 \Bigg[ \log\Biggl(\frac{\sqrt{\kmax-k} + \sqrt{\kmax}}{\sqrt{k}}
-			    \Biggr)
-	 + \log\Biggl( \frac{\sqrt{k+\kmax} +\sqrt{\kmax}}{\sqrt{k+\kmin} +
-			  \sqrt{\kmin}}\Biggr) \nonumber \\
-	&\qquad -\frac{\pi}{2} + \arctan\left(
-\frac{\sqrt{\kmin}}{\sqrt{k-\kmin}}\right)
-	\Bigg] \nonumber\\
-% 
-        &-\sqrt{\kmax}\Bigg[ \left(-185k^4 + 168k^2\kmax^2-32\kmax^4
-	    \right)\left(\sqrt{k+\kmax} - \sqrt{\kmax-k}\right) \nonumber \\
-	&\qquad +\left(70k^3\kmax +16k\kmax^3\right) \left(\sqrt{k+\kmax} +
-         \sqrt{\kmax -k} \right) \Bigg] \nonumber \\
-% 
-	&+\sqrt{\kmin}\Bigg[ \left(-185k^4 + 168k^2\kmin^2 -32\kmax^4
-	    \right)\left(\sqrt{k+\kmin} - \sqrt{k-\kmin}\right) \nonumber \\
-	&\qquad +\left(70k^3\kmin +16k\kmin^3\right) \left(\sqrt{k+\kmin} +
-         \sqrt{k-\kmin} \right) \Bigg] \Bigg\} \,.
-\end{align}
-% 
+The analytic solutions for the $\B$, $\wt{\C}$ and $\wt{\D}$ terms are given in
+Appendix~\ref{sec:apx-codetests}. 
 The relative errors between the analytic and calculated values for $I_\B$,
 $I_{\wt{\C}}$ and $I_{\wt{\D}}$ are shown in Figure~\ref{fig:rel-bcd-num} for the
 three final $k$ ranges, with $\beta=10^{-62}$. The errors
