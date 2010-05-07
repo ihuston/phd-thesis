@@ -604,12 +604,24 @@ assumptions about the existence of second order perturbations before
 the simulation begins. Therefore, we set the initial condition for each second order
 perturbation mode to be $\dvp2=0, \dN{\dvp2}=0$ at
 the time when the corresponding first order perturbation is initialised.
-In addition, the perturbations in the far past are supposed to have been purely Gaussian and
-so at this time the second order perturbation would be zero. 
+One argument in favour of this choice of initial conditions is that far in the past the perturbations
+are assumed to be Gaussian and therefore the second (and higher) order perturbations would be identically zero. 
 % 
 
+A numerical solution for the second order perturbation equation will contain a homogeneous solution
+and a particular solution. 
 The homogeneous part of the solution of
-\eq{eq:KG2-fourier-sr-ntime} can be calculated as done in Appendix~\ref{sec:init-apx}. 
+the slow roll equation, \eq{eq:KG2-fourier-sr-ntime}, can be calculated analytically 
+as done in Appendix~\ref{sec:init-apx}. On their own the initial conditions we have chosen above do not  
+remove this homogeneous solution from the result for $\dvp2$ in general. In order to do this, and keep only the 
+particular solution to the equation, it is necessary to ensure that the homogeneous solution is the trivial $(0,0)$ 
+solution throughout the evolution. We have not attempted to do this in this thesis but it is an important
+issue for further study in the future. Approaches to removing the homogeneous part of the solution include
+calculating a semi-analytic value for the second order initial conditions which equals the particular solution
+ or numerically trying to select the trivial
+homogeneous solution by introducing a ramping function to the source term in \eq{eq:KG2-source-ntime}.
+In summary, the results quoted in Chapter~\ref{ch:results} for the second order perturbations include both a homogeneous 
+and particular solution. Extraction of either of these parts from the full result remains an issue for future study.
 
 
   
