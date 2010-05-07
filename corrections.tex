@@ -10,6 +10,13 @@
 In the following list of changes made, the section numbers and page numbers refer to the original
 text as quoted in the correction sheet and could have changed in the latest version of the text.
 
+Version Info:
+\begin{itemize}
+ \item v1: Initial version
+ \item v2: Mairi's Point 15 and Kazuya's Point 8 on analytic solutions added.
+ \item v3: Mairi's Point 12 and Kazuya's Point 6 on initial conditions revised.
+\end{itemize}
+
 
 \section{Mairi's Corrections}
 
@@ -454,12 +461,13 @@ inflation is specified by hand for the contrived toy model, so this effect is
 not seen.
 
 \subsection{Point 12: Initial Conditions}
-\textbf{The initial conditions for the second order perturbations are set in Section 7.2.2 on Pg
-105. It was suggested that these conditions introduce a spurious homogeneous solution into the
-final solution for $\dvp2$ as shown in Fig 8.2. What follows is an analysis of the homogeneous
-solution and the chosen initial conditions showing that, for the initial conditions we have
-chosen, the homogeneous solution is zero at all times. This discussion has been added as
-Appendix~\ref{sec:init-apx}.}
+\textbf{REVISED in v3: The initial conditions for the second order perturbations are set in Section 7.2.2 on Pg
+105. It was suggested that these conditions introduce a homogeneous solution into the
+final solution for $\dvp2$ as shown in Fig 8.2. I have looked at trying to remove this solution
+numerically but think that a full recalculation and analysis cannot be undertaken in the time available.
+The references to a zero homogeneous solution have been removed and the discussion in Section 7.2.2 amended
+to reflect this. The derivation of the analytic homogeneous solution which was added as
+Appendix~\ref{sec:init-apx}, has been changed to the following:}
 
 The homogeneous equation for the second order perturbations is  
 % 
@@ -538,47 +546,40 @@ following expressions for u:
 \end{align}
 % 
 where we have assumed that $\nu$ is slowly varying far in the past, \iec the derivatives of the slow
-roll parameters are very small. The initial conditions used in Section~7.2.2 are $\dvp2=0,
-\dN{\dvp2}=0$ at some initial time when the first order perturbations are initialised. If we let
-$\eta_*$ denote this initial time then from $u_*=0$ we have
-% 
-\begin{equation}
- C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} = -C_2 e^{+i(k\eta +\frac{\pi}{2}\nu +
-\frac{\pi}{4})}\,.
-\end{equation}
-% 
-We know that $u'=(a\dvp2)' = \H \dvp2 + a\H \dN{\dvp2}$ so setting $\dvp2=0=\dN{\dvp2}$ gives
-% 
-\begin{equation}
- C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} = +C_2 e^{+i(k\eta +\frac{\pi}{2}\nu +
-\frac{\pi}{4})}\,.
-\end{equation}
-% 
-For these initial conditions then clearly we have
-% 
-\begin{equation}
-C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} =
- -C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \,,
-\end{equation}
-% 
-and so $C_2 = 0 + 0i$ and $C_1=0+0i$ for these initial conditions.
+roll parameters are very small.
 
-With this choice of initial conditions for the ordinary differential equation the homogeneous
-solution is identically zero throughout the evolution. This has also been shown numerically by
-solving \eq{eq:homogen-corr} using a Runge-Kutta scheme and the background values for
-$\H$ and $\vp+0$.
+As explained in Section~\ref{sec:initconds-num}, the results given for $\dvp2$ are for the full solution
+including the homogeneous part. To remove the homogeneous part of the solution the initial conditions
+for the full $\dvp2$ should be chosen such that $C_1=C_2=0$ at all times. 
 
-
-\textbf{The following note has been added to the main text in Section~7.2.2 on Pg 106:}
-
-In addition, the perturbations in the far past are supposed to have been purely Gaussian and
-so at this time the second order perturbation would be zero. 
-With this choice of initial conditions for $\dvp2$ the homogeneous part of the solution of
-\eq{eq:KG2-fourier-sr-ntime} can be calculated as done in Appendix~\ref{sec:init-apx}. The result
-is that the homogeneous part of the solution is zero for all times.
+\textbf{REVISED in v3: The note added to the main text in Section~7.2.2 on Pg 106 (Pg 113 in new version)
+has been changed to the following:}
 
 %  
+We are interested in the production of second order effects by the
+evolution of the the Gaussian first order modes and we make no
+assumptions about the existence of second order perturbations before
+the simulation begins. Therefore, we set the initial condition for each second order
+perturbation mode to be $\dvp2=0, \dN{\dvp2}=0$ at
+the time when the corresponding first order perturbation is initialised.
+One argument in favour of this choice of initial conditions is that far in the past the perturbations
+are assumed to be Gaussian and therefore the second (and higher) order perturbations would be identically zero. 
+% 
 
+A numerical solution for the second order perturbation equation will contain a homogeneous solution
+and a particular solution. 
+The homogeneous part of the solution of
+the slow roll equation, \eq{eq:KG2-fourier-sr-ntime}, can be calculated analytically 
+as done in Appendix~\ref{sec:init-apx}. On their own the initial conditions we have chosen above do not  
+remove this homogeneous solution from the result for $\dvp2$ in general. In order to do this, and keep only the 
+particular solution to the equation, it is necessary to ensure that the homogeneous solution is the trivial $(0,0)$ 
+solution throughout the evolution. We have not attempted to do this in this thesis but it is an important
+issue for further study in the future. Approaches to removing the homogeneous part of the solution include
+calculating a semi-analytic value for the second order initial conditions which equals the particular solution
+ or numerically trying to select the trivial
+homogeneous solution by introducing a ramping function to the source term in \eq{eq:KG2-source-ntime}.
+In summary, the results quoted in Chapter~\ref{ch:results} for the second order perturbations include both a homogeneous 
+and particular solution. Extraction of either of these parts from the full result remains an issue for future study.
 
 \subsection{Point 13: Move some calculations into an appendix}
 \textbf{Three large sections of calculations have been moved into the appendix.}

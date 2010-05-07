@@ -247,36 +247,11 @@ following expressions for u:
 \end{align}
 % 
 where we have assumed that $\nu$ is slowly varying far in the past, \iec the derivatives of the slow
-roll parameters are very small. The initial conditions used in Section~\ref{sec:initconds-num} are
-$\dvp2=0, \dN{\dvp2}=0$ at some initial time when the first order perturbations are initialised. If
-we let
-$\eta_*$ denote this initial time then from $u_*=0$ we have
-% 
-\begin{equation}
- C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} = -C_2 e^{+i(k\eta +\frac{\pi}{2}\nu +
-\frac{\pi}{4})}\,.
-\end{equation}
-% 
-We know that $u'=(a\dvp2)' = \H \dvp2 + a\H \dN{\dvp2}$ so setting $\dvp2=0=\dN{\dvp2}$ gives
-% 
-\begin{equation}
- C_1 e^{-i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} = +C_2 e^{+i(k\eta +\frac{\pi}{2}\nu +
-\frac{\pi}{4})}\,.
-\end{equation}
-% 
-For these initial conditions then clearly we have
-% 
-\begin{equation}
-C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} =
- -C_2 e^{+i(k\eta +\frac{\pi}{2}\nu + \frac{\pi}{4})} \,,
-\end{equation}
-% 
-and so $C_2 = 0 + 0i$ and $C_1=0+0i$ for these initial conditions.
+roll parameters are very small. 
 
-With this choice of initial conditions for the ordinary differential equation the homogeneous
-solution is identically zero throughout the evolution. This has also been shown numerically by
-solving \eq{eq:homogen-apx} using a Runge-Kutta scheme and the background values for
-$\H$ and $\vp+0$.
+As explained in Section~\ref{sec:initconds-num}, the results given for $\dvp2$ are for the full solution
+including the homogeneous part. To remove the homogeneous part of the solution the initial conditions
+for the full $\dvp2$ should be chosen such that $C_1=C_2=0$ at all times. 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
