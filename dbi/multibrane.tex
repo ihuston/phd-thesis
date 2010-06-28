@@ -1,9 +1,8 @@
 % % % % % % % % % % % % % % % % % % % % % 
 % multibrane.tex - Ian Huston
-% $Id: multibrane.tex,v 1.63 2009/12/07 16:43:29 ith Exp $
+% 
 % % % % % % % % % % % % % % % % % % % % % 
-% Redefine CVSRevision for this section
-\renewcommand{\CVSrevision}{\version$Id: multibrane.tex,v 1.63 2009/12/07 16:43:29 ith Exp $}
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % =========================================================== %
@@ -164,8 +163,6 @@ Recall that the definitions of $\cs^2$ and $\Lambda$ in \eqs{eq:defcs-dbiintro} 
 to $X$. We can require that the magnitude of $\fnleq$ is large by considering
 scenarios in the limit where $\cs^2$ is small and $\Lambda$ is large, or
 equivalently:
-% To proceed, therefore, we consider 
-% scenarios that satisfy this condition in the limit where 
 % 
 \begin{equation}
 \label{eq:Plimits}
@@ -338,11 +335,7 @@ is determined by the non-Abelian world-volume theory \cite{myers1,myers2}.
 This theory exhibits extra stringy degrees of freedom which arise due to the 
 fuzzy nature of the geometry.
 
-% The world-volume theory for coincident branes is not fully known, although
-% a number of proposals have been made. We will restrict our analysis to Myers' 
-% prescription, since this has been extensively discussed in the 
-% literature\footnote{There is also a proposal by Tseytlin \cite{Tseytlin}
-% for the non-Abelian theory of coincident D-branes.} \cite{myers1, myers2}. 
+
 In general the open string degrees of freedom for $n$ coincident branes 
 combine to fill out representations of $U(n)$, as opposed to $U(1)^n$ 
 in the case of separated branes. This introduces a non-Abelian 
@@ -636,8 +629,6 @@ the warp factor asymptotes to a constant value
 h_{\rm tip} = \exp \left( - \frac{2\pi K}{3M\gs} \right) \,.
 \end{equation}
 % 
-% and $K,M \in {\rm \bf Z^+}$ are the units of flux associated 
-% with the NS-NS and R-R three-forms, respectively, such that $N=MK$.
 In this case, the generalised BM bound (\ref{eq:warptorelax}) becomes
 %  
 \begin{equation}
@@ -792,12 +783,6 @@ E_2 \left[Z,Y\right] &= 2 T_3 h^4 \left(\frac{(1+2Y -
 Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}}\right) \,.
 \end{align}
 % 
-% These quantities correspond to the pressure and energy density functions 
-% when $n=2$ which arise solely from the DBI sector of the action.
-% Since the symmetrised trace acts differently on the differing spin
-% representations of $SU(2)$, we should expect this structure to follow
-% through in the recursion relation. Indeed, we find that for odd $n$
-% 
 The recursion relation described in \Rref{hltw} can then be written for odd $n$ as
 % 
 \begin{align}
@@ -836,57 +821,6 @@ E_n &= \left(\sum_{k=1}^{(n-1+\delta_n)/2} E_2 \left[(2k-\delta_n)^2Z,
 In \Rref{Berndsen:2009ww} it was shown that this recursive definition for
 $P_n$ reproduces \eq{eq:largeP-multi} in the large $n$ limit. 
 
-% For example, we can employ these recursion relations to obtain the 
-% solutions for $n=3$:  
-% % 
-% \begin{eqnarray}
-% P &=& - 2T_3 \left(\frac{h^4
-% (1+8Y-8\XR(1+6Y))}{\sqrt{1-4\XR}\sqrt{1+4Y}}\right)
-%  -3T_3(V-h^4) \,, \nonumber \\
-% E &=&  2T_3 \left(\frac{h^4
-% (1+8Y(1-2\XR))}{(1-4\XR)^{3/2}\sqrt{1+4Y}}\right) +3T_3(V-h^4) \,,
-% \end{eqnarray}
-% % 
-% which agrees precisely with the result computed by direct 
-% expansion of the $STr$ prescription. Furthermore the $n=4$ case is given by 
-% % 
-% \begin{eqnarray}
-% P = -2T_3\left(\frac{h^4
-% (1+2Y-\XR(2+3Y))}{\sqrt{1+Y}\sqrt{1-\XR}} \right. 
-% \nonumber \\
-% \left. +\frac{h^4(1+18Y-9\XR(2+27Y))}
-% {\sqrt{1+9Y}\sqrt{1-9\XR}}\right) 
-%  -4T_3(V-h^4) \,, \nonumber \\
-% E =  2T_3 \left(\frac{h^4(1+2Y-Y\XR)}{\sqrt{1+Y}(1-\XR)^{3/2}} +
-% \frac{h^4(1+18Y-81\XR)}{\sqrt{1+9Y}(1-9X\dot{R_m}^2)^{3/2}} \right)
-% +4T_3(V-h^4) \, .
-% \end{eqnarray}
-% % 
-% It it clear that the relevant functions increase in complexity as 
-% $n$ increases, since there are progressively more
-% terms to include in the $STr$ expansion. However Eqs. (\ref{eq:oddbrane}) and
-% (\ref{eq:evenbrane})
-% represent the most general
-% solutions. 
-
-
-% One should also be aware that the backreaction of multiple branes will
-% typically introduce corrections of the form $n/N$, therefore it is important
-% for this ratio to be small in order for us to trust the supergravity analysis.
-% Typically we can argue that wrapped branes are dual to multi-brane
-% configurations when
-% we are in the limit that $n>>1$. However since we also wish to keep $N>>1$ we
-% must tune
-% the solution so that $n/N<<1$ is satisfied. Therefore the origin of the
-% backreaction effects
-% is much clearer from this perspective. One can compute the $1/N$ corrections
-% to the multi-brane
-% action in the large $n$ limit \cite{Ward:2007gs} which, in the dual picture,
-% correspond to
-% backreactive corrections
-% to the wrapped brane models. It would certainly be more useful to develop both
-% these models in more
-% detail.
 
 The backreaction of the multiple branes introduces corrections of the form $n/N$
 \cite{hltw}. Ensuring that this ratio is small allows the continued use of the
@@ -976,11 +910,6 @@ the function in \eq{eq:unifiedP-multi}.
 The recursive relation for $P$ in \eqref{eq:combinedPn-multi} converges to the
 expression in \eq{eq:largeP-multi} in the limit of large $n$
 \cite{Berndsen:2009ww}. 
-% This is not the same function as that for
-% $n$ separated branes, as the matrix degrees of freedom 
-% lead to an additional potential term for the scalars. 
-% However it does belong
-% to the same class of models with $l=1/2$. 
 There must exist some 
 value of $n$, beyond which $P$ appears to resemble \eq{eq:largeP-multi},
 rather than the 
@@ -1293,13 +1222,6 @@ with current cosmological observations.
 
 In Part~\ref{part:dbi} of this thesis we have concentrated on using analytic
 techniques to constrain string-inspired inflationary models. 
-% In Chapter~\ref{ch:dbi} we showed
-% how the single-brane UV DBI model is subject to two incompatible bounds on the
-% tensor-scalar ratio. In Chapter~\ref{ch:multibrane} we described a class of
-% actions
-% which would ease those bounds. We examined the coincident $n$ branes model and
-% showed that the scenario in which an observable tensor signal is produced is
-% strongly constrained by current observations. 
 In Part~\ref{part:numerical},
 numerical techniques will be developed with the goal of constraining
 inflationary models using second-order perturbation theory.
