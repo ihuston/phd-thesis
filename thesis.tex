@@ -17,18 +17,13 @@ onehalfspacing % onehalfspacing or doublespacing
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % My formatting package
-% CVSon for cvs revision number in footers
-% CVSoff is default-
-\usepackage[%CVSon, % CVS version in footers
-            %labels, % show labels
-	    %todos, % show todos
-            hyperref % Use hyperref for links
+\usepackage[hyperref % Use hyperref for links
             ]{ihformat}
 
 
 % Redefine CVSRevision for this section
 \renewcommand{\CVSrevision}{\version$Id: thesis.tex,v 1.43 2009/11/26 16:29:09 ith Exp $}
-% \usepackage[inline]{showlabels}
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -45,8 +40,7 @@ numerical/perts,
 numerical/numerical,
 numerical/results,
 theend,
-appendix,
-%corrections % corrections - Do NOT insert in final version!
+appendix
 }
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \begin{document}
@@ -54,7 +48,6 @@ appendix,
 % Title page
 \input{title}
 
-% \begin{doublespace}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Abstract
 \include{abstract}
@@ -69,7 +62,6 @@ appendix,
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Table of contents and figures
 % % % % % % % % % % % % % % % % % % % % % % % % % 
-%\setcounter{tocdepth}{0}
 \tableofcontents
 \listoffigures
 \listoftables
@@ -110,9 +102,7 @@ appendix,
 % Conclusion and summary
 \part{Conclusion}
 \label{part:conclusion}
-% \setcounter{part}{0}
-% \phantomsection
-% The part:\thepart
+
 \include{theend}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -121,10 +111,7 @@ appendix,
 \appendix
 \include{appendix}
 
-% Corrections - DO NOT INSERT IN FINAL VERSION
-% \include{corrections}
-% \listoftodos
-% \end{doublespace}
+
 \begin{singlespace}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Bibliography
@@ -132,10 +119,7 @@ appendix,
 \bibliographystyle{utphys-ih}
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-% % % % % % % % % % % % % % % % % % % % % % % % % 
-% Index?
-%\chapter*{Index??}
-%\addcontentsline{toc}{chapter}{Index??}
+
 % % % % % % % % % % % % % % % % % % % % % % % % % 
 \end{singlespace}
 \end{document}
